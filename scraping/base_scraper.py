@@ -1,0 +1,327 @@
+# scraping/base_scraper.py
+"""
+Base scraper class with common functionality for Transfermarkt scraping.
+"""
+from __future__ import annotations
+
+import json
+import os
+import re
+import time
+import hashlib
+from datetime import datetime, date
+from pathlib import Path
+from typing import Optional, List, Dict, Any
+
+import requests
+from bs4 import BeautifulSoup
+
+try:
+    import tls_requests
+    USE_TLS = True
+except ImportError:
+    USE_TLS = False
+
+from unidecode import unidecode
+
+
+ROOT_DIR = Path(__file__).parent.parent
+DATA_DIR = ROOT_DIR / "data"
+JSON_DIR = DATA_DIR / "json"
+
+
+class BaseScraper:
+    """Base class for Transfermarkt scrapers."""
+    
+    BASE_URL = "https://www.transfermarkt.com"
+    
+    HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Connection": "keep-alive",
+    }
+    
+    # League URL mappings
+    LEAGUE_URLS = {
+        "laliga": "/laliga/startseite/wettbewerb/ES1",
+        "premier": "/premier-league/startseite/wettbewerb/GB1",
+        "seriea": "/serie-a/startseite/wettbewerb/IT1",
+        "bundesliga": "/bundesliga/startseite/wettbewerb/L1",
+        "ligue1": "/ligue-1/startseite/wettbewerb/FR1",
+        "segunda": "/laliga2/startseite/wettbewerb/ES2",
+        "championship": "/championship/startseite/wettbewerb/GB2",
+        "eredivisie": "/eredivisie/startseite/wettbewerb/NL1",
+        "liga_portugal": "/liga-nos/startseite/wettbewerb/PO1",
+        "champions": "/uefa-champions-league/startseite/pokalwettbewerb/CL",
+        "europa_league": "/europa-league/startseite/pokalwettbewerb/EL",
+        "conference": "/europa-conference-league/startseite/pokalwettbewerb/UCOL",
+    }
+    
+    def __init__(
+        self,
+        season: str = None,
+        delay: float = 2.0,
+        max_retries: int = 3,
+        verbose: bool = True,
+    ):
+        """
+        Initialize the scraper.
+        
+        Args:
+            season: Season to scrape (e.g., "2024-2025"). Defaults to current.
+            delay: Delay between requests in seconds.
+            max_retries: Maximum retry attempts for failed requests.
+            verbose: Print progress information.
+        """
+        if season:
+            self.season = season
+            self.season_year = self._get_season_year(season)
+        else:
+            year = datetime.now().year
+            if datetime.now().month < 7:
+                year -= 1
+            self.season = f"{year}-{year+1}"
+            self.season_year = year
+        
+        self.delay = delay
+        self.max_retries = max_retries
+        self.verbose = verbose
+        
+        # Ensure data directory exists
+        JSON_DIR.mkdir(parents=True, exist_ok=True)
+    
+    def _get_season_year(self, season: str) -> int:
+        """Extract starting year from season string."""
+        match = re.search(r"(\d{4})", str(season))
+        if match:
+            return int(match.group(1))
+        return datetime.now().year
+    
+    def log(self, message: str):
+        """Print message if verbose mode is on."""
+        if self.verbose:
+            print(message)
+    
+    def fetch_page(
+        self,
+        url: str,
+        tries: int = None,
+        pause: float = None,
+    ) -> Optional[BeautifulSoup]:
+        """
+        Fetch a URL and return BeautifulSoup object.
+        
+        Args:
+            url: URL to fetch
+            tries: Number of retry attempts
+            pause: Pause between retries
+        
+        Returns:
+            BeautifulSoup object or None if failed
+        """
+        tries = tries or self.max_retries
+        pause = pause or self.delay * 2
+        
+        for attempt in range(1, tries + 1):
+            try:
+                time.sleep(self.delay)
+                
+                if USE_TLS:
+                    response = tls_requests.get(url, headers=self.HEADERS)
+                else:
+                    response = requests.get(url, headers=self.HEADERS)
+                
+                if response.status_code == 200:
+                    return BeautifulSoup(response.content, "html.parser")
+                else:
+                    self.log(f"  Attempt {attempt}/{tries}: HTTP {response.status_code}")
+                    
+            except Exception as e:
+                self.log(f"  Attempt {attempt}/{tries}: Error {e!r}")
+            
+            if attempt < tries:
+                time.sleep(pause)
+        
+        return None
+    
+    def generate_id(self, *parts: str) -> str:
+        """Generate a unique ID from parts."""
+        combined = "_".join(str(p) for p in parts if p)
+        return hashlib.md5(combined.encode()).hexdigest()[:12]
+    
+    def extract_team_id(self, url: str) -> Optional[str]:
+        """Extract team ID from URL."""
+        match = re.search(r"/verein/(\d+)", url)
+        return match.group(1) if match else None
+    
+    def extract_player_id(self, url: str) -> Optional[str]:
+        """Extract player ID from URL."""
+        match = re.search(r"/spieler/(\d+)", url)
+        return match.group(1) if match else None
+    
+    def get_league_url(self, league: str) -> str:
+        """Get the URL path for a league."""
+        league_lower = league.lower().strip().replace(" ", "_")
+        return self.LEAGUE_URLS.get(league_lower, f"/{league_lower}/startseite/wettbewerb")
+    
+    def search_team(self, team_name: str) -> Optional[Dict[str, str]]:
+        """
+        Search for a team by name.
+        
+        Args:
+            team_name: Team name to search
+        
+        Returns:
+            Dict with team_name, team_url, team_id or None
+        """
+        search_url = f"{self.BASE_URL}/schnellsuche/ergebnis/schnellsuche?query={team_name.replace(' ', '+')}"
+        
+        self.log(f"Searching for team: {team_name}")
+        soup = self.fetch_page(search_url)
+        
+        if not soup:
+            return None
+        
+        # Find team results
+        for box in soup.select("div.box"):
+            header = box.select_one("h2")
+            if header and "club" in header.text.lower():
+                link = box.select_one("table.items td.hauptlink a")
+                if link:
+                    href = link.get("href", "")
+                    name = link.text.strip()
+                    team_id = self.extract_team_id(href)
+                    
+                    return {
+                        "team_name": name,
+                        "team_url": f"{self.BASE_URL}{href}",
+                        "team_id": team_id,
+                    }
+        
+        # Fallback: first link with verein
+        link = soup.select_one("a[href*='/verein/']")
+        if link:
+            href = link.get("href", "")
+            name = link.get("title") or link.text.strip()
+            team_id = self.extract_team_id(href)
+            if team_id:
+                return {
+                    "team_name": name,
+                    "team_url": f"{self.BASE_URL}{href}",
+                    "team_id": team_id,
+                }
+        
+        return None
+    
+    def get_league_teams(self, league: str) -> List[Dict[str, str]]:
+        """
+        Get all teams from a league.
+        
+        Args:
+            league: League name (e.g., "laliga", "premier")
+        
+        Returns:
+            List of dicts with team_name, team_url, team_id
+        """
+        league_path = self.get_league_url(league)
+        url = f"{self.BASE_URL}{league_path}/saison_id/{self.season_year}"
+        
+        self.log(f"Fetching teams from {league}...")
+        soup = self.fetch_page(url)
+        
+        if not soup:
+            self.log(f"Failed to fetch league page")
+            return []
+        
+        teams = []
+        seen_ids = set()
+        
+        # Try multiple selectors
+        for selector in ["table.items tbody tr td.hauptlink a", "div.responsive-table table tbody tr td a[title]"]:
+            for a in soup.select(selector):
+                href = a.get("href", "")
+                title = a.get("title", "") or a.text.strip()
+                
+                if "verein" in href and title:
+                    team_id = self.extract_team_id(href)
+                    if team_id and team_id not in seen_ids:
+                        seen_ids.add(team_id)
+                        teams.append({
+                            "team_name": title,
+                            "team_url": f"{self.BASE_URL}{href}",
+                            "team_id": team_id,
+                        })
+        
+        self.log(f"Found {len(teams)} teams")
+        return teams
+    
+    def save_json(self, data: Any, file_name: str) -> Path:
+        """
+        Save data to JSON file.
+        
+        Args:
+            data: Data to save
+            file_name: Filename without extension
+        
+        Returns:
+            Path to saved file
+        """
+        file_path = JSON_DIR / f"{file_name}.json"
+        
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2, default=str)
+        
+        self.log(f"Saved: {file_path}")
+        return file_path
+    
+    def load_json(self, file_name: str) -> Optional[Any]:
+        """
+        Load data from JSON file.
+        
+        Args:
+            file_name: Filename without extension
+        
+        Returns:
+            Data or None if file doesn't exist
+        """
+        file_path = JSON_DIR / f"{file_name}.json"
+        
+        if not file_path.exists():
+            return None
+        
+        with open(file_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    
+    @staticmethod
+    def normalize_string(s: str) -> str:
+        """Normalize string for comparison."""
+        if not s:
+            return ""
+        return unidecode(str(s)).lower().replace(" ", "").replace("-", "")
+    
+    @staticmethod
+    def parse_market_value(value_str: str) -> Optional[float]:
+        """Parse market value string to float (in euros)."""
+        if not value_str:
+            return None
+        
+        value_str = value_str.strip().lower().replace(",", ".").replace(" ", "")
+        value_str = re.sub(r"[€$£]", "", value_str)
+        
+        multiplier = 1
+        if "bn" in value_str or "b" in value_str:
+            multiplier = 1_000_000_000
+            value_str = re.sub(r"bn?", "", value_str)
+        elif "m" in value_str or "mill" in value_str:
+            multiplier = 1_000_000
+            value_str = re.sub(r"m(ill)?", "", value_str)
+        elif "k" in value_str or "th" in value_str:
+            multiplier = 1_000
+            value_str = re.sub(r"k|th", "", value_str)
+        
+        try:
+            return float(value_str) * multiplier
+        except ValueError:
+            return None

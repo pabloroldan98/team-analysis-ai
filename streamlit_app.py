@@ -32,7 +32,7 @@ from scraping.utils.helpers import read_dict_data, JSON_DIR, ensure_data_dirs
 # CONFIG
 # =============================================================================
 ASSETS_DIR = ROOT_DIR / "assets"
-LOGOS_DIR = ASSETS_DIR / "logos"
+TEAM_LOGOS_DIR = ASSETS_DIR / "team_logos"
 LANG_DIR = ASSETS_DIR / "language"
 
 LEAGUES = {
@@ -72,7 +72,7 @@ def load_team_logo(team_name: str) -> Optional[Image.Image]:
         f"{team_name}.jpg", f"{safe_name}.jpg",
     ]
     for c in candidates:
-        p = LOGOS_DIR / c
+        p = TEAM_LOGOS_DIR / c
         if p.exists():
             return Image.open(p).convert("RGBA")
     return None
@@ -692,7 +692,7 @@ def main():
     
     # Ensure directories exist
     ensure_data_dirs()
-    LOGOS_DIR.mkdir(parents=True, exist_ok=True)
+    TEAM_LOGOS_DIR.mkdir(parents=True, exist_ok=True)
     LANG_DIR.mkdir(parents=True, exist_ok=True)
     
     # Initialize language

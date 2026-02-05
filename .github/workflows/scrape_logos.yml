@@ -1,0 +1,39 @@
+# .github/workflows/scrape_logos.yml
+name: Scrape Logos
+
+on:
+  workflow_dispatch:  # Manual trigger (no inputs needed)
+  schedule:
+    # Monthly on the 1st at 5:00 AM UTC
+    - cron: '0 5 1 * *'
+
+jobs:
+  scrape-logos:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run logos scraper
+        run: |
+          python scraping_tasks/scrape_logos.py
+      
+      - name: Commit and push data
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/ assets/logos/
+          git diff --staged --quiet || git commit -m "Update logos [$(date -u '+%Y-%m-%d')]"
+          git push

@@ -1,1 +1,27 @@
-# Scraping module for team-analysis-ai
+# scraping/__init__.py
+"""
+Scraping module for team-analysis-ai.
+
+Contains modular scrapers for different data types:
+- TransfermarktTeamsScraper: Team information
+- TransfermarktPlayersScraper: Player data
+- TransfermarktTransfersScraper: Transfer records
+- TransfermarktValuationsScraper: Market value history
+- TransfermarktLogosScraper: Team logo images
+"""
+
+from scraping.base_scraper import BaseScraper
+from scraping.transfermarkt_teams import TransfermarktTeamsScraper
+from scraping.transfermarkt_players import TransfermarktPlayersScraper
+from scraping.transfermarkt_transfers import TransfermarktTransfersScraper
+from scraping.transfermarkt_valuations import TransfermarktValuationsScraper
+from scraping.transfermarkt_logos import TransfermarktLogosScraper
+
+__all__ = [
+    "BaseScraper",
+    "TransfermarktTeamsScraper",
+    "TransfermarktPlayersScraper",
+    "TransfermarktTransfersScraper",
+    "TransfermarktValuationsScraper",
+    "TransfermarktLogosScraper",
+]
