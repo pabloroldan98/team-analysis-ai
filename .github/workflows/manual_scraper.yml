@@ -1,0 +1,76 @@
+name: Manual - Single Team Scraper
+
+on:
+  workflow_dispatch:
+    inputs:
+      team_name:
+        description: 'Team name to scrape'
+        required: true
+        type: string
+      season:
+        description: 'Season (e.g., 2024-2025)'
+        required: false
+        type: string
+        default: '2024-2025'
+      include_details:
+        description: 'Include detailed player info'
+        required: false
+        type: boolean
+        default: true
+      include_transfers:
+        description: 'Include transfer history'
+        required: false
+        type: boolean
+        default: true
+      include_valuations:
+        description: 'Include valuation history'
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  scrape_team:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run scraper
+        run: |
+          python -m scraping.transfermarkt_scraper \
+            --team "${{ github.event.inputs.team_name }}" \
+            --season "${{ github.event.inputs.season }}" \
+            ${{ github.event.inputs.include_details == 'false' && '--no-details' || '' }} \
+            ${{ github.event.inputs.include_transfers == 'false' && '--no-transfers' || '' }} \
+            ${{ github.event.inputs.include_valuations == 'false' && '--no-valuations' || '' }}
+
+      - name: Upload data artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: team-data-${{ github.event.inputs.team_name }}
+          path: |
+            data/json/*.json
+            data/csv/*.csv
+
+      - name: Configure git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit and push changes
+        run: |
+          git add data/json/*.json data/csv/*.csv || true
+          git diff --staged --quiet || git commit -m "Data update: ${{ github.event.inputs.team_name }} (${{ github.event.inputs.season }})"
+          git push || echo "Nothing to push"
