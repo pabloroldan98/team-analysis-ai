@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-# scraping_tasks/scrape_logos.py
+# scraping_tasks/scrape_leagues.py
 """
-Task: Scrape and download team logos from Transfermarkt.
-Downloads logo images for all teams in configured leagues.
+Task: Scrape league data from Transfermarkt.
+Downloads league information (without detailed team scraping).
 
 Usage:
-    python scraping_tasks/scrape_logos.py
-    python scraping_tasks/scrape_logos.py --leagues laliga premier
-    python scraping_tasks/scrape_logos.py --season 2024-2025
+    python scraping_tasks/scrape_leagues.py
+    python scraping_tasks/scrape_leagues.py --leagues laliga premier
+    python scraping_tasks/scrape_leagues.py --season 2024-2025
 """
 import sys
 import argparse
@@ -16,7 +16,7 @@ from pathlib import Path
 # Add parent to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scraping.transfermarkt_logos import TransfermarktLogosScraper
+from scraping.transfermarkt_leagues import TransfermarktLeaguesScraper
 
 
 # Default leagues to scrape
@@ -30,7 +30,7 @@ DEFAULT_LEAGUES = [
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Scrape team logos from Transfermarkt")
+    parser = argparse.ArgumentParser(description="Scrape league data from Transfermarkt")
     parser.add_argument(
         "--leagues",
         nargs="+",
@@ -46,8 +46,8 @@ def main():
     parser.add_argument(
         "--delay",
         type=float,
-        default=2.0,
-        help="Delay between requests in seconds (default: 2.0)"
+        default=0.0,
+        help="Delay between requests in seconds (default: 0.0)"
     )
     parser.add_argument(
         "-v", "--verbose",
@@ -58,29 +58,26 @@ def main():
     
     args = parser.parse_args()
     
-    print(f"=== Transfermarkt Logos Scraper ===")
+    print(f"=== Transfermarkt Leagues Scraper ===")
     print(f"Leagues: {', '.join(args.leagues)}")
     print(f"Season: {args.season or 'current'}")
     print()
     
-    scraper = TransfermarktLogosScraper(
+    scraper = TransfermarktLeaguesScraper(
         season=args.season,
         delay=args.delay,
         verbose=args.verbose
     )
     
-    results = scraper.run(leagues=args.leagues)
+    # Run the scraper
+    leagues = scraper.run(leagues=args.leagues)
     
     # Summary
-    total = sum(len(r) for r in results.values())
-    downloaded = sum(1 for league_data in results.values() for r in league_data if r.get("local_path"))
-    
     print(f"\n=== Complete ===")
-    print(f"Total logos: {total}")
-    print(f"Successfully downloaded: {downloaded}")
-    for league, data in results.items():
-        downloaded_count = sum(1 for r in data if r.get("local_path"))
-        print(f"  {league}: {downloaded_count}/{len(data)} logos")
+    print(f"Leagues scraped: {len(leagues)}")
+    for league_key, league in leagues.items():
+        value_str = f"€{league.total_market_value/1_000_000_000:.2f}B" if league.total_market_value else "N/A"
+        print(f"  {league.name}: {league.num_teams} teams, {value_str}")
     
     return 0
 

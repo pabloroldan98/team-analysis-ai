@@ -8,7 +8,7 @@ Usage:
     python scraping_tasks/scrape_players.py
     python scraping_tasks/scrape_players.py --leagues laliga premier
     python scraping_tasks/scrape_players.py --season 2024-2025
-    python scraping_tasks/scrape_players.py --details  # Include detailed player info
+    python scraping_tasks/scrape_players.py --no-details  # Skip detailed player info (faster)
 """
 import sys
 import argparse
@@ -45,16 +45,17 @@ def main():
         help="Season to scrape (e.g., 2024-2025). Defaults to current season."
     )
     parser.add_argument(
-        "--details",
-        action="store_true",
-        default=False,
-        help="Fetch detailed player information (slower)"
+        "--no-details",
+        action="store_false",
+        dest="details",
+        help="Skip detailed player information (faster)"
     )
+    parser.set_defaults(details=True)
     parser.add_argument(
         "--delay",
         type=float,
-        default=2.0,
-        help="Delay between requests in seconds (default: 2.0)"
+        default=0.0,
+        help="Delay between requests in seconds (default: 0.0)"
     )
     parser.add_argument(
         "-v", "--verbose",

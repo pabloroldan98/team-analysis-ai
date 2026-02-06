@@ -2,7 +2,7 @@
 # scraping_tasks/scrape_all.py
 """
 Task: Run all scrapers for complete data download.
-This runs teams, players, transfers, and logos scrapers.
+This runs teams, players, and transfers scrapers.
 
 NOTE: Valuations are excluded by default due to time requirements.
 Use --include-valuations to include them.
@@ -22,7 +22,6 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from scraping.transfermarkt_teams import TransfermarktTeamsScraper
 from scraping.transfermarkt_players import TransfermarktPlayersScraper
 from scraping.transfermarkt_transfers import TransfermarktTransfersScraper
-from scraping.transfermarkt_logos import TransfermarktLogosScraper
 from scraping.transfermarkt_valuations import TransfermarktValuationsScraper
 
 
@@ -59,8 +58,8 @@ def main():
     parser.add_argument(
         "--delay",
         type=float,
-        default=2.0,
-        help="Delay between requests in seconds (default: 2.0)"
+        default=0.0,
+        help="Delay between requests in seconds (default: 0.0)"
     )
     parser.add_argument(
         "-v", "--verbose",
@@ -85,7 +84,7 @@ def main():
     
     # 1. Teams
     print("\n" + "="*50)
-    print("STEP 1/4: Scraping Teams")
+    print("STEP 1/3: Scraping Teams")
     print("="*50)
     teams_scraper = TransfermarktTeamsScraper(**scraper_kwargs)
     teams_results = teams_scraper.run(leagues=args.leagues)
@@ -94,7 +93,7 @@ def main():
     
     # 2. Players
     print("\n" + "="*50)
-    print("STEP 2/4: Scraping Players")
+    print("STEP 2/3: Scraping Players")
     print("="*50)
     players_scraper = TransfermarktPlayersScraper(**scraper_kwargs)
     players_results = players_scraper.run(leagues=args.leagues)
@@ -103,21 +102,12 @@ def main():
     
     # 3. Transfers
     print("\n" + "="*50)
-    print("STEP 3/4: Scraping Transfers")
+    print("STEP 3/3: Scraping Transfers")
     print("="*50)
     transfers_scraper = TransfermarktTransfersScraper(**scraper_kwargs)
     transfers_results = transfers_scraper.run(leagues=args.leagues)
     total_transfers = sum(len(t) for ld in transfers_results.values() for t in ld.values())
     print(f"Transfers scraped: {total_transfers}")
-    
-    # 4. Logos
-    print("\n" + "="*50)
-    print("STEP 4/4: Downloading Logos")
-    print("="*50)
-    logos_scraper = TransfermarktLogosScraper(**scraper_kwargs)
-    logos_results = logos_scraper.run(leagues=args.leagues)
-    total_logos = sum(1 for ld in logos_results.values() for r in ld if r.get("local_path"))
-    print(f"Logos downloaded: {total_logos}")
     
     # Optional: Valuations
     if args.include_valuations:
@@ -134,7 +124,6 @@ def main():
     print(f"Teams: {total_teams}")
     print(f"Players: {total_players}")
     print(f"Transfers: {total_transfers}")
-    print(f"Logos: {total_logos}")
     
     return 0
 

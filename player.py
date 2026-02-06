@@ -19,15 +19,17 @@ class Player:
         team: str = "",
         team_id: str = "",
         position: str = "N/A",
+        main_position: str = "",
+        other_positions: List[str] = None,
         age: int = None,
         birth_date: str = None,
         nationality: str = "",
-        second_nationality: str = "",
+        other_nationalities: List[str] = None,
         height: int = None,
         preferred_foot: str = "",
         shirt_number: int = None,
         market_value: float = None,
-        contract_expires: str = None,
+        contract_expires_date: str = None,
         joined_date: str = None,
         img_url: str = "",
         profile_url: str = "",
@@ -38,15 +40,17 @@ class Player:
         self.team = team
         self.team_id = team_id
         self._position = position
+        self.main_position = main_position
+        self.other_positions = other_positions or []
         self.age = age
         self.birth_date = birth_date
         self.nationality = nationality
-        self.second_nationality = second_nationality
+        self.other_nationalities = other_nationalities or []
         self.height = height
         self.preferred_foot = preferred_foot
         self.shirt_number = shirt_number
         self.market_value = market_value
-        self.contract_expires = contract_expires
+        self.contract_expires_date = contract_expires_date
         self.joined_date = joined_date
         self.img_url = img_url
         self.profile_url = profile_url
@@ -91,13 +95,13 @@ class Player:
             return "N/A"
         pos = pos.strip().lower()
         
-        if any(x in pos for x in ["keeper", "portero", "torwart", "gk", "goalkeeper"]):
+        if any(x in pos for x in [ "goalkeeper", "keeper", "portero", "torwart", "gk", ]):
             return "GK"
-        if any(x in pos for x in ["back", "defens", "cb", "lb", "rb", "defensa", "verteidiger"]):
+        if any(x in pos for x in ["defender", "defend", "back", "defens", "cb", "lb", "rb", "defensa", "verteidiger", ]):
             return "DEF"
-        if any(x in pos for x in ["midfield", "medio", "mittelfeld", "cm", "dm", "am"]):
+        if any(x in pos for x in ["midfield", "midfielder", "medio", "mittelfeld", "cm", "dm", "am", ]):
             return "MID"
-        if any(x in pos for x in ["forward", "striker", "wing", "delantero", "stürmer", "cf", "lw", "rw", "attack"]):
+        if any(x in pos for x in ["attack", "attacker", "forward", "striker", "wing", "delantero", "stürmer", "cf", "lw", "rw", ]):
             return "ATT"
         
         return "N/A"
@@ -110,15 +114,17 @@ class Player:
             "team": self.team,
             "team_id": self.team_id,
             "position": self.position,
+            "main_position": self.main_position,
+            "other_positions": self.other_positions,
             "age": self.age,
             "birth_date": self.birth_date,
             "nationality": self.nationality,
-            "second_nationality": self.second_nationality,
+            "other_nationalities": self.other_nationalities,
             "height": self.height,
             "preferred_foot": self.preferred_foot,
             "shirt_number": self.shirt_number,
             "market_value": self.market_value,
-            "contract_expires": self.contract_expires,
+            "contract_expires_date": self.contract_expires_date,
             "joined_date": self.joined_date,
             "img_url": self.img_url,
             "profile_url": self.profile_url,
@@ -134,15 +140,17 @@ class Player:
             team=data.get("team", ""),
             team_id=data.get("team_id", ""),
             position=data.get("position", "N/A"),
+            main_position=data.get("main_position", ""),
+            other_positions=data.get("other_positions", []),
             age=data.get("age"),
             birth_date=data.get("birth_date"),
             nationality=data.get("nationality", ""),
-            second_nationality=data.get("second_nationality", ""),
+            other_nationalities=data.get("other_nationalities", []),
             height=data.get("height"),
             preferred_foot=data.get("preferred_foot", ""),
             shirt_number=data.get("shirt_number"),
             market_value=data.get("market_value"),
-            contract_expires=data.get("contract_expires"),
+            contract_expires_date=data.get("contract_expires_date"),
             joined_date=data.get("joined_date"),
             img_url=data.get("img_url", ""),
             profile_url=data.get("profile_url", ""),

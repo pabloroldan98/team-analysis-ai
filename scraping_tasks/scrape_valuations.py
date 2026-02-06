@@ -45,8 +45,8 @@ def main():
     parser.add_argument(
         "--delay",
         type=float,
-        default=2.0,
-        help="Delay between requests in seconds (default: 2.0)"
+        default=0.0,
+        help="Delay between requests in seconds (default: 0.0)"
     )
     parser.add_argument(
         "-v", "--verbose",

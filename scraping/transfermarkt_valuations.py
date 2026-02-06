@@ -6,34 +6,9 @@ from __future__ import annotations
 
 import re
 from typing import List, Optional, Dict
-from dataclasses import dataclass
 
 from scraping.base_scraper import BaseScraper
-
-
-@dataclass
-class Valuation:
-    """Represents a player market valuation at a point in time."""
-    valuation_id: str
-    player_id: str
-    player_name: str
-    valuation_amount: float
-    valuation_date: str
-    club_at_valuation: str
-    club_id_at_valuation: str
-    age_at_valuation: Optional[int]
-    
-    def to_dict(self) -> dict:
-        return {
-            "valuation_id": self.valuation_id,
-            "player_id": self.player_id,
-            "player_name": self.player_name,
-            "valuation_amount": self.valuation_amount,
-            "valuation_date": self.valuation_date,
-            "club_at_valuation": self.club_at_valuation,
-            "club_id_at_valuation": self.club_id_at_valuation,
-            "age_at_valuation": self.age_at_valuation,
-        }
+from valuation import Valuation
 
 
 class TransfermarktValuationsScraper(BaseScraper):

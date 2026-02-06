@@ -27,7 +27,6 @@ from unidecode import unidecode
 
 ROOT_DIR = Path(__file__).parent.parent
 DATA_DIR = ROOT_DIR / "data"
-JSON_DIR = DATA_DIR / "json"
 
 
 class BaseScraper:
@@ -90,7 +89,7 @@ class BaseScraper:
         self.verbose = verbose
         
         # Ensure data directory exists
-        JSON_DIR.mkdir(parents=True, exist_ok=True)
+        DATA_DIR.mkdir(parents=True, exist_ok=True)
     
     def _get_season_year(self, season: str) -> int:
         """Extract starting year from season string."""
@@ -257,23 +256,55 @@ class BaseScraper:
         self.log(f"Found {len(teams)} teams")
         return teams
     
-    def save_json(self, data: Any, file_name: str) -> Path:
+    def save_json(
+        self,
+        data: Any,
+        file_name: str,
+        validate: bool = True,
+        create_backup: bool = True,
+        min_items: int = 5,
+        id_field: str = "team_id",
+        data_type: str = "teams"
+    ) -> Path:
         """
-        Save data to JSON file.
+        Save data to JSON file with optional validation and backup.
         
         Args:
             data: Data to save
             file_name: Filename without extension
+            validate: If True, validate data before saving
+            create_backup: If True, create _OLD backup of previous file
+            min_items: Minimum items for validation
+            id_field: Field for unique ID when merging
+            data_type: Type of data for validation
         
         Returns:
             Path to saved file
         """
-        file_path = JSON_DIR / f"{file_name}.json"
+        from scraping.utils.helpers import overwrite_dict_data, write_dict_to_json, DATA_DIR
         
-        with open(file_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2, default=str)
+        file_path = DATA_DIR / f"{file_name}.json"
         
-        self.log(f"Saved: {file_path}")
+        if create_backup:
+            # Use overwrite with backup and optional validation
+            success = overwrite_dict_data(
+                data=data,
+                file_name=file_name,
+                ignore_valid_file=not validate,
+                ignore_old_data=False,
+                min_items=min_items,
+                id_field=id_field,
+                data_type=data_type
+            )
+            if success:
+                self.log(f"Saved (with backup): {file_path}")
+            else:
+                self.log(f"Warning: Save failed or skipped for {file_name}")
+        else:
+            # Simple save without backup
+            write_dict_to_json(data, file_name)
+            self.log(f"Saved: {file_path}")
+        
         return file_path
     
     def load_json(self, file_name: str) -> Optional[Any]:
@@ -286,13 +317,8 @@ class BaseScraper:
         Returns:
             Data or None if file doesn't exist
         """
-        file_path = JSON_DIR / f"{file_name}.json"
-        
-        if not file_path.exists():
-            return None
-        
-        with open(file_path, "r", encoding="utf-8") as f:
-            return json.load(f)
+        from scraping.utils.helpers import read_dict_from_json
+        return read_dict_from_json(file_name)
     
     @staticmethod
     def normalize_string(s: str) -> str:
@@ -307,19 +333,37 @@ class BaseScraper:
         if not value_str:
             return None
         
-        value_str = value_str.strip().lower().replace(",", ".").replace(" ", "")
-        value_str = re.sub(r"[€$£]", "", value_str)
+        # Clean the string - remove all non-numeric except decimal separators and multiplier letters
+        value_str = value_str.strip().lower()
+        
+        # Remove currency symbols and other unicode chars (keep only alphanumeric, dots, commas)
+        value_str = re.sub(r"[^\d.,a-z]", "", value_str)
+        
+        # Normalize decimal separator
+        value_str = value_str.replace(",", ".")
         
         multiplier = 1
-        if "bn" in value_str or "b" in value_str:
+        if "bn" in value_str:
             multiplier = 1_000_000_000
-            value_str = re.sub(r"bn?", "", value_str)
-        elif "m" in value_str or "mill" in value_str:
+            value_str = value_str.replace("bn", "")
+        elif "b" in value_str:
+            multiplier = 1_000_000_000
+            value_str = value_str.replace("b", "")
+        elif "mill" in value_str:
             multiplier = 1_000_000
-            value_str = re.sub(r"m(ill)?", "", value_str)
-        elif "k" in value_str or "th" in value_str:
+            value_str = value_str.replace("mill", "")
+        elif "m" in value_str:
+            multiplier = 1_000_000
+            value_str = value_str.replace("m", "")
+        elif "k" in value_str:
             multiplier = 1_000
-            value_str = re.sub(r"k|th", "", value_str)
+            value_str = value_str.replace("k", "")
+        elif "th" in value_str:
+            multiplier = 1_000
+            value_str = value_str.replace("th", "")
+        
+        # Remove any remaining non-numeric chars except dot
+        value_str = re.sub(r"[^\d.]", "", value_str)
         
         try:
             return float(value_str) * multiplier

@@ -74,9 +74,12 @@ def main():
     # Summary
     total_teams = sum(len(teams) for teams in results.values())
     print(f"\n=== Complete ===")
+    print(f"Leagues scraped: {len(results)}")
     print(f"Total teams scraped: {total_teams}")
-    for league, teams in results.items():
-        print(f"  {league}: {len(teams)} teams")
+    for league_key, teams in results.items():
+        total_value = sum(t.total_market_value or 0 for t in teams)
+        value_str = f"€{total_value/1_000_000_000:.2f}B" if total_value else "N/A"
+        print(f"  {league_key}: {len(teams)} teams, {value_str}")
     
     return 0
 

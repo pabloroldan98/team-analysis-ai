@@ -24,9 +24,9 @@ ROOT_DIR = Path(__file__).parent
 sys.path.insert(0, str(ROOT_DIR))
 
 from webapp.i18n import t, format_currency, get_position_name, get_transfer_type_name
-from scraping.transfermarkt_scraper import TransfermarktScraper
-from scraping.models import Player, Team, Transfer, Valuation
-from scraping.utils.helpers import read_dict_data, JSON_DIR, ensure_data_dirs
+from player import Player
+from team import Team
+from scraping.utils.helpers import read_dict_data, DATA_DIR, ensure_data_dir
 
 # =============================================================================
 # CONFIG
@@ -80,11 +80,11 @@ def load_team_logo(team_name: str) -> Optional[Image.Image]:
 
 def get_available_data_files() -> List[Dict[str, Any]]:
     """Get list of available data files."""
-    ensure_data_dirs()
+    ensure_data_dir()
     files = []
     
-    if JSON_DIR.exists():
-        for f in JSON_DIR.glob("*.json"):
+    if DATA_DIR.exists():
+        for f in DATA_DIR.glob("*.json"):
             try:
                 data = json.loads(f.read_text(encoding="utf-8"))
                 file_info = {
@@ -691,7 +691,7 @@ def main():
     )
     
     # Ensure directories exist
-    ensure_data_dirs()
+    ensure_data_dir()
     TEAM_LOGOS_DIR.mkdir(parents=True, exist_ok=True)
     LANG_DIR.mkdir(parents=True, exist_ok=True)
     

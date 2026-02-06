@@ -6,44 +6,9 @@ from __future__ import annotations
 
 import re
 from typing import List, Optional, Dict
-from dataclasses import dataclass
 
 from scraping.base_scraper import BaseScraper
-
-
-@dataclass
-class Transfer:
-    """Represents a player transfer."""
-    transfer_id: str
-    player_id: str
-    player_name: str
-    from_club: str
-    from_club_id: str
-    to_club: str
-    to_club_id: str
-    transfer_fee: Optional[float]
-    transfer_fee_str: str
-    transfer_date: str
-    transfer_type: str  # "in" or "out"
-    is_loan: bool
-    season: str
-    
-    def to_dict(self) -> dict:
-        return {
-            "transfer_id": self.transfer_id,
-            "player_id": self.player_id,
-            "player_name": self.player_name,
-            "from_club": self.from_club,
-            "from_club_id": self.from_club_id,
-            "to_club": self.to_club,
-            "to_club_id": self.to_club_id,
-            "transfer_fee": self.transfer_fee,
-            "transfer_fee_str": self.transfer_fee_str,
-            "transfer_date": self.transfer_date,
-            "transfer_type": self.transfer_type,
-            "is_loan": self.is_loan,
-            "season": self.season,
-        }
+from transfer import Transfer
 
 
 class TransfermarktTransfersScraper(BaseScraper):

@@ -22,8 +22,8 @@ class Team:
         squad_size: int = None,
         average_age: float = None,
         total_market_value: float = None,
-        foreigners_count: int = None,
-        national_team_players: int = None,
+        foreign_players_count: int = None,
+        national_players_count: int = None,
         stadium_name: str = "",
         stadium_capacity: int = None,
         logo_url: str = "",
@@ -39,8 +39,8 @@ class Team:
         self.squad_size = squad_size
         self.average_age = average_age
         self.total_market_value = total_market_value
-        self.foreigners_count = foreigners_count
-        self.national_team_players = national_team_players
+        self.foreign_players_count = foreign_players_count
+        self.national_players_count = national_players_count
         self.stadium_name = stadium_name
         self.stadium_capacity = stadium_capacity
         self.logo_url = logo_url
@@ -81,8 +81,8 @@ class Team:
             "squad_size": self.squad_size,
             "average_age": self.average_age,
             "total_market_value": self.total_market_value,
-            "foreigners_count": self.foreigners_count,
-            "national_team_players": self.national_team_players,
+            "foreign_players_count": self.foreign_players_count,
+            "national_players_count": self.national_players_count,
             "stadium_name": self.stadium_name,
             "stadium_capacity": self.stadium_capacity,
             "logo_url": self.logo_url,
@@ -103,8 +103,8 @@ class Team:
             squad_size=data.get("squad_size"),
             average_age=data.get("average_age"),
             total_market_value=data.get("total_market_value"),
-            foreigners_count=data.get("foreigners_count"),
-            national_team_players=data.get("national_team_players"),
+            foreign_players_count=data.get("foreign_players_count"),
+            national_players_count=data.get("national_players_count"),
             stadium_name=data.get("stadium_name", ""),
             stadium_capacity=data.get("stadium_capacity"),
             logo_url=data.get("logo_url", ""),
