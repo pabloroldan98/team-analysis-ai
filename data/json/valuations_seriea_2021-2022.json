@@ -98506,7 +98506,7 @@
     "valuation_amount": 100000,
     "valuation_date": "05/08/2020",
     "club_name_at_valuation": "",
-    "club_id_at_valuation": "98475",
+    "club_id_at_valuation": "5196",
     "age_at_valuation": 18
   },
   {
@@ -98516,7 +98516,7 @@
     "valuation_amount": 100000,
     "valuation_date": "10/12/2020",
     "club_name_at_valuation": "",
-    "club_id_at_valuation": "98475",
+    "club_id_at_valuation": "5196",
     "age_at_valuation": 18
   },
   {
@@ -98526,7 +98526,7 @@
     "valuation_amount": 100000,
     "valuation_date": "05/07/2021",
     "club_name_at_valuation": "",
-    "club_id_at_valuation": "98475",
+    "club_id_at_valuation": "5196",
     "age_at_valuation": 19
   },
   {
@@ -107830,126 +107830,6 @@
     "age_at_valuation": 22
   },
   {
-    "valuation_id": "9a1387f1176b",
-    "player_id": "699442",
-    "player_name": "Kacper Urbański",
-    "valuation_amount": 200000,
-    "valuation_date": "19/01/2021",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "4000",
-    "age_at_valuation": 16
-  },
-  {
-    "valuation_id": "1ea21571e020",
-    "player_id": "699442",
-    "player_name": "Kacper Urbański",
-    "valuation_amount": 200000,
-    "valuation_date": "03/02/2022",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "14848",
-    "age_at_valuation": 17
-  },
-  {
-    "valuation_id": "5cac4c71dec9",
-    "player_id": "699442",
-    "player_name": "Kacper Urbański",
-    "valuation_amount": 250000,
-    "valuation_date": "27/09/2022",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "1025",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "4911df298ab5",
-    "player_id": "699442",
-    "player_name": "Kacper Urbański",
-    "valuation_amount": 250000,
-    "valuation_date": "11/11/2022",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "1025",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "7c965418602d",
-    "player_id": "699442",
-    "player_name": "Kacper Urbański",
-    "valuation_amount": 600000,
-    "valuation_date": "15/06/2023",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "1025",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "5f139ca31c06",
-    "player_id": "699442",
-    "player_name": "Kacper Urbański",
-    "valuation_amount": 1000000,
-    "valuation_date": "20/12/2023",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "1025",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "3c0bf0716e5a",
-    "player_id": "699442",
-    "player_name": "Kacper Urbański",
-    "valuation_amount": 4000000,
-    "valuation_date": "12/03/2024",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "1025",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "231e3fa8b855",
-    "player_id": "699442",
-    "player_name": "Kacper Urbański",
-    "valuation_amount": 7000000,
-    "valuation_date": "05/06/2024",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "1025",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "e97110cb020d",
-    "player_id": "699442",
-    "player_name": "Kacper Urbański",
-    "valuation_amount": 7000000,
-    "valuation_date": "18/12/2024",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "1025",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "0b9c7ab3be8e",
-    "player_id": "699442",
-    "player_name": "Kacper Urbański",
-    "valuation_amount": 6000000,
-    "valuation_date": "17/06/2025",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "2919",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "015b35f68502",
-    "player_id": "699442",
-    "player_name": "Kacper Urbański",
-    "valuation_amount": 4000000,
-    "valuation_date": "26/09/2025",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "255",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "97f1ad943ee2",
-    "player_id": "699442",
-    "player_name": "Kacper Urbański",
-    "valuation_amount": 3500000,
-    "valuation_date": "08/12/2025",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "255",
-    "age_at_valuation": 21
-  },
-  {
     "valuation_id": "c96d01049a50",
     "player_id": "63186",
     "player_name": "Roberto Soriano",
@@ -108848,6 +108728,126 @@
     "club_name_at_valuation": "",
     "club_id_at_valuation": "1105",
     "age_at_valuation": 36
+  },
+  {
+    "valuation_id": "9a1387f1176b",
+    "player_id": "699442",
+    "player_name": "Kacper Urbański",
+    "valuation_amount": 200000,
+    "valuation_date": "19/01/2021",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "4000",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "1ea21571e020",
+    "player_id": "699442",
+    "player_name": "Kacper Urbański",
+    "valuation_amount": 200000,
+    "valuation_date": "03/02/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "14848",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "5cac4c71dec9",
+    "player_id": "699442",
+    "player_name": "Kacper Urbański",
+    "valuation_amount": 250000,
+    "valuation_date": "27/09/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "1025",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "4911df298ab5",
+    "player_id": "699442",
+    "player_name": "Kacper Urbański",
+    "valuation_amount": 250000,
+    "valuation_date": "11/11/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "1025",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "7c965418602d",
+    "player_id": "699442",
+    "player_name": "Kacper Urbański",
+    "valuation_amount": 600000,
+    "valuation_date": "15/06/2023",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "1025",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "5f139ca31c06",
+    "player_id": "699442",
+    "player_name": "Kacper Urbański",
+    "valuation_amount": 1000000,
+    "valuation_date": "20/12/2023",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "1025",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "3c0bf0716e5a",
+    "player_id": "699442",
+    "player_name": "Kacper Urbański",
+    "valuation_amount": 4000000,
+    "valuation_date": "12/03/2024",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "1025",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "231e3fa8b855",
+    "player_id": "699442",
+    "player_name": "Kacper Urbański",
+    "valuation_amount": 7000000,
+    "valuation_date": "05/06/2024",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "1025",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e97110cb020d",
+    "player_id": "699442",
+    "player_name": "Kacper Urbański",
+    "valuation_amount": 7000000,
+    "valuation_date": "18/12/2024",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "1025",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "0b9c7ab3be8e",
+    "player_id": "699442",
+    "player_name": "Kacper Urbański",
+    "valuation_amount": 6000000,
+    "valuation_date": "17/06/2025",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "2919",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "015b35f68502",
+    "player_id": "699442",
+    "player_name": "Kacper Urbański",
+    "valuation_amount": 4000000,
+    "valuation_date": "26/09/2025",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "255",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "97f1ad943ee2",
+    "player_id": "699442",
+    "player_name": "Kacper Urbański",
+    "valuation_amount": 3500000,
+    "valuation_date": "08/12/2025",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "255",
+    "age_at_valuation": 21
   },
   {
     "valuation_id": "cef9ebee6c25",
@@ -159150,306 +159150,6 @@
     "age_at_valuation": 22
   },
   {
-    "valuation_id": "c3f1e5de9496",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 100000,
-    "valuation_date": "27/12/2013",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "27325",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "d0d0143b82fd",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 400000,
-    "valuation_date": "30/08/2014",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "790",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "0eba1bfef27d",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 600000,
-    "valuation_date": "25/10/2014",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "790",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "323483e78fc0",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 2000000,
-    "valuation_date": "15/12/2014",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "790",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "141472c0983a",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 2000000,
-    "valuation_date": "01/02/2015",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "790",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "84e1b3761aa3",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 2000000,
-    "valuation_date": "11/08/2015",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "790",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "fd424ac3cd06",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 2000000,
-    "valuation_date": "14/03/2016",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "4651fe0cc648",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 2000000,
-    "valuation_date": "14/09/2016",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "1295fbebf124",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1850000,
-    "valuation_date": "13/03/2017",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "99f47b84754f",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1500000,
-    "valuation_date": "23/10/2017",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "3d083a35f939",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1500000,
-    "valuation_date": "18/03/2018",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "593718253391",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1350000,
-    "valuation_date": "25/09/2018",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "5b3d8c40f976",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1350000,
-    "valuation_date": "11/03/2019",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "a3da9f60c97b",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1500000,
-    "valuation_date": "16/09/2019",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "5a428305bab5",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1500000,
-    "valuation_date": "27/12/2019",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "f983eb5f1c8d",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1200000,
-    "valuation_date": "08/04/2020",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "8af8b0670388",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1000000,
-    "valuation_date": "27/07/2020",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "fc05fe462aed",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 850000,
-    "valuation_date": "28/12/2020",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "5ff728f1bcc5",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 850000,
-    "valuation_date": "10/06/2021",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "419",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "c1f16fe2c2f3",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1300000,
-    "valuation_date": "14/10/2021",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "749",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "532afa733440",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 2500000,
-    "valuation_date": "28/12/2021",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "749",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "736271153f95",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 3000000,
-    "valuation_date": "07/06/2022",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "749",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "d00852daca48",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 2800000,
-    "valuation_date": "11/11/2022",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "749",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "8cd7c44da9e8",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 2300000,
-    "valuation_date": "15/06/2023",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "749",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "ff89ca793a29",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1700000,
-    "valuation_date": "11/10/2023",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "1038",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "7fc03c6e51b4",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1400000,
-    "valuation_date": "27/12/2023",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "1038",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "b0ec56aded49",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1300000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "1038",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "d528ee048002",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 1000000,
-    "valuation_date": "23/12/2024",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "380",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "fee001adc857",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 750000,
-    "valuation_date": "02/06/2025",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "380",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "48cc5117f96d",
-    "player_id": "183841",
-    "player_name": "Petar Stojanović",
-    "valuation_amount": 600000,
-    "valuation_date": "08/12/2025",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "255",
-    "age_at_valuation": 30
-  },
-  {
     "valuation_id": "b3a0dfd73c47",
     "player_id": "197745",
     "player_name": "Riccardo Fiamozzi",
@@ -162748,6 +162448,306 @@
     "club_name_at_valuation": "",
     "club_id_at_valuation": "430",
     "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "c3f1e5de9496",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 100000,
+    "valuation_date": "27/12/2013",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "27325",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "d0d0143b82fd",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 400000,
+    "valuation_date": "30/08/2014",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "790",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "0eba1bfef27d",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 600000,
+    "valuation_date": "25/10/2014",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "790",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "323483e78fc0",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 2000000,
+    "valuation_date": "15/12/2014",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "790",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "141472c0983a",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 2000000,
+    "valuation_date": "01/02/2015",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "790",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "84e1b3761aa3",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 2000000,
+    "valuation_date": "11/08/2015",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "790",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "fd424ac3cd06",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 2000000,
+    "valuation_date": "14/03/2016",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "4651fe0cc648",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 2000000,
+    "valuation_date": "14/09/2016",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "1295fbebf124",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1850000,
+    "valuation_date": "13/03/2017",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "99f47b84754f",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1500000,
+    "valuation_date": "23/10/2017",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "3d083a35f939",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1500000,
+    "valuation_date": "18/03/2018",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "593718253391",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1350000,
+    "valuation_date": "25/09/2018",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "5b3d8c40f976",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1350000,
+    "valuation_date": "11/03/2019",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "a3da9f60c97b",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1500000,
+    "valuation_date": "16/09/2019",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "5a428305bab5",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1500000,
+    "valuation_date": "27/12/2019",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "f983eb5f1c8d",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1200000,
+    "valuation_date": "08/04/2020",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "8af8b0670388",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1000000,
+    "valuation_date": "27/07/2020",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "fc05fe462aed",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 850000,
+    "valuation_date": "28/12/2020",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 25
+  },
+  {
+    "valuation_id": "5ff728f1bcc5",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 850000,
+    "valuation_date": "10/06/2021",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "419",
+    "age_at_valuation": 25
+  },
+  {
+    "valuation_id": "c1f16fe2c2f3",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1300000,
+    "valuation_date": "14/10/2021",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "749",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "532afa733440",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 2500000,
+    "valuation_date": "28/12/2021",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "749",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "736271153f95",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 3000000,
+    "valuation_date": "07/06/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "749",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "d00852daca48",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 2800000,
+    "valuation_date": "11/11/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "749",
+    "age_at_valuation": 27
+  },
+  {
+    "valuation_id": "8cd7c44da9e8",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 2300000,
+    "valuation_date": "15/06/2023",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "749",
+    "age_at_valuation": 27
+  },
+  {
+    "valuation_id": "ff89ca793a29",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1700000,
+    "valuation_date": "11/10/2023",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "1038",
+    "age_at_valuation": 28
+  },
+  {
+    "valuation_id": "7fc03c6e51b4",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1400000,
+    "valuation_date": "27/12/2023",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "1038",
+    "age_at_valuation": 28
+  },
+  {
+    "valuation_id": "b0ec56aded49",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1300000,
+    "valuation_date": "03/06/2024",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "1038",
+    "age_at_valuation": 28
+  },
+  {
+    "valuation_id": "d528ee048002",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 1000000,
+    "valuation_date": "23/12/2024",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "380",
+    "age_at_valuation": 29
+  },
+  {
+    "valuation_id": "fee001adc857",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 750000,
+    "valuation_date": "02/06/2025",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "380",
+    "age_at_valuation": 29
+  },
+  {
+    "valuation_id": "48cc5117f96d",
+    "player_id": "183841",
+    "player_name": "Petar Stojanović",
+    "valuation_amount": 600000,
+    "valuation_date": "08/12/2025",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "255",
+    "age_at_valuation": 30
   },
   {
     "valuation_id": "d6d1e38ea3ed",
@@ -190320,276 +190320,6 @@
     "age_at_valuation": 22
   },
   {
-    "valuation_id": "3af625add563",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 100000,
-    "valuation_date": "14/03/2015",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "10126",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "9c519bbbf085",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 150000,
-    "valuation_date": "30/06/2015",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "10126",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "b9bc40dafd18",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 200000,
-    "valuation_date": "17/01/2016",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "2118",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "4b160928db17",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 350000,
-    "valuation_date": "24/07/2016",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "2118",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "ba7cb60cd75e",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 300000,
-    "valuation_date": "21/01/2017",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "2118",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "1ea3881dadd5",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 250000,
-    "valuation_date": "05/07/2017",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "2118",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "0e0a297b7744",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 250000,
-    "valuation_date": "16/01/2018",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "2118",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "1dee84366246",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 4000000,
-    "valuation_date": "03/07/2018",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "800",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "9be2304e4108",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 3800000,
-    "valuation_date": "20/12/2018",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "800",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "eae1a127196a",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 3500000,
-    "valuation_date": "06/06/2019",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "800",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "9e2906ea5b23",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 3000000,
-    "valuation_date": "12/12/2019",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "2722",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "a99d9ea80127",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 2400000,
-    "valuation_date": "08/04/2020",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "2722",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "20a3a5895238",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 2400000,
-    "valuation_date": "25/08/2020",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "2722",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "1e35e92c7cd8",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 2500000,
-    "valuation_date": "29/12/2020",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "4083",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "0db7a93d2297",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 4000000,
-    "valuation_date": "03/06/2021",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "4083",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "d5459b991eb6",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 3500000,
-    "valuation_date": "14/10/2021",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "3522",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "b30331d60041",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 3000000,
-    "valuation_date": "28/12/2021",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "3522",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "1182b917f2e9",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 3000000,
-    "valuation_date": "07/06/2022",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "3522",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "be0bac1c8e1a",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 3000000,
-    "valuation_date": "11/11/2022",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "3522",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "d55af99b5c46",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 3000000,
-    "valuation_date": "15/06/2023",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "3522",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "0ad59a620f54",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 2300000,
-    "valuation_date": "11/10/2023",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "3522",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "657123735e21",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 1700000,
-    "valuation_date": "27/12/2023",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "3522",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "7e7e28a06704",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 1300000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "3522",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "8dfb7627f7ac",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 1000000,
-    "valuation_date": "23/12/2024",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "3522",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "c03e25e9af89",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 1000000,
-    "valuation_date": "02/06/2025",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "3522",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "e96f41d472ca",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 800000,
-    "valuation_date": "26/09/2025",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "255",
-    "age_at_valuation": 30
-  },
-  {
-    "valuation_id": "ededecdb6155",
-    "player_id": "268178",
-    "player_name": "Arkadiusz Reca",
-    "valuation_amount": 600000,
-    "valuation_date": "08/12/2025",
-    "club_name_at_valuation": "",
-    "club_id_at_valuation": "255",
-    "age_at_valuation": 30
-  },
-  {
     "valuation_id": "f906f5e7104c",
     "player_id": "344072",
     "player_name": "Kelvin Amian",
@@ -193368,6 +193098,276 @@
     "club_name_at_valuation": "",
     "club_id_at_valuation": "458",
     "age_at_valuation": 31
+  },
+  {
+    "valuation_id": "3af625add563",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 100000,
+    "valuation_date": "14/03/2015",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "10126",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "9c519bbbf085",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 150000,
+    "valuation_date": "30/06/2015",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "10126",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "b9bc40dafd18",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 200000,
+    "valuation_date": "17/01/2016",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "2118",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "4b160928db17",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 350000,
+    "valuation_date": "24/07/2016",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "2118",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "ba7cb60cd75e",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 300000,
+    "valuation_date": "21/01/2017",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "2118",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "1ea3881dadd5",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 250000,
+    "valuation_date": "05/07/2017",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "2118",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "0e0a297b7744",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 250000,
+    "valuation_date": "16/01/2018",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "2118",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "1dee84366246",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 4000000,
+    "valuation_date": "03/07/2018",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "800",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "9be2304e4108",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 3800000,
+    "valuation_date": "20/12/2018",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "800",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "eae1a127196a",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 3500000,
+    "valuation_date": "06/06/2019",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "800",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "9e2906ea5b23",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 3000000,
+    "valuation_date": "12/12/2019",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "2722",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "a99d9ea80127",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 2400000,
+    "valuation_date": "08/04/2020",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "2722",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "20a3a5895238",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 2400000,
+    "valuation_date": "25/08/2020",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "2722",
+    "age_at_valuation": 25
+  },
+  {
+    "valuation_id": "1e35e92c7cd8",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 2500000,
+    "valuation_date": "29/12/2020",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "4083",
+    "age_at_valuation": 25
+  },
+  {
+    "valuation_id": "0db7a93d2297",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 4000000,
+    "valuation_date": "03/06/2021",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "4083",
+    "age_at_valuation": 25
+  },
+  {
+    "valuation_id": "d5459b991eb6",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 3500000,
+    "valuation_date": "14/10/2021",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "3522",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "b30331d60041",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 3000000,
+    "valuation_date": "28/12/2021",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "3522",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "1182b917f2e9",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 3000000,
+    "valuation_date": "07/06/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "3522",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "be0bac1c8e1a",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 3000000,
+    "valuation_date": "11/11/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "3522",
+    "age_at_valuation": 27
+  },
+  {
+    "valuation_id": "d55af99b5c46",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 3000000,
+    "valuation_date": "15/06/2023",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "3522",
+    "age_at_valuation": 27
+  },
+  {
+    "valuation_id": "0ad59a620f54",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 2300000,
+    "valuation_date": "11/10/2023",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "3522",
+    "age_at_valuation": 28
+  },
+  {
+    "valuation_id": "657123735e21",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 1700000,
+    "valuation_date": "27/12/2023",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "3522",
+    "age_at_valuation": 28
+  },
+  {
+    "valuation_id": "7e7e28a06704",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 1300000,
+    "valuation_date": "03/06/2024",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "3522",
+    "age_at_valuation": 28
+  },
+  {
+    "valuation_id": "8dfb7627f7ac",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 1000000,
+    "valuation_date": "23/12/2024",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "3522",
+    "age_at_valuation": 29
+  },
+  {
+    "valuation_id": "c03e25e9af89",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 1000000,
+    "valuation_date": "02/06/2025",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "3522",
+    "age_at_valuation": 29
+  },
+  {
+    "valuation_id": "e96f41d472ca",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 800000,
+    "valuation_date": "26/09/2025",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "255",
+    "age_at_valuation": 30
+  },
+  {
+    "valuation_id": "ededecdb6155",
+    "player_id": "268178",
+    "player_name": "Arkadiusz Reca",
+    "valuation_amount": 600000,
+    "valuation_date": "08/12/2025",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "255",
+    "age_at_valuation": 30
   },
   {
     "valuation_id": "aede25c35be0",
