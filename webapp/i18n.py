@@ -76,7 +76,7 @@ TEXT = {
         "transfer_player": "Jugador",
         "from_club": "Desde",
         "to_club": "Hacia",
-        "transfer_fee": "Coste",
+        "price": "Coste",
         "transfer_date": "Fecha",
         "transfer_type": "Tipo",
         
@@ -225,7 +225,7 @@ TEXT = {
         "transfer_player": "Player",
         "from_club": "From",
         "to_club": "To",
-        "transfer_fee": "Fee",
+        "price": "Fee",
         "transfer_date": "Date",
         "transfer_type": "Type",
         

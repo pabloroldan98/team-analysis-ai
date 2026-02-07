@@ -4,13 +4,18 @@
 Task: Scrape player valuation history from Transfermarkt.
 Downloads valuation history for all players in configured leagues.
 
-NOTE: This task is very slow due to the number of individual player pages.
-Consider running with fewer leagues or limiting players.
+By default (--details), fetches the FULL valuation history for each player
+from their individual market value page (e.g., /kylian-mbappe/marktwertverlauf/spieler/342229).
+
+Use --no-details for faster scraping of only current market values
+(from player profiles, no historical data).
+
+NOTE: With --details, this task is slow due to visiting each player's page.
 
 Usage:
-    python scraping_tasks/scrape_valuations.py
+    python scraping_tasks/scrape_valuations.py                     # Full history (default)
+    python scraping_tasks/scrape_valuations.py --no-details        # Current values only, fast
     python scraping_tasks/scrape_valuations.py --leagues laliga
-    python scraping_tasks/scrape_valuations.py --season 2024-2025
 """
 import sys
 import argparse
@@ -42,6 +47,16 @@ def main():
         default=None,
         help="Season to scrape (e.g., 2024-2025). Defaults to current season."
     )
+    
+    # Details argument: default True, --no-details sets to False
+    parser.add_argument(
+        "--no-details",
+        dest="details",
+        action="store_false",
+        help="Skip full valuation history (faster, only current market values)"
+    )
+    parser.set_defaults(details=True)
+    
     parser.add_argument(
         "--delay",
         type=float,
@@ -57,10 +72,14 @@ def main():
     
     args = parser.parse_args()
     
+    mode_str = "Full valuation history" if args.details else "Current values only (fast)"
+    
     print(f"=== Transfermarkt Valuations Scraper ===")
     print(f"Leagues: {', '.join(args.leagues)}")
     print(f"Season: {args.season or 'current'}")
-    print(f"WARNING: This task may take a very long time!")
+    print(f"Mode: {mode_str}")
+    if args.details:
+        print(f"WARNING: This task may take a very long time with --details!")
     print()
     
     scraper = TransfermarktValuationsScraper(
@@ -69,7 +88,7 @@ def main():
         verbose=args.verbose
     )
     
-    results = scraper.run(leagues=args.leagues)
+    results = scraper.run(leagues=args.leagues, details=args.details)
     
     # Summary
     total_valuations = 0

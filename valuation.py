@@ -17,20 +17,18 @@ class Valuation:
         player_name: str = "",
         valuation_amount: Optional[float] = None,
         valuation_date: str = "",
-        club_at_valuation: str = "",
+        club_name_at_valuation: str = "",
         club_id_at_valuation: str = "",
         age_at_valuation: Optional[int] = None,
-        rank_at_valuation: Optional[int] = None,  # Position in rankings
     ):
         self.valuation_id = valuation_id
         self.player_id = player_id
         self.player_name = player_name
         self.valuation_amount = valuation_amount
         self.valuation_date = valuation_date
-        self.club_at_valuation = club_at_valuation
+        self.club_name_at_valuation = club_name_at_valuation
         self.club_id_at_valuation = club_id_at_valuation
         self.age_at_valuation = age_at_valuation
-        self.rank_at_valuation = rank_at_valuation
     
     def __str__(self):
         value_str = f"€{self.valuation_amount/1_000_000:.1f}M" if self.valuation_amount else "N/A"
@@ -71,23 +69,24 @@ class Valuation:
             "player_name": self.player_name,
             "valuation_amount": self.valuation_amount,
             "valuation_date": self.valuation_date,
-            "club_at_valuation": self.club_at_valuation,
+            "club_name_at_valuation": self.club_name_at_valuation,
             "club_id_at_valuation": self.club_id_at_valuation,
             "age_at_valuation": self.age_at_valuation,
-            "rank_at_valuation": self.rank_at_valuation,
         }
     
     @classmethod
     def from_dict(cls, data: dict) -> Valuation:
         """Create Valuation from dictionary."""
+        # Support old field name (club_at_valuation) for backwards compatibility
+        club_name = data.get("club_name_at_valuation") or data.get("club_at_valuation", "")
+        
         return cls(
             valuation_id=data.get("valuation_id", ""),
             player_id=data.get("player_id", ""),
             player_name=data.get("player_name", ""),
             valuation_amount=data.get("valuation_amount"),
             valuation_date=data.get("valuation_date", ""),
-            club_at_valuation=data.get("club_at_valuation", ""),
+            club_name_at_valuation=club_name,
             club_id_at_valuation=data.get("club_id_at_valuation", ""),
             age_at_valuation=data.get("age_at_valuation"),
-            rank_at_valuation=data.get("rank_at_valuation"),
         )

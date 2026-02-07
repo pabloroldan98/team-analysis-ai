@@ -4,10 +4,16 @@
 Task: Scrape transfer data from Transfermarkt.
 Downloads transfer information for all teams in configured leagues.
 
+By default (--details), for each player in current season transfers, 
+fetches their FULL transfer history including market_value_at_transfer.
+
+Use --no-details for faster scraping of only current season team transfers
+(without market_value_at_transfer).
+
 Usage:
-    python scraping_tasks/scrape_transfers.py
+    python scraping_tasks/scrape_transfers.py                     # Full details (default)
+    python scraping_tasks/scrape_transfers.py --no-details        # Current season only, fast
     python scraping_tasks/scrape_transfers.py --leagues laliga premier
-    python scraping_tasks/scrape_transfers.py --season 2024-2025
 """
 import sys
 import argparse
@@ -43,6 +49,16 @@ def main():
         default=None,
         help="Season to scrape (e.g., 2024-2025). Defaults to current season."
     )
+    
+    # Details argument: default True, --no-details sets to False
+    parser.add_argument(
+        "--no-details",
+        dest="details",
+        action="store_false",
+        help="Skip detailed player transfer history (faster, only current season team transfers)"
+    )
+    parser.set_defaults(details=True)
+    
     parser.add_argument(
         "--delay",
         type=float,
@@ -58,18 +74,21 @@ def main():
     
     args = parser.parse_args()
     
-    print(f"=== Transfermarkt Transfers Scraper ===")
-    print(f"Leagues: {', '.join(args.leagues)}")
-    print(f"Season: {args.season or 'current'}")
-    print()
-    
     scraper = TransfermarktTransfersScraper(
         season=args.season,
         delay=args.delay,
         verbose=args.verbose
     )
     
-    results = scraper.run(leagues=args.leagues)
+    mode_str = "Full player history (with market_value_at_transfer)" if args.details else "Current season only (fast)"
+    
+    print(f"=== Transfermarkt Transfers Scraper ===")
+    print(f"Leagues: {', '.join(args.leagues)}")
+    print(f"Season: {args.season or 'current'}")
+    print(f"Mode: {mode_str}")
+    print()
+    
+    results = scraper.run(leagues=args.leagues, details=args.details)
     
     # Summary
     total_transfers = 0

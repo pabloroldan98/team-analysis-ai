@@ -752,22 +752,23 @@ class TransfermarktScraper:
         
         # From club
         from_cell = row.select_one("td.rechts + td.hauptlink a")
-        from_club = from_cell.text.strip() if from_cell else ""
+        from_club_name = from_cell.text.strip() if from_cell else ""
         from_club_id = self._extract_team_id(from_cell.get("href", "")) if from_cell else None
         
         # To club
         to_cell = row.select("td.hauptlink a")
-        to_club = ""
+        to_club_name = ""
         to_club_id = None
         if len(to_cell) >= 2:
-            to_club = to_cell[-1].text.strip()
+            to_club_name = to_cell[-1].text.strip()
             to_club_id = self._extract_team_id(to_cell[-1].get("href", ""))
         
         # Fee
         fee_cell = row.select_one("td.rechts:last-of-type")
         fee_text = fee_cell.text.strip() if fee_cell else ""
         
-        transfer_fee = None
+        price = None
+        price_str = fee_text
         is_loan = False
         transfer_type = "purchase"
         
@@ -777,24 +778,29 @@ class TransfermarktScraper:
             transfer_type = "loan"
         elif "free" in fee_lower or "libre" in fee_lower or "ablösefrei" in fee_lower:
             transfer_type = "free"
-            transfer_fee = 0
+            price = 0
+            price_str = "Free transfer"
         elif "?" not in fee_text and "-" not in fee_text:
-            transfer_fee = parse_market_value(fee_text)
+            price = parse_market_value(fee_text)
         
-        if not from_club and not to_club:
+        if price is None and fee_text in ["?", "-", ""]:
+            price_str = "Unknown"
+        
+        if not from_club_name and not to_club_name:
             return None
         
-        transfer_id = self._generate_id(player.player_id, from_club, to_club, season_text)
+        transfer_id = self._generate_id(player.player_id, from_club_name, to_club_name, season_text)
         
         return Transfer(
             transfer_id=transfer_id,
             player_id=player.player_id,
             player_name=player.name,
-            from_club=normalize_team_name(from_club),
+            from_club_name=normalize_team_name(from_club_name),
             from_club_id=from_club_id,
-            to_club=normalize_team_name(to_club),
+            to_club_name=normalize_team_name(to_club_name),
             to_club_id=to_club_id,
-            transfer_fee=transfer_fee,
+            price=price,
+            price_str=price_str,
             transfer_date=transfer_date,
             season=season_text,
             transfer_type=transfer_type,
@@ -872,7 +878,8 @@ class TransfermarktScraper:
                     fee_cell = row.select_one("td.rechts:last-of-type")
                     fee_text = fee_cell.text.strip() if fee_cell else ""
                     
-                    transfer_fee = None
+                    price = None
+                    price_str = fee_text
                     is_loan = False
                     transfer_type = "purchase"
                     
@@ -882,27 +889,32 @@ class TransfermarktScraper:
                         transfer_type = "loan"
                     elif "free" in fee_lower or "libre" in fee_lower or "ablösefrei" in fee_lower:
                         transfer_type = "free"
-                        transfer_fee = 0
+                        price = 0
+                        price_str = "Free transfer"
                     elif "end of loan" in fee_lower or "fin de cesión" in fee_lower:
                         transfer_type = "loan_return"
                         is_loan = True
                     elif "?" not in fee_text and "-" not in fee_text:
-                        transfer_fee = parse_market_value(fee_text)
+                        price = parse_market_value(fee_text)
                     
-                    from_club = normalize_team_name(other_club) if is_arrival else team.name
-                    to_club = team.name if is_arrival else normalize_team_name(other_club)
+                    if price is None and fee_text in ["?", "-", ""]:
+                        price_str = "Unknown"
+                    
+                    from_club_name = normalize_team_name(other_club) if is_arrival else team.name
+                    to_club_name = team.name if is_arrival else normalize_team_name(other_club)
                     from_id = other_club_id if is_arrival else team.team_id
                     to_id = team.team_id if is_arrival else other_club_id
                     
                     transfer = Transfer(
-                        transfer_id=self._generate_id(player_id, from_club, to_club, self.season),
+                        transfer_id=self._generate_id(player_id, from_club_name, to_club_name, self.season),
                         player_id=player_id or self._generate_id(player_name),
                         player_name=player_name,
-                        from_club=from_club,
+                        from_club_name=from_club_name,
                         from_club_id=from_id,
-                        to_club=to_club,
+                        to_club_name=to_club_name,
                         to_club_id=to_id,
-                        transfer_fee=transfer_fee,
+                        price=price,
+                        price_str=price_str,
                         season=self.season,
                         transfer_type=transfer_type,
                         is_loan=is_loan,

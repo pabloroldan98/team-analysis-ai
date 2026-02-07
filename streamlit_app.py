@@ -139,9 +139,9 @@ def transfers_to_dataframe(transfers: List[Dict], lang: str) -> pd.DataFrame:
     for tr in transfers:
         rows.append({
             t(lang, "transfer_player"): tr.get("player_name", ""),
-            t(lang, "from_club"): tr.get("from_club", ""),
-            t(lang, "to_club"): tr.get("to_club", ""),
-            t(lang, "transfer_fee"): format_currency(tr.get("transfer_fee")),
+            t(lang, "from_club"): tr.get("from_club_name") or tr.get("from_club", ""),
+            t(lang, "to_club"): tr.get("to_club_name") or tr.get("to_club", ""),
+            t(lang, "price"): format_currency(tr.get("price")),
             t(lang, "transfer_date"): tr.get("transfer_date", ""),
             t(lang, "transfer_type"): get_transfer_type_name(lang, tr.get("transfer_type", "")),
         })
@@ -455,7 +455,7 @@ def page_team_analysis(lang: str):
             
             # Transfer balance
             total_in = sum(
-                t.get("transfer_fee", 0) or 0
+                t.get("price", 0) or 0
                 for t in transfers
                 if t.get("transfer_type") != "loan"
             )
