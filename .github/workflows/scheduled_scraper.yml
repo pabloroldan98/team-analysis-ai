@@ -159,7 +159,7 @@ jobs:
   scrape-players:
     needs: combine-teams
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 300
     strategy:
       fail-fast: false
       matrix:
@@ -230,7 +230,7 @@ jobs:
   scrape-transfers:
     needs: combine-players
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 300
     strategy:
       fail-fast: false
       matrix:
@@ -301,7 +301,7 @@ jobs:
   scrape-valuations:
     needs: combine-transfers
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 300
     strategy:
       fail-fast: false
       matrix:

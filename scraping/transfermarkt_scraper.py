@@ -104,19 +104,23 @@ class TransfermarktScraper:
         "conference league": "/europa-conference-league/startseite/pokalwettbewerb/UCOL",
     }
     
+    # HEADERS = {
+    #     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    #     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    #     "Accept-Language": "en-US,en;q=0.5",
+    #     "Accept-Encoding": "gzip, deflate, br",
+    #     "Connection": "keep-alive",
+    # }
     HEADERS = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.5",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
     }
     
     def __init__(
         self,
         season: str = None,
         delay: float = 2.0,
-        max_retries: int = 3,
+        max_retries: int = 5,
+        retry_pause: float = 20.0,
         verbose: bool = True,
     ):
         """
@@ -126,12 +130,14 @@ class TransfermarktScraper:
             season: Season to scrape (e.g., "2024-2025"). Defaults to current.
             delay: Delay between requests in seconds.
             max_retries: Maximum retry attempts for failed requests.
+            retry_pause: Pause between retries in seconds.
             verbose: Print progress information.
         """
         self.season = season or format_season(datetime.now().year)
         self.season_year = get_season_year(self.season)
         self.delay = delay
         self.max_retries = max_retries
+        self.retry_pause = retry_pause
         self.verbose = verbose
         
         # Cache
@@ -161,7 +167,7 @@ class TransfermarktScraper:
             BeautifulSoup object or None if failed
         """
         tries = tries or self.max_retries
-        pause = pause or self.delay * 2
+        pause = pause or self.retry_pause
         
         for attempt in range(1, tries + 1):
             try:
