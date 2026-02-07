@@ -1,0 +1,331 @@
+# .github/workflows/input_single_scraper.yml
+name: Input Single Scraper - Single League & Season
+
+on:
+  workflow_dispatch:
+    inputs:
+      league:
+        description: 'League to scrape'
+        required: true
+        default: 'laliga'
+        type: choice
+        options:
+          - laliga
+          - premier
+          - bundesliga
+          - seriea
+          - ligue1
+      season:
+        description: 'Season to scrape'
+        required: true
+        default: '2025-2026'
+        type: choice
+        options:
+          - '2025-2026'
+          - '2024-2025'
+          - '2023-2024'
+          - '2022-2023'
+          - '2021-2022'
+          - '2020-2021'
+          - '2019-2020'
+          - '2018-2019'
+          - '2017-2018'
+          - '2016-2017'
+          - '2015-2016'
+          - '2014-2015'
+          - '2013-2014'
+          - '2012-2013'
+          - '2011-2012'
+          - '2010-2011'
+          - '2009-2010'
+          - '2008-2009'
+          - '2007-2008'
+          - '2006-2007'
+          - '2005-2006'
+          - '2004-2005'
+          - '2003-2004'
+          - '2002-2003'
+          - '2001-2002'
+          - '2000-2001'
+          - '1999-2000'
+          - '1998-1999'
+          - '1997-1998'
+          - '1996-1997'
+          - '1995-1996'
+          - '1994-1995'
+          - '1993-1994'
+          - '1992-1993'
+      entity:
+        description: 'Entity to scrape'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - leagues
+          - teams
+          - players
+          - transfers
+          - valuations
+
+concurrency:
+  group: input-single-scraper
+  cancel-in-progress: false
+
+jobs:
+  # ============================================================
+  # LEAGUES
+  # ============================================================
+  scrape-leagues:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'leagues' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run leagues scraper for ${{ inputs.league }} (${{ inputs.season }})
+        run: |
+          python scraping_tasks/scrape_leagues.py --leagues ${{ inputs.league }} --season ${{ inputs.season }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: leagues-${{ inputs.league }}-${{ inputs.season }}
+          path: data/leagues_${{ inputs.league }}_${{ inputs.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  # ============================================================
+  # TEAMS
+  # ============================================================
+  scrape-teams:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'teams' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run teams scraper for ${{ inputs.league }} (${{ inputs.season }})
+        run: |
+          python scraping_tasks/scrape_teams.py --leagues ${{ inputs.league }} --season ${{ inputs.season }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: teams-${{ inputs.league }}-${{ inputs.season }}
+          path: data/teams_${{ inputs.league }}_${{ inputs.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  # ============================================================
+  # PLAYERS
+  # ============================================================
+  scrape-players:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'players' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run players scraper for ${{ inputs.league }} (${{ inputs.season }})
+        run: |
+          python scraping_tasks/scrape_players.py --leagues ${{ inputs.league }} --season ${{ inputs.season }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: players-${{ inputs.league }}-${{ inputs.season }}
+          path: data/players_${{ inputs.league }}_${{ inputs.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  # ============================================================
+  # TRANSFERS
+  # ============================================================
+  scrape-transfers:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'transfers' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run transfers scraper for ${{ inputs.league }} (${{ inputs.season }})
+        run: |
+          python scraping_tasks/scrape_transfers.py --leagues ${{ inputs.league }} --season ${{ inputs.season }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: transfers-${{ inputs.league }}-${{ inputs.season }}
+          path: data/transfers_${{ inputs.league }}_${{ inputs.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  # ============================================================
+  # VALUATIONS
+  # ============================================================
+  scrape-valuations:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'valuations' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run valuations scraper for ${{ inputs.league }} (${{ inputs.season }})
+        run: |
+          python scraping_tasks/scrape_valuations.py --leagues ${{ inputs.league }} --season ${{ inputs.season }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: valuations-${{ inputs.league }}-${{ inputs.season }}
+          path: data/valuations_${{ inputs.league }}_${{ inputs.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  # ============================================================
+  # FINAL COMMIT
+  # ============================================================
+  commit-all:
+    needs: [scrape-leagues, scrape-teams, scrape-players, scrape-transfers, scrape-valuations]
+    if: |
+      always() &&
+      (needs.scrape-leagues.result == 'success' || needs.scrape-leagues.result == 'skipped') &&
+      (needs.scrape-teams.result == 'success' || needs.scrape-teams.result == 'skipped') &&
+      (needs.scrape-players.result == 'success' || needs.scrape-players.result == 'skipped') &&
+      (needs.scrape-transfers.result == 'success' || needs.scrape-transfers.result == 'skipped') &&
+      (needs.scrape-valuations.result == 'success' || needs.scrape-valuations.result == 'skipped')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      
+      - name: Download leagues data
+        if: ${{ inputs.entity == 'all' || inputs.entity == 'leagues' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: leagues-${{ inputs.league }}-${{ inputs.season }}
+          path: data/
+        continue-on-error: true
+      
+      - name: Download teams data
+        if: ${{ inputs.entity == 'all' || inputs.entity == 'teams' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: teams-${{ inputs.league }}-${{ inputs.season }}
+          path: data/
+        continue-on-error: true
+      
+      - name: Download players data
+        if: ${{ inputs.entity == 'all' || inputs.entity == 'players' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: players-${{ inputs.league }}-${{ inputs.season }}
+          path: data/
+        continue-on-error: true
+      
+      - name: Download transfers data
+        if: ${{ inputs.entity == 'all' || inputs.entity == 'transfers' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: transfers-${{ inputs.league }}-${{ inputs.season }}
+          path: data/
+        continue-on-error: true
+      
+      - name: Download valuations data
+        if: ${{ inputs.entity == 'all' || inputs.entity == 'valuations' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: valuations-${{ inputs.league }}-${{ inputs.season }}
+          path: data/
+        continue-on-error: true
+      
+      - name: List downloaded files
+        run: |
+          echo "Downloaded files:"
+          ls -la data/ || echo "No data directory"
+      
+      - name: Configure git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      
+      - name: Commit changes
+        run: |
+          git add data/
+          git diff --staged --quiet || git commit -m "Single scraper: ${{ inputs.league }} ${{ inputs.season }} [$(date -u '+%Y-%m-%d')]"
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main

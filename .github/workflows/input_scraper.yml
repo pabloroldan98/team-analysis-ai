@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       leagues:
-        description: 'Leagues to scrape (JSON array, e.g., ["laliga", "premier"] or ["laliga"])'
+        description: 'Leagues to scrape (JSON array, e.g., ["laliga", "premier", "bundesliga", "seriea", "ligue1"] or ["laliga"])'
         required: true
         default: '["laliga"]'
         type: string
@@ -14,18 +14,31 @@ on:
         required: true
         default: '["2025-2026"]'
         type: string
-      entities:
-        description: 'Entities to scrape'
-        required: true
-        default: 'all'
-        type: choice
-        options:
-          - all
-          - leagues
-          - teams
-          - players
-          - transfers
-          - valuations
+      scrape_leagues:
+        description: 'Scrape Leagues'
+        required: false
+        default: true
+        type: boolean
+      scrape_teams:
+        description: 'Scrape Teams'
+        required: false
+        default: true
+        type: boolean
+      scrape_players:
+        description: 'Scrape Players'
+        required: false
+        default: true
+        type: boolean
+      scrape_transfers:
+        description: 'Scrape Transfers'
+        required: false
+        default: true
+        type: boolean
+      scrape_valuations:
+        description: 'Scrape Valuations'
+        required: false
+        default: true
+        type: boolean
 
 concurrency:
   group: input-scraper
@@ -36,7 +49,7 @@ jobs:
   # LEAGUES
   # ============================================================
   scrape-leagues:
-    if: ${{ inputs.entities == 'all' || inputs.entities == 'leagues' }}
+    if: ${{ inputs.scrape_leagues }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
     strategy:
@@ -73,7 +86,7 @@ jobs:
           if-no-files-found: error
 
   combine-leagues:
-    if: ${{ inputs.entities == 'all' || inputs.entities == 'leagues' }}
+    if: ${{ inputs.scrape_leagues }}
     needs: scrape-leagues
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -111,7 +124,7 @@ jobs:
   # TEAMS
   # ============================================================
   scrape-teams:
-    if: ${{ inputs.entities == 'all' || inputs.entities == 'teams' }}
+    if: ${{ inputs.scrape_teams }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
     strategy:
@@ -148,7 +161,7 @@ jobs:
           if-no-files-found: error
 
   combine-teams:
-    if: ${{ inputs.entities == 'all' || inputs.entities == 'teams' }}
+    if: ${{ inputs.scrape_teams }}
     needs: scrape-teams
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -186,7 +199,7 @@ jobs:
   # PLAYERS
   # ============================================================
   scrape-players:
-    if: ${{ inputs.entities == 'all' || inputs.entities == 'players' }}
+    if: ${{ inputs.scrape_players }}
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
@@ -223,7 +236,7 @@ jobs:
           if-no-files-found: error
 
   combine-players:
-    if: ${{ inputs.entities == 'all' || inputs.entities == 'players' }}
+    if: ${{ inputs.scrape_players }}
     needs: scrape-players
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -261,7 +274,7 @@ jobs:
   # TRANSFERS
   # ============================================================
   scrape-transfers:
-    if: ${{ inputs.entities == 'all' || inputs.entities == 'transfers' }}
+    if: ${{ inputs.scrape_transfers }}
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
@@ -298,7 +311,7 @@ jobs:
           if-no-files-found: error
 
   combine-transfers:
-    if: ${{ inputs.entities == 'all' || inputs.entities == 'transfers' }}
+    if: ${{ inputs.scrape_transfers }}
     needs: scrape-transfers
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -336,7 +349,7 @@ jobs:
   # VALUATIONS
   # ============================================================
   scrape-valuations:
-    if: ${{ inputs.entities == 'all' || inputs.entities == 'valuations' }}
+    if: ${{ inputs.scrape_valuations }}
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
@@ -373,7 +386,7 @@ jobs:
           if-no-files-found: error
 
   combine-valuations:
-    if: ${{ inputs.entities == 'all' || inputs.entities == 'valuations' }}
+    if: ${{ inputs.scrape_valuations }}
     needs: scrape-valuations
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -429,7 +442,7 @@ jobs:
           persist-credentials: false
       
       - name: Download leagues data
-        if: ${{ inputs.entities == 'all' || inputs.entities == 'leagues' }}
+        if: ${{ inputs.scrape_leagues }}
         uses: actions/download-artifact@v4
         with:
           name: leagues-all-data
@@ -437,7 +450,7 @@ jobs:
         continue-on-error: true
       
       - name: Download teams data
-        if: ${{ inputs.entities == 'all' || inputs.entities == 'teams' }}
+        if: ${{ inputs.scrape_teams }}
         uses: actions/download-artifact@v4
         with:
           name: teams-all-data
@@ -445,7 +458,7 @@ jobs:
         continue-on-error: true
       
       - name: Download players data
-        if: ${{ inputs.entities == 'all' || inputs.entities == 'players' }}
+        if: ${{ inputs.scrape_players }}
         uses: actions/download-artifact@v4
         with:
           name: players-all-data
@@ -453,7 +466,7 @@ jobs:
         continue-on-error: true
       
       - name: Download transfers data
-        if: ${{ inputs.entities == 'all' || inputs.entities == 'transfers' }}
+        if: ${{ inputs.scrape_transfers }}
         uses: actions/download-artifact@v4
         with:
           name: transfers-all-data
@@ -461,7 +474,7 @@ jobs:
         continue-on-error: true
       
       - name: Download valuations data
-        if: ${{ inputs.entities == 'all' || inputs.entities == 'valuations' }}
+        if: ${{ inputs.scrape_valuations }}
         uses: actions/download-artifact@v4
         with:
           name: valuations-all-data
