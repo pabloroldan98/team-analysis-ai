@@ -192,10 +192,11 @@ class TransfermarktLeaguesScraper(BaseScraper):
             
             if league:
                 all_leagues[league_key] = league
-                # Save per-league file (single entity dict)
+                # Save per-league file as list with one dict
                 self.save_json(
-                    league.to_dict(),
+                    [league.to_dict()],
                     f"leagues_{league_key}_{self.season}",
+                    min_items=1,
                     id_field="league_id",
                     data_type="leagues"
                 )

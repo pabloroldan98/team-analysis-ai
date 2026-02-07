@@ -1,15 +1,17 @@
-{
-  "league_id": "FR1",
-  "name": "Ligue 1",
-  "country": "France",
-  "season": "2025-2026",
-  "tier": 1,
-  "total_market_value": 3860000000.0,
-  "num_teams": 18,
-  "num_players": 477,
-  "average_age": 25.6,
-  "average_market_value": 8090000.0,
-  "most_valuable_player": "Vitinha",
-  "logo_url": "https://tmssl.akamaized.net//images/logo/header/fr1.png?lm=1732280518",
-  "profile_url": "https://www.transfermarkt.com/ligue-1/startseite/wettbewerb/FR1/saison_id/2025"
-}
+[
+  {
+    "league_id": "FR1",
+    "name": "Ligue 1",
+    "country": "France",
+    "season": "2025-2026",
+    "tier": 1,
+    "total_market_value": 3860000000.0,
+    "num_teams": 18,
+    "num_players": 477,
+    "average_age": 25.6,
+    "average_market_value": 8090000.0,
+    "most_valuable_player": "Vitinha",
+    "logo_url": "https://tmssl.akamaized.net//images/logo/header/fr1.png?lm=1732280518",
+    "profile_url": "https://www.transfermarkt.com/ligue-1/startseite/wettbewerb/FR1/saison_id/2025"
+  }
+]

@@ -61,19 +61,29 @@ def combine_entity_files(entity: str, season: str = None) -> int:
     
     # Combine all data
     combined = []
+    # Known ID fields that indicate a single entity object
+    entity_id_fields = ["league_id", "team_id", "player_id", "transfer_id", "valuation_id"]
+    
     for filepath in files:
         try:
             with open(filepath, 'r', encoding='utf-8') as fp:
                 data = json.load(fp)
                 if isinstance(data, list):
+                    # Standard format: list of dicts
                     combined.extend(data)
                 elif isinstance(data, dict):
-                    # If dict, could be {league: [...]} format
-                    for value in data.values():
-                        if isinstance(value, list):
-                            combined.extend(value)
-                        else:
-                            combined.append(value)
+                    # Check if it's a single entity object (has an ID field)
+                    is_single_entity = any(id_field in data for id_field in entity_id_fields)
+                    if is_single_entity:
+                        # Single entity dict, add as one item
+                        combined.append(data)
+                    else:
+                        # Could be {league: [...]} format, extract lists
+                        for value in data.values():
+                            if isinstance(value, list):
+                                combined.extend(value)
+                            elif isinstance(value, dict):
+                                combined.append(value)
                 else:
                     combined.append(data)
         except Exception as e:
