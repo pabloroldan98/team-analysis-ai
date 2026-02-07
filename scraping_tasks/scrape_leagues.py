@@ -69,13 +69,12 @@ def main():
         verbose=args.verbose
     )
     
-    # Run the scraper
-    leagues = scraper.run(leagues=args.leagues)
+    results = scraper.run(leagues=args.leagues)
     
     # Summary
     print(f"\n=== Complete ===")
-    print(f"Leagues scraped: {len(leagues)}")
-    for league_key, league in leagues.items():
+    print(f"Total leagues scraped: {len(results)}")
+    for league_key, league in results.items():
         value_str = f"€{league.total_market_value/1_000_000_000:.2f}B" if league.total_market_value else "N/A"
         print(f"  {league.name}: {league.num_teams} teams, {value_str}")
     

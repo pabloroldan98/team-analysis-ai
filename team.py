@@ -4,7 +4,7 @@ Team object for team-analysis-ai.
 Represents a football team/club with all relevant attributes.
 """
 from __future__ import annotations
-from typing import Optional, List
+from typing import Optional
 from unidecode import unidecode
 
 
@@ -28,7 +28,6 @@ class Team:
         stadium_capacity: int = None,
         logo_url: str = "",
         profile_url: str = "",
-        players: List = None,  # List of Player objects or player_ids
     ):
         self.team_id = team_id
         self.name = name
@@ -45,7 +44,6 @@ class Team:
         self.stadium_capacity = stadium_capacity
         self.logo_url = logo_url
         self.profile_url = profile_url
-        self.players = players or []
     
     def __str__(self):
         value_str = f"€{self.total_market_value/1_000_000:.1f}M" if self.total_market_value else "N/A"
@@ -87,7 +85,6 @@ class Team:
             "stadium_capacity": self.stadium_capacity,
             "logo_url": self.logo_url,
             "profile_url": self.profile_url,
-            "players": [p if isinstance(p, str) else p.player_id for p in self.players] if self.players else [],
         }
     
     @classmethod
@@ -109,5 +106,4 @@ class Team:
             stadium_capacity=data.get("stadium_capacity"),
             logo_url=data.get("logo_url", ""),
             profile_url=data.get("profile_url", ""),
-            players=data.get("players", []),
         )

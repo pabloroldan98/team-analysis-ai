@@ -1,10 +1,10 @@
 # league.py
 """
 League object for team-analysis-ai.
-Represents a football league/competition with its teams for a season.
+Represents a football league/competition for a season.
 """
 from __future__ import annotations
-from typing import Optional, List
+from typing import Optional
 
 
 class League:
@@ -25,7 +25,6 @@ class League:
         most_valuable_player: str = "",
         logo_url: str = "",
         profile_url: str = "",
-        teams: List = None,  # List of Team objects or team_ids
     ):
         self.league_id = league_id
         self.name = name
@@ -40,7 +39,6 @@ class League:
         self.most_valuable_player = most_valuable_player
         self.logo_url = logo_url
         self.profile_url = profile_url
-        self.teams = teams or []
     
     def __str__(self):
         value_str = f"€{self.total_market_value/1_000_000_000:.2f}B" if self.total_market_value else "N/A"
@@ -82,7 +80,6 @@ class League:
             "most_valuable_player": self.most_valuable_player,
             "logo_url": self.logo_url,
             "profile_url": self.profile_url,
-            "teams": [t if isinstance(t, str) else t.team_id for t in self.teams] if self.teams else [],
         }
     
     @classmethod
@@ -102,5 +99,4 @@ class League:
             most_valuable_player=data.get("most_valuable_player", ""),
             logo_url=data.get("logo_url", ""),
             profile_url=data.get("profile_url", ""),
-            teams=data.get("teams", []),
         )

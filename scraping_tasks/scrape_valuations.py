@@ -4,17 +4,12 @@
 Task: Scrape player valuation history from Transfermarkt.
 Downloads valuation history for all players in configured leagues.
 
-By default (--details), fetches the FULL valuation history for each player
-from their individual market value page (e.g., /kylian-mbappe/marktwertverlauf/spieler/342229).
-
-Use --no-details for faster scraping of only current market values
-(from player profiles, no historical data).
-
-NOTE: With --details, this task is slow due to visiting each player's page.
+By default, fetches the FULL valuation history for each player via API.
+Use --no-details for faster scraping of only current market values.
 
 Usage:
-    python scraping_tasks/scrape_valuations.py                     # Full history (default)
-    python scraping_tasks/scrape_valuations.py --no-details        # Current values only, fast
+    python scraping_tasks/scrape_valuations.py
+    python scraping_tasks/scrape_valuations.py --no-details
     python scraping_tasks/scrape_valuations.py --leagues laliga
 """
 import sys
@@ -27,9 +22,13 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from scraping.transfermarkt_valuations import TransfermarktValuationsScraper
 
 
-# Default leagues to scrape (fewer by default due to time)
+# Default leagues to scrape
 DEFAULT_LEAGUES = [
     "laliga",
+    "premier",
+    "bundesliga",
+    "seriea",
+    "ligue1",
 ]
 
 
@@ -39,7 +38,7 @@ def main():
         "--leagues",
         nargs="+",
         default=DEFAULT_LEAGUES,
-        help="Leagues to scrape (default: laliga only due to volume)"
+        help="Leagues to scrape (default: top 5 European leagues)"
     )
     parser.add_argument(
         "--season",
@@ -47,8 +46,6 @@ def main():
         default=None,
         help="Season to scrape (e.g., 2024-2025). Defaults to current season."
     )
-    
-    # Details argument: default True, --no-details sets to False
     parser.add_argument(
         "--no-details",
         dest="details",
@@ -56,7 +53,6 @@ def main():
         help="Skip full valuation history (faster, only current market values)"
     )
     parser.set_defaults(details=True)
-    
     parser.add_argument(
         "--delay",
         type=float,
@@ -72,14 +68,12 @@ def main():
     
     args = parser.parse_args()
     
-    mode_str = "Full valuation history" if args.details else "Current values only (fast)"
+    mode_str = "Full valuation history" if args.details else "Current values only"
     
     print(f"=== Transfermarkt Valuations Scraper ===")
     print(f"Leagues: {', '.join(args.leagues)}")
     print(f"Season: {args.season or 'current'}")
     print(f"Mode: {mode_str}")
-    if args.details:
-        print(f"WARNING: This task may take a very long time with --details!")
     print()
     
     scraper = TransfermarktValuationsScraper(
@@ -99,6 +93,11 @@ def main():
     
     print(f"\n=== Complete ===")
     print(f"Total valuations scraped: {total_valuations}")
+    for league, teams_data in results.items():
+        league_total = sum(
+            len(pv) for td in teams_data.values() for pv in td.values()
+        )
+        print(f"  {league}: {league_total} valuations from {len(teams_data)} teams")
     
     return 0
 

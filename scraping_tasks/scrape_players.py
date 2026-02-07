@@ -4,11 +4,13 @@
 Task: Scrape player data from Transfermarkt.
 Downloads player information for all teams in configured leagues.
 
+By default, fetches detailed player information from individual player pages.
+Use --no-details for faster scraping of only basic player data from team pages.
+
 Usage:
     python scraping_tasks/scrape_players.py
+    python scraping_tasks/scrape_players.py --no-details
     python scraping_tasks/scrape_players.py --leagues laliga premier
-    python scraping_tasks/scrape_players.py --season 2024-2025
-    python scraping_tasks/scrape_players.py --no-details  # Skip detailed player info (faster)
 """
 import sys
 import argparse
@@ -46,9 +48,9 @@ def main():
     )
     parser.add_argument(
         "--no-details",
-        action="store_false",
         dest="details",
-        help="Skip detailed player information (faster)"
+        action="store_false",
+        help="Skip detailed player information (faster, only basic data)"
     )
     parser.set_defaults(details=True)
     parser.add_argument(
@@ -66,10 +68,12 @@ def main():
     
     args = parser.parse_args()
     
+    mode_str = "Full player details" if args.details else "Basic data only"
+    
     print(f"=== Transfermarkt Players Scraper ===")
     print(f"Leagues: {', '.join(args.leagues)}")
     print(f"Season: {args.season or 'current'}")
-    print(f"Include details: {args.details}")
+    print(f"Mode: {mode_str}")
     print()
     
     scraper = TransfermarktPlayersScraper(

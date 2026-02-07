@@ -152,10 +152,8 @@ class TransfermarktLeaguesScraper(BaseScraper):
         # Get team IDs from the page
         team_ids = []
         team_infos = self.get_league_teams(league_key)
-        if team_infos:
-            team_ids = [t["team_id"] for t in team_infos]
-            if not num_teams:
-                num_teams = len(team_ids)
+        if team_infos and not num_teams:
+            num_teams = len(team_infos)
         
         return League(
             league_id=league_id,
@@ -171,7 +169,6 @@ class TransfermarktLeaguesScraper(BaseScraper):
             most_valuable_player=most_valuable_player,
             logo_url=logo_url,
             profile_url=url,
-            teams=team_ids,
         )
     
     def run(self, leagues: List[str] = None) -> Dict[str, League]:

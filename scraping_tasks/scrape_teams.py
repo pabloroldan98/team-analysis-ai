@@ -46,8 +46,8 @@ def main():
     parser.add_argument(
         "--delay",
         type=float,
-        default=2.0,
-        help="Delay between requests in seconds (default: 2.0)"
+        default=0.0,
+        help="Delay between requests in seconds (default: 0.0)"
     )
     parser.add_argument(
         "-v", "--verbose",
@@ -74,7 +74,6 @@ def main():
     # Summary
     total_teams = sum(len(teams) for teams in results.values())
     print(f"\n=== Complete ===")
-    print(f"Leagues scraped: {len(results)}")
     print(f"Total teams scraped: {total_teams}")
     for league_key, teams in results.items():
         total_value = sum(t.total_market_value or 0 for t in teams)
