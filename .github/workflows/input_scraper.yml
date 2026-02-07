@@ -1,0 +1,490 @@
+# .github/workflows/input_scraper.yml
+name: Input Scraper - Custom Leagues & Seasons
+
+on:
+  workflow_dispatch:
+    inputs:
+      leagues:
+        description: 'Leagues to scrape (JSON array, e.g., ["laliga", "premier"] or ["laliga"])'
+        required: true
+        default: '["laliga"]'
+        type: string
+      seasons:
+        description: 'Seasons to scrape (JSON array, e.g., ["2025-2026", "2024-2025"] or ["2025-2026"])'
+        required: true
+        default: '["2025-2026"]'
+        type: string
+      entities:
+        description: 'Entities to scrape'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - leagues
+          - teams
+          - players
+          - transfers
+          - valuations
+
+concurrency:
+  group: input-scraper
+  cancel-in-progress: false
+
+jobs:
+  # ============================================================
+  # LEAGUES
+  # ============================================================
+  scrape-leagues:
+    if: ${{ inputs.entities == 'all' || inputs.entities == 'leagues' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        league: ${{ fromJSON(inputs.leagues) }}
+        season: ${{ fromJSON(inputs.seasons) }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run leagues scraper for ${{ matrix.league }} (${{ matrix.season }})
+        run: |
+          python scraping_tasks/scrape_leagues.py --leagues ${{ matrix.league }} --season ${{ matrix.season }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: leagues-${{ matrix.league }}-${{ matrix.season }}
+          path: data/leagues_${{ matrix.league }}_${{ matrix.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  combine-leagues:
+    if: ${{ inputs.entities == 'all' || inputs.entities == 'leagues' }}
+    needs: scrape-leagues
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/
+          pattern: leagues-*
+          merge-multiple: true
+      
+      - name: Combine into _all_ files
+        run: |
+          for season in ${{ join(fromJSON(inputs.seasons), ' ') }}; do
+            python scraping_tasks/combine_data.py --entity leagues --season $season
+          done
+      
+      - name: Upload all data
+        uses: actions/upload-artifact@v4
+        with:
+          name: leagues-all-data
+          path: data/leagues_*.json
+          retention-days: 1
+
+  # ============================================================
+  # TEAMS
+  # ============================================================
+  scrape-teams:
+    if: ${{ inputs.entities == 'all' || inputs.entities == 'teams' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        league: ${{ fromJSON(inputs.leagues) }}
+        season: ${{ fromJSON(inputs.seasons) }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run teams scraper for ${{ matrix.league }} (${{ matrix.season }})
+        run: |
+          python scraping_tasks/scrape_teams.py --leagues ${{ matrix.league }} --season ${{ matrix.season }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: teams-${{ matrix.league }}-${{ matrix.season }}
+          path: data/teams_${{ matrix.league }}_${{ matrix.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  combine-teams:
+    if: ${{ inputs.entities == 'all' || inputs.entities == 'teams' }}
+    needs: scrape-teams
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/
+          pattern: teams-*
+          merge-multiple: true
+      
+      - name: Combine into _all_ files
+        run: |
+          for season in ${{ join(fromJSON(inputs.seasons), ' ') }}; do
+            python scraping_tasks/combine_data.py --entity teams --season $season
+          done
+      
+      - name: Upload all data
+        uses: actions/upload-artifact@v4
+        with:
+          name: teams-all-data
+          path: data/teams_*.json
+          retention-days: 1
+
+  # ============================================================
+  # PLAYERS
+  # ============================================================
+  scrape-players:
+    if: ${{ inputs.entities == 'all' || inputs.entities == 'players' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        league: ${{ fromJSON(inputs.leagues) }}
+        season: ${{ fromJSON(inputs.seasons) }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run players scraper for ${{ matrix.league }} (${{ matrix.season }})
+        run: |
+          python scraping_tasks/scrape_players.py --leagues ${{ matrix.league }} --season ${{ matrix.season }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: players-${{ matrix.league }}-${{ matrix.season }}
+          path: data/players_${{ matrix.league }}_${{ matrix.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  combine-players:
+    if: ${{ inputs.entities == 'all' || inputs.entities == 'players' }}
+    needs: scrape-players
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/
+          pattern: players-*
+          merge-multiple: true
+      
+      - name: Combine into _all_ files
+        run: |
+          for season in ${{ join(fromJSON(inputs.seasons), ' ') }}; do
+            python scraping_tasks/combine_data.py --entity players --season $season
+          done
+      
+      - name: Upload all data
+        uses: actions/upload-artifact@v4
+        with:
+          name: players-all-data
+          path: data/players_*.json
+          retention-days: 1
+
+  # ============================================================
+  # TRANSFERS
+  # ============================================================
+  scrape-transfers:
+    if: ${{ inputs.entities == 'all' || inputs.entities == 'transfers' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        league: ${{ fromJSON(inputs.leagues) }}
+        season: ${{ fromJSON(inputs.seasons) }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run transfers scraper for ${{ matrix.league }} (${{ matrix.season }})
+        run: |
+          python scraping_tasks/scrape_transfers.py --leagues ${{ matrix.league }} --season ${{ matrix.season }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: transfers-${{ matrix.league }}-${{ matrix.season }}
+          path: data/transfers_${{ matrix.league }}_${{ matrix.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  combine-transfers:
+    if: ${{ inputs.entities == 'all' || inputs.entities == 'transfers' }}
+    needs: scrape-transfers
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/
+          pattern: transfers-*
+          merge-multiple: true
+      
+      - name: Combine into _all_ files
+        run: |
+          for season in ${{ join(fromJSON(inputs.seasons), ' ') }}; do
+            python scraping_tasks/combine_data.py --entity transfers --season $season
+          done
+      
+      - name: Upload all data
+        uses: actions/upload-artifact@v4
+        with:
+          name: transfers-all-data
+          path: data/transfers_*.json
+          retention-days: 1
+
+  # ============================================================
+  # VALUATIONS
+  # ============================================================
+  scrape-valuations:
+    if: ${{ inputs.entities == 'all' || inputs.entities == 'valuations' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        league: ${{ fromJSON(inputs.leagues) }}
+        season: ${{ fromJSON(inputs.seasons) }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run valuations scraper for ${{ matrix.league }} (${{ matrix.season }})
+        run: |
+          python scraping_tasks/scrape_valuations.py --leagues ${{ matrix.league }} --season ${{ matrix.season }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: valuations-${{ matrix.league }}-${{ matrix.season }}
+          path: data/valuations_${{ matrix.league }}_${{ matrix.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  combine-valuations:
+    if: ${{ inputs.entities == 'all' || inputs.entities == 'valuations' }}
+    needs: scrape-valuations
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/
+          pattern: valuations-*
+          merge-multiple: true
+      
+      - name: Combine into _all_ files
+        run: |
+          for season in ${{ join(fromJSON(inputs.seasons), ' ') }}; do
+            python scraping_tasks/combine_data.py --entity valuations --season $season
+          done
+      
+      - name: Upload all data
+        uses: actions/upload-artifact@v4
+        with:
+          name: valuations-all-data
+          path: data/valuations_*.json
+          retention-days: 1
+
+  # ============================================================
+  # FINAL COMMIT
+  # ============================================================
+  commit-all:
+    needs: [combine-leagues, combine-teams, combine-players, combine-transfers, combine-valuations]
+    if: |
+      always() &&
+      (needs.combine-leagues.result == 'success' || needs.combine-leagues.result == 'skipped') &&
+      (needs.combine-teams.result == 'success' || needs.combine-teams.result == 'skipped') &&
+      (needs.combine-players.result == 'success' || needs.combine-players.result == 'skipped') &&
+      (needs.combine-transfers.result == 'success' || needs.combine-transfers.result == 'skipped') &&
+      (needs.combine-valuations.result == 'success' || needs.combine-valuations.result == 'skipped')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      
+      - name: Download leagues data
+        if: ${{ inputs.entities == 'all' || inputs.entities == 'leagues' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: leagues-all-data
+          path: data/
+        continue-on-error: true
+      
+      - name: Download teams data
+        if: ${{ inputs.entities == 'all' || inputs.entities == 'teams' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: teams-all-data
+          path: data/
+        continue-on-error: true
+      
+      - name: Download players data
+        if: ${{ inputs.entities == 'all' || inputs.entities == 'players' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: players-all-data
+          path: data/
+        continue-on-error: true
+      
+      - name: Download transfers data
+        if: ${{ inputs.entities == 'all' || inputs.entities == 'transfers' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: transfers-all-data
+          path: data/
+        continue-on-error: true
+      
+      - name: Download valuations data
+        if: ${{ inputs.entities == 'all' || inputs.entities == 'valuations' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: valuations-all-data
+          path: data/
+        continue-on-error: true
+      
+      - name: List downloaded files
+        run: |
+          echo "Downloaded files:"
+          ls -la data/ || echo "No data directory"
+      
+      - name: Configure git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      
+      - name: Commit changes
+        run: |
+          git add data/
+          git diff --staged --quiet || git commit -m "Custom scraper update [$(date -u '+%Y-%m-%d')]"
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
