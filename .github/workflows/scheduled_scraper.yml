@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   # ============================================================
-  # LEAGUES - Matrix by league
+  # LEAGUES - Matrix by league (runs in parallel with other scrapers)
   # ============================================================
   scrape-leagues:
     runs-on: ubuntu-latest
@@ -83,10 +83,9 @@ jobs:
           retention-days: 1
 
   # ============================================================
-  # TEAMS - Matrix by league
+  # TEAMS - Matrix by league (runs in parallel with other scrapers)
   # ============================================================
   scrape-teams:
-    needs: combine-leagues
     runs-on: ubuntu-latest
     timeout-minutes: 120
     strategy:
@@ -154,10 +153,9 @@ jobs:
           retention-days: 1
 
   # ============================================================
-  # PLAYERS - Matrix by league
+  # PLAYERS - Matrix by league (runs in parallel with other scrapers)
   # ============================================================
   scrape-players:
-    needs: combine-teams
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
@@ -225,10 +223,9 @@ jobs:
           retention-days: 1
 
   # ============================================================
-  # TRANSFERS - Matrix by league
+  # TRANSFERS - Matrix by league (runs in parallel with other scrapers)
   # ============================================================
   scrape-transfers:
-    needs: combine-players
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
@@ -296,10 +293,9 @@ jobs:
           retention-days: 1
 
   # ============================================================
-  # VALUATIONS - Matrix by league
+  # VALUATIONS - Matrix by league (runs in parallel with other scrapers)
   # ============================================================
   scrape-valuations:
-    needs: combine-transfers
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
@@ -367,7 +363,7 @@ jobs:
           retention-days: 1
 
   # ============================================================
-  # FINAL COMMIT - All data
+  # FINAL COMMIT - All data (waits for all combines)
   # ============================================================
   commit-all:
     needs: [combine-leagues, combine-teams, combine-players, combine-transfers, combine-valuations]
