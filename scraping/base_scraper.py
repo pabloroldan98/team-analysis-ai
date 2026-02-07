@@ -8,6 +8,7 @@ import json
 import os
 import re
 import time
+import random
 import hashlib
 from datetime import datetime, date
 from pathlib import Path
@@ -28,22 +29,67 @@ from unidecode import unidecode
 ROOT_DIR = Path(__file__).parent.parent
 DATA_DIR = ROOT_DIR / "data"
 
+# Rotating header pool
+HEADER_POOL = [
+    # Chrome / Windows (older)
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/91.0.4472.124 Safari/537.36"
+        )
+    },
+    # Chrome / Windows (newer)
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/120.0.0.0 Safari/537.36"
+        )
+    },
+    # Chrome / macOS
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/120.0.0.0 Safari/537.36"
+        )
+    },
+    # Chrome / Linux
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (X11; Linux x86_64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/120.0.0.0 Safari/537.36"
+        )
+    },
+    # Firefox / Windows
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) "
+            "Gecko/20100101 Firefox/121.0"
+        )
+    },
+    # Safari / macOS
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_6) "
+            "AppleWebKit/605.1.15 (KHTML, like Gecko) "
+            "Version/17.1 Safari/605.1.15"
+        )
+    },
+]
+
+
+def pick_headers() -> dict:
+    """Pick a random header from the pool."""
+    return random.choice(HEADER_POOL).copy()
+
 
 class BaseScraper:
     """Base class for Transfermarkt scrapers."""
     
     BASE_URL = "https://www.transfermarkt.com"
-    
-    # HEADERS = {
-    #     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    #     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    #     "Accept-Language": "en-US,en;q=0.5",
-    #     "Accept-Encoding": "gzip, deflate, br",
-    #     "Connection": "keep-alive",
-    # }
-    HEADERS = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-    }
     
     # League URL mappings
     LEAGUE_URLS = {
@@ -64,9 +110,9 @@ class BaseScraper:
     def __init__(
         self,
         season: str = None,
-        delay: float = 2.0,
+        delay: float = 0.25,
         max_retries: int = 5,
-        retry_pause: float = 20.0,
+        retry_pause: float = 60.0,
         verbose: bool = True,
     ):
         """
@@ -132,11 +178,12 @@ class BaseScraper:
         for attempt in range(1, tries + 1):
             try:
                 time.sleep(self.delay)
+                headers = pick_headers()
                 
                 if USE_TLS:
-                    response = tls_requests.get(url, headers=self.HEADERS)
+                    response = tls_requests.get(url, headers=headers)
                 else:
-                    response = requests.get(url, headers=self.HEADERS)
+                    response = requests.get(url, headers=headers)
                 
                 if response.status_code == 200:
                     return BeautifulSoup(response.content, "html.parser")
