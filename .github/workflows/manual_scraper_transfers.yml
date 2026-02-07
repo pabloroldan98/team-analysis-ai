@@ -16,6 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         league: [laliga, premier, bundesliga, seriea, ligue1]
+        season: ['2025-2026', '2024-2025', '2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020', '2018-2019', '2017-2018', '2016-2017']
     
     steps:
       - name: Checkout repository
@@ -32,15 +33,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       
-      - name: Run transfers scraper for ${{ matrix.league }}
+      - name: Run transfers scraper for ${{ matrix.league }} (${{ matrix.season }})
         run: |
-          python scraping_tasks/scrape_transfers.py --leagues ${{ matrix.league }}
+          python scraping_tasks/scrape_transfers.py --leagues ${{ matrix.league }} --season ${{ matrix.season }}
       
       - name: Upload league artifact
         uses: actions/upload-artifact@v4
         with:
-          name: transfers-${{ matrix.league }}
-          path: data/transfers_${{ matrix.league }}_*.json
+          name: transfers-${{ matrix.league }}-${{ matrix.season }}
+          path: data/transfers_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -65,9 +66,11 @@ jobs:
           pattern: transfers-*
           merge-multiple: true
       
-      - name: Combine into _all_ file
+      - name: Combine into _all_ files
         run: |
-          python scraping_tasks/combine_data.py --entity transfers
+          for season in 2025-2026 2024-2025 2023-2024 2022-2023 2021-2022 2020-2021 2019-2020 2018-2019 2017-2018 2016-2017; do
+            python scraping_tasks/combine_data.py --entity transfers --season $season
+          done
       
       - name: Upload all data
         uses: actions/upload-artifact@v4
