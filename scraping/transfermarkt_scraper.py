@@ -24,7 +24,7 @@ import tls_requests
 
 # Rotating header pool
 HEADER_POOL = [
-    # Chrome / Windows (older)
+    # Chrome / Windows 10 (older)
     {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -32,12 +32,20 @@ HEADER_POOL = [
             "Chrome/91.0.4472.124 Safari/537.36"
         )
     },
-    # Chrome / Windows (newer)
+    # Chrome / Windows 10 (newer)
     {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
             "AppleWebKit/537.36 (KHTML, like Gecko) "
             "Chrome/120.0.0.0 Safari/537.36"
+        )
+    },
+    # Chrome / Windows 11
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/122.0.0.0 Safari/537.36"
         )
     },
     # Chrome / macOS
@@ -46,6 +54,14 @@ HEADER_POOL = [
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
             "AppleWebKit/537.36 (KHTML, like Gecko) "
             "Chrome/120.0.0.0 Safari/537.36"
+        )
+    },
+    # Chrome / macOS Sonoma
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_3) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/121.0.0.0 Safari/537.36"
         )
     },
     # Chrome / Linux
@@ -63,12 +79,43 @@ HEADER_POOL = [
             "Gecko/20100101 Firefox/121.0"
         )
     },
-    # Safari / macOS
+    # Firefox / macOS
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 14.3; rv:122.0) "
+            "Gecko/20100101 Firefox/122.0"
+        )
+    },
+    # Safari / macOS Ventura
     {
         "User-Agent": (
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_6) "
             "AppleWebKit/605.1.15 (KHTML, like Gecko) "
             "Version/17.1 Safari/605.1.15"
+        )
+    },
+    # Safari / macOS Sonoma
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_3) "
+            "AppleWebKit/605.1.15 (KHTML, like Gecko) "
+            "Version/17.3 Safari/605.1.15"
+        )
+    },
+    # Edge / Windows
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0"
+        )
+    },
+    # Opera / Windows
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/120.0.0.0 Safari/537.36 OPR/106.0.0.0"
         )
     },
 ]

@@ -25,8 +25,11 @@ class TransfermarktTransfersScraper(BaseScraper):
     
     def _fetch_club_names_batch(self, club_ids: Set[str]) -> Dict[str, str]:
         """
-        Fetch multiple club names in a single API call.
+        Fetch multiple club names via API, adaptively splitting on 414 errors.
         API: https://tmapi-alpha.transfermarkt.technology/clubs?ids[]=X&ids[]=Y...
+        
+        Starts with all IDs in one request. If 414 (URL too long) is received,
+        splits the batch in half and retries recursively.
         
         Args:
             club_ids: Set of club IDs to fetch
@@ -43,34 +46,57 @@ class TransfermarktTransfersScraper(BaseScraper):
         if not ids_to_fetch:
             return {cid: self._club_name_cache.get(cid, "") for cid in club_ids}
         
-        # Build URL with query params
-        params = "&".join([f"ids[]={cid}" for cid in ids_to_fetch])
-        api_url = f"{self.TM_API_URL}/clubs?{params}"
-        
         self.log(f"  Fetching {len(ids_to_fetch)} club names via API...")
         
-        try:
-            import requests
-            response = requests.get(api_url, timeout=60)
+        import requests
+        
+        def fetch_batch(batch: list) -> None:
+            """Recursively fetch a batch, splitting on 414 errors."""
+            if not batch:
+                return
             
-            if response.status_code != 200:
-                self.log(f"    API error: {response.status_code}")
-                return {cid: self._club_name_cache.get(cid, "") for cid in club_ids}
+            # Build URL with query params
+            params = "&".join([f"ids[]={cid}" for cid in batch])
+            api_url = f"{self.TM_API_URL}/clubs?{params}"
             
-            data = response.json()
-            
-            if data.get("success"):
-                clubs_data = data.get("data", [])
-                for club in clubs_data:
-                    club_id = str(club.get("id", ""))
-                    club_name = club.get("name", "")
-                    if club_id:
-                        self._club_name_cache[club_id] = club_name
-            
-            self.log(f"    Found {len(self._club_name_cache)} club names")
-            
-        except Exception as e:
-            self.log(f"    Error fetching club names: {e}")
+            try:
+                response = requests.get(api_url, timeout=60)
+                
+                # If URL too long, split in half and retry
+                if response.status_code == 414:
+                    if len(batch) <= 1:
+                        self.log(f"    Cannot split further, skipping ID: {batch[0]}")
+                        return
+                    
+                    mid = len(batch) // 2
+                    self.log(f"    414 error with {len(batch)} IDs, splitting in half...")
+                    fetch_batch(batch[:mid])
+                    fetch_batch(batch[mid:])
+                    return
+                
+                if response.status_code != 200:
+                    self.log(f"    API error {response.status_code} for {len(batch)} IDs")
+                    return
+                
+                data = response.json()
+                
+                if data.get("success"):
+                    clubs_data = data.get("data", [])
+                    for club in clubs_data:
+                        club_id = str(club.get("id", ""))
+                        club_name = club.get("name", "")
+                        if club_id:
+                            self._club_name_cache[club_id] = club_name
+                    
+                    self.log(f"    Fetched {len(clubs_data)} clubs (batch of {len(batch)})")
+                
+            except Exception as e:
+                self.log(f"    Error fetching {len(batch)} clubs: {e}")
+        
+        # Start with all IDs
+        fetch_batch(ids_to_fetch)
+        
+        self.log(f"    Total cached club names: {len(self._club_name_cache)}")
         
         return {cid: self._club_name_cache.get(cid, "") for cid in club_ids}
     
