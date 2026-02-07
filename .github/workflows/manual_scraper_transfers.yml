@@ -1,0 +1,100 @@
+# .github/workflows/manual_scraper_transfers.yml
+name: Manual Scraper - Transfers
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: scraper-transfers
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        league: [laliga, premier, bundesliga, seriea, ligue1]
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run transfers scraper for ${{ matrix.league }}
+        run: |
+          python scraping_tasks/scrape_transfers.py --leagues ${{ matrix.league }}
+      
+      - name: Upload league artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: transfers-${{ matrix.league }}
+          path: data/transfers_${{ matrix.league }}_*.json
+          retention-days: 1
+          if-no-files-found: error
+
+  combine:
+    needs: scrape
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Download all league artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/
+          pattern: transfers-*
+          merge-multiple: true
+      
+      - name: Combine into _all_ file
+        run: |
+          python scraping_tasks/combine_data.py --entity transfers
+      
+      - name: Upload all data
+        uses: actions/upload-artifact@v4
+        with:
+          name: transfers-all-data
+          path: data/transfers_*.json
+          retention-days: 1
+
+  commit:
+    needs: combine
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Download all data
+        uses: actions/download-artifact@v4
+        with:
+          name: transfers-all-data
+          path: data/
+      
+      - name: Commit and push data
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/
+          git diff --staged --quiet || git commit -m "Update transfers data [$(date -u '+%Y-%m-%d')]"
+          git push

@@ -337,18 +337,16 @@ class TransfermarktValuationsScraper(BaseScraper):
             if details:
                 self._fill_club_names(all_valuations)
             
-            # Save to JSON
+            # Save per-league file
             valuations_dicts = [v.to_dict() for v in all_valuations]
             self.save_json(valuations_dicts, f"valuations_{league}_{self.season}")
         
-        # Save combined
+        # Save combined _all_ file
         combined = []
         for league_data in all_data.values():
             for team_data in league_data.values():
                 for player_valuations in team_data.values():
-                    for v in player_valuations:
-                        combined.append(v.to_dict())
-        
+                    combined.extend([v.to_dict() for v in player_valuations])
         self.save_json(combined, f"valuations_all_{self.season}")
         
         return all_data

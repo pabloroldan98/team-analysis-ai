@@ -221,15 +221,15 @@ class TransfermarktTeamsScraper(BaseScraper):
             teams = self.scrape_league_teams(league)
             all_teams[league] = teams
             
-            # Save teams for this league
+            # Save per-league file
             teams_data = [t.to_dict() for t in teams]
             self.save_json(teams_data, f"teams_{league}_{self.season}")
         
-        # Save all teams combined
-        all_teams_data = {}
-        for league_key, teams in all_teams.items():
-            all_teams_data[league_key] = [t.to_dict() for t in teams]
-        self.save_json(all_teams_data, f"teams_all_{self.season}")
+        # Save combined _all_ file
+        all_teams_list = []
+        for teams in all_teams.values():
+            all_teams_list.extend([t.to_dict() for t in teams])
+        self.save_json(all_teams_list, f"teams_all_{self.season}")
         
         return all_teams
 

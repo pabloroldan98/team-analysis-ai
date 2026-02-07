@@ -442,15 +442,14 @@ class TransfermarktPlayersScraper(BaseScraper):
                 for p in players:
                     all_players.append(p.to_dict())
             
+            # Save per-league file
             self.save_json(all_players, f"players_{league}_{self.season}")
         
-        # Save combined
+        # Save combined _all_ file
         combined = []
         for league_data in all_data.values():
             for players in league_data.values():
-                for p in players:
-                    combined.append(p.to_dict())
-        
+                combined.extend([p.to_dict() for p in players])
         self.save_json(combined, f"players_all_{self.season}")
         
         return all_data
