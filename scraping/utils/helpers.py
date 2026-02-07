@@ -91,7 +91,7 @@ def is_valid_data(
         data: Data to validate (list or dict)
         min_items: Minimum number of items (teams, players, etc.)
         min_players_per_team: Minimum players per team (for team data)
-        data_type: Type of data ("teams", "players", "transfers", "logos")
+        data_type: Type of data ("teams", "players", "transfers", "valuations", "leagues")
     
     Returns:
         True if data is valid
@@ -114,11 +114,28 @@ def is_valid_data(
                         continue
         return True
     
-    # Dict format (league -> items)
+    # Dict format
     if isinstance(data, dict):
         if len(data) < 1:
             return False
         
+        # Check if it's a single entity object (e.g., a League with league_id)
+        # These have known ID fields as keys, not nested collections
+        entity_id_fields = ["league_id", "team_id", "player_id", "transfer_id", "valuation_id"]
+        for id_field in entity_id_fields:
+            if id_field in data:
+                # It's a single entity object - validate it has required fields
+                if data_type == "leagues":
+                    # League must have at least league_id and name
+                    return bool(data.get("league_id") and data.get("name"))
+                elif data_type == "teams":
+                    return bool(data.get("team_id") and data.get("name"))
+                elif data_type == "players":
+                    return bool(data.get("player_id") and data.get("name"))
+                # Generic: just having the ID field is enough
+                return True
+        
+        # Dict format (league -> items) for nested structures
         total_items = 0
         for key, items in data.items():
             if isinstance(items, list):
