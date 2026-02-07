@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: transfers-${{ matrix.league }}-${{ matrix.season }}
-          path: data/transfers_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/json/transfers_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -62,7 +62,7 @@ jobs:
       - name: Download all league artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/
+          path: data/json/
           pattern: transfers-*
           merge-multiple: true
       
@@ -76,7 +76,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: transfers-all-data
-          path: data/transfers_*.json
+          path: data/json/transfers_*.json
           retention-days: 1
 
   commit:
@@ -94,7 +94,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: transfers-all-data
-          path: data/
+          path: data/json/
       
       - name: Configure git
         run: |
@@ -103,7 +103,7 @@ jobs:
       
       - name: Commit changes
         run: |
-          git add data/
+          git add data/json/
           git diff --staged --quiet || git commit -m "Update transfers data [$(date -u '+%Y-%m-%d')]"
       
       - name: Push changes

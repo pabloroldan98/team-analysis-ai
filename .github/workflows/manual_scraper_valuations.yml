@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: valuations-${{ matrix.league }}-${{ matrix.season }}
-          path: data/valuations_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/json/valuations_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -62,7 +62,7 @@ jobs:
       - name: Download all league artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/
+          path: data/json/
           pattern: valuations-*
           merge-multiple: true
       
@@ -76,7 +76,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: valuations-all-data
-          path: data/valuations_*.json
+          path: data/json/valuations_*.json
           retention-days: 1
 
   commit:
@@ -94,7 +94,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: valuations-all-data
-          path: data/
+          path: data/json/
       
       - name: Configure git
         run: |
@@ -103,7 +103,7 @@ jobs:
       
       - name: Commit changes
         run: |
-          git add data/
+          git add data/json/
           git diff --staged --quiet || git commit -m "Update valuations data [$(date -u '+%Y-%m-%d')]"
       
       - name: Push changes

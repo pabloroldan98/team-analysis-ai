@@ -27,7 +27,7 @@ from unidecode import unidecode
 
 
 ROOT_DIR = Path(__file__).parent.parent
-DATA_DIR = ROOT_DIR / "data"
+DATA_DIR = ROOT_DIR / "data" / "json"
 
 # Rotating header pool
 HEADER_POOL = [

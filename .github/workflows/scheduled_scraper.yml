@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: leagues-${{ matrix.league }}-${{ matrix.season }}
-          path: data/leagues_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/json/leagues_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -68,7 +68,7 @@ jobs:
       - name: Download all league artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/
+          path: data/json/
           pattern: leagues-*
           merge-multiple: true
       
@@ -82,7 +82,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: leagues-all-data
-          path: data/leagues_*.json
+          path: data/json/leagues_*.json
           retention-days: 1
 
   # ============================================================
@@ -120,7 +120,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: teams-${{ matrix.league }}-${{ matrix.season }}
-          path: data/teams_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/json/teams_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -141,7 +141,7 @@ jobs:
       - name: Download all league artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/
+          path: data/json/
           pattern: teams-*
           merge-multiple: true
       
@@ -155,7 +155,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: teams-all-data
-          path: data/teams_*.json
+          path: data/json/teams_*.json
           retention-days: 1
 
   # ============================================================
@@ -193,7 +193,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: players-${{ matrix.league }}-${{ matrix.season }}
-          path: data/players_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/json/players_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -214,7 +214,7 @@ jobs:
       - name: Download all league artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/
+          path: data/json/
           pattern: players-*
           merge-multiple: true
       
@@ -228,7 +228,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: players-all-data
-          path: data/players_*.json
+          path: data/json/players_*.json
           retention-days: 1
 
   # ============================================================
@@ -266,7 +266,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: transfers-${{ matrix.league }}-${{ matrix.season }}
-          path: data/transfers_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/json/transfers_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -287,7 +287,7 @@ jobs:
       - name: Download all league artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/
+          path: data/json/
           pattern: transfers-*
           merge-multiple: true
       
@@ -301,7 +301,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: transfers-all-data
-          path: data/transfers_*.json
+          path: data/json/transfers_*.json
           retention-days: 1
 
   # ============================================================
@@ -339,7 +339,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: valuations-${{ matrix.league }}-${{ matrix.season }}
-          path: data/valuations_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/json/valuations_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -360,7 +360,7 @@ jobs:
       - name: Download all league artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/
+          path: data/json/
           pattern: valuations-*
           merge-multiple: true
       
@@ -374,7 +374,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: valuations-all-data
-          path: data/valuations_*.json
+          path: data/json/valuations_*.json
           retention-days: 1
 
   # ============================================================
@@ -395,36 +395,36 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: leagues-all-data
-          path: data/
+          path: data/json/
       
       - name: Download teams data
         uses: actions/download-artifact@v4
         with:
           name: teams-all-data
-          path: data/
+          path: data/json/
       
       - name: Download players data
         uses: actions/download-artifact@v4
         with:
           name: players-all-data
-          path: data/
+          path: data/json/
       
       - name: Download transfers data
         uses: actions/download-artifact@v4
         with:
           name: transfers-all-data
-          path: data/
+          path: data/json/
       
       - name: Download valuations data
         uses: actions/download-artifact@v4
         with:
           name: valuations-all-data
-          path: data/
+          path: data/json/
       
       - name: List downloaded files
         run: |
           echo "Downloaded files:"
-          ls -la data/
+          ls -la data/json/
       
       - name: Configure git
         run: |
@@ -433,7 +433,7 @@ jobs:
       
       - name: Commit changes
         run: |
-          git add data/
+          git add data/json/
           git diff --staged --quiet || git commit -m "Monthly data update [$(date -u '+%Y-%m-%d')]"
       
       - name: Push changes

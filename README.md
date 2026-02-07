@@ -266,9 +266,9 @@ python scraping_tasks/scrape_valuations.py --leagues laliga --season 2025-2026
 #   --details / --no-details: Enable/disable detailed scraping (default: enabled)
 ```
 
-Output files are saved to the `data/` directory:
+Output files are saved to the `data/json/` directory:
 ```
-data/
+data/json/
 ├── leagues_laliga_2025-2026.json
 ├── teams_laliga_2025-2026.json
 ├── players_laliga_2025-2026.json
