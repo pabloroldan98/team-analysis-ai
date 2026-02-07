@@ -74736,22 +74736,6 @@
     "market_value_at_transfer": 100000
   },
   {
-    "transfer_id": "6172219",
-    "player_id": "617019",
-    "player_name": "Matthew Garbett",
-    "from_club_name": "",
-    "from_club_id": "28992",
-    "to_club_name": "",
-    "to_club_id": "98475",
-    "price": null,
-    "price_str": "End of loan",
-    "transfer_date": "30/06/2020",
-    "season": "2019-2020",
-    "transfer_type": "loan_out",
-    "is_loan": true,
-    "market_value_at_transfer": 0
-  },
-  {
     "transfer_id": "2772111",
     "player_id": "617019",
     "player_name": "Matthew Garbett",
@@ -74765,6 +74749,22 @@
     "season": "2019-2020",
     "transfer_type": "out",
     "is_loan": false,
+    "market_value_at_transfer": 0
+  },
+  {
+    "transfer_id": "6172219",
+    "player_id": "617019",
+    "player_name": "Matthew Garbett",
+    "from_club_name": "",
+    "from_club_id": "28992",
+    "to_club_name": "",
+    "to_club_id": "98475",
+    "price": null,
+    "price_str": "End of loan",
+    "transfer_date": "23/01/2020",
+    "season": "2019-2020",
+    "transfer_type": "loan_out",
+    "is_loan": true,
     "market_value_at_transfer": 0
   },
   {
