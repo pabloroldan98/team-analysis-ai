@@ -13584,6 +13584,22 @@
     "market_value_at_transfer": 0
   },
   {
+    "transfer_id": "6173174",
+    "player_id": "1075590",
+    "player_name": "Rayane Messi",
+    "from_club_name": "",
+    "from_club_id": "667",
+    "to_club_name": "",
+    "to_club_id": "34911",
+    "price": null,
+    "price_str": "loan transfer",
+    "transfer_date": "02/02/2026",
+    "season": "2025-2026",
+    "transfer_type": "loan_out",
+    "is_loan": true,
+    "market_value_at_transfer": 1000000
+  },
+  {
     "transfer_id": "5904656",
     "player_id": "1075590",
     "player_name": "Rayane Messi",
@@ -13593,7 +13609,7 @@
     "to_club_id": "667",
     "price": null,
     "price_str": "End of loan",
-    "transfer_date": "02/02/2026",
+    "transfer_date": "01/02/2026",
     "season": "2025-2026",
     "transfer_type": "loan_out",
     "is_loan": true,
