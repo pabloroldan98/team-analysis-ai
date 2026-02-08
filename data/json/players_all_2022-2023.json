@@ -1161,7 +1161,7 @@
       "Central Midfield",
       "Attacking Midfield"
     ],
-    "age": 31,
+    "age": 32,
     "birth_date": "08/02/1994",
     "nationality": "Türkiye",
     "other_nationalities": [
@@ -3683,7 +3683,7 @@
     "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
-    "age": 25,
+    "age": 26,
     "birth_date": "08/02/2000",
     "nationality": "Albania",
     "other_nationalities": [
@@ -8331,7 +8331,7 @@
       "Right-Back",
       "Defensive Midfield"
     ],
-    "age": 27,
+    "age": 28,
     "birth_date": "08/02/1998",
     "nationality": "Guadeloupe",
     "other_nationalities": [
@@ -10669,31 +10669,6 @@
     "season": "2022-2023"
   },
   {
-    "player_id": "699442",
-    "name": "Kacper Urbański",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "MID",
-    "main_position": "Central Midfield",
-    "other_positions": [
-      "Defensive Midfield",
-      "Attacking Midfield"
-    ],
-    "age": 21,
-    "birth_date": "07/09/2004",
-    "nationality": "Poland",
-    "other_nationalities": [],
-    "height": 183,
-    "preferred_foot": "right",
-    "shirt_number": 82,
-    "market_value": 3500000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "02/09/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/699442-1696837702.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/kacper-urbanski/profil/spieler/699442",
-    "season": "2022-2023"
-  },
-  {
     "player_id": "401920",
     "name": "Kingsley Michael",
     "team": "Without Club",
@@ -10754,7 +10729,7 @@
       "Central Midfield",
       "Left Midfield"
     ],
-    "age": 34,
+    "age": 35,
     "birth_date": "08/02/1991",
     "nationality": "Italy",
     "other_nationalities": [
@@ -10768,6 +10743,31 @@
     "joined_date": "01/07/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/63186-1596008971.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/roberto-soriano/profil/spieler/63186",
+    "season": "2022-2023"
+  },
+  {
+    "player_id": "699442",
+    "name": "Kacper Urbański",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Attacking Midfield",
+    "other_positions": [
+      "Defensive Midfield",
+      "Central Midfield"
+    ],
+    "age": 21,
+    "birth_date": "07/09/2004",
+    "nationality": "Poland",
+    "other_nationalities": [],
+    "height": 183,
+    "preferred_foot": "right",
+    "shirt_number": 82,
+    "market_value": 3500000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "02/09/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/699442-1696837702.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/kacper-urbanski/profil/spieler/699442",
     "season": "2022-2023"
   },
   {
@@ -12372,30 +12372,6 @@
     "season": "2022-2023"
   },
   {
-    "player_id": "183841",
-    "name": "Petar Stojanović",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "DEF",
-    "main_position": "Right-Back",
-    "other_positions": [
-      "Right Midfield"
-    ],
-    "age": 30,
-    "birth_date": "07/10/1995",
-    "nationality": "Slovenia",
-    "other_nationalities": [],
-    "height": 178,
-    "preferred_foot": "right",
-    "shirt_number": 30,
-    "market_value": 600000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "01/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/183841-1632394381.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/petar-stojanovic/profil/spieler/183841",
-    "season": "2022-2023"
-  },
-  {
     "player_id": "197473",
     "name": "Alberto Grassi",
     "team": "Cremonese",
@@ -12684,6 +12660,30 @@
     "joined_date": "24/07/2024",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/709500-1721740185.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/alessandro-renzi/profil/spieler/709500",
+    "season": "2022-2023"
+  },
+  {
+    "player_id": "183841",
+    "name": "Petar Stojanović",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Right Midfield",
+    "other_positions": [
+      "Right-Back"
+    ],
+    "age": 30,
+    "birth_date": "07/10/1995",
+    "nationality": "Slovenia",
+    "other_nationalities": [],
+    "height": 178,
+    "preferred_foot": "right",
+    "shirt_number": 30,
+    "market_value": 600000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "01/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/183841-1632394381.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/petar-stojanovic/profil/spieler/183841",
     "season": "2022-2023"
   },
   {
@@ -13362,7 +13362,7 @@
       "Left-Back",
       "Right-Back"
     ],
-    "age": 22,
+    "age": 23,
     "birth_date": "08/02/2003",
     "nationality": "Italy",
     "other_nationalities": [],
@@ -15530,31 +15530,6 @@
     "season": "2022-2023"
   },
   {
-    "player_id": "268178",
-    "name": "Arkadiusz Reca",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "DEF",
-    "main_position": "Left-Back",
-    "other_positions": [
-      "Left Midfield",
-      "Left Winger"
-    ],
-    "age": 30,
-    "birth_date": "17/06/1995",
-    "nationality": "Poland",
-    "other_nationalities": [],
-    "height": 187,
-    "preferred_foot": "left",
-    "shirt_number": 13,
-    "market_value": 600000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "18/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/268178-1638174607.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/arkadiusz-reca/profil/spieler/268178",
-    "season": "2022-2023"
-  },
-  {
     "player_id": "461906",
     "name": "João Moutinho",
     "team": "Lech Poznan",
@@ -15613,7 +15588,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 27,
+    "age": 28,
     "birth_date": "08/02/1998",
     "nationality": "France",
     "other_nationalities": [
@@ -16052,6 +16027,31 @@
     "joined_date": "16/07/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/241076-1663687225.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/emmanuel-gyasi/profil/spieler/241076",
+    "season": "2022-2023"
+  },
+  {
+    "player_id": "268178",
+    "name": "Arkadiusz Reca",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Left Midfield",
+    "other_positions": [
+      "Left-Back",
+      "Left Winger"
+    ],
+    "age": 30,
+    "birth_date": "17/06/1995",
+    "nationality": "Poland",
+    "other_nationalities": [],
+    "height": 187,
+    "preferred_foot": "left",
+    "shirt_number": 13,
+    "market_value": 600000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "18/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/268178-1638174607.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/arkadiusz-reca/profil/spieler/268178",
     "season": "2022-2023"
   },
   {
@@ -20376,7 +20376,7 @@
     "other_positions": [
       "Right Winger"
     ],
-    "age": 22,
+    "age": 23,
     "birth_date": "08/02/2003",
     "nationality": "England",
     "other_nationalities": [
@@ -21002,7 +21002,7 @@
     "preferred_foot": "right",
     "shirt_number": null,
     "market_value": 2500000.0,
-    "contract_expires_date": "30/06/2027",
+    "contract_expires_date": "30/06/2029",
     "joined_date": "01/07/2024",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/575219-1770384091.png?lm=1",
     "profile_url": "https://www.transfermarkt.com/catalin-cirjan/profil/spieler/575219",
@@ -24301,8 +24301,8 @@
   {
     "player_id": "143424",
     "name": "Alex Oxlade-Chamberlain",
-    "team": "Without Club",
-    "team_id": "515",
+    "team": "Celtic",
+    "team_id": "371",
     "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
@@ -24317,8 +24317,8 @@
     "preferred_foot": "right",
     "shirt_number": 15,
     "market_value": 1500000.0,
-    "contract_expires_date": "-",
-    "joined_date": "27/08/2025",
+    "contract_expires_date": "31/05/2026",
+    "joined_date": "07/02/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/143424-1727356614.png?lm=1",
     "profile_url": "https://www.transfermarkt.com/alex-oxlade-chamberlain/profil/spieler/143424",
     "season": "2022-2023"
@@ -28344,7 +28344,7 @@
     "other_positions": [
       "Right Winger"
     ],
-    "age": 23,
+    "age": 24,
     "birth_date": "08/02/2002",
     "nationality": "England",
     "other_nationalities": [
@@ -33112,30 +33112,6 @@
     "season": "2022-2023"
   },
   {
-    "player_id": "357158",
-    "name": "Rúben Vinagre",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "DEF",
-    "main_position": "Left-Back",
-    "other_positions": [
-      "Left Midfield"
-    ],
-    "age": 26,
-    "birth_date": "09/04/1999",
-    "nationality": "Portugal",
-    "other_nationalities": [],
-    "height": 174,
-    "preferred_foot": "left",
-    "shirt_number": 29,
-    "market_value": 2500000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "06/02/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/357158-1721813075.png?lm=1",
-    "profile_url": "https://www.transfermarkt.com/ruben-vinagre/profil/spieler/357158",
-    "season": "2022-2023"
-  },
-  {
     "player_id": "922698",
     "name": "Ishé Samuels-Smith",
     "team": "Swansea",
@@ -33437,6 +33413,30 @@
     "joined_date": "22/01/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/612749-1684327909.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/isaac-price/profil/spieler/612749",
+    "season": "2022-2023"
+  },
+  {
+    "player_id": "357158",
+    "name": "Rúben Vinagre",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Left Midfield",
+    "other_positions": [
+      "Left-Back"
+    ],
+    "age": 26,
+    "birth_date": "09/04/1999",
+    "nationality": "Portugal",
+    "other_nationalities": [],
+    "height": 174,
+    "preferred_foot": "left",
+    "shirt_number": 29,
+    "market_value": 2500000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "06/02/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/357158-1721813075.png?lm=1",
+    "profile_url": "https://www.transfermarkt.com/ruben-vinagre/profil/spieler/357158",
     "season": "2022-2023"
   },
   {
@@ -45064,7 +45064,7 @@
     "other_positions": [
       "Left Winger"
     ],
-    "age": 23,
+    "age": 24,
     "birth_date": "08/02/2002",
     "nationality": "France",
     "other_nationalities": [
@@ -48402,7 +48402,7 @@
     "other_positions": [
       "Right Winger"
     ],
-    "age": 33,
+    "age": 34,
     "birth_date": "08/02/1992",
     "nationality": "Spain",
     "other_nationalities": [],
@@ -53311,31 +53311,6 @@
     "season": "2022-2023"
   },
   {
-    "player_id": "341272",
-    "name": "Álex Pozo",
-    "team": "Jagiellonia",
-    "team_id": "2300",
-    "position": "DEF",
-    "main_position": "Right-Back",
-    "other_positions": [
-      "Right Midfield",
-      "Right Winger"
-    ],
-    "age": 26,
-    "birth_date": "22/02/1999",
-    "nationality": "Spain",
-    "other_nationalities": [],
-    "height": 172,
-    "preferred_foot": "right",
-    "shirt_number": 17,
-    "market_value": 1500000.0,
-    "contract_expires_date": "30/06/2026",
-    "joined_date": "15/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
-    "season": "2022-2023"
-  },
-  {
     "player_id": "442552",
     "name": "Houboulang Mendes",
     "team": "Servette FC",
@@ -53709,6 +53684,31 @@
     "joined_date": "20/08/2024",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/282410-1727174572.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/jose-carlos-lazo/profil/spieler/282410",
+    "season": "2022-2023"
+  },
+  {
+    "player_id": "341272",
+    "name": "Álex Pozo",
+    "team": "Jagiellonia",
+    "team_id": "2300",
+    "position": "ATT",
+    "main_position": "Right Winger",
+    "other_positions": [
+      "Right-Back",
+      "Right Midfield"
+    ],
+    "age": 26,
+    "birth_date": "22/02/1999",
+    "nationality": "Spain",
+    "other_nationalities": [],
+    "height": 172,
+    "preferred_foot": "right",
+    "shirt_number": 17,
+    "market_value": 1500000.0,
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "15/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
     "season": "2022-2023"
   },
   {
@@ -56175,7 +56175,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "Brazil",
     "other_nationalities": [],
@@ -59083,7 +59083,7 @@
       "Right-Back",
       "Central Midfield"
     ],
-    "age": 30,
+    "age": 31,
     "birth_date": "08/02/1995",
     "nationality": "Germany",
     "other_nationalities": [],
@@ -71492,7 +71492,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 21,
+    "age": 22,
     "birth_date": "08/02/2004",
     "nationality": "Germany",
     "other_nationalities": [],
@@ -72447,7 +72447,7 @@
       "Centre-Back",
       "Central Midfield"
     ],
-    "age": 36,
+    "age": 37,
     "birth_date": "08/02/1989",
     "nationality": "Germany",
     "other_nationalities": [],
@@ -74583,7 +74583,7 @@
     "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "France",
     "other_nationalities": [
@@ -83149,7 +83149,7 @@
       "Right-Back",
       "Defensive Midfield"
     ],
-    "age": 27,
+    "age": 28,
     "birth_date": "08/02/1998",
     "nationality": "Guadeloupe",
     "other_nationalities": [
@@ -83161,7 +83161,7 @@
     "market_value": 1000000.0,
     "contract_expires_date": "30/06/2026",
     "joined_date": "11/09/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/395083-1728552938.jpg?lm=1",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/395083-1770514524.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/andreaw-gravillon/profil/spieler/395083",
     "season": "2022-2023"
   },
@@ -84727,7 +84727,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 34,
+    "age": 35,
     "birth_date": "08/02/1991",
     "nationality": "Tunisia",
     "other_nationalities": [

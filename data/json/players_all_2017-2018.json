@@ -1713,7 +1713,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "Brazil",
     "other_nationalities": [],
@@ -2413,8 +2413,8 @@
   {
     "player_id": "143424",
     "name": "Alex Oxlade-Chamberlain",
-    "team": "Without Club",
-    "team_id": "515",
+    "team": "Celtic",
+    "team_id": "371",
     "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
@@ -2429,8 +2429,8 @@
     "preferred_foot": "right",
     "shirt_number": 21,
     "market_value": 1500000.0,
-    "contract_expires_date": "-",
-    "joined_date": "27/08/2025",
+    "contract_expires_date": "31/05/2026",
+    "joined_date": "07/02/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/143424-1727356614.png?lm=1",
     "profile_url": "https://www.transfermarkt.com/alex-oxlade-chamberlain/profil/spieler/143424",
     "season": "2017-2018"
@@ -4963,7 +4963,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 33,
+    "age": 34,
     "birth_date": "08/02/1992",
     "nationality": "England",
     "other_nationalities": [
@@ -5184,8 +5184,8 @@
   {
     "player_id": "143424",
     "name": "Alex Oxlade-Chamberlain",
-    "team": "Without Club",
-    "team_id": "515",
+    "team": "Celtic",
+    "team_id": "371",
     "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
@@ -5200,8 +5200,8 @@
     "preferred_foot": "right",
     "shirt_number": 15,
     "market_value": 1500000.0,
-    "contract_expires_date": "-",
-    "joined_date": "27/08/2025",
+    "contract_expires_date": "31/05/2026",
+    "joined_date": "07/02/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/143424-1727356614.png?lm=1",
     "profile_url": "https://www.transfermarkt.com/alex-oxlade-chamberlain/profil/spieler/143424",
     "season": "2017-2018"
@@ -6018,7 +6018,7 @@
     "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
-    "age": 26,
+    "age": 27,
     "birth_date": "08/02/1999",
     "nationality": "England",
     "other_nationalities": [],
@@ -6657,8 +6657,8 @@
     "other_nationalities": [
       "Kosovo"
     ],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 176,
+    "preferred_foot": "right",
     "shirt_number": null,
     "market_value": 2000000.0,
     "contract_expires_date": "-",
@@ -7175,8 +7175,8 @@
     "birth_date": "07/04/1986",
     "nationality": "Austria",
     "other_nationalities": [],
-    "height": 187,
-    "preferred_foot": "left",
+    "height": null,
+    "preferred_foot": "N/A",
     "shirt_number": 28,
     "market_value": 5000000.0,
     "contract_expires_date": "-",
@@ -11189,7 +11189,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "Brazil",
     "other_nationalities": [],
@@ -12499,7 +12499,7 @@
     "other_positions": [
       "Left-Back"
     ],
-    "age": 33,
+    "age": 34,
     "birth_date": "08/02/1992",
     "nationality": "Netherlands",
     "other_nationalities": [
@@ -16205,30 +16205,6 @@
     "season": "2017-2018"
   },
   {
-    "player_id": "114116",
-    "name": "Richie Towell",
-    "team": "Without Club",
-    "team_id": "515",
-    "position": "MID",
-    "main_position": "Central Midfield",
-    "other_positions": [
-      "Attacking Midfield"
-    ],
-    "age": 34,
-    "birth_date": "17/07/1991",
-    "nationality": "Ireland",
-    "other_nationalities": [],
-    "height": 179,
-    "preferred_foot": "right",
-    "shirt_number": 36,
-    "market_value": 200000.0,
-    "contract_expires_date": "-",
-    "joined_date": "01/01/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/114116-1662372371.png?lm=1",
-    "profile_url": "https://www.transfermarkt.com/richie-towell/profil/spieler/114116",
-    "season": "2017-2018"
-  },
-  {
     "player_id": "357656",
     "name": "Jayson Molumby",
     "team": "West Brom",
@@ -16302,6 +16278,30 @@
     "joined_date": "07/08/2024",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/119164-1478085509.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/ezequiel-schelotto/profil/spieler/119164",
+    "season": "2017-2018"
+  },
+  {
+    "player_id": "114116",
+    "name": "Richie Towell",
+    "team": "Without Club",
+    "team_id": "515",
+    "position": "MID",
+    "main_position": "Attacking Midfield",
+    "other_positions": [
+      "Central Midfield"
+    ],
+    "age": 34,
+    "birth_date": "17/07/1991",
+    "nationality": "Ireland",
+    "other_nationalities": [],
+    "height": 179,
+    "preferred_foot": "right",
+    "shirt_number": 36,
+    "market_value": 200000.0,
+    "contract_expires_date": "-",
+    "joined_date": "01/01/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/114116-1662372371.png?lm=1",
+    "profile_url": "https://www.transfermarkt.com/richie-towell/profil/spieler/114116",
     "season": "2017-2018"
   },
   {
@@ -17418,7 +17418,7 @@
     "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "France",
     "other_nationalities": [
@@ -23674,7 +23674,7 @@
       "Central Midfield",
       "Attacking Midfield"
     ],
-    "age": 31,
+    "age": 32,
     "birth_date": "08/02/1994",
     "nationality": "Türkiye",
     "other_nationalities": [
@@ -31682,7 +31682,7 @@
     "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
-    "age": 37,
+    "age": 38,
     "birth_date": "08/02/1988",
     "nationality": "Costa Rica",
     "other_nationalities": [],
@@ -34623,7 +34623,7 @@
       "Right-Back",
       "Defensive Midfield"
     ],
-    "age": 27,
+    "age": 28,
     "birth_date": "08/02/1998",
     "nationality": "Guadeloupe",
     "other_nationalities": [
@@ -34635,7 +34635,7 @@
     "market_value": 1000000.0,
     "contract_expires_date": "30/06/2026",
     "joined_date": "11/09/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/395083-1728552938.jpg?lm=1",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/395083-1770514524.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/andreaw-gravillon/profil/spieler/395083",
     "season": "2017-2018"
   },
@@ -35951,7 +35951,7 @@
     "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
-    "age": 25,
+    "age": 26,
     "birth_date": "08/02/2000",
     "nationality": "Albania",
     "other_nationalities": [
@@ -41951,31 +41951,6 @@
     "season": "2017-2018"
   },
   {
-    "player_id": "341272",
-    "name": "Álex Pozo",
-    "team": "Jagiellonia",
-    "team_id": "2300",
-    "position": "DEF",
-    "main_position": "Right-Back",
-    "other_positions": [
-      "Right Midfield",
-      "Right Winger"
-    ],
-    "age": 26,
-    "birth_date": "22/02/1999",
-    "nationality": "Spain",
-    "other_nationalities": [],
-    "height": 172,
-    "preferred_foot": "right",
-    "shirt_number": 31,
-    "market_value": 1500000.0,
-    "contract_expires_date": "30/06/2026",
-    "joined_date": "15/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
-    "season": "2017-2018"
-  },
-  {
     "player_id": "73734",
     "name": "Steven Nzonzi",
     "team": "Stoke City",
@@ -42326,6 +42301,31 @@
     "joined_date": "01/07/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/74230-1762258624.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/pablo-sarabia/profil/spieler/74230",
+    "season": "2017-2018"
+  },
+  {
+    "player_id": "341272",
+    "name": "Álex Pozo",
+    "team": "Jagiellonia",
+    "team_id": "2300",
+    "position": "ATT",
+    "main_position": "Right Winger",
+    "other_positions": [
+      "Right-Back",
+      "Right Midfield"
+    ],
+    "age": 26,
+    "birth_date": "22/02/1999",
+    "nationality": "Spain",
+    "other_nationalities": [],
+    "height": 172,
+    "preferred_foot": "right",
+    "shirt_number": 31,
+    "market_value": 1500000.0,
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "15/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
     "season": "2017-2018"
   },
   {
@@ -44552,7 +44552,7 @@
       "Central Midfield",
       "Left Midfield"
     ],
-    "age": 34,
+    "age": 35,
     "birth_date": "08/02/1991",
     "nationality": "Italy",
     "other_nationalities": [
@@ -46033,7 +46033,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 38,
+    "age": 39,
     "birth_date": "08/02/1987",
     "nationality": "Spain",
     "other_nationalities": [],
@@ -49993,7 +49993,7 @@
     "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
-    "age": 28,
+    "age": 29,
     "birth_date": "08/02/1997",
     "nationality": "Spain",
     "other_nationalities": [],
@@ -50961,8 +50961,8 @@
     "birth_date": "30/08/1979",
     "nationality": "Spain",
     "other_nationalities": [],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 182,
+    "preferred_foot": "right",
     "shirt_number": 14,
     "market_value": 100000.0,
     "contract_expires_date": "-",
@@ -52518,7 +52518,7 @@
     "other_positions": [
       "Right Winger"
     ],
-    "age": 33,
+    "age": 34,
     "birth_date": "08/02/1992",
     "nationality": "Spain",
     "other_nationalities": [],
@@ -56173,6 +56173,31 @@
     "season": "2017-2018"
   },
   {
+    "player_id": "262608",
+    "name": "Adama Traoré",
+    "team": "Amed SK",
+    "team_id": "12382",
+    "position": "MID",
+    "main_position": "Central Midfield",
+    "other_positions": [
+      "Attacking Midfield",
+      "Right Winger"
+    ],
+    "age": 30,
+    "birth_date": "28/06/1995",
+    "nationality": "Mali",
+    "other_nationalities": [],
+    "height": 178,
+    "preferred_foot": "left",
+    "shirt_number": 28,
+    "market_value": 1000000.0,
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "01/07/2024",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/262608-1762165085.jpeg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/adama-traore/profil/spieler/262608",
+    "season": "2017-2018"
+  },
+  {
     "player_id": "453594",
     "name": "Adama Diakhaby",
     "team": "W. Mannheim",
@@ -56224,31 +56249,6 @@
     "joined_date": "30/07/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/205562-1686662075.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/thomas-lemar/profil/spieler/205562",
-    "season": "2017-2018"
-  },
-  {
-    "player_id": "262608",
-    "name": "Adama Traoré",
-    "team": "Amed SK",
-    "team_id": "12382",
-    "position": "MID",
-    "main_position": "Attacking Midfield",
-    "other_positions": [
-      "Central Midfield",
-      "Right Winger"
-    ],
-    "age": 30,
-    "birth_date": "28/06/1995",
-    "nationality": "Mali",
-    "other_nationalities": [],
-    "height": 178,
-    "preferred_foot": "left",
-    "shirt_number": 28,
-    "market_value": 1000000.0,
-    "contract_expires_date": "30/06/2026",
-    "joined_date": "01/07/2024",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/262608-1762165085.jpeg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/adama-traore/profil/spieler/262608",
     "season": "2017-2018"
   },
   {
@@ -60813,7 +60813,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 34,
+    "age": 35,
     "birth_date": "08/02/1991",
     "nationality": "Tunisia",
     "other_nationalities": [
@@ -61216,7 +61216,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 27,
+    "age": 28,
     "birth_date": "08/02/1998",
     "nationality": "France",
     "other_nationalities": [
@@ -65026,8 +65026,8 @@
   {
     "player_id": "420782",
     "name": "Yanis Ammour",
-    "team": "Without Club",
-    "team_id": "515",
+    "team": "Saran FC",
+    "team_id": "59279",
     "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
@@ -65044,8 +65044,8 @@
     "preferred_foot": "left",
     "shirt_number": null,
     "market_value": null,
-    "contract_expires_date": "-",
-    "joined_date": "30/01/2026",
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "31/01/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/420782-1556007604.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/yanis-ammour/profil/spieler/420782",
     "season": "2017-2018"
@@ -71135,7 +71135,7 @@
     "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
-    "age": 33,
+    "age": 34,
     "birth_date": "08/02/1992",
     "nationality": "Algeria",
     "other_nationalities": [
@@ -72396,7 +72396,7 @@
       "Right-Back",
       "Central Midfield"
     ],
-    "age": 30,
+    "age": 31,
     "birth_date": "08/02/1995",
     "nationality": "Germany",
     "other_nationalities": [],
@@ -77332,8 +77332,8 @@
     "other_nationalities": [
       "Germany"
     ],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 183,
+    "preferred_foot": "right",
     "shirt_number": 19,
     "market_value": 4500000.0,
     "contract_expires_date": "-",
@@ -77485,8 +77485,8 @@
     "other_nationalities": [
       "Ghana"
     ],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 182,
+    "preferred_foot": "right",
     "shirt_number": null,
     "market_value": 175000.0,
     "contract_expires_date": "-",
@@ -77684,7 +77684,7 @@
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 38,
-    "birth_date": "N/A",
+    "birth_date": "05/04/1987",
     "nationality": "Germany",
     "other_nationalities": [],
     "height": 190,
@@ -77984,8 +77984,8 @@
     "birth_date": "01/09/1983",
     "nationality": "Netherlands",
     "other_nationalities": [],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 178,
+    "preferred_foot": "right",
     "shirt_number": 3,
     "market_value": 1000000.0,
     "contract_expires_date": "-",
@@ -78630,8 +78630,8 @@
     "birth_date": "13/03/1989",
     "nationality": "Germany",
     "other_nationalities": [],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 190,
+    "preferred_foot": "left",
     "shirt_number": 28,
     "market_value": 5000000.0,
     "contract_expires_date": "-",
@@ -78729,8 +78729,8 @@
     "other_nationalities": [
       "Nigeria"
     ],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 184,
+    "preferred_foot": "left",
     "shirt_number": 3,
     "market_value": 1500000.0,
     "contract_expires_date": "-",
@@ -78780,8 +78780,8 @@
     "other_nationalities": [
       "Russia"
     ],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 180,
+    "preferred_foot": "right",
     "shirt_number": 32,
     "market_value": 3000000.0,
     "contract_expires_date": "-",
@@ -79354,8 +79354,8 @@
     "birth_date": "22/07/1988",
     "nationality": "Germany",
     "other_nationalities": [],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 187,
+    "preferred_foot": "right",
     "shirt_number": 1,
     "market_value": 1000000.0,
     "contract_expires_date": "-",
@@ -79498,8 +79498,8 @@
     "birth_date": "15/01/1988",
     "nationality": "Germany",
     "other_nationalities": [],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 191,
+    "preferred_foot": "right",
     "shirt_number": null,
     "market_value": 2500000.0,
     "contract_expires_date": "-",
@@ -80072,8 +80072,8 @@
     "other_nationalities": [
       "United States"
     ],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 188,
+    "preferred_foot": "right",
     "shirt_number": 19,
     "market_value": 2000000.0,
     "contract_expires_date": "-",
@@ -80143,8 +80143,8 @@
     "birth_date": "19/04/1985",
     "nationality": "Germany",
     "other_nationalities": [],
-    "height": 190,
-    "preferred_foot": "left",
+    "height": null,
+    "preferred_foot": "N/A",
     "shirt_number": 37,
     "market_value": 250000.0,
     "contract_expires_date": "-",
@@ -80314,8 +80314,8 @@
     "birth_date": "04/08/1985",
     "nationality": "Germany",
     "other_nationalities": [],
-    "height": 190,
-    "preferred_foot": "right",
+    "height": null,
+    "preferred_foot": "N/A",
     "shirt_number": 23,
     "market_value": 1000000.0,
     "contract_expires_date": "-",
@@ -80722,7 +80722,7 @@
       "Central Midfield",
       "Left Midfield"
     ],
-    "age": 30,
+    "age": 31,
     "birth_date": "08/02/1995",
     "nationality": "Serbia",
     "other_nationalities": [
@@ -80768,8 +80768,8 @@
   {
     "player_id": "67685",
     "name": "Marco Fabián",
-    "team": "Without Club",
-    "team_id": "515",
+    "team": "FC Rànger's",
+    "team_id": "10741",
     "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
@@ -80785,7 +80785,7 @@
     "shirt_number": 10,
     "market_value": 4500000.0,
     "contract_expires_date": "-",
-    "joined_date": "01/07/2024",
+    "joined_date": "01/02/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/67685-1549988783.JPG?lm=1",
     "profile_url": "https://www.transfermarkt.com/marco-fabian/profil/spieler/67685",
     "season": "2017-2018"
@@ -81167,8 +81167,8 @@
     "birth_date": "15/01/1988",
     "nationality": "Germany",
     "other_nationalities": [],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 191,
+    "preferred_foot": "right",
     "shirt_number": 15,
     "market_value": 2500000.0,
     "contract_expires_date": "-",

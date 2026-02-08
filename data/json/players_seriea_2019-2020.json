@@ -2967,7 +2967,7 @@
       "Central Midfield",
       "Attacking Midfield"
     ],
-    "age": 31,
+    "age": 32,
     "birth_date": "08/02/1994",
     "nationality": "Türkiye",
     "other_nationalities": [
@@ -7272,7 +7272,7 @@
       "Right-Back",
       "Defensive Midfield"
     ],
-    "age": 27,
+    "age": 28,
     "birth_date": "08/02/1998",
     "nationality": "Guadeloupe",
     "other_nationalities": [
@@ -12731,7 +12731,7 @@
       "Central Midfield",
       "Left Midfield"
     ],
-    "age": 34,
+    "age": 35,
     "birth_date": "08/02/1991",
     "nationality": "Italy",
     "other_nationalities": [
@@ -15034,7 +15034,7 @@
     "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
-    "age": 25,
+    "age": 26,
     "birth_date": "08/02/2000",
     "nationality": "Albania",
     "other_nationalities": [
@@ -15233,7 +15233,7 @@
       "Left-Back",
       "Right-Back"
     ],
-    "age": 22,
+    "age": 23,
     "birth_date": "08/02/2003",
     "nationality": "Italy",
     "other_nationalities": [],
@@ -17081,31 +17081,6 @@
     "season": "2019-2020"
   },
   {
-    "player_id": "268178",
-    "name": "Arkadiusz Reca",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "DEF",
-    "main_position": "Left-Back",
-    "other_positions": [
-      "Left Midfield",
-      "Left Winger"
-    ],
-    "age": 30,
-    "birth_date": "17/06/1995",
-    "nationality": "Poland",
-    "other_nationalities": [],
-    "height": 187,
-    "preferred_foot": "left",
-    "shirt_number": 13,
-    "market_value": 600000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "18/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/268178-1638174607.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/arkadiusz-reca/profil/spieler/268178",
-    "season": "2019-2020"
-  },
-  {
     "player_id": "401065",
     "name": "Riccardo Mastrilli",
     "team": "Santegidiese",
@@ -17477,6 +17452,31 @@
     "joined_date": "01/07/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/457681-1604764044.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/eklu-shaka-mawuli/profil/spieler/457681",
+    "season": "2019-2020"
+  },
+  {
+    "player_id": "268178",
+    "name": "Arkadiusz Reca",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Left Midfield",
+    "other_positions": [
+      "Left-Back",
+      "Left Winger"
+    ],
+    "age": 30,
+    "birth_date": "17/06/1995",
+    "nationality": "Poland",
+    "other_nationalities": [],
+    "height": 187,
+    "preferred_foot": "left",
+    "shirt_number": 13,
+    "market_value": 600000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "18/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/268178-1638174607.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/arkadiusz-reca/profil/spieler/268178",
     "season": "2019-2020"
   },
   {

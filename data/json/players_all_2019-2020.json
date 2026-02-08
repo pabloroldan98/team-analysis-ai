@@ -21512,6 +21512,31 @@
     "season": "2019-2020"
   },
   {
+    "player_id": "262608",
+    "name": "Adama Traoré",
+    "team": "Amed SK",
+    "team_id": "12382",
+    "position": "MID",
+    "main_position": "Central Midfield",
+    "other_positions": [
+      "Attacking Midfield",
+      "Right Winger"
+    ],
+    "age": 30,
+    "birth_date": "28/06/1995",
+    "nationality": "Mali",
+    "other_nationalities": [],
+    "height": 178,
+    "preferred_foot": "left",
+    "shirt_number": null,
+    "market_value": 1000000.0,
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "01/07/2024",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/262608-1762165085.jpeg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/adama-traore/profil/spieler/262608",
+    "season": "2019-2020"
+  },
+  {
     "player_id": "263918",
     "name": "Aleksandr Golovin",
     "team": "Monaco",
@@ -21561,31 +21586,6 @@
     "joined_date": "02/08/2024",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/288496-1432645288.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/gabriel-boschilia/profil/spieler/288496",
-    "season": "2019-2020"
-  },
-  {
-    "player_id": "262608",
-    "name": "Adama Traoré",
-    "team": "Amed SK",
-    "team_id": "12382",
-    "position": "MID",
-    "main_position": "Attacking Midfield",
-    "other_positions": [
-      "Central Midfield",
-      "Right Winger"
-    ],
-    "age": 30,
-    "birth_date": "28/06/1995",
-    "nationality": "Mali",
-    "other_nationalities": [],
-    "height": 178,
-    "preferred_foot": "left",
-    "shirt_number": null,
-    "market_value": 1000000.0,
-    "contract_expires_date": "30/06/2026",
-    "joined_date": "01/07/2024",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/262608-1762165085.jpeg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/adama-traore/profil/spieler/262608",
     "season": "2019-2020"
   },
   {
@@ -27782,7 +27782,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 34,
+    "age": 35,
     "birth_date": "08/02/1991",
     "nationality": "Tunisia",
     "other_nationalities": [
@@ -31479,7 +31479,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 27,
+    "age": 28,
     "birth_date": "08/02/1998",
     "nationality": "France",
     "other_nationalities": [
@@ -33438,6 +33438,31 @@
     "season": "2019-2020"
   },
   {
+    "player_id": "262608",
+    "name": "Adama Traoré",
+    "team": "Amed SK",
+    "team_id": "12382",
+    "position": "MID",
+    "main_position": "Central Midfield",
+    "other_positions": [
+      "Attacking Midfield",
+      "Right Winger"
+    ],
+    "age": 30,
+    "birth_date": "28/06/1995",
+    "nationality": "Mali",
+    "other_nationalities": [],
+    "height": 178,
+    "preferred_foot": "left",
+    "shirt_number": 25,
+    "market_value": 1000000.0,
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "01/07/2024",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/262608-1762165085.jpeg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/adama-traore/profil/spieler/262608",
+    "season": "2019-2020"
+  },
+  {
     "player_id": "170976",
     "name": "Marvin Gakpa",
     "team": "Paris 13 Atl.",
@@ -33513,31 +33538,6 @@
     "joined_date": "01/07/2024",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/535706-1697464533.png?lm=1",
     "profile_url": "https://www.transfermarkt.com/sami-lahssaini/profil/spieler/535706",
-    "season": "2019-2020"
-  },
-  {
-    "player_id": "262608",
-    "name": "Adama Traoré",
-    "team": "Amed SK",
-    "team_id": "12382",
-    "position": "MID",
-    "main_position": "Attacking Midfield",
-    "other_positions": [
-      "Central Midfield",
-      "Right Winger"
-    ],
-    "age": 30,
-    "birth_date": "28/06/1995",
-    "nationality": "Mali",
-    "other_nationalities": [],
-    "height": 178,
-    "preferred_foot": "left",
-    "shirt_number": 25,
-    "market_value": 1000000.0,
-    "contract_expires_date": "30/06/2026",
-    "joined_date": "01/07/2024",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/262608-1762165085.jpeg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/adama-traore/profil/spieler/262608",
     "season": "2019-2020"
   },
   {
@@ -39089,7 +39089,7 @@
       "Central Midfield",
       "Attacking Midfield"
     ],
-    "age": 31,
+    "age": 32,
     "birth_date": "08/02/1994",
     "nationality": "Türkiye",
     "other_nationalities": [
@@ -43394,7 +43394,7 @@
       "Right-Back",
       "Defensive Midfield"
     ],
-    "age": 27,
+    "age": 28,
     "birth_date": "08/02/1998",
     "nationality": "Guadeloupe",
     "other_nationalities": [
@@ -48853,7 +48853,7 @@
       "Central Midfield",
       "Left Midfield"
     ],
-    "age": 34,
+    "age": 35,
     "birth_date": "08/02/1991",
     "nationality": "Italy",
     "other_nationalities": [
@@ -51156,7 +51156,7 @@
     "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
-    "age": 25,
+    "age": 26,
     "birth_date": "08/02/2000",
     "nationality": "Albania",
     "other_nationalities": [
@@ -51355,7 +51355,7 @@
       "Left-Back",
       "Right-Back"
     ],
-    "age": 22,
+    "age": 23,
     "birth_date": "08/02/2003",
     "nationality": "Italy",
     "other_nationalities": [],
@@ -53203,31 +53203,6 @@
     "season": "2019-2020"
   },
   {
-    "player_id": "268178",
-    "name": "Arkadiusz Reca",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "DEF",
-    "main_position": "Left-Back",
-    "other_positions": [
-      "Left Midfield",
-      "Left Winger"
-    ],
-    "age": 30,
-    "birth_date": "17/06/1995",
-    "nationality": "Poland",
-    "other_nationalities": [],
-    "height": 187,
-    "preferred_foot": "left",
-    "shirt_number": 13,
-    "market_value": 600000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "18/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/268178-1638174607.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/arkadiusz-reca/profil/spieler/268178",
-    "season": "2019-2020"
-  },
-  {
     "player_id": "401065",
     "name": "Riccardo Mastrilli",
     "team": "Santegidiese",
@@ -53599,6 +53574,31 @@
     "joined_date": "01/07/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/457681-1604764044.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/eklu-shaka-mawuli/profil/spieler/457681",
+    "season": "2019-2020"
+  },
+  {
+    "player_id": "268178",
+    "name": "Arkadiusz Reca",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Left Midfield",
+    "other_positions": [
+      "Left-Back",
+      "Left Winger"
+    ],
+    "age": 30,
+    "birth_date": "17/06/1995",
+    "nationality": "Poland",
+    "other_nationalities": [],
+    "height": 187,
+    "preferred_foot": "left",
+    "shirt_number": 13,
+    "market_value": 600000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "18/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/268178-1638174607.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/arkadiusz-reca/profil/spieler/268178",
     "season": "2019-2020"
   },
   {
@@ -55360,7 +55360,7 @@
       "Right-Back",
       "Central Midfield"
     ],
-    "age": 30,
+    "age": 31,
     "birth_date": "08/02/1995",
     "nationality": "Germany",
     "other_nationalities": [],
@@ -58813,7 +58813,7 @@
       "Centre-Back",
       "Right Midfield"
     ],
-    "age": 34,
+    "age": 35,
     "birth_date": "08/02/1991",
     "nationality": "Switzerland",
     "other_nationalities": [],
@@ -62871,7 +62871,7 @@
       "Central Midfield",
       "Left Midfield"
     ],
-    "age": 30,
+    "age": 31,
     "birth_date": "08/02/1995",
     "nationality": "Serbia",
     "other_nationalities": [
@@ -64265,7 +64265,7 @@
       "Centre-Back",
       "Right Midfield"
     ],
-    "age": 34,
+    "age": 35,
     "birth_date": "08/02/1991",
     "nationality": "Switzerland",
     "other_nationalities": [],
@@ -64367,7 +64367,7 @@
       "Centre-Back",
       "Central Midfield"
     ],
-    "age": 36,
+    "age": 37,
     "birth_date": "08/02/1989",
     "nationality": "Germany",
     "other_nationalities": [],
@@ -75370,31 +75370,6 @@
     "season": "2019-2020"
   },
   {
-    "player_id": "341272",
-    "name": "Álex Pozo",
-    "team": "Jagiellonia",
-    "team_id": "2300",
-    "position": "DEF",
-    "main_position": "Right-Back",
-    "other_positions": [
-      "Right Midfield",
-      "Right Winger"
-    ],
-    "age": 26,
-    "birth_date": "22/02/1999",
-    "nationality": "Spain",
-    "other_nationalities": [],
-    "height": 172,
-    "preferred_foot": "right",
-    "shirt_number": 15,
-    "market_value": 1500000.0,
-    "contract_expires_date": "30/06/2026",
-    "joined_date": "15/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
-    "season": "2019-2020"
-  },
-  {
     "player_id": "676042",
     "name": "Juanlu Sánchez",
     "team": "Sevilla FC",
@@ -75826,6 +75801,31 @@
     "joined_date": "01/09/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/174694-1730199640.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/rony-lopes/profil/spieler/174694",
+    "season": "2019-2020"
+  },
+  {
+    "player_id": "341272",
+    "name": "Álex Pozo",
+    "team": "Jagiellonia",
+    "team_id": "2300",
+    "position": "ATT",
+    "main_position": "Right Winger",
+    "other_positions": [
+      "Right-Back",
+      "Right Midfield"
+    ],
+    "age": 26,
+    "birth_date": "22/02/1999",
+    "nationality": "Spain",
+    "other_nationalities": [],
+    "height": 172,
+    "preferred_foot": "right",
+    "shirt_number": 15,
+    "market_value": 1500000.0,
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "15/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
     "season": "2019-2020"
   },
   {
@@ -76351,7 +76351,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 38,
+    "age": 39,
     "birth_date": "08/02/1987",
     "nationality": "Spain",
     "other_nationalities": [],
@@ -77086,7 +77086,7 @@
     "other_positions": [
       "Right Winger"
     ],
-    "age": 33,
+    "age": 34,
     "birth_date": "08/02/1992",
     "nationality": "Spain",
     "other_nationalities": [],
@@ -78973,7 +78973,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "Brazil",
     "other_nationalities": [],
@@ -84779,31 +84779,6 @@
     "season": "2019-2020"
   },
   {
-    "player_id": "341272",
-    "name": "Álex Pozo",
-    "team": "Jagiellonia",
-    "team_id": "2300",
-    "position": "DEF",
-    "main_position": "Right-Back",
-    "other_positions": [
-      "Right Midfield",
-      "Right Winger"
-    ],
-    "age": 26,
-    "birth_date": "22/02/1999",
-    "nationality": "Spain",
-    "other_nationalities": [],
-    "height": 172,
-    "preferred_foot": "right",
-    "shirt_number": 7,
-    "market_value": 1500000.0,
-    "contract_expires_date": "30/06/2026",
-    "joined_date": "15/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
-    "season": "2019-2020"
-  },
-  {
     "player_id": "350364",
     "name": "Joan Sastre",
     "team": "PAOK",
@@ -85097,6 +85072,31 @@
     "joined_date": "19/07/2022",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/405398-1697110254.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/takefusa-kubo/profil/spieler/405398",
+    "season": "2019-2020"
+  },
+  {
+    "player_id": "341272",
+    "name": "Álex Pozo",
+    "team": "Jagiellonia",
+    "team_id": "2300",
+    "position": "ATT",
+    "main_position": "Right Winger",
+    "other_positions": [
+      "Right-Back",
+      "Right Midfield"
+    ],
+    "age": 26,
+    "birth_date": "22/02/1999",
+    "nationality": "Spain",
+    "other_nationalities": [],
+    "height": 172,
+    "preferred_foot": "right",
+    "shirt_number": 7,
+    "market_value": 1500000.0,
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "15/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
     "season": "2019-2020"
   },
   {

@@ -4620,31 +4620,6 @@
     "season": "2019-2020"
   },
   {
-    "player_id": "341272",
-    "name": "Álex Pozo",
-    "team": "Jagiellonia",
-    "team_id": "2300",
-    "position": "DEF",
-    "main_position": "Right-Back",
-    "other_positions": [
-      "Right Midfield",
-      "Right Winger"
-    ],
-    "age": 26,
-    "birth_date": "22/02/1999",
-    "nationality": "Spain",
-    "other_nationalities": [],
-    "height": 172,
-    "preferred_foot": "right",
-    "shirt_number": 15,
-    "market_value": 1500000.0,
-    "contract_expires_date": "30/06/2026",
-    "joined_date": "15/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
-    "season": "2019-2020"
-  },
-  {
     "player_id": "676042",
     "name": "Juanlu Sánchez",
     "team": "Sevilla FC",
@@ -5076,6 +5051,31 @@
     "joined_date": "01/09/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/174694-1730199640.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/rony-lopes/profil/spieler/174694",
+    "season": "2019-2020"
+  },
+  {
+    "player_id": "341272",
+    "name": "Álex Pozo",
+    "team": "Jagiellonia",
+    "team_id": "2300",
+    "position": "ATT",
+    "main_position": "Right Winger",
+    "other_positions": [
+      "Right-Back",
+      "Right Midfield"
+    ],
+    "age": 26,
+    "birth_date": "22/02/1999",
+    "nationality": "Spain",
+    "other_nationalities": [],
+    "height": 172,
+    "preferred_foot": "right",
+    "shirt_number": 15,
+    "market_value": 1500000.0,
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "15/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
     "season": "2019-2020"
   },
   {
@@ -5601,7 +5601,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 38,
+    "age": 39,
     "birth_date": "08/02/1987",
     "nationality": "Spain",
     "other_nationalities": [],
@@ -6336,7 +6336,7 @@
     "other_positions": [
       "Right Winger"
     ],
-    "age": 33,
+    "age": 34,
     "birth_date": "08/02/1992",
     "nationality": "Spain",
     "other_nationalities": [],
@@ -8223,7 +8223,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "Brazil",
     "other_nationalities": [],
@@ -14029,31 +14029,6 @@
     "season": "2019-2020"
   },
   {
-    "player_id": "341272",
-    "name": "Álex Pozo",
-    "team": "Jagiellonia",
-    "team_id": "2300",
-    "position": "DEF",
-    "main_position": "Right-Back",
-    "other_positions": [
-      "Right Midfield",
-      "Right Winger"
-    ],
-    "age": 26,
-    "birth_date": "22/02/1999",
-    "nationality": "Spain",
-    "other_nationalities": [],
-    "height": 172,
-    "preferred_foot": "right",
-    "shirt_number": 7,
-    "market_value": 1500000.0,
-    "contract_expires_date": "30/06/2026",
-    "joined_date": "15/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
-    "season": "2019-2020"
-  },
-  {
     "player_id": "350364",
     "name": "Joan Sastre",
     "team": "PAOK",
@@ -14347,6 +14322,31 @@
     "joined_date": "19/07/2022",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/405398-1697110254.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/takefusa-kubo/profil/spieler/405398",
+    "season": "2019-2020"
+  },
+  {
+    "player_id": "341272",
+    "name": "Álex Pozo",
+    "team": "Jagiellonia",
+    "team_id": "2300",
+    "position": "ATT",
+    "main_position": "Right Winger",
+    "other_positions": [
+      "Right-Back",
+      "Right Midfield"
+    ],
+    "age": 26,
+    "birth_date": "22/02/1999",
+    "nationality": "Spain",
+    "other_nationalities": [],
+    "height": 172,
+    "preferred_foot": "right",
+    "shirt_number": 7,
+    "market_value": 1500000.0,
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "15/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
     "season": "2019-2020"
   },
   {

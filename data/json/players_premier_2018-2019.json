@@ -1682,8 +1682,8 @@
   {
     "player_id": "143424",
     "name": "Alex Oxlade-Chamberlain",
-    "team": "Without Club",
-    "team_id": "515",
+    "team": "Celtic",
+    "team_id": "371",
     "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
@@ -1698,8 +1698,8 @@
     "preferred_foot": "right",
     "shirt_number": 21,
     "market_value": 1500000.0,
-    "contract_expires_date": "-",
-    "joined_date": "27/08/2025",
+    "contract_expires_date": "31/05/2026",
+    "joined_date": "07/02/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/143424-1727356614.png?lm=1",
     "profile_url": "https://www.transfermarkt.com/alex-oxlade-chamberlain/profil/spieler/143424",
     "season": "2018-2019"
@@ -3241,7 +3241,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "Brazil",
     "other_nationalities": [],
@@ -5701,7 +5701,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 33,
+    "age": 34,
     "birth_date": "08/02/1992",
     "nationality": "England",
     "other_nationalities": [
@@ -9975,7 +9975,7 @@
     "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "France",
     "other_nationalities": [
@@ -10658,7 +10658,7 @@
       "Defensive Midfield",
       "Attacking Midfield"
     ],
-    "age": 26,
+    "age": 27,
     "birth_date": "08/02/1999",
     "nationality": "England",
     "other_nationalities": [],
@@ -11362,30 +11362,6 @@
     "season": "2018-2019"
   },
   {
-    "player_id": "357158",
-    "name": "Rúben Vinagre",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "DEF",
-    "main_position": "Left-Back",
-    "other_positions": [
-      "Left Midfield"
-    ],
-    "age": 26,
-    "birth_date": "09/04/1999",
-    "nationality": "Portugal",
-    "other_nationalities": [],
-    "height": 174,
-    "preferred_foot": "left",
-    "shirt_number": 29,
-    "market_value": 2500000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "06/02/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/357158-1721813075.png?lm=1",
-    "profile_url": "https://www.transfermarkt.com/ruben-vinagre/profil/spieler/357158",
-    "season": "2018-2019"
-  },
-  {
     "player_id": "504581",
     "name": "Ryan Giles",
     "team": "Hull City",
@@ -11662,6 +11638,30 @@
     "joined_date": "31/01/2023",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/337787-1740820601.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/connor-ronan/profil/spieler/337787",
+    "season": "2018-2019"
+  },
+  {
+    "player_id": "357158",
+    "name": "Rúben Vinagre",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Left Midfield",
+    "other_positions": [
+      "Left-Back"
+    ],
+    "age": 26,
+    "birth_date": "09/04/1999",
+    "nationality": "Portugal",
+    "other_nationalities": [],
+    "height": 174,
+    "preferred_foot": "left",
+    "shirt_number": 29,
+    "market_value": 2500000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "06/02/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/357158-1721813075.png?lm=1",
+    "profile_url": "https://www.transfermarkt.com/ruben-vinagre/profil/spieler/357158",
     "season": "2018-2019"
   },
   {
@@ -14412,7 +14412,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "Brazil",
     "other_nationalities": [],
@@ -17032,30 +17032,6 @@
     "season": "2018-2019"
   },
   {
-    "player_id": "114116",
-    "name": "Richie Towell",
-    "team": "Without Club",
-    "team_id": "515",
-    "position": "MID",
-    "main_position": "Central Midfield",
-    "other_positions": [
-      "Attacking Midfield"
-    ],
-    "age": 34,
-    "birth_date": "17/07/1991",
-    "nationality": "Ireland",
-    "other_nationalities": [],
-    "height": 179,
-    "preferred_foot": "right",
-    "shirt_number": null,
-    "market_value": 200000.0,
-    "contract_expires_date": "-",
-    "joined_date": "01/01/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/114116-1662372371.png?lm=1",
-    "profile_url": "https://www.transfermarkt.com/richie-towell/profil/spieler/114116",
-    "season": "2018-2019"
-  },
-  {
     "player_id": "411495",
     "name": "Max Sanders",
     "team": "Crewe Alexandra",
@@ -17153,6 +17129,30 @@
     "joined_date": "07/08/2024",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/119164-1478085509.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/ezequiel-schelotto/profil/spieler/119164",
+    "season": "2018-2019"
+  },
+  {
+    "player_id": "114116",
+    "name": "Richie Towell",
+    "team": "Without Club",
+    "team_id": "515",
+    "position": "MID",
+    "main_position": "Attacking Midfield",
+    "other_positions": [
+      "Central Midfield"
+    ],
+    "age": 34,
+    "birth_date": "17/07/1991",
+    "nationality": "Ireland",
+    "other_nationalities": [],
+    "height": 179,
+    "preferred_foot": "right",
+    "shirt_number": null,
+    "market_value": 200000.0,
+    "contract_expires_date": "-",
+    "joined_date": "01/01/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/114116-1662372371.png?lm=1",
+    "profile_url": "https://www.transfermarkt.com/richie-towell/profil/spieler/114116",
     "season": "2018-2019"
   },
   {
@@ -17752,8 +17752,8 @@
     "other_nationalities": [
       "Germany"
     ],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 182,
+    "preferred_foot": "right",
     "shirt_number": 19,
     "market_value": 2000000.0,
     "contract_expires_date": "-",
@@ -18269,8 +18269,8 @@
     "other_nationalities": [
       "Ghana"
     ],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 191,
+    "preferred_foot": "right",
     "shirt_number": 23,
     "market_value": 1500000.0,
     "contract_expires_date": "-",

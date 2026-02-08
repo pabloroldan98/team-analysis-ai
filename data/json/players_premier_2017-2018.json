@@ -1713,7 +1713,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "Brazil",
     "other_nationalities": [],
@@ -2413,8 +2413,8 @@
   {
     "player_id": "143424",
     "name": "Alex Oxlade-Chamberlain",
-    "team": "Without Club",
-    "team_id": "515",
+    "team": "Celtic",
+    "team_id": "371",
     "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
@@ -2429,8 +2429,8 @@
     "preferred_foot": "right",
     "shirt_number": 21,
     "market_value": 1500000.0,
-    "contract_expires_date": "-",
-    "joined_date": "27/08/2025",
+    "contract_expires_date": "31/05/2026",
+    "joined_date": "07/02/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/143424-1727356614.png?lm=1",
     "profile_url": "https://www.transfermarkt.com/alex-oxlade-chamberlain/profil/spieler/143424",
     "season": "2017-2018"
@@ -4963,7 +4963,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 33,
+    "age": 34,
     "birth_date": "08/02/1992",
     "nationality": "England",
     "other_nationalities": [
@@ -5184,8 +5184,8 @@
   {
     "player_id": "143424",
     "name": "Alex Oxlade-Chamberlain",
-    "team": "Without Club",
-    "team_id": "515",
+    "team": "Celtic",
+    "team_id": "371",
     "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
@@ -5200,8 +5200,8 @@
     "preferred_foot": "right",
     "shirt_number": 15,
     "market_value": 1500000.0,
-    "contract_expires_date": "-",
-    "joined_date": "27/08/2025",
+    "contract_expires_date": "31/05/2026",
+    "joined_date": "07/02/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/143424-1727356614.png?lm=1",
     "profile_url": "https://www.transfermarkt.com/alex-oxlade-chamberlain/profil/spieler/143424",
     "season": "2017-2018"
@@ -6018,7 +6018,7 @@
     "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
-    "age": 26,
+    "age": 27,
     "birth_date": "08/02/1999",
     "nationality": "England",
     "other_nationalities": [],
@@ -6657,8 +6657,8 @@
     "other_nationalities": [
       "Kosovo"
     ],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 176,
+    "preferred_foot": "right",
     "shirt_number": null,
     "market_value": 2000000.0,
     "contract_expires_date": "-",
@@ -7175,8 +7175,8 @@
     "birth_date": "07/04/1986",
     "nationality": "Austria",
     "other_nationalities": [],
-    "height": 187,
-    "preferred_foot": "left",
+    "height": null,
+    "preferred_foot": "N/A",
     "shirt_number": 28,
     "market_value": 5000000.0,
     "contract_expires_date": "-",
@@ -11189,7 +11189,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "Brazil",
     "other_nationalities": [],
@@ -12499,7 +12499,7 @@
     "other_positions": [
       "Left-Back"
     ],
-    "age": 33,
+    "age": 34,
     "birth_date": "08/02/1992",
     "nationality": "Netherlands",
     "other_nationalities": [
@@ -16205,30 +16205,6 @@
     "season": "2017-2018"
   },
   {
-    "player_id": "114116",
-    "name": "Richie Towell",
-    "team": "Without Club",
-    "team_id": "515",
-    "position": "MID",
-    "main_position": "Central Midfield",
-    "other_positions": [
-      "Attacking Midfield"
-    ],
-    "age": 34,
-    "birth_date": "17/07/1991",
-    "nationality": "Ireland",
-    "other_nationalities": [],
-    "height": 179,
-    "preferred_foot": "right",
-    "shirt_number": 36,
-    "market_value": 200000.0,
-    "contract_expires_date": "-",
-    "joined_date": "01/01/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/114116-1662372371.png?lm=1",
-    "profile_url": "https://www.transfermarkt.com/richie-towell/profil/spieler/114116",
-    "season": "2017-2018"
-  },
-  {
     "player_id": "357656",
     "name": "Jayson Molumby",
     "team": "West Brom",
@@ -16302,6 +16278,30 @@
     "joined_date": "07/08/2024",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/119164-1478085509.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/ezequiel-schelotto/profil/spieler/119164",
+    "season": "2017-2018"
+  },
+  {
+    "player_id": "114116",
+    "name": "Richie Towell",
+    "team": "Without Club",
+    "team_id": "515",
+    "position": "MID",
+    "main_position": "Attacking Midfield",
+    "other_positions": [
+      "Central Midfield"
+    ],
+    "age": 34,
+    "birth_date": "17/07/1991",
+    "nationality": "Ireland",
+    "other_nationalities": [],
+    "height": 179,
+    "preferred_foot": "right",
+    "shirt_number": 36,
+    "market_value": 200000.0,
+    "contract_expires_date": "-",
+    "joined_date": "01/01/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/114116-1662372371.png?lm=1",
+    "profile_url": "https://www.transfermarkt.com/richie-towell/profil/spieler/114116",
     "season": "2017-2018"
   },
   {
@@ -17418,7 +17418,7 @@
     "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "France",
     "other_nationalities": [

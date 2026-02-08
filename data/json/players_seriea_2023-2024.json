@@ -390,7 +390,7 @@
       "Central Midfield",
       "Attacking Midfield"
     ],
-    "age": 31,
+    "age": 32,
     "birth_date": "08/02/1994",
     "nationality": "Türkiye",
     "other_nationalities": [
@@ -699,7 +699,7 @@
     "other_positions": [
       "Left Winger"
     ],
-    "age": 26,
+    "age": 27,
     "birth_date": "08/02/1999",
     "nationality": "Canada",
     "other_nationalities": [
@@ -1161,7 +1161,7 @@
       "Left-Back",
       "Right-Back"
     ],
-    "age": 22,
+    "age": 23,
     "birth_date": "08/02/2003",
     "nationality": "Italy",
     "other_nationalities": [],
@@ -3506,7 +3506,7 @@
     "preferred_foot": "both",
     "shirt_number": 15,
     "market_value": 75000000.0,
-    "contract_expires_date": "30/06/2029",
+    "contract_expires_date": "30/06/2030",
     "joined_date": "07/11/2023",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/845654-1759822280.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/kenan-yildiz/profil/spieler/845654",
@@ -5290,31 +5290,6 @@
     "season": "2023-2024"
   },
   {
-    "player_id": "699442",
-    "name": "Kacper Urbański",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "MID",
-    "main_position": "Central Midfield",
-    "other_positions": [
-      "Defensive Midfield",
-      "Attacking Midfield"
-    ],
-    "age": 21,
-    "birth_date": "07/09/2004",
-    "nationality": "Poland",
-    "other_nationalities": [],
-    "height": 183,
-    "preferred_foot": "right",
-    "shirt_number": 82,
-    "market_value": 3500000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "02/09/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/699442-1696837702.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/kacper-urbanski/profil/spieler/699442",
-    "season": "2023-2024"
-  },
-  {
     "player_id": "148252",
     "name": "Remo Freuler",
     "team": "Bologna",
@@ -5411,6 +5386,31 @@
     "joined_date": "21/01/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/633668-1695027735.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/giovanni-fabbian/profil/spieler/633668",
+    "season": "2023-2024"
+  },
+  {
+    "player_id": "699442",
+    "name": "Kacper Urbański",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Attacking Midfield",
+    "other_positions": [
+      "Defensive Midfield",
+      "Central Midfield"
+    ],
+    "age": 21,
+    "birth_date": "07/09/2004",
+    "nationality": "Poland",
+    "other_nationalities": [],
+    "height": 183,
+    "preferred_foot": "right",
+    "shirt_number": 82,
+    "market_value": 3500000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "02/09/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/699442-1696837702.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/kacper-urbanski/profil/spieler/699442",
     "season": "2023-2024"
   },
   {
@@ -5838,7 +5838,7 @@
     "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
-    "age": 25,
+    "age": 26,
     "birth_date": "08/02/2000",
     "nationality": "Albania",
     "other_nationalities": [
@@ -11849,7 +11849,7 @@
     "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
-    "age": 21,
+    "age": 22,
     "birth_date": "08/02/2004",
     "nationality": "Belgium",
     "other_nationalities": [
@@ -12991,7 +12991,7 @@
       "Left-Back",
       "Right-Back"
     ],
-    "age": 22,
+    "age": 23,
     "birth_date": "08/02/2003",
     "nationality": "Italy",
     "other_nationalities": [],
@@ -13223,30 +13223,6 @@
     "joined_date": "18/07/2024",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/686965-1692964112.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/juan-cabal/profil/spieler/686965",
-    "season": "2023-2024"
-  },
-  {
-    "player_id": "357158",
-    "name": "Rúben Vinagre",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "DEF",
-    "main_position": "Left-Back",
-    "other_positions": [
-      "Left Midfield"
-    ],
-    "age": 26,
-    "birth_date": "09/04/1999",
-    "nationality": "Portugal",
-    "other_nationalities": [],
-    "height": 174,
-    "preferred_foot": "left",
-    "shirt_number": 19,
-    "market_value": 2500000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "06/02/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/357158-1721813075.png?lm=1",
-    "profile_url": "https://www.transfermarkt.com/ruben-vinagre/profil/spieler/357158",
     "season": "2023-2024"
   },
   {
@@ -13554,6 +13530,30 @@
     "season": "2023-2024"
   },
   {
+    "player_id": "357158",
+    "name": "Rúben Vinagre",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Left Midfield",
+    "other_positions": [
+      "Left-Back"
+    ],
+    "age": 26,
+    "birth_date": "09/04/1999",
+    "nationality": "Portugal",
+    "other_nationalities": [],
+    "height": 174,
+    "preferred_foot": "left",
+    "shirt_number": 19,
+    "market_value": 2500000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "06/02/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/357158-1721813075.png?lm=1",
+    "profile_url": "https://www.transfermarkt.com/ruben-vinagre/profil/spieler/357158",
+    "season": "2023-2024"
+  },
+  {
     "player_id": "70411",
     "name": "Darko Lazović",
     "team": "Without Club",
@@ -13803,9 +13803,9 @@
     ],
     "age": 24,
     "birth_date": "30/04/2001",
-    "nationality": "Netherlands",
+    "nationality": "Türkiye",
     "other_nationalities": [
-      "Türkiye"
+      "Netherlands"
     ],
     "height": 183,
     "preferred_foot": "left",
@@ -14205,7 +14205,7 @@
     "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
-    "age": 25,
+    "age": 26,
     "birth_date": "08/02/2000",
     "nationality": "Albania",
     "other_nationalities": [
@@ -17531,30 +17531,6 @@
     "season": "2023-2024"
   },
   {
-    "player_id": "183841",
-    "name": "Petar Stojanović",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "DEF",
-    "main_position": "Right-Back",
-    "other_positions": [
-      "Right Midfield"
-    ],
-    "age": 30,
-    "birth_date": "07/10/1995",
-    "nationality": "Slovenia",
-    "other_nationalities": [],
-    "height": 178,
-    "preferred_foot": "right",
-    "shirt_number": null,
-    "market_value": 600000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "01/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/183841-1632394381.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/petar-stojanovic/profil/spieler/183841",
-    "season": "2023-2024"
-  },
-  {
     "player_id": "144143",
     "name": "Bartosz Bereszyński",
     "team": "Palermo",
@@ -17925,6 +17901,30 @@
     "joined_date": "16/07/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/241076-1663687225.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/emmanuel-gyasi/profil/spieler/241076",
+    "season": "2023-2024"
+  },
+  {
+    "player_id": "183841",
+    "name": "Petar Stojanović",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Right Midfield",
+    "other_positions": [
+      "Right-Back"
+    ],
+    "age": 30,
+    "birth_date": "07/10/1995",
+    "nationality": "Slovenia",
+    "other_nationalities": [],
+    "height": 178,
+    "preferred_foot": "right",
+    "shirt_number": null,
+    "market_value": 600000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "01/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/183841-1632394381.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/petar-stojanovic/profil/spieler/183841",
     "season": "2023-2024"
   },
   {

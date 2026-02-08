@@ -7068,7 +7068,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 20,
+    "age": 21,
     "birth_date": "08/02/2005",
     "nationality": "England",
     "other_nationalities": [],
@@ -7502,7 +7502,7 @@
     "other_positions": [
       "Right Winger"
     ],
-    "age": 23,
+    "age": 24,
     "birth_date": "08/02/2002",
     "nationality": "England",
     "other_nationalities": [
@@ -13994,8 +13994,8 @@
   {
     "player_id": "1172645",
     "name": "Emilio Ballard-Matthews",
-    "team": "Darlaston",
-    "team_id": "113272",
+    "team": "Wolves U18",
+    "team_id": "12801",
     "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
@@ -14011,7 +14011,7 @@
     "shirt_number": null,
     "market_value": null,
     "contract_expires_date": "-",
-    "joined_date": "09/01/2026",
+    "joined_date": "01/07/2024",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/emilio-ballard-matthews/profil/spieler/1172645",
     "season": "2023-2024"
@@ -21244,6 +21244,31 @@
     "joined_date": "01/02/2024",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/985717-1756818264.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/taylan-harris/profil/spieler/985717",
+    "season": "2023-2024"
+  },
+  {
+    "player_id": "1172645",
+    "name": "Emilio Ballard-Matthews",
+    "team": "Darlaston",
+    "team_id": "113272",
+    "position": "ATT",
+    "main_position": "Left Winger",
+    "other_positions": [
+      "Attacking Midfield",
+      "Right Winger"
+    ],
+    "age": 17,
+    "birth_date": "11/08/2008",
+    "nationality": "England",
+    "other_nationalities": [],
+    "height": null,
+    "preferred_foot": "both",
+    "shirt_number": null,
+    "market_value": null,
+    "contract_expires_date": "-",
+    "joined_date": "09/01/2026",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/emilio-ballard-matthews/profil/spieler/1172645",
     "season": "2023-2024"
   }
 ]

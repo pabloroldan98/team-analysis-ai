@@ -2046,8 +2046,8 @@
     "birth_date": "02/05/1981",
     "nationality": "Portugal",
     "other_nationalities": [],
-    "height": null,
-    "preferred_foot": "N/A",
+    "height": 183,
+    "preferred_foot": "right",
     "shirt_number": 5,
     "market_value": 1000000.0,
     "contract_expires_date": "-",
@@ -2852,31 +2852,6 @@
     "season": "2016-2017"
   },
   {
-    "player_id": "341272",
-    "name": "Álex Pozo",
-    "team": "Jagiellonia",
-    "team_id": "2300",
-    "position": "DEF",
-    "main_position": "Right-Back",
-    "other_positions": [
-      "Right Midfield",
-      "Right Winger"
-    ],
-    "age": 26,
-    "birth_date": "22/02/1999",
-    "nationality": "Spain",
-    "other_nationalities": [],
-    "height": 172,
-    "preferred_foot": "right",
-    "shirt_number": 39,
-    "market_value": 1500000.0,
-    "contract_expires_date": "30/06/2026",
-    "joined_date": "15/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
-    "season": "2016-2017"
-  },
-  {
     "player_id": "251846",
     "name": "David Carmona",
     "team": "Montana",
@@ -3251,6 +3226,31 @@
     "joined_date": "01/07/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/74230-1762258624.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/pablo-sarabia/profil/spieler/74230",
+    "season": "2016-2017"
+  },
+  {
+    "player_id": "341272",
+    "name": "Álex Pozo",
+    "team": "Jagiellonia",
+    "team_id": "2300",
+    "position": "ATT",
+    "main_position": "Right Winger",
+    "other_positions": [
+      "Right-Back",
+      "Right Midfield"
+    ],
+    "age": 26,
+    "birth_date": "22/02/1999",
+    "nationality": "Spain",
+    "other_nationalities": [],
+    "height": 172,
+    "preferred_foot": "right",
+    "shirt_number": 39,
+    "market_value": 1500000.0,
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "15/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/341272-1760515553.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/alex-pozo/profil/spieler/341272",
     "season": "2016-2017"
   },
   {
@@ -4775,7 +4775,7 @@
       "Central Midfield",
       "Left Midfield"
     ],
-    "age": 34,
+    "age": 35,
     "birth_date": "08/02/1991",
     "nationality": "Italy",
     "other_nationalities": [
@@ -9122,8 +9122,8 @@
     "other_nationalities": [
       "Italy"
     ],
-    "height": 184,
-    "preferred_foot": "right",
+    "height": null,
+    "preferred_foot": "N/A",
     "shirt_number": 3,
     "market_value": 200000.0,
     "contract_expires_date": "-",
@@ -11400,8 +11400,8 @@
     "other_nationalities": [
       "Italy"
     ],
-    "height": 184,
-    "preferred_foot": "right",
+    "height": null,
+    "preferred_foot": "N/A",
     "shirt_number": 2,
     "market_value": 200000.0,
     "contract_expires_date": "-",
@@ -12136,7 +12136,7 @@
     "other_positions": [
       "Right Winger"
     ],
-    "age": 33,
+    "age": 34,
     "birth_date": "08/02/1992",
     "nationality": "Spain",
     "other_nationalities": [],

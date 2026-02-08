@@ -1669,7 +1669,7 @@
     "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
-    "age": 22,
+    "age": 23,
     "birth_date": "08/02/2003",
     "nationality": "Denmark",
     "other_nationalities": [
@@ -11098,7 +11098,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 27,
+    "age": 28,
     "birth_date": "08/02/1998",
     "nationality": "France",
     "other_nationalities": [
@@ -16281,7 +16281,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 34,
+    "age": 35,
     "birth_date": "08/02/1991",
     "nationality": "Tunisia",
     "other_nationalities": [
@@ -20872,7 +20872,7 @@
     "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
-    "age": 24,
+    "age": 25,
     "birth_date": "08/02/2001",
     "nationality": "Spain",
     "other_nationalities": [],
@@ -24077,7 +24077,7 @@
     "other_positions": [
       "Left Winger"
     ],
-    "age": 26,
+    "age": 27,
     "birth_date": "08/02/1999",
     "nationality": "Canada",
     "other_nationalities": [
@@ -29508,7 +29508,7 @@
     "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
-    "age": 25,
+    "age": 26,
     "birth_date": "08/02/2000",
     "nationality": "Albania",
     "other_nationalities": [
@@ -34433,7 +34433,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 29,
+    "age": 30,
     "birth_date": "08/02/1996",
     "nationality": "Brazil",
     "other_nationalities": [],
@@ -36908,7 +36908,7 @@
       "Central Midfield",
       "Attacking Midfield"
     ],
-    "age": 31,
+    "age": 32,
     "birth_date": "08/02/1994",
     "nationality": "Türkiye",
     "other_nationalities": [
@@ -37267,7 +37267,7 @@
     "other_positions": [
       "Left Winger"
     ],
-    "age": 26,
+    "age": 27,
     "birth_date": "08/02/1999",
     "nationality": "Canada",
     "other_nationalities": [
@@ -38321,7 +38321,7 @@
     "preferred_foot": "both",
     "shirt_number": 10,
     "market_value": 75000000.0,
-    "contract_expires_date": "30/06/2029",
+    "contract_expires_date": "30/06/2030",
     "joined_date": "07/11/2023",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/845654-1759822280.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/kenan-yildiz/profil/spieler/845654",
@@ -38791,7 +38791,7 @@
       "Left-Back",
       "Right-Back"
     ],
-    "age": 22,
+    "age": 23,
     "birth_date": "08/02/2003",
     "nationality": "Italy",
     "other_nationalities": [],
@@ -44204,31 +44204,6 @@
     "season": "2024-2025"
   },
   {
-    "player_id": "699442",
-    "name": "Kacper Urbański",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "MID",
-    "main_position": "Central Midfield",
-    "other_positions": [
-      "Defensive Midfield",
-      "Attacking Midfield"
-    ],
-    "age": 21,
-    "birth_date": "07/09/2004",
-    "nationality": "Poland",
-    "other_nationalities": [],
-    "height": 183,
-    "preferred_foot": "right",
-    "shirt_number": null,
-    "market_value": 3500000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "02/09/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/699442-1696837702.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/kacper-urbanski/profil/spieler/699442",
-    "season": "2024-2025"
-  },
-  {
     "player_id": "148252",
     "name": "Remo Freuler",
     "team": "Bologna",
@@ -44328,6 +44303,31 @@
     "joined_date": "21/01/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/633668-1695027735.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/giovanni-fabbian/profil/spieler/633668",
+    "season": "2024-2025"
+  },
+  {
+    "player_id": "699442",
+    "name": "Kacper Urbański",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Attacking Midfield",
+    "other_positions": [
+      "Defensive Midfield",
+      "Central Midfield"
+    ],
+    "age": 21,
+    "birth_date": "07/09/2004",
+    "nationality": "Poland",
+    "other_nationalities": [],
+    "height": 183,
+    "preferred_foot": "right",
+    "shirt_number": null,
+    "market_value": 3500000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "02/09/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/699442-1696837702.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/kacper-urbanski/profil/spieler/699442",
     "season": "2024-2025"
   },
   {
@@ -47685,8 +47685,8 @@
   {
     "player_id": "957295",
     "name": "Naj Razi",
-    "team": "Without Club",
-    "team_id": "515",
+    "team": "Shamrock Rovers",
+    "team_id": "3258",
     "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
@@ -47703,7 +47703,7 @@
     "shirt_number": 44,
     "market_value": 275000.0,
     "contract_expires_date": "-",
-    "joined_date": "01/09/2025",
+    "joined_date": "07/02/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/957295-1707906318.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/naj-razi/profil/spieler/957295",
     "season": "2024-2025"
@@ -53146,9 +53146,9 @@
     ],
     "age": 24,
     "birth_date": "30/04/2001",
-    "nationality": "Netherlands",
+    "nationality": "Türkiye",
     "other_nationalities": [
-      "Türkiye"
+      "Netherlands"
     ],
     "height": 183,
     "preferred_foot": "left",
@@ -53828,30 +53828,6 @@
     "season": "2024-2025"
   },
   {
-    "player_id": "183841",
-    "name": "Petar Stojanović",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "DEF",
-    "main_position": "Right-Back",
-    "other_positions": [
-      "Right Midfield"
-    ],
-    "age": 30,
-    "birth_date": "07/10/1995",
-    "nationality": "Slovenia",
-    "other_nationalities": [],
-    "height": 178,
-    "preferred_foot": "right",
-    "shirt_number": null,
-    "market_value": 600000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "01/07/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/183841-1632394381.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/petar-stojanovic/profil/spieler/183841",
-    "season": "2024-2025"
-  },
-  {
     "player_id": "525660",
     "name": "Francesco Donati",
     "team": "Ternana",
@@ -54147,6 +54123,30 @@
     "joined_date": "16/07/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/241076-1663687225.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/emmanuel-gyasi/profil/spieler/241076",
+    "season": "2024-2025"
+  },
+  {
+    "player_id": "183841",
+    "name": "Petar Stojanović",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Right Midfield",
+    "other_positions": [
+      "Right-Back"
+    ],
+    "age": 30,
+    "birth_date": "07/10/1995",
+    "nationality": "Slovenia",
+    "other_nationalities": [],
+    "height": 178,
+    "preferred_foot": "right",
+    "shirt_number": null,
+    "market_value": 600000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "01/07/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/183841-1632394381.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/petar-stojanovic/profil/spieler/183841",
     "season": "2024-2025"
   },
   {
@@ -55049,31 +55049,6 @@
     "season": "2024-2025"
   },
   {
-    "player_id": "699442",
-    "name": "Kacper Urbański",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "MID",
-    "main_position": "Central Midfield",
-    "other_positions": [
-      "Defensive Midfield",
-      "Attacking Midfield"
-    ],
-    "age": 21,
-    "birth_date": "07/09/2004",
-    "nationality": "Poland",
-    "other_nationalities": [],
-    "height": 183,
-    "preferred_foot": "right",
-    "shirt_number": 8,
-    "market_value": 3500000.0,
-    "contract_expires_date": "30/06/2028",
-    "joined_date": "02/09/2025",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/699442-1696837702.jpg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/kacper-urbanski/profil/spieler/699442",
-    "season": "2024-2025"
-  },
-  {
     "player_id": "332179",
     "name": "Matteo Pessina",
     "team": "Monza",
@@ -55402,6 +55377,31 @@
     "joined_date": "27/01/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/539134-1695031448.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/daniel-maldini/profil/spieler/539134",
+    "season": "2024-2025"
+  },
+  {
+    "player_id": "699442",
+    "name": "Kacper Urbański",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Attacking Midfield",
+    "other_positions": [
+      "Defensive Midfield",
+      "Central Midfield"
+    ],
+    "age": 21,
+    "birth_date": "07/09/2004",
+    "nationality": "Poland",
+    "other_nationalities": [],
+    "height": 183,
+    "preferred_foot": "right",
+    "shirt_number": 8,
+    "market_value": 3500000.0,
+    "contract_expires_date": "30/06/2028",
+    "joined_date": "02/09/2025",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/699442-1696837702.jpg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/kacper-urbanski/profil/spieler/699442",
     "season": "2024-2025"
   },
   {
@@ -58084,7 +58084,7 @@
       "Right-Back",
       "Central Midfield"
     ],
-    "age": 30,
+    "age": 31,
     "birth_date": "08/02/1995",
     "nationality": "Germany",
     "other_nationalities": [],
@@ -64595,7 +64595,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 21,
+    "age": 22,
     "birth_date": "08/02/2004",
     "nationality": "Germany",
     "other_nationalities": [],
@@ -73767,7 +73767,7 @@
     "other_positions": [
       "Left-Back"
     ],
-    "age": 17,
+    "age": 18,
     "birth_date": "08/02/2008",
     "nationality": "England",
     "other_nationalities": [
@@ -75814,7 +75814,7 @@
     "other_positions": [
       "Right Winger"
     ],
-    "age": 22,
+    "age": 23,
     "birth_date": "08/02/2003",
     "nationality": "England",
     "other_nationalities": [
@@ -80920,7 +80920,7 @@
     "other_positions": [
       "Right Winger"
     ],
-    "age": 23,
+    "age": 24,
     "birth_date": "08/02/2002",
     "nationality": "England",
     "other_nationalities": [
@@ -91110,6 +91110,7 @@
     "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
+      "Defensive Midfield",
       "Central Midfield"
     ],
     "age": 19,
@@ -92115,7 +92116,7 @@
     "other_positions": [
       "Right Winger"
     ],
-    "age": 23,
+    "age": 24,
     "birth_date": "08/02/2002",
     "nationality": "England",
     "other_nationalities": [
@@ -92242,7 +92243,7 @@
     "other_positions": [
       "Right Winger"
     ],
-    "age": 22,
+    "age": 23,
     "birth_date": "08/02/2003",
     "nationality": "England",
     "other_nationalities": [

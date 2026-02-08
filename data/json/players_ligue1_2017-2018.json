@@ -1393,6 +1393,31 @@
     "season": "2017-2018"
   },
   {
+    "player_id": "262608",
+    "name": "Adama Traoré",
+    "team": "Amed SK",
+    "team_id": "12382",
+    "position": "MID",
+    "main_position": "Central Midfield",
+    "other_positions": [
+      "Attacking Midfield",
+      "Right Winger"
+    ],
+    "age": 30,
+    "birth_date": "28/06/1995",
+    "nationality": "Mali",
+    "other_nationalities": [],
+    "height": 178,
+    "preferred_foot": "left",
+    "shirt_number": 28,
+    "market_value": 1000000.0,
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "01/07/2024",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/262608-1762165085.jpeg?lm=1",
+    "profile_url": "https://www.transfermarkt.com/adama-traore/profil/spieler/262608",
+    "season": "2017-2018"
+  },
+  {
     "player_id": "453594",
     "name": "Adama Diakhaby",
     "team": "W. Mannheim",
@@ -1444,31 +1469,6 @@
     "joined_date": "30/07/2025",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/205562-1686662075.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/thomas-lemar/profil/spieler/205562",
-    "season": "2017-2018"
-  },
-  {
-    "player_id": "262608",
-    "name": "Adama Traoré",
-    "team": "Amed SK",
-    "team_id": "12382",
-    "position": "MID",
-    "main_position": "Attacking Midfield",
-    "other_positions": [
-      "Central Midfield",
-      "Right Winger"
-    ],
-    "age": 30,
-    "birth_date": "28/06/1995",
-    "nationality": "Mali",
-    "other_nationalities": [],
-    "height": 178,
-    "preferred_foot": "left",
-    "shirt_number": 28,
-    "market_value": 1000000.0,
-    "contract_expires_date": "30/06/2026",
-    "joined_date": "01/07/2024",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/262608-1762165085.jpeg?lm=1",
-    "profile_url": "https://www.transfermarkt.com/adama-traore/profil/spieler/262608",
     "season": "2017-2018"
   },
   {
@@ -6033,7 +6033,7 @@
       "Right Winger",
       "Centre-Forward"
     ],
-    "age": 34,
+    "age": 35,
     "birth_date": "08/02/1991",
     "nationality": "Tunisia",
     "other_nationalities": [
@@ -6436,7 +6436,7 @@
     "other_positions": [
       "Centre-Back"
     ],
-    "age": 27,
+    "age": 28,
     "birth_date": "08/02/1998",
     "nationality": "France",
     "other_nationalities": [
@@ -10246,8 +10246,8 @@
   {
     "player_id": "420782",
     "name": "Yanis Ammour",
-    "team": "Without Club",
-    "team_id": "515",
+    "team": "Saran FC",
+    "team_id": "59279",
     "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
@@ -10264,8 +10264,8 @@
     "preferred_foot": "left",
     "shirt_number": null,
     "market_value": null,
-    "contract_expires_date": "-",
-    "joined_date": "30/01/2026",
+    "contract_expires_date": "30/06/2026",
+    "joined_date": "31/01/2026",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/420782-1556007604.jpg?lm=1",
     "profile_url": "https://www.transfermarkt.com/yanis-ammour/profil/spieler/420782",
     "season": "2017-2018"
@@ -16355,7 +16355,7 @@
     "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
-    "age": 33,
+    "age": 34,
     "birth_date": "08/02/1992",
     "nationality": "Algeria",
     "other_nationalities": [

@@ -401,7 +401,7 @@
       "Right-Back",
       "Central Midfield"
     ],
-    "age": 30,
+    "age": 31,
     "birth_date": "08/02/1995",
     "nationality": "Germany",
     "other_nationalities": [],
@@ -7097,7 +7097,7 @@
       "Central Midfield",
       "Left Midfield"
     ],
-    "age": 30,
+    "age": 31,
     "birth_date": "08/02/1995",
     "nationality": "Serbia",
     "other_nationalities": [
@@ -10203,7 +10203,7 @@
     "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
-    "age": 22,
+    "age": 23,
     "birth_date": "08/02/2003",
     "nationality": "Germany",
     "other_nationalities": [],
@@ -11486,31 +11486,6 @@
     "season": "2021-2022"
   },
   {
-    "player_id": "164759",
-    "name": "Pawel Wszolek",
-    "team": "Legia Warszawa",
-    "team_id": "255",
-    "position": "DEF",
-    "main_position": "Right-Back",
-    "other_positions": [
-      "Right Midfield",
-      "Right Winger"
-    ],
-    "age": 33,
-    "birth_date": "30/04/1992",
-    "nationality": "Poland",
-    "other_nationalities": [],
-    "height": 186,
-    "preferred_foot": "right",
-    "shirt_number": null,
-    "market_value": 350000.0,
-    "contract_expires_date": "30/06/2027",
-    "joined_date": "07/07/2022",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/164759-1677703476.png?lm=1",
-    "profile_url": "https://www.transfermarkt.com/pawel-wszolek/profil/spieler/164759",
-    "season": "2021-2022"
-  },
-  {
     "player_id": "75921",
     "name": "Christopher Trimmel",
     "team": "Union Berlin",
@@ -11685,6 +11660,31 @@
     "joined_date": "01/01/2024",
     "img_url": "https://img.a.transfermarkt.technology/portrait/header/548803-1721763365.png?lm=1",
     "profile_url": "https://www.transfermarkt.com/fabio-schneider/profil/spieler/548803",
+    "season": "2021-2022"
+  },
+  {
+    "player_id": "164759",
+    "name": "Pawel Wszolek",
+    "team": "Legia Warszawa",
+    "team_id": "255",
+    "position": "MID",
+    "main_position": "Right Midfield",
+    "other_positions": [
+      "Right-Back",
+      "Right Winger"
+    ],
+    "age": 33,
+    "birth_date": "30/04/1992",
+    "nationality": "Poland",
+    "other_nationalities": [],
+    "height": 186,
+    "preferred_foot": "right",
+    "shirt_number": null,
+    "market_value": 350000.0,
+    "contract_expires_date": "30/06/2027",
+    "joined_date": "07/07/2022",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/164759-1677703476.png?lm=1",
+    "profile_url": "https://www.transfermarkt.com/pawel-wszolek/profil/spieler/164759",
     "season": "2021-2022"
   },
   {
@@ -16049,7 +16049,7 @@
     "market_value": 350000.0,
     "contract_expires_date": "30/06/2026",
     "joined_date": "02/02/2026",
-    "img_url": "https://img.a.transfermarkt.technology/portrait/header/596813-1723100281.jpg?lm=1",
+    "img_url": "https://img.a.transfermarkt.technology/portrait/header/596813-1770481509.jpeg?lm=1",
     "profile_url": "https://www.transfermarkt.com/dickson-abiama/profil/spieler/596813",
     "season": "2021-2022"
   },
