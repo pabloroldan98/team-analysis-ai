@@ -106355,7 +106355,7 @@
     "player_name": "Renato Tapia",
     "valuation_amount": 1800000,
     "valuation_date": "28/11/2025",
-    "club_name_at_valuation": "Al-Wasl FC",
+    "club_name_at_valuation": "Al-Wasl SC",
     "club_id_at_valuation": "16214",
     "age_at_valuation": 30
   },
@@ -109795,7 +109795,7 @@
     "player_name": "Haris Seferovic",
     "valuation_amount": 4000000,
     "valuation_date": "12/10/2023",
-    "club_name_at_valuation": "Al-Wasl FC",
+    "club_name_at_valuation": "Al-Wasl SC",
     "club_id_at_valuation": "16214",
     "age_at_valuation": 31
   },
@@ -109805,7 +109805,7 @@
     "player_name": "Haris Seferovic",
     "valuation_amount": 3500000,
     "valuation_date": "08/03/2024",
-    "club_name_at_valuation": "Al-Wasl FC",
+    "club_name_at_valuation": "Al-Wasl SC",
     "club_id_at_valuation": "16214",
     "age_at_valuation": 32
   },
@@ -109815,7 +109815,7 @@
     "player_name": "Haris Seferovic",
     "valuation_amount": 3000000,
     "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Al-Wasl FC",
+    "club_name_at_valuation": "Al-Wasl SC",
     "club_id_at_valuation": "16214",
     "age_at_valuation": 32
   },
@@ -109825,7 +109825,7 @@
     "player_name": "Haris Seferovic",
     "valuation_amount": 2500000,
     "valuation_date": "18/11/2024",
-    "club_name_at_valuation": "Al-Wasl FC",
+    "club_name_at_valuation": "Al-Wasl SC",
     "club_id_at_valuation": "16214",
     "age_at_valuation": 32
   },
@@ -158690,226 +158690,6 @@
     "age_at_valuation": 25
   },
   {
-    "valuation_id": "8d0d08da5855",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 100000,
-    "valuation_date": "04/03/2015",
-    "club_name_at_valuation": "Maccabi Haifa",
-    "club_id_at_valuation": "1064",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "2dbf72494f72",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 250000,
-    "valuation_date": "08/11/2018",
-    "club_name_at_valuation": "Maccabi Haifa",
-    "club_id_at_valuation": "1064",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "916685fae990",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 500000,
-    "valuation_date": "28/06/2019",
-    "club_name_at_valuation": "Maccabi Haifa",
-    "club_id_at_valuation": "1064",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "a8b241a15644",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 1000000,
-    "valuation_date": "03/09/2019",
-    "club_name_at_valuation": "Wolfsberger AC",
-    "club_id_at_valuation": "4441",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "e8fe1bb6ed09",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 3000000,
-    "valuation_date": "16/12/2019",
-    "club_name_at_valuation": "Wolfsberger AC",
-    "club_id_at_valuation": "4441",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "cc89b06d77a8",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 2400000,
-    "valuation_date": "08/04/2020",
-    "club_name_at_valuation": "Wolfsberger AC",
-    "club_id_at_valuation": "4441",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "e3f4d8971cc9",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 6000000,
-    "valuation_date": "22/07/2020",
-    "club_name_at_valuation": "Wolfsberger AC",
-    "club_id_at_valuation": "4441",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "3c968a85a82e",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 6000000,
-    "valuation_date": "08/10/2020",
-    "club_name_at_valuation": "Real Valladolid CF",
-    "club_id_at_valuation": "366",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "3328d25e81bb",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 6000000,
-    "valuation_date": "05/01/2021",
-    "club_name_at_valuation": "Real Valladolid CF",
-    "club_id_at_valuation": "366",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "8c7a27d40ddd",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 6000000,
-    "valuation_date": "10/06/2021",
-    "club_name_at_valuation": "Real Valladolid CF",
-    "club_id_at_valuation": "366",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "c2d2a5bea472",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 6000000,
-    "valuation_date": "27/12/2021",
-    "club_name_at_valuation": "Real Valladolid CF",
-    "club_id_at_valuation": "366",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "8d8e60e1be63",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 8000000,
-    "valuation_date": "29/06/2022",
-    "club_name_at_valuation": "Real Valladolid CF",
-    "club_id_at_valuation": "366",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "c66eef068342",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 5000000,
-    "valuation_date": "07/11/2022",
-    "club_name_at_valuation": "Real Valladolid CF",
-    "club_id_at_valuation": "366",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "fab6e9449154",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 4000000,
-    "valuation_date": "14/06/2023",
-    "club_name_at_valuation": "Granada CF",
-    "club_id_at_valuation": "16795",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "ea38b552deaa",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 3000000,
-    "valuation_date": "13/10/2023",
-    "club_name_at_valuation": "Granada CF",
-    "club_id_at_valuation": "16795",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "2a06eebd1a3f",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 2000000,
-    "valuation_date": "22/12/2023",
-    "club_name_at_valuation": "Granada CF",
-    "club_id_at_valuation": "16795",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "554d8be2b1b4",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 1700000,
-    "valuation_date": "05/06/2024",
-    "club_name_at_valuation": "US Salernitana 1919",
-    "club_id_at_valuation": "380",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "857ac0488d49",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 1400000,
-    "valuation_date": "14/10/2024",
-    "club_name_at_valuation": "Granada CF",
-    "club_id_at_valuation": "16795",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "50781c5ed5bc",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 1400000,
-    "valuation_date": "13/12/2024",
-    "club_name_at_valuation": "Granada CF",
-    "club_id_at_valuation": "16795",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "cb8a9d8c329a",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 1200000,
-    "valuation_date": "24/06/2025",
-    "club_name_at_valuation": "Granada CF",
-    "club_id_at_valuation": "16795",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "94344a16f518",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 1000000,
-    "valuation_date": "22/09/2025",
-    "club_name_at_valuation": "FC Blau-Weiss Linz",
-    "club_id_at_valuation": "2157",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "25603f7811d8",
-    "player_id": "247652",
-    "player_name": "Shon Weissman",
-    "valuation_amount": 750000,
-    "valuation_date": "22/12/2025",
-    "club_name_at_valuation": "FC Blau-Weiss Linz",
-    "club_id_at_valuation": "2157",
-    "age_at_valuation": 29
-  },
-  {
     "valuation_id": "d8516120c4bc",
     "player_id": "327126",
     "player_name": "Anuar",
@@ -160228,6 +160008,226 @@
     "club_name_at_valuation": "Feyenoord Rotterdam",
     "club_id_at_valuation": "234",
     "age_at_valuation": 30
+  },
+  {
+    "valuation_id": "8d0d08da5855",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 100000,
+    "valuation_date": "04/03/2015",
+    "club_name_at_valuation": "Maccabi Haifa",
+    "club_id_at_valuation": "1064",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "2dbf72494f72",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 250000,
+    "valuation_date": "08/11/2018",
+    "club_name_at_valuation": "Maccabi Haifa",
+    "club_id_at_valuation": "1064",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "916685fae990",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 500000,
+    "valuation_date": "28/06/2019",
+    "club_name_at_valuation": "Maccabi Haifa",
+    "club_id_at_valuation": "1064",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "a8b241a15644",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 1000000,
+    "valuation_date": "03/09/2019",
+    "club_name_at_valuation": "Wolfsberger AC",
+    "club_id_at_valuation": "4441",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "e8fe1bb6ed09",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 3000000,
+    "valuation_date": "16/12/2019",
+    "club_name_at_valuation": "Wolfsberger AC",
+    "club_id_at_valuation": "4441",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "cc89b06d77a8",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 2400000,
+    "valuation_date": "08/04/2020",
+    "club_name_at_valuation": "Wolfsberger AC",
+    "club_id_at_valuation": "4441",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "e3f4d8971cc9",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 6000000,
+    "valuation_date": "22/07/2020",
+    "club_name_at_valuation": "Wolfsberger AC",
+    "club_id_at_valuation": "4441",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "3c968a85a82e",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 6000000,
+    "valuation_date": "08/10/2020",
+    "club_name_at_valuation": "Real Valladolid CF",
+    "club_id_at_valuation": "366",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "3328d25e81bb",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 6000000,
+    "valuation_date": "05/01/2021",
+    "club_name_at_valuation": "Real Valladolid CF",
+    "club_id_at_valuation": "366",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "8c7a27d40ddd",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 6000000,
+    "valuation_date": "10/06/2021",
+    "club_name_at_valuation": "Real Valladolid CF",
+    "club_id_at_valuation": "366",
+    "age_at_valuation": 25
+  },
+  {
+    "valuation_id": "c2d2a5bea472",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 6000000,
+    "valuation_date": "27/12/2021",
+    "club_name_at_valuation": "Real Valladolid CF",
+    "club_id_at_valuation": "366",
+    "age_at_valuation": 25
+  },
+  {
+    "valuation_id": "8d8e60e1be63",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 8000000,
+    "valuation_date": "29/06/2022",
+    "club_name_at_valuation": "Real Valladolid CF",
+    "club_id_at_valuation": "366",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "c66eef068342",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 5000000,
+    "valuation_date": "07/11/2022",
+    "club_name_at_valuation": "Real Valladolid CF",
+    "club_id_at_valuation": "366",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "fab6e9449154",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 4000000,
+    "valuation_date": "14/06/2023",
+    "club_name_at_valuation": "Granada CF",
+    "club_id_at_valuation": "16795",
+    "age_at_valuation": 27
+  },
+  {
+    "valuation_id": "ea38b552deaa",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 3000000,
+    "valuation_date": "13/10/2023",
+    "club_name_at_valuation": "Granada CF",
+    "club_id_at_valuation": "16795",
+    "age_at_valuation": 27
+  },
+  {
+    "valuation_id": "2a06eebd1a3f",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 2000000,
+    "valuation_date": "22/12/2023",
+    "club_name_at_valuation": "Granada CF",
+    "club_id_at_valuation": "16795",
+    "age_at_valuation": 27
+  },
+  {
+    "valuation_id": "554d8be2b1b4",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 1700000,
+    "valuation_date": "05/06/2024",
+    "club_name_at_valuation": "US Salernitana 1919",
+    "club_id_at_valuation": "380",
+    "age_at_valuation": 28
+  },
+  {
+    "valuation_id": "857ac0488d49",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 1400000,
+    "valuation_date": "14/10/2024",
+    "club_name_at_valuation": "Granada CF",
+    "club_id_at_valuation": "16795",
+    "age_at_valuation": 28
+  },
+  {
+    "valuation_id": "50781c5ed5bc",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 1400000,
+    "valuation_date": "13/12/2024",
+    "club_name_at_valuation": "Granada CF",
+    "club_id_at_valuation": "16795",
+    "age_at_valuation": 28
+  },
+  {
+    "valuation_id": "cb8a9d8c329a",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 1200000,
+    "valuation_date": "24/06/2025",
+    "club_name_at_valuation": "Granada CF",
+    "club_id_at_valuation": "16795",
+    "age_at_valuation": 29
+  },
+  {
+    "valuation_id": "94344a16f518",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 1000000,
+    "valuation_date": "22/09/2025",
+    "club_name_at_valuation": "FC Blau-Weiss Linz",
+    "club_id_at_valuation": "2157",
+    "age_at_valuation": 29
+  },
+  {
+    "valuation_id": "25603f7811d8",
+    "player_id": "247652",
+    "player_name": "Shon Weissman",
+    "valuation_amount": 750000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "FC Blau-Weiss Linz",
+    "club_id_at_valuation": "2157",
+    "age_at_valuation": 29
   },
   {
     "valuation_id": "45b7c54f4644",
