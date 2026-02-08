@@ -154,9 +154,41 @@ All scrapers use **parallel matrix execution** - for example, the scheduled scra
 
 ---
 
-## 2. AI Integration & Web Development
+## 2. AI Integration & Web Development (Part 2)
 
-*Coming soon...*
+### Transfer Strategies Simulator
+
+The simulator lets you run transfer simulations with buy/sell logic and AI-generated summaries.
+
+#### Architecture
+
+```
+simulator/
+├── data_loader.py      # Load teams/players from JSON
+├── salary_calculator.py# Calculate salaries (10% of market value)
+├── transfer_engine.py  # Buy/sell logic
+├── knapsack_solver.py  # Best 11 calculation (formation optimization)
+└── llm_summarizer.py   # LLM integration for season summary (OpenAI/Anthropic)
+```
+
+#### Simulator Flow
+
+1. **Inputs**: Club, season, transfer budget (€M), salary budget (€M)
+2. **Sell phase**: Randomly selects 1-10 players to sell (max 3 per position)
+3. **Buy phase**: Uses knapsack algorithm to find best signings within remaining budget
+4. **Output**: Best 11 formation, players sold/bought, squad valuation, AI summary
+
+#### LLM Configuration
+
+Create a `.env` file (copy from `.env.example`):
+
+```
+OPENAI_API_KEY=sk-...
+ANTHROPIC_API_KEY=sk-ant-...
+LLM_PROVIDER=openai
+```
+
+Set `LLM_PROVIDER=openai` or `anthropic` to choose the provider. Without API keys, a template summary is shown.
 
 ---
 
@@ -175,11 +207,18 @@ All scrapers use **parallel matrix execution** - for example, the scheduled scra
 
 ### Frontend
 
-*Coming in Part 2...*
+| Component | Technology |
+|-----------|------------|
+| Framework | Streamlit |
+| Layout | Wide, responsive columns |
+| Formation Viz | Best 11 display with player images |
 
 ### AI Models
 
-*Coming in Part 2...*
+| Provider | Model | Usage |
+|----------|-------|-------|
+| OpenAI | gpt-4o-mini (default) | Set `OPENAI_API_KEY` |
+| Anthropic | claude-3-haiku (default) | Set `ANTHROPIC_API_KEY` |
 
 ---
 
@@ -254,6 +293,12 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Optional: configure LLM for AI summaries (copy .env.example to .env)
+# cp .env.example .env
+
+# Run Streamlit app (includes simulator)
+streamlit run streamlit_app.py
 
 # Run individual scrapers
 python scraping_tasks/scrape_leagues.py --leagues laliga --season 2025-2026

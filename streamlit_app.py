@@ -13,7 +13,7 @@ import os
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Tuple
 
 import pandas as pd
 import streamlit as st
@@ -26,7 +26,16 @@ sys.path.insert(0, str(ROOT_DIR))
 from webapp.i18n import t, format_currency, get_position_name, get_transfer_type_name
 from player import Player
 from team import Team
-from scraping.utils.helpers import read_dict_data, DATA_DIR, ensure_data_dir
+from scraping.utils.helpers import DATA_DIR, ensure_data_dir
+
+from simulator.data_loader import (
+    get_available_seasons,
+    get_available_clubs,
+    load_players,
+    get_team_players,
+)
+from simulator.transfer_engine import run_simulation, SimulationResult
+from simulator.llm_summarizer import generate_summary
 
 # =============================================================================
 # CONFIG
@@ -467,20 +476,75 @@ def page_team_analysis(lang: str):
             st.info(t(lang, "no_results"))
 
 
+def _render_formation_viz(result: SimulationResult, lang: str):
+    """Render best 11 formation visualization."""
+    formation = result.formation
+    best_eleven = result.best_eleven
+
+    if len(formation) == 3:
+        n_def, n_mid, n_att = formation[0], formation[1], formation[2]
+        n_gk = 1
+    else:
+        n_gk, n_def, n_mid, n_att = formation[0], formation[1], formation[2], formation[3]
+
+    by_pos: Dict[str, list] = {"GK": [], "DEF": [], "MID": [], "ATT": []}
+    for p in best_eleven:
+        pos = p.position or "N/A"
+        by_pos.setdefault(pos, []).append(p)
+
+    rows = []
+    if n_gk > 0:
+        rows.append(("GK", by_pos.get("GK", [])[:n_gk]))
+    if n_def > 0:
+        rows.append(("DEF", by_pos.get("DEF", [])[:n_def]))
+    if n_mid > 0:
+        rows.append(("MID", by_pos.get("MID", [])[:n_mid]))
+    if n_att > 0:
+        rows.append(("ATT", by_pos.get("ATT", [])[:n_att]))
+
+    for row_name, players in rows:
+        n = len(players)
+        if n == 0:
+            continue
+        cols = st.columns(max(n, 1))
+        for i, p in enumerate(players):
+            with cols[i] if i < len(cols) else st.container():
+                val_str = f"€{p.market_value/1_000_000:.1f}M" if p.market_value else "N/A"
+                try:
+                    if p.img_url:
+                        st.image(p.img_url, width=60, use_container_width=False)
+                except Exception:
+                    st.write("")
+                st.caption(p.name)
+                st.caption(val_str)
+
+
 def page_simulator(lang: str):
     """Transfer strategy simulator page."""
     st.header(t(lang, "simulator_title"))
     st.write(t(lang, "simulator_description"))
-    
+
     st.divider()
-    
-    # Inputs
+
+    available_seasons = get_available_seasons()
+    if not available_seasons:
+        st.warning(t(lang, "no_data"))
+        return
+
     col1, col2 = st.columns(2)
-    
     with col1:
-        club_name = st.text_input(
+        starting_season = st.selectbox(
+            t(lang, "starting_season"),
+            options=available_seasons,
+            index=0,
+        )
+        clubs = get_available_clubs(starting_season)
+        if not clubs:
+            st.info(t(lang, "no_data"))
+        club_name = st.selectbox(
             t(lang, "club_name"),
-            placeholder=t(lang, "team_name_placeholder"),
+            options=clubs if clubs else [""],
+            format_func=lambda x: x or t(lang, "club_name"),
         )
         transfer_budget = st.number_input(
             t(lang, "transfer_budget") + " (€M)",
@@ -489,147 +553,122 @@ def page_simulator(lang: str):
             value=100,
             step=10,
         )
-    
+
     with col2:
-        current_year = datetime.now().year
-        starting_season = st.selectbox(
-            t(lang, "starting_season"),
-            options=[f"{y}-{y+1}" for y in range(current_year-5, current_year+1)],
-            index=5,
-        )
+        squad = get_team_players(starting_season, club_name) if club_name else []
+        squad_value = sum(p.market_value or 0 for p in squad)
+        default_salary = max(10, int(squad_value / 10_000_000)) if squad_value else 50
         salary_budget = st.number_input(
             t(lang, "salary_budget") + " (€M)",
             min_value=0,
             max_value=2000,
-            value=300,
-            step=50,
+            value=default_salary,
+            step=10,
         )
-    
+
     st.divider()
-    
-    # Load team data if available
-    data_files = get_available_data_files()
-    team_files = [f for f in data_files if f["has_players"]]
-    
-    selected_data = None
-    if team_files and club_name:
-        matching = [f for f in team_files if club_name.lower() in f["name"].lower()]
-        if matching:
-            selected_data = load_data_file(matching[0]["path"])
-    
-    # Simulation button
+
     if st.button(t(lang, "run_simulation"), type="primary", use_container_width=True):
-        
         if not club_name:
             st.error(f"{t(lang, 'error')}: {t(lang, 'club_name')}")
             return
-        
+
         with st.spinner(t(lang, "loading")):
-            # Mock simulation logic
-            st.subheader(t(lang, "simulation_results"))
-            
-            # If we have real data, use it
-            if selected_data and selected_data.get("players"):
-                players = selected_data["players"]
-                total_value = sum(p.get("current_market_value", 0) or 0 for p in players)
-                
-                # Simple mock: buy young players, sell old ones
-                young_players = [p for p in players if (p.get("age") or 30) < 25]
-                old_players = [p for p in players if (p.get("age") or 0) > 30]
-                
-                st.subheader(t(lang, "season_summary") + f" {starting_season}")
-                
-                col_r1, col_r2, col_r3 = st.columns(3)
-                
-                with col_r1:
-                    st.metric(t(lang, "squad_size"), len(players))
-                with col_r2:
-                    st.metric(t(lang, "squad_valuation"), format_currency(total_value))
-                with col_r3:
-                    potential_sales = sum(p.get("current_market_value", 0) or 0 for p in old_players[:3])
-                    net = transfer_budget * 1_000_000 - potential_sales
-                    st.metric(t(lang, "net_benefit"), format_currency(abs(net)))
-                
-                # Suggested sales
-                st.subheader(t(lang, "players_sold") + " (sugeridos)")
-                if old_players:
-                    sales_df = pd.DataFrame([
-                        {
-                            t(lang, "player_name"): p.get("name", ""),
-                            t(lang, "age"): p.get("age", ""),
-                            t(lang, "market_value"): format_currency(p.get("current_market_value")),
-                        }
-                        for p in old_players[:5]
-                    ])
-                    st.dataframe(sales_df, use_container_width=True, hide_index=True)
-                
-                # Young talents to keep
-                st.subheader(t(lang, "current_squad") + " (jovenes a mantener)")
-                if young_players:
-                    keep_df = pd.DataFrame([
-                        {
-                            t(lang, "player_name"): p.get("name", ""),
-                            t(lang, "age"): p.get("age", ""),
-                            t(lang, "position"): p.get("position", ""),
-                            t(lang, "market_value"): format_currency(p.get("current_market_value")),
-                        }
-                        for p in sorted(young_players, key=lambda x: x.get("current_market_value", 0) or 0, reverse=True)[:10]
-                    ])
-                    st.dataframe(keep_df, use_container_width=True, hide_index=True)
-            
-            else:
-                # No data - show placeholder
-                st.info(t(lang, "no_data"))
-                
-                st.write("""
-                **Mock Simulation Results:**
-                
-                This is a simplified simulation. With real team data:
-                - AI would analyze squad weaknesses
-                - Suggest optimal transfers within budget
-                - Project value changes over seasons
-                - Generate natural language summaries
-                """)
-            
-            # AI Summary section
-            st.divider()
-            st.subheader(t(lang, "ai_summary"))
-            
-            if st.button(t(lang, "generate_summary"), use_container_width=True):
-                with st.spinner(t(lang, "loading_ai")):
-                    # Mock AI response
-                    if lang == "es":
-                        summary = f"""
-                        **Análisis de la temporada {starting_season} para {club_name}:**
-                        
-                        Con un presupuesto de fichajes de €{transfer_budget}M y un presupuesto salarial de €{salary_budget}M, 
-                        el club tiene margen para realizar movimientos estratégicos.
-                        
-                        **Recomendaciones:**
-                        - Priorizar la contratación de jugadores sub-23 con alto potencial
-                        - Considerar ventas de jugadores mayores de 30 años con contratos largos
-                        - Invertir en posiciones clave según las debilidades del equipo
-                        
-                        **Proyección:** Con una gestión eficiente, el valor de la plantilla podría aumentar 
-                        un 15-20% en las próximas 2-3 temporadas.
-                        """
-                    else:
-                        summary = f"""
-                        **Season {starting_season} Analysis for {club_name}:**
-                        
-                        With a transfer budget of €{transfer_budget}M and a salary budget of €{salary_budget}M, 
-                        the club has room for strategic moves.
-                        
-                        **Recommendations:**
-                        - Prioritize signing U-23 players with high potential
-                        - Consider selling players over 30 with long contracts
-                        - Invest in key positions based on squad weaknesses
-                        
-                        **Projection:** With efficient management, squad value could increase 
-                        by 15-20% over the next 2-3 seasons.
-                        """
-                    
-                    st.markdown(summary)
+            result = run_simulation(
+                club_name=club_name,
+                season=starting_season,
+                transfer_budget=transfer_budget,
+                salary_budget=salary_budget,
+            )
+
+        if result is None:
+            st.error(t(lang, "no_data"))
+            return
+
+        st.subheader(t(lang, "simulation_results"))
+
+        st.subheader(t(lang, "season_summary") + f" {starting_season}")
+
+        col_r1, col_r2, col_r3 = st.columns(3)
+        with col_r1:
+            st.metric(t(lang, "squad_size"), len(result.final_squad))
+        with col_r2:
+            st.metric(
+                t(lang, "squad_valuation") + " (final)",
+                format_currency(result.final_valuation),
+            )
+        with col_r3:
+            st.metric(t(lang, "net_benefit"), format_currency(result.net_benefit))
+
+        st.divider()
+        st.subheader("Best 11 - Formation")
+        _render_formation_viz(result, lang)
+
+        st.divider()
+        st.subheader(t(lang, "players_sold"))
+        if result.players_sold:
+            sales_df = pd.DataFrame([
+                {
+                    t(lang, "player_name"): p.name,
+                    t(lang, "position"): get_position_name(lang, p.position or ""),
+                    t(lang, "age"): p.age or "",
+                    "Sale Price": format_currency(p.market_value),
+                }
+                for p in result.players_sold
+            ])
+            st.dataframe(sales_df, use_container_width=True, hide_index=True)
+        else:
+            st.info(t(lang, "no_results"))
+
+        st.subheader(t(lang, "players_bought"))
+        if result.players_bought:
+            buy_df = pd.DataFrame([
+                {
+                    t(lang, "player_name"): p.name,
+                    t(lang, "position"): get_position_name(lang, p.position or ""),
+                    t(lang, "age"): p.age or "",
+                    "Purchase Price": format_currency(p.market_value),
+                }
+                for p in result.players_bought
+            ])
+            st.dataframe(buy_df, use_container_width=True, hide_index=True)
+        else:
+            st.info(t(lang, "no_results"))
+
+        st.subheader(t(lang, "current_squad"))
+        squad_df = pd.DataFrame([
+            {
+                t(lang, "player_name"): p.name,
+                t(lang, "position"): get_position_name(lang, p.position or ""),
+                t(lang, "age"): p.age or "",
+                t(lang, "market_value"): format_currency(p.market_value),
+            }
+            for p in result.final_squad
+        ])
+        st.dataframe(squad_df, use_container_width=True, hide_index=True)
+
+        col_m1, col_m2, col_m3 = st.columns(3)
+        with col_m1:
+            st.metric("Initial Value", format_currency(result.initial_valuation))
+        with col_m2:
+            st.metric("Final Value", format_currency(result.final_valuation))
+        with col_m3:
+            st.metric(t(lang, "net_benefit"), format_currency(result.net_benefit))
+
+        st.divider()
+        st.subheader(t(lang, "ai_summary"))
+        with st.spinner(t(lang, "loading_ai")):
+            ai_summary = generate_summary(
+                club_name=result.club_name,
+                season=result.season,
+                players_sold=result.players_sold,
+                players_bought=result.players_bought,
+                initial_valuation=result.initial_valuation,
+                final_valuation=result.final_valuation,
+                net_benefit=result.net_benefit,
+                formation=result.formation,
+            )
+        st.markdown(ai_summary)
 
 
 def page_about(lang: str):

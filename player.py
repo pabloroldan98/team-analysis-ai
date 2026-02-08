@@ -77,6 +77,18 @@ class Player:
         return hash(self.player_id or self.name)
     
     @property
+    def salary(self) -> float:
+        """Salary computed as 10% of market value."""
+        if self.market_value is None:
+            return 0.0
+        return self.market_value * 0.10
+
+    @staticmethod
+    def total_salaries(players: List["Player"]) -> float:
+        """Return the sum of salaries for a list of players."""
+        return sum(p.salary for p in players)
+
+    @property
     def position(self):
         return self._position
     
