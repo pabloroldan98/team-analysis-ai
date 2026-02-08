@@ -15,7 +15,43 @@ from team import Team
 class TransfermarktTeamsScraper(BaseScraper):
     """Scraper for team information from Transfermarkt."""
     
-    def scrape_team(self, team_id: str, team_url: str = None, league_key: str = "") -> Optional[Team]:
+    # League info mapping (same as in transfermarkt_leagues.py)
+    LEAGUE_INFO = {
+        "laliga": {"name": "LaLiga", "country": "Spain", "tier": 1, "id": "ES1"},
+        "segunda": {"name": "LaLiga 2", "country": "Spain", "tier": 2, "id": "ES2"},
+        "premier": {"name": "Premier League", "country": "England", "tier": 1, "id": "GB1"},
+        "championship": {"name": "Championship", "country": "England", "tier": 2, "id": "GB2"},
+        "bundesliga": {"name": "Bundesliga", "country": "Germany", "tier": 1, "id": "L1"},
+        "bundesliga2": {"name": "2. Bundesliga", "country": "Germany", "tier": 2, "id": "L2"},
+        "seriea": {"name": "Serie A", "country": "Italy", "tier": 1, "id": "IT1"},
+        "serieb": {"name": "Serie B", "country": "Italy", "tier": 2, "id": "IT2"},
+        "ligue1": {"name": "Ligue 1", "country": "France", "tier": 1, "id": "FR1"},
+        "ligue2": {"name": "Ligue 2", "country": "France", "tier": 2, "id": "FR2"},
+        "eredivisie": {"name": "Eredivisie", "country": "Netherlands", "tier": 1, "id": "NL1"},
+        "liga_portugal": {"name": "Liga Portugal", "country": "Portugal", "tier": 1, "id": "PO1"},
+        "scottish": {"name": "Scottish Premiership", "country": "Scotland", "tier": 1, "id": "SC1"},
+        "belgian": {"name": "Jupiler Pro League", "country": "Belgium", "tier": 1, "id": "BE1"},
+        "turkish": {"name": "Süper Lig", "country": "Turkey", "tier": 1, "id": "TR1"},
+        "russian": {"name": "Russian Premier League", "country": "Russia", "tier": 1, "id": "RU1"},
+        "ukrainian": {"name": "Ukrainian Premier League", "country": "Ukraine", "tier": 1, "id": "UKR1"},
+        "greek": {"name": "Super League Greece", "country": "Greece", "tier": 1, "id": "GR1"},
+        "austrian": {"name": "Austrian Bundesliga", "country": "Austria", "tier": 1, "id": "A1"},
+        "swiss": {"name": "Swiss Super League", "country": "Switzerland", "tier": 1, "id": "C1"},
+        "mls": {"name": "MLS", "country": "USA", "tier": 1, "id": "MLS1"},
+        "brazilian": {"name": "Brasileirão", "country": "Brazil", "tier": 1, "id": "BRA1"},
+        "argentine": {"name": "Liga Profesional", "country": "Argentina", "tier": 1, "id": "AR1N"},
+        "mexican": {"name": "Liga MX", "country": "Mexico", "tier": 1, "id": "MEX1"},
+    }
+    
+    def scrape_team(
+        self,
+        team_id: str,
+        team_url: str = None,
+        league_key: str = "",
+        league_name: str = "",
+        league_id: str = "",
+        country: str = "",
+    ) -> Optional[Team]:
         """
         Scrape detailed information for a single team.
         
@@ -23,6 +59,9 @@ class TransfermarktTeamsScraper(BaseScraper):
             team_id: Transfermarkt team ID
             team_url: Optional team URL (will be constructed if not provided)
             league_key: League identifier for context
+            league_name: League name (passed from league scrape)
+            league_id: League ID (passed from league scrape)
+            country: Country name (passed from league scrape)
         
         Returns:
             Team object or None
@@ -128,34 +167,35 @@ class TransfermarktTeamsScraper(BaseScraper):
                     except ValueError:
                         pass
         
-        # Try to get league info from breadcrumb or context
-        league = ""
-        league_id = ""
-        country = ""
+        # Use passed league info, or get from LEAGUE_INFO, or fallback to breadcrumb
+        final_league = league_name
+        final_league_id = league_id
+        final_country = country
         
-        if league_key:
-            info = self.LEAGUE_URLS.get(league_key, {})
-            if isinstance(info, dict):
-                league = info.get("name", league_key)
-                league_id = info.get("id", "")
-                country = info.get("country", "")
+        # Try to get from LEAGUE_INFO if not passed
+        if not final_league and league_key:
+            info = self.LEAGUE_INFO.get(league_key, {})
+            final_league = info.get("name", league_key)
+            final_league_id = info.get("id", "")
+            final_country = info.get("country", "")
         
-        if not league:
+        # Fallback to breadcrumb if still empty
+        if not final_league:
             breadcrumb = soup.select("div.breadcrumb a")
             for link in breadcrumb:
                 href = link.get("href", "")
                 if "/wettbewerb/" in href:
-                    league = link.text.strip()
+                    final_league = link.text.strip()
                     match = re.search(r"/wettbewerb/(\w+)", href)
                     if match:
-                        league_id = match.group(1)
+                        final_league_id = match.group(1)
         
         return Team(
             team_id=team_id,
             name=name,
-            league=league,
-            league_id=league_id,
-            country=country,
+            league=final_league,
+            league_id=final_league_id,
+            country=final_country,
             season=self.season,
             squad_size=squad_size,
             average_age=average_age,
@@ -184,6 +224,12 @@ class TransfermarktTeamsScraper(BaseScraper):
             self.log(f"No teams found for league: {league}")
             return []
         
+        # Get league info once to pass to all teams
+        league_info = self.LEAGUE_INFO.get(league, {})
+        league_name = league_info.get("name", league)
+        league_id = league_info.get("id", "")
+        country = league_info.get("country", "")
+        
         teams = []
         
         for i, info in enumerate(team_infos):
@@ -192,7 +238,10 @@ class TransfermarktTeamsScraper(BaseScraper):
             team = self.scrape_team(
                 team_id=info["team_id"],
                 team_url=info["team_url"],
-                league_key=league
+                league_key=league,
+                league_name=league_name,
+                league_id=league_id,
+                country=country,
             )
             
             if team:

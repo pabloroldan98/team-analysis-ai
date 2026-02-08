@@ -74,7 +74,18 @@ class TransfermarktLeaguesScraper(BaseScraper):
         total_market_value = None
         value_el = soup.select_one("a.data-header__market-value-wrapper")
         if value_el:
-            total_market_value = self.parse_market_value(value_el.text)
+            # Build value from children, stopping at <p> (Last update)
+            value_text = ""
+            for child in value_el.children:
+                if hasattr(child, 'name'):
+                    if child.name == 'p':
+                        break  # Stop at "Last update" paragraph
+                    value_text += child.get_text()
+                else:
+                    value_text += child.strip()
+            
+            if value_text:
+                total_market_value = self.parse_market_value(value_text)
         
         # Get stats from header labels
         num_teams = 0
