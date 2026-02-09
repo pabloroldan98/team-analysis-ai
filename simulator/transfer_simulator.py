@@ -396,37 +396,20 @@ class TransferSimulator:
         if not player.market_value:
             return None
         
-        min_team_value = player.market_value * 10
+        min_team_value = min(player.market_value * 10, 1_000_000_000)
         max_team_value = max(player.market_value * 200, 200_000_000)
         excluded_lower = {t.lower() for t in excluded_teams if t}
 
-        
+        # # Bottom / Top 10 by team market value
+        # sorted_teams = sorted(self.team_market_values.items(), key=lambda kv: kv[1])
 
-        # --- DEBUG PRINTS ---
-        print(f"[DEBUG] player.market_value = {player.market_value:,}")
-        print(f"[DEBUG] min_team_value     = {min_team_value:,}")
-        print(f"[DEBUG] max_team_value     = {max_team_value:,}")
-        print(f"[DEBUG] excluded_teams (#) = {len(excluded_lower)}")
+        # print("\n[DEBUG] Top 10 teams by market value:")
+        # for name, val in sorted_teams[-10:][::-1]:
+        #     print(f"  {name}: {val:,}")
 
-        # Bottom / Top 10 by team market value
-        sorted_teams = sorted(self.team_market_values.items(), key=lambda kv: kv[1])
-
-        print("\n[DEBUG] Bottom 10 teams by market value:")
-        for name, val in sorted_teams[:10]:
-            print(f"  {name}: {val:,}")
-
-        print("\n[DEBUG] Top 10 teams by market value:")
-        for name, val in sorted_teams[-10:][::-1]:
-            print(f"  {name}: {val:,}")
-
-        # (Optional but useful) how many teams fall in range before exclusions
-        in_range = [
-            (team_name, team_value)
-            for team_name, team_value in self.team_market_values.items()
-            if min_team_value <= team_value <= max_team_value
-        ]
-        print(f"\n[DEBUG] teams in range (before exclusions): {len(in_range)} / {len(self.team_market_values)}")
-
+        # print("\n[DEBUG] Bottom 10 teams by market value:")
+        # for name, val in sorted_teams[:10]:
+        #     print(f"  {name}: {val:,}")
         
         eligible_teams = [
             team_name
@@ -436,8 +419,22 @@ class TransferSimulator:
         
         if eligible_teams:
             return random.choice(eligible_teams)
-        
-        return None
+        else:
+            # Fallback: if no team in range, pick from top 5 or bottom 5 by value
+            sorted_teams = [
+                (name, val) for name, val in sorted(self.team_market_values.items(), key=lambda kv: kv[1])
+                if name.lower() not in excluded_lower
+            ]
+            if not sorted_teams:
+                return None
+            if player.market_value * 10 > sorted_teams[-1][1]:
+                # Player is too expensive for any team -> pick from top 5
+                fallback = [name for name, _ in sorted_teams[-5:]]
+            else:
+                # Player is too cheap for the range -> pick from bottom 5
+                fallback = [name for name, _ in sorted_teams[:5]]
+            
+            return random.choice(fallback) if fallback else None
     
     def _sell_random_players(
         self,
@@ -551,6 +548,7 @@ class TransferSimulator:
         players_dict = self._load_players_for_season()
         valuations = self._load_valuations_for_season()
         all_players = self._update_players_with_valuations(players_dict, valuations)
+        self.all_players = all_players
         
         if verbose:
             print(f"  Loaded {len(all_players)} players with valuations")
