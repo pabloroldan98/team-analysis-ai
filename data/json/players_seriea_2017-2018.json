@@ -4,7 +4,7 @@
     "name": "Wojciech Szczęsny",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -24,7 +24,7 @@
     "name": "Gianluigi Buffon",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -44,7 +44,7 @@
     "name": "Carlo Pinsoglio",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -64,7 +64,7 @@
     "name": "Mattia Del Favero",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -84,7 +84,7 @@
     "name": "Leonardo Loria",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 35,
@@ -281,7 +281,7 @@
     "name": "Rodrigo Bentancur",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -303,7 +303,7 @@
     "name": "Miralem Pjanić",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -328,7 +328,7 @@
     "name": "Blaise Matuidi",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -353,7 +353,7 @@
     "name": "Sami Khedira",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -377,7 +377,7 @@
     "name": "Stefano Sturaro",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -399,7 +399,7 @@
     "name": "Claudio Marchisio",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -422,7 +422,7 @@
     "name": "Fabrizio Caligara",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 38,
@@ -442,7 +442,7 @@
     "name": "Simone Muratore",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back",
@@ -465,7 +465,7 @@
     "name": "Leonardo Merio",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -488,7 +488,7 @@
     "name": "Juan Cuadrado",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Right-Back",
@@ -513,7 +513,7 @@
     "name": "Kwadwo Asamoah",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back",
@@ -536,7 +536,7 @@
     "name": "Grigoris Kastanos",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -559,7 +559,7 @@
     "name": "Marko Pjaca",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -582,7 +582,7 @@
     "name": "Douglas Costa",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -605,7 +605,7 @@
     "name": "Federico Bernardeschi",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -628,7 +628,7 @@
     "name": "Ferdinando Del Sole",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Second Striker"
@@ -650,7 +650,7 @@
     "name": "Paulo Dybala",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Right Winger",
@@ -675,7 +675,7 @@
     "name": "Gonzalo Higuaín",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -697,7 +697,7 @@
     "name": "Mario Mandžukić",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -719,7 +719,7 @@
     "name": "Moise Kean",
     "team": "Juventus FC",
     "team_id": "506",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -744,7 +744,7 @@
     "name": "Luigi Sepe",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -764,7 +764,7 @@
     "name": "Pepe Reina",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -784,7 +784,7 @@
     "name": "Rafael Cabral",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -806,7 +806,7 @@
     "name": "Maurizio Schaeper",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 19,
@@ -1153,7 +1153,7 @@
     "name": "Jorginho",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -1177,7 +1177,7 @@
     "name": "Allan",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -1201,7 +1201,7 @@
     "name": "Amadou Diawara",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -1224,7 +1224,7 @@
     "name": "Vlad Chiricheș",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -1246,7 +1246,7 @@
     "name": "Umberto Otranto",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -1268,7 +1268,7 @@
     "name": "Marek Hamsik",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -1290,7 +1290,7 @@
     "name": "Piotr Zieliński",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -1315,7 +1315,7 @@
     "name": "Marko Rog",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -1338,7 +1338,7 @@
     "name": "Emanuele Giaccherini",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Central Midfield",
@@ -1361,7 +1361,7 @@
     "name": "Zinédine Machach",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -1386,7 +1386,7 @@
     "name": "Gianluca Gaetano",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -1409,7 +1409,7 @@
     "name": "Lorenzo Insigne",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker"
@@ -1431,7 +1431,7 @@
     "name": "Leandrinho",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -1454,7 +1454,7 @@
     "name": "Raffaele Russo",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -1477,7 +1477,7 @@
     "name": "José Callejón",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -1500,7 +1500,7 @@
     "name": "Adam Ounas",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -1525,7 +1525,7 @@
     "name": "Dries Mertens",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Left Winger",
@@ -1548,7 +1548,7 @@
     "name": "Ciro Palmieri",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Left Winger",
@@ -1571,7 +1571,7 @@
     "name": "Duván Zapata",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -1591,7 +1591,7 @@
     "name": "Arkadiusz Milik",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -1611,7 +1611,7 @@
     "name": "Leonardo Pavoletti",
     "team": "SSC Napoli",
     "team_id": "6195",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 29,
@@ -1631,7 +1631,7 @@
     "name": "Samir Handanovič",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 33,
@@ -1651,7 +1651,7 @@
     "name": "Daniele Padelli",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -1671,7 +1671,7 @@
     "name": "Marco Pissardo",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -1691,7 +1691,7 @@
     "name": "Tommaso Berni",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 46,
@@ -1973,7 +1973,7 @@
     "name": "Geoffrey Kondogbia",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -1998,7 +1998,7 @@
     "name": "Marcelo Brozović",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -2021,7 +2021,7 @@
     "name": "Matías Vecino",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2046,7 +2046,7 @@
     "name": "Roberto Gagliardini",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back",
@@ -2069,7 +2069,7 @@
     "name": "Borja Valero",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2092,7 +2092,7 @@
     "name": "Assane Demoya Gnoukouri",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -2114,7 +2114,7 @@
     "name": "Rafinha",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -2139,7 +2139,7 @@
     "name": "João Mário",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -2164,7 +2164,7 @@
     "name": "Nicolò Zaniolo",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -2187,7 +2187,7 @@
     "name": "Xian Emmers",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [],
     "age": 18,
@@ -2207,7 +2207,7 @@
     "name": "Ivan Perišić",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -2230,7 +2230,7 @@
     "name": "Yann Karamoh",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -2255,7 +2255,7 @@
     "name": "Antonio Candreva",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -2278,7 +2278,7 @@
     "name": "Stevan Jovetić",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Attacking Midfield",
@@ -2303,7 +2303,7 @@
     "name": "Mauro Icardi",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -2327,7 +2327,7 @@
     "name": "Gabriel Barbosa",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -2350,7 +2350,7 @@
     "name": "Éder",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -2375,7 +2375,7 @@
     "name": "Andrea Pinamonti",
     "team": "Inter Milan",
     "team_id": "46",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -2395,7 +2395,7 @@
     "name": "Alisson",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -2415,7 +2415,7 @@
     "name": "Lukasz Skorupski",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -2435,7 +2435,7 @@
     "name": "Bogdan Lobonț",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -2455,7 +2455,7 @@
     "name": "Andrea Romagnoli",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 19,
@@ -2475,7 +2475,7 @@
     "name": "Emanuele Zamarion",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 17,
@@ -2495,7 +2495,7 @@
     "name": "Alessio Pagliarini",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -2947,7 +2947,7 @@
     "name": "Maxime Gonalons",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -2970,7 +2970,7 @@
     "name": "Daniele De Rossi",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -2993,7 +2993,7 @@
     "name": "Andrea Marcucci",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -3015,7 +3015,7 @@
     "name": "Salvatore Pezzella",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -3038,7 +3038,7 @@
     "name": "Radja Nainggolan",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3061,7 +3061,7 @@
     "name": "Kevin Strootman",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -3083,7 +3083,7 @@
     "name": "Gerson",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -3106,7 +3106,7 @@
     "name": "Dario Vittorio Meadows",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back",
@@ -3131,7 +3131,7 @@
     "name": "Alessio Riccardi",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -3154,7 +3154,7 @@
     "name": "Devid Eugene Bouah",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Right-Back",
@@ -3179,7 +3179,7 @@
     "name": "Lorenzo Pellegrini",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3202,7 +3202,7 @@
     "name": "Mirko Antonucci",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -3225,7 +3225,7 @@
     "name": "Rezan Corlu",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -3250,7 +3250,7 @@
     "name": "Diego Perotti",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -3275,7 +3275,7 @@
     "name": "Stephan El Shaarawy",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -3300,7 +3300,7 @@
     "name": "Keba Coly",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -3323,7 +3323,7 @@
     "name": "Riccardo Cappa",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -3345,7 +3345,7 @@
     "name": "Cengiz Ünder",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -3368,7 +3368,7 @@
     "name": "Edin Dzeko",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 32,
@@ -3388,7 +3388,7 @@
     "name": "Patrik Schick",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -3411,7 +3411,7 @@
     "name": "Grégoire Defrel",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -3436,7 +3436,7 @@
     "name": "Marco Tumminello",
     "team": "AS Roma",
     "team_id": "12",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -3458,7 +3458,7 @@
     "name": "Thomas Strakosha",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -3480,7 +3480,7 @@
     "name": "Federico Marchetti",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -3500,7 +3500,7 @@
     "name": "Ivan Vargic",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -3520,7 +3520,7 @@
     "name": "Guido Guerrieri",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -3540,7 +3540,7 @@
     "name": "Federico Cirillo",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 39,
@@ -3866,7 +3866,7 @@
     "name": "Lucas Leiva",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -3891,7 +3891,7 @@
     "name": "Bruno Jordão",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -3914,7 +3914,7 @@
     "name": "Sergej Milinković-Savić",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3939,7 +3939,7 @@
     "name": "Alessandro Murgia",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3962,7 +3962,7 @@
     "name": "Marco Parolo",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -3984,7 +3984,7 @@
     "name": "Alessio Miceli",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back"
@@ -4006,7 +4006,7 @@
     "name": "Edoardo Rezzi",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -4029,7 +4029,7 @@
     "name": "Abukar Mohamed",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -4053,7 +4053,7 @@
     "name": "Senad Lulic",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back",
@@ -4078,7 +4078,7 @@
     "name": "Luca Crecco",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back",
@@ -4101,7 +4101,7 @@
     "name": "Luis Alberto",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -4124,7 +4124,7 @@
     "name": "Davide Di Gennaro",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -4147,7 +4147,7 @@
     "name": "Keita Baldé",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -4172,7 +4172,7 @@
     "name": "Nani",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -4197,7 +4197,7 @@
     "name": "Ricardo Kishna",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -4222,7 +4222,7 @@
     "name": "Felipe Anderson",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -4245,7 +4245,7 @@
     "name": "Pedro Neto",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -4268,7 +4268,7 @@
     "name": "Cristiano Lombardi",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -4291,7 +4291,7 @@
     "name": "Chris Ikonomidis",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -4316,7 +4316,7 @@
     "name": "Lorenzo Spurio",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -4339,7 +4339,7 @@
     "name": "Ciro Immobile",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 17,
@@ -4359,7 +4359,7 @@
     "name": "Felipe Caicedo",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 20,
@@ -4381,7 +4381,7 @@
     "name": "Filip Djordjevic",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -4401,7 +4401,7 @@
     "name": "Simone Palombi",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -4424,7 +4424,7 @@
     "name": "Brayan Perea",
     "team": "SS Lazio",
     "team_id": "398",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -4447,7 +4447,7 @@
     "name": "Gianluigi Donnarumma",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 19,
@@ -4467,7 +4467,7 @@
     "name": "Gabriel",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -4487,7 +4487,7 @@
     "name": "Antonio Donnarumma",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -4507,7 +4507,7 @@
     "name": "Alessandro Guarnone",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 19,
@@ -4527,7 +4527,7 @@
     "name": "Marco Storari",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -4547,7 +4547,7 @@
     "name": "Matteo Soncin",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 17,
@@ -4849,7 +4849,7 @@
     "name": "Hakan Çalhanoğlu",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -4874,7 +4874,7 @@
     "name": "Lucas Biglia",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4898,7 +4898,7 @@
     "name": "Manuel Locatelli",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4920,7 +4920,7 @@
     "name": "Riccardo Montolivo",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -4945,7 +4945,7 @@
     "name": "Emanuele Torrasi",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4967,7 +4967,7 @@
     "name": "Franck Kessié",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -4991,7 +4991,7 @@
     "name": "José Mauri",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -5015,7 +5015,7 @@
     "name": "Niccolò Zanellato",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5038,7 +5038,7 @@
     "name": "Tommaso Pobega",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5061,7 +5061,7 @@
     "name": "Raoul Bellanova",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Right-Back",
@@ -5084,7 +5084,7 @@
     "name": "Giacomo Bonaventura",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -5107,7 +5107,7 @@
     "name": "José Sosa",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5129,7 +5129,7 @@
     "name": "Hachim Mastour",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -5154,7 +5154,7 @@
     "name": "Nnamdi Oduamadi",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -5176,7 +5176,7 @@
     "name": "Tiago Dias",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left-Back",
@@ -5199,7 +5199,7 @@
     "name": "Suso",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield"
@@ -5221,7 +5221,7 @@
     "name": "Riccardo Forte",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Left Winger"
@@ -5243,7 +5243,7 @@
     "name": "Patrick Cutrone",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 20,
@@ -5263,7 +5263,7 @@
     "name": "André Silva",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 22,
@@ -5283,7 +5283,7 @@
     "name": "Nikola Kalinić",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -5303,7 +5303,7 @@
     "name": "M'Baye Niang",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -5328,7 +5328,7 @@
     "name": "Fabio Borini",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -5351,7 +5351,7 @@
     "name": "Frank Tsadjout",
     "team": "AC Milan",
     "team_id": "5",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -5375,7 +5375,7 @@
     "name": "Marco Sportiello",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -5395,7 +5395,7 @@
     "name": "Bartlomiej Dragowski",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -5415,7 +5415,7 @@
     "name": "Michele Cerofolini",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -5435,7 +5435,7 @@
     "name": "Federico Brancolini",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 33,
@@ -5455,7 +5455,7 @@
     "name": "Simone Ghidotti",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -5720,7 +5720,7 @@
     "name": "Milan Badelj",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5742,7 +5742,7 @@
     "name": "Carlos Sánchez",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -5765,7 +5765,7 @@
     "name": "Vitja Valencic",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -5788,7 +5788,7 @@
     "name": "Andrés Schetino",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5812,7 +5812,7 @@
     "name": "Jordan Veretout",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5835,7 +5835,7 @@
     "name": "Marco Benassi",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -5858,7 +5858,7 @@
     "name": "Bryan Dabo",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5883,7 +5883,7 @@
     "name": "Sebastián Cristóforo",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -5907,7 +5907,7 @@
     "name": "Marco Meli",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -5929,7 +5929,7 @@
     "name": "Riccardo Saponara",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -5952,7 +5952,7 @@
     "name": "Valentin Eysseric",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -5975,7 +5975,7 @@
     "name": "Matías Fernández",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5999,7 +5999,7 @@
     "name": "Ianis Hagi",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -6024,7 +6024,7 @@
     "name": "Ante Rebić",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker",
@@ -6047,7 +6047,7 @@
     "name": "Rafik Zekhnini",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -6070,7 +6070,7 @@
     "name": "Riccardo Sottil",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -6093,7 +6093,7 @@
     "name": "Federico Chiesa",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -6116,7 +6116,7 @@
     "name": "Gil Dias",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Midfield",
@@ -6139,7 +6139,7 @@
     "name": "Simone Lo Faso",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Left Winger"
@@ -6161,7 +6161,7 @@
     "name": "Giovanni Simeone",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 22,
@@ -6183,7 +6183,7 @@
     "name": "Nikola Kalinić",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -6203,7 +6203,7 @@
     "name": "Khouma Babacar",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -6225,7 +6225,7 @@
     "name": "Diego Falcinelli",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -6248,7 +6248,7 @@
     "name": "Cyril Théréau",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -6271,7 +6271,7 @@
     "name": "Gabriele Gori",
     "team": "ACF Fiorentina",
     "team_id": "430",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 32,
@@ -6291,7 +6291,7 @@
     "name": "Etrit Berisha",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -6313,7 +6313,7 @@
     "name": "Pierluigi Gollini",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -6333,7 +6333,7 @@
     "name": "Francesco Rossi",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -6622,7 +6622,7 @@
     "name": "Bryan Cristante",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -6647,7 +6647,7 @@
     "name": "Marten de Roon",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -6670,7 +6670,7 @@
     "name": "João Schmidt",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -6692,7 +6692,7 @@
     "name": "Thomas Bolis",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -6714,7 +6714,7 @@
     "name": "Remo Freuler",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -6737,7 +6737,7 @@
     "name": "Jasmin Kurtic",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -6760,7 +6760,7 @@
     "name": "Luca Rizzo",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -6783,7 +6783,7 @@
     "name": "Matteo Pessina",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -6806,7 +6806,7 @@
     "name": "Nicolas Haas",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -6829,7 +6829,7 @@
     "name": "Filippo Melegoni",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -6852,7 +6852,7 @@
     "name": "Salvatore Elia",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Left Winger",
@@ -6875,7 +6875,7 @@
     "name": "Lorenzo Peli",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Right Winger"
@@ -6897,7 +6897,7 @@
     "name": "Josip Ilicic",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -6922,7 +6922,7 @@
     "name": "Andrea Colpani",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -6945,7 +6945,7 @@
     "name": "Dejan Kulusevski",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -6970,7 +6970,7 @@
     "name": "Papu Gómez",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -6995,7 +6995,7 @@
     "name": "Musa Barrow",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker",
@@ -7018,7 +7018,7 @@
     "name": "Riccardo Orsolini",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -7041,7 +7041,7 @@
     "name": "Andrea Petagna",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 29,
@@ -7061,7 +7061,7 @@
     "name": "Andreas Cornelius",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 25,
@@ -7081,7 +7081,7 @@
     "name": "Luca Vido",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -7104,7 +7104,7 @@
     "name": "Emmanuel Latte Lath",
     "team": "Atalanta BC",
     "team_id": "800",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -7129,7 +7129,7 @@
     "name": "Emiliano Viviano",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -7149,7 +7149,7 @@
     "name": "Vid Belec",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -7169,7 +7169,7 @@
     "name": "Christian Puggioni",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -7189,7 +7189,7 @@
     "name": "Titas Krapikas",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 19,
@@ -7209,7 +7209,7 @@
     "name": "Andrea Tozzo",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -7229,7 +7229,7 @@
     "name": "Gergely Hutvágner",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -7518,7 +7518,7 @@
     "name": "Lucas Torreira",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -7542,7 +7542,7 @@
     "name": "Dennis Praet",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -7565,7 +7565,7 @@
     "name": "Karol Linetty",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -7588,7 +7588,7 @@
     "name": "Gastón Ramírez",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -7611,7 +7611,7 @@
     "name": "Valerio Verre",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -7633,7 +7633,7 @@
     "name": "Ricardo Álvarez",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -7657,7 +7657,7 @@
     "name": "Jacopo Sala",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back"
@@ -7679,7 +7679,7 @@
     "name": "Leonardo Capezzi",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -7701,7 +7701,7 @@
     "name": "Édgar Barreto",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back",
@@ -7726,7 +7726,7 @@
     "name": "Dávid Ivan",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -7749,7 +7749,7 @@
     "name": "Andrea Tessiore",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 30,
@@ -7769,7 +7769,7 @@
     "name": "Filip Djuricic",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -7792,7 +7792,7 @@
     "name": "João Ricciulli",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker",
@@ -7817,7 +7817,7 @@
     "name": "Gianluca Caprari",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Attacking Midfield",
@@ -7840,7 +7840,7 @@
     "name": "Ognjen Stijepovic",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Left Winger",
@@ -7863,7 +7863,7 @@
     "name": "Patrik Schick",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -7886,7 +7886,7 @@
     "name": "Duván Zapata",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -7906,7 +7906,7 @@
     "name": "Dawid Kownacki",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 21,
@@ -7926,7 +7926,7 @@
     "name": "Fabio Quagliarella",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -7948,7 +7948,7 @@
     "name": "Federico Bonazzoli",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -7970,7 +7970,7 @@
     "name": "Ibourahima Baldé",
     "team": "UC Sampdoria",
     "team_id": "1038",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -7995,7 +7995,7 @@
     "name": "Salvatore Sirigu",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 39,
@@ -8015,7 +8015,7 @@
     "name": "Vanja Milinković-Savić",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -8037,7 +8037,7 @@
     "name": "Salvador Ichazo",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -8059,7 +8059,7 @@
     "name": "Domenico Coppola",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 19,
@@ -8467,7 +8467,7 @@
     "name": "Tomás Rincón",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -8489,7 +8489,7 @@
     "name": "Mirko Valdifiori",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [],
     "age": 32,
@@ -8509,7 +8509,7 @@
     "name": "Samuel Gustafson",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -8531,7 +8531,7 @@
     "name": "Antonio D'Alena",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -8553,7 +8553,7 @@
     "name": "Enrico Celeghin",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -8576,7 +8576,7 @@
     "name": "Paolo Matera",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [],
     "age": 18,
@@ -8596,7 +8596,7 @@
     "name": "Daniele Baselli",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8619,7 +8619,7 @@
     "name": "Joel Obi",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield"
@@ -8643,7 +8643,7 @@
     "name": "Afriyie Acquah",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -8665,7 +8665,7 @@
     "name": "Saša Lukić",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -8687,7 +8687,7 @@
     "name": "Ben Lhassine Kone",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8710,7 +8710,7 @@
     "name": "Michel Adopo",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -8734,7 +8734,7 @@
     "name": "Davide Zappacosta",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Right-Back",
@@ -8757,7 +8757,7 @@
     "name": "Adem Ljajic",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -8780,7 +8780,7 @@
     "name": "Mattia Aramu",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -8803,7 +8803,7 @@
     "name": "Álex Berenguer",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -8826,7 +8826,7 @@
     "name": "Vittorio Parigini",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -8848,7 +8848,7 @@
     "name": "Vincenzo Millico",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker"
@@ -8870,7 +8870,7 @@
     "name": "Iago Falque",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -8893,7 +8893,7 @@
     "name": "Simone Edera",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -8916,7 +8916,7 @@
     "name": "Nicola Rauti",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Right Winger",
@@ -8939,7 +8939,7 @@
     "name": "Andrea Belotti",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -8959,7 +8959,7 @@
     "name": "M'Baye Niang",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -8984,7 +8984,7 @@
     "name": "Umar Sadiq",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 21,
@@ -9004,7 +9004,7 @@
     "name": "Lucas Boyé",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -9028,7 +9028,7 @@
     "name": "Maxi López",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 34,
@@ -9050,7 +9050,7 @@
     "name": "Karlo Butic",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -9070,7 +9070,7 @@
     "name": "Manuel De Luca",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -9092,7 +9092,7 @@
     "name": "Alessandro Iacuaniello",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -9112,7 +9112,7 @@
     "name": "Flavio Bianchi",
     "team": "Torino FC",
     "team_id": "416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -9135,7 +9135,7 @@
     "name": "Mattia Perin",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -9155,7 +9155,7 @@
     "name": "Eugenio Lamanna",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -9175,7 +9175,7 @@
     "name": "Lukas Zima",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 38,
@@ -9195,7 +9195,7 @@
     "name": "Alessio Rollandi",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -9551,7 +9551,7 @@
     "name": "Miguel Veloso",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -9573,7 +9573,7 @@
     "name": "Petar Brlek",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -9596,7 +9596,7 @@
     "name": "Isaac Cofie",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -9619,7 +9619,7 @@
     "name": "Andrea Bertolacci",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -9642,7 +9642,7 @@
     "name": "Daniel Bessa",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -9667,7 +9667,7 @@
     "name": "Oscar Hiljemark",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -9690,7 +9690,7 @@
     "name": "Stephane Omeonga",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 40,
@@ -9712,7 +9712,7 @@
     "name": "Adel Taarabt",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -9737,7 +9737,7 @@
     "name": "Luca Rigoni",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -9759,7 +9759,7 @@
     "name": "Darko Lazović",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Right Midfield",
@@ -9782,7 +9782,7 @@
     "name": "Nikola Ninkovic",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger"
@@ -9804,7 +9804,7 @@
     "name": "Ricardo Centurión",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -9829,7 +9829,7 @@
     "name": "David Milinkovic",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -9853,7 +9853,7 @@
     "name": "Raffaele Palladino",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker",
@@ -9876,7 +9876,7 @@
     "name": "Iuri Medeiros",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -9899,7 +9899,7 @@
     "name": "Federico Ricci",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield"
@@ -9921,7 +9921,7 @@
     "name": "Thomas Rodríguez",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -9945,7 +9945,7 @@
     "name": "Luca Zanimacchia",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -9968,7 +9968,7 @@
     "name": "Goran Pandev",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Right Winger",
@@ -9993,7 +9993,7 @@
     "name": "Giovanni Simeone",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 22,
@@ -10015,7 +10015,7 @@
     "name": "Pietro Pellegri",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 17,
@@ -10035,7 +10035,7 @@
     "name": "Gianluca Lapadula",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -10059,7 +10059,7 @@
     "name": "Eddie Salcedo",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 16,
@@ -10081,7 +10081,7 @@
     "name": "Andrey Galabinov",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 16,
@@ -10101,7 +10101,7 @@
     "name": "Giuseppe Rossi",
     "team": "Genoa CFC",
     "team_id": "252",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -10125,7 +10125,7 @@
     "name": "Andrea Consigli",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 47,
@@ -10145,7 +10145,7 @@
     "name": "Leonardo Marson",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -10165,7 +10165,7 @@
     "name": "Gianluca Pegolo",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -10185,7 +10185,7 @@
     "name": "Giacomo Satalino",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 19,
@@ -10551,7 +10551,7 @@
     "name": "Francesco Magnanelli",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -10573,7 +10573,7 @@
     "name": "Alfred Duncan",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -10597,7 +10597,7 @@
     "name": "Stefano Sensi",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -10620,7 +10620,7 @@
     "name": "Francesco Cassata",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -10643,7 +10643,7 @@
     "name": "Simone Missiroli",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -10666,7 +10666,7 @@
     "name": "Luca Mazzitelli",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -10689,7 +10689,7 @@
     "name": "Davide Frattesi",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -10711,7 +10711,7 @@
     "name": "Davide Biondini",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -10733,7 +10733,7 @@
     "name": "Antonino Ragusa",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -10756,7 +10756,7 @@
     "name": "Matteo Politano",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -10779,7 +10779,7 @@
     "name": "Domenico Berardi",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Second Striker"
@@ -10801,7 +10801,7 @@
     "name": "Federico Ricci",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield"
@@ -10823,7 +10823,7 @@
     "name": "Nicholas Pierini",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -10846,7 +10846,7 @@
     "name": "Giacomo Raspadori",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Left Winger",
@@ -10869,7 +10869,7 @@
     "name": "Khouma Babacar",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -10891,7 +10891,7 @@
     "name": "Diego Falcinelli",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10914,7 +10914,7 @@
     "name": "Pietro Iemmello",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 26,
@@ -10934,7 +10934,7 @@
     "name": "Gianluca Scamacca",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -10954,7 +10954,7 @@
     "name": "Alessandro Matri",
     "team": "US Sassuolo",
     "team_id": "6574",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 33,
@@ -10974,7 +10974,7 @@
     "name": "Simone Scuffet",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -10994,7 +10994,7 @@
     "name": "Orestis Karnezis",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -11014,7 +11014,7 @@
     "name": "Albano Bizzarri",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -11036,7 +11036,7 @@
     "name": "Davide Borsellini",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -11056,7 +11056,7 @@
     "name": "Manuel Gasparini",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -11076,7 +11076,7 @@
     "name": "Semuel Pizzignacco",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -11401,7 +11401,7 @@
     "name": "Seko Fofana",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11426,7 +11426,7 @@
     "name": "Rodrigo De Paul",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -11451,7 +11451,7 @@
     "name": "Andrija Balic",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11474,7 +11474,7 @@
     "name": "Valon Behrami",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11499,7 +11499,7 @@
     "name": "Svante Ingelsson",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11522,7 +11522,7 @@
     "name": "Emil Hallfredsson",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11545,7 +11545,7 @@
     "name": "Gaspar Iñíguez",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11568,7 +11568,7 @@
     "name": "Simone Pontisso",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -11590,7 +11590,7 @@
     "name": "Mak Varesanovic",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -11615,7 +11615,7 @@
     "name": "Francesco Zampano",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Left-Back",
@@ -11638,7 +11638,7 @@
     "name": "Jakub Jankto",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Central Midfield",
@@ -11661,7 +11661,7 @@
     "name": "Antonín Barák",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11684,7 +11684,7 @@
     "name": "Ewandro Costa",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -11707,7 +11707,7 @@
     "name": "Alexis Zapata",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -11730,7 +11730,7 @@
     "name": "Nicolás Garmendia",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Midfield",
@@ -11755,7 +11755,7 @@
     "name": "Luis Ndreu",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -11779,7 +11779,7 @@
     "name": "Ryder Matos",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -11804,7 +11804,7 @@
     "name": "Aly Malle",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -11829,7 +11829,7 @@
     "name": "Nabil Jaadi",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -11854,7 +11854,7 @@
     "name": "Kevin Lasagna",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11877,7 +11877,7 @@
     "name": "Riad Bajic",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11900,7 +11900,7 @@
     "name": "Stipe Perica",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,
@@ -11920,7 +11920,7 @@
     "name": "Rodrigo Aguirre",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11943,7 +11943,7 @@
     "name": "Cyril Théréau",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11966,7 +11966,7 @@
     "name": "Maxi López",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 20,
@@ -11988,7 +11988,7 @@
     "name": "Franck Djoulou",
     "team": "Udinese Calcio",
     "team_id": "410",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -12013,7 +12013,7 @@
     "name": "Antonio Mirante",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 34,
@@ -12033,7 +12033,7 @@
     "name": "Angelo da Costa",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 34,
@@ -12055,7 +12055,7 @@
     "name": "Antonio Santurro",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -12077,7 +12077,7 @@
     "name": "Federico Ravaglia",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 34,
@@ -12097,7 +12097,7 @@
     "name": "Thomas Fantoni",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -12117,7 +12117,7 @@
     "name": "Lorenzo Bruzzi",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -12421,7 +12421,7 @@
     "name": "Godfred Donsah",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -12443,7 +12443,7 @@
     "name": "Erick Pulgar",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12466,7 +12466,7 @@
     "name": "Ádám Nagy",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -12488,7 +12488,7 @@
     "name": "Lorenzo Crisetig",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [],
     "age": 25,
@@ -12508,7 +12508,7 @@
     "name": "Andrea Poli",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12531,7 +12531,7 @@
     "name": "Saphir Taïder",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12556,7 +12556,7 @@
     "name": "Blerim Dzemaili",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12581,7 +12581,7 @@
     "name": "Juan Valencia",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -12603,7 +12603,7 @@
     "name": "Kingsley Michael",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12626,7 +12626,7 @@
     "name": "Ladislav Krejci",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Right Midfield",
@@ -12649,7 +12649,7 @@
     "name": "Simone Verdi",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -12672,7 +12672,7 @@
     "name": "César Falletti",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -12697,7 +12697,7 @@
     "name": "Federico Di Francesco",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -12720,7 +12720,7 @@
     "name": "Anthony Mounier",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -12743,7 +12743,7 @@
     "name": "Riccardo Orsolini",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -12766,7 +12766,7 @@
     "name": "Filippo Falco",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -12789,7 +12789,7 @@
     "name": "Orji Okwonkwo",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -12812,7 +12812,7 @@
     "name": "Cristian Mutton",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [],
     "age": 19,
@@ -12832,7 +12832,7 @@
     "name": "Mattia Destro",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -12852,7 +12852,7 @@
     "name": "Felipe Avenatti",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -12874,7 +12874,7 @@
     "name": "Bruno Petkovic",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -12894,7 +12894,7 @@
     "name": "Rodrigo Palacio",
     "team": "Bologna FC 1909",
     "team_id": "1025",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -12919,7 +12919,7 @@
     "name": "Alessio Cragno",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -12939,7 +12939,7 @@
     "name": "Rafael",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 36,
@@ -12961,7 +12961,7 @@
     "name": "Luca Crosta",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -12981,7 +12981,7 @@
     "name": "Riccardo Daga",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -13001,7 +13001,7 @@
     "name": "Niccolò Cabras",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -13333,7 +13333,7 @@
     "name": "Luca Cigarini",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -13355,7 +13355,7 @@
     "name": "Riccardo Ladinetti",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -13377,7 +13377,7 @@
     "name": "Nicolò Barella",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -13400,7 +13400,7 @@
     "name": "Paolo Faragò",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back",
@@ -13423,7 +13423,7 @@
     "name": "Artur Ioniță",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -13447,7 +13447,7 @@
     "name": "Alessandro Deiola",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -13469,7 +13469,7 @@
     "name": "Fabrizio Caligara",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 38,
@@ -13489,7 +13489,7 @@
     "name": "Daniele Dessena",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 31,
@@ -13509,7 +13509,7 @@
     "name": "Simone Padoin",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -13532,7 +13532,7 @@
     "name": "Joseph Tetteh",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -13555,7 +13555,7 @@
     "name": "Andrea Cossu",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -13578,7 +13578,7 @@
     "name": "Diego Farias",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -13603,7 +13603,7 @@
     "name": "Leonardo Pavoletti",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -13623,7 +13623,7 @@
     "name": "João Pedro",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -13647,7 +13647,7 @@
     "name": "Kwang-song Han",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -13670,7 +13670,7 @@
     "name": "Duje Cop",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -13692,7 +13692,7 @@
     "name": "Marco Sau",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -13715,7 +13715,7 @@
     "name": "Federico Melchiorri",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 36,
@@ -13735,7 +13735,7 @@
     "name": "Niccolò Giannetti",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -13755,7 +13755,7 @@
     "name": "Damir Céter",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -13775,7 +13775,7 @@
     "name": "Marco Borriello",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 36,
@@ -13795,7 +13795,7 @@
     "name": "Luca Gagliano",
     "team": "Cagliari Calcio",
     "team_id": "1390",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 35,
@@ -13815,7 +13815,7 @@
     "name": "Alex Meret",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -13835,7 +13835,7 @@
     "name": "Alfred Gomis",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -13857,7 +13857,7 @@
     "name": "Gabriele Marchegiani",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -13877,7 +13877,7 @@
     "name": "Giacomo Poluzzi",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 17,
@@ -13897,7 +13897,7 @@
     "name": "Luca Seri",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -14291,7 +14291,7 @@
     "name": "Alberto Grassi",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -14313,7 +14313,7 @@
     "name": "Federico Viviani",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [],
     "age": 26,
@@ -14333,7 +14333,7 @@
     "name": "Éverton Luiz",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -14355,7 +14355,7 @@
     "name": "Pasquale Schiattarella",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -14378,7 +14378,7 @@
     "name": "Salvatore Esposito",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -14400,7 +14400,7 @@
     "name": "Jasmin Kurtic",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -14423,7 +14423,7 @@
     "name": "Luca Rizzo",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -14446,7 +14446,7 @@
     "name": "Luca Mora",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield"
@@ -14468,7 +14468,7 @@
     "name": "Mattia Vitale",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -14491,7 +14491,7 @@
     "name": "Alessandro Bellemo",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -14513,7 +14513,7 @@
     "name": "Eros Schiavon",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -14536,7 +14536,7 @@
     "name": "Filippo Costa",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Centre-Back",
@@ -14559,7 +14559,7 @@
     "name": "Francesco Pio Russo",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back",
@@ -14582,7 +14582,7 @@
     "name": "Alberto Paloschi",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 43,
@@ -14602,7 +14602,7 @@
     "name": "Mirco Antenucci",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 33,
@@ -14622,7 +14622,7 @@
     "name": "Federico Bonazzoli",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -14644,7 +14644,7 @@
     "name": "Marco Borriello",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 22,
@@ -14664,7 +14664,7 @@
     "name": "Sergio Floccari",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -14686,7 +14686,7 @@
     "name": "Leonardo Ubaldi",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,
@@ -14706,7 +14706,7 @@
     "name": "Gabriel Barbosa",
     "team": "SPAL 2013",
     "team_id": "2722",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -14726,7 +14726,7 @@
     "name": "Vid Belec",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -14746,7 +14746,7 @@
     "name": "Alberto Brignoli",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -14766,7 +14766,7 @@
     "name": "Christian Puggioni",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -14786,7 +14786,7 @@
     "name": "Riccardo Piscitelli",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -14806,7 +14806,7 @@
     "name": "Thomas Candeloro",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -14826,7 +14826,7 @@
     "name": "Gianluca Volzone",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 17,
@@ -15187,7 +15187,7 @@
     "name": "Danilo Cataldi",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -15210,7 +15210,7 @@
     "name": "Sandro",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back",
@@ -15235,7 +15235,7 @@
     "name": "Raman Chibsah",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -15259,7 +15259,7 @@
     "name": "Ledian Memushaj",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 20,
@@ -15281,7 +15281,7 @@
     "name": "Mirko Eramo",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -15304,7 +15304,7 @@
     "name": "Lorenzo Del Pinto",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -15326,7 +15326,7 @@
     "name": "Giovanni Volpicelli",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -15349,7 +15349,7 @@
     "name": "Alessio Donnarumma",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -15371,7 +15371,7 @@
     "name": "Siriky Sanogo",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 16,
@@ -15391,7 +15391,7 @@
     "name": "Achraf Lazaar",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Centre-Back",
@@ -15416,7 +15416,7 @@
     "name": "Guilherme",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -15439,7 +15439,7 @@
     "name": "Filip Djuricic",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -15462,7 +15462,7 @@
     "name": "Nicolas Viola",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -15485,7 +15485,7 @@
     "name": "Vittorio Parigini",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -15507,7 +15507,7 @@
     "name": "Marco D'Alessandro",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -15530,7 +15530,7 @@
     "name": "Amato Ciciretti",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield"
@@ -15552,7 +15552,7 @@
     "name": "Enrico Brignola",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [],
     "age": 18,
@@ -15572,7 +15572,7 @@
     "name": "Cristiano Lombardi",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -15595,7 +15595,7 @@
     "name": "Mamadou Kanoute",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -15619,7 +15619,7 @@
     "name": "Cheick Diabaté",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 25,
@@ -15639,7 +15639,7 @@
     "name": "George Pușcaș",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 32,
@@ -15659,7 +15659,7 @@
     "name": "Fabio Ceravolo",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -15682,7 +15682,7 @@
     "name": "Pietro Iemmello",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 33,
@@ -15702,7 +15702,7 @@
     "name": "Samuel Armenteros",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -15727,7 +15727,7 @@
     "name": "Massimo Coda",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 29,
@@ -15747,7 +15747,7 @@
     "name": "Karamoko Cissé",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -15772,7 +15772,7 @@
     "name": "Vincenzo Pinto",
     "team": "Benevento Calcio",
     "team_id": "4171",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 17,
@@ -15792,7 +15792,7 @@
     "name": "Nícolas",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -15814,7 +15814,7 @@
     "name": "Marco Silvestri",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 17,
@@ -15834,7 +15834,7 @@
     "name": "Ferdinando Coppola",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -15854,7 +15854,7 @@
     "name": "Nicola Borghetto",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -16207,7 +16207,7 @@
     "name": "Bruno Zuculini",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -16231,7 +16231,7 @@
     "name": "Marco Fossati",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -16254,7 +16254,7 @@
     "name": "Marcel Büchel",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -16278,7 +16278,7 @@
     "name": "Andrea Danzi",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -16300,7 +16300,7 @@
     "name": "Daniel Bessa",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -16325,7 +16325,7 @@
     "name": "Rômulo",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back",
@@ -16350,7 +16350,7 @@
     "name": "Mattia Valoti",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -16373,7 +16373,7 @@
     "name": "Franco Zuculini",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -16398,7 +16398,7 @@
     "name": "Simone Calvano",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -16421,7 +16421,7 @@
     "name": "Simon Laner",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -16444,7 +16444,7 @@
     "name": "Enrico Bearzotti",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Right-Back",
@@ -16467,7 +16467,7 @@
     "name": "Simon Stefanec",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -16490,7 +16490,7 @@
     "name": "Ryder Matos",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -16515,7 +16515,7 @@
     "name": "Seung-woo Lee",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -16538,7 +16538,7 @@
     "name": "Rolando Aarons",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -16562,7 +16562,7 @@
     "name": "Mattia Zaccagni",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -16585,7 +16585,7 @@
     "name": "Daniele Verde",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -16608,7 +16608,7 @@
     "name": "Alessio Cerci",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Second Striker"
@@ -16630,7 +16630,7 @@
     "name": "Moise Kean",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -16655,7 +16655,7 @@
     "name": "Bruno Petkovic",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -16675,7 +16675,7 @@
     "name": "Giampaolo Pazzini",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 33,
@@ -16695,7 +16695,7 @@
     "name": "Lubomir Tupta",
     "team": "Hellas Verona",
     "team_id": "276",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -16717,7 +16717,7 @@
     "name": "Stefano Sorrentino",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [
       "Centre-Forward"
@@ -16739,7 +16739,7 @@
     "name": "Andrea Seculin",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -16759,7 +16759,7 @@
     "name": "Alessandro Confente",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -16779,7 +16779,7 @@
     "name": "Filippo Pavoni",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -17059,7 +17059,7 @@
     "name": "Ivan Radovanovic",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -17082,7 +17082,7 @@
     "name": "Nicola Rigoni",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -17104,7 +17104,7 @@
     "name": "Gianluca Gaudino",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -17127,7 +17127,7 @@
     "name": "Perparim Hetemaj",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -17152,7 +17152,7 @@
     "name": "Manuel Pucciarelli",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -17175,7 +17175,7 @@
     "name": "Samuel Bastien",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -17200,7 +17200,7 @@
     "name": "Sofian Kiyine",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -17225,7 +17225,7 @@
     "name": "Antonio Cinelli",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -17247,7 +17247,7 @@
     "name": "Emanuele Giaccherini",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Central Midfield",
@@ -17270,7 +17270,7 @@
     "name": "Lucas Castro",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -17293,7 +17293,7 @@
     "name": "Valter Birsa",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -17316,7 +17316,7 @@
     "name": "Luca Garritano",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -17339,7 +17339,7 @@
     "name": "Emanuel Vignato",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -17364,7 +17364,7 @@
     "name": "Mehdi Léris",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -17389,7 +17389,7 @@
     "name": "Kevin Yamga",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -17414,7 +17414,7 @@
     "name": "Roberto Inglese",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 45,
@@ -17434,7 +17434,7 @@
     "name": "Mariusz Stępiński",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -17456,7 +17456,7 @@
     "name": "Riccardo Meggiorini",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -17479,7 +17479,7 @@
     "name": "Alejandro Rodríguez",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -17502,7 +17502,7 @@
     "name": "Sergio Pellissier",
     "team": "Chievo Verona",
     "team_id": "862",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 31,
@@ -17522,7 +17522,7 @@
     "name": "Alex Cordaz",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 35,
@@ -17542,7 +17542,7 @@
     "name": "Marco Festa",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -17562,7 +17562,7 @@
     "name": "Aniello Viscovo",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 19,
@@ -17582,7 +17582,7 @@
     "name": "Francesco Latella",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -17602,7 +17602,7 @@
     "name": "Giacomo Figliuzzi",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -17871,7 +17871,7 @@
     "name": "Rolando Mandragora",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -17893,7 +17893,7 @@
     "name": "Aristóteles Romero",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -17915,7 +17915,7 @@
     "name": "Ahmad Benali",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -17940,7 +17940,7 @@
     "name": "Andrea Barberis",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back",
@@ -17963,7 +17963,7 @@
     "name": "Marcus Rohdén",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -17986,7 +17986,7 @@
     "name": "Giovanni Crociata",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -18009,7 +18009,7 @@
     "name": "Niccolò Zanellato",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -18032,7 +18032,7 @@
     "name": "Mariano Izco",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back",
@@ -18057,7 +18057,7 @@
     "name": "Cazim Suljic",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -18082,7 +18082,7 @@
     "name": "Pasquale Giannotti",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -18105,7 +18105,7 @@
     "name": "Oliver Kragl",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back",
@@ -18128,7 +18128,7 @@
     "name": "Andrej Kotnik",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -18151,7 +18151,7 @@
     "name": "Adrian Stoian",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Central Midfield",
@@ -18174,7 +18174,7 @@
     "name": "Aleksandar Tonev",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -18197,7 +18197,7 @@
     "name": "Federico Ricci",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield"
@@ -18219,7 +18219,7 @@
     "name": "Andrea Nalini",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -18242,7 +18242,7 @@
     "name": "Maxwell Acosty",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -18267,7 +18267,7 @@
     "name": "Moussa Diaby",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -18292,7 +18292,7 @@
     "name": "Giuseppe Borello",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -18314,7 +18314,7 @@
     "name": "Marcello Trotta",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -18337,7 +18337,7 @@
     "name": "Ante Budimir",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 17,
@@ -18357,7 +18357,7 @@
     "name": "Simy",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 26,
@@ -18377,7 +18377,7 @@
     "name": "Marco Tumminello",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -18399,7 +18399,7 @@
     "name": "Luka Markovic",
     "team": "FC Crotone",
     "team_id": "4083",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",

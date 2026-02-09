@@ -4,7 +4,7 @@
     "name": "Ederson",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -26,7 +26,7 @@
     "name": "Stefan Ortega",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -48,7 +48,7 @@
     "name": "Zack Steffen",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -68,7 +68,7 @@
     "name": "True Grant",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -90,7 +90,7 @@
     "name": "Scott Carson",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 33,
@@ -431,7 +431,7 @@
     "name": "Rodri",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -453,7 +453,7 @@
     "name": "Kalvin Phillips",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -478,7 +478,7 @@
     "name": "Máximo Perrone",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -502,7 +502,7 @@
     "name": "Mahamadou Susoho",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -527,7 +527,7 @@
     "name": "Jacob Wright",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -550,7 +550,7 @@
     "name": "Mateo Kovacic",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -573,7 +573,7 @@
     "name": "Phil Foden",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -596,7 +596,7 @@
     "name": "Cole Palmer",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -621,7 +621,7 @@
     "name": "Bernardo Silva",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -644,7 +644,7 @@
     "name": "Kevin De Bruyne",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -666,7 +666,7 @@
     "name": "James McAtee",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -689,7 +689,7 @@
     "name": "Jérémy Doku",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -714,7 +714,7 @@
     "name": "Jack Grealish",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -739,7 +739,7 @@
     "name": "Micah Hamilton",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -764,7 +764,7 @@
     "name": "Oscar Bobb",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -789,7 +789,7 @@
     "name": "Erling Haaland",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -809,7 +809,7 @@
     "name": "Julián Alvarez",
     "team": "Manchester City",
     "team_id": "281",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -834,7 +834,7 @@
     "name": "David Raya",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -854,7 +854,7 @@
     "name": "Aaron Ramsdale",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -874,7 +874,7 @@
     "name": "Matt Turner",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -896,7 +896,7 @@
     "name": "Karl Hein",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -916,7 +916,7 @@
     "name": "Arthur Okonkwo",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -1293,7 +1293,7 @@
     "name": "Thomas Partey",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -1316,7 +1316,7 @@
     "name": "Jorginho",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -1340,7 +1340,7 @@
     "name": "Mohamed Elneny",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -1362,7 +1362,7 @@
     "name": "Bradley Ibrahim",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -1385,7 +1385,7 @@
     "name": "Declan Rice",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -1409,7 +1409,7 @@
     "name": "Albert Sambi Lokonga",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -1433,7 +1433,7 @@
     "name": "Mauro Bandeira",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back",
@@ -1458,7 +1458,7 @@
     "name": "Martin Ødegaard",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -1481,7 +1481,7 @@
     "name": "Emile Smith Rowe",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -1504,7 +1504,7 @@
     "name": "Fábio Vieira",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -1527,7 +1527,7 @@
     "name": "Ethan Nwaneri",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -1552,7 +1552,7 @@
     "name": "Gabriel Martinelli",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -1576,7 +1576,7 @@
     "name": "Leandro Trossard",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker",
@@ -1599,7 +1599,7 @@
     "name": "Reiss Nelson",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -1624,7 +1624,7 @@
     "name": "Charles Sagoe Jr",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -1649,7 +1649,7 @@
     "name": "Bukayo Saka",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -1674,7 +1674,7 @@
     "name": "Amario Cozier-Duberry",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -1699,7 +1699,7 @@
     "name": "Kai Havertz",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -1722,7 +1722,7 @@
     "name": "Gabriel Jesus",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -1745,7 +1745,7 @@
     "name": "Eddie Nketiah",
     "team": "Arsenal FC",
     "team_id": "11",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -1770,7 +1770,7 @@
     "name": "Robert Sánchez",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -1792,7 +1792,7 @@
     "name": "Djordje Petrovic",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -1812,7 +1812,7 @@
     "name": "Marcus Bettinelli",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -1834,7 +1834,7 @@
     "name": "Lucas Bergström",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 47,
@@ -1854,7 +1854,7 @@
     "name": "Teddy Sharman-Lowe",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -1874,7 +1874,7 @@
     "name": "Eddie Beach",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -1896,7 +1896,7 @@
     "name": "Max Merrick",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -1916,7 +1916,7 @@
     "name": "Ted Curd",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -2430,7 +2430,7 @@
     "name": "Moisés Caicedo",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -2453,7 +2453,7 @@
     "name": "Roméo Lavia",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -2475,7 +2475,7 @@
     "name": "Lesley Ugochukwu",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -2500,7 +2500,7 @@
     "name": "Ollie Harrison",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -2522,7 +2522,7 @@
     "name": "Enzo Fernández",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2545,7 +2545,7 @@
     "name": "Conor Gallagher",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2568,7 +2568,7 @@
     "name": "Andrey Santos",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -2590,7 +2590,7 @@
     "name": "Carney Chukwuemeka",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -2614,7 +2614,7 @@
     "name": "Cesare Casadei",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2637,7 +2637,7 @@
     "name": "Alex Matos",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2662,7 +2662,7 @@
     "name": "Michael Golding",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2687,7 +2687,7 @@
     "name": "Jimi Tauriainen",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2710,7 +2710,7 @@
     "name": "Kiano Dyer",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -2734,7 +2734,7 @@
     "name": "Diego Moreira",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back",
@@ -2759,7 +2759,7 @@
     "name": "Cole Palmer",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -2784,7 +2784,7 @@
     "name": "Leo Castledine",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -2807,7 +2807,7 @@
     "name": "Mykhaylo Mudryk",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -2829,7 +2829,7 @@
     "name": "Tyrique George",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -2854,7 +2854,7 @@
     "name": "Raheem Sterling",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -2879,7 +2879,7 @@
     "name": "Noni Madueke",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -2903,7 +2903,7 @@
     "name": "Christopher Nkunku",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -2928,7 +2928,7 @@
     "name": "Nicolas Jackson",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -2953,7 +2953,7 @@
     "name": "Armando Broja",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -2975,7 +2975,7 @@
     "name": "David Datro Fofana",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -2998,7 +2998,7 @@
     "name": "Deivid Washington",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -3021,7 +3021,7 @@
     "name": "Mason Burstow",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -3045,7 +3045,7 @@
     "name": "Ronnie Stutter",
     "team": "Chelsea FC",
     "team_id": "631",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -3068,7 +3068,7 @@
     "name": "Alisson",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -3088,7 +3088,7 @@
     "name": "Caoimhín Kelleher",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -3108,7 +3108,7 @@
     "name": "Vitezslav Jaros",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -3128,7 +3128,7 @@
     "name": "Adrián",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -3148,7 +3148,7 @@
     "name": "Marcelo Pitaluga",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -3170,7 +3170,7 @@
     "name": "Fabian Mrozek",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -3547,7 +3547,7 @@
     "name": "Ryan Gravenberch",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -3571,7 +3571,7 @@
     "name": "Wataru Endo",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -3594,7 +3594,7 @@
     "name": "Stefan Bajcetic",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -3619,7 +3619,7 @@
     "name": "James McConnell",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -3642,7 +3642,7 @@
     "name": "Alexis Mac Allister",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3667,7 +3667,7 @@
     "name": "Curtis Jones",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3690,7 +3690,7 @@
     "name": "Thiago Alcántara",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3715,7 +3715,7 @@
     "name": "Bobby Clark",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -3737,7 +3737,7 @@
     "name": "Trey Nyoni",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3762,7 +3762,7 @@
     "name": "Tom Hill",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back",
@@ -3787,7 +3787,7 @@
     "name": "Dominik Szoboszlai",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right-Back",
@@ -3810,7 +3810,7 @@
     "name": "Harvey Elliott",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -3833,7 +3833,7 @@
     "name": "Fábio Carvalho",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -3856,7 +3856,7 @@
     "name": "Mateusz Musialowski",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -3879,7 +3879,7 @@
     "name": "Luis Díaz",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -3902,7 +3902,7 @@
     "name": "Cody Gakpo",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Centre-Forward"
@@ -3926,7 +3926,7 @@
     "name": "Diogo Jota",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker",
@@ -3949,7 +3949,7 @@
     "name": "Lewis Koumas",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -3974,7 +3974,7 @@
     "name": "Mohamed Salah",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Second Striker",
@@ -3997,7 +3997,7 @@
     "name": "Ben Gannon-Doak",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -4019,7 +4019,7 @@
     "name": "Kaide Gordon",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -4043,7 +4043,7 @@
     "name": "Darwin Núñez",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -4065,7 +4065,7 @@
     "name": "Jayden Danns",
     "team": "Liverpool FC",
     "team_id": "31",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -4089,7 +4089,7 @@
     "name": "Guglielmo Vicario",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -4109,7 +4109,7 @@
     "name": "Hugo Lloris",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -4129,7 +4129,7 @@
     "name": "Fraser Forster",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -4149,7 +4149,7 @@
     "name": "Brandon Austin",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -4171,7 +4171,7 @@
     "name": "Alfie Whiteman",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 41,
@@ -4522,7 +4522,7 @@
     "name": "Yves Bissouma",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4546,7 +4546,7 @@
     "name": "Rodrigo Bentancur",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4568,7 +4568,7 @@
     "name": "Pierre-Emile Højbjerg",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4592,7 +4592,7 @@
     "name": "Oliver Skipp",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4614,7 +4614,7 @@
     "name": "Pape Matar Sarr",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -4636,7 +4636,7 @@
     "name": "Tyrese Hall",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -4660,7 +4660,7 @@
     "name": "James Maddison",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4682,7 +4682,7 @@
     "name": "Dejan Kulusevski",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -4707,7 +4707,7 @@
     "name": "Giovani Lo Celso",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4731,7 +4731,7 @@
     "name": "Jamie Donley",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Second Striker",
@@ -4756,7 +4756,7 @@
     "name": "Heung-min Son",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker",
@@ -4779,7 +4779,7 @@
     "name": "Bryan Gil",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -4802,7 +4802,7 @@
     "name": "Manor Solomon",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -4827,7 +4827,7 @@
     "name": "Ivan Perišić",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -4850,7 +4850,7 @@
     "name": "Yago Santiago",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -4873,7 +4873,7 @@
     "name": "Mikey Moore",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -4898,7 +4898,7 @@
     "name": "Brennan Johnson",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -4922,7 +4922,7 @@
     "name": "Richarlison",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -4945,7 +4945,7 @@
     "name": "Timo Werner",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -4968,7 +4968,7 @@
     "name": "Alejo Veliz",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 36,
@@ -4988,7 +4988,7 @@
     "name": "Dane Scarlett",
     "team": "Tottenham Hotspur",
     "team_id": "148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -5012,7 +5012,7 @@
     "name": "André Onana",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -5032,7 +5032,7 @@
     "name": "Dean Henderson",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -5052,7 +5052,7 @@
     "name": "Altay Bayındır",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -5072,7 +5072,7 @@
     "name": "Radek Vítek",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -5092,7 +5092,7 @@
     "name": "Tom Heaton",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -5112,7 +5112,7 @@
     "name": "Dermot Mee",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -5516,7 +5516,7 @@
     "name": "Sofyan Amrabat",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -5541,7 +5541,7 @@
     "name": "Casemiro",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -5566,7 +5566,7 @@
     "name": "Toby Collyer",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -5589,7 +5589,7 @@
     "name": "Kobbie Mainoo",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5614,7 +5614,7 @@
     "name": "Scott McTominay",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5639,7 +5639,7 @@
     "name": "Donny van de Beek",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5662,7 +5662,7 @@
     "name": "Dan Gore",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -5684,7 +5684,7 @@
     "name": "Bruno Fernandes",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -5707,7 +5707,7 @@
     "name": "Mason Mount",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -5730,7 +5730,7 @@
     "name": "Hannibal",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5754,7 +5754,7 @@
     "name": "Christian Eriksen",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5776,7 +5776,7 @@
     "name": "Marcus Rashford",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -5801,7 +5801,7 @@
     "name": "Alejandro Garnacho",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -5826,7 +5826,7 @@
     "name": "Jadon Sancho",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -5850,7 +5850,7 @@
     "name": "Shola Shoretire",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -5875,7 +5875,7 @@
     "name": "Antony",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -5897,7 +5897,7 @@
     "name": "Amad Diallo",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -5922,7 +5922,7 @@
     "name": "Facundo Pellistri",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -5946,7 +5946,7 @@
     "name": "Omari Forson",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -5971,7 +5971,7 @@
     "name": "Rasmus Højlund",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 21,
@@ -5991,7 +5991,7 @@
     "name": "Anthony Martial",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -6016,7 +6016,7 @@
     "name": "Joe Hugill",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 20,
@@ -6036,7 +6036,7 @@
     "name": "Ethan Wheatley",
     "team": "Manchester United",
     "team_id": "985",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 36,
@@ -6056,7 +6056,7 @@
     "name": "Emiliano Martínez",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -6078,7 +6078,7 @@
     "name": "Joe Gauci",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -6100,7 +6100,7 @@
     "name": "Robin Olsen",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -6122,7 +6122,7 @@
     "name": "Filip Marschall",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 42,
@@ -6144,7 +6144,7 @@
     "name": "Oliwier Zych",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 48,
@@ -6164,7 +6164,7 @@
     "name": "James Wright",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 19,
@@ -6184,7 +6184,7 @@
     "name": "Sam Proctor",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 17,
@@ -6204,7 +6204,7 @@
     "name": "Lander Emery",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -6587,7 +6587,7 @@
     "name": "Boubacar Kamara",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -6612,7 +6612,7 @@
     "name": "Leander Dendoncker",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -6635,7 +6635,7 @@
     "name": "Douglas Luiz",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -6657,7 +6657,7 @@
     "name": "Jacob Ramsey",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -6680,7 +6680,7 @@
     "name": "John McGinn",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -6703,7 +6703,7 @@
     "name": "Youri Tielemans",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -6728,7 +6728,7 @@
     "name": "Tim Iroegbunam",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -6752,7 +6752,7 @@
     "name": "Emiliano Buendía",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -6777,7 +6777,7 @@
     "name": "Nicolò Zaniolo",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -6800,7 +6800,7 @@
     "name": "Morgan Rogers",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -6823,7 +6823,7 @@
     "name": "Philippe Coutinho",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -6848,7 +6848,7 @@
     "name": "Omari Kellyman",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -6873,7 +6873,7 @@
     "name": "Tommi O'Reilly",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -6895,7 +6895,7 @@
     "name": "Jaden Philogene",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -6919,7 +6919,7 @@
     "name": "Kadan Young",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -6943,7 +6943,7 @@
     "name": "Moussa Diaby",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -6968,7 +6968,7 @@
     "name": "Leon Bailey",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -6991,7 +6991,7 @@
     "name": "Bertrand Traoré",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -7014,7 +7014,7 @@
     "name": "Ollie Watkins",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -7037,7 +7037,7 @@
     "name": "Jhon Durán",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -7057,7 +7057,7 @@
     "name": "Cameron Archer",
     "team": "Aston Villa",
     "team_id": "405",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -7082,7 +7082,7 @@
     "name": "Nick Pope",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -7102,7 +7102,7 @@
     "name": "Martin Dúbravka",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 35,
@@ -7122,7 +7122,7 @@
     "name": "Loris Karius",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -7142,7 +7142,7 @@
     "name": "Mark Gillespie",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -7162,7 +7162,7 @@
     "name": "Adam Harrison",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 17,
@@ -7182,7 +7182,7 @@
     "name": "Aidan Harris",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 17,
@@ -7542,7 +7542,7 @@
     "name": "Sandro Tonali",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -7564,7 +7564,7 @@
     "name": "Isaac Hayden",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -7588,7 +7588,7 @@
     "name": "Bruno Guimarães",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -7612,7 +7612,7 @@
     "name": "Joelinton",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -7635,7 +7635,7 @@
     "name": "Joe Willock",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -7660,7 +7660,7 @@
     "name": "Sean Longstaff",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -7683,7 +7683,7 @@
     "name": "Lewis Miley",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -7706,7 +7706,7 @@
     "name": "Elliot Anderson",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -7731,7 +7731,7 @@
     "name": "Jeff Hendrick",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -7754,7 +7754,7 @@
     "name": "Lucas De Bolle",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -7779,7 +7779,7 @@
     "name": "Travis Hernes",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 18,
@@ -7801,7 +7801,7 @@
     "name": "James Huntley",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -7824,7 +7824,7 @@
     "name": "Matt Ritchie",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Left-Back",
@@ -7849,7 +7849,7 @@
     "name": "Joe White",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -7871,7 +7871,7 @@
     "name": "Anthony Gordon",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -7894,7 +7894,7 @@
     "name": "Harvey Barnes",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -7919,7 +7919,7 @@
     "name": "Ryan Fraser",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -7941,7 +7941,7 @@
     "name": "Amadou Diallo",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -7966,7 +7966,7 @@
     "name": "Miguel Almirón",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -7989,7 +7989,7 @@
     "name": "Jacob Murphy",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -8014,7 +8014,7 @@
     "name": "Alexander Isak",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -8036,7 +8036,7 @@
     "name": "Callum Wilson",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 32,
@@ -8056,7 +8056,7 @@
     "name": "Ben Parkinson",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -8079,7 +8079,7 @@
     "name": "Michael Ndiweni",
     "team": "Newcastle United",
     "team_id": "762",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 20,
@@ -8101,7 +8101,7 @@
     "name": "Bart Verbruggen",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -8121,7 +8121,7 @@
     "name": "Jason Steele",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -8141,7 +8141,7 @@
     "name": "Carl Rushworth",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -8161,7 +8161,7 @@
     "name": "Tom McGill",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 38,
@@ -8476,7 +8476,7 @@
     "name": "Carlos Baleba",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -8498,7 +8498,7 @@
     "name": "Billy Gilmour",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -8520,7 +8520,7 @@
     "name": "Jack Hinshelwood",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -8543,7 +8543,7 @@
     "name": "Jack Hinchy",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -8565,7 +8565,7 @@
     "name": "Valentín Barco",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -8588,7 +8588,7 @@
     "name": "Jakub Moder",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8611,7 +8611,7 @@
     "name": "Pascal Groß",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8634,7 +8634,7 @@
     "name": "Mahmoud Dahoud",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -8658,7 +8658,7 @@
     "name": "Yasin Ayari",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8683,7 +8683,7 @@
     "name": "Steven Alzate",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8708,7 +8708,7 @@
     "name": "James Milner",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -8731,7 +8731,7 @@
     "name": "Marc Leonard",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8754,7 +8754,7 @@
     "name": "Jensen Weir",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -8778,7 +8778,7 @@
     "name": "Samy Chouchane",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -8802,7 +8802,7 @@
     "name": "Julio Enciso",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -8825,7 +8825,7 @@
     "name": "Facundo Buonanotte",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Midfield",
@@ -8850,7 +8850,7 @@
     "name": "Andrew Moran",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -8873,7 +8873,7 @@
     "name": "Adam Lallana",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -8896,7 +8896,7 @@
     "name": "Kaoru Mitoma",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield"
@@ -8918,7 +8918,7 @@
     "name": "Simon Adingra",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -8941,7 +8941,7 @@
     "name": "Ansu Fati",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -8966,7 +8966,7 @@
     "name": "Abdallah Sima",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -8989,7 +8989,7 @@
     "name": "Jeremy Sarmiento",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -9014,7 +9014,7 @@
     "name": "Luca Barrington",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -9038,7 +9038,7 @@
     "name": "Cameron Peupion",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -9063,7 +9063,7 @@
     "name": "Solly March",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -9086,7 +9086,7 @@
     "name": "Benicio Baker",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -9110,7 +9110,7 @@
     "name": "Evan Ferguson",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 28,
@@ -9132,7 +9132,7 @@
     "name": "João Pedro",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -9155,7 +9155,7 @@
     "name": "Danny Welbeck",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -9179,7 +9179,7 @@
     "name": "Joshua Duffus",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -9204,7 +9204,7 @@
     "name": "Mark O'Mahony",
     "team": "Brighton & Hove Albion",
     "team_id": "1237",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -9224,7 +9224,7 @@
     "name": "Matt Turner",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -9246,7 +9246,7 @@
     "name": "Odysseas Vlachodimos",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -9268,7 +9268,7 @@
     "name": "Matz Sels",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -9288,7 +9288,7 @@
     "name": "Ethan Horvath",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 34,
@@ -9308,7 +9308,7 @@
     "name": "Wayne Hennessey",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -9642,7 +9642,7 @@
     "name": "Ibrahim Sangaré",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9665,7 +9665,7 @@
     "name": "Danilo",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -9688,7 +9688,7 @@
     "name": "Orel Mangala",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -9712,7 +9712,7 @@
     "name": "Cheikhou Kouyaté",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9737,7 +9737,7 @@
     "name": "Jamie McDonnell",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9760,7 +9760,7 @@
     "name": "Nicolás Domínguez",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -9784,7 +9784,7 @@
     "name": "Andrey Santos",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -9806,7 +9806,7 @@
     "name": "Ryan Yates",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -9828,7 +9828,7 @@
     "name": "Remo Freuler",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -9851,7 +9851,7 @@
     "name": "Lewis O'Brien",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -9874,7 +9874,7 @@
     "name": "Harry Arter",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -9898,7 +9898,7 @@
     "name": "Brandon Aguilera",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -9921,7 +9921,7 @@
     "name": "Morgan Gibbs-White",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -9946,7 +9946,7 @@
     "name": "Giovanni Reyna",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -9971,7 +9971,7 @@
     "name": "Ui-jo Hwang",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -9994,7 +9994,7 @@
     "name": "Callum Hudson-Odoi",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -10019,7 +10019,7 @@
     "name": "Alex Mighten",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -10044,7 +10044,7 @@
     "name": "Brennan Johnson",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -10068,7 +10068,7 @@
     "name": "Anthony Elanga",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -10093,7 +10093,7 @@
     "name": "Josh Bowler",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -10116,7 +10116,7 @@
     "name": "Taiwo Awoniyi",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 26,
@@ -10136,7 +10136,7 @@
     "name": "Chris Wood",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 32,
@@ -10156,7 +10156,7 @@
     "name": "Divock Origi",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10181,7 +10181,7 @@
     "name": "Emmanuel Dennis",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10204,7 +10204,7 @@
     "name": "Rodrigo Ribeiro",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 37,
@@ -10224,7 +10224,7 @@
     "name": "Joe Gardner",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -10249,7 +10249,7 @@
     "name": "Detlef Esapa Osong",
     "team": "Nottingham Forest",
     "team_id": "703",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -10271,7 +10271,7 @@
     "name": "Alphonse Areola",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -10293,7 +10293,7 @@
     "name": "Lukasz Fabianski",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 39,
@@ -10313,7 +10313,7 @@
     "name": "Joseph Anang",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 49,
@@ -10335,7 +10335,7 @@
     "name": "Jacob Knightbridge",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -10624,7 +10624,7 @@
     "name": "Edson Álvarez",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -10647,7 +10647,7 @@
     "name": "Tomáš Souček",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -10670,7 +10670,7 @@
     "name": "Kalvin Phillips",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -10695,7 +10695,7 @@
     "name": "Flynn Downes",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -10718,7 +10718,7 @@
     "name": "Conor Coventry",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -10742,7 +10742,7 @@
     "name": "James Ward-Prowse",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -10765,7 +10765,7 @@
     "name": "Pablo Fornals",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -10788,7 +10788,7 @@
     "name": "Lewis Orford",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -10811,7 +10811,7 @@
     "name": "Dan Chesters",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Central Midfield",
@@ -10834,7 +10834,7 @@
     "name": "Lucas Paquetá",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -10859,7 +10859,7 @@
     "name": "George Earthy",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -10881,7 +10881,7 @@
     "name": "Kamarai Swyer",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger"
@@ -10903,7 +10903,7 @@
     "name": "Saïd Benrahma",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -10928,7 +10928,7 @@
     "name": "Maxwel Cornet",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -10953,7 +10953,7 @@
     "name": "Mohammed Kudus",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -10976,7 +10976,7 @@
     "name": "Jarrod Bowen",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Second Striker",
@@ -10999,7 +10999,7 @@
     "name": "Danny Ings",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -11021,7 +11021,7 @@
     "name": "Michail Antonio",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Midfield",
@@ -11046,7 +11046,7 @@
     "name": "Callum Marshall",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -11069,7 +11069,7 @@
     "name": "Divin Mubama",
     "team": "West Ham United",
     "team_id": "379",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 45,
@@ -11091,7 +11091,7 @@
     "name": "Dean Henderson",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -11111,7 +11111,7 @@
     "name": "Sam Johnstone",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -11131,7 +11131,7 @@
     "name": "Joe Whitworth",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 41,
@@ -11151,7 +11151,7 @@
     "name": "Remi Matthews",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -11444,7 +11444,7 @@
     "name": "Cheick Doucouré",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -11466,7 +11466,7 @@
     "name": "Adam Wharton",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -11489,7 +11489,7 @@
     "name": "Jefferson Lerma",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -11511,7 +11511,7 @@
     "name": "Jaïro Riedewald",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -11536,7 +11536,7 @@
     "name": "David Ozoh",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -11560,7 +11560,7 @@
     "name": "Kaden Rodney",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -11583,7 +11583,7 @@
     "name": "Will Hughes",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -11606,7 +11606,7 @@
     "name": "Naouirou Ahamada",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -11630,7 +11630,7 @@
     "name": "Jack Wells-Morrison",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11653,7 +11653,7 @@
     "name": "Jeffrey Schlupp",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back",
@@ -11678,7 +11678,7 @@
     "name": "Eberechi Eze",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -11703,7 +11703,7 @@
     "name": "Matheus França",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -11726,7 +11726,7 @@
     "name": "Jadan Raymond",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -11751,7 +11751,7 @@
     "name": "John-Kymani Gordon",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -11776,7 +11776,7 @@
     "name": "Michael Olise",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield"
@@ -11800,7 +11800,7 @@
     "name": "Jesurun Rak-Sakyi",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -11825,7 +11825,7 @@
     "name": "Malcolm Ebiowei",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -11850,7 +11850,7 @@
     "name": "Franco Umeh-Chibueze",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Midfield",
@@ -11875,7 +11875,7 @@
     "name": "Roshaun Mathurin",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -11897,7 +11897,7 @@
     "name": "Jean-Philippe Mateta",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -11919,7 +11919,7 @@
     "name": "Odsonne Édouard",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 22,
@@ -11941,7 +11941,7 @@
     "name": "Jordan Ayew",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11966,7 +11966,7 @@
     "name": "Luke Plange",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 21,
@@ -11986,7 +11986,7 @@
     "name": "Ademola Ola-Adebomi",
     "team": "Crystal Palace",
     "team_id": "873",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 20,
@@ -12008,7 +12008,7 @@
     "name": "José Sá",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -12028,7 +12028,7 @@
     "name": "Daniel Bentley",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -12048,7 +12048,7 @@
     "name": "Tom King",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -12070,7 +12070,7 @@
     "name": "Louie Moulden",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -12491,7 +12491,7 @@
     "name": "Mario Lemina",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12516,7 +12516,7 @@
     "name": "Boubacar Traoré",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -12538,7 +12538,7 @@
     "name": "Joe Hodge",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -12563,7 +12563,7 @@
     "name": "Bruno Jordão",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -12586,7 +12586,7 @@
     "name": "Harvey Griffiths",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -12608,7 +12608,7 @@
     "name": "João Gomes",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -12630,7 +12630,7 @@
     "name": "Jean-Ricner Bellegarde",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12655,7 +12655,7 @@
     "name": "Tommy Doyle",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12678,7 +12678,7 @@
     "name": "Luke Cundle",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12701,7 +12701,7 @@
     "name": "Matthew Whittingham",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -12724,7 +12724,7 @@
     "name": "Chem Campbell",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -12749,7 +12749,7 @@
     "name": "Tawanda Chirewa",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -12774,7 +12774,7 @@
     "name": "Noha Lemina",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -12799,7 +12799,7 @@
     "name": "Ty Barnett",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -12824,7 +12824,7 @@
     "name": "Owen Hesketh",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -12849,7 +12849,7 @@
     "name": "Enso González",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -12872,7 +12872,7 @@
     "name": "Emilio Ballard-Matthews",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -12895,7 +12895,7 @@
     "name": "Pedro Neto",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -12918,7 +12918,7 @@
     "name": "Pablo Sarabia",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -12941,7 +12941,7 @@
     "name": "Matheus Cunha",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -12964,7 +12964,7 @@
     "name": "Hee-chan Hwang",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -12987,7 +12987,7 @@
     "name": "Fábio Silva",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -13010,7 +13010,7 @@
     "name": "Sasa Kalajdzic",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,
@@ -13030,7 +13030,7 @@
     "name": "Nathan Fraser",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -13052,7 +13052,7 @@
     "name": "Leon Chiwome",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,
@@ -13074,7 +13074,7 @@
     "name": "Fletcher Holman",
     "team": "Wolverhampton Wanderers",
     "team_id": "543",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -13094,7 +13094,7 @@
     "name": "Mark Flekken",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -13114,7 +13114,7 @@
     "name": "Thomas Strakosha",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -13136,7 +13136,7 @@
     "name": "Hákon Valdimarsson",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -13156,7 +13156,7 @@
     "name": "Matthew Cox",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -13176,7 +13176,7 @@
     "name": "Ellery Balcombe",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -13198,7 +13198,7 @@
     "name": "Vincent Angelini",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -13549,7 +13549,7 @@
     "name": "Vitaly Janelt",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Left-Back",
@@ -13574,7 +13574,7 @@
     "name": "Christian Nørgaard",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -13596,7 +13596,7 @@
     "name": "Yunus Konak",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -13618,7 +13618,7 @@
     "name": "Mathias Jensen",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 28,
@@ -13638,7 +13638,7 @@
     "name": "Josh Dasilva",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -13663,7 +13663,7 @@
     "name": "Yegor Yarmolyuk",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -13686,7 +13686,7 @@
     "name": "Frank Onyeka",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -13709,7 +13709,7 @@
     "name": "Shandon Baptiste",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -13734,7 +13734,7 @@
     "name": "Paris Maghoma",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -13758,7 +13758,7 @@
     "name": "Ethan Brierley",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -13780,7 +13780,7 @@
     "name": "Ryan Trevitt",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back",
@@ -13803,7 +13803,7 @@
     "name": "Keane Lewis-Potter",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back",
@@ -13826,7 +13826,7 @@
     "name": "Mikkel Damsgaard",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -13849,7 +13849,7 @@
     "name": "Saman Ghoddos",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -13874,7 +13874,7 @@
     "name": "Myles Peart-Harris",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -13899,7 +13899,7 @@
     "name": "Kevin Schade",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -13924,7 +13924,7 @@
     "name": "Bryan Mbeumo",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Second Striker",
@@ -13949,7 +13949,7 @@
     "name": "Michael Olakigbe",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -13974,7 +13974,7 @@
     "name": "Ivan Toney",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 17,
@@ -13996,7 +13996,7 @@
     "name": "Yoane Wissa",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -14021,7 +14021,7 @@
     "name": "Neal Maupay",
     "team": "Brentford FC",
     "team_id": "1148",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -14045,7 +14045,7 @@
     "name": "Mark Travers",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 42,
@@ -14065,7 +14065,7 @@
     "name": "Ionuț Radu",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -14085,7 +14085,7 @@
     "name": "Neto",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 34,
@@ -14107,7 +14107,7 @@
     "name": "Will Dennis",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -14127,7 +14127,7 @@
     "name": "Darren Randolph",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -14149,7 +14149,7 @@
     "name": "Cameron Plain",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -14169,7 +14169,7 @@
     "name": "Callan McKenna",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 17,
@@ -14436,7 +14436,7 @@
     "name": "Tyler Adams",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -14459,7 +14459,7 @@
     "name": "Philip Billing",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 29,
@@ -14481,7 +14481,7 @@
     "name": "Alex Scott",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -14506,7 +14506,7 @@
     "name": "Lewis Cook",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -14529,7 +14529,7 @@
     "name": "Ryan Christie",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -14552,7 +14552,7 @@
     "name": "Joe Rothwell",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -14577,7 +14577,7 @@
     "name": "Gavin Kilkenny",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -14600,7 +14600,7 @@
     "name": "Marcus Tavernier",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -14623,7 +14623,7 @@
     "name": "Romain Faivre",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -14648,7 +14648,7 @@
     "name": "Justin Kluivert",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -14673,7 +14673,7 @@
     "name": "Emiliano Marcondes",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -14698,7 +14698,7 @@
     "name": "Luis Sinisterra",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -14720,7 +14720,7 @@
     "name": "Hamed Traoré",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Central Midfield",
@@ -14743,7 +14743,7 @@
     "name": "Jaidon Anthony",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -14768,7 +14768,7 @@
     "name": "Dango Ouattara",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Midfield",
@@ -14791,7 +14791,7 @@
     "name": "Antoine Semenyo",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -14816,7 +14816,7 @@
     "name": "David Brooks",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -14841,7 +14841,7 @@
     "name": "Dominic Sadi",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -14864,7 +14864,7 @@
     "name": "Michael Dacosta",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -14888,7 +14888,7 @@
     "name": "Dominic Solanke",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 26,
@@ -14910,7 +14910,7 @@
     "name": "Enes Ünal",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 26,
@@ -14930,7 +14930,7 @@
     "name": "Kieffer Moore",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Centre-Back"
@@ -14954,7 +14954,7 @@
     "name": "Jamal Lowe",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -14979,7 +14979,7 @@
     "name": "Daniel Adu-Adjei",
     "team": "AFC Bournemouth",
     "team_id": "989",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -15001,7 +15001,7 @@
     "name": "Jordan Pickford",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -15021,7 +15021,7 @@
     "name": "João Virgínia",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -15041,7 +15041,7 @@
     "name": "Andy Lonergan",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -15061,7 +15061,7 @@
     "name": "Billy Crellin",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -15335,7 +15335,7 @@
     "name": "Amadou Onana",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -15359,7 +15359,7 @@
     "name": "James Garner",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -15382,7 +15382,7 @@
     "name": "Idrissa Gueye",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -15404,7 +15404,7 @@
     "name": "André Gomes",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -15426,7 +15426,7 @@
     "name": "Lewis Warrington",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -15449,7 +15449,7 @@
     "name": "Tyler Onyango",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back",
@@ -15474,7 +15474,7 @@
     "name": "Jenson Metcalfe",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -15496,7 +15496,7 @@
     "name": "Abdoulaye Doucouré",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -15521,7 +15521,7 @@
     "name": "Dele Alli",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -15546,7 +15546,7 @@
     "name": "Alex Iwobi",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -15571,7 +15571,7 @@
     "name": "Dwight McNeil",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -15596,7 +15596,7 @@
     "name": "Jack Harrison",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -15618,7 +15618,7 @@
     "name": "Arnaut Danjuma",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -15643,7 +15643,7 @@
     "name": "Lewis Dobbin",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -15666,7 +15666,7 @@
     "name": "Dominic Calvert-Lewin",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -15689,7 +15689,7 @@
     "name": "Beto",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 26,
@@ -15711,7 +15711,7 @@
     "name": "Neal Maupay",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -15735,7 +15735,7 @@
     "name": "Youssef Chermiti",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 28,
@@ -15757,7 +15757,7 @@
     "name": "Tom Cannon",
     "team": "Everton FC",
     "team_id": "29",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 21,
@@ -15779,7 +15779,7 @@
     "name": "Bernd Leno",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 17,
@@ -15799,7 +15799,7 @@
     "name": "Marek Rodák",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -15819,7 +15819,7 @@
     "name": "Steven Benda",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -16096,7 +16096,7 @@
     "name": "João Palhinha",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [],
     "age": 26,
@@ -16116,7 +16116,7 @@
     "name": "Harrison Reed",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -16139,7 +16139,7 @@
     "name": "Saša Lukić",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -16161,7 +16161,7 @@
     "name": "Tom Cairney",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -16186,7 +16186,7 @@
     "name": "Tyrese Francois",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -16211,7 +16211,7 @@
     "name": "Matt Dibley-Dias",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -16235,7 +16235,7 @@
     "name": "Andreas Pereira",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -16260,7 +16260,7 @@
     "name": "Bobby De Cordova-Reid",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -16285,7 +16285,7 @@
     "name": "Luke Harris",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -16310,7 +16310,7 @@
     "name": "Kristian Sekularac",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -16335,7 +16335,7 @@
     "name": "Josh King",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -16358,7 +16358,7 @@
     "name": "Alex Iwobi",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -16383,7 +16383,7 @@
     "name": "Willian",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -16406,7 +16406,7 @@
     "name": "Harry Wilson",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -16431,7 +16431,7 @@
     "name": "Adama Traoré",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -16456,7 +16456,7 @@
     "name": "Aleksandar Mitrović",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 29,
@@ -16476,7 +16476,7 @@
     "name": "Armando Broja",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 22,
@@ -16498,7 +16498,7 @@
     "name": "Rodrigo Muniz",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -16518,7 +16518,7 @@
     "name": "Raúl Jiménez",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 33,
@@ -16538,7 +16538,7 @@
     "name": "Carlos Vinícius",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -16558,7 +16558,7 @@
     "name": "Jay Stansfield",
     "team": "Fulham FC",
     "team_id": "931",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -16581,7 +16581,7 @@
     "name": "James Trafford",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -16601,7 +16601,7 @@
     "name": "Arijanet Murić",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 49,
@@ -16623,7 +16623,7 @@
     "name": "Lawrence Vigouroux",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -16645,7 +16645,7 @@
     "name": "Denis Franchi",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -16932,7 +16932,7 @@
     "name": "Sander Berge",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -16954,7 +16954,7 @@
     "name": "Jack Cork",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -16976,7 +16976,7 @@
     "name": "Josh Brownhill",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -16999,7 +16999,7 @@
     "name": "Josh Cullen",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -17024,7 +17024,7 @@
     "name": "Han-Noah Massengo",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -17048,7 +17048,7 @@
     "name": "Aaron Ramsey",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -17070,7 +17070,7 @@
     "name": "Mike Tresor",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -17093,7 +17093,7 @@
     "name": "Scott Twine",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -17116,7 +17116,7 @@
     "name": "Wilson Odobert",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -17140,7 +17140,7 @@
     "name": "Anass Zaroury",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -17165,7 +17165,7 @@
     "name": "Jacob Bruun Larsen",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -17188,7 +17188,7 @@
     "name": "Darko Churlinov",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -17211,7 +17211,7 @@
     "name": "Dara Costelloe",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -17234,7 +17234,7 @@
     "name": "Luca Koleosho",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -17259,7 +17259,7 @@
     "name": "Manuel Benson",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -17283,7 +17283,7 @@
     "name": "Nathan Redmond",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -17308,7 +17308,7 @@
     "name": "Jóhann Berg Gudmundsson",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -17331,7 +17331,7 @@
     "name": "Enock Agyei",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -17355,7 +17355,7 @@
     "name": "Lyle Foster",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 17,
@@ -17375,7 +17375,7 @@
     "name": "David Datro Fofana",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -17398,7 +17398,7 @@
     "name": "Zeki Amdouni",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -17423,7 +17423,7 @@
     "name": "Michael Obafemi",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -17448,7 +17448,7 @@
     "name": "Jay Rodríguez",
     "team": "Burnley FC",
     "team_id": "1132",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -17473,7 +17473,7 @@
     "name": "Ivo Grbic",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -17493,7 +17493,7 @@
     "name": "Wes Foderingham",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -17513,7 +17513,7 @@
     "name": "Adam Davies",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -17535,7 +17535,7 @@
     "name": "Jordan Amissah",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -17942,7 +17942,7 @@
     "name": "Vini Souza",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -17964,7 +17964,7 @@
     "name": "Gustavo Hamer",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -17989,7 +17989,7 @@
     "name": "Tom Davies",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -18012,7 +18012,7 @@
     "name": "Andre Brooks",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -18037,7 +18037,7 @@
     "name": "Anis Ben Slimane",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -18062,7 +18062,7 @@
     "name": "Oliver Norwood",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -18087,7 +18087,7 @@
     "name": "Ismaila Coulibaly",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -18109,7 +18109,7 @@
     "name": "Ben Osborn",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -18132,7 +18132,7 @@
     "name": "John Fleck",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -18155,7 +18155,7 @@
     "name": "Oliver Arblaster",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -18177,7 +18177,7 @@
     "name": "Sydie Peck",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -18199,7 +18199,7 @@
     "name": "Billy Blacker",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -18221,7 +18221,7 @@
     "name": "Owen Hampson",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 19,
@@ -18243,7 +18243,7 @@
     "name": "James McAtee",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -18266,7 +18266,7 @@
     "name": "Bénie Traoré",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -18289,7 +18289,7 @@
     "name": "Louie Marsh",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Attacking Midfield",
@@ -18312,7 +18312,7 @@
     "name": "Cameron Archer",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -18337,7 +18337,7 @@
     "name": "Ben Brereton Díaz",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -18362,7 +18362,7 @@
     "name": "Oli McBurnie",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 28,
@@ -18384,7 +18384,7 @@
     "name": "Rhian Brewster",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -18406,7 +18406,7 @@
     "name": "William Osula",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 32,
@@ -18428,7 +18428,7 @@
     "name": "Daniel Jebbison",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 36,
@@ -18450,7 +18450,7 @@
     "name": "Antwoine Hackford",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 20,
@@ -18472,7 +18472,7 @@
     "name": "Ryan Oné",
     "team": "Sheffield United",
     "team_id": "350",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -18497,7 +18497,7 @@
     "name": "Thomas Kaminski",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -18519,7 +18519,7 @@
     "name": "Tim Krul",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -18539,7 +18539,7 @@
     "name": "Jack Walton",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -18559,7 +18559,7 @@
     "name": "James Shea",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 33,
@@ -18896,7 +18896,7 @@
     "name": "Marvelous Nakamba",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -18918,7 +18918,7 @@
     "name": "Pelly Ruddock Mpanzu",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -18943,7 +18943,7 @@
     "name": "Dominic Martins",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -18967,7 +18967,7 @@
     "name": "Albert Sambi Lokonga",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -18991,7 +18991,7 @@
     "name": "Ross Barkley",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -19014,7 +19014,7 @@
     "name": "Allan Campbell",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -19037,7 +19037,7 @@
     "name": "Luke Berry",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -19060,7 +19060,7 @@
     "name": "Louie Watson",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -19084,7 +19084,7 @@
     "name": "Axel Piesold",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 19,
@@ -19104,7 +19104,7 @@
     "name": "Jake Burger",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 19,
@@ -19124,7 +19124,7 @@
     "name": "Jayden Luker",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 19,
@@ -19144,7 +19144,7 @@
     "name": "Fred Onyedinma",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Left Midfield",
@@ -19169,7 +19169,7 @@
     "name": "Alfie Doughty",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back",
@@ -19192,7 +19192,7 @@
     "name": "Tahith Chong",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -19217,7 +19217,7 @@
     "name": "Jordan Clark",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -19240,7 +19240,7 @@
     "name": "Elliot Thorpe",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -19265,7 +19265,7 @@
     "name": "Zack Nelson",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Second Striker"
@@ -19287,7 +19287,7 @@
     "name": "Dion Pereira",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -19311,7 +19311,7 @@
     "name": "Chiedozie Ogbene",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -19336,7 +19336,7 @@
     "name": "Andros Townsend",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -19359,7 +19359,7 @@
     "name": "John McAtee",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Attacking Midfield"
@@ -19381,7 +19381,7 @@
     "name": "Carlton Morris",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -19404,7 +19404,7 @@
     "name": "Elijah Adebayo",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 26,
@@ -19426,7 +19426,7 @@
     "name": "Jacob Brown",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -19451,7 +19451,7 @@
     "name": "Cauley Woodrow",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -19473,7 +19473,7 @@
     "name": "Joe Taylor",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 21,
@@ -19495,7 +19495,7 @@
     "name": "Admiral Muskwe",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -19519,7 +19519,7 @@
     "name": "Taylan Harris",
     "team": "Luton Town",
     "team_id": "1031",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,

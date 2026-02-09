@@ -4,7 +4,7 @@
     "name": "Alphonse Areola",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -26,7 +26,7 @@
     "name": "Kevin Trapp",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -46,7 +46,7 @@
     "name": "Rémy Descamps",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -66,7 +66,7 @@
     "name": "Gianluigi Buffon",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 41,
@@ -86,7 +86,7 @@
     "name": "Sébastien Cibois",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -438,7 +438,7 @@
     "name": "Leandro Paredes",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -460,7 +460,7 @@
     "name": "Grzegorz Krychowiak",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -483,7 +483,7 @@
     "name": "Lassana Diarra",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -508,7 +508,7 @@
     "name": "Marco Verratti",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -530,7 +530,7 @@
     "name": "Adrien Rabiot",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -553,7 +553,7 @@
     "name": "Antoine Bernede",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -578,7 +578,7 @@
     "name": "Junior Dina Ebimbe",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Left Midfield"
@@ -602,7 +602,7 @@
     "name": "Neymar",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -625,7 +625,7 @@
     "name": "Giovani Lo Celso",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -649,7 +649,7 @@
     "name": "Azzeddine Toufiqui",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -674,7 +674,7 @@
     "name": "Julian Draxler",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Central Midfield",
@@ -697,7 +697,7 @@
     "name": "Jesé",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -720,7 +720,7 @@
     "name": "Ángel Di María",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -745,7 +745,7 @@
     "name": "Moussa Diaby",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -770,7 +770,7 @@
     "name": "Timothy Weah",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -795,7 +795,7 @@
     "name": "Kylian Mbappé",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -820,7 +820,7 @@
     "name": "Edinson Cavani",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -845,7 +845,7 @@
     "name": "Christopher Nkunku",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -870,7 +870,7 @@
     "name": "Eric-Maxim Choupo-Moting",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -895,7 +895,7 @@
     "name": "Metehan Güclü",
     "team": "Paris Saint-Germain",
     "team_id": "583",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -920,7 +920,7 @@
     "name": "Anthony Lopes",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -942,7 +942,7 @@
     "name": "Mathieu Gorgelin",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -962,7 +962,7 @@
     "name": "Anthony Racioppi",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -1217,7 +1217,7 @@
     "name": "Christopher Martins",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -1241,7 +1241,7 @@
     "name": "Elisha Owusu",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -1265,7 +1265,7 @@
     "name": "Ousseynou Ndiaye",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -1288,7 +1288,7 @@
     "name": "Tanguy Ndombélé",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -1313,7 +1313,7 @@
     "name": "Lucas Tousart",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -1336,7 +1336,7 @@
     "name": "Pape Cheikh",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -1360,7 +1360,7 @@
     "name": "Jordan Ferri",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -1382,7 +1382,7 @@
     "name": "Olivier Kemen",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -1407,7 +1407,7 @@
     "name": "Maxence Caqueret",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -1430,7 +1430,7 @@
     "name": "Timothé Cognat",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -1453,7 +1453,7 @@
     "name": "Nabil Fekir",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -1478,7 +1478,7 @@
     "name": "Houssem Aouar",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -1502,7 +1502,7 @@
     "name": "Yassin Fekir",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -1527,7 +1527,7 @@
     "name": "Martin Terrier",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -1550,7 +1550,7 @@
     "name": "Maxwel Cornet",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -1575,7 +1575,7 @@
     "name": "Bertrand Traoré",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -1598,7 +1598,7 @@
     "name": "Lenny Pintor",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Midfield",
@@ -1623,7 +1623,7 @@
     "name": "Memphis Depay",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -1648,7 +1648,7 @@
     "name": "Moussa Dembélé",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 22,
@@ -1670,7 +1670,7 @@
     "name": "Mariano Díaz",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 25,
@@ -1692,7 +1692,7 @@
     "name": "Amine Gouiri",
     "team": "Olympique Lyon",
     "team_id": "1041",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -1717,7 +1717,7 @@
     "name": "Paul Nardi",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -1737,7 +1737,7 @@
     "name": "Danijel Subasic",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 34,
@@ -1757,7 +1757,7 @@
     "name": "Loïc Badiashile",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -1779,7 +1779,7 @@
     "name": "Seydou Sy",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -1799,7 +1799,7 @@
     "name": "Diego Benaglio",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -1821,7 +1821,7 @@
     "name": "Yanis Hénin",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -1843,7 +1843,7 @@
     "name": "Hugo Hagège",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 19,
@@ -2192,7 +2192,7 @@
     "name": "Youssef Aït Bennasser",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -2216,7 +2216,7 @@
     "name": "Jean-Eudes Aholou",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -2238,7 +2238,7 @@
     "name": "Pelé",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -2262,7 +2262,7 @@
     "name": "Kévin N'Doram",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -2287,7 +2287,7 @@
     "name": "Ibrahima Diallo",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -2311,7 +2311,7 @@
     "name": "William Vainqueur",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -2335,7 +2335,7 @@
     "name": "Youri Tielemans",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2360,7 +2360,7 @@
     "name": "Cesc Fàbregas",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2383,7 +2383,7 @@
     "name": "Adrien Silva",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2408,7 +2408,7 @@
     "name": "Han-Noah Massengo",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -2432,7 +2432,7 @@
     "name": "Adama Traoré",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -2455,7 +2455,7 @@
     "name": "Khéphren Thuram",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -2479,7 +2479,7 @@
     "name": "Jonathan Mexique",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2504,7 +2504,7 @@
     "name": "Aleksandr Golovin",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -2527,7 +2527,7 @@
     "name": "Gabriel Boschilia",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Midfield",
@@ -2552,7 +2552,7 @@
     "name": "Romain Faivre",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -2577,7 +2577,7 @@
     "name": "Keita Baldé",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -2602,7 +2602,7 @@
     "name": "Nacer Chadli",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -2627,7 +2627,7 @@
     "name": "Georges-Kevin N'Koudou",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -2651,7 +2651,7 @@
     "name": "Sofiane Diop",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -2676,7 +2676,7 @@
     "name": "Adrien Bongiovanni",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -2701,7 +2701,7 @@
     "name": "Gelson Martins",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -2726,7 +2726,7 @@
     "name": "Rony Lopes",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -2751,7 +2751,7 @@
     "name": "Samuel Grandsir",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -2776,7 +2776,7 @@
     "name": "Jordi Mboula",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -2801,7 +2801,7 @@
     "name": "Robert Navarro",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -2824,7 +2824,7 @@
     "name": "Stevan Jovetić",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Attacking Midfield",
@@ -2849,7 +2849,7 @@
     "name": "Radamel Falcao",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 33,
@@ -2871,7 +2871,7 @@
     "name": "Willem Geubbels",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -2896,7 +2896,7 @@
     "name": "Carlos Vinícius",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -2916,7 +2916,7 @@
     "name": "Pietro Pellegri",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -2936,7 +2936,7 @@
     "name": "Moussa Sylla",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -2961,7 +2961,7 @@
     "name": "Irvin Cardona",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -2986,7 +2986,7 @@
     "name": "Lyle Foster",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,
@@ -3006,7 +3006,7 @@
     "name": "Wilson Isidor",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -3031,7 +3031,7 @@
     "name": "Gobé Gouano",
     "team": "AS Monaco",
     "team_id": "162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,
@@ -3053,7 +3053,7 @@
     "name": "Mike Maignan",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -3075,7 +3075,7 @@
     "name": "Adam Jakubech",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -3095,7 +3095,7 @@
     "name": "Hervé Koffi",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -3360,7 +3360,7 @@
     "name": "Thiago Mendes",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -3383,7 +3383,7 @@
     "name": "Boubakary Soumaré",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -3407,7 +3407,7 @@
     "name": "Thiago Maia",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -3429,7 +3429,7 @@
     "name": "Arton Zekaj",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -3453,7 +3453,7 @@
     "name": "Cheikh Niasse",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -3478,7 +3478,7 @@
     "name": "Xeka",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -3500,7 +3500,7 @@
     "name": "Rominigue Kouamé",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3525,7 +3525,7 @@
     "name": "Yassine Benzia",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -3550,7 +3550,7 @@
     "name": "Jonathan Bamba",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -3575,7 +3575,7 @@
     "name": "Rafael Leão",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker",
@@ -3600,7 +3600,7 @@
     "name": "Nicolas Pépé",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Second Striker",
@@ -3625,7 +3625,7 @@
     "name": "Jonathan Ikoné",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -3650,7 +3650,7 @@
     "name": "Anwar El Ghazi",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -3675,7 +3675,7 @@
     "name": "Luiz Araújo",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -3698,7 +3698,7 @@
     "name": "Teddy Okou",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -3723,7 +3723,7 @@
     "name": "Lebo Mothiba",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -3743,7 +3743,7 @@
     "name": "Loïc Rémy",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -3768,7 +3768,7 @@
     "name": "Rui Fonte",
     "team": "LOSC Lille",
     "team_id": "1082",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -3790,7 +3790,7 @@
     "name": "Steve Mandanda",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -3812,7 +3812,7 @@
     "name": "Yohann Pelé",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -3832,7 +3832,7 @@
     "name": "Romain Cagnon",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -3852,7 +3852,7 @@
     "name": "Florian Escales",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -4117,7 +4117,7 @@
     "name": "Boubacar Kamara",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -4142,7 +4142,7 @@
     "name": "Maxime Lopez",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -4167,7 +4167,7 @@
     "name": "Luiz Gustavo",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -4191,7 +4191,7 @@
     "name": "Grégory Sertic",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -4216,7 +4216,7 @@
     "name": "Alexandre Phliponeau",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4238,7 +4238,7 @@
     "name": "Morgan Sanson",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -4261,7 +4261,7 @@
     "name": "Kevin Strootman",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -4283,7 +4283,7 @@
     "name": "Dimitri Payet",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -4308,7 +4308,7 @@
     "name": "Saîf-Eddine Khaoui",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Midfield"
@@ -4332,7 +4332,7 @@
     "name": "Florian Chabrolle",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4356,7 +4356,7 @@
     "name": "Lucas Ocampos",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -4380,7 +4380,7 @@
     "name": "Nemanja Radonjic",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -4403,7 +4403,7 @@
     "name": "Florian Thauvin",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -4426,7 +4426,7 @@
     "name": "Clinton N'Jie",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -4449,7 +4449,7 @@
     "name": "Yusuf Sarı",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -4474,7 +4474,7 @@
     "name": "Mario Balotelli",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -4498,7 +4498,7 @@
     "name": "Konstantinos Mitroglou",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 31,
@@ -4518,7 +4518,7 @@
     "name": "Valère Germain",
     "team": "Olympique Marseille",
     "team_id": "244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -4541,7 +4541,7 @@
     "name": "Walter Benítez",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -4563,7 +4563,7 @@
     "name": "Yoan Cardinale",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -4583,7 +4583,7 @@
     "name": "Mouez Hassen",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -4605,7 +4605,7 @@
     "name": "Yannis Clémentia",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -4905,7 +4905,7 @@
     "name": "Adrien Tamèze",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -4930,7 +4930,7 @@
     "name": "Pierre Lees-Melou",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4952,7 +4952,7 @@
     "name": "Danilo Barbosa",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -4975,7 +4975,7 @@
     "name": "Jawad Dramé",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Midfielder",
     "other_positions": [],
     "age": 19,
@@ -4997,7 +4997,7 @@
     "name": "Wylan Cyprien",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5022,7 +5022,7 @@
     "name": "Rémi Walter",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -5044,7 +5044,7 @@
     "name": "Arnaud Lusamba",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5069,7 +5069,7 @@
     "name": "Jean-Victor Makengo",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5094,7 +5094,7 @@
     "name": "Vincent Marcel",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -5119,7 +5119,7 @@
     "name": "Lamine Diaby-Fadiga",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Centre-Forward"
@@ -5143,7 +5143,7 @@
     "name": "Eddy Sylvestre",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -5168,7 +5168,7 @@
     "name": "Assil Jaziri",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -5193,7 +5193,7 @@
     "name": "Allan Saint-Maximin",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -5218,7 +5218,7 @@
     "name": "Myziane Maolida",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -5243,7 +5243,7 @@
     "name": "Bassem Srarfi",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -5266,7 +5266,7 @@
     "name": "Hicham Mahou",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -5288,7 +5288,7 @@
     "name": "Pedro Brazão",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -5311,7 +5311,7 @@
     "name": "Mario Balotelli",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -5335,7 +5335,7 @@
     "name": "Ignatius Ganago",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -5360,7 +5360,7 @@
     "name": "Ihsan Sacko",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -5385,7 +5385,7 @@
     "name": "Mickaël Le Bihan",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -5407,7 +5407,7 @@
     "name": "Maxime Pélican",
     "team": "OGC Nice",
     "team_id": "417",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -5430,7 +5430,7 @@
     "name": "Paul Bernardoni",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -5450,7 +5450,7 @@
     "name": "Benoît Costil",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -5470,7 +5470,7 @@
     "name": "Gaëtan Poussin",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -5490,7 +5490,7 @@
     "name": "Jérôme Prior",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -5510,7 +5510,7 @@
     "name": "Over Mandanda",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -5826,7 +5826,7 @@
     "name": "Otávio",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5848,7 +5848,7 @@
     "name": "Aurélien Tchouaméni",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -5873,7 +5873,7 @@
     "name": "Yacine Adli",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -5898,7 +5898,7 @@
     "name": "Alexandre Lauray",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -5921,7 +5921,7 @@
     "name": "Lukas Lerager",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 25,
@@ -5941,7 +5941,7 @@
     "name": "Younousse Sankharé",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5966,7 +5966,7 @@
     "name": "Toma Bašić",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -5988,7 +5988,7 @@
     "name": "Valentín Vada",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -6012,7 +6012,7 @@
     "name": "Zaydou Youssouf",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -6036,7 +6036,7 @@
     "name": "Jaroslav Plasil",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -6061,7 +6061,7 @@
     "name": "Albert Lottin",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -6085,7 +6085,7 @@
     "name": "Raoul Bellanova",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Right-Back",
@@ -6108,7 +6108,7 @@
     "name": "Yassine Benrahou",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -6133,7 +6133,7 @@
     "name": "François Kamano",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -6156,7 +6156,7 @@
     "name": "Yann Karamoh",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -6181,7 +6181,7 @@
     "name": "Samuel Kalu",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -6203,7 +6203,7 @@
     "name": "Jonathan Cafu",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -6228,7 +6228,7 @@
     "name": "Daniel Mancini",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -6253,7 +6253,7 @@
     "name": "Gaëtan Laborde",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -6276,7 +6276,7 @@
     "name": "Nicolas de Préville",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -6299,7 +6299,7 @@
     "name": "Andreas Cornelius",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 26,
@@ -6319,7 +6319,7 @@
     "name": "Jimmy Briand",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -6344,7 +6344,7 @@
     "name": "Alexandre Mendy",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 25,
@@ -6366,7 +6366,7 @@
     "name": "Josh Maja",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -6388,7 +6388,7 @@
     "name": "Aaron Boupendza",
     "team": "FC Girondins Bordeaux",
     "team_id": "40",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -6411,7 +6411,7 @@
     "name": "Tomas Koubek",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -6431,7 +6431,7 @@
     "name": "Abdoulaye Diallo",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -6453,7 +6453,7 @@
     "name": "Loïc Badiashile",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -6475,7 +6475,7 @@
     "name": "Edvinas Gertmonas",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -6790,7 +6790,7 @@
     "name": "Benjamin André",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -6813,7 +6813,7 @@
     "name": "Jérémy Gélin",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -6836,7 +6836,7 @@
     "name": "Jakob Johansson",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -6859,7 +6859,7 @@
     "name": "Benjamin Bourigeaud",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -6882,7 +6882,7 @@
     "name": "Clément Grenier",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -6904,7 +6904,7 @@
     "name": "James Léa Siliki",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -6929,7 +6929,7 @@
     "name": "Eduardo Camavinga",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -6954,7 +6954,7 @@
     "name": "Denis-Will Poha",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -6978,7 +6978,7 @@
     "name": "Nicolas Janvier",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -7001,7 +7001,7 @@
     "name": "Hatem Ben Arfa",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -7026,7 +7026,7 @@
     "name": "Armand Laurienté",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -7051,7 +7051,7 @@
     "name": "Yann Gboho",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -7076,7 +7076,7 @@
     "name": "Isaac Matondo",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -7100,7 +7100,7 @@
     "name": "Ismaïla Sarr",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -7123,7 +7123,7 @@
     "name": "Rafik Guitane",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -7148,7 +7148,7 @@
     "name": "Romain Del Castillo",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -7172,7 +7172,7 @@
     "name": "M'Baye Niang",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -7197,7 +7197,7 @@
     "name": "Jordan",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -7219,7 +7219,7 @@
     "name": "Adrien Hunou",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Midfield",
@@ -7244,7 +7244,7 @@
     "name": "Diafra Sakho",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -7269,7 +7269,7 @@
     "name": "Brandon Thomas",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -7294,7 +7294,7 @@
     "name": "Jordan Tell",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -7318,7 +7318,7 @@
     "name": "Timothé Nkada",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -7343,7 +7343,7 @@
     "name": "Georginio Rutter",
     "team": "Stade Rennais FC",
     "team_id": "273",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -7368,7 +7368,7 @@
     "name": "Stéphane Ruffier",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -7388,7 +7388,7 @@
     "name": "Jessy Moulin",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -7408,7 +7408,7 @@
     "name": "Alexis Guendouz",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -7430,7 +7430,7 @@
     "name": "Théo Vermot",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -7450,7 +7450,7 @@
     "name": "Stefan Bajic",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 17,
@@ -7745,7 +7745,7 @@
     "name": "Youssef Aït Bennasser",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -7769,7 +7769,7 @@
     "name": "Yann M'Vila",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -7794,7 +7794,7 @@
     "name": "Ole Selnæs",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -7817,7 +7817,7 @@
     "name": "Assane Dioussé",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -7839,7 +7839,7 @@
     "name": "Habib Maïga",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -7861,7 +7861,7 @@
     "name": "Mickaël Panos",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -7884,7 +7884,7 @@
     "name": "Valentín Vada",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -7908,7 +7908,7 @@
     "name": "Mahdi Camara",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -7933,7 +7933,7 @@
     "name": "Kenny Rocha Santos",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -7956,7 +7956,7 @@
     "name": "Dylan Chambost",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -7979,7 +7979,7 @@
     "name": "Rémy Cabella",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -8004,7 +8004,7 @@
     "name": "Jorginho",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -8029,7 +8029,7 @@
     "name": "Oussama Tannane",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -8054,7 +8054,7 @@
     "name": "Bilal Benkhedim",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -8079,7 +8079,7 @@
     "name": "Wahbi Khazri",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -8104,7 +8104,7 @@
     "name": "Kévin Monnet-Paquet",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -8129,7 +8129,7 @@
     "name": "Yannis Salibur",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -8154,7 +8154,7 @@
     "name": "Arnaud Nordin",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -8179,7 +8179,7 @@
     "name": "Romain Hamouma",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -8204,7 +8204,7 @@
     "name": "Franck Honorat",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -8227,7 +8227,7 @@
     "name": "Lamine Ghezali",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -8252,7 +8252,7 @@
     "name": "Loïs Diony",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -8277,7 +8277,7 @@
     "name": "Robert Beric",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -8297,7 +8297,7 @@
     "name": "Charles Abi",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -8322,7 +8322,7 @@
     "name": "Makhtar Gueye",
     "team": "AS Saint-Étienne",
     "team_id": "618",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 21,
@@ -8342,7 +8342,7 @@
     "name": "Ciprian Tătărușanu",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -8362,7 +8362,7 @@
     "name": "Maxime Dupé",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -8382,7 +8382,7 @@
     "name": "Alexandre Olliero",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -8402,7 +8402,7 @@
     "name": "Quentin Braat",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -8794,7 +8794,7 @@
     "name": "Abdoulaye Touré",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -8818,7 +8818,7 @@
     "name": "Rene Krhin",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -8841,7 +8841,7 @@
     "name": "Valentin Rongier",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back",
@@ -8864,7 +8864,7 @@
     "name": "Samuel Moutoussamy",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8889,7 +8889,7 @@
     "name": "Lucas Evangelista",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8912,7 +8912,7 @@
     "name": "Abdoulaye Dabo",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8937,7 +8937,7 @@
     "name": "Imrân Louza",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8962,7 +8962,7 @@
     "name": "Gabriel Boschilia",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Midfield",
@@ -8987,7 +8987,7 @@
     "name": "Valentin Eysseric",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -9010,7 +9010,7 @@
     "name": "Anthony Limbombe",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -9035,7 +9035,7 @@
     "name": "Yassine El Ghanassy",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -9059,7 +9059,7 @@
     "name": "Élie Youan",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -9084,7 +9084,7 @@
     "name": "Abdoul Kader Bamba",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -9109,7 +9109,7 @@
     "name": "Alexis Alégué",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -9134,7 +9134,7 @@
     "name": "Kalifa Coulibaly",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -9156,7 +9156,7 @@
     "name": "Majeed Waris",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -9179,7 +9179,7 @@
     "name": "Santy Ngom",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -9204,7 +9204,7 @@
     "name": "Antonio Mance",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -9224,7 +9224,7 @@
     "name": "Randal Kolo Muani",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -9249,7 +9249,7 @@
     "name": "Emiliano Sala",
     "team": "FC Nantes",
     "team_id": "995",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 28,
@@ -9271,7 +9271,7 @@
     "name": "Baptiste Reynet",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [
       "Centre-Forward"
@@ -9293,7 +9293,7 @@
     "name": "Mauro Goicoechea",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -9315,7 +9315,7 @@
     "name": "Marc Vidal",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -9335,7 +9335,7 @@
     "name": "Matis Carvalho",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -9661,7 +9661,7 @@
     "name": "Ibrahim Sangaré",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9684,7 +9684,7 @@
     "name": "Alexis Blin",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9707,7 +9707,7 @@
     "name": "Kalidou Sidibé",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9732,7 +9732,7 @@
     "name": "Stéphane Mbia",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9757,7 +9757,7 @@
     "name": "Jessy Pi",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -9779,7 +9779,7 @@
     "name": "Yannick Cahuzac",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -9801,7 +9801,7 @@
     "name": "Yann Bodiger",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 24,
@@ -9821,7 +9821,7 @@
     "name": "Jimmy Durmaz",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -9846,7 +9846,7 @@
     "name": "John Bostock",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -9870,7 +9870,7 @@
     "name": "Manu Koné",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -9895,7 +9895,7 @@
     "name": "Manu García",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -9918,7 +9918,7 @@
     "name": "Hakim El Mokeddem",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -9943,7 +9943,7 @@
     "name": "Quentin Boisgard",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -9966,7 +9966,7 @@
     "name": "Driss Khalid",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -9991,7 +9991,7 @@
     "name": "Max Gradel",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -10016,7 +10016,7 @@
     "name": "Adil Taoui",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -10041,7 +10041,7 @@
     "name": "Mathieu Dossevi",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -10066,7 +10066,7 @@
     "name": "Nathan Ngoumou",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -10091,7 +10091,7 @@
     "name": "Andy Delort",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -10113,7 +10113,7 @@
     "name": "Aaron Leya Iseka",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10138,7 +10138,7 @@
     "name": "Corentin Jean",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10161,7 +10161,7 @@
     "name": "Yaya Sanogo",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 26,
@@ -10183,7 +10183,7 @@
     "name": "Firmin Mubele",
     "team": "FC Toulouse",
     "team_id": "415",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10206,7 +10206,7 @@
     "name": "Benjamin Lecomte",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -10226,7 +10226,7 @@
     "name": "Dimitry Bertaud",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -10248,7 +10248,7 @@
     "name": "Jonathan Ligali",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -10528,7 +10528,7 @@
     "name": "Ellyes Skhiri",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -10552,7 +10552,7 @@
     "name": "Damien Le Tallec",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -10577,7 +10577,7 @@
     "name": "Facundo Píriz",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -10601,7 +10601,7 @@
     "name": "Kylian Kaïboue",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -10626,7 +10626,7 @@
     "name": "Paul Lasne",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -10649,7 +10649,7 @@
     "name": "Killian Sanson",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -10672,7 +10672,7 @@
     "name": "Amir Aduev",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Winger"
@@ -10696,7 +10696,7 @@
     "name": "Florent Mollet",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -10719,7 +10719,7 @@
     "name": "Keagan Dolly",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -10742,7 +10742,7 @@
     "name": "Jeremie Porsan-Clemente",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -10767,7 +10767,7 @@
     "name": "Yanis Ammour",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -10792,7 +10792,7 @@
     "name": "Isaac Mbenza",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -10817,7 +10817,7 @@
     "name": "Bilal Boutobba",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -10842,7 +10842,7 @@
     "name": "Souleymane Camara",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -10867,7 +10867,7 @@
     "name": "Andy Delort",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -10889,7 +10889,7 @@
     "name": "Gaëtan Laborde",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10912,7 +10912,7 @@
     "name": "Giovanni Sio",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10937,7 +10937,7 @@
     "name": "Petar Skuletic",
     "team": "Montpellier HSC",
     "team_id": "969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -10961,7 +10961,7 @@
     "name": "Matz Sels",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -10981,7 +10981,7 @@
     "name": "Bingourou Kamara",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -11003,7 +11003,7 @@
     "name": "Eiji Kawashima",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -11023,7 +11023,7 @@
     "name": "Louis Pelletier",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -11319,7 +11319,7 @@
     "name": "Ibrahima Sissoko",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -11343,7 +11343,7 @@
     "name": "Jonas Martin",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -11366,7 +11366,7 @@
     "name": "Youssouf Fofana",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -11391,7 +11391,7 @@
     "name": "Jérémy Grimm",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [],
     "age": 32,
@@ -11411,7 +11411,7 @@
     "name": "Adrien Thomasson",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -11435,7 +11435,7 @@
     "name": "Sanjin Prcic",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -11459,7 +11459,7 @@
     "name": "Dimitri Liénard",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield"
@@ -11481,7 +11481,7 @@
     "name": "Anthony Gonçalves",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11506,7 +11506,7 @@
     "name": "Moataz Zemzemi",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -11529,7 +11529,7 @@
     "name": "Benjamin Corgnet",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -11552,7 +11552,7 @@
     "name": "Samuel Grandsir",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -11577,7 +11577,7 @@
     "name": "Lebo Mothiba",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -11597,7 +11597,7 @@
     "name": "Nuno Da Costa",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11622,7 +11622,7 @@
     "name": "Ludovic Ajorque",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 25,
@@ -11644,7 +11644,7 @@
     "name": "Kévin Zohi",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11669,7 +11669,7 @@
     "name": "Idriss Saadi",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -11691,7 +11691,7 @@
     "name": "Mamoudou Karamoko",
     "team": "RC Strasbourg Alsace",
     "team_id": "667",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11716,7 +11716,7 @@
     "name": "Paul Bernardoni",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -11736,7 +11736,7 @@
     "name": "Baptiste Valette",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -11756,7 +11756,7 @@
     "name": "Martin Sourzac",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -11776,7 +11776,7 @@
     "name": "Lucas Dias",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -12011,7 +12011,7 @@
     "name": "Abdel Malik Hsissane",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -12035,7 +12035,7 @@
     "name": "Mustapha Diallo",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12060,7 +12060,7 @@
     "name": "Antonin Bobichon",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -12083,7 +12083,7 @@
     "name": "Jordan Ferri",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -12105,7 +12105,7 @@
     "name": "Théo Valls",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 18,
@@ -12125,7 +12125,7 @@
     "name": "Pierrick Valdivia",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -12147,7 +12147,7 @@
     "name": "Lucas Buadés",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Right-Back",
@@ -12170,7 +12170,7 @@
     "name": "Téji Savanier",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -12192,7 +12192,7 @@
     "name": "Denis Bouanga",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -12217,7 +12217,7 @@
     "name": "Panagiotis Vlachodimos",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -12241,7 +12241,7 @@
     "name": "Sada Thioub",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -12266,7 +12266,7 @@
     "name": "Rachid Alioui",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -12291,7 +12291,7 @@
     "name": "Umut Bozok",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -12315,7 +12315,7 @@
     "name": "Renaud Ripart",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -12338,7 +12338,7 @@
     "name": "Baptiste Guillaume",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -12361,7 +12361,7 @@
     "name": "Clément Depres",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -12381,7 +12381,7 @@
     "name": "Kévin Denkey",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,
@@ -12403,7 +12403,7 @@
     "name": "Sami Ben Amar",
     "team": "Nîmes Olympique",
     "team_id": "1160",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -12428,7 +12428,7 @@
     "name": "Edouard Mendy",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -12450,7 +12450,7 @@
     "name": "Johann Carrasso",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -12470,7 +12470,7 @@
     "name": "Nicolas Lemaître",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -12490,7 +12490,7 @@
     "name": "Ryan Bouallak",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -12807,7 +12807,7 @@
     "name": "Nolan Mbemba",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -12831,7 +12831,7 @@
     "name": "Aly Ndom",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12856,7 +12856,7 @@
     "name": "Alaixys Romao",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12881,7 +12881,7 @@
     "name": "Sambou Sissoko",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -12906,7 +12906,7 @@
     "name": "Xavier Chavalerin",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12929,7 +12929,7 @@
     "name": "Tristan Dingomé",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12954,7 +12954,7 @@
     "name": "Moreto Cassamá",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12979,7 +12979,7 @@
     "name": "Rémi Oudin",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -13002,7 +13002,7 @@
     "name": "Marvin Martin",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -13024,7 +13024,7 @@
     "name": "Grégory Berthier",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Midfield",
@@ -13047,7 +13047,7 @@
     "name": "Virgile Piechocki",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -13072,7 +13072,7 @@
     "name": "Arbër Zeneli",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -13097,7 +13097,7 @@
     "name": "Moussa Doumbia",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -13119,7 +13119,7 @@
     "name": "Virgile Pinson",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -13144,7 +13144,7 @@
     "name": "Mathieu Cafaro",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -13167,7 +13167,7 @@
     "name": "Sheyi Ojo",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left-Back",
@@ -13192,7 +13192,7 @@
     "name": "Hyun-jun Suk",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -13214,7 +13214,7 @@
     "name": "Pablo Chavarría",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -13239,7 +13239,7 @@
     "name": "Boulaye Dia",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -13264,7 +13264,7 @@
     "name": "Grejohn Kyei",
     "team": "Stade Reims",
     "team_id": "1421",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -13286,7 +13286,7 @@
     "name": "Mathieu Michel",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -13306,7 +13306,7 @@
     "name": "Zacharie Boucher",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -13328,7 +13328,7 @@
     "name": "Alexandre Letellier",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -13348,7 +13348,7 @@
     "name": "Ludovic Butelle",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -13368,7 +13368,7 @@
     "name": "Anthony Mandréa",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -13662,7 +13662,7 @@
     "name": "Baptiste Santamaria",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -13684,7 +13684,7 @@
     "name": "Vincent Pajot",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -13706,7 +13706,7 @@
     "name": "Flavien Tait",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -13729,7 +13729,7 @@
     "name": "Cheikh N'Doye",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -13754,7 +13754,7 @@
     "name": "Thomas Mangani",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -13778,7 +13778,7 @@
     "name": "Pierrick Capelle",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -13801,7 +13801,7 @@
     "name": "Lassana Coulibaly",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -13824,7 +13824,7 @@
     "name": "Loïc Puyo",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -13847,7 +13847,7 @@
     "name": "Jeff Reine-Adélaïde",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -13871,7 +13871,7 @@
     "name": "Angelo Fulgini",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -13896,7 +13896,7 @@
     "name": "Mazire Soula",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -13921,7 +13921,7 @@
     "name": "Farid El Melali",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -13944,7 +13944,7 @@
     "name": "Dorian Bertrand",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -13969,7 +13969,7 @@
     "name": "Harrison Manzala",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -13994,7 +13994,7 @@
     "name": "Stéphane Bahoken",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -14019,7 +14019,7 @@
     "name": "Baptiste Guillaume",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -14042,7 +14042,7 @@
     "name": "Thomas Touré",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -14067,7 +14067,7 @@
     "name": "Cristian López",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -14087,7 +14087,7 @@
     "name": "Wilfried Kanga",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -14112,7 +14112,7 @@
     "name": "Billy Ketkeophomphone",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield"
@@ -14136,7 +14136,7 @@
     "name": "Férébory Doré",
     "team": "Angers SCO",
     "team_id": "1420",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -14160,7 +14160,7 @@
     "name": "Karl-Johan Johnsson",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -14180,7 +14180,7 @@
     "name": "Marc-Aurèle Caillard",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -14200,7 +14200,7 @@
     "name": "Théo Guivarch",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -14220,7 +14220,7 @@
     "name": "Denis Petric",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -14566,7 +14566,7 @@
     "name": "Didier Ndong",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -14588,7 +14588,7 @@
     "name": "Lucas Deaux",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -14611,7 +14611,7 @@
     "name": "Guessouma Fofana",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -14636,7 +14636,7 @@
     "name": "Lebogang Phiri",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -14659,7 +14659,7 @@
     "name": "Étienne Didot",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -14682,7 +14682,7 @@
     "name": "Mehdi Boudjemaa",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -14706,7 +14706,7 @@
     "name": "Louis Carnot",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Winger",
@@ -14729,7 +14729,7 @@
     "name": "Ludovic Blas",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -14754,7 +14754,7 @@
     "name": "Nicolas Benezet",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -14777,7 +14777,7 @@
     "name": "Matthias Phaëton",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Centre-Forward"
@@ -14801,7 +14801,7 @@
     "name": "Yannis Salibur",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -14826,7 +14826,7 @@
     "name": "Ronny Rodelin",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -14851,7 +14851,7 @@
     "name": "Yeni Ngbakoto",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -14876,7 +14876,7 @@
     "name": "Mehdi Merghem",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -14901,7 +14901,7 @@
     "name": "Jérémy Livolant",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -14924,7 +14924,7 @@
     "name": "Marcus Thuram",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -14948,7 +14948,7 @@
     "name": "Alexandre Mendy",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 25,
@@ -14970,7 +14970,7 @@
     "name": "Nolan Roux",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -14992,7 +14992,7 @@
     "name": "Nathaël Julan",
     "team": "EA Guingamp",
     "team_id": "855",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -15014,7 +15014,7 @@
     "name": "Régis Gurtner",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -15034,7 +15034,7 @@
     "name": "Matthieu Dreyer",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -15054,7 +15054,7 @@
     "name": "Gauthier Banaziak",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -15304,7 +15304,7 @@
     "name": "Alexis Blin",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -15327,7 +15327,7 @@
     "name": "Eddy Gnahoré",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -15352,7 +15352,7 @@
     "name": "Thomas Monconduit",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -15374,7 +15374,7 @@
     "name": "Guessouma Fofana",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -15399,7 +15399,7 @@
     "name": "Gaoussou Traoré",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -15424,7 +15424,7 @@
     "name": "Mathieu Bodmer",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -15447,7 +15447,7 @@
     "name": "Bongani Zungu",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -15470,7 +15470,7 @@
     "name": "Réda Rabeï",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -15494,7 +15494,7 @@
     "name": "Saman Ghoddos",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -15519,7 +15519,7 @@
     "name": "Ganso",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -15541,7 +15541,7 @@
     "name": "Rafał Kurzawa",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -15563,7 +15563,7 @@
     "name": "Madih Talal",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -15588,7 +15588,7 @@
     "name": "Stiven Mendoza",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -15611,7 +15611,7 @@
     "name": "Juan Otero",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -15634,7 +15634,7 @@
     "name": "Cheick Timite",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -15659,7 +15659,7 @@
     "name": "Quentin Cornette",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -15682,7 +15682,7 @@
     "name": "Martin Gneba",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -15707,7 +15707,7 @@
     "name": "Moussa Konaté",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -15730,7 +15730,7 @@
     "name": "Serhou Guirassy",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -15752,7 +15752,7 @@
     "name": "Yannick Mamilonne",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -15774,7 +15774,7 @@
     "name": "Brighton Labeau",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -15799,7 +15799,7 @@
     "name": "Bachibou Koita",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -15824,7 +15824,7 @@
     "name": "Stanley Segarel",
     "team": "Amiens SC",
     "team_id": "1416",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 25,
@@ -15846,7 +15846,7 @@
     "name": "Brice Samba",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -15868,7 +15868,7 @@
     "name": "Erwin Zelazny",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -15890,7 +15890,7 @@
     "name": "Paul Reulet",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -15910,7 +15910,7 @@
     "name": "Thomas Callens",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -16185,7 +16185,7 @@
     "name": "Prince Oniangué",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -16210,7 +16210,7 @@
     "name": "Ismaël Diomandé",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -16233,7 +16233,7 @@
     "name": "Baissama Sankoh",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -16258,7 +16258,7 @@
     "name": "Aly Ndom",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -16283,7 +16283,7 @@
     "name": "Valentin Voisin",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [],
     "age": 23,
@@ -16303,7 +16303,7 @@
     "name": "Fayçal Fajr",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -16328,7 +16328,7 @@
     "name": "Jessy Deminguet",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -16350,7 +16350,7 @@
     "name": "Stef Peeters",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -16372,7 +16372,7 @@
     "name": "Durel Avounou",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -16395,7 +16395,7 @@
     "name": "Jan Repas",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -16418,7 +16418,7 @@
     "name": "Saîf-Eddine Khaoui",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Midfield"
@@ -16442,7 +16442,7 @@
     "name": "Jad Mouaddib",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [],
     "age": 20,
@@ -16464,7 +16464,7 @@
     "name": "Evens Joseph",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Centre-Forward"
@@ -16488,7 +16488,7 @@
     "name": "Ronny Rodelin",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -16513,7 +16513,7 @@
     "name": "Timo Stavitski",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -16537,7 +16537,7 @@
     "name": "Godson Kyeremeh",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -16561,7 +16561,7 @@
     "name": "Enzo Crivelli",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -16586,7 +16586,7 @@
     "name": "Casimir Ninga",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -16609,7 +16609,7 @@
     "name": "Claudio Beauvue",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -16634,7 +16634,7 @@
     "name": "Yacine Bammou",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -16659,7 +16659,7 @@
     "name": "Malik Tchokounté",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -16681,7 +16681,7 @@
     "name": "Pape Sané",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -16701,7 +16701,7 @@
     "name": "Brice Tutu",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 21,
@@ -16723,7 +16723,7 @@
     "name": "Herman Moussaki",
     "team": "SM Caen",
     "team_id": "1162",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -16747,7 +16747,7 @@
     "name": "Rúnar Alex Rúnarsson",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -16767,7 +16767,7 @@
     "name": "Bobby Allain",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 16,
@@ -16789,7 +16789,7 @@
     "name": "Levi Ntumba",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -17090,7 +17090,7 @@
     "name": "Eden Massouema",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -17114,7 +17114,7 @@
     "name": "Enzo Loiodice",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -17136,7 +17136,7 @@
     "name": "Romain Amalfitano",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -17159,7 +17159,7 @@
     "name": "Mehdi Abeid",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -17184,7 +17184,7 @@
     "name": "Jordan Marié",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -17206,7 +17206,7 @@
     "name": "Florent Balmont",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -17228,7 +17228,7 @@
     "name": "Théo Godard",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -17250,7 +17250,7 @@
     "name": "Yoann Gourcuff",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -17273,7 +17273,7 @@
     "name": "Naïm Sliti",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -17298,7 +17298,7 @@
     "name": "Jules Keita",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -17320,7 +17320,7 @@
     "name": "Frédéric Sammaritano",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -17345,7 +17345,7 @@
     "name": "Chang-hoon Kwon",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -17368,7 +17368,7 @@
     "name": "Wesley Saïd",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -17393,7 +17393,7 @@
     "name": "Julio Tavarès",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -17415,7 +17415,7 @@
     "name": "Benjamin Jeannot",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 29,
@@ -17435,7 +17435,7 @@
     "name": "Sory Kaba",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 28,
@@ -17455,7 +17455,7 @@
     "name": "Sory Doumbouya",
     "team": "Dijon FCO",
     "team_id": "2969",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 31,

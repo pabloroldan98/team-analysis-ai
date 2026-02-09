@@ -4,7 +4,7 @@
     "name": "Manuel Neuer",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 36,
@@ -24,7 +24,7 @@
     "name": "Sven Ulreich",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -44,7 +44,7 @@
     "name": "Christian Früchtl",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 36,
@@ -64,7 +64,7 @@
     "name": "Ron-Thorben Hoffmann",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 39,
@@ -84,7 +84,7 @@
     "name": "Dayot Upamecano",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 23,
@@ -106,7 +106,7 @@
     "name": "Niklas Süle",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -128,7 +128,7 @@
     "name": "Benjamin Pavard",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -150,7 +150,7 @@
     "name": "Tanguy Nianzou",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -174,7 +174,7 @@
     "name": "Chris Richards",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -196,7 +196,7 @@
     "name": "Bright Arrey-Mbi",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 29,
@@ -218,7 +218,7 @@
     "name": "Jamie Lawrence",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 49,
@@ -240,7 +240,7 @@
     "name": "Alphonso Davies",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield",
@@ -265,7 +265,7 @@
     "name": "Lucas Hernández",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back"
@@ -289,7 +289,7 @@
     "name": "Omar Richards",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -313,7 +313,7 @@
     "name": "Josip Stanisic",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -338,7 +338,7 @@
     "name": "Bouna Sarr",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield",
@@ -363,7 +363,7 @@
     "name": "Joshua Kimmich",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -386,7 +386,7 @@
     "name": "Marc Roca",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -408,7 +408,7 @@
     "name": "Nicolas Feldhahn",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -431,7 +431,7 @@
     "name": "Leon Goretzka",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -454,7 +454,7 @@
     "name": "Marcel Sabitzer",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -476,7 +476,7 @@
     "name": "Corentin Tolisso",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -501,7 +501,7 @@
     "name": "Michaël Cuisance",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -524,7 +524,7 @@
     "name": "Timo Kern",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -547,7 +547,7 @@
     "name": "Nemanja Motika",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Right Midfield",
@@ -572,7 +572,7 @@
     "name": "Jamal Musiala",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -597,7 +597,7 @@
     "name": "Paul Wanner",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -622,7 +622,7 @@
     "name": "Malik Tillman",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -647,7 +647,7 @@
     "name": "Arijon Ibrahimovic",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -672,7 +672,7 @@
     "name": "Kingsley Coman",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -696,7 +696,7 @@
     "name": "Gabriel Vidovic",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -721,7 +721,7 @@
     "name": "Leroy Sané",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -746,7 +746,7 @@
     "name": "Taylor Booth",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Defensive Midfield",
@@ -771,7 +771,7 @@
     "name": "Serge Gnabry",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Left Winger",
@@ -796,7 +796,7 @@
     "name": "Thomas Müller",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Attacking Midfield",
@@ -819,7 +819,7 @@
     "name": "Robert Lewandowski",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 33,
@@ -839,7 +839,7 @@
     "name": "Eric-Maxim Choupo-Moting",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -864,7 +864,7 @@
     "name": "Lucas Copado",
     "team": "Bayern Munich",
     "team_id": "27",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -889,7 +889,7 @@
     "name": "Gregor Kobel",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -909,7 +909,7 @@
     "name": "Luca Unbehaun",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -929,7 +929,7 @@
     "name": "Roman Bürki",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 38,
@@ -949,7 +949,7 @@
     "name": "Marwin Hitz",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 35,
@@ -969,7 +969,7 @@
     "name": "Stefan Drljaca",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -991,7 +991,7 @@
     "name": "Silas Ostrzinski",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -1013,7 +1013,7 @@
     "name": "Manuel Akanji",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -1038,7 +1038,7 @@
     "name": "Emre Can",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield",
@@ -1063,7 +1063,7 @@
     "name": "Dan-Axel Zagadou",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -1087,7 +1087,7 @@
     "name": "Mats Hummels",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 33,
@@ -1107,7 +1107,7 @@
     "name": "Marin Pongracic",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 34,
@@ -1129,7 +1129,7 @@
     "name": "Soumaïla Coulibaly",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 18,
@@ -1151,7 +1151,7 @@
     "name": "Antonios Papadopoulos",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -1175,7 +1175,7 @@
     "name": "Raphaël Guerreiro",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Central Midfield",
@@ -1200,7 +1200,7 @@
     "name": "Nico Schulz",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -1222,7 +1222,7 @@
     "name": "Tom Rothe",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back",
@@ -1245,7 +1245,7 @@
     "name": "Marcel Schmelzer",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 29,
@@ -1265,7 +1265,7 @@
     "name": "Thomas Meunier",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield"
@@ -1287,7 +1287,7 @@
     "name": "Marius Wolf",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield"
@@ -1309,7 +1309,7 @@
     "name": "Mateu Morey",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 22,
@@ -1329,7 +1329,7 @@
     "name": "Felix Passlack",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -1352,7 +1352,7 @@
     "name": "Lion Semic",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -1377,7 +1377,7 @@
     "name": "Axel Witsel",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -1402,7 +1402,7 @@
     "name": "Abdoulaye Kamara",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -1426,7 +1426,7 @@
     "name": "Lennard Maloney",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -1450,7 +1450,7 @@
     "name": "Mahmoud Dahoud",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -1474,7 +1474,7 @@
     "name": "Thomas Delaney",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -1498,7 +1498,7 @@
     "name": "Tobias Raschl",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -1521,7 +1521,7 @@
     "name": "Jude Bellingham",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -1546,7 +1546,7 @@
     "name": "Giovanni Reyna",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -1571,7 +1571,7 @@
     "name": "Julian Brandt",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -1594,7 +1594,7 @@
     "name": "Thorgan Hazard",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -1617,7 +1617,7 @@
     "name": "Marco Reus",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -1640,7 +1640,7 @@
     "name": "Reinier",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -1663,7 +1663,7 @@
     "name": "Immanuel Pherai",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -1688,7 +1688,7 @@
     "name": "Jamie Gittens",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -1712,7 +1712,7 @@
     "name": "Ansgar Knauff",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -1737,7 +1737,7 @@
     "name": "Justin Njinmah",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -1762,7 +1762,7 @@
     "name": "Marco Pašalić",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -1787,7 +1787,7 @@
     "name": "Göktan Gürpüz",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -1812,7 +1812,7 @@
     "name": "Erling Haaland",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 21,
@@ -1832,7 +1832,7 @@
     "name": "Donyell Malen",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -1857,7 +1857,7 @@
     "name": "Youssoufa Moukoko",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -1881,7 +1881,7 @@
     "name": "Steffen Tigges",
     "team": "Borussia Dortmund",
     "team_id": "16",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -1901,7 +1901,7 @@
     "name": "Péter Gulácsi",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -1921,7 +1921,7 @@
     "name": "Josep Martínez",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -1941,7 +1941,7 @@
     "name": "Philipp Tschauner",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 36,
@@ -1961,7 +1961,7 @@
     "name": "Fabian Eutinger",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -1981,7 +1981,7 @@
     "name": "Josko Gvardiol",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -2003,7 +2003,7 @@
     "name": "Mohamed Simakan",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -2027,7 +2027,7 @@
     "name": "Lukas Klostermann",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -2049,7 +2049,7 @@
     "name": "Willi Orbán",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -2073,7 +2073,7 @@
     "name": "Marcel Halstenberg",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -2096,7 +2096,7 @@
     "name": "David Lelle",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 19,
@@ -2116,7 +2116,7 @@
     "name": "Angeliño",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back",
@@ -2139,7 +2139,7 @@
     "name": "Konrad Laimer",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Defensive Midfield",
@@ -2162,7 +2162,7 @@
     "name": "Nordi Mukiele",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -2187,7 +2187,7 @@
     "name": "Benjamin Henrichs",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -2212,7 +2212,7 @@
     "name": "Hugo Novoa",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Winger",
@@ -2235,7 +2235,7 @@
     "name": "Solomon Bonnah",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -2260,7 +2260,7 @@
     "name": "Tyler Adams",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -2283,7 +2283,7 @@
     "name": "Amadou Haidara",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2306,7 +2306,7 @@
     "name": "Marcel Sabitzer",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -2328,7 +2328,7 @@
     "name": "Ilaix Moriba",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2353,7 +2353,7 @@
     "name": "Kevin Kampl",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2376,7 +2376,7 @@
     "name": "Sidney Raebiger",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -2399,7 +2399,7 @@
     "name": "Ben Klefisch",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -2421,7 +2421,7 @@
     "name": "Dani Olmo",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -2444,7 +2444,7 @@
     "name": "Dominik Szoboszlai",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right-Back",
@@ -2467,7 +2467,7 @@
     "name": "Joscha Wosz",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -2490,7 +2490,7 @@
     "name": "Emil Forsberg",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -2513,7 +2513,7 @@
     "name": "Mehmet Ibrahimi",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -2538,7 +2538,7 @@
     "name": "Fabrice Hartmann",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -2561,7 +2561,7 @@
     "name": "Christopher Nkunku",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -2586,7 +2586,7 @@
     "name": "André Silva",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 33,
@@ -2606,7 +2606,7 @@
     "name": "Hee-chan Hwang",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -2629,7 +2629,7 @@
     "name": "Yussuf Poulsen",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -2654,7 +2654,7 @@
     "name": "Brian Brobbey",
     "team": "RB Leipzig",
     "team_id": "23826",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 20,
@@ -2676,7 +2676,7 @@
     "name": "Lukas Hradecky",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -2698,7 +2698,7 @@
     "name": "Andrey Lunev",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -2718,7 +2718,7 @@
     "name": "Lennart Grill",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -2738,7 +2738,7 @@
     "name": "Niklas Lomb",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 36,
@@ -2758,7 +2758,7 @@
     "name": "Maximilian Neutgens",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -2780,7 +2780,7 @@
     "name": "Edmond Tapsoba",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 23,
@@ -2800,7 +2800,7 @@
     "name": "Jonathan Tah",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 26,
@@ -2822,7 +2822,7 @@
     "name": "Odilon Kossounou",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -2844,7 +2844,7 @@
     "name": "Piero Hincapié",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -2867,7 +2867,7 @@
     "name": "Panagiotis Retsos",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -2890,7 +2890,7 @@
     "name": "Wendell",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back",
@@ -2913,7 +2913,7 @@
     "name": "Daley Sinkgraven",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 22,
@@ -2933,7 +2933,7 @@
     "name": "Jeremie Frimpong",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield",
@@ -2958,7 +2958,7 @@
     "name": "Timothy Fosu-Mensah",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -2983,7 +2983,7 @@
     "name": "Mitchell Weiser",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield",
@@ -3008,7 +3008,7 @@
     "name": "Robert Andrich",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -3031,7 +3031,7 @@
     "name": "Julian Baumgartlinger",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -3053,7 +3053,7 @@
     "name": "Sadik Fofana",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -3077,7 +3077,7 @@
     "name": "Kerem Demirbay",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3102,7 +3102,7 @@
     "name": "Exequiel Palacios",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3125,7 +3125,7 @@
     "name": "Nadiem Amiri",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3148,7 +3148,7 @@
     "name": "Charles Aránguiz",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -3170,7 +3170,7 @@
     "name": "Mitchel Bakker",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Centre-Back",
@@ -3193,7 +3193,7 @@
     "name": "Florian Wirtz",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -3216,7 +3216,7 @@
     "name": "Zidan Sertdemir",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -3241,7 +3241,7 @@
     "name": "Amine Adli",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -3266,7 +3266,7 @@
     "name": "Paulinho",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -3289,7 +3289,7 @@
     "name": "Moussa Diaby",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -3314,7 +3314,7 @@
     "name": "Karim Bellarabi",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -3339,7 +3339,7 @@
     "name": "Patrik Schick",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -3362,7 +3362,7 @@
     "name": "Sardar Azmoun",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -3384,7 +3384,7 @@
     "name": "Lucas Alario",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 29,
@@ -3406,7 +3406,7 @@
     "name": "Joel Pohjanpalo",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -3428,7 +3428,7 @@
     "name": "Emrehan Gedikli",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -3452,7 +3452,7 @@
     "name": "Iker Bravo",
     "team": "Bayer 04 Leverkusen",
     "team_id": "15",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -3475,7 +3475,7 @@
     "name": "Koen Casteels",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -3495,7 +3495,7 @@
     "name": "Pavao Pervan",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 34,
@@ -3515,7 +3515,7 @@
     "name": "Philipp Schulze",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 35,
@@ -3535,7 +3535,7 @@
     "name": "Niklas Klinger",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [
       "Central Midfield"
@@ -3557,7 +3557,7 @@
     "name": "Maxence Lacroix",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 22,
@@ -3579,7 +3579,7 @@
     "name": "Sebastiaan Bornauw",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 23,
@@ -3599,7 +3599,7 @@
     "name": "John Brooks",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 25,
@@ -3621,7 +3621,7 @@
     "name": "Marin Pongracic",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 24,
@@ -3643,7 +3643,7 @@
     "name": "Micky van de Ven",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -3665,7 +3665,7 @@
     "name": "Anselmo García MacNulty",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -3689,7 +3689,7 @@
     "name": "Paulo Otávio",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -3711,7 +3711,7 @@
     "name": "Jérôme Roussillon",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -3735,7 +3735,7 @@
     "name": "Ridle Baku",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield",
@@ -3760,7 +3760,7 @@
     "name": "Kevin Mbabu",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield"
@@ -3784,7 +3784,7 @@
     "name": "William",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 27,
@@ -3804,7 +3804,7 @@
     "name": "Jannis Lang",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -3827,7 +3827,7 @@
     "name": "Josuha Guilavogui",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -3852,7 +3852,7 @@
     "name": "Xaver Schlager",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3875,7 +3875,7 @@
     "name": "Maximilian Arnold",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3898,7 +3898,7 @@
     "name": "Aster Vranckx",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3923,7 +3923,7 @@
     "name": "Yannick Gerhardt",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -3946,7 +3946,7 @@
     "name": "Felix Nmecha",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3971,7 +3971,7 @@
     "name": "Gil-Linnart Walther",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -3994,7 +3994,7 @@
     "name": "Kevin Paredes",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Right Midfield",
@@ -4019,7 +4019,7 @@
     "name": "Josip Brekalo",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -4042,7 +4042,7 @@
     "name": "Dodi Lukébakio",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -4067,7 +4067,7 @@
     "name": "Renato Steffen",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -4089,7 +4089,7 @@
     "name": "Maximilian Philipp",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Left Winger",
@@ -4112,7 +4112,7 @@
     "name": "Max Kruse",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Attacking Midfield",
@@ -4135,7 +4135,7 @@
     "name": "Admir Mehmedi",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Left Winger",
@@ -4160,7 +4160,7 @@
     "name": "Lukas Nmecha",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -4185,7 +4185,7 @@
     "name": "Wout Weghorst",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 29,
@@ -4205,7 +4205,7 @@
     "name": "Jonas Wind",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -4228,7 +4228,7 @@
     "name": "Luca Waldschmidt",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -4251,7 +4251,7 @@
     "name": "Omar Marmoush",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -4276,7 +4276,7 @@
     "name": "Bartosz Bialek",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield"
@@ -4298,7 +4298,7 @@
     "name": "Daniel Ginczek",
     "team": "VfL Wolfsburg",
     "team_id": "82",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 31,
@@ -4318,7 +4318,7 @@
     "name": "Yann Sommer",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 33,
@@ -4338,7 +4338,7 @@
     "name": "Tobias Sippel",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -4358,7 +4358,7 @@
     "name": "Jan Olschowsky",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 41,
@@ -4378,7 +4378,7 @@
     "name": "Jonas Kersken",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 46,
@@ -4400,7 +4400,7 @@
     "name": "Matthias Ginter",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -4423,7 +4423,7 @@
     "name": "Nico Elvedi",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -4445,7 +4445,7 @@
     "name": "Ramy Bensebaini",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -4467,7 +4467,7 @@
     "name": "Marvin Friedrich",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -4489,7 +4489,7 @@
     "name": "Jordan Beyer",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -4511,7 +4511,7 @@
     "name": "Tom Gaal",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 21,
@@ -4531,7 +4531,7 @@
     "name": "Mamadou Doucouré",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -4555,7 +4555,7 @@
     "name": "Luca Netz",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -4577,7 +4577,7 @@
     "name": "Joe Scally",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -4600,7 +4600,7 @@
     "name": "Stefan Lainer",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield"
@@ -4622,7 +4622,7 @@
     "name": "Tony Jantschke",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -4645,7 +4645,7 @@
     "name": "Denis Zakaria",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -4670,7 +4670,7 @@
     "name": "Christoph Kramer",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4692,7 +4692,7 @@
     "name": "Florian Neuhaus",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -4715,7 +4715,7 @@
     "name": "Manu Koné",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -4740,7 +4740,7 @@
     "name": "László Bénes",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -4763,7 +4763,7 @@
     "name": "Torben Müsel",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -4786,7 +4786,7 @@
     "name": "Keanan Bennetts",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back",
@@ -4811,7 +4811,7 @@
     "name": "Jonas Hofmann",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger"
@@ -4833,7 +4833,7 @@
     "name": "Lars Stindl",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Second Striker",
@@ -4856,7 +4856,7 @@
     "name": "Hannes Wolf",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -4879,7 +4879,7 @@
     "name": "Patrick Herrmann",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -4902,7 +4902,7 @@
     "name": "Conor Noß",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -4927,7 +4927,7 @@
     "name": "Marcus Thuram",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -4951,7 +4951,7 @@
     "name": "Alassane Pléa",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -4976,7 +4976,7 @@
     "name": "Breel Embolo",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -5000,7 +5000,7 @@
     "name": "Mika Schroers",
     "team": "Borussia Mönchengladbach",
     "team_id": "18",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -5023,7 +5023,7 @@
     "name": "Kevin Trapp",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -5043,7 +5043,7 @@
     "name": "Diant Ramaj",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -5065,7 +5065,7 @@
     "name": "Jens Grahl",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -5085,7 +5085,7 @@
     "name": "Jannik Horz",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 47,
@@ -5105,7 +5105,7 @@
     "name": "Matteo Bignetti",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 43,
@@ -5125,7 +5125,7 @@
     "name": "Evan Ndicka",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 22,
@@ -5147,7 +5147,7 @@
     "name": "Tuta",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -5170,7 +5170,7 @@
     "name": "Martin Hinteregger",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -5193,7 +5193,7 @@
     "name": "Almamy Touré",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -5218,7 +5218,7 @@
     "name": "Danny da Costa",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -5243,7 +5243,7 @@
     "name": "Christopher Lenz",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Winger"
@@ -5265,7 +5265,7 @@
     "name": "Jan Schröder",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Right-Back",
@@ -5290,7 +5290,7 @@
     "name": "Timothy Chandler",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield",
@@ -5315,7 +5315,7 @@
     "name": "Erik Durm",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -5338,7 +5338,7 @@
     "name": "Kristijan Jakic",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -5361,7 +5361,7 @@
     "name": "Stefan Ilsanker",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -5383,7 +5383,7 @@
     "name": "Makoto Hasebe",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -5406,7 +5406,7 @@
     "name": "Djibril Sow",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -5430,7 +5430,7 @@
     "name": "Ajdin Hrustic",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -5455,7 +5455,7 @@
     "name": "Sebastian Rode",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5478,7 +5478,7 @@
     "name": "Filip Kostić",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back",
@@ -5501,7 +5501,7 @@
     "name": "Daichi Kamada",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -5524,7 +5524,7 @@
     "name": "Steven Zuber",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Midfield",
@@ -5547,7 +5547,7 @@
     "name": "Aymen Barkok",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -5572,7 +5572,7 @@
     "name": "Antonio Foti",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -5597,7 +5597,7 @@
     "name": "Jens Petter Hauge",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -5620,7 +5620,7 @@
     "name": "Amin Younes",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -5645,7 +5645,7 @@
     "name": "Fabio Blanco",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -5667,7 +5667,7 @@
     "name": "Gianluca Schäfer",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -5690,7 +5690,7 @@
     "name": "Jesper Lindstrøm",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -5713,7 +5713,7 @@
     "name": "Ansgar Knauff",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -5738,7 +5738,7 @@
     "name": "Rafael Borré",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -5760,7 +5760,7 @@
     "name": "Sam Lammers",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 25,
@@ -5780,7 +5780,7 @@
     "name": "Gonçalo Paciência",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 39,
@@ -5800,7 +5800,7 @@
     "name": "Ragnar Ache",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -5824,7 +5824,7 @@
     "name": "Enrique Herrero",
     "team": "Eintracht Frankfurt",
     "team_id": "24",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -5847,7 +5847,7 @@
     "name": "Oliver Baumann",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -5867,7 +5867,7 @@
     "name": "Philipp Pentke",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -5887,7 +5887,7 @@
     "name": "Luca Philipp",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -5907,7 +5907,7 @@
     "name": "Nahuel Noll",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 36,
@@ -5929,7 +5929,7 @@
     "name": "Stefan Posch",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -5951,7 +5951,7 @@
     "name": "Chris Richards",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -5973,7 +5973,7 @@
     "name": "Kevin Akpoguma",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -5998,7 +5998,7 @@
     "name": "Kevin Vogt",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield",
@@ -6021,7 +6021,7 @@
     "name": "Ermin Bicakcic",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -6045,7 +6045,7 @@
     "name": "Kasim Adams",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 27,
@@ -6065,7 +6065,7 @@
     "name": "Benjamin Hübner",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -6088,7 +6088,7 @@
     "name": "Fabian Rüth",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -6111,7 +6111,7 @@
     "name": "Gabriel Haider",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -6133,7 +6133,7 @@
     "name": "Noah König",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 19,
@@ -6153,7 +6153,7 @@
     "name": "David Raum",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -6175,7 +6175,7 @@
     "name": "Justin Che",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 24,
@@ -6197,7 +6197,7 @@
     "name": "Florian Grillitsch",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -6220,7 +6220,7 @@
     "name": "Diadié Samassékou",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -6242,7 +6242,7 @@
     "name": "Angelo Stiller",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -6264,7 +6264,7 @@
     "name": "Sebastian Rudy",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -6287,7 +6287,7 @@
     "name": "Melayro Bogarde",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -6312,7 +6312,7 @@
     "name": "Håvard Nordtveit",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -6335,7 +6335,7 @@
     "name": "Dennis Geiger",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -6358,7 +6358,7 @@
     "name": "Marco John",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -6381,7 +6381,7 @@
     "name": "Tom Bischof",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -6404,7 +6404,7 @@
     "name": "Umut Tohumcu",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -6429,7 +6429,7 @@
     "name": "Pavel Kaderabek",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Left-Back",
@@ -6452,7 +6452,7 @@
     "name": "Robert Skov",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back",
@@ -6475,7 +6475,7 @@
     "name": "Christoph Baumgartner",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -6498,7 +6498,7 @@
     "name": "Andrej Kramaric",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Second Striker",
@@ -6521,7 +6521,7 @@
     "name": "Mijat Gacinovic",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -6546,7 +6546,7 @@
     "name": "Bambasé Conté",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -6571,7 +6571,7 @@
     "name": "Jacob Bruun Larsen",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -6594,7 +6594,7 @@
     "name": "Ihlas Bebou",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -6619,7 +6619,7 @@
     "name": "Georginio Rutter",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -6644,7 +6644,7 @@
     "name": "Munas Dabbur",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -6664,7 +6664,7 @@
     "name": "Sargis Adamyan",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -6687,7 +6687,7 @@
     "name": "Maximilian Beier",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -6710,7 +6710,7 @@
     "name": "Fisnik Asllani",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -6735,7 +6735,7 @@
     "name": "Nick Proschwitz",
     "team": "TSG 1899 Hoffenheim",
     "team_id": "533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 35,
@@ -6755,7 +6755,7 @@
     "name": "Mark Flekken",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -6775,7 +6775,7 @@
     "name": "Noah Atubolu",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -6797,7 +6797,7 @@
     "name": "Benjamin Uphoff",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -6817,7 +6817,7 @@
     "name": "Nico Schlotterbeck",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -6839,7 +6839,7 @@
     "name": "Philipp Lienhart",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -6861,7 +6861,7 @@
     "name": "Keven Schlotterbeck",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 31,
@@ -6881,7 +6881,7 @@
     "name": "Dominique Heintz",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -6903,7 +6903,7 @@
     "name": "Manuel Gulde",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 31,
@@ -6923,7 +6923,7 @@
     "name": "Christian Günter",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -6945,7 +6945,7 @@
     "name": "Kenneth Schmidt",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back"
@@ -6969,7 +6969,7 @@
     "name": "Kimberly Ezekwem",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back",
@@ -6994,7 +6994,7 @@
     "name": "Roland Sallai",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left Winger",
@@ -7017,7 +7017,7 @@
     "name": "Hugo Siquet",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -7040,7 +7040,7 @@
     "name": "Lukas Kübler",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -7063,7 +7063,7 @@
     "name": "Kiliann Sildillia",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -7088,7 +7088,7 @@
     "name": "Baptiste Santamaria",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -7110,7 +7110,7 @@
     "name": "Yannik Keitel",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -7133,7 +7133,7 @@
     "name": "Nicolas Höfler",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -7156,7 +7156,7 @@
     "name": "Yannik Engelhardt",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [],
     "age": 21,
@@ -7176,7 +7176,7 @@
     "name": "Maximilian Eggestein",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -7198,7 +7198,7 @@
     "name": "Janik Haberer",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -7221,7 +7221,7 @@
     "name": "Robert Wagner",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -7243,7 +7243,7 @@
     "name": "Jonathan Schmid",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Right-Back",
@@ -7266,7 +7266,7 @@
     "name": "Woo-yeong Jeong",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -7289,7 +7289,7 @@
     "name": "Vincenzo Grifo",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -7312,7 +7312,7 @@
     "name": "Kevin Schade",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -7337,7 +7337,7 @@
     "name": "Noah Weißhaupt",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -7360,7 +7360,7 @@
     "name": "Nishan Burkart",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -7383,7 +7383,7 @@
     "name": "Lucas Höler",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -7406,7 +7406,7 @@
     "name": "Ermedin Demirovic",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -7429,7 +7429,7 @@
     "name": "Nils Petersen",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,
@@ -7449,7 +7449,7 @@
     "name": "Vincent Vermeij",
     "team": "SC Freiburg",
     "team_id": "60",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 48,
@@ -7469,7 +7469,7 @@
     "name": "Florian Müller",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -7489,7 +7489,7 @@
     "name": "Fabian Bredlow",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 33,
@@ -7509,7 +7509,7 @@
     "name": "Florian Schock",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 42,
@@ -7529,7 +7529,7 @@
     "name": "Konstantinos Mavropanos",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 24,
@@ -7549,7 +7549,7 @@
     "name": "Waldemar Anton",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -7572,7 +7572,7 @@
     "name": "Marc Oliver Kempf",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -7594,7 +7594,7 @@
     "name": "Hiroki Ito",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -7617,7 +7617,7 @@
     "name": "Clinton Mola",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -7642,7 +7642,7 @@
     "name": "Matej Maglica",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 23,
@@ -7662,7 +7662,7 @@
     "name": "Luca Bazzoli",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield",
@@ -7687,7 +7687,7 @@
     "name": "Borna Sosa",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -7711,7 +7711,7 @@
     "name": "Pascal Stenzel",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -7734,7 +7734,7 @@
     "name": "Orel Mangala",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -7758,7 +7758,7 @@
     "name": "Wataru Endo",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -7781,7 +7781,7 @@
     "name": "Atakan Karazor",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -7805,7 +7805,7 @@
     "name": "Richard Weil",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -7828,7 +7828,7 @@
     "name": "Nikolas Nartey",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -7853,7 +7853,7 @@
     "name": "Naouirou Ahamada",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -7877,7 +7877,7 @@
     "name": "Falko Michel",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -7900,7 +7900,7 @@
     "name": "Philipp Förster",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -7923,7 +7923,7 @@
     "name": "Enzo Millot",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -7948,7 +7948,7 @@
     "name": "Mateo Klimowicz",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -7973,7 +7973,7 @@
     "name": "Erik Thommy",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -7996,7 +7996,7 @@
     "name": "Alexis Tibidi",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -8021,7 +8021,7 @@
     "name": "Philipp Klement",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -8044,7 +8044,7 @@
     "name": "Ömer Beyaz",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -8067,7 +8067,7 @@
     "name": "Lilian Egloff",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -8092,7 +8092,7 @@
     "name": "Daniel Didavi",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Midfield",
@@ -8115,7 +8115,7 @@
     "name": "Chris Führich",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -8138,7 +8138,7 @@
     "name": "Darko Churlinov",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -8161,7 +8161,7 @@
     "name": "Silas",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -8184,7 +8184,7 @@
     "name": "Tanguy Coulibaly",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -8209,7 +8209,7 @@
     "name": "Roberto Massimo",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -8234,7 +8234,7 @@
     "name": "Sasa Kalajdzic",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -8254,7 +8254,7 @@
     "name": "Tiago Tomás",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -8277,7 +8277,7 @@
     "name": "Omar Marmoush",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -8302,7 +8302,7 @@
     "name": "Wahid Faghir",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -8324,7 +8324,7 @@
     "name": "Mohamed Sankoh",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -8348,7 +8348,7 @@
     "name": "Hamadi Al-Ghaddioui",
     "team": "VfB Stuttgart",
     "team_id": "79",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 31,
@@ -8370,7 +8370,7 @@
     "name": "Alexander Schwolow",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -8390,7 +8390,7 @@
     "name": "Oliver Christensen",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -8410,7 +8410,7 @@
     "name": "Marcel Lotka",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -8432,7 +8432,7 @@
     "name": "Nils Körber",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -8452,7 +8452,7 @@
     "name": "Rune Jarstein",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -8472,7 +8472,7 @@
     "name": "Niklas Stark",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -8494,7 +8494,7 @@
     "name": "Jordan Torunarigha",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -8518,7 +8518,7 @@
     "name": "Márton Dárdai",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -8543,7 +8543,7 @@
     "name": "Marc Oliver Kempf",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -8565,7 +8565,7 @@
     "name": "Linus Gechter",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -8588,7 +8588,7 @@
     "name": "Dedryck Boyata",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 31,
@@ -8610,7 +8610,7 @@
     "name": "Lukas Klünter",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -8632,7 +8632,7 @@
     "name": "Christalino Atemona",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -8654,7 +8654,7 @@
     "name": "Marlon Morgenstern",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield",
@@ -8677,7 +8677,7 @@
     "name": "Maximilian Mittelstädt",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -8699,7 +8699,7 @@
     "name": "Fredrik Bjørkan",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 23,
@@ -8719,7 +8719,7 @@
     "name": "Marvin Plattenhardt",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -8741,7 +8741,7 @@
     "name": "Deyovaisio Zeefuik",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -8766,7 +8766,7 @@
     "name": "Peter Pekarík",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -8789,7 +8789,7 @@
     "name": "Julian Eitschberger",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield",
@@ -8812,7 +8812,7 @@
     "name": "Santiago Ascacíbar",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -8836,7 +8836,7 @@
     "name": "Lucas Tousart",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8859,7 +8859,7 @@
     "name": "Suat Serdar",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8884,7 +8884,7 @@
     "name": "Jurgen Ekkelenkamp",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -8907,7 +8907,7 @@
     "name": "Vladimír Darida",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8930,7 +8930,7 @@
     "name": "Jonas Michelbrink",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8955,7 +8955,7 @@
     "name": "Julian Albrecht",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8978,7 +8978,7 @@
     "name": "Jonas Dirkner",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -9000,7 +9000,7 @@
     "name": "Cimo Röcker",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9023,7 +9023,7 @@
     "name": "Anton Kade",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Right-Back",
@@ -9046,7 +9046,7 @@
     "name": "Marco Richter",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -9069,7 +9069,7 @@
     "name": "Kevin-Prince Boateng",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -9094,7 +9094,7 @@
     "name": "Javairô Dilrosun",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -9119,7 +9119,7 @@
     "name": "Myziane Maolida",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -9144,7 +9144,7 @@
     "name": "Kelian Nsona",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -9169,7 +9169,7 @@
     "name": "Dodi Lukébakio",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -9194,7 +9194,7 @@
     "name": "Dong-jun Lee",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -9217,7 +9217,7 @@
     "name": "Marten Winkler",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Midfield",
@@ -9240,7 +9240,7 @@
     "name": "Stevan Jovetić",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Attacking Midfield",
@@ -9265,7 +9265,7 @@
     "name": "Matheus Cunha",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -9288,7 +9288,7 @@
     "name": "Krzysztof Piatek",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -9310,7 +9310,7 @@
     "name": "Ishak Belfodil",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -9335,7 +9335,7 @@
     "name": "Davie Selke",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -9355,7 +9355,7 @@
     "name": "Dennis Jastrzembski",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Midfield",
@@ -9380,7 +9380,7 @@
     "name": "Luca Wollschläger",
     "team": "Hertha BSC",
     "team_id": "44",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -9400,7 +9400,7 @@
     "name": "Robin Zentner",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -9420,7 +9420,7 @@
     "name": "Finn Dahmen",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -9442,7 +9442,7 @@
     "name": "Lasse Rieß",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -9462,7 +9462,7 @@
     "name": "Moussa Niakhaté",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -9486,7 +9486,7 @@
     "name": "Jeremiah St. Juste",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 25,
@@ -9508,7 +9508,7 @@
     "name": "Dominik Kohr",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield",
@@ -9531,7 +9531,7 @@
     "name": "Luca Kilian",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -9553,7 +9553,7 @@
     "name": "Stefan Bell",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -9575,7 +9575,7 @@
     "name": "Alexander Hack",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 42,
@@ -9595,7 +9595,7 @@
     "name": "David Nemeth",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 34,
@@ -9615,7 +9615,7 @@
     "name": "Aarón Martín",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -9637,7 +9637,7 @@
     "name": "Anderson Lucoqui",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back",
@@ -9662,7 +9662,7 @@
     "name": "Silvan Widmer",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield"
@@ -9684,7 +9684,7 @@
     "name": "Daniel Brosinski",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -9707,7 +9707,7 @@
     "name": "Anton Stach",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9730,7 +9730,7 @@
     "name": "Edimilson Fernandes",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9753,7 +9753,7 @@
     "name": "Niklas Tauer",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9776,7 +9776,7 @@
     "name": "Stephan Fürstner",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Sweeper",
@@ -9799,7 +9799,7 @@
     "name": "Leandro Barreiro",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -9824,7 +9824,7 @@
     "name": "Merveille Papela",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -9847,7 +9847,7 @@
     "name": "Eniss Shabani",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -9872,7 +9872,7 @@
     "name": "Timothé Rupil",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -9896,7 +9896,7 @@
     "name": "Romario Rösch",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Right Midfield"
@@ -9918,7 +9918,7 @@
     "name": "Jean-Paul Boëtius",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -9943,7 +9943,7 @@
     "name": "Jae-sung Lee",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -9966,7 +9966,7 @@
     "name": "Kevin Stöger",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -9989,7 +9989,7 @@
     "name": "Paul Nebel",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -10014,7 +10014,7 @@
     "name": "Delano Burgzorg",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Centre-Forward"
@@ -10038,7 +10038,7 @@
     "name": "Kaito Mizuta",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -10061,7 +10061,7 @@
     "name": "Jonathan Burkardt",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -10083,7 +10083,7 @@
     "name": "Karim Onisiwo",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10106,7 +10106,7 @@
     "name": "Marcus Ingvartsen",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -10129,7 +10129,7 @@
     "name": "Ádám Szalai",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 28,
@@ -10149,7 +10149,7 @@
     "name": "Ben Bobzien",
     "team": "1.FSV Mainz 05",
     "team_id": "39",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10172,7 +10172,7 @@
     "name": "Frederik Rönnow",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 19,
@@ -10192,7 +10192,7 @@
     "name": "Andreas Luthe",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 35,
@@ -10212,7 +10212,7 @@
     "name": "Jakob Busk",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -10232,7 +10232,7 @@
     "name": "Niklas Petzsch",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 18,
@@ -10252,7 +10252,7 @@
     "name": "Yannic Stein",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 17,
@@ -10272,7 +10272,7 @@
     "name": "Marvin Friedrich",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -10294,7 +10294,7 @@
     "name": "Paul Jaeckel",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -10317,7 +10317,7 @@
     "name": "Timo Baumgartl",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -10339,7 +10339,7 @@
     "name": "Robin Knoche",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 31,
@@ -10359,7 +10359,7 @@
     "name": "Dominique Heintz",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -10381,7 +10381,7 @@
     "name": "Rick van Drongelen",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -10403,7 +10403,7 @@
     "name": "Sebastian Griesbeck",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield",
@@ -10426,7 +10426,7 @@
     "name": "Mathis Bruns",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -10448,7 +10448,7 @@
     "name": "Maximilian Somnitz",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield",
@@ -10471,7 +10471,7 @@
     "name": "Tymoteusz Puchacz",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -10493,7 +10493,7 @@
     "name": "Niko Gießelmann",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back",
@@ -10516,7 +10516,7 @@
     "name": "Bastian Oczipka",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back",
@@ -10539,7 +10539,7 @@
     "name": "Julian Ryerson",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -10564,7 +10564,7 @@
     "name": "Christopher Trimmel",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -10587,7 +10587,7 @@
     "name": "Robert Andrich",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -10610,7 +10610,7 @@
     "name": "Rani Khedira",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -10635,7 +10635,7 @@
     "name": "Grischa Prömel",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -10658,7 +10658,7 @@
     "name": "András Schäfer",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -10681,7 +10681,7 @@
     "name": "Kevin Möhwald",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -10704,7 +10704,7 @@
     "name": "Fabio Schneider",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -10727,7 +10727,7 @@
     "name": "Pawel Wszolek",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Right-Back",
@@ -10750,7 +10750,7 @@
     "name": "Genki Haraguchi",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -10773,7 +10773,7 @@
     "name": "Sheraldo Becker",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -10798,7 +10798,7 @@
     "name": "Levin Öztunali",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -10821,7 +10821,7 @@
     "name": "Sven Michel",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker",
@@ -10844,7 +10844,7 @@
     "name": "Keita Endo",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -10867,7 +10867,7 @@
     "name": "Laurenz Dehl",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right-Back",
@@ -10890,7 +10890,7 @@
     "name": "Max Kruse",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Attacking Midfield",
@@ -10913,7 +10913,7 @@
     "name": "Taiwo Awoniyi",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -10933,7 +10933,7 @@
     "name": "Marcus Ingvartsen",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -10956,7 +10956,7 @@
     "name": "Andreas Voglsammer",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10979,7 +10979,7 @@
     "name": "Cedric Teuchert",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -11002,7 +11002,7 @@
     "name": "Kevin Behrens",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -11025,7 +11025,7 @@
     "name": "Anthony Ujah",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 31,
@@ -11047,7 +11047,7 @@
     "name": "Suleiman Abdullahi",
     "team": "1.FC Union Berlin",
     "team_id": "89",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 39,
@@ -11067,7 +11067,7 @@
     "name": "Marvin Schwäbe",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -11087,7 +11087,7 @@
     "name": "Timo Horn",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -11107,7 +11107,7 @@
     "name": "Jonas Urbig",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -11127,7 +11127,7 @@
     "name": "Matthias Köbbing",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 44,
@@ -11147,7 +11147,7 @@
     "name": "Timo Hübers",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 25,
@@ -11167,7 +11167,7 @@
     "name": "Luca Kilian",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -11189,7 +11189,7 @@
     "name": "Jorge Meré",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 25,
@@ -11209,7 +11209,7 @@
     "name": "Jeff Chabot",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 24,
@@ -11231,7 +11231,7 @@
     "name": "Bright Arrey-Mbi",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 19,
@@ -11253,7 +11253,7 @@
     "name": "Rafael Czichos",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -11275,7 +11275,7 @@
     "name": "Jonas Hector",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Defensive Midfield",
@@ -11298,7 +11298,7 @@
     "name": "Jannes Horn",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back",
@@ -11321,7 +11321,7 @@
     "name": "Noah Katterbach",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Right Midfield",
@@ -11344,7 +11344,7 @@
     "name": "Kingsley Ehizibue",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield",
@@ -11369,7 +11369,7 @@
     "name": "Salih Özcan",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -11393,7 +11393,7 @@
     "name": "Ellyes Skhiri",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -11417,7 +11417,7 @@
     "name": "Dejan Ljubicic",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right Midfield",
@@ -11440,7 +11440,7 @@
     "name": "Benno Schmitz",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -11463,7 +11463,7 @@
     "name": "Mathias Olesen",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -11488,7 +11488,7 @@
     "name": "Ondrej Duda",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -11510,7 +11510,7 @@
     "name": "Niklas Hauptmann",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11533,7 +11533,7 @@
     "name": "Louis Schaub",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Central Midfield",
@@ -11556,7 +11556,7 @@
     "name": "Florian Kainz",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -11579,7 +11579,7 @@
     "name": "Tomas Ostrák",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -11602,7 +11602,7 @@
     "name": "Jan Thielmann",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -11625,7 +11625,7 @@
     "name": "Kingsley Schindler",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -11650,7 +11650,7 @@
     "name": "Marvin Obuz",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -11675,7 +11675,7 @@
     "name": "Mark Uth",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -11698,7 +11698,7 @@
     "name": "Anthony Modeste",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -11720,7 +11720,7 @@
     "name": "Sebastian Andersson",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -11740,7 +11740,7 @@
     "name": "Tim Lemperle",
     "team": "1.FC Köln",
     "team_id": "3",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11763,7 +11763,7 @@
     "name": "Rafal Gikiewicz",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 34,
@@ -11783,7 +11783,7 @@
     "name": "Tomas Koubek",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 40,
@@ -11803,7 +11803,7 @@
     "name": "Daniel Klein",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -11823,7 +11823,7 @@
     "name": "Reece Oxford",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -11847,7 +11847,7 @@
     "name": "Felix Uduokhai",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -11872,7 +11872,7 @@
     "name": "Jeffrey Gouweleeuw",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -11894,7 +11894,7 @@
     "name": "Frederik Winther",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -11916,7 +11916,7 @@
     "name": "Iago",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -11938,7 +11938,7 @@
     "name": "Mads Pedersen",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -11960,7 +11960,7 @@
     "name": "Lasse Günther",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield",
@@ -11983,7 +11983,7 @@
     "name": "Robert Gumny",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -12006,7 +12006,7 @@
     "name": "Raphael Framberger",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield"
@@ -12028,7 +12028,7 @@
     "name": "Niklas Dorsch",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -12050,7 +12050,7 @@
     "name": "Carlos Gruezo",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -12073,7 +12073,7 @@
     "name": "Tobias Strobl",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12096,7 +12096,7 @@
     "name": "Arne Maier",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12119,7 +12119,7 @@
     "name": "Jan Moravek",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -12142,7 +12142,7 @@
     "name": "Tim Civeja",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12167,7 +12167,7 @@
     "name": "Dominic Schmidt",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12190,7 +12190,7 @@
     "name": "Dikeni Salifou",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12213,7 +12213,7 @@
     "name": "Fredrik Jensen",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -12236,7 +12236,7 @@
     "name": "Rubén Vargas",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -12261,7 +12261,7 @@
     "name": "André Hahn",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -12284,7 +12284,7 @@
     "name": "Noah Sarenren Bazee",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -12309,7 +12309,7 @@
     "name": "Daniel Caligiuri",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -12334,7 +12334,7 @@
     "name": "Ricardo Pepi",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,
@@ -12356,7 +12356,7 @@
     "name": "Michael Gregoritsch",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -12378,7 +12378,7 @@
     "name": "Andi Zeqiri",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -12403,7 +12403,7 @@
     "name": "Florian Niederlechner",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -12426,7 +12426,7 @@
     "name": "Sergio Córdova",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -12449,7 +12449,7 @@
     "name": "Alfred Finnbogason",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -12469,7 +12469,7 @@
     "name": "Maurice Malone",
     "team": "FC Augsburg",
     "team_id": "167",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -12494,7 +12494,7 @@
     "name": "Stefan Ortega",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -12516,7 +12516,7 @@
     "name": "Stefanos Kapino",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -12536,7 +12536,7 @@
     "name": "Oscar Linnér",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -12556,7 +12556,7 @@
     "name": "Arne Schulz",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 35,
@@ -12576,7 +12576,7 @@
     "name": "Amos Pieper",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 24,
@@ -12596,7 +12596,7 @@
     "name": "Joakim Nilsson",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 28,
@@ -12616,7 +12616,7 @@
     "name": "Gui Ramos",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -12638,7 +12638,7 @@
     "name": "Andrés Andrade",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -12661,7 +12661,7 @@
     "name": "Mike van der Hoorn",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 29,
@@ -12681,7 +12681,7 @@
     "name": "Nathan de Medina",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -12706,7 +12706,7 @@
     "name": "Kenson Pierre Bauer",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 18,
@@ -12726,7 +12726,7 @@
     "name": "George Bello",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -12750,7 +12750,7 @@
     "name": "Jacob Barrett Laursen",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -12772,7 +12772,7 @@
     "name": "Cédric Brunner",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -12795,7 +12795,7 @@
     "name": "Edimilson Fernandes",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12818,7 +12818,7 @@
     "name": "Manuel Prietl",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12841,7 +12841,7 @@
     "name": "Fabian Kunze",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12864,7 +12864,7 @@
     "name": "Julian Frommann",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -12886,7 +12886,7 @@
     "name": "Vladislav Cherny",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -12911,7 +12911,7 @@
     "name": "Alessandro Schöpf",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -12934,7 +12934,7 @@
     "name": "Marcel Hartel",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -12957,7 +12957,7 @@
     "name": "Sebastian Vasiliadis",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12982,7 +12982,7 @@
     "name": "Gonzalo Castro",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back",
@@ -13007,7 +13007,7 @@
     "name": "Lennart Czyborra",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Left Midfield",
     "other_positions": [
       "Left-Back"
@@ -13029,7 +13029,7 @@
     "name": "Masaya Okugawa",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -13052,7 +13052,7 @@
     "name": "Robin Hack",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -13075,7 +13075,7 @@
     "name": "Patrick Wimmer",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -13098,7 +13098,7 @@
     "name": "Burak İnce",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Central Midfield",
@@ -13121,7 +13121,7 @@
     "name": "Christian Gebauer",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -13144,7 +13144,7 @@
     "name": "Florian Krüger",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -13167,7 +13167,7 @@
     "name": "Janni Serra",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -13187,7 +13187,7 @@
     "name": "Bryan Lasme",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -13212,7 +13212,7 @@
     "name": "Fabian Klos",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 34,
@@ -13232,7 +13232,7 @@
     "name": "Cem-Ali Dogan",
     "team": "Arminia Bielefeld",
     "team_id": "10",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Striker",
     "other_positions": [],
     "age": 17,
@@ -13254,7 +13254,7 @@
     "name": "Manuel Riemann",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 33,
@@ -13274,7 +13274,7 @@
     "name": "Michael Esser",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -13294,7 +13294,7 @@
     "name": "Tjark Ernst",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -13314,7 +13314,7 @@
     "name": "Paul Grave",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 34,
@@ -13334,7 +13334,7 @@
     "name": "Armel Bella-Kotchap",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 37,
@@ -13356,7 +13356,7 @@
     "name": "Maxim Leitsch",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -13378,7 +13378,7 @@
     "name": "Erhan Masovic",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -13400,7 +13400,7 @@
     "name": "Vasilios Lampropoulos",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -13423,7 +13423,7 @@
     "name": "Saulo Decarli",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -13446,7 +13446,7 @@
     "name": "Danilo Soares",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -13470,7 +13470,7 @@
     "name": "Konstantinos Stafylidis",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Right-Back",
@@ -13493,7 +13493,7 @@
     "name": "Moritz Römling",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -13515,7 +13515,7 @@
     "name": "Herbert Bockhorn",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -13540,7 +13540,7 @@
     "name": "Cristian Gamboa",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 32,
@@ -13560,7 +13560,7 @@
     "name": "Patrick Osterhage",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -13582,7 +13582,7 @@
     "name": "Anthony Losilla",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -13605,7 +13605,7 @@
     "name": "Elvis Rexhbecaj",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -13630,7 +13630,7 @@
     "name": "Eduard Löwen",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -13655,7 +13655,7 @@
     "name": "Robert Tesche",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -13677,7 +13677,7 @@
     "name": "Raman Chibsah",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -13701,7 +13701,7 @@
     "name": "Milos Pantovic",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -13726,7 +13726,7 @@
     "name": "Tom Weilandt",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -13749,7 +13749,7 @@
     "name": "Gerrit Holtmann",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield",
@@ -13774,7 +13774,7 @@
     "name": "Christopher Antwi-Adjei",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Midfield",
@@ -13799,7 +13799,7 @@
     "name": "Danny Blum",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -13822,7 +13822,7 @@
     "name": "Takuma Asano",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -13845,7 +13845,7 @@
     "name": "Tarsis Bonga",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -13870,7 +13870,7 @@
     "name": "Sebastian Polter",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 40,
@@ -13890,7 +13890,7 @@
     "name": "Jürgen Locadia",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -13915,7 +13915,7 @@
     "name": "Simon Zoller",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -13938,7 +13938,7 @@
     "name": "Silvere Ganvoula",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -13961,7 +13961,7 @@
     "name": "Soma Novothny",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -13983,7 +13983,7 @@
     "name": "Luis Hartwig",
     "team": "VfL Bochum",
     "team_id": "80",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -14006,7 +14006,7 @@
     "name": "Andreas Linde",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -14026,7 +14026,7 @@
     "name": "Sascha Burchert",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -14046,7 +14046,7 @@
     "name": "Marius Funk",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -14066,7 +14066,7 @@
     "name": "Leon Schaffran",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -14086,7 +14086,7 @@
     "name": "Lasse Schulz",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 41,
@@ -14108,7 +14108,7 @@
     "name": "Maximilian Bauer",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -14130,7 +14130,7 @@
     "name": "Luca Itter",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -14153,7 +14153,7 @@
     "name": "Justin Hoogma",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -14176,7 +14176,7 @@
     "name": "Jetro Willems",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -14200,7 +14200,7 @@
     "name": "Nick Viergever",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -14222,7 +14222,7 @@
     "name": "Sebastian Griesbeck",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield",
@@ -14245,7 +14245,7 @@
     "name": "Gideon Jung",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -14269,7 +14269,7 @@
     "name": "Abdourahmane Barry",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -14294,7 +14294,7 @@
     "name": "Oliver Fobassam",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -14316,7 +14316,7 @@
     "name": "Marco Meyerhöfer",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -14339,7 +14339,7 @@
     "name": "Simon Asta",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -14362,7 +14362,7 @@
     "name": "Max Christiansen",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -14385,7 +14385,7 @@
     "name": "Nunoo Sarpei",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -14408,7 +14408,7 @@
     "name": "Paul Seguin",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -14430,7 +14430,7 @@
     "name": "Timothy Tillman",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -14455,7 +14455,7 @@
     "name": "Jeremy Dudziak",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left-Back",
@@ -14480,7 +14480,7 @@
     "name": "Tobias Raschl",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -14503,7 +14503,7 @@
     "name": "Julian Green",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -14528,7 +14528,7 @@
     "name": "Adrian Fein",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -14550,7 +14550,7 @@
     "name": "Nils Seufert",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 25,
@@ -14570,7 +14570,7 @@
     "name": "Mert Yusuf Torlak",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Second Striker",
@@ -14595,7 +14595,7 @@
     "name": "Jamie Leweling",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -14620,7 +14620,7 @@
     "name": "Branimir Hrgota",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -14645,7 +14645,7 @@
     "name": "Jessic Ngankam",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -14669,7 +14669,7 @@
     "name": "Cedric Itten",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -14689,7 +14689,7 @@
     "name": "Afimico Pululu",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -14714,7 +14714,7 @@
     "name": "Havard Nielsen",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -14737,7 +14737,7 @@
     "name": "Dickson Abiama",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -14762,7 +14762,7 @@
     "name": "Robin Kehr",
     "team": "SpVgg Greuther Fürth",
     "team_id": "65",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",

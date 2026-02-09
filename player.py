@@ -117,13 +117,13 @@ class Player:
             return "N/A"
         pos = pos.strip().lower()
         
-        if any(x in pos for x in [ "goalkeeper", "keeper", "portero", "torwart", "gk", ]):
+        if any(x in pos for x in ["goalkeeper", "keeper", "portero", "torwart", "gk", ]):
             return "GK"
-        if any(x in pos for x in ["defender", "defend", "back", "defens", "cb", "lb", "rb", "defensa", "verteidiger", ]):
+        if any(x in pos for x in ["defender", "defend", "back", "defens", "cb", "lb", "rb", "defensa", "verteidiger", "def", ]):
             return "DEF"
-        if any(x in pos for x in ["midfield", "midfielder", "medio", "mittelfeld", "cm", "dm", "am", ]):
+        if any(x in pos for x in ["midfield", "midfielder", "medio", "mittelfeld", "cm", "dm", "am", "mid", ]):
             return "MID"
-        if any(x in pos for x in ["attack", "attacker", "forward", "striker", "wing", "delantero", "stürmer", "cf", "lw", "rw", ]):
+        if any(x in pos for x in ["attack", "attacker", "forward", "striker", "wing", "delantero", "stürmer", "cf", "lw", "rw", "att", ]):
             return "ATT"
         
         return "N/A"

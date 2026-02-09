@@ -4,7 +4,7 @@
     "name": "Marc-André ter Stegen",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -24,7 +24,7 @@
     "name": "Jasper Cillessen",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -44,7 +44,7 @@
     "name": "Iñaki Peña",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -64,7 +64,7 @@
     "name": "Jokin Ezkieta",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -84,7 +84,7 @@
     "name": "Clément Lenglet",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 24,
@@ -104,7 +104,7 @@
     "name": "Samuel Umtiti",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 23,
@@ -126,7 +126,7 @@
     "name": "Gerard Piqué",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 32,
@@ -146,7 +146,7 @@
     "name": "Jeison Murillo",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 17,
@@ -168,7 +168,7 @@
     "name": "Jean-Clair Todibo",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 19,
@@ -190,7 +190,7 @@
     "name": "Thomas Vermaelen",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -212,7 +212,7 @@
     "name": "Chumi",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 36,
@@ -232,7 +232,7 @@
     "name": "Jorge Cuenca",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -254,7 +254,7 @@
     "name": "Jordi Alba",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -276,7 +276,7 @@
     "name": "Juan Miranda",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -298,7 +298,7 @@
     "name": "Nélson Semedo",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -323,7 +323,7 @@
     "name": "Moussa Wagué",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -346,7 +346,7 @@
     "name": "Guillem Jaime",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -369,7 +369,7 @@
     "name": "Sergio Busquets",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [],
     "age": 30,
@@ -389,7 +389,7 @@
     "name": "Uri Busquets",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -412,7 +412,7 @@
     "name": "Sergi Samper",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -434,7 +434,7 @@
     "name": "Arthur Melo",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -456,7 +456,7 @@
     "name": "Sergi Roberto",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back",
@@ -479,7 +479,7 @@
     "name": "Ivan Rakitic",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -504,7 +504,7 @@
     "name": "Carles Aleñá",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -527,7 +527,7 @@
     "name": "Arturo Vidal",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -550,7 +550,7 @@
     "name": "Riqui Puig",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -572,7 +572,7 @@
     "name": "Philippe Coutinho",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -597,7 +597,7 @@
     "name": "Rafinha",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -622,7 +622,7 @@
     "name": "Denis Suárez",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -645,7 +645,7 @@
     "name": "Munir El Haddadi",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -670,7 +670,7 @@
     "name": "Kevin-Prince Boateng",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -695,7 +695,7 @@
     "name": "Álex Collado",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -718,7 +718,7 @@
     "name": "Lionel Messi",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Second Striker",
@@ -743,7 +743,7 @@
     "name": "Malcom",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -768,7 +768,7 @@
     "name": "Carles Pérez",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -791,7 +791,7 @@
     "name": "Ousmane Dembélé",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -814,7 +814,7 @@
     "name": "Luis Suárez",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -837,7 +837,7 @@
     "name": "Paco Alcácer",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -860,7 +860,7 @@
     "name": "Abel Ruiz",
     "team": "FC Barcelona",
     "team_id": "131",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -883,7 +883,7 @@
     "name": "Jan Oblak",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -903,7 +903,7 @@
     "name": "Antonio Adán",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -923,7 +923,7 @@
     "name": "Álex dos Santos",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -945,7 +945,7 @@
     "name": "José María Giménez",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 24,
@@ -967,7 +967,7 @@
     "name": "Stefan Savic",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 28,
@@ -989,7 +989,7 @@
     "name": "Diego Godín",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 33,
@@ -1011,7 +1011,7 @@
     "name": "Javi Montero",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -1033,7 +1033,7 @@
     "name": "Nehuén Pérez",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 18,
@@ -1053,7 +1053,7 @@
     "name": "Tachi",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -1076,7 +1076,7 @@
     "name": "Lucas Hernández",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back"
@@ -1100,7 +1100,7 @@
     "name": "Filipe Luís",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back"
@@ -1124,7 +1124,7 @@
     "name": "Manu Sánchez",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -1146,7 +1146,7 @@
     "name": "Santiago Arias",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 27,
@@ -1166,7 +1166,7 @@
     "name": "Juanfran Torres",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield"
@@ -1188,7 +1188,7 @@
     "name": "Andrés Solano",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 33,
@@ -1210,7 +1210,7 @@
     "name": "Carlos Isaac",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Winger"
@@ -1232,7 +1232,7 @@
     "name": "Rodri",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -1254,7 +1254,7 @@
     "name": "Thomas Partey",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Right-Back",
@@ -1277,7 +1277,7 @@
     "name": "Gustavo Assunção",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [],
     "age": 19,
@@ -1299,7 +1299,7 @@
     "name": "Saúl Ñíguez",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -1322,7 +1322,7 @@
     "name": "Koke",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -1344,7 +1344,7 @@
     "name": "Roberto Olabe",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 30,
@@ -1364,7 +1364,7 @@
     "name": "Toni Moya",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -1386,7 +1386,7 @@
     "name": "Cristian Rodríguez",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -1408,7 +1408,7 @@
     "name": "Mikel Carro",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back"
@@ -1430,7 +1430,7 @@
     "name": "Thomas Lemar",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -1455,7 +1455,7 @@
     "name": "Ángel Correa",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -1480,7 +1480,7 @@
     "name": "Vitolo",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -1502,7 +1502,7 @@
     "name": "Joaquín Muñoz",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -1525,7 +1525,7 @@
     "name": "Gelson Martins",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right Midfield",
@@ -1550,7 +1550,7 @@
     "name": "Víctor Mollejo",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -1573,7 +1573,7 @@
     "name": "Antoine Griezmann",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Left Winger",
@@ -1596,7 +1596,7 @@
     "name": "Álvaro Morata",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -1619,7 +1619,7 @@
     "name": "Diego Costa",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -1641,7 +1641,7 @@
     "name": "Nikola Kalinić",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 31,
@@ -1661,7 +1661,7 @@
     "name": "Borja Garcés",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -1683,7 +1683,7 @@
     "name": "Sergio Camello",
     "team": "Atlético de Madrid",
     "team_id": "13",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,
@@ -1703,7 +1703,7 @@
     "name": "Thibaut Courtois",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -1723,7 +1723,7 @@
     "name": "Keylor Navas",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -1745,7 +1745,7 @@
     "name": "Andriy Lunin",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -1765,7 +1765,7 @@
     "name": "Kiko Casilla",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -1785,7 +1785,7 @@
     "name": "Luca Zidane",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -1807,7 +1807,7 @@
     "name": "Raphaël Varane",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 26,
@@ -1829,7 +1829,7 @@
     "name": "Sergio Ramos",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -1851,7 +1851,7 @@
     "name": "Nacho Fernández",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -1874,7 +1874,7 @@
     "name": "Jesús Vallejo",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -1896,7 +1896,7 @@
     "name": "Javi Sánchez",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 31,
@@ -1916,7 +1916,7 @@
     "name": "Adrián Dela",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -1938,7 +1938,7 @@
     "name": "Marcelo",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 31,
@@ -1960,7 +1960,7 @@
     "name": "Sergio Reguilón",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -1982,7 +1982,7 @@
     "name": "Fran García",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 37,
@@ -2002,7 +2002,7 @@
     "name": "Daniel Carvajal",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 27,
@@ -2022,7 +2022,7 @@
     "name": "Lucas Vázquez",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield",
@@ -2045,7 +2045,7 @@
     "name": "Álvaro Odriozola",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 19,
@@ -2065,7 +2065,7 @@
     "name": "Marcos Llorente",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Central Midfield",
@@ -2088,7 +2088,7 @@
     "name": "Casemiro",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -2113,7 +2113,7 @@
     "name": "Toni Kroos",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2136,7 +2136,7 @@
     "name": "Dani Ceballos",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Left Midfield",
@@ -2159,7 +2159,7 @@
     "name": "Luka Modrić",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2182,7 +2182,7 @@
     "name": "Federico Valverde",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back",
@@ -2207,7 +2207,7 @@
     "name": "Álvaro Fidalgo",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -2232,7 +2232,7 @@
     "name": "Jaume Grau",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -2254,7 +2254,7 @@
     "name": "Jaime Seoane",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -2276,7 +2276,7 @@
     "name": "Marco Asensio",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -2301,7 +2301,7 @@
     "name": "Isco",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -2324,7 +2324,7 @@
     "name": "Vinicius Junior",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Centre-Forward"
@@ -2348,7 +2348,7 @@
     "name": "Gareth Bale",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -2371,7 +2371,7 @@
     "name": "Brahim Díaz",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -2396,7 +2396,7 @@
     "name": "Franchu",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -2421,7 +2421,7 @@
     "name": "Cristo",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Attacking Midfield",
@@ -2444,7 +2444,7 @@
     "name": "Karim Benzema",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 31,
@@ -2466,7 +2466,7 @@
     "name": "Mariano Díaz",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 25,
@@ -2488,7 +2488,7 @@
     "name": "Borja Mayoral",
     "team": "Real Madrid",
     "team_id": "418",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 21,
@@ -2508,7 +2508,7 @@
     "name": "Neto",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -2530,7 +2530,7 @@
     "name": "Jaume Doménech",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -2550,7 +2550,7 @@
     "name": "Cristian Rivero",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -2570,7 +2570,7 @@
     "name": "Gabriel Paulista",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 28,
@@ -2592,7 +2592,7 @@
     "name": "Mouctar Diakhaby",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -2616,7 +2616,7 @@
     "name": "Jeison Murillo",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 27,
@@ -2638,7 +2638,7 @@
     "name": "Cristiano Piccini",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -2661,7 +2661,7 @@
     "name": "Ezequiel Garay",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 24,
@@ -2683,7 +2683,7 @@
     "name": "Rúben Vezo",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -2707,7 +2707,7 @@
     "name": "Facundo Roncaglia",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -2732,7 +2732,7 @@
     "name": "José Gayà",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 24,
@@ -2752,7 +2752,7 @@
     "name": "Toni Lato",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 21,
@@ -2772,7 +2772,7 @@
     "name": "Álex Centelles",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 32,
@@ -2792,7 +2792,7 @@
     "name": "Geoffrey Kondogbia",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -2817,7 +2817,7 @@
     "name": "Francis Coquelin",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -2841,7 +2841,7 @@
     "name": "Uros Racic",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -2863,7 +2863,7 @@
     "name": "Hugo Guillamón",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -2885,7 +2885,7 @@
     "name": "Carlos Soler",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -2908,7 +2908,7 @@
     "name": "Dani Parejo",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -2931,7 +2931,7 @@
     "name": "Daniel Wass",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 18,
@@ -2951,7 +2951,7 @@
     "name": "Kang-in Lee",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -2974,7 +2974,7 @@
     "name": "Gonçalo Guedes",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -2997,7 +2997,7 @@
     "name": "Denis Cheryshev",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -3022,7 +3022,7 @@
     "name": "Nacho Gil",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -3044,7 +3044,7 @@
     "name": "Álex Blanco",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left-Back",
@@ -3067,7 +3067,7 @@
     "name": "Sito Pascual",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -3089,7 +3089,7 @@
     "name": "Rodrigo",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -3114,7 +3114,7 @@
     "name": "Santi Mina",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -3137,7 +3137,7 @@
     "name": "Michy Batshuayi",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -3159,7 +3159,7 @@
     "name": "Ferran Torres",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -3182,7 +3182,7 @@
     "name": "Kévin Gameiro",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -3204,7 +3204,7 @@
     "name": "Rubén Sobrino",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -3227,7 +3227,7 @@
     "name": "Fran Navarro",
     "team": "Valencia CF",
     "team_id": "1049",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 37,
@@ -3247,7 +3247,7 @@
     "name": "Tomáš Vaclík",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -3267,7 +3267,7 @@
     "name": "Sergio Rico",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -3287,7 +3287,7 @@
     "name": "Juan Soriano",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 21,
@@ -3307,7 +3307,7 @@
     "name": "Lucho García",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 38,
@@ -3329,7 +3329,7 @@
     "name": "Javi Díaz",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 34,
@@ -3349,7 +3349,7 @@
     "name": "Maximilian Wöber",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -3371,7 +3371,7 @@
     "name": "Sergi Gómez",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -3393,7 +3393,7 @@
     "name": "Simon Kjaer",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 30,
@@ -3413,7 +3413,7 @@
     "name": "Joris Gnagnon",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 24,
@@ -3435,7 +3435,7 @@
     "name": "Daniel Carriço",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -3457,7 +3457,7 @@
     "name": "Gabriel Mercado",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -3481,7 +3481,7 @@
     "name": "Nicolás Pareja",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 21,
@@ -3503,7 +3503,7 @@
     "name": "Juan Berrocal",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 37,
@@ -3523,7 +3523,7 @@
     "name": "Sergio Escudero",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 18,
@@ -3543,7 +3543,7 @@
     "name": "Guilherme Arana",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -3565,7 +3565,7 @@
     "name": "Javi Vázquez",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield",
@@ -3588,7 +3588,7 @@
     "name": "Sébastien Corchia",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield"
@@ -3612,7 +3612,7 @@
     "name": "Ibrahim Amadou",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -3636,7 +3636,7 @@
     "name": "Maxime Gonalons",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -3659,7 +3659,7 @@
     "name": "Éver Banega",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3684,7 +3684,7 @@
     "name": "Roque Mesa",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -3706,7 +3706,7 @@
     "name": "Marko Rog",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -3729,7 +3729,7 @@
     "name": "Jesús Navas",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Right-Back",
@@ -3752,7 +3752,7 @@
     "name": "Franco Vázquez",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -3777,7 +3777,7 @@
     "name": "Munir El Haddadi",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger",
@@ -3802,7 +3802,7 @@
     "name": "Ganso",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -3824,7 +3824,7 @@
     "name": "Borja Lasso",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger"
@@ -3846,7 +3846,7 @@
     "name": "Pepe Mena",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -3868,7 +3868,7 @@
     "name": "Quincy Promes",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -3893,7 +3893,7 @@
     "name": "Bryan Gil",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -3916,7 +3916,7 @@
     "name": "Nolito",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left Midfield"
@@ -3938,7 +3938,7 @@
     "name": "Pablo Sarabia",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -3961,7 +3961,7 @@
     "name": "Aleix Vidal",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -3984,7 +3984,7 @@
     "name": "Pejiño",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -4007,7 +4007,7 @@
     "name": "Wissam Ben Yedder",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -4031,7 +4031,7 @@
     "name": "André Silva",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -4051,7 +4051,7 @@
     "name": "Luis Muriel",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -4073,7 +4073,7 @@
     "name": "Marc Gual",
     "team": "Sevilla FC",
     "team_id": "368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -4095,7 +4095,7 @@
     "name": "Gerónimo Rulli",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -4117,7 +4117,7 @@
     "name": "Miguel Ángel Moyá",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 35,
@@ -4137,7 +4137,7 @@
     "name": "Andoni Zubiaurre",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -4157,7 +4157,7 @@
     "name": "Igor Zubeldia",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -4179,7 +4179,7 @@
     "name": "Diego Llorente",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -4201,7 +4201,7 @@
     "name": "Aritz Elustondo",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -4223,7 +4223,7 @@
     "name": "Héctor Moreno",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -4247,7 +4247,7 @@
     "name": "Robin Le Normand",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 27,
@@ -4269,7 +4269,7 @@
     "name": "Raúl Navas",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 22,
@@ -4289,7 +4289,7 @@
     "name": "Theo Hernández",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back",
@@ -4314,7 +4314,7 @@
     "name": "Aihen Muñoz",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 29,
@@ -4334,7 +4334,7 @@
     "name": "Kévin Rodrigues",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield",
@@ -4359,7 +4359,7 @@
     "name": "Joseba Zaldua",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 27,
@@ -4379,7 +4379,7 @@
     "name": "Andoni Gorosabel",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 18,
@@ -4399,7 +4399,7 @@
     "name": "Asier Illarramendi",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4421,7 +4421,7 @@
     "name": "Martín Zubimendi",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -4443,7 +4443,7 @@
     "name": "Mikel Merino",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -4466,7 +4466,7 @@
     "name": "Rubén Pardo",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -4489,7 +4489,7 @@
     "name": "Luca Sangalli",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -4513,7 +4513,7 @@
     "name": "David Zurutuza",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -4537,7 +4537,7 @@
     "name": "Ander Guevara",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -4559,7 +4559,7 @@
     "name": "Roberto López",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -4582,7 +4582,7 @@
     "name": "Ander Barrenetxea",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -4604,7 +4604,7 @@
     "name": "Juanmi",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -4627,7 +4627,7 @@
     "name": "Martín Merquelanz",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -4649,7 +4649,7 @@
     "name": "Naïs Djouahra",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -4673,7 +4673,7 @@
     "name": "Adnan Januzaj",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -4698,7 +4698,7 @@
     "name": "Zourdine Thior",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [],
     "age": 38,
@@ -4720,7 +4720,7 @@
     "name": "Álex Sola",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -4743,7 +4743,7 @@
     "name": "Mikel Oyarzabal",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -4766,7 +4766,7 @@
     "name": "Willian José",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -4788,7 +4788,7 @@
     "name": "Sandro Ramírez",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -4811,7 +4811,7 @@
     "name": "Jon Bautista",
     "team": "Real Sociedad",
     "team_id": "681",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 21,
@@ -4831,7 +4831,7 @@
     "name": "Pau López",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -4851,7 +4851,7 @@
     "name": "Joel Robles",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -4871,7 +4871,7 @@
     "name": "Marc Bartra",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -4893,7 +4893,7 @@
     "name": "Aïssa Mandi",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -4917,7 +4917,7 @@
     "name": "Sidnei",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 29,
@@ -4939,7 +4939,7 @@
     "name": "Zouhair Feddal",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 29,
@@ -4961,7 +4961,7 @@
     "name": "Edgar González",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -4983,7 +4983,7 @@
     "name": "Junior Firpo",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -5007,7 +5007,7 @@
     "name": "Julio Alonso",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 30,
@@ -5027,7 +5027,7 @@
     "name": "Diego Altamirano",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Winger"
@@ -5049,7 +5049,7 @@
     "name": "Francis Guerrero",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Winger"
@@ -5071,7 +5071,7 @@
     "name": "Emerson Royal",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -5094,7 +5094,7 @@
     "name": "Antonio Barragán",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 19,
@@ -5114,7 +5114,7 @@
     "name": "William Carvalho",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5138,7 +5138,7 @@
     "name": "Javi García",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -5160,7 +5160,7 @@
     "name": "Paul Akouokou",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5182,7 +5182,7 @@
     "name": "Andrés Guardado",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5207,7 +5207,7 @@
     "name": "Wilfrid Kaptoum",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -5229,7 +5229,7 @@
     "name": "Darko Brasanac",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 22,
@@ -5249,7 +5249,7 @@
     "name": "Jaime Garijo",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 37,
@@ -5269,7 +5269,7 @@
     "name": "Giovani Lo Celso",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5293,7 +5293,7 @@
     "name": "Sergio Canales",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -5316,7 +5316,7 @@
     "name": "Ryad Boudebouz",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5340,7 +5340,7 @@
     "name": "Cristian Tello",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -5363,7 +5363,7 @@
     "name": "Jesé",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -5386,7 +5386,7 @@
     "name": "Takashi Inui",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -5409,7 +5409,7 @@
     "name": "José Manuel Irizo",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -5431,7 +5431,7 @@
     "name": "Diego Lainez",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -5456,7 +5456,7 @@
     "name": "Joaquín",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -5479,7 +5479,7 @@
     "name": "Rober González",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -5502,7 +5502,7 @@
     "name": "Adrián Tellado",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back"
@@ -5524,7 +5524,7 @@
     "name": "Loren Morón",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 16,
@@ -5544,7 +5544,7 @@
     "name": "Antonio Sanabria",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 23,
@@ -5566,7 +5566,7 @@
     "name": "Sergio León",
     "team": "Real Betis Balompié",
     "team_id": "150",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -5586,7 +5586,7 @@
     "name": "Unai Simón",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -5606,7 +5606,7 @@
     "name": "Iago Herrerín",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -5626,7 +5626,7 @@
     "name": "Álex Remiro",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -5646,7 +5646,7 @@
     "name": "Hodei Oleaga",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -5666,7 +5666,7 @@
     "name": "Iñigo Martínez",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 28,
@@ -5686,7 +5686,7 @@
     "name": "Yeray Álvarez",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 24,
@@ -5706,7 +5706,7 @@
     "name": "Unai Núñez",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 22,
@@ -5726,7 +5726,7 @@
     "name": "Dani Vivian",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 29,
@@ -5746,7 +5746,7 @@
     "name": "Yuri Berchiche",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 29,
@@ -5768,7 +5768,7 @@
     "name": "Mikel Balenziaga",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 24,
@@ -5788,7 +5788,7 @@
     "name": "Cristian Ganea",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield",
@@ -5813,7 +5813,7 @@
     "name": "Óscar de Marcos",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 18,
@@ -5833,7 +5833,7 @@
     "name": "Ander Capa",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Winger"
@@ -5855,7 +5855,7 @@
     "name": "Iñigo Lekue",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back"
@@ -5877,7 +5877,7 @@
     "name": "Mikel San José",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -5899,7 +5899,7 @@
     "name": "Peru Nolaskoain",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -5922,7 +5922,7 @@
     "name": "Dani García",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5944,7 +5944,7 @@
     "name": "Ander Iturraspe",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -5966,7 +5966,7 @@
     "name": "Beñat Etxebarria",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -5989,7 +5989,7 @@
     "name": "Unai López",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -6011,7 +6011,7 @@
     "name": "Mikel Rico",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -6034,7 +6034,7 @@
     "name": "Raúl García",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -6057,7 +6057,7 @@
     "name": "Iker Muniain",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -6080,7 +6080,7 @@
     "name": "Iñigo Córdoba",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -6102,7 +6102,7 @@
     "name": "Ibai Gómez",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -6124,7 +6124,7 @@
     "name": "Iñigo Vicente",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -6147,7 +6147,7 @@
     "name": "Iñaki Williams",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Centre-Forward"
@@ -6171,7 +6171,7 @@
     "name": "Markel Susaeta",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -6194,7 +6194,7 @@
     "name": "Kenan Kodro",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -6218,7 +6218,7 @@
     "name": "Sabin Merino",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -6241,7 +6241,7 @@
     "name": "Aritz Aduriz",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 20,
@@ -6261,7 +6261,7 @@
     "name": "Gorka Guruzeta",
     "team": "Athletic Bilbao",
     "team_id": "621",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 30,
@@ -6281,7 +6281,7 @@
     "name": "Rubén Blanco",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -6301,7 +6301,7 @@
     "name": "Sergio Álvarez",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -6321,7 +6321,7 @@
     "name": "Iván Villar",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -6341,7 +6341,7 @@
     "name": "Wesley Hoedt",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 25,
@@ -6361,7 +6361,7 @@
     "name": "Néstor Araújo",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 27,
@@ -6383,7 +6383,7 @@
     "name": "David Costas",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -6405,7 +6405,7 @@
     "name": "Júnior Alonso",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -6427,7 +6427,7 @@
     "name": "Facundo Roncaglia",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -6452,7 +6452,7 @@
     "name": "Gustavo Cabral",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 22,
@@ -6474,7 +6474,7 @@
     "name": "Lucas Olaza",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -6498,7 +6498,7 @@
     "name": "David Juncà",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 17,
@@ -6518,7 +6518,7 @@
     "name": "Robert Mazan",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -6540,7 +6540,7 @@
     "name": "Hugo Mallo",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 28,
@@ -6560,7 +6560,7 @@
     "name": "Kevin Vázquez",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 20,
@@ -6580,7 +6580,7 @@
     "name": "Stanislav Lobotka",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -6602,7 +6602,7 @@
     "name": "Okay Yokuşlu",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -6625,7 +6625,7 @@
     "name": "Nemanja Radoja",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -6647,7 +6647,7 @@
     "name": "Fran Beltrán",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -6669,7 +6669,7 @@
     "name": "Mathias Jensen",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 18,
@@ -6689,7 +6689,7 @@
     "name": "Jozabed Sánchez",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -6711,7 +6711,7 @@
     "name": "Andrew Hjulsager",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -6734,7 +6734,7 @@
     "name": "Brais Méndez",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -6757,7 +6757,7 @@
     "name": "Sofiane Boufal",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -6782,7 +6782,7 @@
     "name": "Ryad Boudebouz",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -6806,7 +6806,7 @@
     "name": "Pione Sisto",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -6831,7 +6831,7 @@
     "name": "Emre Mor",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -6856,7 +6856,7 @@
     "name": "Maxi Gómez",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 22,
@@ -6876,7 +6876,7 @@
     "name": "Iago Aspas",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -6898,7 +6898,7 @@
     "name": "Dennis Eckert Ayensa",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -6923,7 +6923,7 @@
     "name": "Emmanuel Apeh",
     "team": "Celta de Vigo",
     "team_id": "940",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 29,
@@ -6943,7 +6943,7 @@
     "name": "Sergio Asenjo",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -6963,7 +6963,7 @@
     "name": "Andrés Fernández",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 32,
@@ -6983,7 +6983,7 @@
     "name": "Mariano Barbosa",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -7005,7 +7005,7 @@
     "name": "Mario Gaspar",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -7027,7 +7027,7 @@
     "name": "Álvaro González",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -7049,7 +7049,7 @@
     "name": "Ramiro Funes Mori",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -7073,7 +7073,7 @@
     "name": "Víctor Ruiz",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 30,
@@ -7093,7 +7093,7 @@
     "name": "Daniele Bonera",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -7116,7 +7116,7 @@
     "name": "Pepe Castaño",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -7139,7 +7139,7 @@
     "name": "Alfonso Pedraza",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Winger"
@@ -7161,7 +7161,7 @@
     "name": "Jaume Costa",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 31,
@@ -7181,7 +7181,7 @@
     "name": "Xavi Quintillà",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield",
@@ -7204,7 +7204,7 @@
     "name": "Miguel Layún",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -7229,7 +7229,7 @@
     "name": "Miguel Llambrich",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 23,
@@ -7249,7 +7249,7 @@
     "name": "Andrei Rațiu",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Winger"
@@ -7273,7 +7273,7 @@
     "name": "Santiago Cáseres",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [],
     "age": 22,
@@ -7293,7 +7293,7 @@
     "name": "Vicente Iborra",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -7316,7 +7316,7 @@
     "name": "Javi Fuego",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -7338,7 +7338,7 @@
     "name": "Bruno Soriano",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -7361,7 +7361,7 @@
     "name": "Manuel Iturra",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -7386,7 +7386,7 @@
     "name": "Pablo Fornals",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -7409,7 +7409,7 @@
     "name": "Manu Trigueros",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -7431,7 +7431,7 @@
     "name": "Santi Cazorla",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield",
@@ -7454,7 +7454,7 @@
     "name": "Manu Morlanes",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -7477,7 +7477,7 @@
     "name": "Iván Martín",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -7500,7 +7500,7 @@
     "name": "Nicola Sansone",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker",
@@ -7525,7 +7525,7 @@
     "name": "Samuel Chukwueze",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -7547,7 +7547,7 @@
     "name": "Dani Raba",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Right Winger",
@@ -7570,7 +7570,7 @@
     "name": "Gerard Moreno",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -7592,7 +7592,7 @@
     "name": "Karl Toko Ekambi",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -7616,7 +7616,7 @@
     "name": "Carlos Bacca",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 32,
@@ -7636,7 +7636,7 @@
     "name": "Enes Ünal",
     "team": "Villarreal CF",
     "team_id": "1050",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 22,
@@ -7656,7 +7656,7 @@
     "name": "Roberto",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 33,
@@ -7676,7 +7676,7 @@
     "name": "Diego López",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 37,
@@ -7696,7 +7696,7 @@
     "name": "Mario Hermoso",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -7718,7 +7718,7 @@
     "name": "David López",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield",
@@ -7741,7 +7741,7 @@
     "name": "Naldo",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 30,
@@ -7763,7 +7763,7 @@
     "name": "Óscar Duarte",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 30,
@@ -7785,7 +7785,7 @@
     "name": "Lluís López",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 27,
@@ -7805,7 +7805,7 @@
     "name": "Iago Indias",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -7827,7 +7827,7 @@
     "name": "Adrià Pedrosa",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Winger"
@@ -7849,7 +7849,7 @@
     "name": "Dídac Vilà",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 30,
@@ -7869,7 +7869,7 @@
     "name": "Roberto Rosales",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back"
@@ -7893,7 +7893,7 @@
     "name": "Javi López",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back"
@@ -7915,7 +7915,7 @@
     "name": "Pipa",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Winger"
@@ -7937,7 +7937,7 @@
     "name": "Marc Roca",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -7959,7 +7959,7 @@
     "name": "Alfa Semedo",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -7983,7 +7983,7 @@
     "name": "Sergi Darder",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8006,7 +8006,7 @@
     "name": "Víctor Sánchez",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right-Back",
@@ -8029,7 +8029,7 @@
     "name": "Esteban Granero",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -8051,7 +8051,7 @@
     "name": "Álex López",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 18,
@@ -8071,7 +8071,7 @@
     "name": "Óscar Melendo",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -8094,7 +8094,7 @@
     "name": "Pablo Piatti",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Midfield",
@@ -8119,7 +8119,7 @@
     "name": "Javi Puado",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -8142,7 +8142,7 @@
     "name": "Carlos Doncel",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left-Back"
@@ -8164,7 +8164,7 @@
     "name": "Lei Wu",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -8187,7 +8187,7 @@
     "name": "Hernán Pérez",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -8212,7 +8212,7 @@
     "name": "Borja Iglesias",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 26,
@@ -8232,7 +8232,7 @@
     "name": "Léo Baptistão",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger",
@@ -8257,7 +8257,7 @@
     "name": "Facundo Ferreyra",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 28,
@@ -8279,7 +8279,7 @@
     "name": "Sergio García",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -8302,7 +8302,7 @@
     "name": "Víctor Campuzano",
     "team": "RCD Espanyol Barcelona",
     "team_id": "714",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 31,
@@ -8322,7 +8322,7 @@
     "name": "David Soria",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 26,
@@ -8342,7 +8342,7 @@
     "name": "Leandro Chichizola",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -8364,7 +8364,7 @@
     "name": "Rubén Yáñez",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -8384,7 +8384,7 @@
     "name": "Dakonam Djené",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -8407,7 +8407,7 @@
     "name": "Leandro Cabrera",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -8431,7 +8431,7 @@
     "name": "Bruno González",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 29,
@@ -8451,7 +8451,7 @@
     "name": "Ignasi Miquel",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -8473,7 +8473,7 @@
     "name": "Miguel Rubio",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 29,
@@ -8493,7 +8493,7 @@
     "name": "Mathías Olivera",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back",
@@ -8518,7 +8518,7 @@
     "name": "Antunes",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 32,
@@ -8538,7 +8538,7 @@
     "name": "Damián Suárez",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -8563,7 +8563,7 @@
     "name": "Dimitri Foulquier",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield"
@@ -8587,7 +8587,7 @@
     "name": "Iván Alejo",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left Winger",
@@ -8610,7 +8610,7 @@
     "name": "Markel Bergara",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -8632,7 +8632,7 @@
     "name": "Mathieu Flamini",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -8654,7 +8654,7 @@
     "name": "Mauro Arambarri",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -8678,7 +8678,7 @@
     "name": "Nemanja Maksimovic",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -8700,7 +8700,7 @@
     "name": "Gaku Shibasaki",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -8723,7 +8723,7 @@
     "name": "Sebastián Cristóforo",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -8747,7 +8747,7 @@
     "name": "Francisco Portillo",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -8770,7 +8770,7 @@
     "name": "Samu Saiz",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -8793,7 +8793,7 @@
     "name": "Amath Ndiaye",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -8818,7 +8818,7 @@
     "name": "Rober Ibáñez",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -8840,7 +8840,7 @@
     "name": "Jaime Mata",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -8863,7 +8863,7 @@
     "name": "Sergi Guardiola",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -8885,7 +8885,7 @@
     "name": "Ángel Rodríguez",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 32,
@@ -8905,7 +8905,7 @@
     "name": "Jorge Molina",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -8925,7 +8925,7 @@
     "name": "Hugo Duro",
     "team": "Getafe CF",
     "team_id": "3709",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -8948,7 +8948,7 @@
     "name": "Andriy Lunin",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 20,
@@ -8968,7 +8968,7 @@
     "name": "Iván Cuéllar",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 35,
@@ -8988,7 +8988,7 @@
     "name": "Jon Ander Serantes",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -9008,7 +9008,7 @@
     "name": "Andrés Prieto",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -9028,7 +9028,7 @@
     "name": "David Tejero",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -9048,7 +9048,7 @@
     "name": "Dimitrios Siovas",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -9070,7 +9070,7 @@
     "name": "Kenneth Omeruo",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -9092,7 +9092,7 @@
     "name": "Unai Bustinza",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -9114,7 +9114,7 @@
     "name": "Diego Reyes",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back",
@@ -9137,7 +9137,7 @@
     "name": "Rodri Tarín",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -9159,7 +9159,7 @@
     "name": "Ezequiel Muñoz",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -9183,7 +9183,7 @@
     "name": "Josua Mejías",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -9205,7 +9205,7 @@
     "name": "Jonathan Silva",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -9229,7 +9229,7 @@
     "name": "Vasyl Kravets",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back"
@@ -9251,7 +9251,7 @@
     "name": "Raúl Carnero",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 30,
@@ -9271,7 +9271,7 @@
     "name": "Allan Nyom",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back"
@@ -9295,7 +9295,7 @@
     "name": "Juanfran Moreno",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Winger"
@@ -9317,7 +9317,7 @@
     "name": "Rubén Pérez",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -9339,7 +9339,7 @@
     "name": "Mikel Vesga",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -9361,7 +9361,7 @@
     "name": "Gerard Gumbau",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9384,7 +9384,7 @@
     "name": "Facundo García",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -9407,7 +9407,7 @@
     "name": "Recio",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -9429,7 +9429,7 @@
     "name": "Javi Eraso",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -9452,7 +9452,7 @@
     "name": "Óscar Rodríguez",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -9475,7 +9475,7 @@
     "name": "José Manuel Arnáiz",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -9498,7 +9498,7 @@
     "name": "Fede Vico",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger"
@@ -9520,7 +9520,7 @@
     "name": "Alexander Szymanowski",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -9544,7 +9544,7 @@
     "name": "Dani Ojeda",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -9567,7 +9567,7 @@
     "name": "Owusu Kwabena",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -9590,7 +9590,7 @@
     "name": "Nabil El Zhar",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -9615,7 +9615,7 @@
     "name": "Javi Avilés",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -9638,7 +9638,7 @@
     "name": "Youssef En-Nesyri",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 26,
@@ -9658,7 +9658,7 @@
     "name": "Martin Braithwaite",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -9683,7 +9683,7 @@
     "name": "Guido Carrillo",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 28,
@@ -9705,7 +9705,7 @@
     "name": "Michael Santos",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -9728,7 +9728,7 @@
     "name": "Diego Rolán",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -9751,7 +9751,7 @@
     "name": "Sabin Merino",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -9774,7 +9774,7 @@
     "name": "Mamadou Koné",
     "team": "CD Leganés",
     "team_id": "1244",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -9797,7 +9797,7 @@
     "name": "Fernando Pacheco",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -9817,7 +9817,7 @@
     "name": "Antonio Sivera",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -9837,7 +9837,7 @@
     "name": "Álex Domínguez",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 31,
@@ -9857,7 +9857,7 @@
     "name": "Guillermo Maripán",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 25,
@@ -9877,7 +9877,7 @@
     "name": "Víctor Laguardia",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 29,
@@ -9897,7 +9897,7 @@
     "name": "Rubén Duarte",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -9919,7 +9919,7 @@
     "name": "Rodrigo Ely",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 25,
@@ -9941,7 +9941,7 @@
     "name": "Carlos Vigaray",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -9963,7 +9963,7 @@
     "name": "Adrián Diéguez",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -9985,7 +9985,7 @@
     "name": "Adrián Marín",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back"
@@ -10007,7 +10007,7 @@
     "name": "Martín Aguirregabiria",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back"
@@ -10029,7 +10029,7 @@
     "name": "Ximo Navarro",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -10052,7 +10052,7 @@
     "name": "Dani Torres",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [],
     "age": 16,
@@ -10074,7 +10074,7 @@
     "name": "Tomás Pina",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -10096,7 +10096,7 @@
     "name": "Mubarak Wakaso",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Right Midfield",
@@ -10119,7 +10119,7 @@
     "name": "Manu García",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -10141,7 +10141,7 @@
     "name": "Darko Brasanac",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 20,
@@ -10161,7 +10161,7 @@
     "name": "Antonio Perera",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 27,
@@ -10181,7 +10181,7 @@
     "name": "Jony",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [],
     "age": 23,
@@ -10201,7 +10201,7 @@
     "name": "Takashi Inui",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -10224,7 +10224,7 @@
     "name": "Ibai Gómez",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -10246,7 +10246,7 @@
     "name": "Burgui",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -10269,7 +10269,7 @@
     "name": "Álex Blanco",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Left-Back",
@@ -10292,7 +10292,7 @@
     "name": "Patrick Twumasi",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -10315,7 +10315,7 @@
     "name": "Jonathan Calleri",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 25,
@@ -10337,7 +10337,7 @@
     "name": "Rubén Sobrino",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10360,7 +10360,7 @@
     "name": "John Guidetti",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -10380,7 +10380,7 @@
     "name": "Diego Rolán",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -10403,7 +10403,7 @@
     "name": "Borja Bastón",
     "team": "Deportivo Alavés",
     "team_id": "1108",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,
@@ -10423,7 +10423,7 @@
     "name": "Oier Olazábal",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 29,
@@ -10443,7 +10443,7 @@
     "name": "Aitor Fernández",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -10463,7 +10463,7 @@
     "name": "Koke Vegas",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -10483,7 +10483,7 @@
     "name": "Rúben Vezo",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -10507,7 +10507,7 @@
     "name": "Erick Cabaco",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -10531,7 +10531,7 @@
     "name": "Róber Pier",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -10553,7 +10553,7 @@
     "name": "Chema Rodríguez",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 27,
@@ -10573,7 +10573,7 @@
     "name": "Sergio Postigo",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 30,
@@ -10593,7 +10593,7 @@
     "name": "Genís Montolio",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -10615,7 +10615,7 @@
     "name": "Antonio Luna",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 22,
@@ -10635,7 +10635,7 @@
     "name": "Toño García",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 29,
@@ -10655,7 +10655,7 @@
     "name": "Coke",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back"
@@ -10677,7 +10677,7 @@
     "name": "Shaq Moore",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield"
@@ -10701,7 +10701,7 @@
     "name": "Pedro López",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 19,
@@ -10721,7 +10721,7 @@
     "name": "Nikola Vukcevic",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -10743,7 +10743,7 @@
     "name": "Cheick Doukouré",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -10767,7 +10767,7 @@
     "name": "Pepelu",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -10789,7 +10789,7 @@
     "name": "José Campaña",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -10812,7 +10812,7 @@
     "name": "Sanjin Prcic",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -10836,7 +10836,7 @@
     "name": "Fran Manzanara",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back",
@@ -10859,7 +10859,7 @@
     "name": "Enis Bardhi",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -10882,7 +10882,7 @@
     "name": "Arturo Molina",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -10905,7 +10905,7 @@
     "name": "Moses Simon",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -10928,7 +10928,7 @@
     "name": "Jason Remeseiro",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -10951,7 +10951,7 @@
     "name": "Rubén Rochina",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -10974,7 +10974,7 @@
     "name": "Samu García",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Second Striker",
@@ -10997,7 +10997,7 @@
     "name": "Roger Martí",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 28,
@@ -11017,7 +11017,7 @@
     "name": "José Luis Morales",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11040,7 +11040,7 @@
     "name": "Borja Mayoral",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 22,
@@ -11060,7 +11060,7 @@
     "name": "Raphael Dwamena",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11083,7 +11083,7 @@
     "name": "Emmanuel Boateng",
     "team": "Levante UD",
     "team_id": "3368",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11106,7 +11106,7 @@
     "name": "Yassine Bounou",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 28,
@@ -11128,7 +11128,7 @@
     "name": "José Aurelio Suárez",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -11148,7 +11148,7 @@
     "name": "Gorka Iraizoz",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 38,
@@ -11168,7 +11168,7 @@
     "name": "Marc Vito",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -11188,7 +11188,7 @@
     "name": "Juanpe",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 28,
@@ -11208,7 +11208,7 @@
     "name": "Bernardo Espinosa",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 29,
@@ -11230,7 +11230,7 @@
     "name": "Jonás Ramalho",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Right-Back"
@@ -11254,7 +11254,7 @@
     "name": "Marc Muniesa",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -11276,7 +11276,7 @@
     "name": "Pedro Alcalá",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 30,
@@ -11296,7 +11296,7 @@
     "name": "Johan Mojica",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 26,
@@ -11318,7 +11318,7 @@
     "name": "Aday Benítez",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Right-Back"
@@ -11340,7 +11340,7 @@
     "name": "Raúl Carnero",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 30,
@@ -11360,7 +11360,7 @@
     "name": "Jairo Izquierdo",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Winger",
@@ -11383,7 +11383,7 @@
     "name": "Carles Planas",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back"
@@ -11405,7 +11405,7 @@
     "name": "Pedro Porro",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield"
@@ -11427,7 +11427,7 @@
     "name": "Yhoan Andzouana",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back",
@@ -11452,7 +11452,7 @@
     "name": "Álex Granell",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield",
@@ -11475,7 +11475,7 @@
     "name": "Pere Pons",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11498,7 +11498,7 @@
     "name": "Aleix García",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11521,7 +11521,7 @@
     "name": "Douglas Luiz",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -11543,7 +11543,7 @@
     "name": "David Timor",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back"
@@ -11565,7 +11565,7 @@
     "name": "Seung-ho Paik",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -11588,7 +11588,7 @@
     "name": "Èric Montes",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Centre-Back"
@@ -11610,7 +11610,7 @@
     "name": "Borja García",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -11633,7 +11633,7 @@
     "name": "Portu",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -11656,7 +11656,7 @@
     "name": "Patrick Roberts",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -11679,7 +11679,7 @@
     "name": "Valery Fernández",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -11702,7 +11702,7 @@
     "name": "Sebas Coris",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -11725,7 +11725,7 @@
     "name": "Cristhian Stuani",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -11750,7 +11750,7 @@
     "name": "Choco Lozano",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -11772,7 +11772,7 @@
     "name": "Seydou Doumbia",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Second Striker"
@@ -11794,7 +11794,7 @@
     "name": "Kévin Soni",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Attacking Midfield",
@@ -11817,7 +11817,7 @@
     "name": "Álex Pachón",
     "team": "Girona FC",
     "team_id": "12321",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 18,
@@ -11837,7 +11837,7 @@
     "name": "Marko Dmitrovic",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 27,
@@ -11857,7 +11857,7 @@
     "name": "Yoel Rodríguez",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -11877,7 +11877,7 @@
     "name": "Asier Riesgo",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 35,
@@ -11897,7 +11897,7 @@
     "name": "Markel Areitio",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 35,
@@ -11917,7 +11917,7 @@
     "name": "Paulo Oliveira",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 27,
@@ -11937,7 +11937,7 @@
     "name": "Pedro Bigas",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -11959,7 +11959,7 @@
     "name": "Anaitz Arbilla",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back",
@@ -11982,7 +11982,7 @@
     "name": "Iván Ramis",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 34,
@@ -12002,7 +12002,7 @@
     "name": "Kaiser",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 26,
@@ -12022,7 +12022,7 @@
     "name": "Marc Cucurella",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -12044,7 +12044,7 @@
     "name": "Cote",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 29,
@@ -12064,7 +12064,7 @@
     "name": "Rubén Peña",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Winger"
@@ -12086,7 +12086,7 @@
     "name": "Sergio Álvarez",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12109,7 +12109,7 @@
     "name": "Pape Diop",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -12133,7 +12133,7 @@
     "name": "Joan Jordán",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12156,7 +12156,7 @@
     "name": "Gonzalo Escalante",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -12180,7 +12180,7 @@
     "name": "Miguel Marí",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -12202,7 +12202,7 @@
     "name": "Jordi Calavera",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Right Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12225,7 +12225,7 @@
     "name": "Pablo de Blasis",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -12248,7 +12248,7 @@
     "name": "Bebé",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -12273,7 +12273,7 @@
     "name": "Pere Milla",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Second Striker",
@@ -12296,7 +12296,7 @@
     "name": "Fabián Orellana",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -12321,7 +12321,7 @@
     "name": "Pedro León",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield"
@@ -12343,7 +12343,7 @@
     "name": "Pablo Hervías",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -12366,7 +12366,7 @@
     "name": "Sergi Enrich",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 29,
@@ -12386,7 +12386,7 @@
     "name": "Kike García",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 17,
@@ -12406,7 +12406,7 @@
     "name": "Charles",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -12428,7 +12428,7 @@
     "name": "Marc Cardona",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -12451,7 +12451,7 @@
     "name": "Alberto Marí",
     "team": "SD Eibar",
     "team_id": "1533",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 29,
@@ -12471,7 +12471,7 @@
     "name": "Stole Dimitrievski",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -12493,7 +12493,7 @@
     "name": "Alberto García",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 34,
@@ -12513,7 +12513,7 @@
     "name": "Miguel Ángel Morro",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -12533,7 +12533,7 @@
     "name": "Jordi Amat",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield"
@@ -12557,7 +12557,7 @@
     "name": "Abdoulaye Ba",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 21,
@@ -12579,7 +12579,7 @@
     "name": "Emiliano Velázquez",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 20,
@@ -12599,7 +12599,7 @@
     "name": "Alejandro Gálvez",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 23,
@@ -12619,7 +12619,7 @@
     "name": "José León",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 24,
@@ -12639,7 +12639,7 @@
     "name": "Alejandro Catena",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 24,
@@ -12659,7 +12659,7 @@
     "name": "Chechu Dorado",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 36,
@@ -12679,7 +12679,7 @@
     "name": "Martín Pascual",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 31,
@@ -12699,7 +12699,7 @@
     "name": "Álex Moreno",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 26,
@@ -12719,7 +12719,7 @@
     "name": "Sergio Akieme",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 28,
@@ -12741,7 +12741,7 @@
     "name": "Luis Advíncula",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Midfield",
@@ -12766,7 +12766,7 @@
     "name": "Tito",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Centre-Back",
@@ -12789,7 +12789,7 @@
     "name": "Luis Meseguer",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back"
@@ -12813,7 +12813,7 @@
     "name": "Giannelli Imbula",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -12837,7 +12837,7 @@
     "name": "Uche Agbo",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12860,7 +12860,7 @@
     "name": "Mario Suárez",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -12883,7 +12883,7 @@
     "name": "Gorka Elustondo",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back"
@@ -12905,7 +12905,7 @@
     "name": "Ángel Algobia",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -12929,7 +12929,7 @@
     "name": "Santi Comesaña",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12952,7 +12952,7 @@
     "name": "Álvaro Medrán",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield",
@@ -12975,7 +12975,7 @@
     "name": "Manu Navarro",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 34,
@@ -12995,7 +12995,7 @@
     "name": "José Pozo",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -13018,7 +13018,7 @@
     "name": "Óscar Trejo",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield"
@@ -13042,7 +13042,7 @@
     "name": "Gaël Kakuta",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -13067,7 +13067,7 @@
     "name": "Álvaro García",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -13089,7 +13089,7 @@
     "name": "Bebé",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -13114,7 +13114,7 @@
     "name": "Adrián Embarba",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -13136,7 +13136,7 @@
     "name": "Lass Bangoura",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -13160,7 +13160,7 @@
     "name": "Raúl de Tomás",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -13182,7 +13182,7 @@
     "name": "Franco Di Santo",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Right Winger"
@@ -13206,7 +13206,7 @@
     "name": "Álex Alegría",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 26,
@@ -13226,7 +13226,7 @@
     "name": "Javi Guerra",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 24,
@@ -13246,7 +13246,7 @@
     "name": "Sergio Moreno",
     "team": "Rayo Vallecano",
     "team_id": "367",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -13269,7 +13269,7 @@
     "name": "Jordi Masip",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -13289,7 +13289,7 @@
     "name": "Yoel Rodríguez",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 30,
@@ -13309,7 +13309,7 @@
     "name": "José Antonio Caro",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -13329,7 +13329,7 @@
     "name": "Samu Pérez",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -13349,7 +13349,7 @@
     "name": "Fernando Calero",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 23,
@@ -13369,7 +13369,7 @@
     "name": "Joaquín Fernández",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Defensive Midfield",
@@ -13392,7 +13392,7 @@
     "name": "Kiko Olivas",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 30,
@@ -13412,7 +13412,7 @@
     "name": "Alberto Guitián",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Central Midfield"
@@ -13434,7 +13434,7 @@
     "name": "Mohammed Salisu",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 20,
@@ -13454,7 +13454,7 @@
     "name": "Nacho Martínez",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 22,
@@ -13474,7 +13474,7 @@
     "name": "Moi Delgado",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 25,
@@ -13494,7 +13494,7 @@
     "name": "Roberto Corral",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Centre-Back",
@@ -13517,7 +13517,7 @@
     "name": "Antoñito",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Right Winger"
@@ -13539,7 +13539,7 @@
     "name": "Javi Moyano",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 17,
@@ -13559,7 +13559,7 @@
     "name": "Javi Aparicio",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [],
     "age": 19,
@@ -13579,7 +13579,7 @@
     "name": "Luismi Sánchez",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -13602,7 +13602,7 @@
     "name": "Moctar El Hacen",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -13624,7 +13624,7 @@
     "name": "Borja Fernández",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -13646,7 +13646,7 @@
     "name": "Rubén Alcaraz",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -13668,7 +13668,7 @@
     "name": "Fede San Emeterio",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 22,
@@ -13688,7 +13688,7 @@
     "name": "Míchel Herrero",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -13710,7 +13710,7 @@
     "name": "Antonio Cotán",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -13732,7 +13732,7 @@
     "name": "Ivi López",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -13755,7 +13755,7 @@
     "name": "Kuki Zalazar",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Left Winger",
@@ -13780,7 +13780,7 @@
     "name": "Pablo Muñoz",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [],
     "age": 19,
@@ -13800,7 +13800,7 @@
     "name": "Toni Villa",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -13823,7 +13823,7 @@
     "name": "Waldo Rubio",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -13846,7 +13846,7 @@
     "name": "Daniele Verde",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -13869,7 +13869,7 @@
     "name": "Keko Gontán",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -13892,7 +13892,7 @@
     "name": "Anuar",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -13917,7 +13917,7 @@
     "name": "Leo Suárez",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger",
@@ -13942,7 +13942,7 @@
     "name": "Pablo Hervías",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Right-Back",
@@ -13965,7 +13965,7 @@
     "name": "David Mayoral",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Left Winger"
@@ -13987,7 +13987,7 @@
     "name": "Antonio Domínguez",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Right Winger",
     "other_positions": [
       "Attacking Midfield",
@@ -14010,7 +14010,7 @@
     "name": "Óscar Plano",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Second Striker",
     "other_positions": [
       "Left Winger",
@@ -14033,7 +14033,7 @@
     "name": "Enes Ünal",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 22,
@@ -14053,7 +14053,7 @@
     "name": "Sergi Guardiola",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -14075,7 +14075,7 @@
     "name": "Duje Cop",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger"
@@ -14097,7 +14097,7 @@
     "name": "Stiven Plaza",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -14120,7 +14120,7 @@
     "name": "Miguel de la Fuente",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 19,
@@ -14140,7 +14140,7 @@
     "name": "Chris Ramos",
     "team": "Real Valladolid CF",
     "team_id": "366",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -14165,7 +14165,7 @@
     "name": "Aleksandar Jovanovic",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 25,
@@ -14185,7 +14185,7 @@
     "name": "Axel Werner",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 23,
@@ -14207,7 +14207,7 @@
     "name": "Javi Varas",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 36,
@@ -14227,7 +14227,7 @@
     "name": "Roberto Santamaría",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 34,
@@ -14247,7 +14247,7 @@
     "name": "Antonio Valera",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 22,
@@ -14267,7 +14267,7 @@
     "name": "Ander Bardají",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Goalkeeper",
+    "position": "GK",
     "main_position": "Goalkeeper",
     "other_positions": [],
     "age": 24,
@@ -14287,7 +14287,7 @@
     "name": "Jorge Pulido",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 28,
@@ -14307,7 +14307,7 @@
     "name": "Xabi Etxeita",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 31,
@@ -14327,7 +14327,7 @@
     "name": "Rúben Semedo",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 25,
@@ -14349,7 +14349,7 @@
     "name": "Pablo Insua",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 25,
@@ -14369,7 +14369,7 @@
     "name": "Martín Mantovani",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [],
     "age": 34,
@@ -14391,7 +14391,7 @@
     "name": "Adrián Diéguez",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -14413,7 +14413,7 @@
     "name": "Nacho Uche",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Centre-Back",
     "other_positions": [
       "Left-Back"
@@ -14435,7 +14435,7 @@
     "name": "Javi Galán",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield",
@@ -14458,7 +14458,7 @@
     "name": "Luisinho",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [],
     "age": 16,
@@ -14478,7 +14478,7 @@
     "name": "Rajko Brezancic",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Left-Back",
     "other_positions": [
       "Left Midfield"
@@ -14502,7 +14502,7 @@
     "name": "Jorge Miramón",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Attacking Midfield",
@@ -14525,7 +14525,7 @@
     "name": "Carlos Akapo",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Left-Back"
@@ -14549,7 +14549,7 @@
     "name": "Javier Almerge",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Defender",
+    "position": "DEF",
     "main_position": "Right-Back",
     "other_positions": [
       "Central Midfield"
@@ -14571,7 +14571,7 @@
     "name": "Damián Musto",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Central Midfield"
@@ -14595,7 +14595,7 @@
     "name": "Juan Aguilera",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Defensive Midfield",
     "other_positions": [
       "Centre-Back",
@@ -14618,7 +14618,7 @@
     "name": "Gonzalo Melero",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -14640,7 +14640,7 @@
     "name": "Christian Rivera",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 21,
@@ -14660,7 +14660,7 @@
     "name": "Yangel Herrera",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -14684,7 +14684,7 @@
     "name": "Eugeni",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Attacking Midfield"
@@ -14706,7 +14706,7 @@
     "name": "Lluis Sastre",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [
       "Defensive Midfield"
@@ -14728,7 +14728,7 @@
     "name": "Javito López",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Central Midfield",
     "other_positions": [],
     "age": 20,
@@ -14748,7 +14748,7 @@
     "name": "Moi Gómez",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -14771,7 +14771,7 @@
     "name": "Juanpi",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Right Winger"
@@ -14795,7 +14795,7 @@
     "name": "Jonathan Rubio Toro",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -14820,7 +14820,7 @@
     "name": "Juanjo Camacho",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Midfield",
+    "position": "MID",
     "main_position": "Attacking Midfield",
     "other_positions": [
       "Central Midfield",
@@ -14843,7 +14843,7 @@
     "name": "David Ferreiro",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -14865,7 +14865,7 @@
     "name": "Serdar Gürler",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger",
@@ -14890,7 +14890,7 @@
     "name": "Álex Gallar",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Left Winger",
     "other_positions": [
       "Right Winger"
@@ -14912,7 +14912,7 @@
     "name": "Cucho Hernández",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 20,
@@ -14934,7 +14934,7 @@
     "name": "Chimy Ávila",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
@@ -14959,7 +14959,7 @@
     "name": "Enric Gallego",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 22,
@@ -14979,7 +14979,7 @@
     "name": "Samuele Longo",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [],
     "age": 27,
@@ -14999,7 +14999,7 @@
     "name": "Dani Escriche",
     "team": "SD Huesca",
     "team_id": "5358",
-    "position": "Attack",
+    "position": "ATT",
     "main_position": "Centre-Forward",
     "other_positions": [
       "Left Winger",
