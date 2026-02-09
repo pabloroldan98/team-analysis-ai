@@ -203,7 +203,13 @@ class TransfermarktPlayersScraper(BaseScraper):
     
     def scrape_player_details(self, player_id: str, player: Player = None) -> Optional[Player]:
         """
-        Scrape detailed information for a single player.
+        Scrape detailed STATIC information for a single player.
+        
+        IMPORTANT: This only fetches static data that doesn't change over time:
+        - height, preferred_foot, birth_date, other_positions, nationality
+        
+        It does NOT overwrite season-specific data from the team page:
+        - market_value, age, team, team_id, joined_date
         
         Args:
             player_id: Transfermarkt player ID
@@ -223,40 +229,25 @@ class TransfermarktPlayersScraper(BaseScraper):
         if player is None:
             player = Player(player_id=player_id, name="")
         
-        # Name from header
-        header = soup.select_one("h1.data-header__headline-wrapper")
-        if header:
-            name_text = header.text.strip()
-            # Remove shirt number if present
-            name_text = re.sub(r"#\d+", "", name_text).strip()
-            player.name = name_text
+        # Name from header (only if not already set)
+        if not player.name:
+            header = soup.select_one("h1.data-header__headline-wrapper")
+            if header:
+                name_text = header.text.strip()
+                # Remove shirt number if present
+                name_text = re.sub(r"#\d+", "", name_text).strip()
+                player.name = name_text
         
         # Profile image
         img = soup.select_one("img.data-header__profile-image")
         if img:
             player.img_url = img.get("src", "") or img.get("data-src", "")
         
-        # Market value from header - careful to only get the value, not "Last update"
-        # HTML: <span class="waehrung">€</span>18.00<span class="waehrung">m</span> <p>Last update...</p>
-        value_el = soup.select_one("a.data-header__market-value-wrapper")
-        if value_el:
-            # Build value from children, stopping at <p> (Last update)
-            value_text = ""
-            for child in value_el.children:
-                # Stop at <p> element (Last update paragraph)
-                if hasattr(child, 'name') and child.name == 'p':
-                    break
-                if hasattr(child, 'get_text'):
-                    value_text += child.get_text(strip=True)
-                elif isinstance(child, str):
-                    value_text += child.strip()
-            
-            if value_text:
-                parsed_value = self.parse_market_value(value_text)
-                if parsed_value is not None:
-                    player.market_value = parsed_value
+        # NOTE: We do NOT scrape market_value from the player page
+        # because it shows current value, not historical season value.
+        # Market value comes from the team squad page for the specific season.
         
-        # Parse info-table items
+        # Parse info-table items - ONLY static data
         # Structure: sibling spans - info-table__content--regular (label) followed by --bold (value)
         info_table = soup.select_one("div.info-table")
         if info_table:
@@ -271,18 +262,15 @@ class TransfermarktPlayersScraper(BaseScraper):
                 label_text = label_el.get_text(strip=True).lower().rstrip(":")
                 content_text = value_el.get_text(strip=True)
                 
-                # Date of birth/Age: "Jan 27, 2000 (26)"
+                # Date of birth (static) - but NOT age (age changes every year)
                 if "date of birth" in label_text:
                     # Extract just the date part (before the age in parentheses)
                     date_match = re.match(r"([^(]+)", content_text)
                     if date_match:
                         player.birth_date = date_match.group(1).strip()
-                    # Extract age
-                    age_match = re.search(r"\((\d+)\)", content_text)
-                    if age_match:
-                        player.age = int(age_match.group(1))
+                    # NOTE: We do NOT update age here - age comes from team page for that season
                 
-                # Height: "1,88 m" or "1.88 m"
+                # Height: "1,88 m" or "1.88 m" (static)
                 elif "height" in label_text:
                     # Extract meters like "1,88" or "1.88" and convert to cm
                     height_match = re.search(r"(\d)[,.](\d+)", content_text)
@@ -291,25 +279,13 @@ class TransfermarktPlayersScraper(BaseScraper):
                         decimals = height_match.group(2)
                         player.height = meters * 100 + int(decimals[:2].ljust(2, '0'))
                 
-                # Foot: "right" or "left"
+                # Foot: "right" or "left" (static)
                 elif "foot" in label_text:
                     player.preferred_foot = content_text
                 
-                # Position: "Midfield - Defensive Midfield"
-                elif "position" in label_text:
-                    # Extract the part before " - " for general position
-                    if " - " in content_text:
-                        player.position = content_text.split(" - ")[0].strip()
-                    elif content_text:
-                        player.position = content_text
-                
-                # Contract expires: "Jun 30, 2028"
-                elif "contract expires" in label_text:
-                    player.contract_expires_date = content_text
-                
-                # Joined: "Jul 1, 2022"
-                elif "joined" in label_text:
-                    player.joined_date = content_text
+                # NOTE: We skip "position" here - position comes from team page
+                # NOTE: We skip "contract expires" - removed from model
+                # NOTE: We skip "joined" - this is current club join date, not historical
         
         # Parse position details from detail-position__position elements
         # Each element may contain a title (detail-position__title) that we need to exclude
@@ -336,10 +312,10 @@ class TransfermarktPlayersScraper(BaseScraper):
             if not pos_text:
                 continue
             
-            # First position element is main_position
-            if i == 0:
+            # First position element is main_position (only if not already set from team page)
+            if i == 0 and not player.main_position:
                 player.main_position = pos_text
-            else:
+            elif i > 0:
                 # Other positions - might be concatenated, try to split
                 known_positions = [
                     "Goalkeeper", "Sweeper", "Centre-Back", "Left-Back", "Right-Back",
@@ -368,12 +344,7 @@ class TransfermarktPlayersScraper(BaseScraper):
         if (not player.position or player.position == "N/A") and player.main_position:
             player.position = self._map_position(player.main_position)
         
-        # Current club
-        club_link = soup.select_one("span.data-header__club a")
-        if club_link:
-            player.team = club_link.text.strip()
-            href = club_link.get("href", "")
-            player.team_id = self.extract_team_id(href) or player.team_id
+        # NOTE: We do NOT update team/team_id here - those come from the season's team page
         
         return player
     
@@ -411,7 +382,7 @@ class TransfermarktPlayersScraper(BaseScraper):
                     self.scrape_player_details(player.player_id, player)
             
             all_players[info["team_id"]] = players
-            # break
+            break
         
         return all_players
     

@@ -29,8 +29,6 @@ class Player:
         preferred_foot: str = "",
         shirt_number: int = None,
         market_value: float = None,
-        contract_expires_date: str = None,
-        joined_date: str = None,
         img_url: str = "",
         profile_url: str = "",
         season: str = "",
@@ -51,8 +49,6 @@ class Player:
         self.preferred_foot = preferred_foot
         self.shirt_number = shirt_number
         self.market_value = market_value
-        self.contract_expires_date = contract_expires_date
-        self.joined_date = joined_date
         self.img_url = img_url
         self.profile_url = profile_url
         self.season = season
@@ -150,8 +146,6 @@ class Player:
             "preferred_foot": self.preferred_foot,
             "shirt_number": self.shirt_number,
             "market_value": self.market_value,
-            "contract_expires_date": self.contract_expires_date,
-            "joined_date": self.joined_date,
             "img_url": self.img_url,
             "profile_url": self.profile_url,
             "season": self.season,
@@ -180,8 +174,6 @@ class Player:
             preferred_foot=data.get("preferred_foot", ""),
             shirt_number=data.get("shirt_number"),
             market_value=data.get("market_value"),
-            contract_expires_date=data.get("contract_expires_date"),
-            joined_date=data.get("joined_date"),
             img_url=data.get("img_url", ""),
             profile_url=data.get("profile_url", ""),
             season=data.get("season", ""),
