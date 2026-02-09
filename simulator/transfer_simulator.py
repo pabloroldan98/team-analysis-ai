@@ -71,6 +71,12 @@ class TransferResult:
     total_signing_cost: int = 0  # millions
     total_predicted_value: float = 0.0  # millions
     
+    # Current squad (for context in LLM summary)
+    current_squad: List[Player] = field(default_factory=list)
+    
+    # LLM summary (optional)
+    llm_summary: Optional[str] = None
+    
     def __str__(self) -> str:
         sold_count = sum(1 for sp in self.players_sold if sp.was_sold)
         unsold_count = len(self.players_sold) - sold_count
@@ -94,12 +100,9 @@ class TransferResult:
             else:
                 lines.append(f"  - {p.name} ({p.position}): €{mv:.1f}M -> NO BUYER FOUND")
         
-        lines.append(f"\nFormation needed: {self.formation_needed}")
-        lines.append(f"  (GK: {self.formation_needed[0]}, DEF: {self.formation_needed[1]}, "
-                    f"MID: {self.formation_needed[2]}, ATT: {self.formation_needed[3]})")
-        
-        lines.append(f"\nRecommended Signings ({len(self.recommended_signings)}):")
-        lines.append(f"  Formation: {self.recommended_formation}")
+        # Format formation as "GK: X, DEF: Y, MID: Z, ATT: W"
+        formation_str = f"GK: {self.formation_needed[0]}, DEF: {self.formation_needed[1]}, MID: {self.formation_needed[2]}, ATT: {self.formation_needed[3]}"
+        lines.append(f"\nRecommended Signings ({formation_str}):")
         
         for p in self.recommended_signings:
             mv = (p.market_value or 0) / 1e6
@@ -119,9 +122,41 @@ class TransferResult:
         lines.append(f"Remaining budget: €{remaining_budget:.1f}M")
         lines.append(f"Total predicted value (1 year): €{actual_total_predicted:.1f}M")
         lines.append(f"Expected Net Financial Benefit (1 year): €{expected_net_benefit:+.1f}M")
+        
+        # Include LLM summary if available
+        if self.llm_summary:
+            lines.append(f"\n{'='*60}")
+            lines.append("AI ANALYSIS:")
+            lines.append(f"{'='*60}")
+            lines.append(self.llm_summary)
+        
         lines.append(f"{'='*60}")
         
         return "\n".join(lines)
+    
+    def generate_llm_summary(
+        self,
+        provider: Optional[str] = None,
+        api_key: Optional[str] = None,
+    ) -> str:
+        """
+        Generate an LLM summary for this result.
+        
+        Args:
+            provider: LLM provider ("openai", "anthropic", "gemini")
+            api_key: Optional API key override
+        
+        Returns:
+            Generated summary text (also stored in self.llm_summary)
+        """
+        from simulator.llm_summarizer import generate_summary_from_result
+        
+        self.llm_summary = generate_summary_from_result(
+            result=self,
+            provider=provider,
+            api_key=api_key,
+        )
+        return self.llm_summary
 
 
 class TransferSimulator:
@@ -260,7 +295,7 @@ class TransferSimulator:
         
         self.predictor = ValuePredictor(model_path=model_path)
     
-    def _predict_values(self, players: List[Player], verbose: bool = True) -> List[Player]:
+    def _predict_values(self, players: List[Player], verbose: bool = False) -> List[Player]:
         """Add predicted_value to each player using the ML model."""
         from ml.feature_engineering import build_prediction_dataset, load_team_league_mapping
         
@@ -364,6 +399,34 @@ class TransferSimulator:
         min_team_value = player.market_value * 10
         max_team_value = max(player.market_value * 200, 200_000_000)
         excluded_lower = {t.lower() for t in excluded_teams if t}
+
+        
+
+        # --- DEBUG PRINTS ---
+        print(f"[DEBUG] player.market_value = {player.market_value:,}")
+        print(f"[DEBUG] min_team_value     = {min_team_value:,}")
+        print(f"[DEBUG] max_team_value     = {max_team_value:,}")
+        print(f"[DEBUG] excluded_teams (#) = {len(excluded_lower)}")
+
+        # Bottom / Top 10 by team market value
+        sorted_teams = sorted(self.team_market_values.items(), key=lambda kv: kv[1])
+
+        print("\n[DEBUG] Bottom 10 teams by market value:")
+        for name, val in sorted_teams[:10]:
+            print(f"  {name}: {val:,}")
+
+        print("\n[DEBUG] Top 10 teams by market value:")
+        for name, val in sorted_teams[-10:][::-1]:
+            print(f"  {name}: {val:,}")
+
+        # (Optional but useful) how many teams fall in range before exclusions
+        in_range = [
+            (team_name, team_value)
+            for team_name, team_value in self.team_market_values.items()
+            if min_team_value <= team_value <= max_team_value
+        ]
+        print(f"\n[DEBUG] teams in range (before exclusions): {len(in_range)} / {len(self.team_market_values)}")
+
         
         eligible_teams = [
             team_name
@@ -462,6 +525,9 @@ class TransferSimulator:
         max_sales: int = 10,
         max_per_position: int = 3,
         verbose: bool = True,
+        generate_summary: bool = True,
+        llm_provider: Optional[str] = None,
+        llm_api_key: Optional[str] = None,
     ) -> TransferResult:
         """
         Run the transfer simulation.
@@ -471,6 +537,9 @@ class TransferSimulator:
             max_sales: Maximum players to sell
             max_per_position: Max players to sell per position
             verbose: Print progress
+            generate_summary: If True, attempt to generate LLM summary (skipped if no API key)
+            llm_provider: LLM provider ("openai", "anthropic", "gemini")
+            llm_api_key: Optional API key override
         
         Returns:
             TransferResult with simulation details
@@ -576,7 +645,7 @@ class TransferSimulator:
             total_signing_cost = sum((p.market_value or 0) for p in recommended_signings) / 1_000_000
             total_predicted_value = score
         
-        return TransferResult(
+        result = TransferResult(
             club_name=self.club_name,
             season=self.season,
             initial_budget=self.budget,
@@ -588,7 +657,19 @@ class TransferSimulator:
             recommended_formation=recommended_formation,
             total_signing_cost=int(total_signing_cost),
             total_predicted_value=total_predicted_value,
+            current_squad=club_players,
         )
+        
+        # Generate LLM summary if requested
+        if generate_summary:
+            if verbose:
+                print(f"  Generating AI summary...")
+            result.generate_llm_summary(
+                provider=llm_provider,
+                api_key=llm_api_key,
+            )
+        
+        return result
 
 
 def main():
@@ -600,6 +681,11 @@ def main():
     parser.add_argument("--season", type=str, default="2023-2024", help="Season")
     parser.add_argument("--transfer-budget", type=int, default=100, help="Transfer budget (millions)")
     parser.add_argument("--salary-budget", type=int, default=15, help="Salary budget (millions/year)")
+    parser.add_argument("--no-summary", action="store_true", help="Skip LLM summary generation")
+    parser.add_argument("--llm-provider", type=str, default=None, 
+                        help="LLM provider (openai, anthropic, gemini)")
+    parser.add_argument("--llm-api-key", type=str, default=None,
+                        help="LLM API key (or use env vars)")
     
     args = parser.parse_args()
     
@@ -610,7 +696,11 @@ def main():
         salary_budget=args.salary_budget,
     )
     
-    result = sim.run()
+    result = sim.run(
+        generate_summary=not args.no_summary,
+        llm_provider=args.llm_provider,
+        llm_api_key=args.llm_api_key,
+    )
     print(result)
 
 
