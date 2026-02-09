@@ -25,3 +25,8 @@ python-dateutil>=2.8.0
 openai>=1.0.0
 anthropic>=0.40.0
 python-dotenv>=1.0.0
+
+# Machine Learning (value prediction)
+xgboost>=2.0.0
+scikit-learn>=1.4.0
+joblib>=1.3.0

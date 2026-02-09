@@ -7,7 +7,10 @@ from typing import List, Optional
 
 from player import Player
 
-from simulator.data_loader import load_players, get_team_players
+from simulator.data_loader import (
+    get_active_players_at_season_start,
+    get_active_team_players_at_season_start,
+)
 from simulator.knapsack_solver import (
     best_full_teams,
     FORMATIONS,
@@ -115,8 +118,9 @@ def run_simulation(
         SimulationResult or None if data insufficient.
     """
     if initial_squad is None or league_players is None:
-        squad = get_team_players(season, club_name)
-        all_players = load_players(season, "all")
+        # Use active players at season start (01/07) with updated market values
+        squad = get_active_team_players_at_season_start(season, club_name)
+        all_players = get_active_players_at_season_start(season, "all")
         if not squad:
             return None
         if not all_players:

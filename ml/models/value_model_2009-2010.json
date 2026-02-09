@@ -1,0 +1,38 @@
+{
+  "train_rmse": 1.0123372640204862,
+  "val_rmse": 3.897741325556556,
+  "train_mae": 0.6913710537550491,
+  "val_mae": 2.0754833467351084,
+  "train_mape": 37.50767321368697,
+  "val_mape": 87.65547550854565,
+  "train_mdape": 20.101702213287354,
+  "val_mdape": 48.24864864349365,
+  "num_train_samples": 2864,
+  "num_val_samples": 1480,
+  "num_features": 25,
+  "train_seasons": [
+    "2005-2006",
+    "2006-2007",
+    "2007-2008",
+    "2008-2009"
+  ],
+  "val_seasons": [
+    "2009-2010"
+  ],
+  "eval_season": "2009-2010",
+  "eval_samples": 1480,
+  "eval_rmse_M": 3.897522698162687,
+  "eval_mae_M": 2.074562833729347,
+  "eval_r2": 0.710159849826344,
+  "eval_mape": 87.53701454377752,
+  "eval_mdape": 48.24864959716797,
+  "eval_within_10pct": 11.257189811010681,
+  "eval_within_25pct": 26.705012325390303,
+  "eval_within_50pct": 52.095316351684474,
+  "season": "2009-2010",
+  "cutoff_date": "2009-07-01T00:00:00",
+  "min_valuations": 5,
+  "cutoff_months": 12,
+  "full_dataset_size": 89478,
+  "filtered_dataset_size": 4344
+}

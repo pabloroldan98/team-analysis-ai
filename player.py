@@ -34,6 +34,7 @@ class Player:
         img_url: str = "",
         profile_url: str = "",
         season: str = "",
+        predicted_value: float = None,
     ):
         self.player_id = player_id
         self.name = name
@@ -55,6 +56,7 @@ class Player:
         self.img_url = img_url
         self.profile_url = profile_url
         self.season = season
+        self.predicted_value = predicted_value  # ML-predicted future value
     
     def __str__(self):
         value_str = f"€{self.market_value/1_000_000:.1f}M" if self.market_value else "N/A"
@@ -75,6 +77,18 @@ class Player:
     
     def __hash__(self):
         return hash(self.player_id or self.name)
+    
+    @property
+    def value(self) -> float:
+        """
+        Get player value, preferring predicted_value if available.
+        
+        This allows the simulator to use ML-predicted values when set,
+        falling back to market_value otherwise.
+        """
+        if self.predicted_value is not None:
+            return self.predicted_value
+        return self.market_value or 0.0
     
     @property
     def salary(self) -> float:
@@ -120,7 +134,7 @@ class Player:
     
     def to_dict(self) -> dict:
         """Convert Player to dictionary for JSON serialization."""
-        return {
+        result = {
             "player_id": self.player_id,
             "name": self.name,
             "team": self.team,
@@ -142,6 +156,10 @@ class Player:
             "profile_url": self.profile_url,
             "season": self.season,
         }
+        # Only include predicted_value if set (ML feature)
+        if self.predicted_value is not None:
+            result["predicted_value"] = self.predicted_value
+        return result
     
     @classmethod
     def from_dict(cls, data: dict) -> Player:
@@ -167,4 +185,5 @@ class Player:
             img_url=data.get("img_url", ""),
             profile_url=data.get("profile_url", ""),
             season=data.get("season", ""),
+            predicted_value=data.get("predicted_value"),
         )
