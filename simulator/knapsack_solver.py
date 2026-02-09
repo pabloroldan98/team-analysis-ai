@@ -61,6 +61,7 @@ def _players_to_knapsack_format(
     players: List[Player],
     use_predicted_value: bool = False,
     budget_int: Optional[int] = None,
+    unlimited_budget: bool = False,
 ) -> List[_KnapsackPlayer]:
     """
     Convert Player list to knapsack format.
@@ -70,6 +71,7 @@ def _players_to_knapsack_format(
         use_predicted_value: If True, use predicted_value as value to maximize
         budget_int: If provided, filter out players with price > budget_int.
                    If budget >= sum of all prices, all prices become 0 (no constraint).
+        unlimited_budget: If True, all prices are 0 (no budget constraint).
     
     Returns:
         List of _KnapsackPlayer with price and value set
@@ -81,7 +83,7 @@ def _players_to_knapsack_format(
     )
     
     # If budget covers everything, prices become 0 (no budget constraint)
-    no_budget_constraint = budget_int is not None and budget_int >= total_price
+    no_budget_constraint = unlimited_budget or (budget_int is not None and budget_int >= total_price)
     
     result = []
     for p in players:
@@ -89,7 +91,7 @@ def _players_to_knapsack_format(
         price = max(1, int(round(mv / _PRICE_SCALE)))
         
         # Filter out players that exceed budget (they can never fit)
-        if budget_int is not None and price > budget_int and not no_budget_constraint:
+        if not no_budget_constraint and budget_int is not None and price > budget_int:
             continue
         
         # If no budget constraint, all prices are 0
@@ -297,6 +299,7 @@ def best_full_teams(
     verbose: int = 0,
     progress_callback: Optional[Callable[[float], None]] = None,
     use_predicted_value: bool = False,
+    unlimited_budget: bool = False,
 ) -> List[Tuple[List[int], float, List[Player]]]:
     """
     Find best full teams (11 players) for each formation within budget.
@@ -304,21 +307,29 @@ def best_full_teams(
     Args:
         players: List of Player objects.
         formations: List of [DEF, MID, ATT] or [GK, DEF, MID, ATT].
-        budget: Max spend in euros.
+        budget: Max spend in euros (ignored if unlimited_budget=True).
         speed_up: Limit candidate list for faster computation.
         verbose: 0=quiet, 1=print, 2=verbose.
         progress_callback: Optional fn(percent: float) for UI progress.
         use_predicted_value: If True, maximize predicted_value instead of market_value.
+        unlimited_budget: If True, ignore budget constraint (all prices=0, budget=1).
 
     Returns:
         List of (formation, score, best_11_players) sorted by score descending.
     """
     formations = formations or FORMATIONS
-    budget_int = max(1, min(int(round(budget / _PRICE_SCALE)), 999_999))
+    
+    # If unlimited budget, set budget_int=1 and prices will be 0
+    if unlimited_budget:
+        budget_int = 1
+    else:
+        budget_int = max(1, min(int(round(budget / _PRICE_SCALE)), 999_999))
+    
     knapsack_players = _players_to_knapsack_format(
         players,
         use_predicted_value=use_predicted_value,
         budget_int=budget_int,
+        unlimited_budget=unlimited_budget,
     )
 
     def limit_list(plist: List, formation: List[int]) -> List:
@@ -398,16 +409,18 @@ def get_best_eleven(
     formations: Optional[List[List[int]]] = None,
     progress_callback: Optional[Callable[[float], None]] = None,
     use_predicted_value: bool = False,
+    unlimited_budget: bool = False,
 ) -> Tuple[List[Player], List[int]]:
     """
     Convenience: return best 11 and its formation.
 
     Args:
         players: List of Player objects
-        budget: Max spend in euros
+        budget: Max spend in euros (ignored if unlimited_budget=True)
         formations: List of formations to try
         progress_callback: Optional progress callback
         use_predicted_value: If True, maximize predicted_value instead of market_value
+        unlimited_budget: If True, ignore budget constraint
 
     Returns:
         (best_11_players, formation e.g. [4, 3, 3])
@@ -419,6 +432,7 @@ def get_best_eleven(
         budget=budget,
         progress_callback=progress_callback,
         use_predicted_value=use_predicted_value,
+        unlimited_budget=unlimited_budget,
     )
     if not results:
         return [], []
