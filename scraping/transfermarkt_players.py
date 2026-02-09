@@ -15,37 +15,51 @@ from player import Player
 class TransfermarktPlayersScraper(BaseScraper):
     """Scraper for player information from Transfermarkt."""
     
-    # Map detailed positions to general categories
+    # Map detailed positions to normalized categories (GK, DEF, MID, ATT)
     POSITION_MAP = {
-        "goalkeeper": "Goalkeeper",
-        "sweeper": "Defender",
-        "centre-back": "Defender",
-        "left-back": "Defender",
-        "right-back": "Defender",
-        "defensive midfield": "Midfield",
-        "central midfield": "Midfield",
-        "right midfield": "Midfield",
-        "left midfield": "Midfield",
-        "attacking midfield": "Midfield",
-        "left winger": "Attack",
-        "right winger": "Attack",
-        "second striker": "Attack",
-        "centre-forward": "Attack",
+        # "goalkeeper": "Goalkeeper",
+        # "sweeper": "Defender",
+        # "centre-back": "Defender",
+        # "left-back": "Defender",
+        # "right-back": "Defender",
+        # "defensive midfield": "Midfield",
+        # "central midfield": "Midfield",
+        # "right midfield": "Midfield",
+        # "left midfield": "Midfield",
+        # "attacking midfield": "Midfield",
+        # "left winger": "Attack",
+        # "right winger": "Attack",
+        # "second striker": "Attack",
+        # "centre-forward": "Attack",
+        "goalkeeper": "GK",
+        "sweeper": "DEF",
+        "centre-back": "DEF",
+        "left-back": "DEF",
+        "right-back": "DEF",
+        "defensive midfield": "MID",
+        "central midfield": "MID",
+        "right midfield": "MID",
+        "left midfield": "MID",
+        "attacking midfield": "MID",
+        "left winger": "ATT",
+        "right winger": "ATT",
+        "second striker": "ATT",
+        "centre-forward": "ATT",
     }
     
     @classmethod
     def _map_position(cls, detailed_position: str) -> str:
         """
-        Map a detailed position to a general category.
+        Map a detailed position to a normalized category.
         
         Args:
             detailed_position: Position like "Defensive Midfield", "Centre-Back", etc.
         
         Returns:
-            General position: "Goalkeeper", "Defender", "Midfield", or "Attack"
+            Normalized position: "GK", "DEF", "MID", or "ATT"
         """
         if not detailed_position:
-            return ""
+            return "N/A"
         
         pos_lower = detailed_position.strip().lower()
         
@@ -55,17 +69,17 @@ class TransfermarktPlayersScraper(BaseScraper):
         
         # Then try keyword match
         if "goalkeeper" in pos_lower or "keeper" in pos_lower:
-            return "Goalkeeper"
+            return "GK"
         if "back" in pos_lower:
-            return "Defender"
+            return "DEF"
         if "midfield" in pos_lower:
-            return "Midfield"
+            return "MID"
         if "forward" in pos_lower or "striker" in pos_lower:
-            return "Attack"
+            return "ATT"
         if "winger" in pos_lower or "wing" in pos_lower:
-            return "Attack"
+            return "ATT"
         
-        return ""
+        return "N/A"
     
     def scrape_team_players(self, team_id: str, team_name: str = "", team_url: str = None) -> List[Player]:
         """
