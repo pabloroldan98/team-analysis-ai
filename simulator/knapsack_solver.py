@@ -57,18 +57,57 @@ class _KnapsackPlayer:
         return getattr(self.player, name)
 
 
-def _players_to_knapsack_format(players: List[Player]) -> List[_KnapsackPlayer]:
-    """Convert Player list to knapsack format: price=market_value, value=market_value."""
+def _players_to_knapsack_format(
+    players: List[Player],
+    use_predicted_value: bool = False,
+    budget_int: Optional[int] = None,
+) -> List[_KnapsackPlayer]:
+    """
+    Convert Player list to knapsack format.
+    
+    Args:
+        players: List of Player objects
+        use_predicted_value: If True, use predicted_value as value to maximize
+        budget_int: If provided, filter out players with price > budget_int.
+                   If budget >= sum of all prices, all prices become 0 (no constraint).
+    
+    Returns:
+        List of _KnapsackPlayer with price and value set
+    """
+    # Calculate total market value sum
+    total_price = sum(
+        max(1, int(round((p.market_value or 0.0) / _PRICE_SCALE)))
+        for p in players
+    )
+    
+    # If budget covers everything, prices become 0 (no budget constraint)
+    no_budget_constraint = budget_int is not None and budget_int >= total_price
+    
     result = []
     for p in players:
         mv = p.market_value or 0.0
         price = max(1, int(round(mv / _PRICE_SCALE)))
+        
+        # Filter out players that exceed budget (they can never fit)
+        if budget_int is not None and price > budget_int and not no_budget_constraint:
+            continue
+        
+        # If no budget constraint, all prices are 0
+        if no_budget_constraint:
+            price = 0
+        
+        # Value to maximize: predicted_value or market_value
+        if use_predicted_value:
+            value = float(p.predicted_value or p.market_value or 0.0)
+        else:
+            value = float(mv)
+        
         result.append(
             _KnapsackPlayer(
                 player=p,
                 position=p.position,
                 price=price,
-                value=float(mv),
+                value=value,
             )
         )
     return result
@@ -257,6 +296,7 @@ def best_full_teams(
     speed_up: bool = True,
     verbose: int = 0,
     progress_callback: Optional[Callable[[float], None]] = None,
+    use_predicted_value: bool = False,
 ) -> List[Tuple[List[int], float, List[Player]]]:
     """
     Find best full teams (11 players) for each formation within budget.
@@ -268,24 +308,29 @@ def best_full_teams(
         speed_up: Limit candidate list for faster computation.
         verbose: 0=quiet, 1=print, 2=verbose.
         progress_callback: Optional fn(percent: float) for UI progress.
+        use_predicted_value: If True, maximize predicted_value instead of market_value.
 
     Returns:
         List of (formation, score, best_11_players) sorted by score descending.
     """
     formations = formations or FORMATIONS
-    knapsack_players = _players_to_knapsack_format(players)
     budget_int = max(1, min(int(round(budget / _PRICE_SCALE)), 999_999))
+    knapsack_players = _players_to_knapsack_format(
+        players,
+        use_predicted_value=use_predicted_value,
+        budget_int=budget_int,
+    )
 
     def limit_list(plist: List, formation: List[int]) -> List:
         if not speed_up:
             return plist
         # Limit candidates to keep combinations tractable (C(n,r) grows fast)
         if any(x >= 6 for x in formation):
-            return plist[:70]
+            return plist[:90]
         if any(x >= 5 for x in formation):
-            return plist[:80]
-        if any(x >= 4 for x in formation):
             return plist[:100]
+        if any(x >= 4 for x in formation):
+            return plist[:150]
         return plist
 
     total_ops = 0
@@ -352,9 +397,17 @@ def get_best_eleven(
     budget: float = 300_000_000,
     formations: Optional[List[List[int]]] = None,
     progress_callback: Optional[Callable[[float], None]] = None,
+    use_predicted_value: bool = False,
 ) -> Tuple[List[Player], List[int]]:
     """
     Convenience: return best 11 and its formation.
+
+    Args:
+        players: List of Player objects
+        budget: Max spend in euros
+        formations: List of formations to try
+        progress_callback: Optional progress callback
+        use_predicted_value: If True, maximize predicted_value instead of market_value
 
     Returns:
         (best_11_players, formation e.g. [4, 3, 3])
@@ -365,6 +418,7 @@ def get_best_eleven(
         formations=formations,
         budget=budget,
         progress_callback=progress_callback,
+        use_predicted_value=use_predicted_value,
     )
     if not results:
         return [], []
