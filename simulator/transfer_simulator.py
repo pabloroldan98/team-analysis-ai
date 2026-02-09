@@ -26,6 +26,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
+from tqdm import tqdm
+
 from player import Player
 from valuation import Valuation
 from simulator.knapsack_solver import best_full_teams
@@ -34,6 +36,17 @@ from simulator.knapsack_solver import best_full_teams
 ROOT_DIR = Path(__file__).parent.parent
 DATA_DIR = ROOT_DIR / "data" / "json"
 MODELS_DIR = ROOT_DIR / "ml" / "models"
+
+
+@dataclass
+class SoldPlayer:
+    """A player that was sold with destination info."""
+    player: Player
+    destination_team: Optional[str]  # None if no team could afford them
+    
+    @property
+    def was_sold(self) -> bool:
+        return self.destination_team is not None
 
 
 @dataclass
@@ -48,8 +61,8 @@ class TransferResult:
     sales_revenue: int   # millions
     total_budget: int    # millions
     
-    # Players sold
-    players_sold: List[Player] = field(default_factory=list)
+    # Players sold (with destination)
+    players_sold: List[SoldPlayer] = field(default_factory=list)
     formation_needed: List[int] = field(default_factory=list)  # [GK, DEF, MID, ATT] needed
     
     # Recommended signings
@@ -59,6 +72,9 @@ class TransferResult:
     total_predicted_value: float = 0.0  # millions
     
     def __str__(self) -> str:
+        sold_count = sum(1 for sp in self.players_sold if sp.was_sold)
+        unsold_count = len(self.players_sold) - sold_count
+        
         lines = [
             f"\n{'='*60}",
             f"Transfer Simulation: {self.club_name} ({self.season})",
@@ -67,12 +83,16 @@ class TransferResult:
             f"  Initial:      €{self.initial_budget}M",
             f"  Sales:       +€{self.sales_revenue}M",
             f"  Total:        €{self.total_budget}M",
-            f"\nPlayers Sold ({len(self.players_sold)}):",
+            f"\nPlayers Sold ({sold_count} sold, {unsold_count} no buyer found):",
         ]
         
-        for p in self.players_sold:
+        for sp in self.players_sold:
+            p = sp.player
             mv = (p.market_value or 0) / 1e6
-            lines.append(f"  - {p.name} ({p.position}): €{mv:.1f}M")
+            if sp.was_sold:
+                lines.append(f"  - {p.name} ({p.position}): €{mv:.1f}M -> {sp.destination_team}")
+            else:
+                lines.append(f"  - {p.name} ({p.position}): €{mv:.1f}M -> NO BUYER FOUND")
         
         lines.append(f"\nFormation needed: {self.formation_needed}")
         lines.append(f"  (GK: {self.formation_needed[0]}, DEF: {self.formation_needed[1]}, "
@@ -84,10 +104,21 @@ class TransferResult:
         for p in self.recommended_signings:
             mv = (p.market_value or 0) / 1e6
             pv = (p.predicted_value or 0) / 1e6
-            lines.append(f"  - {p.name} ({p.position}, {p.team}): €{mv:.1f}M -> €{pv:.1f}M predicted")
+            lines.append(f"  - {p.name} ({p.position}, from {p.team}): €{mv:.1f}M -> €{pv:.1f}M predicted")
         
-        lines.append(f"\nTotal cost: €{self.total_signing_cost}M")
-        lines.append(f"Total predicted value: €{self.total_predicted_value/1e6:.1f}M")
+        # Calculate totals from actual player values
+        actual_total_cost = sum((p.market_value or 0) for p in self.recommended_signings) / 1e6
+        actual_total_predicted = sum((p.predicted_value or 0) for p in self.recommended_signings) / 1e6
+        remaining_budget = self.total_budget - actual_total_cost
+        
+        # Expected Net Financial Benefit = predicted value - cost
+        expected_net_benefit = actual_total_predicted - actual_total_cost
+        
+        lines.append(f"\nBudget available: €{self.total_budget}M")
+        lines.append(f"Total cost: €{actual_total_cost:.1f}M")
+        lines.append(f"Remaining budget: €{remaining_budget:.1f}M")
+        lines.append(f"Total predicted value (1 year): €{actual_total_predicted:.1f}M")
+        lines.append(f"Expected Net Financial Benefit (1 year): €{expected_net_benefit:+.1f}M")
         lines.append(f"{'='*60}")
         
         return "\n".join(lines)
@@ -133,6 +164,7 @@ class TransferSimulator:
         # Data containers
         self.club_players: List[Player] = []
         self.all_players: List[Player] = []
+        self.team_market_values: Dict[str, float] = {}  # team_name -> total market value
         self.predictor = None
     
     def _load_players_for_season(self) -> Dict[str, Player]:
@@ -228,7 +260,7 @@ class TransferSimulator:
         
         self.predictor = ValuePredictor(model_path=model_path)
     
-    def _predict_values(self, players: List[Player]) -> List[Player]:
+    def _predict_values(self, players: List[Player], verbose: bool = True) -> List[Player]:
         """Add predicted_value to each player using the ML model."""
         from ml.feature_engineering import build_prediction_dataset, load_team_league_mapping
         
@@ -240,6 +272,8 @@ class TransferSimulator:
         cutoff_date = datetime(start_year, 7, 1)
         
         # Load valuations for feature extraction
+        if verbose:
+            print("    Loading valuations...")
         all_valuations = self._load_all_valuations()
         team_league_mapping = load_team_league_mapping()
         
@@ -247,6 +281,8 @@ class TransferSimulator:
         player_dict = {p.player_id: p for p in players}
         
         # Build prediction dataset
+        if verbose:
+            print("    Building features...")
         features = build_prediction_dataset(
             all_valuations,
             cutoff_date,
@@ -256,12 +292,15 @@ class TransferSimulator:
         
         # Get predictions
         if features:
+            if verbose:
+                print(f"    Predicting values for {len(features)} players...")
             predictions = self.predictor.predict_batch(features)
             
-            # Map predictions back to players
+            # Map predictions back to players with progress bar
             pred_map = {f.player_id: pred for f, pred in zip(features, predictions)}
             
-            for player in players:
+            iterator = tqdm(players, desc="    Assigning predictions", disable=not verbose)
+            for player in iterator:
                 if player.player_id in pred_map:
                     player.predicted_value = pred_map[player.player_id]
                 else:
@@ -290,18 +329,68 @@ class TransferSimulator:
             if p.team and club_lower in p.team.lower()
         ]
     
+    def _calculate_team_market_values(self, all_players: List[Player]) -> Dict[str, float]:
+        """Calculate total market value for each team."""
+        team_values: Dict[str, float] = {}
+        
+        for player in all_players:
+            if player.team:
+                team_name = player.team
+                team_values[team_name] = team_values.get(team_name, 0) + (player.market_value or 0)
+        
+        return team_values
+    
+    def _find_destination_team(
+        self,
+        player: Player,
+        excluded_teams: List[str],
+    ) -> Optional[str]:
+        """
+        Find a random team that can afford the player.
+        
+        A team can afford a player if: team_market_value >= player_market_value * 10
+        The signing makes more sense if: player_market_value * 200 >= team_market_value (to avoid Barcelona buying really cheap players for example)
+        
+        Args:
+            player: The player being sold
+            excluded_teams: Teams to exclude (e.g., current club)
+        
+        Returns:
+            Team name or None if no team can afford the player
+        """
+        if not player.market_value:
+            return None
+        
+        min_team_value = player.market_value * 10
+        max_team_value = max(player.market_value * 200, 200_000_000)
+        excluded_lower = {t.lower() for t in excluded_teams if t}
+        
+        eligible_teams = [
+            team_name
+            for team_name, team_value in self.team_market_values.items()
+            if min_team_value <= team_value <= max_team_value and team_name.lower() not in excluded_lower
+        ]
+        
+        if eligible_teams:
+            return random.choice(eligible_teams)
+        
+        return None
+    
     def _sell_random_players(
         self,
         club_players: List[Player],
-        min_sales: int = 1,
+        min_sales: int = 5,
         max_sales: int = 10,
         max_per_position: int = 3,
-    ) -> Tuple[List[Player], List[int]]:
+    ) -> Tuple[List[SoldPlayer], List[int]]:
         """
         Randomly sell players from the club.
         
+        Players are only sold if a destination team can afford them
+        (team_market_value >= player_market_value * 10).
+        
         Returns:
-            (players_sold, formation_needed) where formation_needed is [GK, DEF, MID, ATT]
+            (sold_players, formation_needed) where formation_needed is [GK, DEF, MID, ATT]
         """
         # Group players by position
         by_position: Dict[str, List[Player]] = {
@@ -313,12 +402,12 @@ class TransferSimulator:
             if pos in by_position:
                 by_position[pos].append(p)
         
-        # Decide how many to sell (1-10)
+        # Decide how many to try to sell (1-10)
         num_to_sell = random.randint(min_sales, max_sales)
         
-        # Track sales per position
+        # Track sales per position (only count actually sold)
         sales_per_position = {"GK": 0, "DEF": 0, "MID": 0, "ATT": 0}
-        sold = []
+        sold_players: List[SoldPlayer] = []
         
         # Create pool of sellable players
         available = []
@@ -327,16 +416,28 @@ class TransferSimulator:
         
         random.shuffle(available)
         
+        attempts = 0
         for player, pos in available:
-            if len(sold) >= num_to_sell:
+            if attempts >= num_to_sell:
                 break
             
             # Check max per position constraint
             if sales_per_position[pos] < max_per_position:
-                sold.append(player)
-                sales_per_position[pos] += 1
+                attempts += 1
+                
+                # Try to find a destination team
+                destination = self._find_destination_team(
+                    player,
+                    excluded_teams=[self.club_name],
+                )
+                
+                sold_players.append(SoldPlayer(player=player, destination_team=destination))
+                
+                # Only count towards position if actually sold
+                if destination is not None:
+                    sales_per_position[pos] += 1
         
-        # Formation needed: [GK, DEF, MID, ATT]
+        # Formation needed: [GK, DEF, MID, ATT] (only positions that were actually sold)
         formation_needed = [
             sales_per_position["GK"],
             sales_per_position["DEF"],
@@ -344,7 +445,7 @@ class TransferSimulator:
             sales_per_position["ATT"],
         ]
         
-        return sold, formation_needed
+        return sold_players, formation_needed
     
     def _get_available_players(
         self,
@@ -357,7 +458,7 @@ class TransferSimulator:
     
     def run(
         self,
-        min_sales: int = 1,
+        min_sales: int = 5,
         max_sales: int = 10,
         max_per_position: int = 3,
         verbose: bool = True,
@@ -394,24 +495,37 @@ class TransferSimulator:
         if verbose:
             print(f"  {self.club_name} has {len(club_players)} players")
         
+        # Calculate team market values for finding destination teams
+        self.team_market_values = self._calculate_team_market_values(all_players)
+        
+        if verbose:
+            print(f"  Calculated market values for {len(self.team_market_values)} teams")
+        
         # Sell random players
-        players_sold, formation_needed = self._sell_random_players(
+        sold_players, formation_needed = self._sell_random_players(
             club_players,
             min_sales=min_sales,
             max_sales=max_sales,
             max_per_position=max_per_position,
         )
         
-        sales_revenue = sum((p.market_value or 0) for p in players_sold) / 1_000_000
+        # Only count revenue from players that were actually sold
+        actually_sold = [sp for sp in sold_players if sp.was_sold]
+        sales_revenue = sum((sp.player.market_value or 0) for sp in actually_sold) / 1_000_000
         total_budget = self.budget + int(sales_revenue)
         
         if verbose:
-            print(f"  Sold {len(players_sold)} players for €{sales_revenue:.1f}M")
+            print(f"  Attempted to sell {len(sold_players)} players:")
+            print(f"    - {len(actually_sold)} sold for €{sales_revenue:.1f}M")
+            print(f"    - {len(sold_players) - len(actually_sold)} no buyer found")
             print(f"  Total budget: €{total_budget}M")
             print(f"  Formation needed: {formation_needed}")
         
-        # Get available players (not in club)
+        # Get available players (not in club, and not the ones we're trying to sell)
+        sold_player_ids = {sp.player.player_id for sp in sold_players}
         available_players = self._get_available_players(all_players, club_players)
+        # Also exclude sold players (they shouldn't be bought back)
+        available_players = [p for p in available_players if p.player_id not in sold_player_ids]
         
         if verbose:
             print(f"  {len(available_players)} players available for signing")
@@ -420,6 +534,7 @@ class TransferSimulator:
         if verbose:
             print(f"  Predicting future values...")
         
+        # available_players = self._predict_values(available_players, verbose=verbose)
         available_players = self._predict_values(available_players)
         
         # Find best signings using knapsack
@@ -467,7 +582,7 @@ class TransferSimulator:
             initial_budget=self.budget,
             sales_revenue=int(sales_revenue),
             total_budget=total_budget,
-            players_sold=players_sold,
+            players_sold=sold_players,
             formation_needed=formation_needed,
             recommended_signings=recommended_signings,
             recommended_formation=recommended_formation,

@@ -8,21 +8,18 @@ from __future__ import annotations
 
 import copy
 import itertools
+import math
 from collections import defaultdict
 from dataclasses import dataclass
 from typing import Callable, List, Optional, Tuple
+from tqdm import tqdm
+import streamlit as st
 
 try:
-    import streamlit as st
-
     STREAMLIT_ACTIVE = st.runtime.exists()
 except Exception:
     STREAMLIT_ACTIVE = False
 
-try:
-    from tqdm import tqdm
-except ImportError:
-    tqdm = None
 
 from player import Player
 
@@ -48,7 +45,7 @@ class _KnapsackPlayer:
     player: Player
     position: str
     price: int
-    value: float
+    value: int
 
     def __getattr__(self, name: str):
         """Delegate unknown attrs to the underlying Player."""
@@ -88,7 +85,8 @@ def _players_to_knapsack_format(
     result = []
     for p in players:
         mv = p.market_value or 0.0
-        price = max(1, int(round(mv / _PRICE_SCALE)))
+        # price = max(0, int(round(mv / _PRICE_SCALE)))
+        price = max(1, int(math.ceil(mv / _PRICE_SCALE)))
         
         # Filter out players that exceed budget (they can never fit)
         if not no_budget_constraint and budget_int is not None and price > budget_int:
@@ -98,11 +96,11 @@ def _players_to_knapsack_format(
         if no_budget_constraint:
             price = 0
         
-        # Value to maximize: predicted_value or market_value
+        # Value to maximize: predicted_value or market_value (scaled to int)
         if use_predicted_value:
-            value = float(p.predicted_value or p.market_value or 0.0)
+            value = int(round((p.predicted_value or p.market_value or 0.0) / _PRICE_SCALE))
         else:
-            value = float(mv)
+            value = int(round(mv / _PRICE_SCALE))
         
         result.append(
             _KnapsackPlayer(
@@ -180,6 +178,8 @@ def filter_players_knapsack(
     - len==3: [DEF, MID, ATT], GK=1
     - len==4: [GK, DEF, MID, ATT]
     - else: [DEF, MID..., ATT], GK=1
+    
+    If a position needs 0 players, all players of that position are excluded.
     """
     # Shallow iteration - we don't mutate items, only build filtered list
     result = list(players_list)
@@ -201,17 +201,24 @@ def filter_players_knapsack(
         max_att = formation[-1]
 
     max_limits = {"GK": max_gk, "DEF": max_def, "MID": max_mid, "ATT": max_att}
+    
+    # Positions that need 0 players should be completely excluded
+    excluded_positions = {pos for pos, limit in max_limits.items() if limit == 0}
 
     buckets = defaultdict(lambda: defaultdict(list))
     for p in result:
+        # Skip players from positions that need 0 players
+        if p.position in excluded_positions:
+            continue
         buckets[p.position][p.price].append(p)
 
     filtered = []
     for position, price_dict in buckets.items():
         limit = max_limits.get(position)
         for group in price_dict.values():
-            if limit is None:
-                filtered.extend(group)
+            if limit is None or limit == 0:
+                # Skip positions with 0 limit (already handled above, but just in case)
+                continue
             else:
                 top_n = sorted(group, key=lambda pl: pl.value, reverse=True)[:limit]
                 filtered.extend(top_n)
@@ -227,6 +234,8 @@ def players_preproc(
     """
     Preprocess players into groups (GK, DEF, MID, ATT) with combinations.
     Returns (values, weights, indexes) per group for knapsack_multichoice_onepick.
+    
+    Groups with 0 requirement are skipped (not included in output).
     """
     if len(formation) == 3:
         max_gk = 1
@@ -243,6 +252,9 @@ def players_preproc(
         max_def = formation[0]
         max_mid = sum(formation[1:-1])
         max_att = formation[-1]
+
+    requirements = [max_gk, max_def, max_mid, max_att]
+    positions = ["GK", "DEF", "MID", "ATT"]
 
     def generate_group(full: List, pos: str):
         vals, wgts, idxs = [], [], []
@@ -265,27 +277,28 @@ def players_preproc(
             list(combs_i),
         )
 
-    gk_v, gk_w, gk_i = generate_group(players_list, "GK")
-    gk_cv, gk_cw, gk_ci = group_preproc(gk_v, gk_w, gk_i, max_gk)
+    all_values = []
+    all_weights = []
+    all_indexes = []
+    
+    for pos, req in zip(positions, requirements):
+        if req <= 0:
+            # Skip positions with 0 requirement
+            continue
+        
+        g_v, g_w, g_i = generate_group(players_list, pos)
+        cv, cw, ci = group_preproc(g_v, g_w, g_i, req)
+        
+        # If we need players from this position but have none, fail
+        if req > 0 and (not cv or not cw or not ci):
+            return [], [], []
+        
+        all_values.append(cv)
+        all_weights.append(cw)
+        all_indexes.append(ci)
 
-    def_v, def_w, def_i = generate_group(players_list, "DEF")
-    def_cv, def_cw, def_ci = group_preproc(def_v, def_w, def_i, max_def)
-
-    mid_v, mid_w, mid_i = generate_group(players_list, "MID")
-    mid_cv, mid_cw, mid_ci = group_preproc(mid_v, mid_w, mid_i, max_mid)
-
-    att_v, att_w, att_i = generate_group(players_list, "ATT")
-    att_cv, att_cw, att_ci = group_preproc(att_v, att_w, att_i, max_att)
-
-    all_values = [gk_cv, def_cv, mid_cv, att_cv]
-    all_weights = [gk_cw, def_cw, mid_cw, att_cw]
-    all_indexes = [gk_ci, def_ci, mid_ci, att_ci]
-
-    # Skip if any required group is empty (cannot form valid 11)
-    if any(
-        not v or not w or not idx
-        for v, w, idx in zip(all_values, all_weights, all_indexes)
-    ):
+    # If no groups at all (all requirements are 0), return empty
+    if not all_values:
         return [], [], []
 
     return all_values, all_weights, all_indexes
@@ -295,7 +308,7 @@ def best_full_teams(
     players: List[Player],
     formations: Optional[List[List[int]]] = None,
     budget: float = 300_000_000,
-    speed_up: bool = True,
+    speed_up: bool = False,
     verbose: int = 0,
     progress_callback: Optional[Callable[[float], None]] = None,
     use_predicted_value: bool = False,
@@ -375,6 +388,8 @@ def best_full_teams(
     update_master = make_update_master() if total_ops else None
 
     results = []
+    # formation_iter = tqdm(precomputed, desc="  Knapsack optimization", disable=verbose < 1)
+    # for formation, filtered, vals, wgts, idxs in formation_iter:
     for formation, filtered, vals, wgts, idxs in precomputed:
         if not vals or not wgts or not idxs:
             continue
