@@ -382,7 +382,7 @@ class TransfermarktPlayersScraper(BaseScraper):
                     self.scrape_player_details(player.player_id, player)
             
             all_players[info["team_id"]] = players
-            break
+            # break
         
         return all_players
     
