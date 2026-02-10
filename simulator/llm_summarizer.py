@@ -19,6 +19,7 @@ def generate_summary_from_result(
     result: "TransferResult",
     provider: Optional[str] = None,
     api_key: Optional[str] = None,
+    language: Optional[str] = None,
 ) -> Optional[str]:
     """
     Generate AI summary from a TransferResult object.
@@ -27,6 +28,7 @@ def generate_summary_from_result(
         result: TransferResult from the simulation
         provider: LLM provider ("openai", "anthropic", "gemini")
         api_key: Optional API key override
+        language: Response language ("es" for Spanish, "en" for English, etc.)
     
     Returns:
         AI-generated summary text, or None if no API key is available
@@ -101,6 +103,7 @@ def generate_summary_from_result(
         total_predicted=total_predicted,
         net_benefit=net_benefit,
         remaining_budget=result.total_budget - total_cost,
+        language=language,
     )
     
     provider = (provider or os.getenv("LLM_PROVIDER", "openai")).lower()
@@ -185,6 +188,7 @@ def _build_detailed_prompt(
     total_predicted: float,
     net_benefit: float,
     remaining_budget: float,
+    language: Optional[str] = None,
 ) -> str:
     """Build a detailed prompt for the LLM based on full simulation data."""
     sold_text = "\n".join(sold_info) if sold_info else "  None"
@@ -213,7 +217,7 @@ Write a strategic analysis (8-12 sentences) that tells a story about this transf
    - Financial verdict: Expected Net Benefit is €{net_benefit:+.1f}M - is this good business?
 
 Be specific about player names, positions, and values. Tell a coherent story about what this window means for the club.
-If the club name is in Spanish, respond in Spanish; otherwise respond in English.
+{f'IMPORTANT: Write your entire response in Spanish.' if language == 'es' else f'IMPORTANT: Write your entire response in English.' if language == 'en' else 'If the club name is in Spanish, respond in Spanish; otherwise respond in English.'}
 
 === DATA FOR ANALYSIS ===
 

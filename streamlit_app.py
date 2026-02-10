@@ -37,6 +37,19 @@ DATA_DIR = ROOT_DIR / "data" / "json"
 POS_ORDER = ["GK", "DEF", "MID", "ATT"]
 POS_KEYS = {"GK": "pos_gk", "DEF": "pos_def", "MID": "pos_mid", "ATT": "pos_att"}
 
+# League sort priority for the club selector (lower = first)
+LEAGUE_PRIORITY = {
+    "laliga": 0, "la liga": 0,
+    "premier league": 1,
+    "serie a": 2, "seriea": 2,
+    "bundesliga": 3,
+    "ligue 1": 4, "ligue1": 4,
+    "liga portugal": 5, "primeira liga": 5,
+    "eredivisie": 6,
+    "segunda división": 7, "segunda division": 7,
+    "championship": 8,
+}
+
 
 # =============================================================================
 # HELPERS
@@ -74,13 +87,20 @@ def _get_available_seasons() -> List[str]:
 
 
 def _get_clubs_for_season(season: str) -> List[Dict]:
-    """Load teams_all_{season}.json and return raw list of team dicts."""
+    """Load teams_all_{season}.json sorted by league priority then market value."""
     fp = DATA_DIR / f"teams_all_{season}.json"
     if not fp.exists():
         return []
     with open(fp, "r", encoding="utf-8") as fh:
         data = json.load(fh)
-    return data if isinstance(data, list) else []
+    if not isinstance(data, list):
+        return []
+    # Sort: first by league priority, then by total_market_value descending
+    data.sort(key=lambda c: (
+        LEAGUE_PRIORITY.get((c.get("league") or "").lower(), 99),
+        -(c.get("total_market_value") or 0),
+    ))
+    return data
 
 
 def _detect_llm_provider(api_key: str) -> str:
@@ -172,18 +192,21 @@ def render_inputs(lang: str):
         club_name = st.selectbox(t(lang, "select_club"), options=club_names)
 
     col_tb, col_sb, col_ul = st.columns([2, 2, 1])
+    with col_ul:
+        st.markdown("<br>", unsafe_allow_html=True)  # vertical align
+        unlimited = st.checkbox(t(lang, "unlimited_budget"), value=False)
     with col_tb:
         transfer_budget = st.number_input(
             t(lang, "transfer_budget"), min_value=0, max_value=2000, value=100, step=10,
+            disabled=unlimited,
         )
     with col_sb:
         salary_budget = st.number_input(
             t(lang, "salary_budget"), min_value=0, max_value=2000, value=50, step=10,
+            disabled=unlimited,
         )
-    with col_ul:
-        st.markdown("<br>", unsafe_allow_html=True)  # vertical align
-        unlimited = st.checkbox(t(lang, "unlimited_budget"), value=False)
 
+    st.caption(t(lang, "budget_first_note"))
     st.caption(t(lang, "budget_note"))
 
     return season, club_name, transfer_budget, salary_budget, unlimited, clubs_data
@@ -201,101 +224,98 @@ def run_simulation_with_progress(
     salary_budget: int,
     unlimited: bool,
 ):
-    """Run TransferSimulator.run() while feeding a Streamlit progress bar."""
+    """Run TransferSimulator.run() while feeding a Streamlit progress bar + spinner."""
     from simulator.transfer_simulator import TransferSimulator, TransferResult
 
     progress = st.progress(0, text=t(lang, "step_loading"))
-    status = st.empty()
+    hint = st.empty()
+    hint.caption(t(lang, "sim_may_take"))
 
     def _step(pct: float, key: str):
-        progress.progress(min(pct, 1.0), text=t(lang, key))
+        progress.progress(min(pct, 1.0), text=f"⏳ {t(lang, key)}")
 
-    # 1. Instantiate simulator
-    _step(0.05, "step_loading")
-    sim = TransferSimulator(
-        club_name=club_name,
-        season=season,
-        transfer_budget=transfer_budget if not unlimited else 999_999,
-        salary_budget=salary_budget if not unlimited else 999_999,
-    )
+    with st.spinner(""):
+        # 1. Load data  (step 1/7 ≈ 14%)
+        _step(0.05, "step_loading")
+        sim = TransferSimulator(
+            club_name=club_name,
+            season=season,
+            transfer_budget=transfer_budget if not unlimited else 999_999,
+            salary_budget=salary_budget if not unlimited else 999_999,
+        )
+        players_dict = sim._load_players_for_season()
+        valuations = sim._load_valuations_for_season()
 
-    # 2. Load data
-    _step(0.10, "step_loading")
-    players_dict = sim._load_players_for_season()
-    valuations = sim._load_valuations_for_season()
-    all_players = sim._update_players_with_valuations(players_dict, valuations)
-    sim.all_players = all_players
+        # 2. Update data  (step 2/7 ≈ 28%)
+        _step(0.20, "step_team")
+        all_players = sim._update_players_with_valuations(players_dict, valuations)
+        sim.all_players = all_players
 
-    # 3. Club players
-    _step(0.20, "step_team")
-    club_players = sim._get_club_players(all_players)
-    if not club_players:
-        progress.empty()
-        st.error(f"No players found for **{club_name}** in season **{season}**.")
-        st.stop()
+        # 3. Club players  (step 3/7 ≈ 42%)
+        _step(0.35, "step_team_values")
+        club_players = sim._get_club_players(all_players)
+        if not club_players:
+            progress.empty()
+            st.error(f"No players found for **{club_name}** in season **{season}**.")
+            st.stop()
 
-    # 4. Team market values
-    _step(0.25, "step_team_values")
-    sim.team_market_values = sim._calculate_team_market_values(all_players)
+        # 4. Team market values + sell phase  (step 4/7 ≈ 56%)
+        _step(0.55, "step_selling")
+        sim.team_market_values = sim._calculate_team_market_values(all_players)
+        sold_players, formation_needed = sim._sell_random_players(club_players)
+        actually_sold = [sp for sp in sold_players if sp.was_sold]
+        sales_revenue = sum((sp.player.market_value or 0) for sp in actually_sold) / 1_000_000
+        total_budget = sim.budget + int(sales_revenue)
 
-    # 5. Sell phase
-    _step(0.30, "step_selling")
-    sold_players, formation_needed = sim._sell_random_players(club_players)
-    actually_sold = [sp for sp in sold_players if sp.was_sold]
-    sales_revenue = sum((sp.player.market_value or 0) for sp in actually_sold) / 1_000_000
-    total_budget = sim.budget + int(sales_revenue)
+        # 5. Predict values  (step 5/7 ≈ 70%)
+        _step(0.70, "step_predicting")
+        sold_player_ids = {sp.player.player_id for sp in sold_players}
+        available_players = sim._get_available_players(all_players, club_players)
+        available_players = [p for p in available_players if p.player_id not in sold_player_ids]
+        available_players = sim._predict_values(available_players, verbose=False)
 
-    # 6. Predict values
-    _step(0.40, "step_predicting")
-    sold_player_ids = {sp.player.player_id for sp in sold_players}
-    available_players = sim._get_available_players(all_players, club_players)
-    available_players = [p for p in available_players if p.player_id not in sold_player_ids]
-    available_players = sim._predict_values(available_players, verbose=False)
+        # 6. Knapsack optimisation  (step 6/7 ≈ 84%)
+        _step(0.85, "step_knapsack")
+        from simulator.knapsack_solver import best_full_teams
 
-    # 7. Knapsack optimisation
-    _step(0.70, "step_knapsack")
-    from simulator.knapsack_solver import best_full_teams
+        gk_n, def_n, mid_n, att_n = formation_needed
+        custom_formation = (
+            [[gk_n, def_n, mid_n, att_n]] if gk_n > 0
+            else [[def_n, mid_n, att_n]]
+        )
+        results = best_full_teams(
+            available_players,
+            formations=custom_formation,
+            budget=total_budget * 1_000_000,
+            use_predicted_value=True,
+            verbose=0,
+            unlimited_budget=unlimited,
+        )
 
-    gk_n, def_n, mid_n, att_n = formation_needed
-    custom_formation = (
-        [[gk_n, def_n, mid_n, att_n]] if gk_n > 0
-        else [[def_n, mid_n, att_n]]
-    )
-    results = best_full_teams(
-        available_players,
-        formations=custom_formation,
-        budget=total_budget * 1_000_000,
-        use_predicted_value=True,
-        verbose=0,
-        unlimited_budget=unlimited,
-    )
+        recommended_signings = []
+        recommended_formation = []
+        if results:
+            recommended_formation, _, recommended_signings = results[0]
 
-    recommended_signings = []
-    recommended_formation = []
-    if results:
-        recommended_formation, _, recommended_signings = results[0]
+        # 7. Build result  (step 7/7 ≈ 100%)
+        result = TransferResult(
+            club_name=club_name,
+            season=season,
+            initial_budget=sim.budget,
+            sales_revenue=int(sales_revenue),
+            total_budget=total_budget,
+            players_sold=sold_players,
+            formation_needed=formation_needed,
+            recommended_signings=recommended_signings,
+            recommended_formation=recommended_formation,
+            total_signing_cost=int(sum((p.market_value or 0) for p in recommended_signings) / 1e6),
+            total_predicted_value=0.0,
+            current_squad=club_players,
+        )
 
-    # 8. Build TransferResult
-    _step(0.95, "step_done")
-    from simulator.transfer_simulator import TransferResult
-
-    result = TransferResult(
-        club_name=club_name,
-        season=season,
-        initial_budget=sim.budget,
-        sales_revenue=int(sales_revenue),
-        total_budget=total_budget,
-        players_sold=sold_players,
-        formation_needed=formation_needed,
-        recommended_signings=recommended_signings,
-        recommended_formation=recommended_formation,
-        total_signing_cost=int(sum((p.market_value or 0) for p in recommended_signings) / 1e6),
-        total_predicted_value=0.0,
-        current_squad=club_players,
-    )
-
-    progress.progress(1.0, text=t(lang, "step_done"))
-    time.sleep(0.4)
+    progress.progress(1.0, text=f"✅ {t(lang, 'step_done')}")
+    hint.empty()
+    time.sleep(0.5)
     progress.empty()
 
     return result
@@ -328,8 +348,8 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
     title_html = ""
     if club_logo_url:
         title_html += (
-            f'<img src="{club_logo_url}" width="44" height="44" '
-            f'style="vertical-align:middle;margin-right:10px;" />'
+            f'<img src="{club_logo_url}" width="44" '
+            f'style="vertical-align:middle;margin-right:10px;object-fit:contain;" />'
         )
     title_html += (
         f'<span style="font-size:1.6rem;font-weight:700;vertical-align:middle;">'
@@ -339,11 +359,12 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
     st.markdown(title_html, unsafe_allow_html=True)
 
     # ── Budget metrics ──────────────────────────────────────────────────────
+    is_unlimited = result.initial_budget >= 999_000
     st.subheader(t(lang, "budget_section"))
     b1, b2, b3 = st.columns(3)
-    b1.metric(t(lang, "initial_budget"), f"€{result.initial_budget}M")
+    b1.metric(t(lang, "initial_budget"), "€∞" if is_unlimited else f"€{result.initial_budget}M")
     b2.metric(t(lang, "sales_revenue"), f"+€{result.sales_revenue}M")
-    b3.metric(t(lang, "total_budget"), f"€{result.total_budget}M")
+    b3.metric(t(lang, "total_budget"), "€∞" if is_unlimited else f"€{result.total_budget}M")
 
     # ── Sold / Bought columns ───────────────────────────────────────────────
     col_sold, col_bought = st.columns(2)
@@ -379,7 +400,8 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
             f"{t(lang, POS_KEYS[pos])}: {fm[i]}"
             for i, pos in enumerate(POS_ORDER) if fm[i] > 0
         )
-        st.subheader(f"{t(lang, 'players_bought')} ({pos_labels})")
+        st.subheader(t(lang, "players_bought"))
+        st.caption(pos_labels)
 
         if not result.recommended_signings:
             st.info(t(lang, "no_signings"))
@@ -411,7 +433,7 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
 
     m1, m2, m3, m4 = st.columns(4)
     m1.metric(t(lang, "total_cost"), format_currency(actual_cost))
-    m2.metric(t(lang, "remaining_budget"), format_currency(remaining))
+    m2.metric(t(lang, "remaining_budget"), "€∞" if is_unlimited else format_currency(remaining))
     m3.metric(t(lang, "predicted_value_1y"), format_currency(actual_predicted))
     m4.metric(
         t(lang, "net_benefit"),
@@ -426,13 +448,36 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
 
     sold_ids = {sp.player.player_id for sp in result.players_sold if sp.was_sold}
     remaining_squad = [p for p in result.current_squad if p.player_id not in sold_ids]
+    new_ids = {p.player_id for p in result.recommended_signings}
     final_squad = remaining_squad + result.recommended_signings
 
-    # Group by position
+    # Group by position, sorted by market_value descending
     by_pos: Dict[str, List] = {pos: [] for pos in POS_ORDER}
     for p in final_squad:
         pos = p.position if p.position in by_pos else "DEF"
         by_pos[pos].append(p)
+    for pos in by_pos:
+        by_pos[pos].sort(key=lambda p: p.market_value or 0, reverse=True)
+
+    # CSS for the "NEW" badge
+    st.markdown(
+        """
+        <style>
+        .new-badge {
+            display:inline-block; background:#22c55e; color:#fff;
+            font-size:0.6rem; font-weight:700; padding:1px 5px;
+            border-radius:4px; margin-left:4px; vertical-align:middle;
+            letter-spacing:0.5px;
+        }
+        .squad-card-new {
+            border-left: 3px solid #22c55e;
+            padding-left: 6px;
+            margin-bottom: 2px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
 
     for pos in POS_ORDER:
         players = by_pos[pos]
@@ -448,12 +493,21 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
             cols = st.columns(row_size)
             for j, p in enumerate(chunk):
                 with cols[j]:
+                    is_new = p.player_id in new_ids
                     if p.img_url:
                         st.image(p.img_url, width=52)
                     else:
                         st.write("")
                     mv_str = format_currency(p.market_value) if p.market_value else ""
-                    st.caption(f"{p.name}\n{mv_str}")
+                    badge = '<span class="new-badge">NEW</span>' if is_new else ""
+                    wrapper_cls = "squad-card-new" if is_new else ""
+                    st.markdown(
+                        f'<div class="{wrapper_cls}">'
+                        f'<span style="font-size:0.82rem;">{p.name}{badge}</span><br>'
+                        f'<span style="font-size:0.75rem;color:#aaa;">{mv_str}</span>'
+                        f'</div>',
+                        unsafe_allow_html=True,
+                    )
 
     return final_squad
 
@@ -463,16 +517,22 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
 # =============================================================================
 
 def render_ai_section(lang: str, result):
-    """LLM analysis: ask for key, detect provider, generate."""
+    """LLM analysis: one summary per language, cached in session_state."""
     st.markdown("---")
     st.subheader(t(lang, "ai_analysis"))
 
-    # Check if already generated (e.g. from env vars)
-    if result.llm_summary:
-        st.markdown(result.llm_summary)
+    # Dict of summaries keyed by language: {"es": "...", "en": "..."}
+    if "llm_summaries" not in st.session_state:
+        st.session_state["llm_summaries"] = {}
+
+    cached = st.session_state["llm_summaries"].get(lang)
+
+    if cached:
+        st.markdown(cached)
         return
 
     st.info(t(lang, "no_ai_key"))
+    st.caption(t(lang, "ai_supported_providers"))
 
     api_key = st.text_input(
         t(lang, "llm_api_key"),
@@ -483,11 +543,14 @@ def render_ai_section(lang: str, result):
     if st.button(t(lang, "generate_analysis"), type="primary", disabled=not api_key):
         provider = _detect_llm_provider(api_key)
         with st.spinner(t(lang, "generating")):
-            summary = result.generate_llm_summary(provider=provider, api_key=api_key)
+            summary = result.generate_llm_summary(
+                provider=provider, api_key=api_key, language=lang,
+            )
         if summary:
-            st.markdown(summary)
+            st.session_state["llm_summaries"][lang] = summary
+            st.rerun()
         else:
-            st.warning("Could not generate analysis. Check your API key.")
+            st.warning(t(lang, "ai_error"))
 
 
 # =============================================================================
@@ -526,6 +589,7 @@ def main():
         result = run_simulation_with_progress(lang, club_name, season, tb, sb, unlimited)
         st.session_state["sim_result"] = result
         st.session_state["sim_clubs_data"] = clubs_data
+        st.session_state["llm_summaries"] = {}  # reset AI cache for new simulation
 
     # ── Results (persisted in session_state) ────────────────────────────────
     if "sim_result" in st.session_state:

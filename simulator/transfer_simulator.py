@@ -138,6 +138,7 @@ class TransferResult:
         self,
         provider: Optional[str] = None,
         api_key: Optional[str] = None,
+        language: Optional[str] = None,
     ) -> str:
         """
         Generate an LLM summary for this result.
@@ -145,6 +146,7 @@ class TransferResult:
         Args:
             provider: LLM provider ("openai", "anthropic", "gemini")
             api_key: Optional API key override
+            language: Response language ("es", "en", etc.)
         
         Returns:
             Generated summary text (also stored in self.llm_summary)
@@ -155,6 +157,7 @@ class TransferResult:
             result=self,
             provider=provider,
             api_key=api_key,
+            language=language,
         )
         return self.llm_summary
 
