@@ -424,19 +424,15 @@ class TransferSimulator:
             return random.choice(eligible_teams)
         else:
             # Fallback: if no team in range, pick from top 5 or bottom 5 by value
-            sorted_teams = [
-                (name, val) for name, val in sorted(self.team_market_values.items(), key=lambda kv: kv[1])
-                if name.lower() not in excluded_lower
-            ]
+            sorted_teams = sorted(self.team_market_values.items(), key=lambda kv: kv[1])
             if not sorted_teams:
                 return None
             if player.market_value * 10 > sorted_teams[-1][1]:
                 # Player is too expensive for any team -> pick from top 5
-                fallback = [name for name, _ in sorted_teams[-5:]]
+                fallback = [name for name, _ in sorted_teams[-5:] if name.lower() not in excluded_lower]
             else:
                 # Player is too cheap for the range -> pick from bottom 5
-                fallback = [name for name, _ in sorted_teams[:5]]
-            
+                fallback = [name for name, _ in sorted_teams[:5] if name.lower() not in excluded_lower]
             return random.choice(fallback) if fallback else None
     
     def _sell_random_players(

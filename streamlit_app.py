@@ -197,17 +197,18 @@ def render_inputs(lang: str):
         unlimited = st.checkbox(t(lang, "unlimited_budget"), value=False)
     with col_tb:
         transfer_budget = st.number_input(
-            t(lang, "transfer_budget"), min_value=0, max_value=2000, value=100, step=10,
+            t(lang, "transfer_budget"), min_value=-2000, max_value=2000, value=100, step=10,
             disabled=unlimited,
         )
     with col_sb:
         salary_budget = st.number_input(
-            t(lang, "salary_budget"), min_value=0, max_value=2000, value=50, step=10,
+            t(lang, "salary_budget"), min_value=-2000, max_value=2000, value=50, step=1,
             disabled=unlimited,
         )
 
     st.caption(t(lang, "budget_first_note"))
     st.caption(t(lang, "budget_note"))
+    st.caption(t(lang, "budget_example"))
 
     return season, club_name, transfer_budget, salary_budget, unlimited, clubs_data
 
@@ -368,7 +369,12 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
 
     # ── Sold / Bought columns ───────────────────────────────────────────────
     col_sold, col_bought = st.columns(2)
-
+    
+    fm = result.formation_needed
+    pos_labels = ", ".join(
+        f"{t(lang, POS_KEYS[pos])}: {fm[i]}"
+        for i, pos in enumerate(POS_ORDER) if fm[i] > 0
+    )
     # -- Sold --
     with col_sold:
         sold_count = sum(1 for sp in result.players_sold if sp.was_sold)
@@ -377,6 +383,7 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
         if unsold_count:
             header_sold += f"  ({sold_count} ✔, {unsold_count} ✘)"
         st.subheader(header_sold)
+        st.caption(pos_labels)
 
         for sp in result.players_sold:
             p = sp.player
@@ -395,11 +402,6 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
 
     # -- Bought --
     with col_bought:
-        fm = result.formation_needed
-        pos_labels = ", ".join(
-            f"{t(lang, POS_KEYS[pos])}: {fm[i]}"
-            for i, pos in enumerate(POS_ORDER) if fm[i] > 0
-        )
         st.subheader(t(lang, "players_bought"))
         st.caption(pos_labels)
 
@@ -502,7 +504,7 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
                     badge = '<span class="new-badge">NEW</span>' if is_new else ""
                     wrapper_cls = "squad-card-new" if is_new else ""
                     st.markdown(
-                        f'<div class="{wrapper_cls}">'
+                        f'<div class="{wrapper_cls}" style="margin-top:-10px;margin-bottom:14px;">'
                         f'<span style="font-size:0.82rem;">{p.name}{badge}</span><br>'
                         f'<span style="font-size:0.75rem;color:#aaa;">{mv_str}</span>'
                         f'</div>',
@@ -601,6 +603,12 @@ def main():
     # ── Footer ──────────────────────────────────────────────────────────────
     st.markdown("---")
     st.caption(t(lang, "footer"))
+    linkedin_url = (
+        "https://www.linkedin.com/in/pablo-roldanp/?locale=es-ES"
+        if lang == "es"
+        else "https://www.linkedin.com/in/pablo-roldanp/"
+    )
+    st.caption(t(lang, "created_by", url=linkedin_url))
 
 
 if __name__ == "__main__":

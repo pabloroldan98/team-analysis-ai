@@ -21,6 +21,7 @@ TEXT = {
         "unlimited_budget": "Presupuesto ilimitado",
         "budget_first_note": "Presupuesto efectivo = mín(fichajes, salario × 10).",
         "budget_note": "Como los datos salariales de los jugadores no son públicos, asumimos que su salario anual ≈ 10% de su valor de mercado. Así, el factor limitante será el presupuesto de fichajes o el salarial, el que sea menor.",
+        "budget_example": "(Ejemplo: €100M de fichajes = €10M de salario)",
         "run_simulation": "Simular ventana de fichajes",
 
         # Progress
@@ -71,6 +72,7 @@ TEXT = {
 
         # Footer
         "footer": "Datos de Transfermarkt · Predicciones con XGBoost · Optimización con Knapsack",
+        "created_by": "Creado por [Pablo Roldán]({url})",
     },
     "en": {
         # General
@@ -88,6 +90,7 @@ TEXT = {
         "unlimited_budget": "Unlimited budget",
         "budget_first_note": "Effective budget = min(transfer, salary × 10).",
         "budget_note": "Since player salary data is not public, we assume annual salary ≈ 10% of market value. Whichever budget is lower becomes the limiting factor.",
+        "budget_example": "(Example: €100M transfer = €10M salary)",
         "run_simulation": "Simulate transfer window",
 
         # Progress
@@ -138,6 +141,7 @@ TEXT = {
 
         # Footer
         "footer": "Data from Transfermarkt · Predictions by XGBoost · Optimization with Knapsack",
+        "created_by": "Created by [Pablo Roldán]({url})",
     },
 }
 
