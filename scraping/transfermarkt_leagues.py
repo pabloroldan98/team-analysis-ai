@@ -15,6 +15,9 @@ from league import League
 class TransfermarktLeaguesScraper(BaseScraper):
     """Scraper for league information from Transfermarkt."""
     
+    # Transfermarkt API base URL (fallback for market values)
+    TM_API_URL = "https://tmapi-alpha.transfermarkt.technology"
+    
     LEAGUE_INFO = {
         "laliga": {"name": "LaLiga", "country": "Spain", "tier": 1, "id": "ES1"},
         "segunda": {"name": "LaLiga 2", "country": "Spain", "tier": 2, "id": "ES2"},
@@ -41,6 +44,49 @@ class TransfermarktLeaguesScraper(BaseScraper):
         "argentine": {"name": "Liga Profesional", "country": "Argentina", "tier": 1, "id": "AR1N"},
         "mexican": {"name": "Liga MX", "country": "Mexico", "tier": 1, "id": "MEX1"},
     }
+    
+    def _fetch_league_market_value(self, league_id: str) -> Optional[float]:
+        """Fetch total market value for a league via the TM API.
+        
+        API: ``/competition/{league_id}`` → ``data.totalMarketValue.value``
+        
+        Returns the value in EUR or None on failure.
+        """
+        if not league_id:
+            return None
+        
+        import time as _time
+        import requests
+        
+        api_url = f"{self.TM_API_URL}/competition/{league_id}"
+        
+        for attempt in range(1, self.max_retries + 1):
+            try:
+                _time.sleep(self.delay)
+                resp = requests.get(api_url, timeout=60)
+                
+                if resp.status_code == 200:
+                    data = resp.json()
+                    tmv = (data.get("data") or {}).get("totalMarketValue") or {}
+                    value = tmv.get("value")
+                    if value is not None:
+                        self.log(f"  API fallback: total_market_value = {value}")
+                        return float(value)
+                    return None
+                
+                if resp.status_code in (429, 500, 502, 503, 504):
+                    self.log(f"    API attempt {attempt}/{self.max_retries}: HTTP {resp.status_code}")
+                else:
+                    self.log(f"    API HTTP {resp.status_code} for {league_id}")
+                    return None
+                
+            except Exception as e:
+                self.log(f"    API attempt {attempt}/{self.max_retries}: {e!r}")
+            
+            if attempt < self.max_retries:
+                _time.sleep(self.retry_pause)
+        
+        return None
     
     def scrape_league(self, league_key: str) -> Optional[League]:
         """
@@ -72,20 +118,29 @@ class TransfermarktLeaguesScraper(BaseScraper):
         
         # Get total market value from the big header value
         total_market_value = None
-        value_el = soup.select_one("a.data-header__market-value-wrapper")
+        # Try multiple selectors – TM sometimes uses <a>, sometimes <div>
+        value_el = (
+            soup.select_one("a.data-header__market-value-wrapper")
+            or soup.select_one("div.data-header__market-value-wrapper")
+            or soup.select_one(".data-header__market-value-wrapper")
+        )
         if value_el:
-            # Build value from children, stopping at <p> (Last update)
-            value_text = ""
-            for child in value_el.children:
-                if hasattr(child, 'name'):
-                    if child.name == 'p':
-                        break  # Stop at "Last update" paragraph
-                    value_text += child.get_text()
-                else:
-                    value_text += child.strip()
-            
-            if value_text:
-                total_market_value = self.parse_market_value(value_text)
+            # Grab the full visible text, then strip away known labels
+            raw = value_el.get_text(separator=" ", strip=True)
+            for noise in ("Total Market Value", "Gesamtmarktwert",
+                          "Last update", "Letzte Aktualisierung"):
+                raw = raw.replace(noise, "")
+            raw = re.sub(r"\b[A-Z][a-z]{2}\s+\d{1,2},?\s*\d{4}\b", "", raw)
+            raw = raw.strip()
+            if raw:
+                total_market_value = self.parse_market_value(raw)
+        
+        # Fallback: use the TM API if HTML scraping didn't get the value
+        if total_market_value is None:
+            league_id = info.get("id", "")
+            api_value = self._fetch_league_market_value(league_id)
+            if api_value is not None:
+                total_market_value = api_value
         
         # Get stats from header labels
         num_teams = 0

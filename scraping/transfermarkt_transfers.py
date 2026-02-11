@@ -34,20 +34,36 @@ class TransfermarktTransfersScraper(BaseScraper):
 
     # ── Resilient API request helper ────────────────────────────────────
 
-    def _api_get(self, url: str, timeout: int = 60) -> Optional[dict]:
+    def _api_get(
+        self,
+        url: str,
+        timeout: int = 60,
+        max_retries: Optional[int] = None,
+        retry_pause: Optional[int] = None,
+    ) -> Optional[dict]:
         """
         GET a JSON API endpoint with retry logic identical to fetch_page.
 
         Retries on connection errors (ConnectionResetError, etc.) and on
-        transient HTTP status codes (429, 5xx) up to ``self.max_retries``
-        times, sleeping ``self.retry_pause`` seconds between attempts.
+        transient HTTP status codes (429, 5xx) up to *max_retries* times,
+        sleeping *retry_pause* seconds between attempts.
+
+        Parameters default to ``self.max_retries`` / ``self.retry_pause``
+        when not supplied, but callers (e.g. ``_fetch_club_names_batch``)
+        can override them for more aggressive retrying.
 
         Returns the parsed JSON dict on success, or None on failure.
+        On 414 or exhausted retries for 429/5xx, returns
+        ``{"_status": <code>}`` so the caller can split the batch.
         """
         import time as _time
         import requests
 
-        for attempt in range(1, self.max_retries + 1):
+        _max = max_retries if max_retries is not None else self.max_retries
+        _pause = retry_pause if retry_pause is not None else self.retry_pause
+        last_transient_code = None
+
+        for attempt in range(1, _max + 1):
             try:
                 _time.sleep(self.delay)
                 response = requests.get(url, timeout=timeout)
@@ -61,20 +77,25 @@ class TransfermarktTransfersScraper(BaseScraper):
 
                 # Transient errors → retry
                 if response.status_code in (429, 500, 502, 503, 504):
-                    self.log(f"    Attempt {attempt}/{self.max_retries}: HTTP {response.status_code}")
+                    last_transient_code = response.status_code
+                    self.log(f"    Attempt {attempt}/{_max}: HTTP {response.status_code}")
                 else:
                     # Non-retryable HTTP error
                     self.log(f"    HTTP {response.status_code}")
                     return None
 
             except Exception as e:
-                self.log(f"    Attempt {attempt}/{self.max_retries}: {e!r}")
+                last_transient_code = last_transient_code or 429
+                self.log(f"    Attempt {attempt}/{_max}: {e!r}")
 
-            if attempt < self.max_retries:
-                self.log(f"    Retrying in {self.retry_pause}s...")
-                _time.sleep(self.retry_pause)
+            if attempt < _max:
+                self.log(f"    Retrying in {_pause}s...")
+                _time.sleep(_pause)
 
-        self.log(f"    All {self.max_retries} attempts failed for {url}")
+        self.log(f"    All {_max} attempts failed for {url}")
+        # Signal the caller to split the batch instead of giving up
+        if last_transient_code is not None:
+            return {"_status": last_transient_code}
         return None
 
     # ── Club-name helpers (shared with valuations scraper) ───────────────
@@ -100,19 +121,20 @@ class TransfermarktTransfersScraper(BaseScraper):
             params = "&".join([f"ids[]={cid}" for cid in batch])
             api_url = f"{self.TM_API_URL}/clubs?{params}"
 
-            data = self._api_get(api_url, timeout=60)
+            data = self._api_get(api_url, timeout=60, max_retries=50, retry_pause=10)
 
             if data is None:
                 self.log(f"    Failed to fetch {len(batch)} club names")
                 return
 
-            # 414 → URL too long, split in half
-            if data.get("_status") == 414:
+            # Splittable error (414, 429, 5xx) → halve the batch and retry
+            error_status = data.get("_status")
+            if error_status is not None:
                 if len(batch) <= 1:
                     self.log(f"    Cannot split further, skipping ID: {batch[0]}")
                     return
                 mid = len(batch) // 2
-                self.log(f"    414 error with {len(batch)} IDs, splitting in half...")
+                self.log(f"    HTTP {error_status} with {len(batch)} IDs, splitting in half...")
                 fetch_batch(batch[:mid])
                 fetch_batch(batch[mid:])
                 return

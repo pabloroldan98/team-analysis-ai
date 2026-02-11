@@ -341,12 +341,18 @@ class TransferSimulator:
         return all_valuations
     
     def _get_club_players(self, all_players: List[Player]) -> List[Player]:
-        """Filter players belonging to the specified club."""
+        """Filter players belonging to the specified club.
+
+        Uses exact name match first (case-insensitive).  Falls back to
+        substring match only when no exact results are found — this avoids
+        confusing e.g. "Real Madrid Castilla" players with "Real Madrid".
+        """
         club_lower = self.club_name.lower()
-        return [
-            p for p in all_players
-            if p.team and club_lower in p.team.lower()
-        ]
+        exact = [p for p in all_players if p.team and p.team.lower() == club_lower]
+        if exact:
+            return exact
+        # Fallback: substring match (useful for CLI partial names)
+        return [p for p in all_players if p.team and club_lower in p.team.lower()]
     
     def _calculate_team_market_values(self, all_players: List[Player]) -> Dict[str, float]:
         """Calculate total market value for each team."""
@@ -385,7 +391,7 @@ class TransferSimulator:
         Returns:
             Team name or None if no team can afford the player
         """
-        if not player.market_value:
+        if player.market_value is None:
             return None
         
         min_team_value = min(player.market_value * 10, 1_000_000_000)
