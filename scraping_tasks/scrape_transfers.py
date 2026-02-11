@@ -2,11 +2,15 @@
 # scraping_tasks/scrape_transfers.py
 """
 Task: Scrape transfer data from Transfermarkt.
-Downloads transfer information for all teams in configured leagues.
 
-By default, for each player in current season transfers, fetches their
-FULL transfer history including market_value_at_transfer via API.
-Use --no-details for faster scraping of only current season team transfers.
+By default (--details), iterates over all players of all teams in the
+configured leagues (using the players scraper) and fetches each player's
+FULL transfer history via the Transfermarkt API.  This yields every
+historical transfer for every squad member, including market_value_at_transfer.
+
+With --no-details, falls back to scraping only the season transfer page
+per team (faster, but limited to that season's movements and no
+market_value_at_transfer).
 
 Usage:
     python scraping_tasks/scrape_transfers.py
@@ -51,7 +55,7 @@ def main():
         "--no-details",
         dest="details",
         action="store_false",
-        help="Skip detailed player transfer history (faster, only current season)"
+        help="Skip full player transfer history — only scrape current season transfer pages (faster)"
     )
     parser.set_defaults(details=True)
     parser.add_argument(
@@ -66,37 +70,37 @@ def main():
         default=True,
         help="Enable verbose output"
     )
-    
+
     args = parser.parse_args()
-    
-    mode_str = "Full player history" if args.details else "Current season only"
-    
+
+    mode_str = "Full player history (all squad players)" if args.details else "Season transfer pages only"
+
     print(f"=== Transfermarkt Transfers Scraper ===")
     print(f"Leagues: {', '.join(args.leagues)}")
     print(f"Season: {args.season or 'current'}")
     print(f"Mode: {mode_str}")
     print()
-    
+
     scraper = TransfermarktTransfersScraper(
         season=args.season,
         delay=args.delay,
         verbose=args.verbose
     )
-    
+
     results = scraper.run(leagues=args.leagues, details=args.details)
-    
+
     # Summary
     total_transfers = 0
     for league_data in results.values():
         for transfers in league_data.values():
             total_transfers += len(transfers)
-    
+
     print(f"\n=== Complete ===")
     print(f"Total transfers scraped: {total_transfers}")
     for league, teams_data in results.items():
         league_total = sum(len(t) for t in teams_data.values())
         print(f"  {league}: {league_total} transfers from {len(teams_data)} teams")
-    
+
     return 0
 
 

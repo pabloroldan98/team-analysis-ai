@@ -26,6 +26,48 @@ class TransfermarktValuationsScraper(BaseScraper):
     # Cache for club names to avoid repeated API calls
     _club_name_cache: Dict[str, str] = {}
     
+    # ── Resilient API request helper ────────────────────────────────────
+
+    def _api_get(self, url: str, timeout: int = 60) -> Optional[dict]:
+        """
+        GET a JSON API endpoint with retry logic identical to fetch_page.
+
+        Retries on connection errors (ConnectionResetError, etc.) and on
+        transient HTTP status codes (429, 5xx) up to ``self.max_retries``
+        times, sleeping ``self.retry_pause`` seconds between attempts.
+
+        Returns the parsed JSON dict on success, or None on failure.
+        """
+        import time as _time
+        import requests
+
+        for attempt in range(1, self.max_retries + 1):
+            try:
+                _time.sleep(self.delay)
+                response = requests.get(url, timeout=timeout)
+
+                if response.status_code == 200:
+                    return response.json()
+
+                if response.status_code == 414:
+                    return {"_status": 414}
+
+                if response.status_code in (429, 500, 502, 503, 504):
+                    self.log(f"    Attempt {attempt}/{self.max_retries}: HTTP {response.status_code}")
+                else:
+                    self.log(f"    HTTP {response.status_code}")
+                    return None
+
+            except Exception as e:
+                self.log(f"    Attempt {attempt}/{self.max_retries}: {e!r}")
+
+            if attempt < self.max_retries:
+                self.log(f"    Retrying in {self.retry_pause}s...")
+                _time.sleep(self.retry_pause)
+
+        self.log(f"    All {self.max_retries} attempts failed for {url}")
+        return None
+
     def _fetch_club_names_batch(self, club_ids: Set[str]) -> Dict[str, str]:
         """
         Fetch multiple club names via API, adaptively splitting on 414 errors.
@@ -51,52 +93,39 @@ class TransfermarktValuationsScraper(BaseScraper):
         
         self.log(f"  Fetching {len(ids_to_fetch)} club names via API...")
         
-        import requests
-        
         def fetch_batch(batch: list) -> None:
             """Recursively fetch a batch, splitting on 414 errors."""
             if not batch:
                 return
             
-            # Build URL with query params
             params = "&".join([f"ids[]={cid}" for cid in batch])
             api_url = f"{self.TM_API_URL}/clubs?{params}"
             
-            try:
-                response = requests.get(api_url, timeout=60)
-                
-                # If URL too long, split in half and retry
-                if response.status_code == 414:
-                    if len(batch) <= 1:
-                        self.log(f"    Cannot split further, skipping ID: {batch[0]}")
-                        return
-                    
-                    mid = len(batch) // 2
-                    self.log(f"    414 error with {len(batch)} IDs, splitting in half...")
-                    fetch_batch(batch[:mid])
-                    fetch_batch(batch[mid:])
+            data = self._api_get(api_url, timeout=60)
+            
+            if data is None:
+                self.log(f"    Failed to fetch {len(batch)} club names")
+                return
+            
+            if data.get("_status") == 414:
+                if len(batch) <= 1:
+                    self.log(f"    Cannot split further, skipping ID: {batch[0]}")
                     return
-                
-                if response.status_code != 200:
-                    self.log(f"    API error {response.status_code} for {len(batch)} IDs")
-                    return
-                
-                data = response.json()
-                
-                if data.get("success"):
-                    clubs_data = data.get("data", [])
-                    for club in clubs_data:
-                        club_id = str(club.get("id", ""))
-                        club_name = club.get("name", "")
-                        if club_id:
-                            self._club_name_cache[club_id] = club_name
-                    
-                    self.log(f"    Fetched {len(clubs_data)} clubs (batch of {len(batch)})")
-                
-            except Exception as e:
-                self.log(f"    Error fetching {len(batch)} clubs: {e}")
+                mid = len(batch) // 2
+                self.log(f"    414 error with {len(batch)} IDs, splitting in half...")
+                fetch_batch(batch[:mid])
+                fetch_batch(batch[mid:])
+                return
+            
+            if data.get("success"):
+                clubs_data = data.get("data", [])
+                for club in clubs_data:
+                    club_id = str(club.get("id", ""))
+                    club_name = club.get("name", "")
+                    if club_id:
+                        self._club_name_cache[club_id] = club_name
+                self.log(f"    Fetched {len(clubs_data)} clubs (batch of {len(batch)})")
         
-        # Start with all IDs
         fetch_batch(ids_to_fetch)
         
         self.log(f"    Total cached club names: {len(self._club_name_cache)}")
@@ -145,35 +174,27 @@ class TransfermarktValuationsScraper(BaseScraper):
         
         self.log(f"  Fetching valuations via API: {player_name or player_id}")
         
-        try:
-            import requests
-            response = requests.get(api_url, timeout=30)
-            
-            if response.status_code != 200:
-                self.log(f"    API error: {response.status_code}")
-                return []
-            
-            data = response.json()
-            
-            if not data.get("success"):
-                self.log(f"    API returned error: {data.get('message')}")
-                return []
-            
-            # Parse the history data
-            history = data.get("data", {}).get("history", [])
-            
-            valuations = []
-            for item in history:
-                valuation = self._parse_api_valuation(item, player_id, player_name)
-                if valuation:
-                    valuations.append(valuation)
-            
-            self.log(f"    Found {len(valuations)} valuations")
-            return valuations
-            
-        except Exception as e:
-            self.log(f"    Error fetching from API: {e}")
+        data = self._api_get(api_url, timeout=30)
+        
+        if data is None:
+            self.log(f"    Failed after retries")
             return []
+        
+        if not data.get("success"):
+            self.log(f"    API returned error: {data.get('message')}")
+            return []
+        
+        # Parse the history data
+        history = data.get("data", {}).get("history", [])
+        
+        valuations = []
+        for item in history:
+            valuation = self._parse_api_valuation(item, player_id, player_name)
+            if valuation:
+                valuations.append(valuation)
+        
+        self.log(f"    Found {len(valuations)} valuations")
+        return valuations
     
     def _parse_api_valuation(self, item: dict, player_id: str, player_name: str) -> Optional[Valuation]:
         """
