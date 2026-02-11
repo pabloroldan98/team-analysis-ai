@@ -365,39 +365,91 @@ class TransfermarktPlayersScraper(BaseScraper):
     def scrape_league_players(self, league: str, include_details: bool = False) -> Dict[str, List[Player]]:
         """
         Scrape all players from a league.
-        
+
+        Phase 1 – Squad players:
+          Get every team's current squad from the squad page.
+
+        Phase 2 – Transferred players:
+          Scrape the season transfer page of each team to discover players
+          who moved in/out that season.  For any player NOT already covered
+          in Phase 1, fetch their profile via scrape_player_details and add
+          them to their respective team's list.
+
+        Players are globally deduplicated so no player appears twice.
+
         Args:
             league: League identifier (e.g., "laliga", "premier")
             include_details: Whether to fetch detailed player info
-        
+
         Returns:
             Dict mapping team_id -> list of players
         """
         team_infos = self.get_league_teams(league)
-        
+
         if not team_infos:
             self.log(f"No teams found for league: {league}")
             return {}
-        
-        all_players = {}
-        
+
+        all_players: Dict[str, List[Player]] = {}
+        global_seen: set = set()  # player_id dedup across teams
+
+        # ── Phase 1: squad players ───────────────────────────────────────
+        self.log(f"\n--- Phase 1: Squad players ({league.upper()}) ---")
+
         for i, info in enumerate(team_infos):
             self.log(f"  [{i+1}/{len(team_infos)}] {info['team_name']}")
-            
+
             players = self.scrape_team_players(
                 team_id=info["team_id"],
                 team_name=info["team_name"],
                 team_url=info["team_url"]
             )
-            
+
             if include_details:
                 for j, player in enumerate(players):
                     self.log(f"    [{j+1}/{len(players)}] Details: {player.name}")
                     self.scrape_player_details(player.player_id, player)
-            
+
             all_players[info["team_id"]] = players
-            # break
-        
+            for p in players:
+                global_seen.add(p.player_id)
+
+        # ── Phase 2: transferred players from season transfer pages ──────
+        self.log(f"\n--- Phase 2: Transferred players ({league.upper()}) ---")
+
+        for i, info in enumerate(team_infos):
+            tid = info["team_id"]
+            tname = info["team_name"]
+            self.log(f"\n[{i+1}/{len(team_infos)}] {tname} (transfer page)")
+
+            page_players = self.get_transferred_player_ids(tid, tname)
+
+            new_players = [(pid, pname) for pid, pname in page_players if pid not in global_seen]
+
+            if not new_players:
+                self.log(f"  No new players found on transfer page")
+                continue
+
+            self.log(f"  {len(new_players)} new player(s) from transfer page")
+
+            if tid not in all_players:
+                all_players[tid] = []
+
+            for j, (pid, pname) in enumerate(new_players):
+                global_seen.add(pid)
+                self.log(f"  [{j+1}/{len(new_players)}] {pname or pid}")
+
+                # Create a basic Player and fetch details
+                player = Player(
+                    player_id=pid,
+                    name=pname,
+                    team=tname,
+                    team_id=tid,
+                    season=self.season,
+                )
+                self.scrape_player_details(pid, player)
+                all_players[tid].append(player)
+
         return all_players
     
     def run(self, leagues: List[str] = None, include_details: bool = False) -> dict:

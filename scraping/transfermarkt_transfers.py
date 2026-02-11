@@ -417,16 +417,14 @@ class TransfermarktTransfersScraper(BaseScraper):
             self.log(f"\n[{i + 1}/{len(team_infos)}] {tname} (transfer page)")
 
             # Scrape the season transfer page to discover player IDs
-            page_transfers = self._scrape_team_transfers_page(
-                team_id=tid, team_name=tname,
-            )
+            page_players = self.get_transferred_player_ids(tid, tname)
 
             # Collect player IDs + names we haven't seen yet
             new_players: List[tuple] = []
-            for t in page_transfers:
-                if t.player_id and t.player_id not in global_seen:
-                    new_players.append((t.player_id, t.player_name))
-                    global_seen.add(t.player_id)
+            for pid, pname in page_players:
+                if pid not in global_seen:
+                    new_players.append((pid, pname))
+                    global_seen.add(pid)
 
             if not new_players:
                 self.log(f"  No new players found on transfer page")

@@ -356,6 +356,55 @@ class BaseScraper:
         self.log(f"Found {len(teams)} teams")
         return teams
     
+    def get_transferred_player_ids(self, team_id: str, team_name: str = "") -> List[tuple]:
+        """
+        Scrape the season transfer page for a team and return the
+        (player_id, player_name) pairs found in arrivals & departures.
+
+        This is a lightweight helper used by the players, valuations and
+        transfers scrapers to discover players that are not in the current
+        squad (Phase 2).
+        """
+        season_year = str(self.season_year)
+        url = f"{self.BASE_URL}/-/transfers/verein/{team_id}/saison_id/{season_year}"
+
+        self.log(f"  Scanning transfer page: {team_name or team_id} ({self.season})")
+        soup = self.fetch_page(url)
+
+        if not soup:
+            return []
+
+        players: List[tuple] = []
+        seen: set = set()
+
+        for box in soup.select("div.box"):
+            header = box.select_one("h2")
+            if not header:
+                continue
+            ht = header.text.strip().lower()
+            if not any(kw in ht for kw in ("arrival", "departure", "llegada", "salida", "zugänge", "abgänge")):
+                continue
+
+            table = box.select_one("table.items")
+            if not table:
+                continue
+            tbody = table.select_one("tbody")
+            if not tbody:
+                continue
+
+            for row in tbody.select("tr.odd, tr.even"):
+                link = row.select_one("a[href*='/profil/spieler/'], a[href*='/spieler/']")
+                if not link:
+                    continue
+                pid = self.extract_player_id(link.get("href", ""))
+                pname = link.get("title", "") or link.text.strip()
+                if pid and pid not in seen:
+                    seen.add(pid)
+                    players.append((pid, pname))
+
+        self.log(f"    Found {len(players)} players on transfer page")
+        return players
+
     def save_json(
         self,
         data: Any,

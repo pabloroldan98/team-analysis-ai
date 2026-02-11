@@ -320,37 +320,86 @@ class TransfermarktValuationsScraper(BaseScraper):
     def scrape_league_valuations(self, league: str, details: bool = True) -> Dict[str, Dict[str, List[Valuation]]]:
         """
         Scrape valuations for all players in a league.
-        
+
+        Phase 1 – Squad players:
+          Get every team's current squad via the players scraper, then
+          fetch each player's valuation history via API.
+
+        Phase 2 – Transferred players:
+          Scrape the season transfer page of each team to discover players
+          who moved in/out that season.  For any player NOT already covered
+          in Phase 1, fetch their valuation history as well.
+
+        Players are globally deduplicated so no player is scraped twice.
+
         Args:
             league: League identifier
             details: If True, get full valuation history per player (slower).
                      If False, only current market values (faster).
-        
+
         Returns:
             Dict mapping team_id -> player_id -> list of valuations
         """
-        # First get teams and players
         from scraping.transfermarkt_players import TransfermarktPlayersScraper
         players_scraper = TransfermarktPlayersScraper(season=self.season, delay=self.delay, verbose=False)
         players_by_team = players_scraper.scrape_league_players(league)
-        
-        all_valuations = {}
-        
+
+        all_valuations: Dict[str, Dict[str, List[Valuation]]] = {}
+        global_seen: set = set()  # player_id dedup across teams
+
+        # ── Phase 1: squad players ───────────────────────────────────────
+        self.log(f"\n--- Phase 1: Squad players ({league.upper()}) ---")
+
         for team_id, players in players_by_team.items():
             team_name = players[0].team if players else team_id
             self.log(f"\nTeam: {team_name}")
-            
-            # Prepare player info with current values
+
             player_info = [(p.player_id, p.name, p.market_value, p.team) for p in players]
-            
+
             team_valuations = self.scrape_team_valuations(
                 team_id=team_id,
                 details=details,
                 player_ids=player_info
             )
-            
+
             all_valuations[team_id] = team_valuations
-        
+            for p in players:
+                global_seen.add(p.player_id)
+
+        # ── Phase 2: transferred players from season transfer pages ──────
+        self.log(f"\n--- Phase 2: Transferred players ({league.upper()}) ---")
+
+        team_infos = self.get_league_teams(league)
+
+        for i, info in enumerate(team_infos):
+            tid = info["team_id"]
+            tname = info["team_name"]
+            self.log(f"\n[{i+1}/{len(team_infos)}] {tname} (transfer page)")
+
+            page_players = self.get_transferred_player_ids(tid, tname)
+
+            new_players = [(pid, pname) for pid, pname in page_players if pid not in global_seen]
+
+            if not new_players:
+                self.log(f"  No new players found on transfer page")
+                continue
+
+            self.log(f"  {len(new_players)} new player(s) from transfer page")
+
+            if tid not in all_valuations:
+                all_valuations[tid] = {}
+
+            for j, (pid, pname) in enumerate(new_players):
+                global_seen.add(pid)
+                self.log(f"  [{j+1}/{len(new_players)}] {pname or pid}")
+
+                if details:
+                    valuations = self.scrape_player_valuations(pid, pname)
+                else:
+                    valuations = []
+
+                all_valuations[tid][pid] = valuations
+
         return all_valuations
     
     def run(self, leagues: List[str] = None, details: bool = True) -> dict:
