@@ -121,6 +121,7 @@ This API provides:
 - **Player transfer history**: `/transfer/history/player/{player_id}`
 - **Market value history**: `/player/{player_id}/market-value-history`
 - **Club information**: `/clubs?ids[]=X&ids[]=Y...`
+- **Competition data**: `/competition/{competition_id}` (used as fallback for league total market value)
 
 Benefits of using the API:
 - **Reduced request count**: One API call vs. multiple page scrapes
@@ -128,7 +129,7 @@ Benefits of using the API:
 - **More reliable data**: Structured responses vs. fragile XPath selectors
 - **Future-proof**: Less likely to break when website UI changes
 
-For the clubs batch endpoint, I implemented **adaptive batching** that starts with all IDs in one request and recursively splits in half on 414 (URL too long) errors.
+For the clubs batch endpoint, I implemented **adaptive batching** that starts with all IDs in one request and recursively splits in half on 414 (URL too long), 429 (rate limit), or 5xx (server error) responses. The club-name resolution uses aggressive retry settings (50 retries, 10s pause) since it's critical for data completeness — while 414 triggers an immediate split (retrying won't help), 429/5xx errors first retry with waits and only split the batch after all retries are exhausted.
 
 > **Note on Players API**: A batch endpoint exists (`/players?ids[]=X&ids[]=Y...`) but I chose not to use it because it doesn't return all the detailed player data I needed (positions, contract info, etc.). To get complete player profiles, individual page scraping is still required, so using the batch API wouldn't reduce the number of requests.
 
@@ -184,11 +185,10 @@ An interactive web application for a **football transfer strategies simulator**.
 Before the simulation runs, the **data loader** builds an accurate snapshot of every player at the start of the selected season:
 
 1. **Load ALL players** from every `players_all_*.json` file (deduplicated, keeping the latest entry per player).
-2. **Load ALL transfers** from every `transfers_all_*.json` file. For each player, find their **most recent transfer with a date ≤ 01/07/{season_start_year}** to determine their current team and loan status.
+2. **Load ALL transfers** from every `transfers_all_*.json` file. For each player, find their **most recent transfer with a date ≤ 01/07/{season_start_year}** to determine their current team and loan status. This is an **inner join** — players that don't appear in the transfer data are excluded entirely, since we can't reliably determine their club.
 3. **Filter out** players whose team is "Retired", "Without Club", "Career break", or empty.
-4. **Load ALL valuations** from every `valuations_all_*.json` file. For each player, find their **most recent valuation ≤ 01/07/{season_start_year}** and update their market value and age.
-
-This is not an inner join — players without a matching transfer or valuation keep their original data.
+4. **Compute age** from `birth_date` and the season cutoff date (01/07 of the starting year, or `now()` for "Today").
+5. **Load ALL valuations** from every `valuations_all_*.json` file. For each player, find their **most recent valuation ≤ cutoff** and update their market value. Players without a valuation receive `market_value = 0` (they're in the club but haven't been valued yet).
 
 #### Budget Calculation
 
@@ -358,7 +358,7 @@ team-analysis-ai/
 │   └── logo.png             # App logo
 ├── data/json/               # Scraped data (JSON)
 ├── ml/
-│   ├── datasets/            # Cached training datasets
+│   ├── datasets/            # Cached training datasets (auto-split into parts if >100MB)
 │   ├── models/              # Trained XGBoost models (.joblib)
 │   ├── feature_engineering.py
 │   ├── train_pipeline.py
@@ -379,6 +379,7 @@ team-analysis-ai/
 ├── webapp/
 │   └── i18n.py              # Internationalization (ES/EN)
 ├── league.py / team.py / player.py / transfer.py / valuation.py
+├── fill_club_names.py       # Backfill missing club names in JSON data
 ├── streamlit_app.py         # Web app entry point
 ├── requirements.txt
 └── README.md

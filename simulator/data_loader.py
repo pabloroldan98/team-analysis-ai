@@ -202,14 +202,13 @@ def get_active_players_at_season_start(
 
     Pipeline:
       1. Load ALL players  →  dict[player_id, Player]
-      2. Load ALL transfers →  for each player, last transfer <= cutoff
-         → update ``team``, ``team_id``, ``on_loan``, ``loaning_team``
+      2. Load ALL transfers →  inner join: only players with a transfer
+         record are kept.  Updates ``team``, ``team_id``, ``on_loan``,
+         ``loaning_team``.
       3. Filter out Retired / Without Club / Career break
-      4. Load ALL valuations → for each player, last valuation <= cutoff
-         → update ``market_value``, ``age``
-
-    No inner join: players without a matching transfer or valuation are
-    still included (they just keep their original data).
+      4. Compute ``age`` from ``birth_date`` + season cutoff date
+      5. Load ALL valuations → for each player, last valuation <= cutoff
+         → update ``market_value`` (0 if no valuation found)
 
     Args:
         season: e.g. "2023-2024"
@@ -225,6 +224,8 @@ def get_active_players_at_season_start(
     all_transfers = _load_all_transfers()
     transfer_map = get_transfer_at_season_start(all_transfers, season)
 
+    # Inner join: only keep players that appear in the transfer map
+    matched: Dict[str, Player] = {}
     for pid, t in transfer_map.items():
         if pid not in players:
             continue  # player not in any players file, skip
@@ -244,9 +245,11 @@ def get_active_players_at_season_start(
             p.loaning_team = ""
             p.loaning_team_id = ""
 
+        matched[pid] = p
+
     # 3. Filter out excluded teams and players without a team
     active: Dict[str, Player] = {}
-    for pid, p in players.items():
+    for pid, p in matched.items():
         # Players with no team at all are excluded
         if not p.team:
             continue
@@ -261,18 +264,30 @@ def get_active_players_at_season_start(
 
         active[pid] = p
 
-    # 4. Valuations → market_value & age update
+    # 4. Compute age from birth_date + cutoff_date
+    cutoff = _get_season_start_date(season)
+    for p in active.values():
+        if p.birth_date:
+            try:
+                bd = datetime.strptime(p.birth_date, "%Y-%m-%d")
+            except (ValueError, TypeError):
+                bd = None
+            if bd:
+                age = cutoff.year - bd.year
+                if (cutoff.month, cutoff.day) < (bd.month, bd.day):
+                    age -= 1
+                p.age = age
+
+    # 5. Valuations → market_value update
     all_valuations = _load_all_valuations()
     valuation_map = get_valuation_at_season_start(all_valuations, season)
 
-    for pid, v in valuation_map.items():
-        if pid not in active:
-            continue
-
-        p = active[pid]
-        p.market_value = v.valuation_amount
-        if v.age_at_valuation is not None:
-            p.age = v.age_at_valuation
+    for pid, p in active.items():
+        v = valuation_map.get(pid)
+        if v is not None:
+            p.market_value = v.valuation_amount
+        else:
+            p.market_value = 0  # player in the club but no valuation yet
 
     return list(active.values())
 

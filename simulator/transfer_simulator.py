@@ -414,14 +414,14 @@ class TransferSimulator:
             if not sorted_teams:
                 return None
             if player.market_value * 10 > sorted_teams[-1][1]:
-                # Player is too expensive for any team -> pick from top 5
+                # Player is too expensive for any team -> pick from top 5 (excluding the current team and invalid destinations)
                 fallback = [
                     name for name, _ in sorted_teams[-5:]
                     if name.lower() not in excluded_lower
                     and not self._is_invalid_destination(name)
                 ]
             else:
-                # Player is too cheap for the range -> pick from bottom 5
+                # Player is too cheap for the range -> pick from bottom 5 (excluding the current team and invalid destinations)
                 fallback = [
                     name for name, _ in sorted_teams[:5]
                     if name.lower() not in excluded_lower

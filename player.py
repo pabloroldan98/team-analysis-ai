@@ -61,7 +61,7 @@ class Player:
         self.loaning_team_id = loaning_team_id
     
     def __str__(self):
-        value_str = f"€{self.market_value/1_000_000:.1f}M" if self.market_value else "N/A"
+        value_str = f"€{self.market_value/1_000_000:.1f}M" if self.market_value is not None else "N/A"
         return f"({self.name}, {self.position}, {self.team}, {value_str})"
     
     def __repr__(self):
