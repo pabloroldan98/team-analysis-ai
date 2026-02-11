@@ -846,7 +846,7 @@ def save_training_dataset(
         part_output = {"metadata": part_meta, "samples": chunk}
         part_path = base_path.parent / f"{base_path.stem}_part{i + 1}.json"
         with open(part_path, "w", encoding="utf-8") as f:
-            json.dump(part_output, f, ensure_ascii=False, default=str)
+            json.dump(part_output, f, indent=2, default=str)
         part_paths.append(part_path)
 
     print(f"Saved training dataset in {len(part_paths)} parts:")
