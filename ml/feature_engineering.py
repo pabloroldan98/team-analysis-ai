@@ -754,10 +754,29 @@ def build_training_dataset(
 
 DATASETS_DIR = Path(__file__).parent / "datasets"
 
+# Maximum file size per part (90 MB leaves headroom under GitHub's 100 MB limit)
+_MAX_PART_BYTES = 90 * 1024 * 1024
+
 
 def _get_dataset_path(cutoff_months: int = 12) -> Path:
-    """Get path for the training dataset file."""
+    """Get base path for the training dataset file."""
     return DATASETS_DIR / f"training_dataset_{cutoff_months}m.json"
+
+
+def _get_part_paths(base_path: Path) -> List[Path]:
+    """Return sorted list of existing part files for a dataset.
+    
+    Parts follow the pattern ``<base_stem>_part1.json``, ``<base_stem>_part2.json``, …
+    Falls back to the single-file ``<base>.json`` if no parts exist.
+    """
+    stem = base_path.stem  # e.g. "training_dataset_12m"
+    parts = sorted(base_path.parent.glob(f"{stem}_part*.json"))
+    if parts:
+        return parts
+    # Legacy single file
+    if base_path.exists():
+        return [base_path]
+    return []
 
 
 def save_training_dataset(
@@ -765,72 +784,123 @@ def save_training_dataset(
     cutoff_months: int = 12,
 ) -> Path:
     """
-    Save training dataset to JSON file.
-    
+    Save training dataset to one or more JSON files.
+
+    If the full dataset exceeds ``_MAX_PART_BYTES`` it is automatically
+    split into ``*_part1.json``, ``*_part2.json``, … so that each file
+    stays under 90 MB (safely below GitHub's 100 MB limit).
+
     Args:
         dataset: List of PlayerFeatures to save
         cutoff_months: Frequency used to generate dataset (for filename)
-    
+
     Returns:
-        Path to saved file
+        Path to the base file (or first part)
     """
     DATASETS_DIR.mkdir(parents=True, exist_ok=True)
-    filepath = _get_dataset_path(cutoff_months)
-    
+    base_path = _get_dataset_path(cutoff_months)
+
     # Convert to list of dicts
     data = [f.to_dict() for f in dataset]
-    
-    # Add metadata
-    output = {
-        "metadata": {
-            "cutoff_months": cutoff_months,
-            "num_samples": len(dataset),
-            "created_at": datetime.now().isoformat(),
-            "cutoff_seasons": sorted(set(f.cutoff_season for f in dataset)),
-        },
-        "samples": data,
+
+    metadata = {
+        "cutoff_months": cutoff_months,
+        "num_samples": len(dataset),
+        "created_at": datetime.now().isoformat(),
+        "cutoff_seasons": sorted(set(f.cutoff_season for f in dataset)),
     }
-    
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=2, default=str)
-    
-    print(f"Saved training dataset to: {filepath}")
-    print(f"  Samples: {len(dataset)}")
+
+    # ── Try writing as a single file first ──────────────────────────────
+    full_output = {"metadata": metadata, "samples": data}
+    full_blob = json.dumps(full_output, indent=2, default=str).encode("utf-8")
+
+    if len(full_blob) <= _MAX_PART_BYTES:
+        # Clean up old part files if they exist
+        for old_part in base_path.parent.glob(f"{base_path.stem}_part*.json"):
+            old_part.unlink()
+        with open(base_path, "wb") as f:
+            f.write(full_blob)
+        print(f"Saved training dataset to: {base_path}")
+        print(f"  Samples: {len(dataset)}")
+        print(f"  Size: {len(full_blob)/1e6:.1f} MB (single file)")
+        return base_path
+
+    # ── Split into parts ────────────────────────────────────────────────
+    # Remove legacy single file
+    if base_path.exists():
+        base_path.unlink()
+    # Remove old parts
+    for old_part in base_path.parent.glob(f"{base_path.stem}_part*.json"):
+        old_part.unlink()
+
+    # Estimate how many parts we need (conservative)
+    num_parts = max(2, -(-len(full_blob) // _MAX_PART_BYTES))  # ceil division
+    chunk_size = -(-len(data) // num_parts)  # samples per part (ceil)
+
+    part_paths: List[Path] = []
+    for i in range(num_parts):
+        chunk = data[i * chunk_size : (i + 1) * chunk_size]
+        if not chunk:
+            break
+        part_meta = {**metadata, "part": i + 1, "total_parts": num_parts}
+        part_output = {"metadata": part_meta, "samples": chunk}
+        part_path = base_path.parent / f"{base_path.stem}_part{i + 1}.json"
+        with open(part_path, "w", encoding="utf-8") as f:
+            json.dump(part_output, f, ensure_ascii=False, default=str)
+        part_paths.append(part_path)
+
+    print(f"Saved training dataset in {len(part_paths)} parts:")
+    for pp in part_paths:
+        sz = pp.stat().st_size / 1e6
+        print(f"  {pp.name}  ({sz:.1f} MB)")
+    print(f"  Total samples: {len(dataset)}")
     print(f"  Cutoff frequency: {cutoff_months} months")
-    print(f"  Seasons: {output['metadata']['cutoff_seasons']}")
-    
-    return filepath
+    print(f"  Seasons: {metadata['cutoff_seasons']}")
+
+    return part_paths[0]
 
 
 def load_training_dataset(cutoff_months: int = 12) -> Optional[List[PlayerFeatures]]:
     """
-    Load training dataset from JSON file.
-    
+    Load training dataset from JSON file(s).
+
+    Supports both a single file and multi-part datasets
+    (``*_part1.json``, ``*_part2.json``, …).
+
     Args:
         cutoff_months: Frequency used to generate dataset (for filename)
-    
+
     Returns:
-        List of PlayerFeatures or None if file doesn't exist
+        List of PlayerFeatures or None if no files exist
     """
-    filepath = _get_dataset_path(cutoff_months)
-    
-    if not filepath.exists():
+    base_path = _get_dataset_path(cutoff_months)
+    part_paths = _get_part_paths(base_path)
+
+    if not part_paths:
         return None
-    
-    with open(filepath, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    
-    metadata = data.get("metadata", {})
-    samples = data.get("samples", [])
-    
-    print(f"Loading training dataset from: {filepath}")
-    print(f"  Samples: {metadata.get('num_samples', len(samples))}")
+
+    all_samples: list = []
+    metadata: dict = {}
+
+    for pp in part_paths:
+        with open(pp, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if not metadata:
+            metadata = data.get("metadata", {})
+        all_samples.extend(data.get("samples", []))
+
+    num_files = len(part_paths)
+    label = f"{num_files} part(s)" if num_files > 1 else "single file"
+    print(f"Loading training dataset ({label}):")
+    for pp in part_paths:
+        print(f"  {pp.name}")
+    print(f"  Samples: {metadata.get('num_samples', len(all_samples))}")
     print(f"  Created: {metadata.get('created_at', 'unknown')}")
     print(f"  Seasons: {metadata.get('cutoff_seasons', [])}")
-    
+
     # Convert dicts back to PlayerFeatures
     dataset = []
-    for item in samples:
+    for item in all_samples:
         # Parse valuation_date back to datetime
         val_date = item.get("valuation_date")
         if isinstance(val_date, str) and val_date:
@@ -840,7 +910,7 @@ def load_training_dataset(cutoff_months: int = 12) -> Optional[List[PlayerFeatur
                 val_date = datetime(2020, 1, 1)  # Fallback
         else:
             val_date = datetime(2020, 1, 1)
-        
+
         features = PlayerFeatures(
             player_id=item.get("player_id", ""),
             player_name=item.get("player_name", ""),
@@ -875,7 +945,7 @@ def load_training_dataset(cutoff_months: int = 12) -> Optional[List[PlayerFeatur
             target_value=item.get("target_value"),
         )
         dataset.append(features)
-    
+
     return dataset
 
 
