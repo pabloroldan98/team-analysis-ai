@@ -14,6 +14,7 @@ TEXT = {
         "english": "English",
 
         # Inputs
+        "today_option": "Hoy",
         "select_season": "Temporada",
         "select_club": "Club",
         "transfer_budget": "Presupuesto de fichajes (€M)",
@@ -83,6 +84,7 @@ TEXT = {
         "english": "English",
 
         # Inputs
+        "today_option": "Today",
         "select_season": "Season",
         "select_club": "Club",
         "transfer_budget": "Transfer budget (€M)",

@@ -515,6 +515,6 @@ class BaseScraper:
         value_str = re.sub(r"[^\d.]", "", value_str)
         
         try:
-            return float(value_str) * multiplier
+            return round(float(value_str) * multiplier, 0)
         except ValueError:
             return None

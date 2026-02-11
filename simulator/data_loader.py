@@ -1,18 +1,314 @@
-"""Load teams and players from JSON data."""
+"""
+Load teams and players from JSON data.
+
+Player team assignment is determined by transfers (not valuations).
+The pipeline is:
+
+1. Load ALL players from every ``players_all_*.json`` file.
+2. Load ALL transfers from every ``transfers_all_*.json`` file.
+   For each player find the last transfer whose date <= 01/07/{start_year}.
+   Use that transfer to set the player's current team (``to_club``).
+   Also track whether the player is on loan.
+3. Filter out players whose team is "Retired", "Without Club", etc.
+4. Load ALL valuations from every ``valuations_all_*.json`` file.
+   For each player find the last valuation whose date <= 01/07/{start_year}.
+   Update ``market_value`` and ``age``.
+"""
 from __future__ import annotations
 
+import json
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 ROOT_DIR = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT_DIR))
 
 from scraping.utils.helpers import read_dict_from_json, DATA_DIR
 from player import Player
+from transfer import Transfer
 from valuation import Valuation
 
+
+# Team IDs that represent "out-of-football" destinations
+EXCLUDED_TEAM_IDS = {
+    "123",   # Retired
+    # "515",   # Without Club
+    # "2113",  # Career break
+}
+
+EXCLUDED_TEAM_NAMES = {
+    "retired",
+    # "without club",
+    # "career break",
+}
+
+
+# ── Date helpers ─────────────────────────────────────────────────────────
+
+def _parse_date(date_str: str) -> Optional[datetime]:
+    """Parse DD/MM/YYYY or YYYY-MM-DD to datetime."""
+    if not date_str:
+        return None
+    for fmt in ("%d/%m/%Y", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(date_str, fmt)
+        except ValueError:
+            continue
+    return None
+
+
+TODAY_SEASON = "today"
+
+
+def _get_season_start_date(season: str) -> datetime:
+    """Return 01/07 of the starting year of a season like '2023-2024'.
+
+    If *season* is ``"today"``, returns ``datetime.now()`` (the squad
+    snapshot is taken as-of right now).
+    """
+    if season.lower() == TODAY_SEASON:
+        return datetime.now()
+    start_year = int(season.split("-")[0])
+    return datetime(start_year, 7, 1)
+
+
+# ── Bulk loaders (all files) ────────────────────────────────────────────
+
+def _load_all_players() -> Dict[str, Player]:
+    """
+    Load ALL ``players_all_*.json`` files.
+
+    Returns a dict keyed by ``player_id``.  When a player appears in
+    multiple season files we keep the entry from the latest file (by
+    filename sort).
+    """
+    players: Dict[str, Player] = {}
+
+    for filepath in sorted(DATA_DIR.glob("players_all_*.json")):
+        if "_OLD" in filepath.name:
+            continue
+        with open(filepath, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        for item in data:
+            if not isinstance(item, dict):
+                continue
+            p = Player.from_dict(item)
+            players[p.player_id] = p  # later file overwrites earlier
+
+    return players
+
+
+def _load_all_transfers() -> List[Transfer]:
+    """Load ALL ``transfers_all_*.json`` files into a flat list."""
+    transfers: List[Transfer] = []
+
+    for filepath in sorted(DATA_DIR.glob("transfers_all_*.json")):
+        if "_OLD" in filepath.name:
+            continue
+        with open(filepath, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        for item in data:
+            if not isinstance(item, dict):
+                continue
+            transfers.append(Transfer.from_dict(item))
+
+    return transfers
+
+
+def _load_all_valuations() -> List[Valuation]:
+    """Load ALL ``valuations_all_*.json`` files into a flat list."""
+    valuations: List[Valuation] = []
+
+    for filepath in sorted(DATA_DIR.glob("valuations_all_*.json")):
+        if "_OLD" in filepath.name:
+            continue
+        with open(filepath, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        for item in data:
+            if not isinstance(item, dict):
+                continue
+            valuations.append(Valuation.from_dict(item))
+
+    return valuations
+
+
+# ── Season-level queries ─────────────────────────────────────────────────
+
+def get_transfer_at_season_start(
+    transfers: List[Transfer],
+    season: str,
+) -> Dict[str, Transfer]:
+    """
+    For each player return the most recent transfer whose date
+    is **<= 01/07/{start_year}** (only 1 transfer per player).
+
+    Args:
+        transfers: Flat list of ALL transfers.
+        season: e.g. "2023-2024"
+
+    Returns:
+        Dict ``player_id -> Transfer``
+    """
+    cutoff = _get_season_start_date(season)
+
+    best: Dict[str, Tuple[datetime, Transfer]] = {}
+
+    for t in transfers:
+        td = _parse_date(t.transfer_date)
+        if td is None or td > cutoff:
+            continue
+
+        prev = best.get(t.player_id)
+        if prev is None or td > prev[0]:
+            best[t.player_id] = (td, t)
+
+    return {pid: tr for pid, (_, tr) in best.items()}
+
+
+def get_valuation_at_season_start(
+    valuations: List[Valuation],
+    season: str,
+) -> Dict[str, Valuation]:
+    """
+    For each player return the most recent valuation whose date
+    is **<= 01/07/{start_year}** (only 1 valuation per player).
+    """
+    cutoff = _get_season_start_date(season)
+
+    best: Dict[str, Tuple[datetime, Valuation]] = {}
+
+    for v in valuations:
+        vd = _parse_date(v.valuation_date)
+        if vd is None or vd > cutoff:
+            continue
+
+        prev = best.get(v.player_id)
+        if prev is None or vd > prev[0]:
+            best[v.player_id] = (vd, v)
+
+    return {pid: val for pid, (_, val) in best.items()}
+
+
+# ── Main entry points ───────────────────────────────────────────────────
+
+def get_active_players_at_season_start(
+    season: str,
+    league: str = "all",
+) -> List[Player]:
+    """
+    Build the definitive list of active players at season start (01/07).
+
+    Pipeline:
+      1. Load ALL players  →  dict[player_id, Player]
+      2. Load ALL transfers →  for each player, last transfer <= cutoff
+         → update ``team``, ``team_id``, ``on_loan``, ``loaning_team``
+      3. Filter out Retired / Without Club / Career break
+      4. Load ALL valuations → for each player, last valuation <= cutoff
+         → update ``market_value``, ``age``
+
+    No inner join: players without a matching transfer or valuation are
+    still included (they just keep their original data).
+
+    Args:
+        season: e.g. "2023-2024"
+        league: unused for now (kept for API compat)
+
+    Returns:
+        List of Player objects ready for simulation
+    """
+    # 1. All players
+    players = _load_all_players()
+
+    # 2. Transfers → team assignment
+    all_transfers = _load_all_transfers()
+    transfer_map = get_transfer_at_season_start(all_transfers, season)
+
+    for pid, t in transfer_map.items():
+        if pid not in players:
+            continue  # player not in any players file, skip
+
+        p = players[pid]
+        p.team = t.to_club_name
+        p.team_id = t.to_club_id
+
+        # Loan tracking: if the last transfer is a loan, the player is
+        # on loan at to_club, and the owning club is from_club.
+        if t.is_loan and t.transfer_type in ("loan_out", "loan_in"):
+            p.on_loan = True
+            p.loaning_team = t.from_club_name
+            p.loaning_team_id = t.from_club_id
+        else:
+            p.on_loan = False
+            p.loaning_team = ""
+            p.loaning_team_id = ""
+
+    # 3. Filter out excluded teams and players without a team
+    active: Dict[str, Player] = {}
+    for pid, p in players.items():
+        # Players with no team at all are excluded
+        if not p.team:
+            continue
+
+        team_name_lower = p.team.lower()
+        team_id = str(p.team_id or "")
+
+        if team_id in EXCLUDED_TEAM_IDS:
+            continue
+        if team_name_lower in EXCLUDED_TEAM_NAMES:
+            continue
+
+        active[pid] = p
+
+    # 4. Valuations → market_value & age update
+    all_valuations = _load_all_valuations()
+    valuation_map = get_valuation_at_season_start(all_valuations, season)
+
+    for pid, v in valuation_map.items():
+        if pid not in active:
+            continue
+
+        p = active[pid]
+        p.market_value = v.valuation_amount
+        if v.age_at_valuation is not None:
+            p.age = v.age_at_valuation
+
+    return list(active.values())
+
+
+def get_active_team_players_at_season_start(
+    season: str,
+    team_name_or_id: str,
+    league: str = "all",
+) -> List[Player]:
+    """
+    Get active players for a specific team at season start.
+
+    Args:
+        season: e.g. "2023-2024"
+        team_name_or_id: Team name (partial match) or team_id
+        league: unused (kept for API compat)
+
+    Returns:
+        List of Player objects for the team
+    """
+    all_active = get_active_players_at_season_start(season, league)
+    if not all_active:
+        return []
+
+    team_lower = str(team_name_or_id).lower()
+
+    # Try exact team_id match first
+    by_id = [p for p in all_active if str(p.team_id) == str(team_name_or_id)]
+    if by_id:
+        return by_id
+
+    # Fallback: partial name match
+    return [p for p in all_active if team_lower in (p.team or "").lower()]
+
+
+# ── Legacy / helper functions ────────────────────────────────────────────
 
 def get_available_seasons() -> List[str]:
     """Get list of available seasons from data files."""
@@ -21,7 +317,6 @@ def get_available_seasons() -> List[str]:
         return []
     for f in DATA_DIR.glob("players_all_*.json"):
         if "_OLD" not in f.name:
-            # Extract season from filename: players_all_2020-2021.json -> 2020-2021
             stem = f.stem
             if stem.startswith("players_all_"):
                 season = stem.replace("players_all_", "")
@@ -39,7 +334,7 @@ def load_teams(season: str, league: str = "all") -> List[dict]:
 
 
 def load_players(season: str, league: str = "all") -> List[Player]:
-    """Load players for a given season and league as Player objects."""
+    """Load players for a given season and league (raw, no enrichment)."""
     file_name = f"players_{league}_{season}"
     data = read_dict_from_json(file_name)
     if data is None:
@@ -83,161 +378,6 @@ def load_valuations(season: str, league: str = "all") -> List[Valuation]:
     return [Valuation.from_dict(v) for v in raw if isinstance(v, dict)]
 
 
-def _parse_valuation_date(date_str: str) -> Optional[datetime]:
-    """Parse valuation date string (DD/MM/YYYY) to datetime."""
-    if not date_str:
-        return None
-    try:
-        return datetime.strptime(date_str, "%d/%m/%Y")
-    except ValueError:
-        return None
-
-
-def _get_season_start_date(season: str) -> datetime:
-    """
-    Get the season start date (01/07 of the starting year).
-    
-    Args:
-        season: Season string like "2023-2024"
-    
-    Returns:
-        datetime for 01/07 of the starting year
-    """
-    start_year = int(season.split("-")[0])
-    return datetime(start_year, 7, 1)
-
-
-def get_valuation_at_season_start(
-    valuations: List[Valuation],
-    season: str,
-) -> Dict[str, Valuation]:
-    """
-    Get the most recent valuation for each player BEFORE season start date.
-    
-    Args:
-        valuations: List of all valuations
-        season: Season string like "2023-2024"
-    
-    Returns:
-        Dict mapping player_id to their valuation at season start
-    """
-    cutoff_date = _get_season_start_date(season)
-    
-    # Group valuations by player_id and find the most recent before cutoff
-    player_valuations: Dict[str, Valuation] = {}
-    player_dates: Dict[str, datetime] = {}
-    
-    for v in valuations:
-        val_date = _parse_valuation_date(v.valuation_date)
-        if val_date is None or val_date >= cutoff_date:
-            continue
-        
-        pid = v.player_id
-        current_best_date = player_dates.get(pid)
-        
-        if current_best_date is None or val_date > current_best_date:
-            player_valuations[pid] = v
-            player_dates[pid] = val_date
-    
-    return player_valuations
-
-
-def get_active_players_at_season_start(
-    season: str,
-    league: str = "all",
-) -> List[Player]:
-    """
-    Get list of active players with their data at season start (01/07).
-    
-    This function:
-    1. Loads all players and valuations for the season
-    2. For each player, finds their most recent valuation BEFORE 01/07/(start year)
-    3. Excludes players who were "Retired" at that point
-    4. Updates player data (market_value, team, team_id, age) from the valuation
-    
-    Args:
-        season: Season string like "2023-2024"
-        league: League code (default "all")
-    
-    Returns:
-        List of Player objects with updated data from valuations (INNER JOIN)
-    """
-    players = load_players(season, league)
-    valuations = load_valuations(season, league)
-    
-    if not players or not valuations:
-        return players  # Return original if no valuations
-    
-    # Get valuation at season start for each player
-    val_at_start = get_valuation_at_season_start(valuations, season)
-    
-    # INNER JOIN: only keep players that have a valuation at season start
-    active_players = []
-    
-    for p in players:
-        valuation = val_at_start.get(p.player_id)
-        if valuation is None:
-            continue  # No valuation found, skip (INNER JOIN behavior)
-        
-        # Exclude retired players
-        club_name = valuation.club_name_at_valuation or ""
-        if club_name.lower() == "retired":
-            continue
-        
-        # Update player with valuation data
-        p.market_value = valuation.valuation_amount
-        p.team = club_name
-        p.team_id = valuation.club_id_at_valuation
-        if valuation.age_at_valuation is not None:
-            p.age = valuation.age_at_valuation
-        
-        active_players.append(p)
-    
-    return active_players
-
-
-def get_active_team_players_at_season_start(
-    season: str,
-    team_name_or_id: str,
-    league: str = "all",
-) -> List[Player]:
-    """
-    Get active players for a specific team at season start.
-    
-    Uses get_active_players_at_season_start and filters by team.
-    Note: The team is determined by club_id_at_valuation from the valuation data.
-    
-    Args:
-        season: Season string like "2023-2024"
-        team_name_or_id: Team name (partial match) or team_id
-        league: League code (default "all")
-    
-    Returns:
-        List of active Player objects for the team
-    """
-    all_active = get_active_players_at_season_start(season, league)
-    if not all_active:
-        return []
-    
-    # Find team_id from teams data
-    teams = load_teams(season, league)
-    team_id = None
-    team_name_lower = str(team_name_or_id).lower()
-    
-    for t in teams:
-        tid = t.get("team_id", "")
-        tname = (t.get("name") or "").lower()
-        if str(tid) == str(team_name_or_id) or team_name_lower in tname:
-            team_id = str(tid)
-            break
-    
-    if not team_id:
-        # Try matching by team name directly from player's team
-        return [p for p in all_active if team_name_lower in (p.team or "").lower()]
-    
-    return [p for p in all_active if str(p.team_id) == team_id]
-
-
 def enrich_players_with_predictions(
     players: List[Player],
     valuations: List[Valuation],
@@ -246,52 +386,37 @@ def enrich_players_with_predictions(
 ) -> List[Player]:
     """
     Enrich players with ML-predicted future values.
-    
-    Args:
-        players: List of Player objects to enrich
-        valuations: Historical valuations for feature extraction
-        season: Season string (e.g., "2023-2024")
-        model_path: Optional path to trained model. If None, tries to find latest.
-    
-    Returns:
-        Same players with predicted_value set (if model available)
     """
     try:
         from ml.value_predictor import ValuePredictor, predict_player_values
     except ImportError:
-        # ML module not available or dependencies missing
         return players
-    
-    # Find model
+
     if model_path is None:
         model_path = ValuePredictor.get_latest_model()
-    
+
     if model_path is None or not model_path.exists():
-        return players  # No model available
-    
-    # Load model
+        return players
+
     try:
         predictor = ValuePredictor(model_path)
     except Exception:
         return players
-    
-    # Get cutoff date
+
     cutoff_date = _get_season_start_date(season)
-    
-    # Predict values
+
     predictions = predict_player_values(
         valuations,
         cutoff_date,
         predictor,
         players={p.player_id: p for p in players},
     )
-    
-    # Enrich players
+
     for p in players:
         pred_value = predictions.get(p.player_id)
         if pred_value is not None:
             p.predicted_value = pred_value
-    
+
     return players
 
 
@@ -302,23 +427,13 @@ def get_active_players_with_predictions(
 ) -> List[Player]:
     """
     Get active players at season start with ML-predicted values.
-    
-    Combines get_active_players_at_season_start with ML predictions.
-    
-    Args:
-        season: Season string (e.g., "2023-2024")
-        league: League code (default "all")
-        model_path: Optional path to trained model
-    
-    Returns:
-        List of Player objects with market_value and predicted_value set
     """
     players = get_active_players_at_season_start(season, league)
     if not players:
         return []
-    
+
     valuations = load_valuations(season, league)
-    
+
     return enrich_players_with_predictions(
         players,
         valuations,

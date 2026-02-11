@@ -15,9 +15,11 @@ A comprehensive football data scraping and analysis platform that extracts data 
    - [ML Value Prediction](#ml-value-prediction)
    - [Knapsack Optimization](#knapsack-optimization)
    - [LLM Analysis](#llm-analysis)
+   - [Web Application (Streamlit)](#web-application-streamlit)
 3. [Stack & Architecture](#stack--architecture)
 4. [Limitations & Trade-offs](#limitations--trade-offs)
 5. [How to Run](#how-to-run)
+6. [Future Improvements](#future-improvements)
 
 ---
 
@@ -93,10 +95,19 @@ Despite implementing multiple countermeasures, blocking still occurs:
 
 - **Rotating User-Agents**: Pool of 12+ different browser fingerprints (Chrome, Firefox, Safari, Edge, Opera across Windows/macOS/Linux)
 - **Request delays**: 0.25s default delay between requests
-- **Retry logic**: 5 retries with 60-second pauses between attempts
+- **Retry logic**: 5 retries with 60-second pauses between attempts for HTML scraping; dedicated `_api_get` method for API calls with retry on `ConnectionResetError`, HTTP 429, and 5xx errors
 - **TLS fingerprinting**: Using `tls-requests` to mimic real browser connections
 
 Even with these measures, occasional 403/429 errors occur, especially from GitHub Actions runners (known IPs).
+
+#### Two-Phase Player Discovery
+
+The scrapers for players, transfers, and valuations use a **two-phase approach** to ensure comprehensive coverage:
+
+- **Phase 1 (Squad players)**: Scrape all players from current team squads and fetch their complete histories (transfer history, valuation history, etc.).
+- **Phase 2 (Transferred players)**: Additionally scan each team's season transfer page to discover players who moved in/out that season but may no longer be in the current squad. Any new players not already covered in Phase 1 get their full history scraped as well.
+
+This combined approach ensures we capture data for players who were transferred mid-season and wouldn't appear in the current squad roster.
 
 #### Discovery of Transfermarkt API
 
@@ -168,6 +179,17 @@ An interactive web application for a **football transfer strategies simulator**.
 
 ### How the Simulator Works
 
+#### Data Loading Pipeline
+
+Before the simulation runs, the **data loader** builds an accurate snapshot of every player at the start of the selected season:
+
+1. **Load ALL players** from every `players_all_*.json` file (deduplicated, keeping the latest entry per player).
+2. **Load ALL transfers** from every `transfers_all_*.json` file. For each player, find their **most recent transfer with a date ≤ 01/07/{season_start_year}** to determine their current team and loan status.
+3. **Filter out** players whose team is "Retired", "Without Club", "Career break", or empty.
+4. **Load ALL valuations** from every `valuations_all_*.json` file. For each player, find their **most recent valuation ≤ 01/07/{season_start_year}** and update their market value and age.
+
+This is not an inner join — players without a matching transfer or valuation keep their original data.
+
 #### Budget Calculation
 
 Since exact player salaries are not publicly available, we approximate using a simple heuristic:
@@ -182,7 +204,9 @@ The reasoning: a player's annual salary is roughly **10% of their market value**
 
 The simulator randomly selects **5 to 10 players** to put on the transfer market (max 3 per position). For each player:
 
+- **On-loan players are excluded** from the sellable pool — they belong to another club and cannot be sold.
 - A **destination club** is found at random among clubs whose total squad value is at least **10× the player's market value** (a rough proxy for "can afford this player").
+- **Invalid destinations** are excluded: "Without Club", "Career break", and "Retired" are not real clubs you can sell to. You _can_ buy players from "Without Club" and "Career break", but "Retired" players are fully excluded from the simulation (no buying or selling).
 - If no club qualifies, the player **is not sold** (no buyer found).
 - Revenue from successful sales is added to the budget.
 
@@ -193,6 +217,14 @@ The positions vacated by sold players need to be filled. The simulator:
 1. Takes all available players from the market (excluding the selling club's squad and sold players).
 2. **Predicts their future value** using the ML model for that season.
 3. Runs the **Grouped Knapsack algorithm** to find the set of players that **maximizes total predicted value** while filling the required positions and staying within budget.
+
+##### Athletic Bilbao Special Case
+
+Athletic Bilbao has a real-world policy of only signing players with a connection to the Basque Country. The simulator replicates this: when Athletic Bilbao is the buying club, it can only sign players who have played for **any of these clubs** at some point in their career:
+
+- Athletic Bilbao, Bilbao Athletic, Athletic Bilbao UEFA U19, Athletic Bilbao U19, Athletic Bilbao U18, Athletic Bilbao Youth, CD Basconia
+
+This is checked by loading the **full transfer history** and verifying whether the player's `from_club` or `to_club` matches any of these teams (by name or ID). Athletic Bilbao can still sell players to any club.
 
 #### AI Summary
 
@@ -214,9 +246,10 @@ An **XGBoost** model predicts the market value of players one year into the futu
 
 Each row in the training dataset represents **one player at one point in time** (specifically, 01/07 of each year — the opening of the summer transfer window). Features include:
 
-- **Player attributes**: age, nationality, height, preferred foot, position.
+- **Player attributes**: age (explicitly calculated from `birth_date` and the cutoff date for each row), nationality, height, preferred foot, position.
 - **Valuation history**: current market value, value trend, number of historical valuations.
 - **Contextual features**: `is_playing_in_home_country`, league tier, club market value.
+- **Current club determination**: The player's current club at each cutoff date is determined from their **transfer history** (most recent transfer before the cutoff), not from valuation data — which may reference the club at the time of valuation rather than the actual team on 01/07.
 - **Categorical binning**: High-cardinality features like nationality and club are binned to reduce dimensionality.
 
 #### Temporal Integrity
@@ -257,6 +290,33 @@ Set `LLM_PROVIDER` in your `.env` to choose the provider. The summary is generat
 
 ---
 
+### Web Application (Streamlit)
+
+The simulator is exposed through an interactive **Streamlit** web application, deployed at:
+
+> **[https://calculadorafichajes.streamlit.app/](https://calculadorafichajes.streamlit.app/)**
+
+#### UI Features
+
+- **Bilingual interface**: Toggle between Spanish and English with flag icons. All labels, captions, and AI analyses are language-aware.
+- **Season & Club selection**: Choose a season and a club. Clubs are sorted by league priority (LaLiga → Premier League → Serie A → Bundesliga → Ligue 1) and then by descending total squad market value.
+- **Budget configuration**: Set transfer budget and salary budget (with a caption explaining the `min(transfer, salary × 10)` formula). A checkbox enables **unlimited budget** mode, which disables the budget inputs and displays `€∞` in the results.
+- **Progress feedback**: A step-by-step progress bar with descriptive status messages (e.g., "Predicting future values with ML... [5/8]") and a spinner with a "May take a few minutes" caption.
+
+#### Output Display
+
+- **Players Sold** (left column): Player image, name, position, market value, and destination club — each with a red down-arrow icon.
+- **Recommended Signings** (right column): Player image, name, position, current value → predicted value, and origin club — each with a green up-arrow icon.
+- **Financial summary**: Total cost, remaining budget, predicted value (1 year), and expected net financial benefit — with a color-coded delta indicator (green/up when positive, red/down when negative).
+- **Final squad**: All remaining + new players displayed as cards grouped by position (GK, DEF, MID, ATT), sorted by market value descending within each position. New signings are highlighted with a "NEW" badge and a colored border.
+- **AI Analysis**: An expandable section where you can paste an API key (OpenAI, Anthropic, or Gemini — auto-detected from key prefix). The analysis is cached per language, so switching languages triggers a new analysis only if one hasn't been generated yet for that language.
+
+#### Auto-Deployment
+
+Every time a scraping pipeline completes, an **auto-update trigger** comment in `streamlit_app.py` is updated with the current timestamp. Since Streamlit Cloud watches the main branch for changes, this forces a redeployment with the latest data.
+
+---
+
 ## Stack & Architecture
 
 ### Backend
@@ -275,7 +335,9 @@ Set `LLM_PROVIDER` in your `.env` to choose the provider. The summary is generat
 
 | Component | Technology |
 |-----------|------------|
-| Framework | Streamlit *(coming soon)* |
+| Framework | Streamlit |
+| Internationalization | Custom i18n module (ES/EN) |
+| Deployment | Streamlit Cloud |
 
 ### AI Models
 
@@ -289,7 +351,11 @@ Set `LLM_PROVIDER` in your `.env` to choose the provider. The summary is generat
 
 ```
 team-analysis-ai/
-├── .github/workflows/       # CI/CD scraping pipelines
+├── .github/workflows/       # CI/CD scraping pipelines (7 workflows)
+├── assets/
+│   ├── arrows/              # UI arrow icons (red down, green up)
+│   ├── language/            # Flag SVGs for language toggle
+│   └── logo.png             # App logo
 ├── data/json/               # Scraped data (JSON)
 ├── ml/
 │   ├── datasets/            # Cached training datasets
@@ -298,7 +364,7 @@ team-analysis-ai/
 │   ├── train_pipeline.py
 │   └── value_predictor.py
 ├── scraping/
-│   ├── base_scraper.py
+│   ├── base_scraper.py      # Base class + API retry logic
 │   ├── transfermarkt_leagues.py
 │   ├── transfermarkt_teams.py
 │   ├── transfermarkt_players.py
@@ -306,9 +372,12 @@ team-analysis-ai/
 │   └── transfermarkt_valuations.py
 ├── scraping_tasks/          # CLI entry points for scrapers
 ├── simulator/
+│   ├── data_loader.py       # Centralized player data pipeline
 │   ├── knapsack_solver.py   # MCKP optimization
 │   ├── transfer_simulator.py # Main simulation engine
 │   └── llm_summarizer.py    # LLM integration
+├── webapp/
+│   └── i18n.py              # Internationalization (ES/EN)
 ├── league.py / team.py / player.py / transfer.py / valuation.py
 ├── streamlit_app.py         # Web app entry point
 ├── requirements.txt
@@ -341,7 +410,13 @@ team-analysis-ai/
 
 ## How to Run
 
-### Option 1: GitHub Actions (Scraping)
+### Option 1: Live App
+
+The simulator is deployed and ready to use — no installation needed:
+
+> **[https://calculadorafichajes.streamlit.app/](https://calculadorafichajes.streamlit.app/)**
+
+### Option 2: GitHub Actions (Scraping)
 
 The easiest way to run the scrapers is through GitHub Actions workflows:
 
@@ -349,7 +424,7 @@ The easiest way to run the scrapers is through GitHub Actions workflows:
 2. **Multiple Leagues & Seasons**: Go to [Input Scraper](../../actions/workflows/input_scraper.yml) → Run workflow → Configure JSON arrays
 3. **Full Data (All Leagues × 10 Seasons)**: Go to [Scheduled Scraper](../../actions/workflows/scheduled_scraper.yml) → Run workflow
 
-### Option 2: Run Locally
+### Option 3: Run Locally
 
 ```bash
 # Clone the repository
@@ -364,6 +439,14 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+#### Run the Streamlit App
+
+```bash
+streamlit run streamlit_app.py
+```
+
+The app will open at [http://localhost:8501](http://localhost:8501).
+
 #### Configure LLM (optional)
 
 Copy `.env.example` to `.env` and add your API key:
@@ -373,7 +456,9 @@ LLM_PROVIDER=gemini          # openai, anthropic, or gemini
 GEMINI_API_KEY=your-key-here  # or OPENAI_API_KEY / ANTHROPIC_API_KEY
 ```
 
-#### Run the Transfer Simulator
+Alternatively, you can enter the API key directly in the Streamlit app (in the AI Analysis section). The provider is auto-detected from the key prefix.
+
+#### Run the Transfer Simulator (CLI)
 
 ```bash
 # Basic simulation (with AI summary if API key is configured)
@@ -407,6 +492,19 @@ python scraping_tasks/scrape_valuations.py --leagues laliga --season 2025-2026
 ```
 
 Output files are saved to `data/json/`.
+
+---
+
+## Future Improvements
+
+- **Customizable sell phase**: Allow the user to choose which players to sell (or protect from being sold) instead of random selection.
+- **Configurable signings per position**: Let the user decide how many players to sign for each position (e.g., "I want 2 DEF and 1 MID") rather than only replacing sold players.
+- **Strategic selling**: Sell players based on criteria (age, declining value, surplus in position) rather than purely at random.
+- **Transfer negotiation realism**: Add release clauses, contract length, and player willingness as factors that affect whether a transfer goes through.
+- **Multi-window simulation**: Simulate multiple consecutive transfer windows to see squad evolution over several seasons.
+- **Wage structure visualization**: Display estimated wage impact of signings and departures alongside transfer fees.
+- **More leagues**: Extend beyond the top 5 European leagues to include Portuguese Liga, Eredivisie, Liga MX, etc.
+- **Injury and performance data**: Integrate external data sources (injuries, goals, assists) to improve ML predictions.
 
 ---
 

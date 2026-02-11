@@ -74,8 +74,11 @@ def st_svg(svg_path: Path, width: int = 40):
     )
 
 
-def _get_available_seasons() -> List[str]:
-    """Return sorted list of seasons for which teams_all_*.json exists."""
+TODAY_SEASON = "today"
+
+
+def _get_available_seasons(lang: str = "en") -> List[str]:
+    """Return sorted list of seasons with 'Today' prepended."""
     if not DATA_DIR.exists():
         return []
     seasons = set()
@@ -87,9 +90,20 @@ def _get_available_seasons() -> List[str]:
 
 
 def _get_clubs_for_season(season: str) -> List[Dict]:
-    """Load teams_all_{season}.json sorted by league priority then market value."""
-    fp = DATA_DIR / f"teams_all_{season}.json"
-    if not fp.exists():
+    """Load teams_all_{season}.json sorted by league priority then market value.
+
+    When *season* is ``"today"``, loads the most recent teams file available.
+    """
+    if season.lower() == TODAY_SEASON:
+        # Find the latest teams_all_*.json by filename (alphabetical = chronological)
+        candidates = sorted(
+            [f for f in DATA_DIR.glob("teams_all_*.json") if "_OLD" not in f.name],
+        )
+        fp = candidates[-1] if candidates else None
+    else:
+        fp = DATA_DIR / f"teams_all_{season}.json"
+
+    if fp is None or not fp.exists():
         return []
     with open(fp, "r", encoding="utf-8") as fh:
         data = json.load(fh)
@@ -183,9 +197,18 @@ def render_inputs(lang: str):
         st.warning(t(lang, "step_loading") + " (no data found)")
         st.stop()
 
+    # Prepend "Today" / "Hoy" as the first option; default selection is index 1
+    today_label = t(lang, "today_option")
+    display_seasons = [today_label] + seasons
+    default_idx = 1 if len(display_seasons) > 1 else 0
+
     col_season, col_club = st.columns(2)
     with col_season:
-        season = st.selectbox(t(lang, "select_season"), options=seasons, index=0)
+        selected = st.selectbox(
+            t(lang, "select_season"), options=display_seasons, index=default_idx,
+        )
+        # Map the display label back to the internal "today" token
+        season = TODAY_SEASON if selected == today_label else selected
     with col_club:
         clubs_data = _get_clubs_for_season(season)
         club_names = [c.get("name", "") for c in clubs_data if c.get("name")]
@@ -244,12 +267,10 @@ def run_simulation_with_progress(
             transfer_budget=transfer_budget if not unlimited else 999_999,
             salary_budget=salary_budget if not unlimited else 999_999,
         )
-        players_dict = sim._load_players_for_season()
-        valuations = sim._load_valuations_for_season()
 
-        # 2. Update data  (step 2/7 ≈ 28%)
+        # 2. Build active player list (transfers + valuations)  (step 2/7 ≈ 28%)
         _step(0.20, "step_team")
-        all_players = sim._update_players_with_valuations(players_dict, valuations)
+        all_players = sim._load_active_players()
         sim.all_players = all_players
 
         # 3. Club players  (step 3/7 ≈ 42%)
@@ -270,8 +291,18 @@ def run_simulation_with_progress(
 
         # 5. Predict values  (step 5/7 ≈ 70%)
         _step(0.70, "step_predicting")
+
+        # Athletic Bilbao special case: restrict available players
+        athletic_eligible_ids = None
+        if sim._is_athletic_club():
+            all_transfers = sim._load_all_transfers()
+            athletic_eligible_ids = sim._get_athletic_eligible_ids(all_transfers)
+
         sold_player_ids = {sp.player.player_id for sp in sold_players}
-        available_players = sim._get_available_players(all_players, club_players)
+        available_players = sim._get_available_players(
+            all_players, club_players,
+            athletic_eligible_ids=athletic_eligible_ids,
+        )
         available_players = [p for p in available_players if p.player_id not in sold_player_ids]
         available_players = sim._predict_values(available_players, verbose=False)
 
@@ -352,9 +383,13 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
             f'<img src="{club_logo_url}" width="44" '
             f'style="vertical-align:middle;margin-right:10px;object-fit:contain;" />'
         )
+    display_season = (
+        t(lang, "today_option") if result.season.lower() == TODAY_SEASON
+        else result.season
+    )
     title_html += (
         f'<span style="font-size:1.6rem;font-weight:700;vertical-align:middle;">'
-        f'{t(lang, "simulation_title", club=result.club_name, season=result.season)}'
+        f'{t(lang, "simulation_title", club=result.club_name, season=display_season)}'
         f'</span>'
     )
     st.markdown(title_html, unsafe_allow_html=True)
@@ -370,11 +405,6 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
     # ── Sold / Bought columns ───────────────────────────────────────────────
     col_sold, col_bought = st.columns(2)
     
-    fm = result.formation_needed
-    pos_labels = ", ".join(
-        f"{t(lang, POS_KEYS[pos])}: {fm[i]}"
-        for i, pos in enumerate(POS_ORDER) if fm[i] > 0
-    )
     # -- Sold --
     with col_sold:
         sold_count = sum(1 for sp in result.players_sold if sp.was_sold)
@@ -383,7 +413,12 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
         if unsold_count:
             header_sold += f"  ({sold_count} ✔, {unsold_count} ✘)"
         st.subheader(header_sold)
-        st.caption(pos_labels)
+        fm = result.formation_needed
+        sold_labels = ", ".join(
+            f"{t(lang, POS_KEYS[pos])}: {fm[i]}"
+            for i, pos in enumerate(POS_ORDER) if fm[i] > 0
+        )
+        st.caption(sold_labels)
 
         for sp in result.players_sold:
             p = sp.player
@@ -403,7 +438,16 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
     # -- Bought --
     with col_bought:
         st.subheader(t(lang, "players_bought"))
-        st.caption(pos_labels)
+        # Compute actual positions from recommended signings
+        bought_counts = {pos: 0 for pos in POS_ORDER}
+        for p in result.recommended_signings:
+            if p.position in bought_counts:
+                bought_counts[p.position] += 1
+        bought_labels = ", ".join(
+            f"{t(lang, POS_KEYS[pos])}: {bought_counts[pos]}"
+            for pos in POS_ORDER if bought_counts[pos] > 0
+        )
+        st.caption(bought_labels)
 
         if not result.recommended_signings:
             st.info(t(lang, "no_signings"))
@@ -437,10 +481,15 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
     m1.metric(t(lang, "total_cost"), format_currency(actual_cost))
     m2.metric(t(lang, "remaining_budget"), "€∞" if is_unlimited else format_currency(remaining))
     m3.metric(t(lang, "predicted_value_1y"), format_currency(actual_predicted))
+    # Delta string must start with the sign so Streamlit detects direction
+    if net_benefit >= 0:
+        net_delta_str = f"+{format_currency(net_benefit)}"
+    else:
+        net_delta_str = f"-{format_currency(abs(net_benefit))}"
     m4.metric(
         t(lang, "net_benefit"),
         format_currency(net_benefit),
-        delta=format_currency(net_benefit),
+        delta=net_delta_str,
         delta_color="normal",
     )
 
@@ -613,3 +662,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Auto-update trigger: initial

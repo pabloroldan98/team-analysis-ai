@@ -101,9 +101,18 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
       
+      - name: Update auto-update trigger in streamlit_app.py
+        run: |
+          TRIGGER_LINE="# Auto-update trigger: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          if grep -q "^# Auto-update trigger:" streamlit_app.py; then
+            sed -i "s/^# Auto-update trigger:.*/$TRIGGER_LINE/" streamlit_app.py
+          else
+            echo "$TRIGGER_LINE" >> streamlit_app.py
+          fi
+
       - name: Commit changes
         run: |
-          git add data/json/
+          git add data/json/ streamlit_app.py
           git diff --staged --quiet || git commit -m "Update teams data [$(date -u '+%Y-%m-%d')]"
       
       - name: Push changes

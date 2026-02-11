@@ -344,6 +344,14 @@ def train_model(
         if not all_valuations:
             raise ValueError("No valuations found in data directory")
         
+        # Load all transfers for club assignment
+        if verbose:
+            print(f"Loading all transfers for club assignment...")
+        from ml.feature_engineering import _load_all_transfers
+        all_transfers = _load_all_transfers()
+        if verbose:
+            print(f"  Loaded {len(all_transfers)} transfers")
+        
         # Load team -> league mapping for ALL seasons
         if verbose:
             print(f"Loading team league mapping (all seasons)...")
@@ -361,6 +369,7 @@ def train_model(
             team_league_mapping=team_league_mapping,
             min_valuations=min_valuations,
             cutoff_months=cutoff_months,
+            all_transfers=all_transfers,
         )
         
         # Save dataset for future use

@@ -29,6 +29,7 @@ from typing import Dict, List, Optional, Tuple
 from tqdm import tqdm
 
 from player import Player
+from transfer import Transfer
 from valuation import Valuation
 from simulator.knapsack_solver import best_full_teams
 
@@ -36,6 +37,36 @@ from simulator.knapsack_solver import best_full_teams
 ROOT_DIR = Path(__file__).parent.parent
 DATA_DIR = ROOT_DIR / "data" / "json"
 MODELS_DIR = ROOT_DIR / "ml" / "models"
+
+# Teams that are NOT valid destinations when selling (they are not real clubs)
+INVALID_DESTINATION_TEAM_IDS = {"515", "2113", "123"}  # Without Club, Career break, Retired
+INVALID_DESTINATION_TEAM_NAMES = {"without club", "career break", "retired"}
+
+# Teams whose players should NOT be available for signing
+INVALID_ORIGIN_TEAM_IDS = {"123"}    # Retired
+INVALID_ORIGIN_TEAM_NAMES = {"retired"}
+
+# Athletic Bilbao family – the club can only BUY players who have played
+# for any of these clubs at some point in their career.
+ATHLETIC_FAMILY_IDS = {
+    "621",     # Athletic Bilbao
+    "6688",    # Bilbao Athletic
+    "45511",   # Athletic Bilbao UEFA U19
+    "28860",   # Athletic Bilbao U19
+    "107198",  # Athletic Bilbao U18
+    "14733",   # Athletic Bilbao Youth
+    "6665",    # CD Basconia
+}
+ATHLETIC_FAMILY_NAMES = {
+    "athletic bilbao",
+    "bilbao athletic",
+    "athletic bilbao uefa u19",
+    "athletic bilbao u19",
+    "athletic bilbao u18",
+    "athletic bilbao youth",
+    "cd basconia",
+}
+ATHLETIC_BILBAO_ID = "621"
 
 
 @dataclass
@@ -205,91 +236,38 @@ class TransferSimulator:
         self.team_market_values: Dict[str, float] = {}  # team_name -> total market value
         self.predictor = None
     
-    def _load_players_for_season(self) -> Dict[str, Player]:
-        """Load players from players_all_{season}.json."""
-        filepath = DATA_DIR / f"players_all_{self.season}.json"
-        
-        if not filepath.exists():
-            raise FileNotFoundError(f"Players file not found: {filepath}")
-        
-        with open(filepath, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        
-        players = {}
-        for item in data:
-            p = Player.from_dict(item)
-            players[p.player_id] = p
-        
-        return players
-    
-    def _load_valuations_for_season(self) -> Dict[str, Valuation]:
+    def _load_active_players(self) -> List[Player]:
         """
-        Load valuations for the season's cutoff date (01/07/start_year).
-        Returns the most recent valuation for each player before cutoff.
+        Load active players at season start using the data_loader pipeline.
+
+        Delegates to ``get_active_players_at_season_start`` which:
+          1. Loads ALL players (all seasons)
+          2. Assigns teams from transfers (last transfer <= 01/07)
+          3. Filters out Retired / Without Club / Career break
+          4. Updates market_value & age from valuations
         """
-        start_year = int(self.season.split("-")[0])
-        cutoff_date = datetime(start_year, 7, 1)
-        
-        # Load all valuations
-        filepath = DATA_DIR / f"valuations_all_{self.season}.json"
-        if not filepath.exists():
-            return {}
-        
-        with open(filepath, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        
-        # Find most recent valuation per player before cutoff
-        latest_valuations: Dict[str, Tuple[datetime, Valuation]] = {}
-        
-        for item in data:
-            v = Valuation.from_dict(item)
-            
-            # Parse date
-            try:
-                val_date = datetime.strptime(v.valuation_date, "%d/%m/%Y")
-            except ValueError:
-                try:
-                    val_date = datetime.strptime(v.valuation_date, "%Y-%m-%d")
-                except ValueError:
-                    continue
-            
-            # Only valuations before or at cutoff
-            if val_date <= cutoff_date:
-                if v.player_id not in latest_valuations or val_date > latest_valuations[v.player_id][0]:
-                    latest_valuations[v.player_id] = (val_date, v)
-        
-        return {pid: v for pid, (_, v) in latest_valuations.items()}
-    
-    def _update_players_with_valuations(
-        self,
-        players: Dict[str, Player],
-        valuations: Dict[str, Valuation],
-    ) -> List[Player]:
-        """
-        Update player data with valuation data (inner join).
-        Only keeps players that have valuations.
-        """
-        result = []
-        
-        for player_id, valuation in valuations.items():
-            if player_id in players:
-                player = players[player_id]
-                # Update with valuation data
-                player.market_value = valuation.valuation_amount
-                player.team = valuation.club_name_at_valuation or player.team
-                player.team_id = valuation.club_id_at_valuation or player.team_id
-                if valuation.age_at_valuation:
-                    player.age = valuation.age_at_valuation
-                result.append(player)
-        
-        return result
+        from simulator.data_loader import get_active_players_at_season_start
+        return get_active_players_at_season_start(self.season)
     
     def _load_predictor(self):
-        """Load the ML model for this season."""
+        """Load the ML model for this season.
+
+        When season is ``"today"`` the most recent model file is used.
+        """
         from ml.value_predictor import ValuePredictor
-        
-        model_path = MODELS_DIR / f"value_model_{self.season}.joblib"
-        
+
+        if self.season.lower() == "today":
+            # Pick the latest model by season name (alphabetical = chronological)
+            candidates = sorted(MODELS_DIR.glob("value_model_*.joblib"))
+            if not candidates:
+                raise FileNotFoundError(
+                    "No trained models found in ml/models/.\n"
+                    "Run: python -m ml.train_pipeline --season <season>"
+                )
+            model_path = candidates[-1]
+        else:
+            model_path = MODELS_DIR / f"value_model_{self.season}.joblib"
+
         if not model_path.exists():
             raise FileNotFoundError(
                 f"Model not found: {model_path}\n"
@@ -306,8 +284,11 @@ class TransferSimulator:
             self._load_predictor()
         
         # Build features for prediction
-        start_year = int(self.season.split("-")[0])
-        cutoff_date = datetime(start_year, 7, 1)
+        if self.season.lower() == "today":
+            cutoff_date = datetime.now()
+        else:
+            start_year = int(self.season.split("-")[0])
+            cutoff_date = datetime(start_year, 7, 1)
         
         # Load valuations for feature extraction
         if verbose:
@@ -378,6 +359,11 @@ class TransferSimulator:
         
         return team_values
     
+    @staticmethod
+    def _is_invalid_destination(team_name: str) -> bool:
+        """Return True if the team should never be a sell destination."""
+        return team_name.lower() in INVALID_DESTINATION_TEAM_NAMES
+
     def _find_destination_team(
         self,
         player: Player,
@@ -388,6 +374,9 @@ class TransferSimulator:
         
         A team can afford a player if: team_market_value >= player_market_value * 10
         The signing makes more sense if: player_market_value * 200 >= team_market_value (to avoid Barcelona buying really cheap players for example)
+        
+        Teams like "Without Club", "Career break" and "Retired" are never
+        valid destinations.
         
         Args:
             player: The player being sold
@@ -402,22 +391,13 @@ class TransferSimulator:
         min_team_value = min(player.market_value * 10, 1_000_000_000)
         max_team_value = max(player.market_value * 200, 200_000_000)
         excluded_lower = {t.lower() for t in excluded_teams if t}
-
-        # # Bottom / Top 10 by team market value
-        # sorted_teams = sorted(self.team_market_values.items(), key=lambda kv: kv[1])
-
-        # print("\n[DEBUG] Top 10 teams by market value:")
-        # for name, val in sorted_teams[-10:][::-1]:
-        #     print(f"  {name}: {val:,}")
-
-        # print("\n[DEBUG] Bottom 10 teams by market value:")
-        # for name, val in sorted_teams[:10]:
-        #     print(f"  {name}: {val:,}")
         
         eligible_teams = [
             team_name
             for team_name, team_value in self.team_market_values.items()
-            if min_team_value <= team_value <= max_team_value and team_name.lower() not in excluded_lower
+            if (min_team_value <= team_value <= max_team_value
+                and team_name.lower() not in excluded_lower
+                and not self._is_invalid_destination(team_name))
         ]
         
         if eligible_teams:
@@ -429,10 +409,18 @@ class TransferSimulator:
                 return None
             if player.market_value * 10 > sorted_teams[-1][1]:
                 # Player is too expensive for any team -> pick from top 5
-                fallback = [name for name, _ in sorted_teams[-5:] if name.lower() not in excluded_lower]
+                fallback = [
+                    name for name, _ in sorted_teams[-5:]
+                    if name.lower() not in excluded_lower
+                    and not self._is_invalid_destination(name)
+                ]
             else:
                 # Player is too cheap for the range -> pick from bottom 5
-                fallback = [name for name, _ in sorted_teams[:5] if name.lower() not in excluded_lower]
+                fallback = [
+                    name for name, _ in sorted_teams[:5]
+                    if name.lower() not in excluded_lower
+                    and not self._is_invalid_destination(name)
+                ]
             return random.choice(fallback) if fallback else None
     
     def _sell_random_players(
@@ -468,10 +456,10 @@ class TransferSimulator:
         sales_per_position = {"GK": 0, "DEF": 0, "MID": 0, "ATT": 0}
         sold_players: List[SoldPlayer] = []
         
-        # Create pool of sellable players
+        # Create pool of sellable players (on-loan players cannot be sold)
         available = []
         for pos, players in by_position.items():
-            available.extend([(p, pos) for p in players])
+            available.extend([(p, pos) for p in players if not p.on_loan])
         
         random.shuffle(available)
         
@@ -506,14 +494,74 @@ class TransferSimulator:
         
         return sold_players, formation_needed
     
+    def _load_all_transfers(self) -> List[Transfer]:
+        """Load all transfers from every ``transfers_all_*.json`` file."""
+        all_transfers: List[Transfer] = []
+        for filepath in DATA_DIR.glob("transfers_all_*.json"):
+            with open(filepath, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            for item in data:
+                all_transfers.append(Transfer.from_dict(item))
+        return all_transfers
+
+    def _is_athletic_club(self) -> bool:
+        """Return True if the current club is Athletic Bilbao or a related club."""
+        club_lower = self.club_name.lower()
+        return club_lower in ATHLETIC_FAMILY_NAMES
+
+    def _get_athletic_eligible_ids(self, all_transfers: List[Transfer]) -> set:
+        """
+        Return player IDs that have played for Athletic Bilbao or any of its
+        sub-clubs at any point in their career.
+
+        A player is eligible if they appear in ANY transfer where either the
+        ``from_club`` or ``to_club`` is an Athletic family club (checked by
+        team_id **or** team_name).
+        """
+        eligible: set = set()
+        for t in all_transfers:
+            from_match = (
+                t.from_club_id in ATHLETIC_FAMILY_IDS
+                or t.from_club_name.lower() in ATHLETIC_FAMILY_NAMES
+            )
+            to_match = (
+                t.to_club_id in ATHLETIC_FAMILY_IDS
+                or t.to_club_name.lower() in ATHLETIC_FAMILY_NAMES
+            )
+            if from_match or to_match:
+                eligible.add(t.player_id)
+        return eligible
+
+    @staticmethod
+    def _is_invalid_origin(team_name: str) -> bool:
+        """Return True if players from this team should not be available for signing."""
+        return team_name.lower() in INVALID_ORIGIN_TEAM_NAMES
+
     def _get_available_players(
         self,
         all_players: List[Player],
         club_players: List[Player],
+        athletic_eligible_ids: Optional[set] = None,
     ) -> List[Player]:
-        """Get players available for signing (not in club)."""
+        """
+        Get players available for signing (not in club).
+
+        Excludes players from invalid origin teams (e.g. "Retired").
+        If ``athletic_eligible_ids`` is provided (when the buying club is
+        Athletic Bilbao), only players in that set are eligible.
+        """
         club_ids = {p.player_id for p in club_players}
-        return [p for p in all_players if p.player_id not in club_ids]
+        available = [
+            p for p in all_players
+            if p.player_id not in club_ids
+            and not self._is_invalid_origin(p.team or "")
+        ]
+
+        # Athletic Bilbao can only buy players with Athletic history
+        if athletic_eligible_ids is not None:
+            available = [p for p in available if p.player_id in athletic_eligible_ids]
+
+        return available
     
     def run(
         self,
@@ -543,14 +591,12 @@ class TransferSimulator:
         if verbose:
             print(f"Loading data for {self.season}...")
         
-        # Load and merge player data with valuations
-        players_dict = self._load_players_for_season()
-        valuations = self._load_valuations_for_season()
-        all_players = self._update_players_with_valuations(players_dict, valuations)
+        # Load active players (transfer-based team assignment + valuation update)
+        all_players = self._load_active_players()
         self.all_players = all_players
         
         if verbose:
-            print(f"  Loaded {len(all_players)} players with valuations")
+            print(f"  Loaded {len(all_players)} active players")
         
         # Get club's players
         club_players = self._get_club_players(all_players)
@@ -587,9 +633,23 @@ class TransferSimulator:
             print(f"  Total budget: €{total_budget}M")
             print(f"  Formation needed: {formation_needed}")
         
+        # Athletic Bilbao special case: can only buy players with Athletic
+        # family history.  Pre-compute the eligible set if needed.
+        athletic_eligible_ids: Optional[set] = None
+        if self._is_athletic_club():
+            if verbose:
+                print("  Athletic Bilbao detected – loading transfer history to filter eligible signings...")
+            all_transfers = self._load_all_transfers()
+            athletic_eligible_ids = self._get_athletic_eligible_ids(all_transfers)
+            if verbose:
+                print(f"  {len(athletic_eligible_ids)} players with Athletic family history found")
+
         # Get available players (not in club, and not the ones we're trying to sell)
         sold_player_ids = {sp.player.player_id for sp in sold_players}
-        available_players = self._get_available_players(all_players, club_players)
+        available_players = self._get_available_players(
+            all_players, club_players,
+            athletic_eligible_ids=athletic_eligible_ids,
+        )
         # Also exclude sold players (they shouldn't be bought back)
         available_players = [p for p in available_players if p.player_id not in sold_player_ids]
         

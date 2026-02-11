@@ -2,6 +2,9 @@
 Feature engineering for player value prediction.
 
 Extracts features from valuation history for XGBoost model.
+
+Current club is determined from transfer data (not valuations).
+Age is computed from birth_date + cutoff_date.
 """
 from __future__ import annotations
 
@@ -19,6 +22,7 @@ sys.path.insert(0, str(ROOT_DIR))
 
 from valuation import Valuation
 from player import Player
+from transfer import Transfer
 from scraping.utils.helpers import DATA_DIR
 
 # Top 5 leagues (league_id values)
@@ -170,13 +174,26 @@ class PlayerFeatures:
 
 
 def _parse_date(date_str: str) -> Optional[datetime]:
-    """Parse date string DD/MM/YYYY to datetime."""
+    """Parse date string DD/MM/YYYY or YYYY-MM-DD to datetime."""
     if not date_str:
         return None
-    try:
-        return datetime.strptime(date_str, "%d/%m/%Y")
-    except ValueError:
+    for fmt in ("%d/%m/%Y", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(date_str, fmt)
+        except ValueError:
+            continue
+    return None
+
+
+def _compute_age(birth_date_str: str, reference_date: datetime) -> Optional[int]:
+    """Compute age in years from a DD/MM/YYYY birth date string."""
+    bd = _parse_date(birth_date_str)
+    if bd is None:
         return None
+    age = reference_date.year - bd.year
+    if (reference_date.month, reference_date.day) < (bd.month, bd.day):
+        age -= 1
+    return max(age, 0)
 
 
 def _get_value_at_date(
@@ -235,6 +252,41 @@ def _bin_club(club: str) -> str:
     if club in TOP_CLUBS:
         return club
     return "Other"
+
+
+def _load_all_transfers() -> List[Transfer]:
+    """Load ALL ``transfers_all_*.json`` files into a flat list."""
+    transfers: List[Transfer] = []
+    for filepath in sorted(DATA_DIR.glob("transfers_all_*.json")):
+        if "_OLD" in filepath.name:
+            continue
+        with open(filepath, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        for item in data:
+            if isinstance(item, dict):
+                transfers.append(Transfer.from_dict(item))
+    return transfers
+
+
+def _get_transfer_map_at_cutoff(
+    all_transfers: List[Transfer],
+    cutoff_date: datetime,
+) -> Dict[str, Transfer]:
+    """
+    For each player return their most recent transfer with date <= cutoff.
+
+    Returns:
+        Dict ``player_id -> Transfer``
+    """
+    best: Dict[str, Tuple[datetime, Transfer]] = {}
+    for t in all_transfers:
+        td = _parse_date(t.transfer_date)
+        if td is None or td > cutoff_date:
+            continue
+        prev = best.get(t.player_id)
+        if prev is None or td > prev[0]:
+            best[t.player_id] = (td, t)
+    return {pid: tr for pid, (_, tr) in best.items()}
 
 
 def _normalize_position(pos: str) -> str:
@@ -350,6 +402,7 @@ def extract_player_features(
     team_league_mapping: Optional[Dict[str, Dict[str, Dict[str, str]]]] = None,
     include_target: bool = False,
     cutoff_season: str = "",
+    player_transfer: Optional[Transfer] = None,
 ) -> Optional[PlayerFeatures]:
     """
     Extract features for a player from their valuation history.
@@ -362,6 +415,9 @@ def extract_player_features(
             (team_id -> season -> {"league_id": str, "country": str})
         include_target: If True, also compute target (value 1 year later)
         cutoff_season: Season string (e.g., "2022-2023") for filtering during training
+        player_transfer: Optional Transfer for current club determination.
+            If provided, the player's club is taken from to_club (transfer-based).
+            If None, falls back to the most recent valuation's club.
     
     Returns:
         PlayerFeatures or None if insufficient data
@@ -400,7 +456,13 @@ def extract_player_features(
     # Basic info
     player_id = last_val.player_id
     player_name = last_val.player_name
-    age = last_val.age_at_valuation or (player_info.age if player_info else 25)
+
+    # Age: compute from birth_date + cutoff, fallback to valuation age, then player age
+    age = None
+    if player_info and player_info.birth_date:
+        age = _compute_age(player_info.birth_date, cutoff_date)
+    if age is None:
+        age = last_val.age_at_valuation or (player_info.age if player_info else None) or 25
     
     # Position
     if player_info and player_info.position:
@@ -412,21 +474,24 @@ def extract_player_features(
     player_nationality = player_info.nationality if player_info else ""
     player_nationality_bin = _bin_nationality(player_nationality)
     
-    # Is in top league? Check the club_id from the most recent valuation
-    # Look up team_id in mapping for the specific season of the valuation
-    club_id = str(last_val.club_id_at_valuation or "")
+    # Current club: prefer transfer data, fallback to valuation
+    if player_transfer is not None:
+        club_id = str(player_transfer.to_club_id or "")
+        current_club = player_transfer.to_club_name or ""
+    else:
+        club_id = str(last_val.club_id_at_valuation or "")
+        current_club = last_val.club_name_at_valuation or ""
+
+    # Is in top league? Look up team_id in mapping for the specific season
     team_info = get_team_info_for_date(club_id, last_date, team_league_mapping)
     any_team_info = get_team_info_for_date(club_id, last_date, team_league_mapping, ignore_date=True)
     league_id = team_info.get("league_id", "")
-    # team_country = team_info.get("country", "")
     team_country = any_team_info.get("country", "")
     is_in_top_league = league_id in TOP_LEAGUE_IDS
     
     # Is in home league? Check if player nationality matches team's country
     is_in_home_league = _is_home_league(player_nationality, team_country)
 
-    # Current club and binned version
-    current_club = last_val.club_name_at_valuation or ""
     current_club_bin = _bin_club(current_club)
     valuation_date = last_date  # Date of the most recent valuation before cutoff
     
@@ -597,12 +662,16 @@ def build_training_dataset(
     min_valuations: int = 3,
     cutoff_dates: Optional[List[datetime]] = None,
     cutoff_months: int = 12,
+    all_transfers: Optional[List[Transfer]] = None,
 ) -> List[PlayerFeatures]:
     """
     Build complete training dataset with multiple cutoff dates.
     
     Generates multiple rows per player (one per cutoff date where they have data),
     maximizing use of historical valuation data.
+    
+    Current club is determined from transfer data (last transfer <= cutoff).
+    Age is computed from birth_date + cutoff_date.
     
     Args:
         all_valuations: All valuations (all leagues, all time)
@@ -611,6 +680,7 @@ def build_training_dataset(
         min_valuations: Minimum valuations required per player per cutoff
         cutoff_dates: Optional list of cutoff dates. If None, auto-detects from data.
         cutoff_months: Months between cutoffs if auto-detecting (12=annual, 6=semi-annual)
+        all_transfers: Optional list of ALL transfers. If None, loads from files.
     
     Returns:
         List of PlayerFeatures with target values and cutoff_season metadata
@@ -626,6 +696,12 @@ def build_training_dataset(
     print(f"Using {len(cutoff_dates)} cutoff dates: "
           f"{cutoff_dates[0].strftime('%Y-%m-%d')} to {cutoff_dates[-1].strftime('%Y-%m-%d')}")
     
+    # Load transfers for club determination
+    if all_transfers is None:
+        print("Loading all transfers for club assignment...")
+        all_transfers = _load_all_transfers()
+        print(f"  Loaded {len(all_transfers)} transfers")
+    
     # Group valuations by player
     by_player: Dict[str, List[Valuation]] = {}
     for v in all_valuations:
@@ -639,11 +715,15 @@ def build_training_dataset(
         cutoff_season = _get_season_for_cutoff(cutoff_date)
         players_for_cutoff = 0
         
+        # Build transfer map for this cutoff
+        transfer_map = _get_transfer_map_at_cutoff(all_transfers, cutoff_date)
+        
         for player_id, player_vals in by_player.items():
             if len(player_vals) < min_valuations:
                 continue
             
             player_info = players.get(player_id) if players else None
+            player_transfer = transfer_map.get(player_id)
             
             features = extract_player_features(
                 player_vals,
@@ -652,6 +732,7 @@ def build_training_dataset(
                 team_league_mapping=team_league_mapping,
                 include_target=True,
                 cutoff_season=cutoff_season,
+                player_transfer=player_transfer,
             )
             
             if features and features.target_value is not None:
@@ -848,10 +929,19 @@ def build_prediction_dataset(
     players: Optional[Dict[str, Player]] = None,
     team_league_mapping: Optional[Dict[str, Dict[str, Dict[str, str]]]] = None,
     min_valuations: int = 2,
+    all_transfers: Optional[List[Transfer]] = None,
 ) -> List[PlayerFeatures]:
     """
     Build dataset for prediction (no target required).
+
+    Current club is determined from transfer data (last transfer <= cutoff).
+    Age is computed from birth_date + cutoff_date.
     """
+    # Load transfers for club determination
+    if all_transfers is None:
+        all_transfers = _load_all_transfers()
+
+    transfer_map = _get_transfer_map_at_cutoff(all_transfers, cutoff_date)
 
     by_player: Dict[str, List[Valuation]] = {}
     for v in all_valuations:
@@ -863,6 +953,7 @@ def build_prediction_dataset(
             continue
         
         player_info = players.get(player_id) if players else None
+        player_transfer = transfer_map.get(player_id)
         
         features = extract_player_features(
             player_vals,
@@ -870,6 +961,7 @@ def build_prediction_dataset(
             player_info=player_info,
             team_league_mapping=team_league_mapping,
             include_target=False,
+            player_transfer=player_transfer,
         )
         
         if features:

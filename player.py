@@ -33,6 +33,9 @@ class Player:
         profile_url: str = "",
         season: str = "",
         predicted_value: float = None,
+        on_loan: bool = False,
+        loaning_team: str = "",
+        loaning_team_id: str = "",
     ):
         self.player_id = player_id
         self.name = name
@@ -53,6 +56,9 @@ class Player:
         self.profile_url = profile_url
         self.season = season
         self.predicted_value = predicted_value  # ML-predicted future value
+        self.on_loan = on_loan
+        self.loaning_team = loaning_team  # team that owns the player (if on loan)
+        self.loaning_team_id = loaning_team_id
     
     def __str__(self):
         value_str = f"€{self.market_value/1_000_000:.1f}M" if self.market_value else "N/A"
@@ -153,6 +159,10 @@ class Player:
         # Only include predicted_value if set (ML feature)
         if self.predicted_value is not None:
             result["predicted_value"] = self.predicted_value
+        if self.on_loan:
+            result["on_loan"] = True
+            result["loaning_team"] = self.loaning_team
+            result["loaning_team_id"] = self.loaning_team_id
         return result
     
     @classmethod
@@ -178,4 +188,7 @@ class Player:
             profile_url=data.get("profile_url", ""),
             season=data.get("season", ""),
             predicted_value=data.get("predicted_value"),
+            on_loan=data.get("on_loan", False),
+            loaning_team=data.get("loaning_team", ""),
+            loaning_team_id=data.get("loaning_team_id", ""),
         )
