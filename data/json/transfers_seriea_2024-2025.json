@@ -166766,5 +166766,53 @@
     "transfer_type": "out",
     "is_loan": false,
     "market_value_at_transfer": 0
+  },
+  {
+    "transfer_id": "5807054",
+    "player_id": "934408",
+    "player_name": "",
+    "from_club_name": "Genoa U20",
+    "from_club_id": "8517",
+    "to_club_name": "PAOK Thessaloniki B",
+    "to_club_id": "91869",
+    "price": 0,
+    "price_str": "Free Transfer",
+    "transfer_date": "24/07/2025",
+    "season": "2025-2026",
+    "transfer_type": "out",
+    "is_loan": false,
+    "market_value_at_transfer": 50000
+  },
+  {
+    "transfer_id": "4593049",
+    "player_id": "934408",
+    "player_name": "",
+    "from_club_name": "Pafos FC",
+    "from_club_id": "45457",
+    "to_club_name": "Genoa U20",
+    "to_club_id": "8517",
+    "price": 300000,
+    "price_str": "€300.00K",
+    "transfer_date": "16/08/2023",
+    "season": "2023-2024",
+    "transfer_type": "out",
+    "is_loan": false,
+    "market_value_at_transfer": 50000
+  },
+  {
+    "transfer_id": "4482022",
+    "player_id": "934408",
+    "player_name": "",
+    "from_club_name": "Pafos FC U19",
+    "from_club_id": "93474",
+    "to_club_name": "Pafos FC",
+    "to_club_id": "45457",
+    "price": null,
+    "price_str": "Unknown",
+    "transfer_date": "01/07/2023",
+    "season": "2023-2024",
+    "transfer_type": "out",
+    "is_loan": false,
+    "market_value_at_transfer": 50000
   }
 ]

@@ -130,6 +130,93 @@ def build_local_name_map(file_records: List[FileRecord]) -> Dict[str, str]:
     return name_map
 
 
+# ── Fix empty valuation dates ────────────────────────────────────────────────
+
+def fix_empty_valuation_dates(
+    file_records: List[FileRecord],
+) -> Tuple[int, Set[str]]:
+    """Fill empty ``valuation_date`` using neighbouring valuations.
+
+    For each valuation record with an empty date:
+
+    1. Use the **next** valuation's date **− 1 day** (same player, by
+       list order).
+    2. If there is no next, use the **previous** valuation's date
+       **+ 1 day**.
+    3. If neither exists, fall back to ``01/06/{season_start_year}``
+       extracted from the filename; otherwise skip.
+
+    Records are modified **in-place**.
+
+    Returns ``(fixed_count, modified_file_paths)``.
+    """
+    from datetime import timedelta
+
+    fixed = 0
+    modified_files: Set[str] = set()
+
+    for filepath, prefix, records in file_records:
+        if prefix != "valuations":
+            continue
+
+        # Extract season year from filename (e.g. valuations_seriea_2017-2018)
+        season_year: Optional[int] = None
+        for part in Path(filepath).stem.split("_"):
+            if "-" in part:
+                try:
+                    season_year = int(part.split("-")[0])
+                    break
+                except (ValueError, IndexError):
+                    pass
+
+        # Group by player_id, preserving original list order
+        by_player: Dict[str, List[dict]] = {}
+        for rec in records:
+            pid = rec.get("player_id")
+            if pid:
+                by_player.setdefault(pid, []).append(rec)
+
+        for _pid, pvs in by_player.items():
+            for i, rec in enumerate(pvs):
+                if rec.get("valuation_date"):
+                    continue
+
+                # 1. Next → date − 1 day
+                filled = False
+                for j in range(i + 1, len(pvs)):
+                    nd = parse_date(pvs[j].get("valuation_date", ""))
+                    if nd:
+                        rec["valuation_date"] = (nd - timedelta(days=1)).strftime("%d/%m/%Y")
+                        fixed += 1
+                        filled = True
+                        modified_files.add(filepath)
+                        break
+
+                if filled:
+                    continue
+
+                # 2. Previous → date + 1 day
+                for j in range(i - 1, -1, -1):
+                    pd = parse_date(pvs[j].get("valuation_date", ""))
+                    if pd:
+                        rec["valuation_date"] = (pd + timedelta(days=1)).strftime("%d/%m/%Y")
+                        fixed += 1
+                        filled = True
+                        modified_files.add(filepath)
+                        break
+
+                if filled:
+                    continue
+
+                # 3. Season fallback
+                if season_year:
+                    rec["valuation_date"] = f"01/06/{season_year}"
+                    fixed += 1
+                    modified_files.add(filepath)
+
+    return fixed, modified_files
+
+
 # ── Transfer-based club fix for valuations ───────────────────────────────────
 
 def build_transfer_index(
@@ -421,8 +508,14 @@ def patch_files(
         if needs_write:
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(records, f, ensure_ascii=False, indent=2)
-            print(f"  {Path(filepath).name}: filled {file_filled} names")
             total_filled += file_filled
+            if file_filled and filepath in force_write:
+                print(f"  {Path(filepath).name}: filled {file_filled} names "
+                      f"(+ earlier in-place fixes)")
+            elif file_filled:
+                print(f"  {Path(filepath).name}: filled {file_filled} names")
+            else:
+                print(f"  {Path(filepath).name}: saved (modified by earlier fixes)")
         else:
             print(f"  {Path(filepath).name}: nothing to fill (IDs not resolved)")
 
@@ -475,11 +568,21 @@ def main() -> None:
     resolved = sum(1 for mid in missing_ids if mid in name_map)
     print(f"\nTotal resolved: {resolved}/{len(missing_ids)} IDs")
 
-    # 5. Fix valuation club names from transfer history
+    # 5. Fix empty valuation dates (must happen before transfer-based fix)
+    print("\nFixing empty valuation dates …")
+    dates_fixed, date_modified_files = fix_empty_valuation_dates(file_records)
+    if dates_fixed:
+        print(f"  Fixed {dates_fixed} empty valuation dates")
+    else:
+        print("  No empty dates found")
+
+    # 6. Fix valuation club names from transfer history
     #    (handles club_id "0" and names the API couldn't resolve)
     print("\nFixing valuation club names from transfer history …")
     transfer_index = build_transfer_index(file_records)
     transfer_fixed, transfer_modified_files = (0, set())
+    # Merge date-modified files so they get written
+    transfer_modified_files = set(date_modified_files)
     if transfer_index:
         transfer_fixed, transfer_modified_files = fix_valuations_from_transfers(
             file_records, transfer_index,
@@ -496,7 +599,7 @@ def main() -> None:
             print(f"  … and {len(name_map) - 20} more")
         return
 
-    # 6. Patch & write
+    # 7. Patch & write
     print(f"\nPatching {len(files_to_patch)} files …\n")
     patch_files(file_records, files_to_patch, name_map,
                 force_write=transfer_modified_files)

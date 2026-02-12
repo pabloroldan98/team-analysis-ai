@@ -457,6 +457,64 @@ class TransfermarktValuationsScraper(BaseScraper):
 
         return all_valuations
     
+    # ── Fix empty valuation dates ────────────────────────────────────────
+
+    def _fix_empty_valuation_dates(self, valuations: List[Valuation]) -> None:
+        """Fill empty ``valuation_date`` using neighbouring valuations.
+
+        For each valuation with an empty date:
+
+        1. Use the **next** valuation's date **− 1 day** (same player, by
+           list order).
+        2. If there is no next, use the **previous** valuation's date
+           **+ 1 day**.
+        3. If neither exists, fall back to ``01/06/{season_start_year}``
+           when a season is available; otherwise skip.
+        """
+        from datetime import timedelta
+
+        # Group by player, preserving original list order
+        by_player: Dict[str, List[Valuation]] = {}
+        for v in valuations:
+            by_player.setdefault(v.player_id, []).append(v)
+
+        season_year: Optional[int] = None
+        if self.season:
+            try:
+                season_year = int(self.season.split("-")[0])
+            except (ValueError, IndexError):
+                pass
+
+        fixed = 0
+        for _pid, pvs in by_player.items():
+            for i, v in enumerate(pvs):
+                if v.valuation_date:
+                    continue
+
+                # 1. Next → date − 1 day
+                for j in range(i + 1, len(pvs)):
+                    nd = parse_date(pvs[j].valuation_date)
+                    if nd:
+                        v.valuation_date = (nd - timedelta(days=1)).strftime("%d/%m/%Y")
+                        fixed += 1
+                        break
+                else:
+                    # 2. Previous → date + 1 day
+                    for j in range(i - 1, -1, -1):
+                        pd = parse_date(pvs[j].valuation_date)
+                        if pd:
+                            v.valuation_date = (pd + timedelta(days=1)).strftime("%d/%m/%Y")
+                            fixed += 1
+                            break
+                    else:
+                        # 3. Season fallback
+                        if season_year:
+                            v.valuation_date = f"01/06/{season_year}"
+                            fixed += 1
+
+        if fixed:
+            self.log(f"  Fixed {fixed} empty valuation dates")
+
     # ── Fix club names from transfer history ────────────────────────────
 
     @staticmethod
@@ -583,6 +641,9 @@ class TransfermarktValuationsScraper(BaseScraper):
                     all_valuations.extend(player_valuations)
             
             if details:
+                # Fix empty valuation dates before any club-name logic
+                self._fix_empty_valuation_dates(all_valuations)
+
                 # Fill club names from API (single batch call)
                 self._fill_club_names(all_valuations)
 
