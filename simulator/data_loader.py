@@ -222,7 +222,7 @@ def get_active_players_at_season_start(
 
         # Loan tracking: if the last transfer is a loan, the player is
         # on loan at to_club, and the owning club is from_club.
-        if t.is_loan and t.transfer_type in ("loan_out", "loan_in"):
+        if t.is_loan and t.price_str in ("loan transfer", "Loan fee"):
             p.on_loan = True
             p.loaning_team = t.from_club_name
             p.loaning_team_id = t.from_club_id

@@ -23,7 +23,7 @@ class Transfer:
         price_str: str = "",
         transfer_date: str = "",
         season: str = "",
-        transfer_type: str = "",  # "in", "out", "loan_in", "loan_out"
+        transfer_type: str = "",
         is_loan: bool = False,
         market_value_at_transfer: Optional[float] = None,
     ):

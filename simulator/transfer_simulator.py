@@ -470,11 +470,14 @@ class TransferSimulator:
         available = []
         for p in club_players:
             pos = p.position
+            # if pos in ["GK", "DEF", "MID", "ATT"] and not p.on_loan and p.position == "ATT":
             if pos in ["GK", "DEF", "MID", "ATT"] and not p.on_loan:
                 available.append(p)
         
         # Decide how many to try to sell (1-10)
         num_to_sell = random.randint(min_sales, max_sales)
+        # num_to_sell = len(club_players)
+        # max_per_position = len(club_players)
         
         # Track sales per position (only count actually sold)
         sales_per_position = {"GK": 0, "DEF": 0, "MID": 0, "ATT": 0}
