@@ -249,18 +249,17 @@ def run_simulation_with_progress(
     unlimited: bool,
 ):
     """Run TransferSimulator.run() while feeding a Streamlit progress bar + spinner."""
-    from simulator.transfer_simulator import TransferSimulator, TransferResult
+    from simulator.transfer_simulator import TransferSimulator
 
     progress = st.progress(0, text=t(lang, "step_loading"))
     hint = st.empty()
     hint.caption(t(lang, "sim_may_take"))
 
-    def _step(pct: float, key: str):
-        progress.progress(min(pct, 1.0), text=f"⏳ {t(lang, key)}")
+    def _on_progress(pct: float, key: str):
+        icon = "✅" if pct >= 1.0 else "⏳"
+        progress.progress(min(pct, 1.0), text=f"{icon} {t(lang, key)}")
 
     with st.spinner(""):
-        # 1. Load data  (step 1/7 ≈ 14%)
-        _step(0.05, "step_loading")
         sim = TransferSimulator(
             club_name=club_name,
             season=season,
@@ -268,84 +267,19 @@ def run_simulation_with_progress(
             salary_budget=salary_budget if not unlimited else 999_999,
         )
 
-        # 2. Build active player list (transfers + valuations)  (step 2/7 ≈ 28%)
-        _step(0.20, "step_team")
-        all_players = sim._load_active_players()
-        sim.all_players = all_players
-
-        # 3. Club players  (step 3/7 ≈ 42%)
-        _step(0.35, "step_team_values")
-        club_players = sim._get_club_players(all_players)
-        if not club_players:
+        try:
+            result = sim.run(
+                verbose=False,
+                generate_summary=False,
+                progress_callback=_on_progress,
+                unlimited_budget=unlimited,
+            )
+        except ValueError as exc:
             progress.empty()
-            st.error(f"No players found for **{club_name}** in season **{season}**.")
+            hint.empty()
+            st.error(str(exc))
             st.stop()
 
-        # 4. Team market values + sell phase  (step 4/7 ≈ 56%)
-        _step(0.55, "step_selling")
-        sim.team_market_values = sim._calculate_team_market_values(all_players)
-        sold_players, formation_needed = sim._sell_random_players(club_players)
-        actually_sold = [sp for sp in sold_players if sp.was_sold]
-        sales_revenue = sum((sp.player.market_value or 0) for sp in actually_sold) / 1_000_000
-        total_budget = sim.budget + int(sales_revenue)
-
-        # 5. Predict values  (step 5/7 ≈ 70%)
-        _step(0.70, "step_predicting")
-
-        # Athletic Bilbao special case: restrict available players
-        athletic_eligible_ids = None
-        if sim._is_athletic_club():
-            all_transfers = sim._load_all_transfers()
-            athletic_eligible_ids = sim._get_athletic_eligible_ids(all_transfers)
-
-        sold_player_ids = {sp.player.player_id for sp in sold_players}
-        available_players = sim._get_available_players(
-            all_players, club_players,
-            athletic_eligible_ids=athletic_eligible_ids,
-        )
-        available_players = [p for p in available_players if p.player_id not in sold_player_ids]
-        available_players = sim._predict_values(available_players, verbose=False)
-
-        # 6. Knapsack optimisation  (step 6/7 ≈ 84%)
-        _step(0.85, "step_knapsack")
-        from simulator.knapsack_solver import best_full_teams
-
-        gk_n, def_n, mid_n, att_n = formation_needed
-        custom_formation = (
-            [[gk_n, def_n, mid_n, att_n]] if gk_n > 0
-            else [[def_n, mid_n, att_n]]
-        )
-        results = best_full_teams(
-            available_players,
-            formations=custom_formation,
-            budget=total_budget * 1_000_000,
-            use_predicted_value=True,
-            verbose=0,
-            unlimited_budget=unlimited,
-        )
-
-        recommended_signings = []
-        recommended_formation = []
-        if results:
-            recommended_formation, _, recommended_signings = results[0]
-
-        # 7. Build result  (step 7/7 ≈ 100%)
-        result = TransferResult(
-            club_name=club_name,
-            season=season,
-            initial_budget=sim.budget,
-            sales_revenue=int(sales_revenue),
-            total_budget=total_budget,
-            players_sold=sold_players,
-            formation_needed=formation_needed,
-            recommended_signings=recommended_signings,
-            recommended_formation=recommended_formation,
-            total_signing_cost=int(sum((p.market_value or 0) for p in recommended_signings) / 1e6),
-            total_predicted_value=0.0,
-            current_squad=club_players,
-        )
-
-    progress.progress(1.0, text=f"✅ {t(lang, 'step_done')}")
     hint.empty()
     time.sleep(0.5)
     progress.empty()

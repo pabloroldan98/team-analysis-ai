@@ -227,11 +227,14 @@ The positions vacated by sold players need to be filled. The simulator:
 
 ##### Athletic Bilbao Special Case
 
-Athletic Bilbao has a real-world policy of only signing players with a connection to the Basque Country. The simulator replicates this: when Athletic Bilbao is the buying club, it can only sign players who have played for **any of these clubs** at some point in their career:
+Athletic Bilbao has a real-world policy of only signing players with a connection to the Basque Country. The simulator replicates this rule **in both directions**:
 
-- Athletic Bilbao, Bilbao Athletic, Athletic Bilbao UEFA U19, Athletic Bilbao U19, Athletic Bilbao U18, Athletic Bilbao Youth, CD Basconia
+- **Buying**: When Athletic Bilbao is the buying club, it can only sign players who have played for any Athletic family club at some point in their career.
+- **Selling**: When any club sells a player, Athletic Bilbao (or its sub-clubs) can only appear as the destination if the player has Athletic family history.
 
-This is checked by loading the **full transfer history** and verifying whether the player's `from_club` or `to_club` matches any of these teams (by name or ID). Athletic Bilbao can still sell players to any club.
+The Athletic family clubs are: Athletic Bilbao, Bilbao Athletic, Athletic Bilbao UEFA U19, Athletic Bilbao U19, Athletic Bilbao U18, Athletic Bilbao Youth, CD Basconia.
+
+This is checked by loading the **full transfer history** and verifying whether the player's `from_club` or `to_club` matches any of these teams (by name or ID).
 
 #### AI Summary
 

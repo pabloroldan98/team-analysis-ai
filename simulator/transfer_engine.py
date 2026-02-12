@@ -42,7 +42,7 @@ def _compute_valuation(players: List[Player]) -> float:
 
 def _sell_phase(
     squad: List[Player],
-    min_sells: int = 1,
+    min_sells: int = 5,
     max_sells: int = 10,
     max_per_position: int = 3,
 ) -> tuple[List[Player], List[Player], float]:

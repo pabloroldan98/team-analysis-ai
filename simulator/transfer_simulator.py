@@ -374,6 +374,7 @@ class TransferSimulator:
         self,
         player: Player,
         excluded_teams: List[str],
+        athletic_eligible_ids: Optional[set] = None,
     ) -> Optional[str]:
         """
         Find a random team that can afford the player.
@@ -384,9 +385,16 @@ class TransferSimulator:
         Teams like "Without Club", "Career break" and "Retired" are never
         valid destinations.
         
+        Athletic Bilbao (and its sub-clubs) can only be a destination if the
+        player has played for an Athletic family club at some point — mirroring
+        their real-world buying policy.
+        
         Args:
             player: The player being sold
             excluded_teams: Teams to exclude (e.g., current club)
+            athletic_eligible_ids: Set of player IDs with Athletic family
+                history.  When provided, Athletic teams are excluded as
+                destinations for players NOT in this set.
         
         Returns:
             Team name or None if no team can afford the player
@@ -397,13 +405,28 @@ class TransferSimulator:
         min_team_value = min(player.market_value * 10, 1_000_000_000)
         max_team_value = max(player.market_value * 200, 200_000_000)
         excluded_lower = {t.lower() for t in excluded_teams if t}
-        
+
+        player_is_athletic_eligible = (
+            athletic_eligible_ids is not None
+            and player.player_id in athletic_eligible_ids
+        )
+
+        def _valid_destination(team_name: str) -> bool:
+            if team_name.lower() in excluded_lower:
+                return False
+            if self._is_invalid_destination(team_name):
+                return False
+            # Athletic family clubs only accept players with Athletic history
+            if (team_name.lower() in ATHLETIC_FAMILY_NAMES
+                    and not player_is_athletic_eligible):
+                return False
+            return True
+
         eligible_teams = [
             team_name
             for team_name, team_value in self.team_market_values.items()
             if (min_team_value <= team_value <= max_team_value
-                and team_name.lower() not in excluded_lower
-                and not self._is_invalid_destination(team_name))
+                and _valid_destination(team_name))
         ]
         
         if eligible_teams:
@@ -414,18 +437,16 @@ class TransferSimulator:
             if not sorted_teams:
                 return None
             if player.market_value * 10 > sorted_teams[-1][1]:
-                # Player is too expensive for any team -> pick from top 5 (excluding the current team and invalid destinations)
+                # Player is too expensive for any team -> pick from top 5
                 fallback = [
                     name for name, _ in sorted_teams[-5:]
-                    if name.lower() not in excluded_lower
-                    and not self._is_invalid_destination(name)
+                    if _valid_destination(name)
                 ]
             else:
-                # Player is too cheap for the range -> pick from bottom 5 (excluding the current team and invalid destinations)
+                # Player is too cheap for the range -> pick from bottom 5
                 fallback = [
                     name for name, _ in sorted_teams[:5]
-                    if name.lower() not in excluded_lower
-                    and not self._is_invalid_destination(name)
+                    if _valid_destination(name)
                 ]
             return random.choice(fallback) if fallback else None
     
@@ -435,6 +456,7 @@ class TransferSimulator:
         min_sales: int = 5,
         max_sales: int = 10,
         max_per_position: int = 3,
+        athletic_eligible_ids: Optional[set] = None,
     ) -> Tuple[List[SoldPlayer], List[int]]:
         """
         Randomly sell players from the club.
@@ -482,6 +504,7 @@ class TransferSimulator:
                 destination = self._find_destination_team(
                     player,
                     excluded_teams=[self.club_name],
+                    athletic_eligible_ids=athletic_eligible_ids,
                 )
                 
                 sold_players.append(SoldPlayer(player=player, destination_team=destination))
@@ -547,14 +570,15 @@ class TransferSimulator:
         self,
         all_players: List[Player],
         club_players: List[Player],
+        is_athletic: bool = False,
         athletic_eligible_ids: Optional[set] = None,
     ) -> List[Player]:
         """
         Get players available for signing (not in club).
 
         Excludes players from invalid origin teams (e.g. "Retired").
-        If ``athletic_eligible_ids`` is provided (when the buying club is
-        Athletic Bilbao), only players in that set are eligible.
+        If *is_athletic* is True (the buying club is Athletic Bilbao),
+        only players present in *athletic_eligible_ids* are eligible.
         """
         club_ids = {p.player_id for p in club_players}
         available = [
@@ -564,7 +588,7 @@ class TransferSimulator:
         ]
 
         # Athletic Bilbao can only buy players with Athletic history
-        if athletic_eligible_ids is not None:
+        if is_athletic and athletic_eligible_ids is not None:
             available = [p for p in available if p.player_id in athletic_eligible_ids]
 
         return available
@@ -578,136 +602,151 @@ class TransferSimulator:
         generate_summary: bool = True,
         llm_provider: Optional[str] = None,
         llm_api_key: Optional[str] = None,
+        progress_callback: Optional[object] = None,
+        unlimited_budget: bool = False,
     ) -> TransferResult:
         """
         Run the transfer simulation.
-        
+
         Args:
             min_sales: Minimum players to sell
             max_sales: Maximum players to sell
             max_per_position: Max players to sell per position
-            verbose: Print progress
-            generate_summary: If True, attempt to generate LLM summary (skipped if no API key)
+            verbose: Print progress to stdout
+            generate_summary: If True, attempt to generate LLM summary
             llm_provider: LLM provider ("openai", "anthropic", "gemini")
             llm_api_key: Optional API key override
-        
+            progress_callback: Optional ``callable(pct: float, step_key: str)``
+                invoked at each major step.  *step_key* matches the i18n keys
+                used by the Streamlit UI (e.g. ``"step_loading"``).
+            unlimited_budget: If True, ignore budget constraints in the
+                knapsack optimiser.
+
         Returns:
             TransferResult with simulation details
         """
+
+        def _progress(pct: float, key: str) -> None:
+            if progress_callback is not None:
+                progress_callback(pct, key)
+
+        # ── Step 1/8: Load data ──────────────────────────────────────────
+        _progress(0.05, "step_loading")
         if verbose:
             print(f"Loading data for {self.season}...")
-        
-        # Load active players (transfer-based team assignment + valuation update)
+
         all_players = self._load_active_players()
         self.all_players = all_players
-        
+
         if verbose:
             print(f"  Loaded {len(all_players)} active players")
-        
-        # Get club's players
+
+        # ── Step 2/8: Identify club squad ────────────────────────────────
+        _progress(0.20, "step_team")
         club_players = self._get_club_players(all_players)
-        
+
         if not club_players:
             raise ValueError(f"No players found for club: {self.club_name}")
-        
+
         if verbose:
             print(f"  {self.club_name} has {len(club_players)} players")
-        
-        # Calculate team market values for finding destination teams
+
+        # ── Step 3/8: Calculate team market values ───────────────────────
+        _progress(0.35, "step_team_values")
         self.team_market_values = self._calculate_team_market_values(all_players)
-        
+
         if verbose:
             print(f"  Calculated market values for {len(self.team_market_values)} teams")
-        
-        # Sell random players
+
+        # Athletic Bilbao special case: Athletic can only BUY players with
+        # Athletic family history, and only Athletic-eligible players can be
+        # SOLD to Athletic.  Pre-compute the eligible set when relevant.
+        athletic_eligible_ids: Optional[set] = None
+        is_athletic = self._is_athletic_club()
+        athletic_in_market = any(
+            name.lower() in ATHLETIC_FAMILY_NAMES
+            for name in self.team_market_values
+        )
+        if is_athletic or athletic_in_market:
+            if verbose and is_athletic:
+                print("  Athletic Bilbao detected – loading transfer history for eligibility filter...")
+            elif verbose:
+                print("  Athletic family club(s) in market – loading transfer history for sell filter...")
+            all_transfers = self._load_all_transfers()
+            athletic_eligible_ids = self._get_athletic_eligible_ids(all_transfers)
+            if verbose:
+                print(f"  {len(athletic_eligible_ids)} players with Athletic family history found")
+
+        # ── Step 4/8: Sell players ───────────────────────────────────────
+        _progress(0.50, "step_selling")
         sold_players, formation_needed = self._sell_random_players(
             club_players,
             min_sales=min_sales,
             max_sales=max_sales,
             max_per_position=max_per_position,
+            athletic_eligible_ids=athletic_eligible_ids,
         )
-        
-        # Only count revenue from players that were actually sold
+
         actually_sold = [sp for sp in sold_players if sp.was_sold]
         sales_revenue = sum((sp.player.market_value or 0) for sp in actually_sold) / 1_000_000
         total_budget = self.budget + int(sales_revenue)
-        
+
         if verbose:
             print(f"  Attempted to sell {len(sold_players)} players:")
             print(f"    - {len(actually_sold)} sold for €{sales_revenue:.1f}M")
             print(f"    - {len(sold_players) - len(actually_sold)} no buyer found")
             print(f"  Total budget: €{total_budget}M")
             print(f"  Formation needed: {formation_needed}")
-        
-        # Athletic Bilbao special case: can only buy players with Athletic
-        # family history.  Pre-compute the eligible set if needed.
-        athletic_eligible_ids: Optional[set] = None
-        if self._is_athletic_club():
-            if verbose:
-                print("  Athletic Bilbao detected – loading transfer history to filter eligible signings...")
-            all_transfers = self._load_all_transfers()
-            athletic_eligible_ids = self._get_athletic_eligible_ids(all_transfers)
-            if verbose:
-                print(f"  {len(athletic_eligible_ids)} players with Athletic family history found")
 
-        # Get available players (not in club, and not the ones we're trying to sell)
+        # ── Step 5/8: Predict future values ──────────────────────────────
+        _progress(0.65, "step_predicting")
+        if verbose:
+            print(f"  Predicting future values...")
+
         sold_player_ids = {sp.player.player_id for sp in sold_players}
         available_players = self._get_available_players(
             all_players, club_players,
+            is_athletic=is_athletic,
             athletic_eligible_ids=athletic_eligible_ids,
         )
-        # Also exclude sold players (they shouldn't be bought back)
         available_players = [p for p in available_players if p.player_id not in sold_player_ids]
-        
+
         if verbose:
             print(f"  {len(available_players)} players available for signing")
-        
-        # Predict values for available players
-        if verbose:
-            print(f"  Predicting future values...")
-        
-        # available_players = self._predict_values(available_players, verbose=verbose)
+
         available_players = self._predict_values(available_players)
-        
-        # Find best signings using knapsack
+
+        # ── Step 6/8: Knapsack optimisation ──────────────────────────────
+        _progress(0.80, "step_knapsack")
         if verbose:
             print(f"  Finding optimal signings...")
-        
-        # Convert formation_needed [GK, DEF, MID, ATT] to formations for knapsack
-        # The knapsack expects [DEF, MID, ATT] (GK is always 1)
-        gk_needed = formation_needed[0]
-        def_needed = formation_needed[1]
-        mid_needed = formation_needed[2]
-        att_needed = formation_needed[3]
-        
-        # Create custom formation based on needs
-        custom_formation = [[def_needed, mid_needed, att_needed]]
-        
-        # If we need GK, we need to handle it separately or include in formation
-        # For simplicity, if GK needed, add to the formation search
-        if gk_needed > 0:
-            custom_formation = [[gk_needed, def_needed, mid_needed, att_needed]]
-        
-        # Run knapsack optimization
+
+        gk_needed, def_needed, mid_needed, att_needed = formation_needed
+        custom_formation = (
+            [[gk_needed, def_needed, mid_needed, att_needed]]
+            if gk_needed > 0
+            else [[def_needed, mid_needed, att_needed]]
+        )
+
         results = best_full_teams(
             available_players,
             formations=custom_formation,
-            budget=total_budget * 1_000_000,  # Convert to euros
+            budget=total_budget * 1_000_000,
             use_predicted_value=True,
             verbose=1 if verbose else 0,
+            unlimited_budget=unlimited_budget,
         )
-        
-        # Get best result
+
         recommended_signings = []
         recommended_formation = []
         total_signing_cost = 0
         total_predicted_value = 0.0
-        
+
         if results:
             recommended_formation, score, recommended_signings = results[0]
             total_signing_cost = sum((p.market_value or 0) for p in recommended_signings) / 1_000_000
             total_predicted_value = score
-        
+
         result = TransferResult(
             club_name=self.club_name,
             season=self.season,
@@ -722,16 +761,18 @@ class TransferSimulator:
             total_predicted_value=total_predicted_value,
             current_squad=club_players,
         )
-        
-        # Generate LLM summary if requested
+
+        # ── Step 7/8: LLM summary (optional) ────────────────────────────
         if generate_summary:
+            _progress(0.90, "step_summary")
             if verbose:
                 print(f"  Generating AI summary...")
             result.generate_llm_summary(
                 provider=llm_provider,
                 api_key=llm_api_key,
             )
-        
+
+        _progress(1.0, "step_done")
         return result
 
 
