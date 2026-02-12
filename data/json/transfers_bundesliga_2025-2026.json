@@ -27,7 +27,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -59,7 +59,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -523,7 +523,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -843,7 +843,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4500000
   },
@@ -875,7 +875,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/01/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -1227,7 +1227,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 28000000
   },
@@ -2155,7 +2155,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 20000000
   },
@@ -2219,7 +2219,7 @@
     "price_str": "End of loan",
     "transfer_date": "01/02/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -2395,7 +2395,7 @@
     "price_str": "End of loan",
     "transfer_date": "14/05/2013",
     "season": "2012-2013",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -2427,7 +2427,7 @@
     "price_str": "End of loan",
     "transfer_date": "01/02/2013",
     "season": "2012-2013",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -2459,7 +2459,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2012",
     "season": "2011-2012",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -2491,7 +2491,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2011",
     "season": "2010-2011",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -2667,7 +2667,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -2843,7 +2843,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 35000000
   },
@@ -2987,7 +2987,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 18000000
   },
@@ -3019,7 +3019,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -3115,7 +3115,7 @@
     "price_str": "End of loan",
     "transfer_date": "02/02/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -3147,7 +3147,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -3195,7 +3195,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -3243,7 +3243,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 50000
   },
@@ -3307,7 +3307,7 @@
     "price_str": "End of loan",
     "transfer_date": "07/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -3355,7 +3355,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/07/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -3419,7 +3419,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -3451,7 +3451,7 @@
     "price_str": "End of loan",
     "transfer_date": "02/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -3483,7 +3483,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -3627,7 +3627,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -3803,7 +3803,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 20000000
   },
@@ -3931,7 +3931,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -4107,7 +4107,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/07/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4800000
   },
@@ -4139,7 +4139,7 @@
     "price_str": "End of loan",
     "transfer_date": "04/01/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1250000
   },
@@ -4187,7 +4187,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -4315,7 +4315,7 @@
     "price_str": "End of loan",
     "transfer_date": "03/02/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -4347,7 +4347,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -4379,7 +4379,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -4539,7 +4539,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -4811,7 +4811,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -4875,7 +4875,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2012",
     "season": "2011-2012",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -5051,7 +5051,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -5275,7 +5275,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -5307,7 +5307,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -5355,7 +5355,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 25000
   },
@@ -5659,7 +5659,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -5691,7 +5691,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -5883,7 +5883,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7500000
   },
@@ -6171,7 +6171,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -6203,7 +6203,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -6267,7 +6267,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 24000000
   },
@@ -6667,7 +6667,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -6907,7 +6907,7 @@
     "price_str": "End of loan",
     "transfer_date": "28/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -6955,7 +6955,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2700000
   },
@@ -7211,7 +7211,7 @@
     "price_str": "End of loan",
     "transfer_date": "06/07/2025",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 18000000
   },
@@ -7323,7 +7323,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 20000000
   },
@@ -7371,7 +7371,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -7547,7 +7547,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 20000000
   },
@@ -7579,7 +7579,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 25000000
   },
@@ -7611,7 +7611,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -7643,7 +7643,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -7803,7 +7803,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2019",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7500000
   },
@@ -7963,7 +7963,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 14000000
   },
@@ -8027,7 +8027,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -8075,7 +8075,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -8235,7 +8235,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -8347,7 +8347,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 20000000
   },
@@ -8379,7 +8379,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 11000000
   },
@@ -8411,7 +8411,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 13000000
   },
@@ -8443,7 +8443,7 @@
     "price_str": "End of loan",
     "transfer_date": "24/01/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 13000000
   },
@@ -8571,7 +8571,7 @@
     "price_str": "End of loan",
     "transfer_date": "26/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -8603,7 +8603,7 @@
     "price_str": "End of loan",
     "transfer_date": "03/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -8699,7 +8699,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -8827,7 +8827,7 @@
     "price_str": "End of loan",
     "transfer_date": "05/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -8859,7 +8859,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -8955,7 +8955,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -8987,7 +8987,7 @@
     "price_str": "End of loan",
     "transfer_date": "09/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -9099,7 +9099,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1250000
   },
@@ -9867,7 +9867,7 @@
     "price_str": "End of loan",
     "transfer_date": "11/04/2012",
     "season": "2011-2012",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -9899,7 +9899,7 @@
     "price_str": "End of loan",
     "transfer_date": "24/11/2010",
     "season": "2010-2011",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -9931,7 +9931,7 @@
     "price_str": "End of loan",
     "transfer_date": "10/05/2010",
     "season": "2009-2010",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -9963,7 +9963,7 @@
     "price_str": "End of loan",
     "transfer_date": "10/05/2009",
     "season": "2008-2009",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -10011,7 +10011,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2008",
     "season": "2007-2008",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -10523,7 +10523,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2025",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -10891,7 +10891,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -11019,7 +11019,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -11083,7 +11083,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 50000
   },
@@ -12427,7 +12427,7 @@
     "price_str": "End of loan",
     "transfer_date": "23/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3700000
   },
@@ -12491,7 +12491,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -12715,7 +12715,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 22000000
   },
@@ -13003,7 +13003,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -13115,7 +13115,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -13211,7 +13211,7 @@
     "price_str": "End of loan",
     "transfer_date": "01/02/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -13323,7 +13323,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 23000000
   },
@@ -13435,7 +13435,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 14000000
   },
@@ -13547,7 +13547,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -13707,7 +13707,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -13739,7 +13739,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -13771,7 +13771,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -13803,7 +13803,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 9000000
   },
@@ -13947,7 +13947,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -13979,7 +13979,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -14043,7 +14043,7 @@
     "price_str": "End of loan",
     "transfer_date": "09/09/2020",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 24000000
   },
@@ -14075,7 +14075,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 22000000
   },
@@ -14251,7 +14251,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -14283,7 +14283,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 900000
   },
@@ -14315,7 +14315,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -14411,7 +14411,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -14523,7 +14523,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -14619,7 +14619,7 @@
     "price_str": "End of loan",
     "transfer_date": "29/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 80000000
   },
@@ -14795,7 +14795,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7500000
   },
@@ -14939,7 +14939,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -15515,7 +15515,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 100000
   },
@@ -15595,7 +15595,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 700000
   },
@@ -15659,7 +15659,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -15691,7 +15691,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -15787,7 +15787,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -15819,7 +15819,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -15851,7 +15851,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -15963,7 +15963,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -16123,7 +16123,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -16155,7 +16155,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2022",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -16347,7 +16347,7 @@
     "price_str": "End of loan",
     "transfer_date": "02/02/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -16395,7 +16395,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -16635,7 +16635,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/01/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -16715,7 +16715,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -16875,7 +16875,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2022",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -17179,7 +17179,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3200000
   },
@@ -17211,7 +17211,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -17355,7 +17355,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 20000000
   },
@@ -17387,7 +17387,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -17611,7 +17611,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -17819,7 +17819,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 9000000
   },
@@ -17867,7 +17867,7 @@
     "price_str": "End of loan",
     "transfer_date": "25/01/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -18011,7 +18011,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -18171,7 +18171,7 @@
     "price_str": "End of loan",
     "transfer_date": "24/08/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 25000000
   },
@@ -18219,7 +18219,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 20000000
   },
@@ -18267,7 +18267,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -18427,7 +18427,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/11/2024",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -18587,7 +18587,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2025",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 15000000
   },
@@ -18619,7 +18619,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2024",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 18000000
   },
@@ -18715,7 +18715,7 @@
     "price_str": "End of loan",
     "transfer_date": "29/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -18891,7 +18891,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 25000000
   },
@@ -18987,7 +18987,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -19019,7 +19019,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -19579,7 +19579,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2008",
     "season": "2008-2009",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 50000
   },
@@ -19803,7 +19803,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1800000
   },
@@ -19851,7 +19851,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -19883,7 +19883,7 @@
     "price_str": "End of loan",
     "transfer_date": "06/01/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -19963,7 +19963,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 15000000
   },
@@ -20027,7 +20027,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -20155,7 +20155,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -20299,7 +20299,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -20395,7 +20395,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -20539,7 +20539,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/01/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -20571,7 +20571,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -20715,7 +20715,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2012",
     "season": "2011-2012",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 100000
   },
@@ -20891,7 +20891,7 @@
     "price_str": "End of loan",
     "transfer_date": "01/02/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 20000000
   },
@@ -20955,7 +20955,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 15000000
   },
@@ -21115,7 +21115,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 18000000
   },
@@ -21387,7 +21387,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 9500000
   },
@@ -21499,7 +21499,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -21659,7 +21659,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 14000000
   },
@@ -21691,7 +21691,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -21803,7 +21803,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -22283,7 +22283,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -22811,7 +22811,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -22875,7 +22875,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -22939,7 +22939,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -23275,7 +23275,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 18000000
   },
@@ -23307,7 +23307,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -23611,7 +23611,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -23643,7 +23643,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -23675,7 +23675,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 30000000
   },
@@ -23707,7 +23707,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/01/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 30000000
   },
@@ -23739,7 +23739,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 40000000
   },
@@ -23947,7 +23947,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -23979,7 +23979,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4500000
   },
@@ -24043,7 +24043,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/11/2020",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 50000
   },
@@ -24091,7 +24091,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -24155,7 +24155,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -24299,7 +24299,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2200000
   },
@@ -24411,7 +24411,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -24571,7 +24571,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -24603,7 +24603,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -24683,7 +24683,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -24827,7 +24827,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 20000000
   },
@@ -24875,7 +24875,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 20000000
   },
@@ -24923,7 +24923,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -25003,7 +25003,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -25227,7 +25227,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -25419,7 +25419,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -25451,7 +25451,7 @@
     "price_str": "End of loan",
     "transfer_date": "13/01/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -25483,7 +25483,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2200000
   },
@@ -25659,7 +25659,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -25691,7 +25691,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -25723,7 +25723,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 900000
   },
@@ -25979,7 +25979,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -26219,7 +26219,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -26539,7 +26539,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5500000
   },
@@ -26571,7 +26571,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -26859,7 +26859,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -26891,7 +26891,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 750000
   },
@@ -26939,7 +26939,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -27371,7 +27371,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -27419,7 +27419,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -27579,7 +27579,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2400000
   },
@@ -27627,7 +27627,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -28107,7 +28107,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -28139,7 +28139,7 @@
     "price_str": "End of loan",
     "transfer_date": "05/07/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -28379,7 +28379,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -28635,7 +28635,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 9000000
   },
@@ -28779,7 +28779,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -28875,7 +28875,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -29099,7 +29099,7 @@
     "price_str": "End of loan",
     "transfer_date": "04/08/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -29131,7 +29131,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -29163,7 +29163,7 @@
     "price_str": "End of loan",
     "transfer_date": "16/01/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -29275,7 +29275,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 25000000
   },
@@ -29307,7 +29307,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -29515,7 +29515,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -29691,7 +29691,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -29723,7 +29723,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -29787,7 +29787,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -29883,7 +29883,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -29915,7 +29915,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -29963,7 +29963,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -30027,7 +30027,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -30171,7 +30171,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -30411,7 +30411,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -30443,7 +30443,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5500000
   },
@@ -30491,7 +30491,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -30843,7 +30843,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -30955,7 +30955,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 15000000
   },
@@ -31083,7 +31083,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -31115,7 +31115,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4500000
   },
@@ -31147,7 +31147,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -31291,7 +31291,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 750000
   },
@@ -31707,7 +31707,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -31755,7 +31755,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -31787,7 +31787,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -32043,7 +32043,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -32091,7 +32091,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7500000
   },
@@ -32123,7 +32123,7 @@
     "price_str": "End of loan",
     "transfer_date": "25/01/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -32507,7 +32507,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -32603,7 +32603,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2025",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 9000000
   },
@@ -32859,7 +32859,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -32891,7 +32891,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4500000
   },
@@ -33275,7 +33275,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/11/2019",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -33771,7 +33771,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 18000000
   },
@@ -33947,7 +33947,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -34059,7 +34059,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 32000000
   },
@@ -34187,7 +34187,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -34315,7 +34315,7 @@
     "price_str": "End of loan",
     "transfer_date": "27/08/2024",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 100000
   },
@@ -34379,7 +34379,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -34443,7 +34443,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -34603,7 +34603,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -34635,7 +34635,7 @@
     "price_str": "End of loan",
     "transfer_date": "03/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1800000
   },
@@ -34667,7 +34667,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1800000
   },
@@ -34795,7 +34795,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 900000
   },
@@ -34907,7 +34907,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -34939,7 +34939,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 225000
   },
@@ -35051,7 +35051,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 100000
   },
@@ -35467,7 +35467,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8500000
   },
@@ -35659,7 +35659,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -35691,7 +35691,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/07/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3600000
   },
@@ -35723,7 +35723,7 @@
     "price_str": "End of loan",
     "transfer_date": "02/01/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -35771,7 +35771,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -36059,7 +36059,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -36091,7 +36091,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -36267,7 +36267,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -36315,7 +36315,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -36363,7 +36363,7 @@
     "price_str": "End of loan",
     "transfer_date": "11/05/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -36683,7 +36683,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/03/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -36715,7 +36715,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -36747,7 +36747,7 @@
     "price_str": "End of loan",
     "transfer_date": "15/07/2021",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -36827,7 +36827,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -36875,7 +36875,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 225000
   },
@@ -36907,7 +36907,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2021",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 175000
   },
@@ -37003,7 +37003,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -37067,7 +37067,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -37099,7 +37099,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 25000000
   },
@@ -37243,7 +37243,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6500000
   },
@@ -37275,7 +37275,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1250000
   },
@@ -37515,7 +37515,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -37595,7 +37595,7 @@
     "price_str": "End of loan",
     "transfer_date": "07/01/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 100000
   },
@@ -37643,7 +37643,7 @@
     "price_str": "End of loan",
     "transfer_date": "15/04/2014",
     "season": "2013-2014",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -38043,7 +38043,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 700000
   },
@@ -38075,7 +38075,7 @@
     "price_str": "End of loan",
     "transfer_date": "04/05/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1300000
   },
@@ -38603,7 +38603,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -38635,7 +38635,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -38779,7 +38779,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7500000
   },
@@ -38843,7 +38843,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2013",
     "season": "2012-2013",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1250000
   },
@@ -39051,7 +39051,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -39083,7 +39083,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -39307,7 +39307,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -39707,7 +39707,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -39739,7 +39739,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -39771,7 +39771,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2024",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -39915,7 +39915,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -40059,7 +40059,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -40123,7 +40123,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -40171,7 +40171,7 @@
     "price_str": "End of loan",
     "transfer_date": "06/01/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1800000
   },
@@ -40203,7 +40203,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2018",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 750000
   },
@@ -40235,7 +40235,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 750000
   },
@@ -40363,7 +40363,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -40395,7 +40395,7 @@
     "price_str": "End of loan",
     "transfer_date": "27/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -40555,7 +40555,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -40587,7 +40587,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -40715,7 +40715,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -40923,7 +40923,7 @@
     "price_str": "End of loan",
     "transfer_date": "26/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -40955,7 +40955,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1700000
   },
@@ -40987,7 +40987,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -41195,7 +41195,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1800000
   },
@@ -41323,7 +41323,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -41467,7 +41467,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2025",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -41931,7 +41931,7 @@
     "price_str": "End of loan",
     "transfer_date": "02/08/2022",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 100000
   },
@@ -42235,7 +42235,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2011",
     "season": "2011-2012",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -42331,7 +42331,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -42363,7 +42363,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -42539,7 +42539,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -42699,7 +42699,7 @@
     "price_str": "End of loan",
     "transfer_date": "02/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -42747,7 +42747,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -42779,7 +42779,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 550000
   },
@@ -42955,7 +42955,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -43003,7 +43003,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -43067,7 +43067,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -43099,7 +43099,7 @@
     "price_str": "End of loan",
     "transfer_date": "04/01/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -43131,7 +43131,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2200000
   },
@@ -43163,7 +43163,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1800000
   },
@@ -43211,7 +43211,7 @@
     "price_str": "End of loan",
     "transfer_date": "07/08/2018",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 50000
   },
@@ -43291,7 +43291,7 @@
     "price_str": "End of loan",
     "transfer_date": "11/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4500000
   },
@@ -43323,7 +43323,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -43531,7 +43531,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -43595,7 +43595,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2015",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -43627,7 +43627,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2014",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -43691,7 +43691,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -43803,7 +43803,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -43851,7 +43851,7 @@
     "price_str": "End of loan",
     "transfer_date": "10/03/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -44235,7 +44235,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -44475,7 +44475,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -44555,7 +44555,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -44859,7 +44859,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2023",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1700000
   },
@@ -45083,7 +45083,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -45371,7 +45371,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1800000
   },
@@ -45435,7 +45435,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -45499,7 +45499,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2013",
     "season": "2012-2013",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -45643,7 +45643,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 75000
   },
@@ -45883,7 +45883,7 @@
     "price_str": "End of loan",
     "transfer_date": "07/07/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4800000
   },
@@ -46027,7 +46027,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/07/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -46539,7 +46539,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -46747,7 +46747,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -46795,7 +46795,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2025",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -46827,7 +46827,7 @@
     "price_str": "End of loan",
     "transfer_date": "16/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -47067,7 +47067,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -47115,7 +47115,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -47163,7 +47163,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2019",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7500000
   },
@@ -47259,7 +47259,7 @@
     "price_str": "End of loan",
     "transfer_date": "14/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -47403,7 +47403,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -47547,7 +47547,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -47579,7 +47579,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -47739,7 +47739,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -47803,7 +47803,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -47947,7 +47947,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -47979,7 +47979,7 @@
     "price_str": "End of loan",
     "transfer_date": "15/01/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -48059,7 +48059,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -48091,7 +48091,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/01/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -48235,7 +48235,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -48427,7 +48427,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -48459,7 +48459,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2024",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -48491,7 +48491,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -48523,7 +48523,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -48555,7 +48555,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -48587,7 +48587,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -48763,7 +48763,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -48923,7 +48923,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 750000
   },
@@ -49051,7 +49051,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -49115,7 +49115,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -49563,7 +49563,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -49595,7 +49595,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -50251,7 +50251,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2013",
     "season": "2012-2013",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -50843,7 +50843,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 9000000
   },
@@ -50923,7 +50923,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 700000
   },
@@ -50955,7 +50955,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2014",
     "season": "2013-2014",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -51195,7 +51195,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -51227,7 +51227,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -51355,7 +51355,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -51419,7 +51419,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -51451,7 +51451,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -51499,7 +51499,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -51675,7 +51675,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -51707,7 +51707,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -51947,7 +51947,7 @@
     "price_str": "End of loan",
     "transfer_date": "04/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -51979,7 +51979,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -52107,7 +52107,7 @@
     "price_str": "End of loan",
     "transfer_date": "01/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -52139,7 +52139,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -52171,7 +52171,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -52331,7 +52331,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -52651,7 +52651,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -53051,7 +53051,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -53083,7 +53083,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -53115,7 +53115,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -53147,7 +53147,7 @@
     "price_str": "End of loan",
     "transfer_date": "14/08/2020",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -53323,7 +53323,7 @@
     "price_str": "End of loan",
     "transfer_date": "27/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -53611,7 +53611,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -53643,7 +53643,7 @@
     "price_str": "End of loan",
     "transfer_date": "01/09/2019",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1400000
   },
@@ -53675,7 +53675,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -53707,7 +53707,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -54267,7 +54267,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -54459,7 +54459,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -54491,7 +54491,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 650000
   },
@@ -54619,7 +54619,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -54731,7 +54731,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -54827,7 +54827,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -54955,7 +54955,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/11/2023",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -54987,7 +54987,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/11/2022",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -55067,7 +55067,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 18000000
   },
@@ -55243,7 +55243,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -55563,7 +55563,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -55627,7 +55627,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -55803,7 +55803,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -55867,7 +55867,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -56043,7 +56043,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/01/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -56219,7 +56219,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -56507,7 +56507,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -56619,7 +56619,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2025",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -56683,7 +56683,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -56715,7 +56715,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/07/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -56747,7 +56747,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 25000
   },
@@ -56859,7 +56859,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2015",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -56891,7 +56891,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2011",
     "season": "2010-2011",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -56955,7 +56955,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -57131,7 +57131,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -57163,7 +57163,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -57195,7 +57195,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -57243,7 +57243,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2018",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 175000
   },
@@ -57323,7 +57323,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -57515,7 +57515,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2014",
     "season": "2013-2014",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 750000
   },
@@ -57771,7 +57771,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -57931,7 +57931,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2012",
     "season": "2011-2012",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -58299,7 +58299,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -58427,7 +58427,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 22000000
   },
@@ -58459,7 +58459,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -58491,7 +58491,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/01/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -58683,7 +58683,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -58715,7 +58715,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -58747,7 +58747,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2800000
   },
@@ -58875,7 +58875,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -59259,7 +59259,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -59291,7 +59291,7 @@
     "price_str": "End of loan",
     "transfer_date": "21/01/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1250000
   },
@@ -59323,7 +59323,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -59355,7 +59355,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -59387,7 +59387,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -59451,7 +59451,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 725000
   },
@@ -59659,7 +59659,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -59691,7 +59691,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6500000
   },
@@ -59755,7 +59755,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -59931,7 +59931,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6500000
   },
@@ -59979,7 +59979,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 9000000
   },
@@ -60027,7 +60027,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -60443,7 +60443,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -60491,7 +60491,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -60603,7 +60603,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -60635,7 +60635,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -60859,7 +60859,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4500000
   },
@@ -61067,7 +61067,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -61211,7 +61211,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7500000
   },
@@ -61339,7 +61339,7 @@
     "price_str": "End of loan",
     "transfer_date": "24/01/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -61419,7 +61419,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -61531,7 +61531,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -61563,7 +61563,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -61755,7 +61755,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5500000
   },
@@ -61835,7 +61835,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -61867,7 +61867,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2014",
     "season": "2013-2014",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -61899,7 +61899,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2012",
     "season": "2011-2012",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -62379,7 +62379,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -62427,7 +62427,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6800000
   },
@@ -62555,7 +62555,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -62603,7 +62603,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -62715,7 +62715,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -62747,7 +62747,7 @@
     "price_str": "End of loan",
     "transfer_date": "27/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -62779,7 +62779,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -62843,7 +62843,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -62939,7 +62939,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -63083,7 +63083,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -63227,7 +63227,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -63259,7 +63259,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -63291,7 +63291,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -63403,7 +63403,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -63435,7 +63435,7 @@
     "price_str": "End of loan",
     "transfer_date": "02/02/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -63579,7 +63579,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 850000
   },
@@ -63723,7 +63723,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -63819,7 +63819,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -63851,7 +63851,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -64027,7 +64027,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -64139,7 +64139,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -64347,7 +64347,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5500000
   },
@@ -64379,7 +64379,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -64507,7 +64507,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 175000
   },
@@ -64587,7 +64587,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -64619,7 +64619,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -64763,7 +64763,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -64795,7 +64795,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -64827,7 +64827,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2017",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -64859,7 +64859,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -64955,7 +64955,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -65387,7 +65387,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -65419,7 +65419,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -65531,7 +65531,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -65819,7 +65819,7 @@
     "price_str": "End of loan",
     "transfer_date": "01/02/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -65851,7 +65851,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -65995,7 +65995,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -66043,7 +66043,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -66139,7 +66139,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -66171,7 +66171,7 @@
     "price_str": "End of loan",
     "transfer_date": "16/01/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -66347,7 +66347,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -66603,7 +66603,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -66635,7 +66635,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 15000000
   },
@@ -66667,7 +66667,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 15000000
   },
@@ -66859,7 +66859,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 22000000
   },
@@ -67019,7 +67019,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -67051,7 +67051,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 11000000
   },
@@ -67275,7 +67275,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -67483,7 +67483,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 750000
   },
@@ -67515,7 +67515,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 900000
   },
@@ -67739,7 +67739,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 700000
   },
@@ -67787,7 +67787,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -68075,7 +68075,7 @@
     "price_str": "End of loan",
     "transfer_date": "02/02/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -68235,7 +68235,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -68587,7 +68587,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -68651,7 +68651,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -68731,7 +68731,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 700000
   },
@@ -68811,7 +68811,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -68939,7 +68939,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2025",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 550000
   },
@@ -68971,7 +68971,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -69083,7 +69083,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -69147,7 +69147,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 100000
   },
@@ -69259,7 +69259,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -69291,7 +69291,7 @@
     "price_str": "End of loan",
     "transfer_date": "03/02/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -69419,7 +69419,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -69547,7 +69547,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -69723,7 +69723,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -69835,7 +69835,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 75000
   },
@@ -69931,7 +69931,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -70075,7 +70075,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2800000
   },
@@ -70379,7 +70379,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -70555,7 +70555,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 700000
   },
@@ -70811,7 +70811,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -70891,7 +70891,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 100000
   },
@@ -71019,7 +71019,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -71403,7 +71403,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -71531,7 +71531,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -71563,7 +71563,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -71595,7 +71595,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2022",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -71643,7 +71643,7 @@
     "price_str": "End of loan",
     "transfer_date": "11/07/2018",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -71723,7 +71723,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -71899,7 +71899,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -71931,7 +71931,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -72011,7 +72011,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -72411,7 +72411,7 @@
     "price_str": "End of loan",
     "transfer_date": "20/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5500000
   },
@@ -72443,7 +72443,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -72491,7 +72491,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 14000000
   },
@@ -72875,7 +72875,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -72955,7 +72955,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -73147,7 +73147,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -73227,7 +73227,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2014",
     "season": "2013-2014",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -73323,7 +73323,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2011",
     "season": "2011-2012",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1250000
   },
@@ -73355,7 +73355,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2011",
     "season": "2010-2011",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -73931,7 +73931,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2013",
     "season": "2012-2013",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 950000
   },
@@ -74091,7 +74091,7 @@
     "price_str": "End of loan",
     "transfer_date": "05/07/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -74251,7 +74251,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -74283,7 +74283,7 @@
     "price_str": "End of loan",
     "transfer_date": "02/01/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -74395,7 +74395,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -74651,7 +74651,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -74955,7 +74955,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 700000
   },
@@ -75051,7 +75051,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -75611,7 +75611,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -75835,7 +75835,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2023",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 25000
   },
@@ -75995,7 +75995,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -76075,7 +76075,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -76107,7 +76107,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -76187,7 +76187,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -76219,7 +76219,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -76251,7 +76251,7 @@
     "price_str": "End of loan",
     "transfer_date": "14/02/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2800000
   },
@@ -76299,7 +76299,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -76395,7 +76395,7 @@
     "price_str": "End of loan",
     "transfer_date": "13/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -76491,7 +76491,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/07/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -76523,7 +76523,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 100000
   },
@@ -76635,7 +76635,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -76667,7 +76667,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -76699,7 +76699,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -76859,7 +76859,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -76987,7 +76987,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 700000
   },
@@ -77019,7 +77019,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -77147,7 +77147,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -77243,7 +77243,7 @@
     "price_str": "End of loan",
     "transfer_date": "01/02/2009",
     "season": "2008-2009",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -77579,7 +77579,7 @@
     "price_str": "End of loan",
     "transfer_date": "05/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -77707,7 +77707,7 @@
     "price_str": "End of loan",
     "transfer_date": "03/08/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -77755,7 +77755,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -77787,7 +77787,7 @@
     "price_str": "End of loan",
     "transfer_date": "21/11/2018",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 25000
   },
@@ -77963,7 +77963,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -78011,7 +78011,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -78043,7 +78043,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -78091,7 +78091,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -78203,7 +78203,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -78363,7 +78363,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4500000
   },
@@ -78603,7 +78603,7 @@
     "price_str": "End of loan",
     "transfer_date": "10/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -78683,7 +78683,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -78795,7 +78795,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -78827,7 +78827,7 @@
     "price_str": "End of loan",
     "transfer_date": "29/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -78875,7 +78875,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -78907,7 +78907,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -79115,7 +79115,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -79611,7 +79611,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -79931,7 +79931,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2400000
   },
@@ -80235,7 +80235,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -80395,7 +80395,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -80651,7 +80651,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -80907,7 +80907,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -80955,7 +80955,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -81051,7 +81051,7 @@
     "price_str": "End of loan",
     "transfer_date": "26/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -81131,7 +81131,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2018",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -81243,7 +81243,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -81291,7 +81291,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -81499,7 +81499,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -81563,7 +81563,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 100000
   },
@@ -81691,7 +81691,7 @@
     "price_str": "End of loan",
     "transfer_date": "13/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -81963,7 +81963,7 @@
     "price_str": "End of loan",
     "transfer_date": "22/08/2017",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -82123,7 +82123,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -82267,7 +82267,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -82299,7 +82299,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -82987,7 +82987,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -83051,7 +83051,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2014",
     "season": "2013-2014",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -83403,7 +83403,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -83547,7 +83547,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -83611,7 +83611,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2014",
     "season": "2013-2014",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 750000
   },
@@ -84171,7 +84171,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 15000000
   },
@@ -84203,7 +84203,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -84475,7 +84475,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -84619,7 +84619,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -85051,7 +85051,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -85291,7 +85291,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/08/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -85323,7 +85323,7 @@
     "price_str": "End of loan",
     "transfer_date": "16/01/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -85435,7 +85435,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 6000000
   },
@@ -85483,7 +85483,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -85515,7 +85515,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -85547,7 +85547,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -85723,7 +85723,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -85963,7 +85963,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -86011,7 +86011,7 @@
     "price_str": "End of loan",
     "transfer_date": "05/07/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1800000
   },
@@ -86187,7 +86187,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -86315,7 +86315,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 25000
   },
@@ -86523,7 +86523,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -86651,7 +86651,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -86683,7 +86683,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -86731,7 +86731,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4500000
   },
@@ -86779,7 +86779,7 @@
     "price_str": "End of loan",
     "transfer_date": "20/07/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4800000
   },
@@ -86811,7 +86811,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 10000000
   },
@@ -86891,7 +86891,7 @@
     "price_str": "End of loan",
     "transfer_date": "24/03/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -86939,7 +86939,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3000000
   },
@@ -86971,7 +86971,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -87259,7 +87259,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -87323,7 +87323,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 28000000
   },
@@ -87387,7 +87387,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -87515,7 +87515,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -87675,7 +87675,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -87707,7 +87707,7 @@
     "price_str": "End of loan",
     "transfer_date": "21/01/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -87739,7 +87739,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -87787,7 +87787,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1000000
   },
@@ -87819,7 +87819,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2021",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -87947,7 +87947,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -87979,7 +87979,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -88171,7 +88171,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -88331,7 +88331,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2022",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -88443,7 +88443,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 8000000
   },
@@ -88667,7 +88667,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2012",
     "season": "2011-2012",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 3500000
   },
@@ -88827,7 +88827,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 900000
   },
@@ -88875,7 +88875,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -89035,7 +89035,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 16000000
   },
@@ -89179,7 +89179,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -89211,7 +89211,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -89371,7 +89371,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -89547,7 +89547,7 @@
     "price_str": "End of loan",
     "transfer_date": "01/01/2016",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 125000
   },
@@ -89579,7 +89579,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 125000
   },
@@ -89947,7 +89947,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2025",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 175000
   },
@@ -89995,7 +89995,7 @@
     "price_str": "End of loan",
     "transfer_date": "08/02/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -90059,7 +90059,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -90091,7 +90091,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2020",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -90123,7 +90123,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2019",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -90251,7 +90251,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -90411,7 +90411,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 700000
   },
@@ -90715,7 +90715,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -90747,7 +90747,7 @@
     "price_str": "End of loan",
     "transfer_date": "15/01/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 175000
   },
@@ -90843,7 +90843,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -91419,7 +91419,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -91451,7 +91451,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -91531,7 +91531,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -91563,7 +91563,7 @@
     "price_str": "End of loan",
     "transfer_date": "01/01/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -91675,7 +91675,7 @@
     "price_str": "End of loan",
     "transfer_date": "01/03/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -91707,7 +91707,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/11/2018",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 100000
   },
@@ -92171,7 +92171,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 175000
   },
@@ -92203,7 +92203,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2014",
     "season": "2013-2014",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 150000
   },
@@ -92331,7 +92331,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -92363,7 +92363,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -92395,7 +92395,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 550000
   },
@@ -92619,7 +92619,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -92667,7 +92667,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1800000
   },
@@ -92699,7 +92699,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -92731,7 +92731,7 @@
     "price_str": "End of loan",
     "transfer_date": "12/01/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -92987,7 +92987,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 900000
   },
@@ -93019,7 +93019,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1300000
   },
@@ -93163,7 +93163,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2024",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -93243,7 +93243,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -93387,7 +93387,7 @@
     "price_str": "End of loan",
     "transfer_date": "25/01/2026",
     "season": "2025-2026",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -93435,7 +93435,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -93467,7 +93467,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -93515,7 +93515,7 @@
     "price_str": "End of loan",
     "transfer_date": "09/05/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -93547,7 +93547,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 250000
   },
@@ -93611,7 +93611,7 @@
     "price_str": "End of loan",
     "transfer_date": "05/05/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -93691,7 +93691,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -93835,7 +93835,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2016",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 850000
   },
@@ -93867,7 +93867,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2016",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 850000
   },
@@ -93899,7 +93899,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -93995,7 +93995,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -94027,7 +94027,7 @@
     "price_str": "End of loan",
     "transfer_date": "06/01/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -94059,7 +94059,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/05/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -94171,7 +94171,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -94315,7 +94315,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 750000
   },
@@ -94699,7 +94699,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -95099,7 +95099,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2015",
     "season": "2015-2016",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -95387,7 +95387,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2500000
   },
@@ -95563,7 +95563,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 7000000
   },
@@ -95931,7 +95931,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1500000
   },
@@ -96091,7 +96091,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 900000
   },
@@ -96123,7 +96123,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -96155,7 +96155,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/01/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 200000
   },
@@ -96411,7 +96411,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 750000
   },
@@ -96443,7 +96443,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -96811,7 +96811,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 5000000
   },
@@ -97019,7 +97019,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -97611,7 +97611,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -97643,7 +97643,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 4000000
   },
@@ -97787,7 +97787,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/01/2020",
     "season": "2019-2020",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 100000
   },
@@ -97931,7 +97931,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 750000
   },
@@ -97963,7 +97963,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2018",
     "season": "2017-2018",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -98011,7 +98011,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2017",
     "season": "2016-2017",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -98203,7 +98203,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2024",
     "season": "2023-2024",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 12000000
   },
@@ -98267,7 +98267,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -98523,7 +98523,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -98555,7 +98555,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 450000
   },
@@ -98587,7 +98587,7 @@
     "price_str": "End of loan",
     "transfer_date": "04/01/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 400000
   },
@@ -98715,7 +98715,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2000000
   },
@@ -98763,7 +98763,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -98795,7 +98795,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 500000
   },
@@ -98907,7 +98907,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2025",
     "season": "2024-2025",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 1200000
   },
@@ -98971,7 +98971,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2023",
     "season": "2022-2023",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 2700000
   },
@@ -99003,7 +99003,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 600000
   },
@@ -99131,7 +99131,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2022",
     "season": "2021-2022",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 800000
   },
@@ -99211,7 +99211,7 @@
     "price_str": "End of loan",
     "transfer_date": "31/12/2018",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 300000
   },
@@ -99659,7 +99659,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2021",
     "season": "2020-2021",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },
@@ -99707,7 +99707,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2019",
     "season": "2018-2019",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 0
   },
@@ -99883,7 +99883,7 @@
     "price_str": "End of loan",
     "transfer_date": "30/06/2015",
     "season": "2014-2015",
-    "transfer_type": "loan_out",
+    "transfer_type": "loan_return",
     "is_loan": true,
     "market_value_at_transfer": 350000
   },

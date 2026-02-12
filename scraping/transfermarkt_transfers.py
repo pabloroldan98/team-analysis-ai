@@ -285,13 +285,13 @@ class TransfermarktTransfersScraper(BaseScraper):
             transfer_type_raw = type_details.get("type", "STANDARD")
             fee_description = type_details.get("feeDescription", "")
 
-            is_loan = "LOAN" in transfer_type_raw.upper()
-
-            if is_loan:
-                transfer_type = "loan_out"
-            elif transfer_type_raw == "RETURNED_FROM_PREVIOUS_LOAN":
+            if transfer_type_raw == "RETURNED_FROM_PREVIOUS_LOAN":
                 is_loan = True
                 transfer_type = "loan_return"
+            # elif "LOAN" in transfer_type_raw.upper():
+            elif transfer_type_raw == "ACTIVE_LOAN_TRANSFER":
+                is_loan = True
+                transfer_type = "loan_out"
             else:
                 transfer_type = "out"
 
