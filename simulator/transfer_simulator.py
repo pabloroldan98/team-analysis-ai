@@ -467,15 +467,11 @@ class TransferSimulator:
         Returns:
             (sold_players, formation_needed) where formation_needed is [GK, DEF, MID, ATT]
         """
-        # Group players by position
-        by_position: Dict[str, List[Player]] = {
-            "GK": [], "DEF": [], "MID": [], "ATT": []
-        }
-        
+        available = []
         for p in club_players:
             pos = p.position
-            if pos in by_position:
-                by_position[pos].append(p)
+            if pos in ["GK", "DEF", "MID", "ATT"] and not p.on_loan:
+                available.append(p)
         
         # Decide how many to try to sell (1-10)
         num_to_sell = random.randint(min_sales, max_sales)
@@ -484,20 +480,15 @@ class TransferSimulator:
         sales_per_position = {"GK": 0, "DEF": 0, "MID": 0, "ATT": 0}
         sold_players: List[SoldPlayer] = []
         
-        # Create pool of sellable players (on-loan players cannot be sold)
-        available = []
-        for pos, players in by_position.items():
-            available.extend([(p, pos) for p in players if not p.on_loan])
-        
         random.shuffle(available)
         
         attempts = 0
-        for player, pos in available:
+        for player in available:
             if attempts >= num_to_sell:
                 break
             
             # Check max per position constraint
-            if sales_per_position[pos] < max_per_position:
+            if sales_per_position[player.position] < max_per_position:
                 attempts += 1
                 
                 # Try to find a destination team
@@ -511,7 +502,7 @@ class TransferSimulator:
                 
                 # Only count towards position if actually sold
                 if destination is not None:
-                    sales_per_position[pos] += 1
+                    sales_per_position[player.position] += 1
         
         # Formation needed: [GK, DEF, MID, ATT] (only positions that were actually sold)
         formation_needed = [
@@ -722,11 +713,7 @@ class TransferSimulator:
             print(f"  Finding optimal signings...")
 
         gk_needed, def_needed, mid_needed, att_needed = formation_needed
-        custom_formation = (
-            [[gk_needed, def_needed, mid_needed, att_needed]]
-            if gk_needed > 0
-            else [[def_needed, mid_needed, att_needed]]
-        )
+        custom_formation = [[gk_needed, def_needed, mid_needed, att_needed]]
 
         results = best_full_teams(
             available_players,
