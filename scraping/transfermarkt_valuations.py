@@ -157,8 +157,10 @@ class TransfermarktValuationsScraper(BaseScraper):
     
     def _fill_club_names(self, valuations: List[Valuation]) -> None:
         """
-        Fill club_name_at_valuation for all valuations by fetching club names from API.
-        
+        Fill club_name_at_valuation for all valuations by fetching club names
+        from the API, with a local-file fallback for IDs that the API couldn't
+        resolve.
+
         Args:
             valuations: List of Valuation objects to update (modified in place)
         """
@@ -167,19 +169,47 @@ class TransfermarktValuationsScraper(BaseScraper):
         for v in valuations:
             if v.club_id_at_valuation and not v.club_name_at_valuation:
                 club_ids.add(v.club_id_at_valuation)
-        
+
         if not club_ids:
             return
-        
+
         self.log(f"\nFetching names for {len(club_ids)} clubs...")
-        
+
         # Fetch all club names in one call
         club_names = self._fetch_club_names_batch(club_ids)
-        
+
         # Fill club names in valuations
         for v in valuations:
             if v.club_id_at_valuation and v.club_id_at_valuation in club_names:
                 v.club_name_at_valuation = club_names[v.club_id_at_valuation]
+
+        # ── Local-file fallback for still-unresolved IDs ─────────────
+        still_missing: set = set()
+        for v in valuations:
+            if v.club_id_at_valuation and not v.club_name_at_valuation:
+                still_missing.add(v.club_id_at_valuation)
+
+        if still_missing:
+            self.log(f"  {len(still_missing)} IDs still unresolved – "
+                     f"trying local file fallback …")
+            try:
+                from fill_club_names import load_all_json_files, build_local_name_map
+                from pathlib import Path as _Path
+
+                data_dir = _Path("data/json")
+                if data_dir.exists():
+                    file_records = load_all_json_files(data_dir)
+                    local_map = build_local_name_map(file_records)
+                    found = 0
+                    for v in valuations:
+                        if (v.club_id_at_valuation
+                                and not v.club_name_at_valuation
+                                and v.club_id_at_valuation in local_map):
+                            v.club_name_at_valuation = local_map[v.club_id_at_valuation]
+                            found += 1
+                    self.log(f"  Local fallback resolved {found} additional names")
+            except Exception as exc:
+                self.log(f"  Local fallback failed: {exc}")
     
     def scrape_player_valuations(self, player_id: str, player_name: str = "") -> List[Valuation]:
         """

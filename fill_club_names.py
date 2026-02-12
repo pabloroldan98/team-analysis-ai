@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""
+r"""
 fill_club_names.py
 ==================
 Standalone script that scans every JSON file under ``data/json/`` and fills in
@@ -50,7 +50,75 @@ FILE_KEY_MAP: Dict[str, List[Tuple[str, str]]] = {
         ("team", "team_id"),
         ("loaning_team", "loaning_team_id"),
     ],
+    "teams": [
+        ("name", "team_id"),
+    ],
 }
+
+# Type alias for pre-loaded file records: (filepath_str, prefix, records_list)
+FileRecord = Tuple[str, str, list]
+
+
+# ── File loading ─────────────────────────────────────────────────────────────
+
+def _file_prefix(filename: str) -> Optional[str]:
+    """Return the category prefix (transfers, valuations, players) or None."""
+    for prefix in FILE_KEY_MAP:
+        if filename.startswith(prefix):
+            return prefix
+    return None
+
+
+def load_all_json_files(data_dir: Path) -> List[FileRecord]:
+    """Load every relevant JSON file from *data_dir* exactly once.
+
+    Returns a list of ``(filepath_str, prefix, records)`` tuples.
+    Only files whose name starts with a known prefix (transfers, valuations,
+    players) are included.
+    """
+    result: List[FileRecord] = []
+    json_files = sorted(data_dir.glob("*.json"))
+    print(f"Loading {len(json_files)} JSON files from {data_dir} …")
+
+    for fp in json_files:
+        prefix = _file_prefix(fp.name)
+        if prefix is None:
+            continue
+        try:
+            with open(fp, "r", encoding="utf-8") as f:
+                records = json.load(f)
+        except Exception as exc:
+            print(f"  SKIP {fp.name}: {exc}")
+            continue
+        if not isinstance(records, list):
+            continue
+        result.append((str(fp), prefix, records))
+
+    print(f"  Loaded {len(result)} files into memory.\n")
+    return result
+
+
+# ── Local name map (fallback) ────────────────────────────────────────────────
+
+def build_local_name_map(file_records: List[FileRecord]) -> Dict[str, str]:
+    """Build a ``{club_id: club_name}`` dict from all existing data.
+
+    Iterates every record in every loaded file and collects non-empty
+    name↔id pairs.  This serves as a **last-resort fallback** when the
+    Transfermarkt API is unreachable.
+    """
+    name_map: Dict[str, str] = {}
+
+    for _filepath, prefix, records in file_records:
+        key_pairs = FILE_KEY_MAP.get(prefix, [])
+        for rec in records:
+            for name_key, id_key in key_pairs:
+                club_id = rec.get(id_key)
+                club_name = rec.get(name_key)
+                if club_id and club_name:
+                    name_map[str(club_id)] = club_name
+
+    return name_map
 
 
 # ── API helpers ──────────────────────────────────────────────────────────────
@@ -145,18 +213,12 @@ def fetch_club_names(club_ids: Set[str]) -> Dict[str, str]:
 
 # ── Scanning & filling ───────────────────────────────────────────────────────
 
-def _file_prefix(filename: str) -> Optional[str]:
-    """Return the category prefix (transfers, valuations, players) or None."""
-    for prefix in FILE_KEY_MAP:
-        if filename.startswith(prefix):
-            return prefix
-    return None
-
-
-def scan_missing_ids(data_dir: Path) -> Tuple[Set[str], Dict[str, list]]:
+def scan_missing_ids(
+    file_records: List[FileRecord],
+) -> Tuple[Set[str], Dict[str, list]]:
     """
-    Walk every JSON file and collect club IDs whose corresponding name is
-    empty.
+    From pre-loaded file records, collect club IDs whose corresponding
+    name is empty.
 
     Returns
     -------
@@ -169,26 +231,9 @@ def scan_missing_ids(data_dir: Path) -> Tuple[Set[str], Dict[str, list]]:
     missing_ids: Set[str] = set()
     files_to_patch: Dict[str, list] = {}
 
-    json_files = sorted(data_dir.glob("*.json"))
-    print(f"Scanning {len(json_files)} JSON files …\n")
-
-    for fp in json_files:
-        prefix = _file_prefix(fp.name)
-        if prefix is None:
-            continue
-
-        key_pairs = FILE_KEY_MAP[prefix]
+    for filepath, prefix, records in file_records:
+        key_pairs = FILE_KEY_MAP.get(prefix, [])
         file_missing = False
-
-        try:
-            with open(fp, "r", encoding="utf-8") as f:
-                records = json.load(f)
-        except Exception as exc:
-            print(f"  SKIP {fp.name}: {exc}")
-            continue
-
-        if not isinstance(records, list):
-            continue
 
         for rec in records:
             for name_key, id_key in key_pairs:
@@ -199,7 +244,7 @@ def scan_missing_ids(data_dir: Path) -> Tuple[Set[str], Dict[str, list]]:
                     file_missing = True
 
         if file_missing:
-            files_to_patch[str(fp)] = key_pairs
+            files_to_patch[filepath] = key_pairs
 
     print(f"  Missing names found for {len(missing_ids)} unique club IDs")
     print(f"  Files that need patching: {len(files_to_patch)}")
@@ -207,20 +252,27 @@ def scan_missing_ids(data_dir: Path) -> Tuple[Set[str], Dict[str, list]]:
 
 
 def patch_files(
+    file_records: List[FileRecord],
     files_to_patch: Dict[str, list],
     name_map: Dict[str, str],
 ) -> None:
-    """Rewrite each JSON file, filling empty names from *name_map*."""
+    """Fill empty names from *name_map* and write modified files to disk.
+
+    Uses the already-loaded *file_records* so files are NOT re-read.
+    """
     if not files_to_patch:
         print("\nNo files to patch.")
         return
 
+    # Index records by filepath for quick lookup
+    records_by_path = {fp: recs for fp, _pfx, recs in file_records}
+
     total_filled = 0
 
     for filepath, key_pairs in sorted(files_to_patch.items()):
-        fp = Path(filepath)
-        with open(fp, "r", encoding="utf-8") as f:
-            records = json.load(f)
+        records = records_by_path.get(filepath)
+        if records is None:
+            continue
 
         file_filled = 0
         for rec in records:
@@ -234,12 +286,12 @@ def patch_files(
                         file_filled += 1
 
         if file_filled:
-            with open(fp, "w", encoding="utf-8") as f:
+            with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(records, f, ensure_ascii=False, indent=2)
-            print(f"  {fp.name}: filled {file_filled} names")
+            print(f"  {Path(filepath).name}: filled {file_filled} names")
             total_filled += file_filled
         else:
-            print(f"  {fp.name}: nothing to fill (IDs not resolved)")
+            print(f"  {Path(filepath).name}: nothing to fill (IDs not resolved)")
 
     print(f"\nTotal names filled across all files: {total_filled}")
 
@@ -261,31 +313,46 @@ def main() -> None:
         print(f"ERROR: {DATA_DIR} not found. Run from the project root.")
         return
 
-    # 1. Scan
-    missing_ids, files_to_patch = scan_missing_ids(DATA_DIR)
+    # 1. Load all JSON files once
+    file_records = load_all_json_files(DATA_DIR)
+
+    # 2. Scan for missing names
+    missing_ids, files_to_patch = scan_missing_ids(file_records)
 
     if not missing_ids:
         print("\n✓ All club names are already filled – nothing to do!")
         return
 
-    # 2. Fetch
+    # 3. Fetch from API
     name_map = fetch_club_names(missing_ids)
 
+    # 4. Fallback: fill remaining gaps from existing data in the files
+    still_missing = missing_ids - set(name_map.keys())
+    if still_missing:
+        print(f"\n{len(still_missing)} IDs still unresolved – "
+              f"trying local fallback from existing files …")
+        local_map = build_local_name_map(file_records)
+        found_locally = 0
+        for mid in still_missing:
+            if mid in local_map:
+                name_map[mid] = local_map[mid]
+                found_locally += 1
+        print(f"  Resolved {found_locally} more IDs from local data")
+
     resolved = sum(1 for mid in missing_ids if mid in name_map)
-    print(f"\nResolved {resolved}/{len(missing_ids)} IDs")
+    print(f"\nTotal resolved: {resolved}/{len(missing_ids)} IDs")
 
     if args.dry_run:
         print("\n[DRY RUN] – no files were modified.")
-        # Show a sample of resolved names
         for cid, cname in list(name_map.items())[:20]:
             print(f"  {cid} → {cname}")
         if len(name_map) > 20:
             print(f"  … and {len(name_map) - 20} more")
         return
 
-    # 3. Patch
+    # 5. Patch
     print(f"\nPatching {len(files_to_patch)} files …\n")
-    patch_files(files_to_patch, name_map)
+    patch_files(file_records, files_to_patch, name_map)
     print("\n✓ Done!")
 
 

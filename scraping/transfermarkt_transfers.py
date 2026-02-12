@@ -153,7 +153,8 @@ class TransfermarktTransfersScraper(BaseScraper):
         return {cid: self._club_name_cache.get(cid, "") for cid in club_ids}
 
     def _fill_club_names(self, transfers: List[Transfer]) -> None:
-        """Fill from_club_name and to_club_name for all transfers via API."""
+        """Fill from_club_name and to_club_name for all transfers via API,
+        with a local-file fallback for IDs that the API couldn't resolve."""
         club_ids = set()
         for t in transfers:
             if t.from_club_id and not t.from_club_name:
@@ -172,6 +173,41 @@ class TransfermarktTransfersScraper(BaseScraper):
                 t.from_club_name = club_names[t.from_club_id]
             if t.to_club_id and t.to_club_id in club_names and not t.to_club_name:
                 t.to_club_name = club_names[t.to_club_id]
+
+        # ── Local-file fallback for still-unresolved IDs ─────────────
+        still_missing: Set[str] = set()
+        for t in transfers:
+            if t.from_club_id and not t.from_club_name:
+                still_missing.add(t.from_club_id)
+            if t.to_club_id and not t.to_club_name:
+                still_missing.add(t.to_club_id)
+
+        if still_missing:
+            self.log(f"  {len(still_missing)} IDs still unresolved – "
+                     f"trying local file fallback …")
+            try:
+                from fill_club_names import load_all_json_files, build_local_name_map
+                from pathlib import Path as _Path
+
+                data_dir = _Path("data/json")
+                if data_dir.exists():
+                    file_records = load_all_json_files(data_dir)
+                    local_map = build_local_name_map(file_records)
+                    found = 0
+                    for t in transfers:
+                        if t.from_club_id and not t.from_club_name:
+                            name = local_map.get(t.from_club_id)
+                            if name:
+                                t.from_club_name = name
+                                found += 1
+                        if t.to_club_id and not t.to_club_name:
+                            name = local_map.get(t.to_club_id)
+                            if name:
+                                t.to_club_name = name
+                                found += 1
+                    self.log(f"  Local fallback resolved {found} additional names")
+            except Exception as exc:
+                self.log(f"  Local fallback failed: {exc}")
 
     # ── Per-player API history ───────────────────────────────────────────
 

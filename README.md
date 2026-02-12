@@ -358,7 +358,7 @@ team-analysis-ai/
 │   └── logo.png             # App logo
 ├── data/json/               # Scraped data (JSON)
 ├── ml/
-│   ├── datasets/            # Cached training datasets (auto-split into parts if >100MB)
+│   ├── datasets/            # Cached training datasets (auto-split into parts if >90MB)
 │   ├── models/              # Trained XGBoost models (.joblib)
 │   ├── feature_engineering.py
 │   ├── train_pipeline.py
