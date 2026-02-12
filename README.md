@@ -131,6 +131,13 @@ Benefits of using the API:
 
 For the clubs batch endpoint, I implemented **adaptive batching** that starts with all IDs in one request and recursively splits in half on 414 (URL too long), 429 (rate limit), or 5xx (server error) responses. The club-name resolution uses aggressive retry settings (50 retries, 10s pause) since it's critical for data completeness — while 414 triggers an immediate split (retrying won't help), 429/5xx errors first retry with waits and only split the batch after all retries are exhausted.
 
+Club name resolution follows a **three-level fallback chain**:
+1. **API**: Batch-fetch names from the clubs endpoint (with adaptive splitting).
+2. **Local file data**: If the API fails, scan all existing JSON files to build an `{id → name}` dictionary from already-known name/id pairs.
+3. **Transfer history**: For valuations where `club_id` is `"0"` or the name is still empty, determine the club from the player's transfer history — the most recent transfer before the valuation date provides the `to_club_name`, or the earliest transfer provides the `from_club_name`.
+
+Additionally, **empty valuation dates** are patched before any club-name logic runs: the date is inferred from the next valuation (−1 day), the previous valuation (+1 day), or `01/06/{season_start_year}` as a last resort.
+
 > **Note on Players API**: A batch endpoint exists (`/players?ids[]=X&ids[]=Y...`) but I chose not to use it because it doesn't return all the detailed player data I needed (positions, contract info, etc.). To get complete player profiles, individual page scraping is still required, so using the batch API wouldn't reduce the number of requests.
 
 ---
@@ -379,7 +386,7 @@ team-analysis-ai/
 ├── webapp/
 │   └── i18n.py              # Internationalization (ES/EN)
 ├── league.py / team.py / player.py / transfer.py / valuation.py
-├── fill_club_names.py       # Backfill missing club names in JSON data
+├── fill_club_names.py       # Backfill missing club names (API → local → transfers)
 ├── streamlit_app.py         # Web app entry point
 ├── requirements.txt
 └── README.md
