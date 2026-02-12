@@ -22,11 +22,20 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 import time
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple
 
 import requests
+
+# Ensure project root is on sys.path so helpers can be imported
+_ROOT = Path(__file__).parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
+from scraping.utils.helpers import parse_date
 
 # ── Configuration ────────────────────────────────────────────────────────────
 DATA_DIR = Path("data/json")
@@ -119,6 +128,112 @@ def build_local_name_map(file_records: List[FileRecord]) -> Dict[str, str]:
                     name_map[str(club_id)] = club_name
 
     return name_map
+
+
+# ── Transfer-based club fix for valuations ───────────────────────────────────
+
+def build_transfer_index(
+    file_records: List[FileRecord],
+) -> Dict[str, List[Tuple[datetime, dict]]]:
+    """Build ``{player_id: [(date, transfer_record), …]}`` from transfer files.
+
+    The list for each player is sorted by date ascending.
+    """
+    index: Dict[str, List[Tuple[datetime, dict]]] = {}
+
+    for _filepath, prefix, records in file_records:
+        if prefix != "transfers":
+            continue
+        for rec in records:
+            pid = rec.get("player_id")
+            date_str = rec.get("transfer_date", "")
+            if not pid or not date_str:
+                continue
+            td = parse_date(date_str)
+            if td is None:
+                continue
+            index.setdefault(pid, []).append((td, rec))
+
+    for pid in index:
+        index[pid].sort(key=lambda x: x[0])
+
+    return index
+
+
+def fix_valuations_from_transfers(
+    file_records: List[FileRecord],
+    transfer_index: Dict[str, List[Tuple[datetime, dict]]],
+) -> Tuple[int, Set[str]]:
+    """Fix empty ``club_name_at_valuation`` using transfer history.
+
+    For each valuation record with no club name (or ``club_id == "0"``):
+
+    1. Find the latest transfer with ``date <= valuation_date`` → use
+       ``to_club_name`` / ``to_club_id``.
+    2. If none exists before that date, take the closest transfer overall
+       and use ``from_club_name`` / ``from_club_id``.
+
+    Records are modified **in-place**.
+
+    Returns ``(fixed_count, modified_file_paths)``.
+    """
+    fixed = 0
+    modified_files: Set[str] = set()
+
+    for filepath, prefix, records in file_records:
+        if prefix != "valuations":
+            continue
+        for rec in records:
+            club_name = rec.get("club_name_at_valuation")
+            club_id = rec.get("club_id_at_valuation")
+            if club_name and club_id != "0":
+                continue
+
+            pid = rec.get("player_id")
+            if not pid:
+                continue
+
+            player_transfers = transfer_index.get(pid)
+            if not player_transfers:
+                continue
+
+            val_date = parse_date(rec.get("valuation_date", ""))
+            if not val_date:
+                continue
+
+            # Latest transfer with date <= valuation_date
+            best_before = None
+            for t_date, t in player_transfers:
+                if t_date <= val_date:
+                    best_before = (t_date, t)
+                    # List is sorted, so last match = latest before
+
+            if best_before:
+                t = best_before[1]
+                name = t.get("to_club_name")
+                if name:
+                    rec["club_name_at_valuation"] = name
+                    tid = t.get("to_club_id")
+                    if tid:
+                        rec["club_id_at_valuation"] = tid
+                    fixed += 1
+                    modified_files.add(filepath)
+                    continue
+
+            # No transfer before → earliest transfer, use from_club_name
+            _first_date, closest = player_transfers[0]
+
+            if closest:
+                name = closest.get("from_club_name")
+                if name:
+                    rec["club_name_at_valuation"] = name
+                    fid = closest.get("from_club_id")
+                    if fid:
+                        rec["club_id_at_valuation"] = fid
+                    fixed += 1
+                    modified_files.add(filepath)
+
+    return fixed, modified_files
 
 
 # ── API helpers ──────────────────────────────────────────────────────────────
@@ -255,12 +370,29 @@ def patch_files(
     file_records: List[FileRecord],
     files_to_patch: Dict[str, list],
     name_map: Dict[str, str],
+    force_write: Optional[Set[str]] = None,
 ) -> None:
     """Fill empty names from *name_map* and write modified files to disk.
 
     Uses the already-loaded *file_records* so files are NOT re-read.
+
+    Parameters
+    ----------
+    force_write : set[str] | None
+        File paths that must be written even if *name_map* didn't fill
+        anything (e.g. because a prior step already modified them
+        in-place).
     """
-    if not files_to_patch:
+    force_write = force_write or set()
+
+    # Merge force-write paths into files_to_patch so they are iterated
+    all_paths = dict(files_to_patch)
+    for fp in force_write:
+        if fp not in all_paths:
+            # We don't need key_pairs for these – just need them written
+            all_paths[fp] = []
+
+    if not all_paths:
         print("\nNo files to patch.")
         return
 
@@ -269,7 +401,7 @@ def patch_files(
 
     total_filled = 0
 
-    for filepath, key_pairs in sorted(files_to_patch.items()):
+    for filepath, key_pairs in sorted(all_paths.items()):
         records = records_by_path.get(filepath)
         if records is None:
             continue
@@ -285,7 +417,8 @@ def patch_files(
                         rec[name_key] = resolved
                         file_filled += 1
 
-        if file_filled:
+        needs_write = file_filled > 0 or filepath in force_write
+        if needs_write:
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(records, f, ensure_ascii=False, indent=2)
             print(f"  {Path(filepath).name}: filled {file_filled} names")
@@ -342,6 +475,19 @@ def main() -> None:
     resolved = sum(1 for mid in missing_ids if mid in name_map)
     print(f"\nTotal resolved: {resolved}/{len(missing_ids)} IDs")
 
+    # 5. Fix valuation club names from transfer history
+    #    (handles club_id "0" and names the API couldn't resolve)
+    print("\nFixing valuation club names from transfer history …")
+    transfer_index = build_transfer_index(file_records)
+    transfer_fixed, transfer_modified_files = (0, set())
+    if transfer_index:
+        transfer_fixed, transfer_modified_files = fix_valuations_from_transfers(
+            file_records, transfer_index,
+        )
+        print(f"  Fixed {transfer_fixed} valuation club names from transfers")
+    else:
+        print("  No transfer data available – skipping")
+
     if args.dry_run:
         print("\n[DRY RUN] – no files were modified.")
         for cid, cname in list(name_map.items())[:20]:
@@ -350,9 +496,10 @@ def main() -> None:
             print(f"  … and {len(name_map) - 20} more")
         return
 
-    # 5. Patch
+    # 6. Patch & write
     print(f"\nPatching {len(files_to_patch)} files …\n")
-    patch_files(file_records, files_to_patch, name_map)
+    patch_files(file_records, files_to_patch, name_map,
+                force_write=transfer_modified_files)
     print("\n✓ Done!")
 
 

@@ -23,7 +23,7 @@ sys.path.insert(0, str(ROOT_DIR))
 from valuation import Valuation
 from player import Player
 from transfer import Transfer
-from scraping.utils.helpers import DATA_DIR
+from scraping.utils.helpers import DATA_DIR, parse_date
 
 # Top 5 leagues (league_id values)
 TOP_LEAGUE_IDS: Set[str] = {"GB1", "IT1", "L1", "FR1", "ES1"}
@@ -173,21 +173,9 @@ class PlayerFeatures:
         }
 
 
-def _parse_date(date_str: str) -> Optional[datetime]:
-    """Parse date string DD/MM/YYYY or YYYY-MM-DD to datetime."""
-    if not date_str:
-        return None
-    for fmt in ("%d/%m/%Y", "%Y-%m-%d"):
-        try:
-            return datetime.strptime(date_str, fmt)
-        except ValueError:
-            continue
-    return None
-
-
 def _compute_age(birth_date_str: str, reference_date: datetime) -> Optional[int]:
     """Compute age in years from a DD/MM/YYYY birth date string."""
-    bd = _parse_date(birth_date_str)
+    bd = parse_date(birth_date_str)
     if bd is None:
         return None
     age = reference_date.year - bd.year
@@ -280,7 +268,7 @@ def _get_transfer_map_at_cutoff(
     """
     best: Dict[str, Tuple[datetime, Transfer]] = {}
     for t in all_transfers:
-        td = _parse_date(t.transfer_date)
+        td = parse_date(t.transfer_date)
         if td is None or td > cutoff_date:
             continue
         prev = best.get(t.player_id)
@@ -432,7 +420,7 @@ def extract_player_features(
     future_vals: List[Tuple[datetime, float]] = []
     
     for v in player_valuations:
-        val_date = _parse_date(v.valuation_date)
+        val_date = parse_date(v.valuation_date)
         if val_date is None or v.valuation_amount is None:
             continue
         

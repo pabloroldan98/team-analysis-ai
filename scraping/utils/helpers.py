@@ -317,6 +317,24 @@ def list_json_files(pattern: str = "*.json") -> List[str]:
 # PARSING UTILITIES
 # =============================================================================
 
+def parse_date(date_str: str):
+    """Parse a date string in DD/MM/YYYY or YYYY-MM-DD format.
+
+    Returns a ``datetime`` object or ``None`` if the string cannot be
+    parsed.
+    """
+    from datetime import datetime as _dt
+
+    if not date_str:
+        return None
+    for fmt in ("%d/%m/%Y", "%Y-%m-%d"):
+        try:
+            return _dt.strptime(date_str, fmt)
+        except ValueError:
+            continue
+    return None
+
+
 def parse_market_value(value_str: str) -> Optional[float]:
     """
     Parse market value string to float (in euros).

@@ -11,9 +11,11 @@ With --no-details, only gets the current market value from player profiles
 from __future__ import annotations
 
 import re
-from typing import List, Optional, Dict, Set
+from datetime import datetime
+from typing import List, Optional, Dict, Set, Tuple
 
 from scraping.base_scraper import BaseScraper
+from scraping.utils.helpers import parse_date
 from valuation import Valuation
 
 
@@ -455,6 +457,87 @@ class TransfermarktValuationsScraper(BaseScraper):
 
         return all_valuations
     
+    # ── Fix club names from transfer history ────────────────────────────
+
+    @staticmethod
+    def _build_transfer_index(
+        transfers,
+    ) -> Dict[str, List[Tuple[datetime, object]]]:
+        """Group transfers by ``player_id`` with parsed dates.
+
+        Returns ``{player_id: [(date, Transfer), …]}`` sorted by date
+        ascending.  Transfers whose date can't be parsed are skipped.
+        """
+        index: Dict[str, List[Tuple[datetime, object]]] = {}
+        for t in transfers:
+            td = parse_date(t.transfer_date)
+            if td is None:
+                continue
+            index.setdefault(t.player_id, []).append((td, t))
+
+        # Sort each player's list by date
+        for pid in index:
+            index[pid].sort(key=lambda x: x[0])
+
+        return index
+
+    def _fix_club_names_from_transfers(
+        self,
+        valuations: List[Valuation],
+        transfer_index: Dict[str, List[Tuple[datetime, object]]],
+    ) -> None:
+        """Fix empty ``club_name_at_valuation`` using transfer history.
+
+        For each valuation with no club name (or ``club_id == "0"``):
+
+        1. Look up the player's transfers.
+        2. Find the latest transfer with ``date <= valuation_date`` and use
+           its ``to_club_name`` / ``to_club_id``.
+        3. If no transfer exists before the valuation date, take the
+           closest transfer overall and use ``from_club_name`` /
+           ``from_club_id`` (i.e. the club the player came *from* in
+           their earliest known transfer).
+        """
+        fixed = 0
+
+        for v in valuations:
+            if v.club_name_at_valuation and v.club_id_at_valuation != "0":
+                continue
+
+            player_transfers = transfer_index.get(v.player_id)
+            if not player_transfers:
+                continue
+
+            val_date = parse_date(v.valuation_date)
+            if not val_date:
+                continue
+
+            # Latest transfer with date <= valuation_date
+            best_before = None
+            for t_date, t in player_transfers:
+                if t_date <= val_date:
+                    best_before = (t_date, t)
+                    # List is sorted, so last match = latest before
+
+            if best_before:
+                t = best_before[1]
+                if t.to_club_name:
+                    v.club_name_at_valuation = t.to_club_name
+                    v.club_id_at_valuation = t.to_club_id or v.club_id_at_valuation
+                    fixed += 1
+                    continue
+
+            # No transfer before → earliest transfer, use from_club_name
+            _first_date, closest = player_transfers[0]
+
+            if closest.from_club_name:
+                v.club_name_at_valuation = closest.from_club_name
+                v.club_id_at_valuation = closest.from_club_id or v.club_id_at_valuation
+                fixed += 1
+
+        if fixed:
+            self.log(f"  Fixed {fixed} club names from transfer history")
+
     def run(self, leagues: List[str] = None, details: bool = True) -> dict:
         """
         Run the scraper for specified leagues.
@@ -468,7 +551,24 @@ class TransfermarktValuationsScraper(BaseScraper):
         """
         if leagues is None:
             leagues = ["laliga", "premier", "bundesliga", "seriea", "ligue1"]
-        
+
+        # Pre-load all transfers once to fix empty club names later
+        transfer_index: Dict[str, List] = {}
+        if details:
+            try:
+                import sys
+                from pathlib import Path as _Path
+                _root = _Path(__file__).parent.parent
+                sys.path.insert(0, str(_root))
+                from simulator.data_loader import _load_all_transfers
+
+                self.log("\nPre-loading transfers for club-name fixing …")
+                all_transfers = _load_all_transfers()
+                transfer_index = self._build_transfer_index(all_transfers)
+                self.log(f"  Indexed transfers for {len(transfer_index)} players")
+            except Exception as exc:
+                self.log(f"  Could not pre-load transfers: {exc}")
+
         all_data = {}
         
         for league in leagues:
@@ -482,9 +582,15 @@ class TransfermarktValuationsScraper(BaseScraper):
                 for player_valuations in team_data.values():
                     all_valuations.extend(player_valuations)
             
-            # Fill club names from API (single batch call)
             if details:
+                # Fill club names from API (single batch call)
                 self._fill_club_names(all_valuations)
+
+                # Fix remaining empty club names from transfer history
+                if transfer_index:
+                    self._fix_club_names_from_transfers(
+                        all_valuations, transfer_index,
+                    )
             
             # Save per-league file
             valuations_dicts = [v.to_dict() for v in all_valuations]

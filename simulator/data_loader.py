@@ -25,7 +25,7 @@ from typing import Dict, List, Optional, Tuple
 ROOT_DIR = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT_DIR))
 
-from scraping.utils.helpers import read_dict_from_json, DATA_DIR
+from scraping.utils.helpers import read_dict_from_json, parse_date, DATA_DIR
 from player import Player
 from transfer import Transfer
 from valuation import Valuation
@@ -43,20 +43,6 @@ EXCLUDED_TEAM_NAMES = {
     # "without club",
     # "career break",
 }
-
-
-# ── Date helpers ─────────────────────────────────────────────────────────
-
-def _parse_date(date_str: str) -> Optional[datetime]:
-    """Parse DD/MM/YYYY or YYYY-MM-DD to datetime."""
-    if not date_str:
-        return None
-    for fmt in ("%d/%m/%Y", "%Y-%m-%d"):
-        try:
-            return datetime.strptime(date_str, fmt)
-        except ValueError:
-            continue
-    return None
 
 
 TODAY_SEASON = "today"
@@ -156,7 +142,7 @@ def get_transfer_at_season_start(
     best: Dict[str, Tuple[datetime, Transfer]] = {}
 
     for t in transfers:
-        td = _parse_date(t.transfer_date)
+        td = parse_date(t.transfer_date)
         if td is None or td > cutoff:
             continue
 
@@ -180,7 +166,7 @@ def get_valuation_at_season_start(
     best: Dict[str, Tuple[datetime, Valuation]] = {}
 
     for v in valuations:
-        vd = _parse_date(v.valuation_date)
+        vd = parse_date(v.valuation_date)
         if vd is None or vd > cutoff:
             continue
 
