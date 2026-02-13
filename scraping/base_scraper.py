@@ -138,21 +138,100 @@ class BaseScraper:
     
     BASE_URL = "https://www.transfermarkt.com"
     
-    # League URL mappings
-    LEAGUE_URLS = {
-        "laliga": "/laliga/startseite/wettbewerb/ES1",
-        "premier": "/premier-league/startseite/wettbewerb/GB1",
-        "seriea": "/serie-a/startseite/wettbewerb/IT1",
-        "bundesliga": "/bundesliga/startseite/wettbewerb/L1",
-        "ligue1": "/ligue-1/startseite/wettbewerb/FR1",
-        "segunda": "/laliga2/startseite/wettbewerb/ES2",
-        "championship": "/championship/startseite/wettbewerb/GB2",
-        "eredivisie": "/eredivisie/startseite/wettbewerb/NL1",
-        "liga_portugal": "/liga-nos/startseite/wettbewerb/PO1",
-        "champions": "/uefa-champions-league/startseite/pokalwettbewerb/CL",
-        "europa_league": "/europa-league/startseite/pokalwettbewerb/EL",
-        "conference": "/europa-conference-league/startseite/pokalwettbewerb/UCOL",
+    # ─── Single source of truth: metadata + URL for every league ───
+    # Each entry: name, country, tier, id (Transfermarkt), url (path)
+    LEAGUE_INFO = {
+        # ── Europe – Tier 1 ──────────────────────────────────────
+        "laliga":         {"name": "LaLiga",                 "country": "Spain",         "tier": 1, "id": "ES1",  "url": "/laliga/startseite/wettbewerb/ES1"},
+        "premier":        {"name": "Premier League",         "country": "England",       "tier": 1, "id": "GB1",  "url": "/premier-league/startseite/wettbewerb/GB1"},
+        "seriea":         {"name": "Serie A",                "country": "Italy",         "tier": 1, "id": "IT1",  "url": "/serie-a/startseite/wettbewerb/IT1"},
+        "bundesliga":     {"name": "Bundesliga",             "country": "Germany",       "tier": 1, "id": "L1",   "url": "/bundesliga/startseite/wettbewerb/L1"},
+        "ligue1":         {"name": "Ligue 1",                "country": "France",        "tier": 1, "id": "FR1",  "url": "/ligue-1/startseite/wettbewerb/FR1"},
+        "liga_portugal":  {"name": "Liga Portugal",          "country": "Portugal",      "tier": 1, "id": "PO1",  "url": "/liga-portugal/startseite/wettbewerb/PO1"},
+        "turkish":        {"name": "Süper Lig",              "country": "Turkey",        "tier": 1, "id": "TR1",  "url": "/super-lig/startseite/wettbewerb/TR1"},
+        "eredivisie":     {"name": "Eredivisie",             "country": "Netherlands",   "tier": 1, "id": "NL1",  "url": "/eredivisie/startseite/wettbewerb/NL1"},
+        "russian":        {"name": "Russian Premier League", "country": "Russia",        "tier": 1, "id": "RU1",  "url": "/premier-liga/startseite/wettbewerb/RU1"},
+        "belgian":        {"name": "Jupiler Pro League",     "country": "Belgium",       "tier": 1, "id": "BE1",  "url": "/jupiler-pro-league/startseite/wettbewerb/BE1"},
+        "greek":          {"name": "Super League Greece",    "country": "Greece",        "tier": 1, "id": "GR1",  "url": "/super-league-1/startseite/wettbewerb/GR1"},
+        "danish":         {"name": "Superliga",              "country": "Denmark",       "tier": 1, "id": "DK1",  "url": "/superliga/startseite/wettbewerb/DK1"},
+        "ukrainian":      {"name": "Ukrainian Premier League","country": "Ukraine",      "tier": 1, "id": "UKR1", "url": "/premier-liga/startseite/wettbewerb/UKR1"},
+        "czech":          {"name": "Chance Liga",            "country": "Czech Republic","tier": 1, "id": "TS1",  "url": "/chance-liga/startseite/wettbewerb/TS1"},
+        "polish":         {"name": "Ekstraklasa",            "country": "Poland",        "tier": 1, "id": "PL1",  "url": "/pko-bp-ekstraklasa/startseite/wettbewerb/PL1"},
+        "swiss":          {"name": "Swiss Super League",     "country": "Switzerland",   "tier": 1, "id": "C1",   "url": "/super-league/startseite/wettbewerb/C1"},
+        "scottish":       {"name": "Scottish Premiership",   "country": "Scotland",      "tier": 1, "id": "SC1",  "url": "/scottish-premiership/startseite/wettbewerb/SC1"},
+        "austrian":       {"name": "Austrian Bundesliga",    "country": "Austria",       "tier": 1, "id": "A1",   "url": "/bundesliga/startseite/wettbewerb/A1"},
+        "norwegian":      {"name": "Eliteserien",            "country": "Norway",        "tier": 1, "id": "NO1",  "url": "/eliteserien/startseite/wettbewerb/NO1"},
+        "serbian":        {"name": "Super liga Srbije",      "country": "Serbia",        "tier": 1, "id": "SER1", "url": "/super-liga-srbije/startseite/wettbewerb/SER1"},
+        "romanian":       {"name": "SuperLiga",              "country": "Romania",       "tier": 1, "id": "RO1",  "url": "/superliga/startseite/wettbewerb/RO1"},
+        "swedish":        {"name": "Allsvenskan",            "country": "Sweden",        "tier": 1, "id": "SE1",  "url": "/allsvenskan/startseite/wettbewerb/SE1"},
+        "croatian":       {"name": "SuperSport HNL",         "country": "Croatia",       "tier": 1, "id": "KR1",  "url": "/supersport-hnl/startseite/wettbewerb/KR1"},
+        "bulgarian":      {"name": "efbet Liga",             "country": "Bulgaria",      "tier": 1, "id": "BU1",  "url": "/efbet-liga/startseite/wettbewerb/BU1"},
+        "israeli":        {"name": "Ligat ha'Al",            "country": "Israel",        "tier": 1, "id": "ISR1", "url": "/ligat-haal/startseite/wettbewerb/ISR1"},
+        "cypriot":        {"name": "Cyprus League",          "country": "Cyprus",        "tier": 1, "id": "ZYP1", "url": "/cyprus-league/startseite/wettbewerb/ZYP1"},
+        "hungarian":      {"name": "NB I.",                  "country": "Hungary",       "tier": 1, "id": "UNG1", "url": "/nemzeti-bajnoksag/startseite/wettbewerb/UNG1"},
+        "azerbaijani":    {"name": "Premyer Liqa",           "country": "Azerbaijan",    "tier": 1, "id": "AZ1",  "url": "/premyer-liqa/startseite/wettbewerb/AZ1"},
+        "slovak":         {"name": "Niké Liga",              "country": "Slovakia",      "tier": 1, "id": "SLO1", "url": "/nike-liga/startseite/wettbewerb/SLO1"},
+        # ── Europe – Tier 2 ──────────────────────────────────────
+        "segunda":        {"name": "LaLiga 2",               "country": "Spain",         "tier": 2, "id": "ES2",  "url": "/laliga2/startseite/wettbewerb/ES2"},
+        "championship":   {"name": "Championship",           "country": "England",       "tier": 2, "id": "GB2",  "url": "/championship/startseite/wettbewerb/GB2"},
+        "serieb":         {"name": "Serie B",                "country": "Italy",         "tier": 2, "id": "IT2",  "url": "/serie-b/startseite/wettbewerb/IT2"},
+        "bundesliga2":    {"name": "2. Bundesliga",          "country": "Germany",       "tier": 2, "id": "L2",   "url": "/2-bundesliga/startseite/wettbewerb/L2"},
+        "ligue2":         {"name": "Ligue 2",                "country": "France",        "tier": 2, "id": "FR2",  "url": "/ligue-2/startseite/wettbewerb/FR2"},
+        "liga_portugal2": {"name": "Liga Portugal 2",        "country": "Portugal",      "tier": 2, "id": "PO2",  "url": "/liga-portugal-2/startseite/wettbewerb/PO2"},
+        "turkish2":       {"name": "1. Lig",                 "country": "Turkey",        "tier": 2, "id": "TR2",  "url": "/1-lig/startseite/wettbewerb/TR2"},
+        "dutch2":         {"name": "Keuken Kampioen Divisie","country": "Netherlands",   "tier": 2, "id": "NL2",  "url": "/keuken-kampioen-divisie/startseite/wettbewerb/NL2"},
+        "belgian2":       {"name": "Challenger Pro League",  "country": "Belgium",       "tier": 2, "id": "BE2",  "url": "/challenger-pro-league/startseite/wettbewerb/BE2"},
+        "russian2":       {"name": "1. Division",            "country": "Russia",        "tier": 2, "id": "RU2",  "url": "/1-division/startseite/wettbewerb/RU2"},
+        # ── Europe – Tier 3 ──────────────────────────────────────
+        "leagueone":      {"name": "League One",             "country": "England",       "tier": 3, "id": "GB3",  "url": "/league-one/startseite/wettbewerb/GB3"},
+        "bundesliga3":    {"name": "3. Liga",                "country": "Germany",       "tier": 3, "id": "L3",   "url": "/3-liga/startseite/wettbewerb/L3"},
+        "seriec1":        {"name": "Serie C Girone A",       "country": "Italy",         "tier": 3, "id": "IT3A", "url": "/serie-c-girone-a/startseite/wettbewerb/IT3A"},
+        "seriec2":        {"name": "Serie C Girone B",       "country": "Italy",         "tier": 3, "id": "IT3B", "url": "/serie-c-girone-b/startseite/wettbewerb/IT3B"},
+        "seriec3":        {"name": "Serie C Girone C",       "country": "Italy",         "tier": 3, "id": "IT3C", "url": "/serie-c-girone-c/startseite/wettbewerb/IT3C"},
+        "primeraref1":    {"name": "Primera Federación I",   "country": "Spain",         "tier": 3, "id": "E3G1", "url": "/primera-federacion-grupo-i/startseite/wettbewerb/E3G1"},
+        "primeraref2":    {"name": "Primera Federación II",  "country": "Spain",         "tier": 3, "id": "E3G2", "url": "/primera-federacion-grupo-ii/startseite/wettbewerb/E3G2"},
+        # ── Europe – Tier 4 ──────────────────────────────────────
+        "leaguetwo":      {"name": "League Two",             "country": "England",       "tier": 4, "id": "GB4",  "url": "/league-two/startseite/wettbewerb/GB4"},
+        # ── Americas – Tier 1 ────────────────────────────────────
+        "brazilian":      {"name": "Brasileirão",            "country": "Brazil",        "tier": 1, "id": "BRA1", "url": "/campeonato-brasileiro-serie-a/startseite/wettbewerb/BRA1"},
+        "mls":            {"name": "MLS",                    "country": "USA",           "tier": 1, "id": "MLS1", "url": "/major-league-soccer/startseite/wettbewerb/MLS1"},
+        "argentine":      {"name": "Liga Profesional",       "country": "Argentina",     "tier": 1, "id": "ARG1", "url": "/torneo-apertura/startseite/wettbewerb/ARG1"},
+        "mexican":        {"name": "Liga MX",                "country": "Mexico",        "tier": 1, "id": "MEX1", "url": "/liga-mx-clausura/startseite/wettbewerb/MEX1"},
+        "colombian":      {"name": "Liga DIMAYOR",           "country": "Colombia",      "tier": 1, "id": "COLP", "url": "/liga-dimayor-apertura/startseite/wettbewerb/COLP"},
+        "uruguayan":      {"name": "Liga AUF",               "country": "Uruguay",       "tier": 1, "id": "URU1", "url": "/liga-auf-apertura/startseite/wettbewerb/URU1"},
+        "chilean":        {"name": "Liga Primera",           "country": "Chile",         "tier": 1, "id": "CLPD", "url": "/liga-de-primera/startseite/wettbewerb/CLPD"},
+        "ecuadorian":     {"name": "LigaPro Serie A",        "country": "Ecuador",       "tier": 1, "id": "EC1N", "url": "/ligapro-serie-a/startseite/wettbewerb/EC1N"},
+        "peruvian":       {"name": "Liga 1",                 "country": "Peru",          "tier": 1, "id": "TDeA", "url": "/liga-1-apertura/startseite/wettbewerb/TDeA"},
+        "paraguayan":     {"name": "Primera División",       "country": "Paraguay",      "tier": 1, "id": "PR1A", "url": "/primera-division-apertura/startseite/wettbewerb/PR1A"},
+        # ── Americas – Tier 2 ────────────────────────────────────
+        "brazilian2":     {"name": "Série B",                "country": "Brazil",        "tier": 2, "id": "BRA2", "url": "/campeonato-brasileiro-serie-b/startseite/wettbewerb/BRA2"},
+        "argentine2":     {"name": "Primera Nacional",       "country": "Argentina",     "tier": 2, "id": "ARG2", "url": "/primera-nacional/startseite/wettbewerb/ARG2"},
+        # ── Asia – Tier 1 ────────────────────────────────────────
+        "saudi":          {"name": "Saudi Pro League",       "country": "Saudi Arabia",  "tier": 1, "id": "SA1",  "url": "/saudi-pro-league/startseite/wettbewerb/SA1"},
+        "qatari":         {"name": "Stars League",           "country": "Qatar",         "tier": 1, "id": "QSL",  "url": "/qatar-stars-league/startseite/wettbewerb/QSL"},
+        "emirati":        {"name": "UAE Pro League",         "country": "UAE",           "tier": 1, "id": "UAE1", "url": "/uae-pro-league/startseite/wettbewerb/UAE1"},
+        "japanese":       {"name": "J1 League",              "country": "Japan",         "tier": 1, "id": "JAP1", "url": "/j1-league/startseite/wettbewerb/JAP1"},
+        "chinese":        {"name": "Chinese Super League",   "country": "China",         "tier": 1, "id": "CSL",  "url": "/chinese-super-league/startseite/wettbewerb/CSL"},
+        "iranian":        {"name": "Persian Gulf Pro League","country": "Iran",          "tier": 1, "id": "IRN1", "url": "/persian-gulf-pro-league/startseite/wettbewerb/IRN1"},
+        "korean":         {"name": "K League 1",             "country": "South Korea",   "tier": 1, "id": "RSK1", "url": "/k-league-1/startseite/wettbewerb/RSK1"},
+        "australian":     {"name": "A-League Men",           "country": "Australia",     "tier": 1, "id": "AUS1", "url": "/a-league-men/startseite/wettbewerb/AUS1"},
+        # ── Asia – Tier 2 ────────────────────────────────────────
+        "japanese2":      {"name": "J2 League",              "country": "Japan",         "tier": 2, "id": "JAP2", "url": "/j2-league/startseite/wettbewerb/JAP2"},
+        # ── Africa – Tier 1 ──────────────────────────────────────
+        "egyptian":       {"name": "Egyptian Premier League","country": "Egypt",         "tier": 1, "id": "EGY1", "url": "/egyptian-premier-league/startseite/wettbewerb/EGY1"},
+        "south_african":  {"name": "Betway Premiership",     "country": "South Africa",  "tier": 1, "id": "SFA1", "url": "/betway-premiership/startseite/wettbewerb/SFA1"},
+        "moroccan":       {"name": "Botola Pro Inwi",        "country": "Morocco",       "tier": 1, "id": "MAR1", "url": "/botola-pro-inwi/startseite/wettbewerb/MAR1"},
+        # ── Youth ────────────────────────────────────────────────
+        "primavera1":         {"name": "Primavera 1",              "country": "Italy",    "tier": "youth", "id": "IJ1",  "url": "/primavera-1/startseite/wettbewerb/IJ1"},
+        "u19_bundesliga_a":   {"name": "U19 DFB-Nachwuchsliga A", "country": "Germany",  "tier": "youth", "id": "19LA", "url": "/u19-dfb-nachwuchsliga-hauptrunde-liga-a/startseite/wettbewerb/19LA"},
+        "u19_bundesliga_h":   {"name": "U19 DFB-Nachwuchsliga H", "country": "Germany",  "tier": "youth", "id": "19D8", "url": "/u19-dfb-nachwuchsliga-vorrunde-gruppe-h/startseite/wettbewerb/19D8"},
+        "liga_revelacao":     {"name": "Liga Revelação U23",       "country": "Portugal", "tier": "youth", "id": "PT23", "url": "/liga-revelacao-u23/startseite/wettbewerb/PT23"},
+        # ── European Cups ────────────────────────────────────────
+        "champions":      {"name": "UEFA Champions League",       "country": "Europe", "tier": "cup", "id": "CL",   "url": "/uefa-champions-league/startseite/pokalwettbewerb/CL"},
+        "europa_league":  {"name": "UEFA Europa League",          "country": "Europe", "tier": "cup", "id": "EL",   "url": "/europa-league/startseite/pokalwettbewerb/EL"},
+        "conference":     {"name": "UEFA Conference League",      "country": "Europe", "tier": "cup", "id": "UCOL", "url": "/europa-conference-league/startseite/pokalwettbewerb/UCOL"},
     }
+    
     
     def __init__(
         self,
@@ -263,7 +342,10 @@ class BaseScraper:
     def get_league_url(self, league: str) -> str:
         """Get the URL path for a league."""
         league_lower = league.lower().strip().replace(" ", "_")
-        return self.LEAGUE_URLS.get(league_lower, f"/{league_lower}/startseite/wettbewerb")
+        entry = self.LEAGUE_INFO.get(league_lower)
+        if entry:
+            return entry["url"]
+        return f"/{league_lower}/startseite/wettbewerb"
     
     def search_team(self, team_name: str) -> Optional[Dict[str, str]]:
         """

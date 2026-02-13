@@ -15,33 +15,7 @@ from team import Team
 class TransfermarktTeamsScraper(BaseScraper):
     """Scraper for team information from Transfermarkt."""
     
-    # League info mapping (same as in transfermarkt_leagues.py)
-    LEAGUE_INFO = {
-        "laliga": {"name": "LaLiga", "country": "Spain", "tier": 1, "id": "ES1"},
-        "segunda": {"name": "LaLiga 2", "country": "Spain", "tier": 2, "id": "ES2"},
-        "premier": {"name": "Premier League", "country": "England", "tier": 1, "id": "GB1"},
-        "championship": {"name": "Championship", "country": "England", "tier": 2, "id": "GB2"},
-        "bundesliga": {"name": "Bundesliga", "country": "Germany", "tier": 1, "id": "L1"},
-        "bundesliga2": {"name": "2. Bundesliga", "country": "Germany", "tier": 2, "id": "L2"},
-        "seriea": {"name": "Serie A", "country": "Italy", "tier": 1, "id": "IT1"},
-        "serieb": {"name": "Serie B", "country": "Italy", "tier": 2, "id": "IT2"},
-        "ligue1": {"name": "Ligue 1", "country": "France", "tier": 1, "id": "FR1"},
-        "ligue2": {"name": "Ligue 2", "country": "France", "tier": 2, "id": "FR2"},
-        "eredivisie": {"name": "Eredivisie", "country": "Netherlands", "tier": 1, "id": "NL1"},
-        "liga_portugal": {"name": "Liga Portugal", "country": "Portugal", "tier": 1, "id": "PO1"},
-        "scottish": {"name": "Scottish Premiership", "country": "Scotland", "tier": 1, "id": "SC1"},
-        "belgian": {"name": "Jupiler Pro League", "country": "Belgium", "tier": 1, "id": "BE1"},
-        "turkish": {"name": "Süper Lig", "country": "Turkey", "tier": 1, "id": "TR1"},
-        "russian": {"name": "Russian Premier League", "country": "Russia", "tier": 1, "id": "RU1"},
-        "ukrainian": {"name": "Ukrainian Premier League", "country": "Ukraine", "tier": 1, "id": "UKR1"},
-        "greek": {"name": "Super League Greece", "country": "Greece", "tier": 1, "id": "GR1"},
-        "austrian": {"name": "Austrian Bundesliga", "country": "Austria", "tier": 1, "id": "A1"},
-        "swiss": {"name": "Swiss Super League", "country": "Switzerland", "tier": 1, "id": "C1"},
-        "mls": {"name": "MLS", "country": "USA", "tier": 1, "id": "MLS1"},
-        "brazilian": {"name": "Brasileirão", "country": "Brazil", "tier": 1, "id": "BRA1"},
-        "argentine": {"name": "Liga Profesional", "country": "Argentina", "tier": 1, "id": "AR1N"},
-        "mexican": {"name": "Liga MX", "country": "Mexico", "tier": 1, "id": "MEX1"},
-    }
+    # LEAGUE_INFO is inherited from BaseScraper
     
     def scrape_team(
         self,

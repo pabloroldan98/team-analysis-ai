@@ -125,6 +125,7 @@ def pick_headers() -> dict:
     """Pick a random header from the pool."""
     return random.choice(HEADER_POOL).copy()
 
+from .base_scraper import BaseScraper
 from .models import Player, Team, Transfer, Valuation
 from .utils.helpers import (
     parse_market_value,
@@ -151,62 +152,8 @@ class TransfermarktScraper:
     
     BASE_URL = "https://www.transfermarkt.com"
     
-    # League URL mappings
-    LEAGUE_URLS = {
-        # Spain
-        "laliga": "/laliga/startseite/wettbewerb/ES1",
-        "la liga": "/laliga/startseite/wettbewerb/ES1",
-        "segunda": "/laliga2/startseite/wettbewerb/ES2",
-        "segunda division": "/laliga2/startseite/wettbewerb/ES2",
-        
-        # England
-        "premier": "/premier-league/startseite/wettbewerb/GB1",
-        "premier league": "/premier-league/startseite/wettbewerb/GB1",
-        "championship": "/championship/startseite/wettbewerb/GB2",
-        
-        # Italy
-        "serie a": "/serie-a/startseite/wettbewerb/IT1",
-        "seriea": "/serie-a/startseite/wettbewerb/IT1",
-        "serie b": "/serie-b/startseite/wettbewerb/IT2",
-        "serieb": "/serie-b/startseite/wettbewerb/IT2",
-        
-        # Germany
-        "bundesliga": "/bundesliga/startseite/wettbewerb/L1",
-        "2.bundesliga": "/2-bundesliga/startseite/wettbewerb/L2"
-        "2bundesliga": "/2-bundesliga/startseite/wettbewerb/L2"
-        "bundesliga2": "/2-bundesliga/startseite/wettbewerb/L2",
-        "bundesliga.2": "/2-bundesliga/startseite/wettbewerb/L2",
-        
-        # France
-        "ligue 1": "/ligue-1/startseite/wettbewerb/FR1",
-        "ligue1": "/ligue-1/startseite/wettbewerb/FR1",
-        "ligue 2": "/ligue-2/startseite/wettbewerb/FR2",
-        "ligue2": "/ligue-2/startseite/wettbewerb/FR2",
-        
-        # Portugal
-        "liga portugal": "/liga-nos/startseite/wettbewerb/PO1",
-        "ligaportugal": "/liga-nos/startseite/wettbewerb/PO1",
-        "liga portuguesa": "/liga-nos/startseite/wettbewerb/PO1",
-        "ligaportuguesa": "/liga-nos/startseite/wettbewerb/PO1",
-        "liga nos": "/liga-nos/startseite/wettbewerb/PO1",
-        "liganos": "/liga-nos/startseite/wettbewerb/PO1",
-        
-        # Netherlands
-        "eredivisie": "/eredivisie/startseite/wettbewerb/NL1",
-        
-        # Champions League
-        "champions": "/uefa-champions-league/startseite/pokalwettbewerb/CL",
-        "champions league": "/uefa-champions-league/startseite/pokalwettbewerb/CL",
-        "ucl": "/uefa-champions-league/startseite/pokalwettbewerb/CL",
-        
-        # Europa League
-        "europa league": "/europa-league/startseite/pokalwettbewerb/EL",
-        "europaleague": "/europa-league/startseite/pokalwettbewerb/EL",
-        
-        # Conference League
-        "conference": "/europa-conference-league/startseite/pokalwettbewerb/UCOL",
-        "conference league": "/europa-conference-league/startseite/pokalwettbewerb/UCOL",
-    }
+    # Reuse LEAGUE_INFO from BaseScraper (single source of truth)
+    LEAGUE_INFO = BaseScraper.LEAGUE_INFO
     
     def __init__(
         self,
@@ -289,8 +236,11 @@ class TransfermarktScraper:
     
     def _get_league_url(self, league: str) -> str:
         """Get the URL path for a league."""
-        league_lower = league.lower().strip()
-        return self.LEAGUE_URLS.get(league_lower, f"/{league_lower}/startseite/wettbewerb")
+        league_lower = league.lower().strip().replace(" ", "_")
+        entry = self.LEAGUE_INFO.get(league_lower)
+        if entry:
+            return entry["url"]
+        return f"/{league_lower}/startseite/wettbewerb"
     
     def _extract_team_id(self, url: str) -> Optional[str]:
         """Extract team ID from URL."""
