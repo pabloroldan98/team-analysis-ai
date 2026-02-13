@@ -67,6 +67,12 @@ def main():
         default=True,
         help="Enable verbose output"
     )
+    parser.add_argument(
+        "--use-downloaded-data",
+        action="store_true",
+        default=False,
+        help="Skip leagues whose JSON already exists and reuse downloaded data"
+    )
     
     args = parser.parse_args()
     
@@ -74,12 +80,15 @@ def main():
     print(f"Leagues: {', '.join(args.leagues)}")
     print(f"Season: {args.season or 'current'}")
     print(f"Include valuations: {args.include_valuations}")
+    if args.use_downloaded_data:
+        print(f"Reuse: downloaded data when available")
     print()
     
     scraper_kwargs = {
         "season": args.season,
         "delay": args.delay,
-        "verbose": args.verbose
+        "verbose": args.verbose,
+        "use_downloaded_data": args.use_downloaded_data,
     }
     
     # 1. Teams

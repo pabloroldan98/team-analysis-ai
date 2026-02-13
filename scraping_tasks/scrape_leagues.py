@@ -55,18 +55,27 @@ def main():
         default=True,
         help="Enable verbose output"
     )
+    parser.add_argument(
+        "--use-downloaded-data",
+        action="store_true",
+        default=False,
+        help="Skip leagues whose JSON already exists and reuse downloaded data"
+    )
     
     args = parser.parse_args()
     
     print(f"=== Transfermarkt Leagues Scraper ===")
     print(f"Leagues: {', '.join(args.leagues)}")
     print(f"Season: {args.season or 'current'}")
+    if args.use_downloaded_data:
+        print(f"Mode: reuse downloaded data when available")
     print()
     
     scraper = TransfermarktLeaguesScraper(
         season=args.season,
         delay=args.delay,
-        verbose=args.verbose
+        verbose=args.verbose,
+        use_downloaded_data=args.use_downloaded_data,
     )
     
     results = scraper.run(leagues=args.leagues)

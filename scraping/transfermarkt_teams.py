@@ -182,12 +182,17 @@ class TransfermarktTeamsScraper(BaseScraper):
             profile_url=team_url,
         )
     
-    def scrape_league_teams(self, league: str) -> List[Team]:
+    def scrape_league_teams(
+        self,
+        league: str,
+        skip_team_ids: set = None,
+    ) -> List[Team]:
         """
         Scrape all teams from a league.
         
         Args:
             league: League identifier (e.g., "laliga", "premier")
+            skip_team_ids: Team IDs to skip (already scraped).
         
         Returns:
             List of Team objects
@@ -205,8 +210,13 @@ class TransfermarktTeamsScraper(BaseScraper):
         country = league_info.get("country", "")
         
         teams = []
+        _skip = skip_team_ids or set()
         
         for i, info in enumerate(team_infos):
+            if info["team_id"] in _skip:
+                self.log(f"  [{i+1}/{len(team_infos)}] {info['team_name']} (already scraped, skipping)")
+                continue
+
             self.log(f"  [{i+1}/{len(team_infos)}] {info['team_name']}")
             
             team = self.scrape_team(
@@ -238,20 +248,35 @@ class TransfermarktTeamsScraper(BaseScraper):
             leagues = ["laliga", "premier", "bundesliga", "seriea", "ligue1"]
         
         all_teams = {}
+        loaded_data: list = []
+
+        # Load existing data for incremental scraping
+        skip_team_ids: set = set()
+        if self.use_downloaded_data:
+            existing_all = self.load_json(f"teams_all_{self.season}")
+            if existing_all:
+                skip_team_ids = {t["team_id"] for t in existing_all if "team_id" in t}
+                loaded_data = existing_all
+                self.log(f"\nIncremental mode: {len(skip_team_ids)} teams already scraped")
         
         for league in leagues:
             self.log(f"\n=== Scraping teams from {league.upper()} ===")
-            teams = self.scrape_league_teams(league)
+            teams = self.scrape_league_teams(league, skip_team_ids=skip_team_ids)
             all_teams[league] = teams
             
             # Save per-league file
             teams_data = [t.to_dict() for t in teams]
             self.save_json(teams_data, f"teams_{league}_{self.season}")
+
+            # Update skip set so subsequent leagues benefit
+            for t in teams:
+                skip_team_ids.add(t.team_id)
         
-        # Save combined _all_ file
+        # Save combined _all_ file (new + existing)
         all_teams_list = []
         for teams in all_teams.values():
             all_teams_list.extend([t.to_dict() for t in teams])
+        all_teams_list.extend(loaded_data)
         self.save_json(all_teams_list, f"teams_all_{self.season}")
         
         return all_teams

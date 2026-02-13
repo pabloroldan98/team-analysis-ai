@@ -362,7 +362,12 @@ class TransfermarktPlayersScraper(BaseScraper):
         
         return player
     
-    def scrape_league_players(self, league: str, include_details: bool = False) -> Dict[str, List[Player]]:
+    def scrape_league_players(
+        self,
+        league: str,
+        include_details: bool = False,
+        skip_player_ids: set = None,
+    ) -> Dict[str, List[Player]]:
         """
         Scrape all players from a league.
 
@@ -380,6 +385,7 @@ class TransfermarktPlayersScraper(BaseScraper):
         Args:
             league: League identifier (e.g., "laliga", "premier")
             include_details: Whether to fetch detailed player info
+            skip_player_ids: Player IDs to skip (already scraped).
 
         Returns:
             Dict mapping team_id -> list of players
@@ -391,7 +397,7 @@ class TransfermarktPlayersScraper(BaseScraper):
             return {}
 
         all_players: Dict[str, List[Player]] = {}
-        global_seen: set = set()  # player_id dedup across teams
+        global_seen: set = set(skip_player_ids) if skip_player_ids else set()
 
         # ── Phase 1: squad players ───────────────────────────────────────
         self.log(f"\n--- Phase 1: Squad players ({league.upper()}) ---")
@@ -407,6 +413,9 @@ class TransfermarktPlayersScraper(BaseScraper):
 
             if include_details:
                 for j, player in enumerate(players):
+                    if player.player_id in global_seen:
+                        self.log(f"    [{j+1}/{len(players)}] Details: {player.name} (already scraped, skipping)")
+                        continue
                     self.log(f"    [{j+1}/{len(players)}] Details: {player.name}")
                     self.scrape_player_details(player.player_id, player)
 
@@ -467,10 +476,22 @@ class TransfermarktPlayersScraper(BaseScraper):
             leagues = ["laliga", "premier", "bundesliga", "seriea", "ligue1"]
         
         all_data = {}
+        loaded_data: list = []
+
+        # Load existing data for incremental scraping
+        skip_player_ids: set = set()
+        if self.use_downloaded_data:
+            existing_all = self.load_json(f"players_all_{self.season}")
+            if existing_all:
+                skip_player_ids = {p["player_id"] for p in existing_all if "player_id" in p}
+                loaded_data = existing_all
+                self.log(f"\nIncremental mode: {len(skip_player_ids)} players already scraped")
         
         for league in leagues:
             self.log(f"\n=== Scraping players from {league.upper()} ===")
-            players_by_team = self.scrape_league_players(league, include_details)
+            players_by_team = self.scrape_league_players(
+                league, include_details, skip_player_ids=skip_player_ids,
+            )
             all_data[league] = players_by_team
             
             # Flatten for saving
@@ -481,12 +502,18 @@ class TransfermarktPlayersScraper(BaseScraper):
             
             # Save per-league file
             self.save_json(all_players, f"players_{league}_{self.season}")
+
+            # Update skip set so subsequent leagues benefit
+            for p_dict in all_players:
+                if "player_id" in p_dict:
+                    skip_player_ids.add(p_dict["player_id"])
         
-        # Save combined _all_ file
+        # Save combined _all_ file (new + existing)
         combined = []
         for league_data in all_data.values():
             for players in league_data.values():
                 combined.extend([p.to_dict() for p in players])
+        combined.extend(loaded_data)
         self.save_json(combined, f"players_all_{self.season}")
         
         return all_data

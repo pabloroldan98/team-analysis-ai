@@ -240,6 +240,7 @@ class BaseScraper:
         max_retries: int = 5,
         retry_pause: float = 60.0,
         verbose: bool = True,
+        use_downloaded_data: bool = False,
     ):
         """
         Initialize the scraper.
@@ -250,6 +251,8 @@ class BaseScraper:
             max_retries: Maximum retry attempts for failed requests.
             retry_pause: Pause between retries in seconds.
             verbose: Print progress information.
+            use_downloaded_data: If True, skip leagues whose per-league JSON
+                already exists and reuse the downloaded data instead.
         """
         if season:
             self.season = season
@@ -265,6 +268,7 @@ class BaseScraper:
         self.max_retries = max_retries
         self.retry_pause = retry_pause
         self.verbose = verbose
+        self.use_downloaded_data = use_downloaded_data
         
         # Ensure data directory exists
         DATA_DIR.mkdir(parents=True, exist_ok=True)

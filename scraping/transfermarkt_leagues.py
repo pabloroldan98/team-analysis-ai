@@ -226,8 +226,24 @@ class TransfermarktLeaguesScraper(BaseScraper):
             leagues = ["laliga", "premier", "bundesliga", "seriea", "ligue1"]
         
         all_leagues = {}
+        loaded_data: list = []  # dicts loaded from existing files
+
+        # Load existing data for incremental scraping
+        skip_league_ids: set = set()
+        if self.use_downloaded_data:
+            existing_all = self.load_json(f"leagues_all_{self.season}")
+            if existing_all:
+                skip_league_ids = {lg["league_id"] for lg in existing_all if "league_id" in lg}
+                loaded_data = existing_all
+                self.log(f"\nIncremental mode: {len(skip_league_ids)} leagues already scraped")
         
         for league_key in leagues:
+            # Skip if already present in existing data
+            league_id = self.LEAGUE_INFO.get(league_key, {}).get("id", "")
+            if league_id and league_id in skip_league_ids:
+                self.log(f"\n=== {league_key.upper()}: already scraped, skipping ===")
+                continue
+            
             self.log(f"\n=== Scraping {league_key.upper()} ===")
             league = self.scrape_league(league_key)
             
@@ -242,8 +258,9 @@ class TransfermarktLeaguesScraper(BaseScraper):
                     data_type="leagues"
                 )
         
-        # Save combined _all_ file
+        # Save combined _all_ file (new + existing)
         all_leagues_data = [v.to_dict() for v in all_leagues.values()]
+        all_leagues_data.extend(loaded_data)
         self.save_json(
             all_leagues_data,
             f"leagues_all_{self.season}",

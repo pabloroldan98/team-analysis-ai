@@ -403,7 +403,12 @@ class TransfermarktTransfersScraper(BaseScraper):
 
         return all_transfers
 
-    def scrape_league_transfers(self, league: str, details: bool = True) -> Dict[str, List[Transfer]]:
+    def scrape_league_transfers(
+        self,
+        league: str,
+        details: bool = True,
+        skip_player_ids: Set[str] = None,
+    ) -> Dict[str, List[Transfer]]:
         """
         Scrape transfers for all players in all teams of a league.
 
@@ -421,6 +426,11 @@ class TransfermarktTransfersScraper(BaseScraper):
         Players are globally deduplicated so no player is scraped twice even
         if they appear in multiple squads or transfer pages.
 
+        Args:
+            league: League identifier (e.g., "laliga", "premier")
+            details: If True, fetch full transfer history via API.
+            skip_player_ids: Player IDs to skip (already scraped).
+
         With details=False:
           Falls back to scraping only the season transfer pages per team
           (no market_value_at_transfer, only that season's movements).
@@ -435,7 +445,7 @@ class TransfermarktTransfersScraper(BaseScraper):
         players_by_team = players_scraper.scrape_league_players(league)
 
         all_transfers: Dict[str, List[Transfer]] = {}
-        global_seen: Set[str] = set()  # cross-team dedup by player_id
+        global_seen: Set[str] = set(skip_player_ids) if skip_player_ids else set()
 
         # ── Phase 1: all squad players ───────────────────────────────────
         self.log(f"\n--- Phase 1: Squad players ({league.upper()}) ---")
@@ -733,10 +743,22 @@ class TransfermarktTransfersScraper(BaseScraper):
             leagues = ["laliga", "premier", "bundesliga", "seriea", "ligue1"]
 
         all_data: Dict[str, Dict[str, List[Transfer]]] = {}
+        loaded_data: list = []
+
+        # Load existing data for incremental scraping
+        skip_player_ids: Set[str] = set()
+        if self.use_downloaded_data:
+            existing_all = self.load_json(f"transfers_all_{self.season}")
+            if existing_all:
+                skip_player_ids = {t["player_id"] for t in existing_all if "player_id" in t}
+                loaded_data = existing_all
+                self.log(f"\nIncremental mode: {len(skip_player_ids)} players already scraped")
 
         for league in leagues:
             self.log(f"\n=== Scraping transfers from {league.upper()} ===")
-            transfers_by_team = self.scrape_league_transfers(league, details=details)
+            transfers_by_team = self.scrape_league_transfers(
+                league, details=details, skip_player_ids=skip_player_ids,
+            )
             all_data[league] = transfers_by_team
 
             # Collect all transfers for this league
@@ -752,11 +774,16 @@ class TransfermarktTransfersScraper(BaseScraper):
             transfers_dicts = [t.to_dict() for t in all_transfers]
             self.save_json(transfers_dicts, f"transfers_{league}_{self.season}")
 
-        # Save combined _all_ file
+            # Update skip set so subsequent leagues benefit
+            for t in all_transfers:
+                skip_player_ids.add(t.player_id)
+
+        # Save combined _all_ file (new + existing)
         combined: List[dict] = []
         for league_data in all_data.values():
             for transfers in league_data.values():
                 combined.extend([t.to_dict() for t in transfers])
+        combined.extend(loaded_data)
         self.save_json(combined, f"transfers_all_{self.season}")
 
         return all_data

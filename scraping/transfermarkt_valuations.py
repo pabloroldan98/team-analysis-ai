@@ -372,7 +372,12 @@ class TransfermarktValuationsScraper(BaseScraper):
         
         return all_valuations
     
-    def scrape_league_valuations(self, league: str, details: bool = True) -> Dict[str, Dict[str, List[Valuation]]]:
+    def scrape_league_valuations(
+        self,
+        league: str,
+        details: bool = True,
+        skip_player_ids: set = None,
+    ) -> Dict[str, Dict[str, List[Valuation]]]:
         """
         Scrape valuations for all players in a league.
 
@@ -391,6 +396,7 @@ class TransfermarktValuationsScraper(BaseScraper):
             league: League identifier
             details: If True, get full valuation history per player (slower).
                      If False, only current market values (faster).
+            skip_player_ids: Player IDs to skip (already scraped).
 
         Returns:
             Dict mapping team_id -> player_id -> list of valuations
@@ -400,7 +406,7 @@ class TransfermarktValuationsScraper(BaseScraper):
         players_by_team = players_scraper.scrape_league_players(league)
 
         all_valuations: Dict[str, Dict[str, List[Valuation]]] = {}
-        global_seen: set = set()  # player_id dedup across teams
+        global_seen: set = set(skip_player_ids) if skip_player_ids else set()
 
         # ── Phase 1: squad players ───────────────────────────────────────
         self.log(f"\n--- Phase 1: Squad players ({league.upper()}) ---")
@@ -409,7 +415,14 @@ class TransfermarktValuationsScraper(BaseScraper):
             team_name = players[0].team if players else team_id
             self.log(f"\nTeam: {team_name}")
 
-            player_info = [(p.player_id, p.name, p.market_value, p.team) for p in players]
+            # Filter out players already scraped
+            player_info = [
+                (p.player_id, p.name, p.market_value, p.team)
+                for p in players if p.player_id not in global_seen
+            ]
+            skipped = len(players) - len(player_info)
+            if skipped:
+                self.log(f"  Skipping {skipped} already-scraped player(s)")
 
             team_valuations = self.scrape_team_valuations(
                 team_id=team_id,
@@ -628,10 +641,22 @@ class TransfermarktValuationsScraper(BaseScraper):
                 self.log(f"  Could not pre-load transfers: {exc}")
 
         all_data = {}
+        loaded_data: list = []
+
+        # Load existing data for incremental scraping
+        skip_player_ids: set = set()
+        if self.use_downloaded_data:
+            existing_all = self.load_json(f"valuations_all_{self.season}")
+            if existing_all:
+                skip_player_ids = {v["player_id"] for v in existing_all if "player_id" in v}
+                loaded_data = existing_all
+                self.log(f"\nIncremental mode: {len(skip_player_ids)} players already scraped")
         
         for league in leagues:
             self.log(f"\n=== Scraping valuations from {league.upper()} ===")
-            valuations_data = self.scrape_league_valuations(league, details=details)
+            valuations_data = self.scrape_league_valuations(
+                league, details=details, skip_player_ids=skip_player_ids,
+            )
             all_data[league] = valuations_data
             
             # Collect all valuations for this league
@@ -656,13 +681,18 @@ class TransfermarktValuationsScraper(BaseScraper):
             # Save per-league file
             valuations_dicts = [v.to_dict() for v in all_valuations]
             self.save_json(valuations_dicts, f"valuations_{league}_{self.season}")
+
+            # Update skip set so subsequent leagues benefit
+            for v in all_valuations:
+                skip_player_ids.add(v.player_id)
         
-        # Save combined _all_ file
+        # Save combined _all_ file (new + existing)
         combined = []
         for league_data in all_data.values():
             for team_data in league_data.values():
                 for player_valuations in team_data.values():
                     combined.extend([v.to_dict() for v in player_valuations])
+        combined.extend(loaded_data)
         self.save_json(combined, f"valuations_all_{self.season}")
         
         return all_data
