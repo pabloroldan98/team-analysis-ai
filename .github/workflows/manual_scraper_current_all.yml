@@ -1,5 +1,5 @@
 # .github/workflows/manual_scraper_current_all.yml
-name: Manual Scraper - All Leagues (Current Season)
+name: Manual Scraper - Current (all data of all leagues)
 
 on:
   workflow_dispatch:
