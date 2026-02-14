@@ -15,8 +15,93 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        league: [laliga, premier, bundesliga, seriea, ligue1]
-        season: ['2025-2026', '2024-2025', '2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020', '2018-2019', '2017-2018', '2016-2017']
+        league:
+          # Europe – Tier 1
+          - laliga
+          - premier
+          - seriea
+          - bundesliga
+          - ligue1
+          - liga_portugal
+          - turkish
+          - eredivisie
+          - russian
+          - belgian
+          - greek
+          - danish
+          - ukrainian
+          - czech
+          - polish
+          - swiss
+          - scottish
+          - austrian
+          - norwegian
+          - serbian
+          - romanian
+          - swedish
+          - croatian
+          - bulgarian
+          - israeli
+          - cypriot
+          - hungarian
+          - azerbaijani
+          - slovak
+          # Europe – Tier 2
+          - segunda
+          - championship
+          - serieb
+          - bundesliga2
+          - ligue2
+          - liga_portugal2
+          - turkish2
+          - dutch2
+          - belgian2
+          - russian2
+          # Europe – Tier 3
+          - leagueone
+          - bundesliga3
+          - seriec1
+          - seriec2
+          - seriec3
+          - primeraref1
+          - primeraref2
+          # Europe – Tier 4
+          - leaguetwo
+          # Americas – Tier 1
+          - brazilian
+          - mls
+          - argentine
+          - mexican
+          - colombian
+          - uruguayan
+          - chilean
+          - ecuadorian
+          - peruvian
+          - paraguayan
+          # Americas – Tier 2
+          - brazilian2
+          - argentine2
+          # Asia – Tier 1
+          - saudi
+          - qatari
+          - emirati
+          - japanese
+          - chinese
+          - iranian
+          - korean
+          - australian
+          # Asia – Tier 2
+          - japanese2
+          # Africa – Tier 1
+          - egyptian
+          - south_african
+          - moroccan
+          # Youth
+          - primavera1
+          - u19_bundesliga_a
+          - u19_bundesliga_h
+          - liga_revelacao
+        season: ['2025-2026']
     
     steps:
       - name: Checkout repository
