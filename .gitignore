@@ -205,7 +205,3 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
-
-# Large combined JSON files (>100MB GitHub limit) - use _part1, _part2, etc. instead
-data/json/valuations_all_2025-2026.json
-data/json/transfers_all_2025-2026.json
