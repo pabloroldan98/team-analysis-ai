@@ -35,12 +35,12 @@ TOP_NATIONALITIES: List[str] = [
     "Portugal", "Netherlands", "Belgium", "Croatia", "Serbia", "Poland",
     "Denmark", "Switzerland", "Austria", "Senegal", "Morocco", "Nigeria",
     "Colombia", "Japan", "United States", "Cameroon", "Ivory Coast", "Ghana",
-    "Uruguay", "Scotland", "Wales", "Turkey", "Norway", "Sweden", # "Greece",
-    # "Romania", "Czech Republic", "Slovakia", "Hungary", "Slovenia", "Iran",
-    # "Bosnia and Herzegovina", "North Macedonia", "Albania", "Kosovo",
-    # "Egypt", "South Africa", "Qatar", "Saudi Arabia", "United Arab Emirates",
-    # "China", "Australia", "South Korea", "Ecuador", "Peru", "Paraguay",
-    # "Chile", "Mexico", "Canada", "Russia", "Ukraine",
+    "Uruguay", "Scotland", "Wales", "Turkey", "Norway", "Sweden", "Greece",
+    "Romania", "Czech Republic", "Slovakia", "Hungary", "Slovenia", "Iran",
+    "Bosnia and Herzegovina", "North Macedonia", "Albania", "Kosovo",
+    "Egypt", "South Africa", "Qatar", "Saudi Arabia", "United Arab Emirates",
+    "China", "Australia", "South Korea", "Ecuador", "Peru", "Paraguay",
+    "Chile", "Mexico", "Canada", "Russia", "Ukraine",
 ]
 
 # Top clubs for binning (rest will be "Other")
