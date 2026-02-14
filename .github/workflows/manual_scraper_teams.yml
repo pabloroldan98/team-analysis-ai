@@ -15,6 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        league:
           # Europe – Tier 1
           - laliga
           - premier
