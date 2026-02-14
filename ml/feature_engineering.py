@@ -23,7 +23,7 @@ sys.path.insert(0, str(ROOT_DIR))
 from valuation import Valuation
 from player import Player
 from transfer import Transfer
-from scraping.utils.helpers import DATA_DIR, parse_date
+from scraping.utils.helpers import DATA_DIR, list_json_bases, load_json, parse_date
 
 # Top 5 leagues (league_id values)
 TOP_LEAGUE_IDS: Set[str] = {"GB1", "IT1", "L1", "FR1", "ES1"}
@@ -35,7 +35,12 @@ TOP_NATIONALITIES: List[str] = [
     "Portugal", "Netherlands", "Belgium", "Croatia", "Serbia", "Poland",
     "Denmark", "Switzerland", "Austria", "Senegal", "Morocco", "Nigeria",
     "Colombia", "Japan", "United States", "Cameroon", "Ivory Coast", "Ghana",
-    "Uruguay", "Scotland", "Wales", "Turkey", "Norway", "Sweden",
+    "Uruguay", "Scotland", "Wales", "Turkey", "Norway", "Sweden", # "Greece",
+    # "Romania", "Czech Republic", "Slovakia", "Hungary", "Slovenia", "Iran",
+    # "Bosnia and Herzegovina", "North Macedonia", "Albania", "Kosovo",
+    # "Egypt", "South Africa", "Qatar", "Saudi Arabia", "United Arab Emirates",
+    # "China", "Australia", "South Korea", "Ecuador", "Peru", "Paraguay",
+    # "Chile", "Mexico", "Canada", "Russia", "Ukraine",
 ]
 
 # Top clubs for binning (rest will be "Other")
@@ -59,7 +64,7 @@ class PlayerFeatures:
     
     # Current state
     current_value: float
-    age: int
+    age: float
     position: str  # GK, DEF, MID, ATT
     player_nationality: str  # Player's nationality
     player_nationality_bin: str  # Binned nationality (top nationalities or "Other")
@@ -87,10 +92,52 @@ class PlayerFeatures:
     trend_4y: float
     trend_5y: float
     
+    # Percent features (current / past)
+    pct_6m: float
+    pct_1y: float
+    pct_2y: float
+    pct_4y: float
+    pct_5y: float
+    
+    # Difference features (current - past)
+    diff_6m: float
+    diff_1y: float
+    diff_2y: float
+    diff_4y: float
+    diff_5y: float
+    
     # Time features
     months_since_peak: int
     num_valuations: int
     months_of_history: int
+    
+    # Percentile features (computed per cutoff, 0-100; np.nan when no data)
+    current_value_percentile: float = 0.0
+    value_6m_ago_percentile: float = 0.0
+    value_1y_ago_percentile: float = 0.0
+    value_2y_ago_percentile: float = 0.0
+    value_3y_ago_percentile: float = 0.0
+    value_4y_ago_percentile: float = 0.0
+    value_5y_ago_percentile: float = 0.0
+    # Derived: diff (current - past), trend ((current-past)/max(past,1)), pct (current/max(past,1))
+    diff_percentile_6m: float = 0.0
+    diff_percentile_1y: float = 0.0
+    diff_percentile_2y: float = 0.0
+    diff_percentile_3y: float = 0.0
+    diff_percentile_4y: float = 0.0
+    diff_percentile_5y: float = 0.0
+    trend_percentile_6m: float = 0.0
+    trend_percentile_1y: float = 0.0
+    trend_percentile_2y: float = 0.0
+    trend_percentile_3y: float = 0.0
+    trend_percentile_4y: float = 0.0
+    trend_percentile_5y: float = 0.0
+    pct_percentile_6m: float = 0.0
+    pct_percentile_1y: float = 0.0
+    pct_percentile_2y: float = 0.0
+    pct_percentile_3y: float = 0.0
+    pct_percentile_4y: float = 0.0
+    pct_percentile_5y: float = 0.0
     
     # Training metadata
     cutoff_season: str = ""  # Season of the cutoff (e.g., "2022-2023") for filtering
@@ -98,6 +145,20 @@ class PlayerFeatures:
     # Target (only for training)
     target_value: Optional[float] = None
     
+    @staticmethod
+    def _safe_float(x: Optional[float]) -> float:
+        """Return float for feature dict; np.nan for None (XGBoost handles missing)."""
+        if x is None:
+            return np.nan
+        return float(x)
+
+    @staticmethod
+    def _json_float(x: float) -> Optional[float]:
+        """Return None for nan (JSON-serializable); else the value."""
+        if isinstance(x, float) and np.isnan(x):
+            return None
+        return x
+
     def to_dict(self) -> dict:
         """Convert to dictionary for DataFrame."""
         return {
@@ -128,9 +189,44 @@ class PlayerFeatures:
             "trend_2y": self.trend_2y,
             "trend_4y": self.trend_4y,
             "trend_5y": self.trend_5y,
+            "pct_6m": self.pct_6m,
+            "pct_1y": self.pct_1y,
+            "pct_2y": self.pct_2y,
+            "pct_4y": self.pct_4y,
+            "pct_5y": self.pct_5y,
+            "diff_6m": self.diff_6m,
+            "diff_1y": self.diff_1y,
+            "diff_2y": self.diff_2y,
+            "diff_4y": self.diff_4y,
+            "diff_5y": self.diff_5y,
             "months_since_peak": self.months_since_peak,
             "num_valuations": self.num_valuations,
             "months_of_history": self.months_of_history,
+            "current_value_percentile": self.current_value_percentile,
+            "value_6m_ago_percentile": self._json_float(self.value_6m_ago_percentile),
+            "value_1y_ago_percentile": self._json_float(self.value_1y_ago_percentile),
+            "value_2y_ago_percentile": self._json_float(self.value_2y_ago_percentile),
+            "value_3y_ago_percentile": self._json_float(self.value_3y_ago_percentile),
+            "value_4y_ago_percentile": self._json_float(self.value_4y_ago_percentile),
+            "value_5y_ago_percentile": self._json_float(self.value_5y_ago_percentile),
+            "diff_percentile_6m": self._json_float(self.diff_percentile_6m),
+            "diff_percentile_1y": self._json_float(self.diff_percentile_1y),
+            "diff_percentile_2y": self._json_float(self.diff_percentile_2y),
+            "diff_percentile_3y": self._json_float(self.diff_percentile_3y),
+            "diff_percentile_4y": self._json_float(self.diff_percentile_4y),
+            "diff_percentile_5y": self._json_float(self.diff_percentile_5y),
+            "trend_percentile_6m": self._json_float(self.trend_percentile_6m),
+            "trend_percentile_1y": self._json_float(self.trend_percentile_1y),
+            "trend_percentile_2y": self._json_float(self.trend_percentile_2y),
+            "trend_percentile_3y": self._json_float(self.trend_percentile_3y),
+            "trend_percentile_4y": self._json_float(self.trend_percentile_4y),
+            "trend_percentile_5y": self._json_float(self.trend_percentile_5y),
+            "pct_percentile_6m": self._json_float(self.pct_percentile_6m),
+            "pct_percentile_1y": self._json_float(self.pct_percentile_1y),
+            "pct_percentile_2y": self._json_float(self.pct_percentile_2y),
+            "pct_percentile_3y": self._json_float(self.pct_percentile_3y),
+            "pct_percentile_4y": self._json_float(self.pct_percentile_4y),
+            "pct_percentile_5y": self._json_float(self.pct_percentile_5y),
             "cutoff_season": self.cutoff_season,
             "target_value": self.target_value,
         }
@@ -167,21 +263,55 @@ class PlayerFeatures:
             "trend_2y": self.trend_2y,
             "trend_4y": self.trend_4y,
             "trend_5y": self.trend_5y,
+            "pct_6m": self.pct_6m,
+            "pct_1y": self.pct_1y,
+            "pct_2y": self.pct_2y,
+            "pct_4y": self.pct_4y,
+            "pct_5y": self.pct_5y,
+            "diff_6m_M": self.diff_6m / 1_000_000,
+            "diff_1y_M": self.diff_1y / 1_000_000,
+            "diff_2y_M": self.diff_2y / 1_000_000,
+            "diff_4y_M": self.diff_4y / 1_000_000,
+            "diff_5y_M": self.diff_5y / 1_000_000,
             "months_since_peak": float(self.months_since_peak),
             "num_valuations": float(self.num_valuations),
             "months_of_history": float(self.months_of_history),
+            "current_value_percentile": float(self.current_value_percentile),
+            "value_6m_ago_percentile": self._safe_float(self.value_6m_ago_percentile),
+            "value_1y_ago_percentile": self._safe_float(self.value_1y_ago_percentile),
+            "value_2y_ago_percentile": self._safe_float(self.value_2y_ago_percentile),
+            "value_3y_ago_percentile": self._safe_float(self.value_3y_ago_percentile),
+            "value_4y_ago_percentile": self._safe_float(self.value_4y_ago_percentile),
+            "value_5y_ago_percentile": self._safe_float(self.value_5y_ago_percentile),
+            "diff_percentile_6m": self._safe_float(self.diff_percentile_6m),
+            "diff_percentile_1y": self._safe_float(self.diff_percentile_1y),
+            "diff_percentile_2y": self._safe_float(self.diff_percentile_2y),
+            "diff_percentile_3y": self._safe_float(self.diff_percentile_3y),
+            "diff_percentile_4y": self._safe_float(self.diff_percentile_4y),
+            "diff_percentile_5y": self._safe_float(self.diff_percentile_5y),
+            "trend_percentile_6m": self._safe_float(self.trend_percentile_6m),
+            "trend_percentile_1y": self._safe_float(self.trend_percentile_1y),
+            "trend_percentile_2y": self._safe_float(self.trend_percentile_2y),
+            "trend_percentile_3y": self._safe_float(self.trend_percentile_3y),
+            "trend_percentile_4y": self._safe_float(self.trend_percentile_4y),
+            "trend_percentile_5y": self._safe_float(self.trend_percentile_5y),
+            "pct_percentile_6m": self._safe_float(self.pct_percentile_6m),
+            "pct_percentile_1y": self._safe_float(self.pct_percentile_1y),
+            "pct_percentile_2y": self._safe_float(self.pct_percentile_2y),
+            "pct_percentile_3y": self._safe_float(self.pct_percentile_3y),
+            "pct_percentile_4y": self._safe_float(self.pct_percentile_4y),
+            "pct_percentile_5y": self._safe_float(self.pct_percentile_5y),
         }
 
 
-def _compute_age(birth_date_str: str, reference_date: datetime) -> Optional[int]:
-    """Compute age in years from a DD/MM/YYYY birth date string."""
+def _compute_age(birth_date_str: str, reference_date: datetime) -> Optional[float]:
+    """Compute age as a float (e.g. 23.5) from a DD/MM/YYYY birth date string."""
     bd = parse_date(birth_date_str)
     if bd is None:
         return None
-    age = reference_date.year - bd.year
-    if (reference_date.month, reference_date.day) < (bd.month, bd.day):
-        age -= 1
-    return max(age, 0)
+    delta = reference_date - bd
+    age = delta.days / 365.25
+    return max(age, 0.0)
 
 
 def _get_value_at_date(
@@ -210,10 +340,32 @@ def _get_value_at_date(
 
 
 def _compute_trend(current: float, past: Optional[float]) -> float:
-    """Compute percentage change from past to current."""
-    if past is None or past <= 0:
+    """Compute percentage change from past to current.
+    
+    If past == 0, uses max(past, 1) to avoid division by zero.
+    """
+    if past is None:
         return 0.0
-    return (current - past) / past
+    denom = max(past, 1)
+    return (current - past) / denom
+
+
+def _compute_pct(current: float, past: Optional[float]) -> float:
+    """Compute ratio current / past.
+    
+    If past == 0, uses max(past, 1) to avoid division by zero.
+    """
+    if past is None:
+        return 0.0
+    denom = max(past, 1)
+    return current / denom
+
+
+def _compute_diff(current: float, past: Optional[float]) -> float:
+    """Compute difference current - past."""
+    if past is None:
+        return 0.0
+    return current - past
 
 
 def _is_home_league(nationality: str, country: str) -> bool:
@@ -233,6 +385,69 @@ def _bin_nationality(nationality: str) -> str:
     return "Other"
 
 
+# Horizons for percentile features (attribute suffix)
+_PERCENTILE_HORIZONS = ["6m", "1y", "2y", "3y", "4y", "5y"]
+
+
+def _load_float(x: Optional[float], default: float = 0.0) -> float:
+    """Load float from JSON; None -> default (for backward compat with old datasets)."""
+    if x is None:
+        return default
+    return float(x)
+
+
+def _percentile_rank(values: List[float], x: float) -> float:
+    """
+    Compute percentile rank of x within values (0-100).
+    Uses 'rank' method: (count of values <= x) / n * 100.
+    """
+    if not values:
+        return 0.0
+    n = len(values)
+    count = sum(1 for v in values if v <= x)
+    return 100.0 * count / n
+
+
+def _compute_percentile_features(batch: List[PlayerFeatures]) -> None:
+    """
+    Compute all percentile features for a batch (mutates in place).
+    Requires distribution per cutoff - call once per cutoff batch.
+    """
+    if not batch:
+        return
+    # Current value percentile
+    current_values = [f.current_value for f in batch]
+    for f in batch:
+        f.current_value_percentile = _percentile_rank(current_values, f.current_value)
+    # Historical value percentiles and derived (diff, trend, pct)
+    for h in _PERCENTILE_HORIZONS:
+        attr_val = f"value_{h}_ago"
+        attr_pct = f"value_{h}_ago_percentile"
+        attr_diff = f"diff_percentile_{h}"
+        attr_trend = f"trend_percentile_{h}"
+        attr_pct_pct = f"pct_percentile_{h}"
+        values_h = [getattr(f, attr_val) for f in batch if getattr(f, attr_val) is not None]
+        for f in batch:
+            val = getattr(f, attr_val)
+            if val is not None and values_h:
+                pct = _percentile_rank(values_h, val)
+            else:
+                pct = np.nan
+            setattr(f, attr_pct, pct)
+            # Derived: diff, trend, pct (current percentile vs past percentile)
+            curr = f.current_value_percentile
+            past = pct
+            if not np.isnan(past):
+                setattr(f, attr_diff, curr - past)
+                denom = max(past, 1.0)
+                setattr(f, attr_trend, (curr - past) / denom)
+                setattr(f, attr_pct_pct, curr / denom)
+            else:
+                setattr(f, attr_diff, np.nan)
+                setattr(f, attr_trend, np.nan)
+                setattr(f, attr_pct_pct, np.nan)
+
+
 def _bin_club(club: str) -> str:
     """Bin club to top categories or 'Other'."""
     if not club:
@@ -243,13 +458,12 @@ def _bin_club(club: str) -> str:
 
 
 def _load_all_transfers() -> List[Transfer]:
-    """Load ALL ``transfers_all_*.json`` files into a flat list."""
+    """Load ALL ``transfers_all_*.json`` files into a flat list. Supports multi-part files."""
     transfers: List[Transfer] = []
-    for filepath in sorted(DATA_DIR.glob("transfers_all_*.json")):
-        if "_OLD" in filepath.name:
+    for base in list_json_bases("transfers_all_*.json"):
+        data = load_json(base)
+        if not isinstance(data, list):
             continue
-        with open(filepath, "r", encoding="utf-8") as f:
-            data = json.load(f)
         for item in data:
             if isinstance(item, dict):
                 transfers.append(Transfer.from_dict(item))
@@ -309,18 +523,16 @@ def load_team_league_mapping() -> Dict[str, Dict[str, Dict[str, str]]]:
     """
     # team_id -> season -> {league_id, country}
     team_mapping: Dict[str, Dict[str, Dict[str, str]]] = {}
-    
-    # Load from all teams_all_*.json files
-    teams_files = sorted(DATA_DIR.glob("teams_all_*.json"))
-    
-    for teams_file in teams_files:
-        # Extract season from filename: teams_all_2023-2024.json -> 2023-2024
-        season = teams_file.stem.replace("teams_all_", "")
-        
+
+    # Load from all teams_all_*.json files (supports multi-part)
+    for base in list_json_bases("teams_all_*.json"):
+        season = base.replace("teams_all_", "")
+
         try:
-            with open(teams_file, "r", encoding="utf-8") as f:
-                teams = json.load(f)
-            
+            teams = load_json(base)
+            if teams is None:
+                continue
+
             if isinstance(teams, list):
                 for team in teams:
                     team_id = str(team.get("team_id", ""))
@@ -450,7 +662,7 @@ def extract_player_features(
     if player_info and player_info.birth_date:
         age = _compute_age(player_info.birth_date, cutoff_date)
     if age is None:
-        age = last_val.age_at_valuation or (player_info.age if player_info else None) or 25
+        age = float(last_val.age_at_valuation or (player_info.age if player_info else None) or 25)
     
     # Position
     if player_info and player_info.position:
@@ -506,6 +718,20 @@ def extract_player_features(
     trend_4y = _compute_trend(current_value, value_4y_ago)
     trend_5y = _compute_trend(current_value, value_5y_ago)
     
+    # Percent (current / past)
+    pct_6m = _compute_pct(current_value, value_6m_ago)
+    pct_1y = _compute_pct(current_value, value_1y_ago)
+    pct_2y = _compute_pct(current_value, value_2y_ago)
+    pct_4y = _compute_pct(current_value, value_4y_ago)
+    pct_5y = _compute_pct(current_value, value_5y_ago)
+    
+    # Difference (current - past)
+    diff_6m = _compute_diff(current_value, value_6m_ago)
+    diff_1y = _compute_diff(current_value, value_1y_ago)
+    diff_2y = _compute_diff(current_value, value_2y_ago)
+    diff_4y = _compute_diff(current_value, value_4y_ago)
+    diff_5y = _compute_diff(current_value, value_5y_ago)
+    
     # Time features
     peak_date = max(parsed, key=lambda x: x[1])[0]
     months_since_peak = int((cutoff_date - peak_date).days / 30)
@@ -549,6 +775,16 @@ def extract_player_features(
         trend_2y=trend_2y,
         trend_4y=trend_4y,
         trend_5y=trend_5y,
+        pct_6m=pct_6m,
+        pct_1y=pct_1y,
+        pct_2y=pct_2y,
+        pct_4y=pct_4y,
+        pct_5y=pct_5y,
+        diff_6m=diff_6m,
+        diff_1y=diff_1y,
+        diff_2y=diff_2y,
+        diff_4y=diff_4y,
+        diff_5y=diff_5y,
         months_since_peak=months_since_peak,
         num_valuations=num_valuations,
         months_of_history=months_of_history,
@@ -701,7 +937,7 @@ def build_training_dataset(
     # For each cutoff date, generate features for all eligible players
     for cutoff_idx, cutoff_date in enumerate(cutoff_dates):
         cutoff_season = _get_season_for_cutoff(cutoff_date)
-        players_for_cutoff = 0
+        batch: List[PlayerFeatures] = []
         
         # Build transfer map for this cutoff
         transfer_map = _get_transfer_map_at_cutoff(all_transfers, cutoff_date)
@@ -724,11 +960,15 @@ def build_training_dataset(
             )
             
             if features and features.target_value is not None:
-                dataset.append(features)
-                players_for_cutoff += 1
+                batch.append(features)
+        
+        # Compute percentile features per cutoff
+        if batch:
+            _compute_percentile_features(batch)
+            dataset.extend(batch)
         
         print(f"  Cutoff {cutoff_date.strftime('%Y-%m-%d')} ({cutoff_season}): "
-              f"{players_for_cutoff} players")
+              f"{len(batch)} players")
     
     print(f"Total training samples: {len(dataset)} "
           f"({len(cutoff_dates)} cutoffs x ~{len(dataset) // max(1, len(cutoff_dates))} players/cutoff)")
@@ -926,9 +1166,44 @@ def load_training_dataset(cutoff_months: int = 12) -> Optional[List[PlayerFeatur
             trend_2y=item.get("trend_2y", 0),
             trend_4y=item.get("trend_4y", 0),
             trend_5y=item.get("trend_5y", 0),
+            pct_6m=item.get("pct_6m", 0),
+            pct_1y=item.get("pct_1y", 0),
+            pct_2y=item.get("pct_2y", 0),
+            pct_4y=item.get("pct_4y", 0),
+            pct_5y=item.get("pct_5y", 0),
+            diff_6m=item.get("diff_6m", 0),
+            diff_1y=item.get("diff_1y", 0),
+            diff_2y=item.get("diff_2y", 0),
+            diff_4y=item.get("diff_4y", 0),
+            diff_5y=item.get("diff_5y", 0),
             months_since_peak=item.get("months_since_peak", 0),
             num_valuations=item.get("num_valuations", 0),
             months_of_history=item.get("months_of_history", 0),
+            current_value_percentile=item.get("current_value_percentile", 0.0),
+            value_6m_ago_percentile=_load_float(item.get("value_6m_ago_percentile"), 0.0),
+            value_1y_ago_percentile=_load_float(item.get("value_1y_ago_percentile"), 0.0),
+            value_2y_ago_percentile=_load_float(item.get("value_2y_ago_percentile"), 0.0),
+            value_3y_ago_percentile=_load_float(item.get("value_3y_ago_percentile"), 0.0),
+            value_4y_ago_percentile=_load_float(item.get("value_4y_ago_percentile"), 0.0),
+            value_5y_ago_percentile=_load_float(item.get("value_5y_ago_percentile"), 0.0),
+            diff_percentile_6m=_load_float(item.get("diff_percentile_6m"), 0.0),
+            diff_percentile_1y=_load_float(item.get("diff_percentile_1y"), 0.0),
+            diff_percentile_2y=_load_float(item.get("diff_percentile_2y"), 0.0),
+            diff_percentile_3y=_load_float(item.get("diff_percentile_3y"), 0.0),
+            diff_percentile_4y=_load_float(item.get("diff_percentile_4y"), 0.0),
+            diff_percentile_5y=_load_float(item.get("diff_percentile_5y"), 0.0),
+            trend_percentile_6m=_load_float(item.get("trend_percentile_6m"), 0.0),
+            trend_percentile_1y=_load_float(item.get("trend_percentile_1y"), 0.0),
+            trend_percentile_2y=_load_float(item.get("trend_percentile_2y"), 0.0),
+            trend_percentile_3y=_load_float(item.get("trend_percentile_3y"), 0.0),
+            trend_percentile_4y=_load_float(item.get("trend_percentile_4y"), 0.0),
+            trend_percentile_5y=_load_float(item.get("trend_percentile_5y"), 0.0),
+            pct_percentile_6m=_load_float(item.get("pct_percentile_6m"), 0.0),
+            pct_percentile_1y=_load_float(item.get("pct_percentile_1y"), 0.0),
+            pct_percentile_2y=_load_float(item.get("pct_percentile_2y"), 0.0),
+            pct_percentile_3y=_load_float(item.get("pct_percentile_3y"), 0.0),
+            pct_percentile_4y=_load_float(item.get("pct_percentile_4y"), 0.0),
+            pct_percentile_5y=_load_float(item.get("pct_percentile_5y"), 0.0),
             cutoff_season=item.get("cutoff_season", ""),
             target_value=item.get("target_value"),
         )
@@ -1005,7 +1280,7 @@ def build_prediction_dataset(
     for v in all_valuations:
         by_player.setdefault(v.player_id, []).append(v)
     
-    dataset = []
+    dataset: List[PlayerFeatures] = []
     for player_id, player_vals in by_player.items():
         if len(player_vals) < min_valuations:
             continue
@@ -1024,5 +1299,9 @@ def build_prediction_dataset(
         
         if features:
             dataset.append(features)
+    
+    # Compute percentile features per cutoff
+    if dataset:
+        _compute_percentile_features(dataset)
     
     return dataset

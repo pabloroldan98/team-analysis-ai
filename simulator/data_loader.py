@@ -25,7 +25,7 @@ from typing import Dict, List, Optional, Tuple
 ROOT_DIR = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT_DIR))
 
-from scraping.utils.helpers import read_dict_from_json, parse_date, DATA_DIR
+from scraping.utils.helpers import list_json_bases, load_json, parse_date, DATA_DIR
 from player import Player
 from transfer import Transfer
 from valuation import Valuation
@@ -65,6 +65,7 @@ def _get_season_start_date(season: str) -> datetime:
 def _load_all_players() -> Dict[str, Player]:
     """
     Load ALL ``players_all_*.json`` files.
+    Supports single and multi-part files (when >90MB).
 
     Returns a dict keyed by ``player_id``.  When a player appears in
     multiple season files we keep the entry from the latest file (by
@@ -72,11 +73,10 @@ def _load_all_players() -> Dict[str, Player]:
     """
     players: Dict[str, Player] = {}
 
-    for filepath in sorted(DATA_DIR.glob("players_all_*.json")):
-        if "_OLD" in filepath.name:
+    for base in list_json_bases("players_all_*.json"):
+        data = load_json(base)
+        if not isinstance(data, list):
             continue
-        with open(filepath, "r", encoding="utf-8") as f:
-            data = json.load(f)
         for item in data:
             if not isinstance(item, dict):
                 continue
@@ -87,14 +87,13 @@ def _load_all_players() -> Dict[str, Player]:
 
 
 def _load_all_transfers() -> List[Transfer]:
-    """Load ALL ``transfers_all_*.json`` files into a flat list."""
+    """Load ALL ``transfers_all_*.json`` files into a flat list. Supports multi-part files."""
     transfers: List[Transfer] = []
 
-    for filepath in sorted(DATA_DIR.glob("transfers_all_*.json")):
-        if "_OLD" in filepath.name:
+    for base in list_json_bases("transfers_all_*.json"):
+        data = load_json(base)
+        if not isinstance(data, list):
             continue
-        with open(filepath, "r", encoding="utf-8") as f:
-            data = json.load(f)
         for item in data:
             if not isinstance(item, dict):
                 continue
@@ -104,14 +103,13 @@ def _load_all_transfers() -> List[Transfer]:
 
 
 def _load_all_valuations() -> List[Valuation]:
-    """Load ALL ``valuations_all_*.json`` files into a flat list."""
+    """Load ALL ``valuations_all_*.json`` files into a flat list. Supports multi-part files."""
     valuations: List[Valuation] = []
 
-    for filepath in sorted(DATA_DIR.glob("valuations_all_*.json")):
-        if "_OLD" in filepath.name:
+    for base in list_json_bases("valuations_all_*.json"):
+        data = load_json(base)
+        if not isinstance(data, list):
             continue
-        with open(filepath, "r", encoding="utf-8") as f:
-            data = json.load(f)
         for item in data:
             if not isinstance(item, dict):
                 continue
@@ -313,23 +311,20 @@ def get_active_team_players_at_season_start(
 # ── Legacy / helper functions ────────────────────────────────────────────
 
 def get_available_seasons() -> List[str]:
-    """Get list of available seasons from data files."""
-    seasons = set()
-    if not DATA_DIR.exists():
-        return []
-    for f in DATA_DIR.glob("players_all_*.json"):
-        if "_OLD" not in f.name:
-            stem = f.stem
-            if stem.startswith("players_all_"):
-                season = stem.replace("players_all_", "")
-                seasons.add(season)
+    """Get list of available seasons from data files. Supports multi-part files."""
+    seasons = []
+    for base in list_json_bases("players_all_*.json"):
+        if base.startswith("players_all_"):
+            season = base.replace("players_all_", "")
+            if season and season not in seasons:
+                seasons.append(season)
     return sorted(seasons, reverse=True)
 
 
 def load_teams(season: str, league: str = "all") -> List[dict]:
     """Load teams for a given season and league."""
     file_name = f"teams_{league}_{season}"
-    data = read_dict_from_json(file_name)
+    data = load_json(file_name)
     if data is None:
         return []
     return data if isinstance(data, list) else []
@@ -338,7 +333,7 @@ def load_teams(season: str, league: str = "all") -> List[dict]:
 def load_players(season: str, league: str = "all") -> List[Player]:
     """Load players for a given season and league (raw, no enrichment)."""
     file_name = f"players_{league}_{season}"
-    data = read_dict_from_json(file_name)
+    data = load_json(file_name)
     if data is None:
         return []
     raw = data if isinstance(data, list) else []
@@ -373,7 +368,7 @@ def get_available_clubs(season: str, league: str = "all") -> List[str]:
 def load_valuations(season: str, league: str = "all") -> List[Valuation]:
     """Load valuations for a given season and league as Valuation objects."""
     file_name = f"valuations_{league}_{season}"
-    data = read_dict_from_json(file_name)
+    data = load_json(file_name)
     if data is None:
         return []
     raw = data if isinstance(data, list) else []

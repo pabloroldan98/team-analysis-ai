@@ -121,6 +121,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
       - name: Run leagues scraper for ${{ matrix.league }} (${{ matrix.season }})
         run: |
           python scraping_tasks/scrape_leagues.py --leagues ${{ matrix.league }} --season ${{ matrix.season }} --use-downloaded-data
@@ -276,6 +279,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
 
       - name: Run teams scraper for ${{ matrix.league }} (${{ matrix.season }})
         run: |
@@ -433,6 +439,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
       - name: Run players scraper for ${{ matrix.league }} (${{ matrix.season }})
         run: |
           python scraping_tasks/scrape_players.py --leagues ${{ matrix.league }} --season ${{ matrix.season }} --use-downloaded-data
@@ -589,6 +598,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
       - name: Run transfers scraper for ${{ matrix.league }} (${{ matrix.season }})
         run: |
           python scraping_tasks/scrape_transfers.py --leagues ${{ matrix.league }} --season ${{ matrix.season }} --use-downloaded-data
@@ -744,6 +756,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
 
       - name: Run valuations scraper for ${{ matrix.league }} (${{ matrix.season }})
         run: |

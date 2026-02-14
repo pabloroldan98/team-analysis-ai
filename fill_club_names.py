@@ -35,10 +35,9 @@ _ROOT = Path(__file__).parent
 if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 
-from scraping.utils.helpers import parse_date
+from scraping.utils.helpers import DATA_DIR, list_json_bases, load_json, parse_date
 
 # ── Configuration ────────────────────────────────────────────────────────────
-DATA_DIR = Path("data/json")
 TM_API_URL = "https://tmapi-alpha.transfermarkt.technology"
 
 MAX_RETRIES = 50
@@ -83,25 +82,27 @@ def load_all_json_files(data_dir: Path) -> List[FileRecord]:
 
     Returns a list of ``(filepath_str, prefix, records)`` tuples.
     Only files whose name starts with a known prefix (transfers, valuations,
-    players) are included.
+    players, teams) are included. Uses load_json from utils (supports multi-part).
     """
     result: List[FileRecord] = []
-    json_files = sorted(data_dir.glob("*.json"))
-    print(f"Loading {len(json_files)} JSON files from {data_dir} …")
+    bases = list_json_bases("*.json")
+    print(f"Loading JSON files from {data_dir} …")
 
-    for fp in json_files:
-        prefix = _file_prefix(fp.name)
+    for base in bases:
+        prefix = _file_prefix(base + ".json")
         if prefix is None:
             continue
         try:
-            with open(fp, "r", encoding="utf-8") as f:
-                records = json.load(f)
+            raw = load_json(base)
         except Exception as exc:
-            print(f"  SKIP {fp.name}: {exc}")
+            print(f"  SKIP {base}: {exc}")
             continue
+        if raw is None:
+            continue
+        records = raw["items"] if isinstance(raw, dict) and "items" in raw else raw
         if not isinstance(records, list):
             continue
-        result.append((str(fp), prefix, records))
+        result.append((str(data_dir / f"{base}.json"), prefix, records))
 
     print(f"  Loaded {len(result)} files into memory.\n")
     return result

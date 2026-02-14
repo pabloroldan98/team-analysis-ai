@@ -22,6 +22,7 @@ class Team:
         squad_size: int = None,
         average_age: float = None,
         total_market_value: float = None,
+        average_market_value: float = None,
         foreign_players_count: int = None,
         national_players_count: int = None,
         stadium_name: str = "",
@@ -38,6 +39,7 @@ class Team:
         self.squad_size = squad_size
         self.average_age = average_age
         self.total_market_value = total_market_value
+        self.average_market_value = average_market_value
         self.foreign_players_count = foreign_players_count
         self.national_players_count = national_players_count
         self.stadium_name = stadium_name
@@ -79,6 +81,7 @@ class Team:
             "squad_size": self.squad_size,
             "average_age": self.average_age,
             "total_market_value": self.total_market_value,
+            "average_market_value": self.average_market_value,
             "foreign_players_count": self.foreign_players_count,
             "national_players_count": self.national_players_count,
             "stadium_name": self.stadium_name,
@@ -100,6 +103,7 @@ class Team:
             squad_size=data.get("squad_size"),
             average_age=data.get("average_age"),
             total_market_value=data.get("total_market_value"),
+            average_market_value=data.get("average_market_value"),
             foreign_players_count=data.get("foreign_players_count"),
             national_players_count=data.get("national_players_count"),
             stadium_name=data.get("stadium_name", ""),

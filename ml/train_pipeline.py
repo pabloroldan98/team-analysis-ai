@@ -58,7 +58,7 @@ from ml.feature_engineering import (
 from ml.value_predictor import ValuePredictor, MODELS_DIR
 from valuation import Valuation
 from player import Player
-from scraping.utils.helpers import DATA_DIR
+from scraping.utils.helpers import DATA_DIR, list_json_bases, load_json
 
 import numpy as np
 
@@ -78,40 +78,27 @@ def load_all_valuations(
         List of all Valuation objects
     """
     all_valuations = []
-    
-    # Find combined valuation files only (valuations_all_* contains all leagues)
-    val_files = sorted(DATA_DIR.glob("valuations_all_*.json"))
-    
+    bases = list_json_bases("valuations_all_*.json")
+
     if max_seasons:
-        # Get unique seasons and limit
-        seasons = set()
-        for f in val_files:
-            # valuations_all_2023-2024.json -> 2023-2024
-            parts = f.stem.split("_")
-            if len(parts) >= 3:
-                seasons.add(parts[-1])
-        seasons = sorted(seasons, reverse=True)[:max_seasons]
-        val_files = [f for f in val_files if any(s in f.stem for s in seasons)]
-    
+        seasons = sorted({b.replace("valuations_all_", "") for b in bases if b.startswith("valuations_all_")}, reverse=True)[:max_seasons]
+        bases = [b for b in bases if b.replace("valuations_all_", "") in seasons]
+
     if verbose:
-        print(f"Loading valuations from {len(val_files)} files...")
-    
-    for filepath in val_files:
+        print(f"Loading valuations from {len(bases)} files...")
+
+    for base in bases:
         try:
-            with open(filepath, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            
+            data = load_json(base)
             if isinstance(data, list):
                 for item in data:
                     if isinstance(item, dict):
                         all_valuations.append(Valuation.from_dict(item))
-            
             if verbose:
-                print(f"  Loaded {filepath.name}: {len(data) if isinstance(data, list) else 0} valuations")
-                
+                print(f"  Loaded {base}: {len(data) if isinstance(data, list) else 0} valuations")
         except Exception as e:
             if verbose:
-                print(f"  Error loading {filepath.name}: {e}")
+                print(f"  Error loading {base}: {e}")
     
     if verbose:
         print(f"Total valuations loaded: {len(all_valuations)}")
@@ -127,18 +114,14 @@ def load_all_players(verbose: bool = True) -> Dict[str, Player]:
         Dict mapping player_id to Player object
     """
     players: Dict[str, Player] = {}
-    
-    # Only load combined files (players_all_* contains all leagues)
-    player_files = sorted(DATA_DIR.glob("players_all_*.json"))
-    
+    bases = list_json_bases("players_all_*.json")
+
     if verbose:
-        print(f"Loading players from {len(player_files)} files...")
-    
-    for filepath in player_files:
+        print(f"Loading players from {len(bases)} files...")
+
+    for base in bases:
         try:
-            with open(filepath, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            
+            data = load_json(base)
             if isinstance(data, list):
                 for item in data:
                     if isinstance(item, dict):
@@ -149,8 +132,8 @@ def load_all_players(verbose: bool = True) -> Dict[str, Player]:
                             
         except Exception as e:
             if verbose:
-                print(f"  Error loading {filepath.name}: {e}")
-    
+                print(f"  Error loading {base}: {e}")
+
     if verbose:
         print(f"Total unique players loaded: {len(players)}")
     

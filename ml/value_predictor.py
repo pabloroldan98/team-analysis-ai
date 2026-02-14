@@ -35,7 +35,7 @@ class ValuePredictor:
     Predicts what a player's market value will be in 1 year.
     """
     
-    # Feature names (categorical features will be handled by XGBoost enable_categorical)
+    # Feature names (must match to_feature_dict order; categorical handled by XGBoost enable_categorical)
     FEATURE_NAMES = [
         "current_value_M",
         "age",
@@ -46,7 +46,7 @@ class ValuePredictor:
         "is_in_home_league",
         "valuation_year",
         "max_value_M",
-        "min_value_M", 
+        "min_value_M",
         "avg_value_M",
         "value_6m_ago_M",
         "value_1y_ago_M",
@@ -59,9 +59,44 @@ class ValuePredictor:
         "trend_2y",
         "trend_4y",
         "trend_5y",
+        "pct_6m",
+        "pct_1y",
+        "pct_2y",
+        "pct_4y",
+        "pct_5y",
+        "diff_6m_M",
+        "diff_1y_M",
+        "diff_2y_M",
+        "diff_4y_M",
+        "diff_5y_M",
         "months_since_peak",
         "num_valuations",
         "months_of_history",
+        "current_value_percentile",
+        "value_6m_ago_percentile",
+        "value_1y_ago_percentile",
+        "value_2y_ago_percentile",
+        "value_3y_ago_percentile",
+        "value_4y_ago_percentile",
+        "value_5y_ago_percentile",
+        "diff_percentile_6m",
+        "diff_percentile_1y",
+        "diff_percentile_2y",
+        "diff_percentile_3y",
+        "diff_percentile_4y",
+        "diff_percentile_5y",
+        "trend_percentile_6m",
+        "trend_percentile_1y",
+        "trend_percentile_2y",
+        "trend_percentile_3y",
+        "trend_percentile_4y",
+        "trend_percentile_5y",
+        "pct_percentile_6m",
+        "pct_percentile_1y",
+        "pct_percentile_2y",
+        "pct_percentile_3y",
+        "pct_percentile_4y",
+        "pct_percentile_5y",
     ]
     
     # Categorical feature names for XGBoost
@@ -141,6 +176,28 @@ class ValuePredictor:
         y_train = np.array([f.target_value / 1_000_000 for f in train_data])
         y_val = np.array([f.target_value / 1_000_000 for f in val_data])
         
+        # Sample weights: more recent seasons get higher weight (inflation / relevance)
+        # weight = (year - min_year + 1) / (max_year - min_year + 1)
+        years = [
+            int(f.cutoff_season.split("-")[0])
+            for f in train_data
+            if f.cutoff_season and "-" in f.cutoff_season
+        ]
+        if years:
+            min_year = min(years)
+            max_year = max(years)
+            n_years = max_year - min_year + 1
+            sample_weight = np.array([
+                (int(f.cutoff_season.split("-")[0]) - min_year + 1) / n_years
+                if f.cutoff_season and "-" in f.cutoff_season
+                else 1.0
+                for f in train_data
+            ])
+            if verbose:
+                print(f"Sample weights: year range {min_year}-{max_year}, n={n_years}")
+        else:
+            sample_weight = None
+        
         # ALTERNATIVE: Log-transform target (optimizes for percentage errors)
         # Use this if you care more about relative accuracy across all price ranges.
         # A €5M error on a €10M player would be penalized more than on a €100M player.
@@ -179,11 +236,16 @@ class ValuePredictor:
         # Train model
         self.model = xgb.XGBRegressor(**default_params)
         
-        self.model.fit(
-            X_train, y_train,
-            eval_set=[(X_val, y_val)],
-            verbose=verbose,
-        )
+        fit_kwargs = {
+            "X": X_train,
+            "y": y_train,
+            "eval_set": [(X_val, y_val)],
+            "verbose": verbose,
+        }
+        if sample_weight is not None:
+            fit_kwargs["sample_weight"] = sample_weight
+        
+        self.model.fit(**fit_kwargs)
         
         self.is_trained = True
         
@@ -339,6 +401,10 @@ class ValuePredictor:
             raise RuntimeError("Model not trained")
         
         importances = self.model.feature_importances_
+        # Use model's feature names if available (sklearn 1.0+), else fallback to FEATURE_NAMES
+        names = getattr(self.model, "feature_names_in_", None)
+        if names is not None:
+            return dict(zip(names, importances))
         return dict(zip(self.FEATURE_NAMES, importances))
     
     @classmethod

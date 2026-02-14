@@ -19,6 +19,8 @@ from datetime import datetime
 # Add parent to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from scraping.utils.helpers import load_json, write_dict_to_json
+
 DATA_DIR = Path(__file__).parent.parent / "data" / "json"
 
 
@@ -66,35 +68,36 @@ def combine_entity_files(entity: str, season: str = None) -> int:
     
     for filepath in files:
         try:
-            with open(filepath, 'r', encoding='utf-8') as fp:
-                data = json.load(fp)
-                if isinstance(data, list):
-                    # Standard format: list of dicts
-                    combined.extend(data)
-                elif isinstance(data, dict):
-                    # Check if it's a single entity object (has an ID field)
-                    is_single_entity = any(id_field in data for id_field in entity_id_fields)
-                    if is_single_entity:
-                        # Single entity dict, add as one item
-                        combined.append(data)
-                    else:
-                        # Could be {league: [...]} format, extract lists
-                        for value in data.values():
-                            if isinstance(value, list):
-                                combined.extend(value)
-                            elif isinstance(value, dict):
-                                combined.append(value)
-                else:
+            base = Path(filepath).stem
+            data = load_json(base)
+            if data is None:
+                continue
+            if isinstance(data, list):
+                # Standard format: list of dicts
+                combined.extend(data)
+            elif isinstance(data, dict):
+                # Check if it's a single entity object (has an ID field)
+                is_single_entity = any(id_field in data for id_field in entity_id_fields)
+                if is_single_entity:
+                    # Single entity dict, add as one item
                     combined.append(data)
+                else:
+                    # Could be {league: [...]} format, extract lists
+                    for value in data.values():
+                        if isinstance(value, list):
+                            combined.extend(value)
+                        elif isinstance(value, dict):
+                            combined.append(value)
+            else:
+                combined.append(data)
         except Exception as e:
             print(f"  Error reading {filepath}: {e}")
     
-    # Save combined file
-    output_file = DATA_DIR / f"{entity}_all_{season}.json"
-    with open(output_file, 'w', encoding='utf-8') as fp:
-        json.dump(combined, fp, indent=2, ensure_ascii=False)
-    
-    print(f"\nCombined into: {output_file.name}")
+    # Save combined file (uses part splitting when >90MB)
+    file_name = f"{entity}_all_{season}"
+    write_dict_to_json(combined, file_name)
+
+    print(f"\nCombined into: {file_name}.json (or _part1, _part2, ... if large)")
     print(f"Total items: {len(combined)}")
     
     return len(combined)

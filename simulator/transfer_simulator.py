@@ -32,6 +32,7 @@ from player import Player
 from transfer import Transfer
 from valuation import Valuation
 from simulator.knapsack_solver import best_full_teams
+from scraping.utils.helpers import list_json_bases, load_json
 
 # Paths
 ROOT_DIR = Path(__file__).parent.parent
@@ -329,15 +330,14 @@ class TransferSimulator:
         return players
     
     def _load_all_valuations(self) -> List[Valuation]:
-        """Load all valuations for feature extraction."""
+        """Load all valuations for feature extraction. Supports multi-part files."""
         all_valuations = []
-        
-        for filepath in DATA_DIR.glob("valuations_all_*.json"):
-            with open(filepath, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            for item in data:
-                all_valuations.append(Valuation.from_dict(item))
-        
+        for base in list_json_bases("valuations_all_*.json"):
+            data = load_json(base)
+            if isinstance(data, list):
+                for item in data:
+                    if isinstance(item, dict):
+                        all_valuations.append(Valuation.from_dict(item))
         return all_valuations
     
     def _get_club_players(self, all_players: List[Player]) -> List[Player]:
@@ -518,13 +518,14 @@ class TransferSimulator:
         return sold_players, formation_needed
     
     def _load_all_transfers(self) -> List[Transfer]:
-        """Load all transfers from every ``transfers_all_*.json`` file."""
+        """Load all transfers from every ``transfers_all_*.json`` file. Supports multi-part files."""
         all_transfers: List[Transfer] = []
-        for filepath in DATA_DIR.glob("transfers_all_*.json"):
-            with open(filepath, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            for item in data:
-                all_transfers.append(Transfer.from_dict(item))
+        for base in list_json_bases("transfers_all_*.json"):
+            data = load_json(base)
+            if isinstance(data, list):
+                for item in data:
+                    if isinstance(item, dict):
+                        all_transfers.append(Transfer.from_dict(item))
         return all_transfers
 
     def _is_athletic_club(self) -> bool:

@@ -1,0 +1,5112 @@
+[
+  {
+    "valuation_id": "ac4a33f15f2a",
+    "player_id": "819383",
+    "player_name": "Arnas Voitinovičius",
+    "valuation_amount": 75000,
+    "valuation_date": "29/11/2023",
+    "club_name_at_valuation": "FK Riteriai B",
+    "club_id_at_valuation": "60822",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "25f7afae7bc5",
+    "player_id": "819383",
+    "player_name": "Arnas Voitinovičius",
+    "valuation_amount": 75000,
+    "valuation_date": "29/11/2024",
+    "club_name_at_valuation": "SL Benfica U23",
+    "club_id_at_valuation": "68780",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "6f38bc1ee5d3",
+    "player_id": "819383",
+    "player_name": "Arnas Voitinovičius",
+    "valuation_amount": 75000,
+    "valuation_date": "01/12/2025",
+    "club_name_at_valuation": "SL Benfica U23",
+    "club_id_at_valuation": "68780",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "23f54f693485",
+    "player_id": "819383",
+    "player_name": "Arnas Voitinovičius",
+    "valuation_amount": 75000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica U23",
+    "club_id_at_valuation": "68780",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "2f4eb18e5862",
+    "player_id": "1233701",
+    "player_name": "José Neto",
+    "valuation_amount": 3000000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "9fecb448342f",
+    "player_id": "1439651",
+    "player_name": "Miguel Figueiredo",
+    "valuation_amount": 800000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "d67556c4a910",
+    "player_id": "801435",
+    "player_name": "Olivio Tomé",
+    "valuation_amount": 250000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "1e4d55cd0c0c",
+    "player_id": "958933",
+    "player_name": "Dudu",
+    "valuation_amount": 200000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "205292795ee2",
+    "player_id": "1247587",
+    "player_name": "Michée Ndembi",
+    "valuation_amount": 250000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica U23",
+    "club_id_at_valuation": "68780",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "4cee2371199c",
+    "player_id": "781936",
+    "player_name": "Karel Mustmaa",
+    "valuation_amount": 100000,
+    "valuation_date": "29/09/2025",
+    "club_name_at_valuation": "PAOK Thessaloniki B",
+    "club_id_at_valuation": "91869",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "b9b5d7a13a5d",
+    "player_id": "781936",
+    "player_name": "Karel Mustmaa",
+    "valuation_amount": 200000,
+    "valuation_date": "29/12/2025",
+    "club_name_at_valuation": "PAOK Thessaloniki B",
+    "club_id_at_valuation": "91869",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "e888508482a8",
+    "player_id": "983553",
+    "player_name": "Guilherme Peixoto",
+    "valuation_amount": 200000,
+    "valuation_date": "27/09/2025",
+    "club_name_at_valuation": "Twente Enschede FC",
+    "club_id_at_valuation": "317",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "9f9e61196057",
+    "player_id": "983553",
+    "player_name": "Guilherme Peixoto",
+    "valuation_amount": 200000,
+    "valuation_date": "02/12/2025",
+    "club_name_at_valuation": "Twente Enschede FC",
+    "club_id_at_valuation": "317",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e64330dddae8",
+    "player_id": "1093811",
+    "player_name": "Tiago Parente",
+    "valuation_amount": 400000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "SL Benfica U23",
+    "club_id_at_valuation": "68780",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "b954cbecff8f",
+    "player_id": "1093811",
+    "player_name": "Tiago Parente",
+    "valuation_amount": 300000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "SL Benfica U23",
+    "club_id_at_valuation": "68780",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "70c40474c73c",
+    "player_id": "1093811",
+    "player_name": "Tiago Parente",
+    "valuation_amount": 500000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "db895c8901bb",
+    "player_id": "902701",
+    "player_name": "Tomás Moreira",
+    "valuation_amount": 200000,
+    "valuation_date": "29/10/2024",
+    "club_name_at_valuation": "SL Benfica U23",
+    "club_id_at_valuation": "68780",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "bb6d0367e0c5",
+    "player_id": "902701",
+    "player_name": "Tomás Moreira",
+    "valuation_amount": 200000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "SL Benfica U23",
+    "club_id_at_valuation": "68780",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "99f65cb95a86",
+    "player_id": "902701",
+    "player_name": "Tomás Moreira",
+    "valuation_amount": 200000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "SL Benfica U23",
+    "club_id_at_valuation": "68780",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "47e7cc2bdb41",
+    "player_id": "902701",
+    "player_name": "Tomás Moreira",
+    "valuation_amount": 450000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "a188c18ec35f",
+    "player_id": "984544",
+    "player_name": "Rodrigo Rêgo",
+    "valuation_amount": 150000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "SL Benfica U23",
+    "club_id_at_valuation": "68780",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "4660a896f81e",
+    "player_id": "984544",
+    "player_name": "Rodrigo Rêgo",
+    "valuation_amount": 900000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "526a98d88a3f",
+    "player_id": "770036",
+    "player_name": "Jelani Dumas",
+    "valuation_amount": 400000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "4ecfe668d56c",
+    "player_id": "1061744",
+    "player_name": "Gonçalo Moreira",
+    "valuation_amount": 1200000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "1c0b784173b2",
+    "player_id": "937726",
+    "player_name": "Martim Ferreira",
+    "valuation_amount": 300000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "d1d83fd617ac",
+    "player_id": "983556",
+    "player_name": "Leandro Martins",
+    "valuation_amount": 200000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "1597d25c7049",
+    "player_id": "937720",
+    "player_name": "Tiago Freitas",
+    "valuation_amount": 550000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "6b37d7e6f1a3",
+    "player_id": "958934",
+    "player_name": "Rui Silva",
+    "valuation_amount": 350000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "31a86ab99867",
+    "player_id": "1078918",
+    "player_name": "Gonçalo Oliveira",
+    "valuation_amount": 1500000,
+    "valuation_date": "30/09/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "7efc21e32a37",
+    "player_id": "1078918",
+    "player_name": "Gonçalo Oliveira",
+    "valuation_amount": 2000000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "SL Benfica B",
+    "club_id_at_valuation": "10330",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "6d5cee88002e",
+    "player_id": "1017047",
+    "player_name": "Mauro Zalazar",
+    "valuation_amount": 100000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "FC Schalke 04",
+    "club_id_at_valuation": "33",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "fad74edb19a6",
+    "player_id": "1017047",
+    "player_name": "Mauro Zalazar",
+    "valuation_amount": 300000,
+    "valuation_date": "26/03/2025",
+    "club_name_at_valuation": "FC Schalke 04",
+    "club_id_at_valuation": "33",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "f743a2449287",
+    "player_id": "1017047",
+    "player_name": "Mauro Zalazar",
+    "valuation_amount": 300000,
+    "valuation_date": "19/06/2025",
+    "club_name_at_valuation": "FC Schalke 04",
+    "club_id_at_valuation": "33",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "72e3762794e5",
+    "player_id": "1017047",
+    "player_name": "Mauro Zalazar",
+    "valuation_amount": 300000,
+    "valuation_date": "16/12/2025",
+    "club_name_at_valuation": "FC Schalke 04",
+    "club_id_at_valuation": "33",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "24ecbcee6cdf",
+    "player_id": "1006448",
+    "player_name": "Sandro Vidigal",
+    "valuation_amount": 1500000,
+    "valuation_date": "30/09/2025",
+    "club_name_at_valuation": "SC Braga",
+    "club_id_at_valuation": "1075",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "17b305061340",
+    "player_id": "1006448",
+    "player_name": "Sandro Vidigal",
+    "valuation_amount": 1500000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "SC Braga",
+    "club_id_at_valuation": "1075",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "46a2cb77e491",
+    "player_id": "1075884",
+    "player_name": "João Aragão",
+    "valuation_amount": 500000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SC Braga B",
+    "club_id_at_valuation": "10789",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "76f79c2bc783",
+    "player_id": "1043835",
+    "player_name": "Diogo Madaleno",
+    "valuation_amount": 10000,
+    "valuation_date": "08/12/2025",
+    "club_name_at_valuation": "Dobrudzha Dobrich",
+    "club_id_at_valuation": "4362",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "79ac11a49b17",
+    "player_id": "741539",
+    "player_name": "Dinis Rodrigues",
+    "valuation_amount": 750000,
+    "valuation_date": "27/06/2022",
+    "club_name_at_valuation": "SC Braga U19",
+    "club_id_at_valuation": "12964",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "14663f20771c",
+    "player_id": "741539",
+    "player_name": "Dinis Rodrigues",
+    "valuation_amount": 700000,
+    "valuation_date": "17/01/2024",
+    "club_name_at_valuation": "SC Braga U23",
+    "club_id_at_valuation": "68077",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "efc416b0b42c",
+    "player_id": "741539",
+    "player_name": "Dinis Rodrigues",
+    "valuation_amount": 600000,
+    "valuation_date": "17/01/2025",
+    "club_name_at_valuation": "SC Braga U23",
+    "club_id_at_valuation": "68077",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "11b035dd4b32",
+    "player_id": "741539",
+    "player_name": "Dinis Rodrigues",
+    "valuation_amount": 600000,
+    "valuation_date": "30/05/2025",
+    "club_name_at_valuation": "SC Braga U23",
+    "club_id_at_valuation": "68077",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "afa3241aa2f9",
+    "player_id": "741539",
+    "player_name": "Dinis Rodrigues",
+    "valuation_amount": 400000,
+    "valuation_date": "02/10/2025",
+    "club_name_at_valuation": "FC Sion",
+    "club_id_at_valuation": "321",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "40d2eaa11cc9",
+    "player_id": "741539",
+    "player_name": "Dinis Rodrigues",
+    "valuation_amount": 250000,
+    "valuation_date": "29/12/2025",
+    "club_name_at_valuation": "FC Sion",
+    "club_id_at_valuation": "321",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "eb0f0be3524e",
+    "player_id": "1172578",
+    "player_name": "Ali Aruna",
+    "valuation_amount": 50000,
+    "valuation_date": "04/09/2025",
+    "club_name_at_valuation": "Septemvri Sofia",
+    "club_id_at_valuation": "40416",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "5b914495b724",
+    "player_id": "1172578",
+    "player_name": "Ali Aruna",
+    "valuation_amount": 50000,
+    "valuation_date": "08/12/2025",
+    "club_name_at_valuation": "Septemvri Sofia",
+    "club_id_at_valuation": "40416",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "eeeb9c7edeee",
+    "player_id": "1237439",
+    "player_name": "Hassan Abouelmaati",
+    "valuation_amount": 75000,
+    "valuation_date": "03/10/2024",
+    "club_name_at_valuation": "Zamalek SC U21",
+    "club_id_at_valuation": "15923",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "ec145c8c82de",
+    "player_id": "1237439",
+    "player_name": "Hassan Abouelmaati",
+    "valuation_amount": 0,
+    "valuation_date": "01/07/2025",
+    "club_name_at_valuation": "Rio Ave FC U23",
+    "club_id_at_valuation": "68110",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "ef5cac687a7a",
+    "player_id": "1077437",
+    "player_name": "Saba Samushia",
+    "valuation_amount": 50000,
+    "valuation_date": "22/05/2024",
+    "club_name_at_valuation": "Dinamo Tbilisi II",
+    "club_id_at_valuation": "31555",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "5d11ef07f81e",
+    "player_id": "1077437",
+    "player_name": "Saba Samushia",
+    "valuation_amount": 125000,
+    "valuation_date": "25/09/2024",
+    "club_name_at_valuation": "Dinamo Tbilisi",
+    "club_id_at_valuation": "663",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "8f5ee26dbde4",
+    "player_id": "1077437",
+    "player_name": "Saba Samushia",
+    "valuation_amount": 150000,
+    "valuation_date": "23/12/2024",
+    "club_name_at_valuation": "Dinamo Tbilisi",
+    "club_id_at_valuation": "663",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "1e87abd509e5",
+    "player_id": "1077437",
+    "player_name": "Saba Samushia",
+    "valuation_amount": 0,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Rio Ave FC U23",
+    "club_id_at_valuation": "68110",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "dfe6aac62544",
+    "player_id": "1097263",
+    "player_name": "Rafael Lobato",
+    "valuation_amount": 1500000,
+    "valuation_date": "28/03/2025",
+    "club_name_at_valuation": "Botafogo de Futebol e Regatas",
+    "club_id_at_valuation": "537",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "b3c30c36e64e",
+    "player_id": "1097263",
+    "player_name": "Rafael Lobato",
+    "valuation_amount": 1500000,
+    "valuation_date": "06/06/2025",
+    "club_name_at_valuation": "Botafogo de Futebol e Regatas",
+    "club_id_at_valuation": "537",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "3778b5038be6",
+    "player_id": "1097263",
+    "player_name": "Rafael Lobato",
+    "valuation_amount": 1200000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "Rio Ave FC",
+    "club_id_at_valuation": "2425",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "0b80dc9402da",
+    "player_id": "862204",
+    "player_name": "Julien Lomboto",
+    "valuation_amount": 200000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "UD Oliveirense",
+    "club_id_at_valuation": "8827",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "a62eca122ddc",
+    "player_id": "862204",
+    "player_name": "Julien Lomboto",
+    "valuation_amount": 350000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "SC União Torreense",
+    "club_id_at_valuation": "2432",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "ed33a0e9d96c",
+    "player_id": "862204",
+    "player_name": "Julien Lomboto",
+    "valuation_amount": 500000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "SC União Torreense",
+    "club_id_at_valuation": "2432",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "3ca9e17b831f",
+    "player_id": "862204",
+    "player_name": "Julien Lomboto",
+    "valuation_amount": 400000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "Rio Ave FC",
+    "club_id_at_valuation": "2425",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "4dc19747dcda",
+    "player_id": "870284",
+    "player_name": "Lazar Radojicic",
+    "valuation_amount": 10000,
+    "valuation_date": "18/11/2022",
+    "club_name_at_valuation": "FK Radnicki Belgrade",
+    "club_id_at_valuation": "5681",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "5a8bd3e885e0",
+    "player_id": "870284",
+    "player_name": "Lazar Radojicic",
+    "valuation_amount": 10000,
+    "valuation_date": "22/06/2023",
+    "club_name_at_valuation": "FK Radnicki Belgrade",
+    "club_id_at_valuation": "5681",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "5526a10bf620",
+    "player_id": "870284",
+    "player_name": "Lazar Radojicic",
+    "valuation_amount": 25000,
+    "valuation_date": "27/12/2023",
+    "club_name_at_valuation": "FK Radnicki Belgrade",
+    "club_id_at_valuation": "5681",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "315865ecba05",
+    "player_id": "870284",
+    "player_name": "Lazar Radojicic",
+    "valuation_amount": 0,
+    "valuation_date": "07/03/2024",
+    "club_name_at_valuation": "FK Teleoptik Zemun",
+    "club_id_at_valuation": "4646",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "6c8cafa5c37a",
+    "player_id": "981161",
+    "player_name": "Samuel",
+    "valuation_amount": 100000,
+    "valuation_date": "14/11/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "0",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "c82edd1661d1",
+    "player_id": "981161",
+    "player_name": "Samuel",
+    "valuation_amount": 0,
+    "valuation_date": "13/11/2023",
+    "club_name_at_valuation": "FC Maia Lidador",
+    "club_id_at_valuation": "47794",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "56da02dfe043",
+    "player_id": "733904",
+    "player_name": "Michalis Patiras",
+    "valuation_amount": 25000,
+    "valuation_date": "01/07/2023",
+    "club_name_at_valuation": "Olympiacos Piraeus B",
+    "club_id_at_valuation": "91868",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "2093651ee0a2",
+    "player_id": "733904",
+    "player_name": "Michalis Patiras",
+    "valuation_amount": 25000,
+    "valuation_date": "28/12/2023",
+    "club_name_at_valuation": "Olympiacos Piraeus B",
+    "club_id_at_valuation": "91868",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "034930d1fbc2",
+    "player_id": "733904",
+    "player_name": "Michalis Patiras",
+    "valuation_amount": 25000,
+    "valuation_date": "23/05/2024",
+    "club_name_at_valuation": "Olympiacos Piraeus B",
+    "club_id_at_valuation": "91868",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "a287513b73f4",
+    "player_id": "733904",
+    "player_name": "Michalis Patiras",
+    "valuation_amount": 0,
+    "valuation_date": "31/08/2024",
+    "club_name_at_valuation": "Rio Ave FC U23",
+    "club_id_at_valuation": "68110",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "9de4bf2f3c2a",
+    "player_id": "733904",
+    "player_name": "Michalis Patiras",
+    "valuation_amount": 50000,
+    "valuation_date": "23/09/2025",
+    "club_name_at_valuation": "AE Kifisias",
+    "club_id_at_valuation": "30120",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "883b2c0ea359",
+    "player_id": "733904",
+    "player_name": "Michalis Patiras",
+    "valuation_amount": 50000,
+    "valuation_date": "12/12/2025",
+    "club_name_at_valuation": "AE Kifisias",
+    "club_id_at_valuation": "30120",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "16d02c8ca20b",
+    "player_id": "1047422",
+    "player_name": "Chukwudi Igbokwe",
+    "valuation_amount": 100000,
+    "valuation_date": "08/10/2024",
+    "club_name_at_valuation": "Rio Ave FC U23",
+    "club_id_at_valuation": "68110",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "97171f0cf29c",
+    "player_id": "1047422",
+    "player_name": "Chukwudi Igbokwe",
+    "valuation_amount": 100000,
+    "valuation_date": "19/12/2024",
+    "club_name_at_valuation": "Rio Ave FC U23",
+    "club_id_at_valuation": "68110",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "945628ae65dd",
+    "player_id": "1047422",
+    "player_name": "Chukwudi Igbokwe",
+    "valuation_amount": 225000,
+    "valuation_date": "23/09/2025",
+    "club_name_at_valuation": "SK Dynamo Ceske Budejovice",
+    "club_id_at_valuation": "1321",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "77535f2a2bc6",
+    "player_id": "1047422",
+    "player_name": "Chukwudi Igbokwe",
+    "valuation_amount": 200000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SK Dynamo Ceske Budejovice",
+    "club_id_at_valuation": "1321",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "b0ee01de8773",
+    "player_id": "549013",
+    "player_name": "Hélder Sá",
+    "valuation_amount": 200000,
+    "valuation_date": "21/05/2021",
+    "club_name_at_valuation": "Vitória de Guimarães SC U23 (- 2022)",
+    "club_id_at_valuation": "68188",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "60ccc12b97dd",
+    "player_id": "549013",
+    "player_name": "Hélder Sá",
+    "valuation_amount": 500000,
+    "valuation_date": "27/12/2021",
+    "club_name_at_valuation": "Vitória Guimarães SC",
+    "club_id_at_valuation": "2420",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "0fde2e236579",
+    "player_id": "549013",
+    "player_name": "Hélder Sá",
+    "valuation_amount": 800000,
+    "valuation_date": "31/05/2022",
+    "club_name_at_valuation": "Vitória Guimarães SC",
+    "club_id_at_valuation": "2420",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "05b5b22e0e2e",
+    "player_id": "549013",
+    "player_name": "Hélder Sá",
+    "valuation_amount": 700000,
+    "valuation_date": "01/11/2022",
+    "club_name_at_valuation": "Vitória Guimarães SC",
+    "club_id_at_valuation": "2420",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "ea72ad9bb5ca",
+    "player_id": "549013",
+    "player_name": "Hélder Sá",
+    "valuation_amount": 600000,
+    "valuation_date": "02/03/2023",
+    "club_name_at_valuation": "Vitória Guimarães SC",
+    "club_id_at_valuation": "2420",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "6d1c2c1ca534",
+    "player_id": "549013",
+    "player_name": "Hélder Sá",
+    "valuation_amount": 600000,
+    "valuation_date": "16/06/2023",
+    "club_name_at_valuation": "Vitória Guimarães SC",
+    "club_id_at_valuation": "2420",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "232c3995aed3",
+    "player_id": "549013",
+    "player_name": "Hélder Sá",
+    "valuation_amount": 450000,
+    "valuation_date": "29/12/2023",
+    "club_name_at_valuation": "Radomiak Radom",
+    "club_id_at_valuation": "7154",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "c96a59a65111",
+    "player_id": "549013",
+    "player_name": "Hélder Sá",
+    "valuation_amount": 300000,
+    "valuation_date": "06/06/2024",
+    "club_name_at_valuation": "Rio Ave FC",
+    "club_id_at_valuation": "2425",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "dc3e24561fbd",
+    "player_id": "549013",
+    "player_name": "Hélder Sá",
+    "valuation_amount": 300000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "CD Feirense",
+    "club_id_at_valuation": "3349",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "f46d55a14f08",
+    "player_id": "549013",
+    "player_name": "Hélder Sá",
+    "valuation_amount": 0,
+    "valuation_date": "21/10/2025",
+    "club_name_at_valuation": "Rio Ave FC U23",
+    "club_id_at_valuation": "68110",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "f65261a6bf17",
+    "player_id": "1293517",
+    "player_name": "Tim",
+    "valuation_amount": 150000,
+    "valuation_date": "19/12/2024",
+    "club_name_at_valuation": "Rio Ave FC U23",
+    "club_id_at_valuation": "68110",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "637d3819c2cd",
+    "player_id": "1293517",
+    "player_name": "Tim",
+    "valuation_amount": 150000,
+    "valuation_date": "30/05/2025",
+    "club_name_at_valuation": "Rio Ave FC U23",
+    "club_id_at_valuation": "68110",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "2f79e3ea5dc5",
+    "player_id": "1293517",
+    "player_name": "Tim",
+    "valuation_amount": 0,
+    "valuation_date": "16/09/2025",
+    "club_name_at_valuation": "AD Marco 09",
+    "club_id_at_valuation": "2829",
+    "age_at_valuation": 0
+  },
+  {
+    "valuation_id": "ee931dcc2d3b",
+    "player_id": "1042715",
+    "player_name": "Karse",
+    "valuation_amount": 100000,
+    "valuation_date": "16/06/2023",
+    "club_name_at_valuation": "Rio Ave FC U23",
+    "club_id_at_valuation": "68110",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "d333e4a83926",
+    "player_id": "1042715",
+    "player_name": "Karse",
+    "valuation_amount": 100000,
+    "valuation_date": "27/12/2023",
+    "club_name_at_valuation": "Rio Ave FC U23",
+    "club_id_at_valuation": "68110",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "2ab24231c4aa",
+    "player_id": "1042715",
+    "player_name": "Karse",
+    "valuation_amount": 100000,
+    "valuation_date": "27/12/2024",
+    "club_name_at_valuation": "Rio Ave FC U23",
+    "club_id_at_valuation": "68110",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "0e7748a88b7f",
+    "player_id": "1042715",
+    "player_name": "Karse",
+    "valuation_amount": 100000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Académica Coimbra",
+    "club_id_at_valuation": "2990",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "241a419522c6",
+    "player_id": "1105966",
+    "player_name": "Junior Colina",
+    "valuation_amount": 175000,
+    "valuation_date": "19/07/2023",
+    "club_name_at_valuation": "Dvo. Rayo Zuliano",
+    "club_id_at_valuation": "93338",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "662481fb6b82",
+    "player_id": "1105966",
+    "player_name": "Junior Colina",
+    "valuation_amount": 175000,
+    "valuation_date": "04/01/2024",
+    "club_name_at_valuation": "Dvo. Rayo Zuliano",
+    "club_id_at_valuation": "93338",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "ccd934c05255",
+    "player_id": "1105966",
+    "player_name": "Junior Colina",
+    "valuation_amount": 200000,
+    "valuation_date": "14/06/2024",
+    "club_name_at_valuation": "Dvo. Rayo Zuliano",
+    "club_id_at_valuation": "93338",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "cbc54f139d45",
+    "player_id": "1105966",
+    "player_name": "Junior Colina",
+    "valuation_amount": 275000,
+    "valuation_date": "06/12/2024",
+    "club_name_at_valuation": "Dvo. Rayo Zuliano",
+    "club_id_at_valuation": "93338",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "2f63078478db",
+    "player_id": "1105966",
+    "player_name": "Junior Colina",
+    "valuation_amount": 200000,
+    "valuation_date": "05/12/2025",
+    "club_name_at_valuation": "Dvo. Rayo Zuliano",
+    "club_id_at_valuation": "93338",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "8de417c9a568",
+    "player_id": "1077438",
+    "player_name": "Mate Sauri",
+    "valuation_amount": 10000,
+    "valuation_date": "25/06/2023",
+    "club_name_at_valuation": "Dinamo Tbilisi II",
+    "club_id_at_valuation": "31555",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "d44ea889b9a1",
+    "player_id": "1077438",
+    "player_name": "Mate Sauri",
+    "valuation_amount": 10000,
+    "valuation_date": "12/12/2023",
+    "club_name_at_valuation": "Dinamo Tbilisi II",
+    "club_id_at_valuation": "31555",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "ae8e8bfe1f05",
+    "player_id": "1077438",
+    "player_name": "Mate Sauri",
+    "valuation_amount": 50000,
+    "valuation_date": "21/05/2024",
+    "club_name_at_valuation": "Dinamo Tbilisi II",
+    "club_id_at_valuation": "31555",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "61e7ae72d26d",
+    "player_id": "1077438",
+    "player_name": "Mate Sauri",
+    "valuation_amount": 50000,
+    "valuation_date": "16/05/2025",
+    "club_name_at_valuation": "Rio Ave FC U23",
+    "club_id_at_valuation": "68110",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "c570d0800faa",
+    "player_id": "1077438",
+    "player_name": "Mate Sauri",
+    "valuation_amount": 50000,
+    "valuation_date": "30/12/2025",
+    "club_name_at_valuation": "Real Oviedo Vetusta",
+    "club_id_at_valuation": "14707",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "6648a29cb775",
+    "player_id": "1013713",
+    "player_name": "Tomé Sousa",
+    "valuation_amount": 200000,
+    "valuation_date": "08/10/2024",
+    "club_name_at_valuation": "Boavista FC",
+    "club_id_at_valuation": "2503",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "4a30d88868ec",
+    "player_id": "1013713",
+    "player_name": "Tomé Sousa",
+    "valuation_amount": 200000,
+    "valuation_date": "19/12/2024",
+    "club_name_at_valuation": "Boavista FC",
+    "club_id_at_valuation": "2503",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "083b004dde2a",
+    "player_id": "1013713",
+    "player_name": "Tomé Sousa",
+    "valuation_amount": 200000,
+    "valuation_date": "30/05/2025",
+    "club_name_at_valuation": "Boavista FC",
+    "club_id_at_valuation": "2503",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "f1783b5431ab",
+    "player_id": "1082888",
+    "player_name": "Matheus Rodrigues",
+    "valuation_amount": 100000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SC Farense U23",
+    "club_id_at_valuation": "91911",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "4dac365a7acf",
+    "player_id": "1077816",
+    "player_name": "Duarte Furtado",
+    "valuation_amount": 50000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SC Farense U23",
+    "club_id_at_valuation": "91911",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "2bed86731ee6",
+    "player_id": "1037751",
+    "player_name": "Dário Miranda",
+    "valuation_amount": 225000,
+    "valuation_date": "28/12/2022",
+    "club_name_at_valuation": "CD Tondela",
+    "club_id_at_valuation": "7179",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "675878ffe65b",
+    "player_id": "1037751",
+    "player_name": "Dário Miranda",
+    "valuation_amount": 225000,
+    "valuation_date": "28/06/2023",
+    "club_name_at_valuation": "CD Tondela",
+    "club_id_at_valuation": "7179",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "85763adca563",
+    "player_id": "1037751",
+    "player_name": "Dário Miranda",
+    "valuation_amount": 0,
+    "valuation_date": "28/06/2024",
+    "club_name_at_valuation": "SC Farense U23",
+    "club_id_at_valuation": "91911",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "285bad1d1ad8",
+    "player_id": "1037751",
+    "player_name": "Dário Miranda",
+    "valuation_amount": 125000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SC Farense U23",
+    "club_id_at_valuation": "91911",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "6f8b60866fb7",
+    "player_id": "1002289",
+    "player_name": "Shyon Omrani",
+    "valuation_amount": 100000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "27dea5bfdfb8",
+    "player_id": "957736",
+    "player_name": "Leonardo Oliveira",
+    "valuation_amount": 100000,
+    "valuation_date": "19/12/2024",
+    "club_name_at_valuation": "FC Famalicão U23",
+    "club_id_at_valuation": "75337",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "cd5fb1276653",
+    "player_id": "957736",
+    "player_name": "Leonardo Oliveira",
+    "valuation_amount": 50000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SC Farense U23",
+    "club_id_at_valuation": "91911",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "600a017b2b2c",
+    "player_id": "925413",
+    "player_name": "André Candeias",
+    "valuation_amount": 600000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SC Farense",
+    "club_id_at_valuation": "4294",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "c6e1c003fc52",
+    "player_id": "1215539",
+    "player_name": "Lucas D'Agrella",
+    "valuation_amount": 500000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SC Farense",
+    "club_id_at_valuation": "4294",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "bc61920a7d05",
+    "player_id": "1189523",
+    "player_name": "Rafinha",
+    "valuation_amount": 300000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SC Farense",
+    "club_id_at_valuation": "4294",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "5954a8576b59",
+    "player_id": "886564",
+    "player_name": "Ian Custódio",
+    "valuation_amount": 100000,
+    "valuation_date": "11/12/2023",
+    "club_name_at_valuation": "SE Palmeiras São Paulo U20",
+    "club_id_at_valuation": "14807",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "faf4d129ce3e",
+    "player_id": "886564",
+    "player_name": "Ian Custódio",
+    "valuation_amount": 0,
+    "valuation_date": "11/12/2024",
+    "club_name_at_valuation": "FC Famalicão U23",
+    "club_id_at_valuation": "75337",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "cf0fdb1782d1",
+    "player_id": "1133954",
+    "player_name": "Umar Abubakar",
+    "valuation_amount": 600000,
+    "valuation_date": "30/09/2025",
+    "club_name_at_valuation": "FC Famalicão",
+    "club_id_at_valuation": "3329",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "400fb412203b",
+    "player_id": "1133954",
+    "player_name": "Umar Abubakar",
+    "valuation_amount": 600000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "FC Famalicão",
+    "club_id_at_valuation": "3329",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "56ae081512af",
+    "player_id": "1191154",
+    "player_name": "Ibrahima Ba",
+    "valuation_amount": 50000,
+    "valuation_date": "27/10/2023",
+    "club_name_at_valuation": "Valenciennes FC",
+    "club_id_at_valuation": "1423",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "964569200cff",
+    "player_id": "1191154",
+    "player_name": "Ibrahima Ba",
+    "valuation_amount": 50000,
+    "valuation_date": "13/12/2023",
+    "club_name_at_valuation": "Valenciennes FC",
+    "club_id_at_valuation": "1423",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "1e00215847b7",
+    "player_id": "1191154",
+    "player_name": "Ibrahima Ba",
+    "valuation_amount": 50000,
+    "valuation_date": "11/06/2024",
+    "club_name_at_valuation": "Valenciennes FC",
+    "club_id_at_valuation": "1423",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "f3918af1320f",
+    "player_id": "1191154",
+    "player_name": "Ibrahima Ba",
+    "valuation_amount": 100000,
+    "valuation_date": "08/10/2024",
+    "club_name_at_valuation": "FC Famalicão U23",
+    "club_id_at_valuation": "75337",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "420528b19a2c",
+    "player_id": "1191154",
+    "player_name": "Ibrahima Ba",
+    "valuation_amount": 500000,
+    "valuation_date": "30/05/2025",
+    "club_name_at_valuation": "FC Famalicão U23",
+    "club_id_at_valuation": "75337",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "6762e3cbbeb5",
+    "player_id": "1191154",
+    "player_name": "Ibrahima Ba",
+    "valuation_amount": 1000000,
+    "valuation_date": "30/09/2025",
+    "club_name_at_valuation": "FC Famalicão",
+    "club_id_at_valuation": "3329",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "104dd8f66c2f",
+    "player_id": "1191154",
+    "player_name": "Ibrahima Ba",
+    "valuation_amount": 1000000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "FC Famalicão",
+    "club_id_at_valuation": "3329",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5b118ec9bf49",
+    "player_id": "981397",
+    "player_name": "Zaïd Bafdili",
+    "valuation_amount": 50000,
+    "valuation_date": "25/10/2023",
+    "club_name_at_valuation": "Jong Genk",
+    "club_id_at_valuation": "46736",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "1cea627294b0",
+    "player_id": "981397",
+    "player_name": "Zaïd Bafdili",
+    "valuation_amount": 50000,
+    "valuation_date": "28/12/2023",
+    "club_name_at_valuation": "Jong Genk",
+    "club_id_at_valuation": "46736",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "e75e62ccf58e",
+    "player_id": "981397",
+    "player_name": "Zaïd Bafdili",
+    "valuation_amount": 150000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "Jong Genk",
+    "club_id_at_valuation": "46736",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "5df80acab7e0",
+    "player_id": "981397",
+    "player_name": "Zaïd Bafdili",
+    "valuation_amount": 300000,
+    "valuation_date": "15/10/2024",
+    "club_name_at_valuation": "Jong Genk",
+    "club_id_at_valuation": "46736",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "3957a7d0bff9",
+    "player_id": "981397",
+    "player_name": "Zaïd Bafdili",
+    "valuation_amount": 400000,
+    "valuation_date": "20/12/2024",
+    "club_name_at_valuation": "Jong Genk",
+    "club_id_at_valuation": "46736",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "3bed284f5183",
+    "player_id": "981397",
+    "player_name": "Zaïd Bafdili",
+    "valuation_amount": 350000,
+    "valuation_date": "24/04/2025",
+    "club_name_at_valuation": "Jong Genk",
+    "club_id_at_valuation": "46736",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "a1a9f837dbbe",
+    "player_id": "862416",
+    "player_name": "Bento Estrela",
+    "valuation_amount": 50000,
+    "valuation_date": "01/04/2022",
+    "club_name_at_valuation": "New York Red Bulls",
+    "club_id_at_valuation": "623",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "f01658982157",
+    "player_id": "862416",
+    "player_name": "Bento Estrela",
+    "valuation_amount": 50000,
+    "valuation_date": "18/08/2022",
+    "club_name_at_valuation": "New York Red Bulls",
+    "club_id_at_valuation": "623",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "170a655df9f7",
+    "player_id": "862416",
+    "player_name": "Bento Estrela",
+    "valuation_amount": 100000,
+    "valuation_date": "08/11/2022",
+    "club_name_at_valuation": "New York Red Bulls",
+    "club_id_at_valuation": "623",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "dab7ff44bf59",
+    "player_id": "862416",
+    "player_name": "Bento Estrela",
+    "valuation_amount": 100000,
+    "valuation_date": "22/08/2023",
+    "club_name_at_valuation": "New York Red Bulls",
+    "club_id_at_valuation": "623",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "47efd4a733c3",
+    "player_id": "862416",
+    "player_name": "Bento Estrela",
+    "valuation_amount": 100000,
+    "valuation_date": "18/12/2023",
+    "club_name_at_valuation": "New York Red Bulls",
+    "club_id_at_valuation": "623",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "f9e2aae43bce",
+    "player_id": "862416",
+    "player_name": "Bento Estrela",
+    "valuation_amount": 100000,
+    "valuation_date": "13/06/2024",
+    "club_name_at_valuation": "New York Red Bulls",
+    "club_id_at_valuation": "623",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "b568d39aa9ec",
+    "player_id": "862416",
+    "player_name": "Bento Estrela",
+    "valuation_amount": 0,
+    "valuation_date": "30/05/2025",
+    "club_name_at_valuation": "Sporting CP U23",
+    "club_id_at_valuation": "67909",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "9137f678e056",
+    "player_id": "1083412",
+    "player_name": "Daniel Costa",
+    "valuation_amount": 150000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Sporting CP U23",
+    "club_id_at_valuation": "67909",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "ed82f709f22a",
+    "player_id": "1076589",
+    "player_name": "Víctor Guzmán",
+    "valuation_amount": 25000,
+    "valuation_date": "20/11/2023",
+    "club_name_at_valuation": "Club Alianza Lima II",
+    "club_id_at_valuation": "21379",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "c6a48f6a08cd",
+    "player_id": "1076589",
+    "player_name": "Víctor Guzmán",
+    "valuation_amount": 75000,
+    "valuation_date": "28/05/2024",
+    "club_name_at_valuation": "Club Alianza Lima",
+    "club_id_at_valuation": "184",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "82214d7d7d44",
+    "player_id": "1076589",
+    "player_name": "Víctor Guzmán",
+    "valuation_amount": 75000,
+    "valuation_date": "07/11/2024",
+    "club_name_at_valuation": "Club Alianza Lima",
+    "club_id_at_valuation": "184",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "5ad3001f00f1",
+    "player_id": "1076589",
+    "player_name": "Víctor Guzmán",
+    "valuation_amount": 75000,
+    "valuation_date": "12/06/2025",
+    "club_name_at_valuation": "Club Alianza Lima",
+    "club_id_at_valuation": "184",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "fa75144a4751",
+    "player_id": "1076589",
+    "player_name": "Víctor Guzmán",
+    "valuation_amount": 75000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Sporting CP U23",
+    "club_id_at_valuation": "67909",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "c73fb7af85e1",
+    "player_id": "792376",
+    "player_name": "Adam Arvelo",
+    "valuation_amount": 25000,
+    "valuation_date": "30/12/2025",
+    "club_name_at_valuation": "UD Las Palmas",
+    "club_id_at_valuation": "472",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "03f469064179",
+    "player_id": "741535",
+    "player_name": "Marlon Júnior",
+    "valuation_amount": 325000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Portimonense SAD",
+    "club_id_at_valuation": "7378",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "f4cbd6502c59",
+    "player_id": "795061",
+    "player_name": "Francisco Canário",
+    "valuation_amount": 75000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Portimonense SAD",
+    "club_id_at_valuation": "7378",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "1b1e78082b47",
+    "player_id": "741492",
+    "player_name": "Francisco Silva",
+    "valuation_amount": 300000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Sporting CP B",
+    "club_id_at_valuation": "10949",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "3e8285b7c208",
+    "player_id": "1086722",
+    "player_name": "Rodrigo Dias",
+    "valuation_amount": 500000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Sporting CP B",
+    "club_id_at_valuation": "10949",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "ff67726c7692",
+    "player_id": "1294105",
+    "player_name": "Salvador Blopa",
+    "valuation_amount": 2500000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Sporting CP B",
+    "club_id_at_valuation": "10949",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "653e8f59740d",
+    "player_id": "884069",
+    "player_name": "Gustavo Ramalho",
+    "valuation_amount": 100000,
+    "valuation_date": "28/05/2021",
+    "club_name_at_valuation": "Fluminense FC U17",
+    "club_id_at_valuation": "15029",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "ca91724fd9cc",
+    "player_id": "884069",
+    "player_name": "Gustavo Ramalho",
+    "valuation_amount": 100000,
+    "valuation_date": "11/12/2023",
+    "club_name_at_valuation": "Fluminense FC U17",
+    "club_id_at_valuation": "15029",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "4afb228e81c4",
+    "player_id": "884069",
+    "player_name": "Gustavo Ramalho",
+    "valuation_amount": 100000,
+    "valuation_date": "28/03/2024",
+    "club_name_at_valuation": "Fluminense Football Club",
+    "club_id_at_valuation": "2462",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "519f9569fa03",
+    "player_id": "884069",
+    "player_name": "Gustavo Ramalho",
+    "valuation_amount": 100000,
+    "valuation_date": "17/06/2024",
+    "club_name_at_valuation": "Fluminense Football Club",
+    "club_id_at_valuation": "2462",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "0bf4dd330a70",
+    "player_id": "884069",
+    "player_name": "Gustavo Ramalho",
+    "valuation_amount": 100000,
+    "valuation_date": "09/12/2024",
+    "club_name_at_valuation": "Fluminense Football Club",
+    "club_id_at_valuation": "2462",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "394f4c15738e",
+    "player_id": "884069",
+    "player_name": "Gustavo Ramalho",
+    "valuation_amount": 100000,
+    "valuation_date": "06/06/2025",
+    "club_name_at_valuation": "Fluminense Football Club",
+    "club_id_at_valuation": "2462",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "c1fb7d6d9d39",
+    "player_id": "871382",
+    "player_name": "Bachirou Yaméogo",
+    "valuation_amount": 50000,
+    "valuation_date": "28/10/2022",
+    "club_name_at_valuation": "Grenoble Foot 38",
+    "club_id_at_valuation": "1290",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "15d419d4398f",
+    "player_id": "871382",
+    "player_name": "Bachirou Yaméogo",
+    "valuation_amount": 50000,
+    "valuation_date": "16/06/2023",
+    "club_name_at_valuation": "Grenoble Foot 38",
+    "club_id_at_valuation": "1290",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "d3c0d80727a7",
+    "player_id": "871382",
+    "player_name": "Bachirou Yaméogo",
+    "valuation_amount": 50000,
+    "valuation_date": "13/12/2023",
+    "club_name_at_valuation": "Grenoble Foot 38",
+    "club_id_at_valuation": "1290",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "76072635c459",
+    "player_id": "871382",
+    "player_name": "Bachirou Yaméogo",
+    "valuation_amount": 0,
+    "valuation_date": "11/06/2024",
+    "club_name_at_valuation": "Grenoble Foot 38",
+    "club_id_at_valuation": "1290",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "758f9d5daa78",
+    "player_id": "1093703",
+    "player_name": "Danilo",
+    "valuation_amount": 300000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SC União Torreense",
+    "club_id_at_valuation": "2432",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "40d75aee3f1b",
+    "player_id": "1086830",
+    "player_name": "Quintas",
+    "valuation_amount": 150000,
+    "valuation_date": "14/12/2023",
+    "club_name_at_valuation": "SCU Torreense Sub-23",
+    "club_id_at_valuation": "109718",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "d78ed25801e6",
+    "player_id": "1086830",
+    "player_name": "Quintas",
+    "valuation_amount": 0,
+    "valuation_date": "07/03/2024",
+    "club_name_at_valuation": "SCU Torreense Sub-23",
+    "club_id_at_valuation": "109718",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "720399a60a43",
+    "player_id": "625648",
+    "player_name": "Álex Carbonell",
+    "valuation_amount": 100000,
+    "valuation_date": "16/08/2021",
+    "club_name_at_valuation": "Real Sociedad C",
+    "club_id_at_valuation": "44822",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "c9ca6f6ba355",
+    "player_id": "625648",
+    "player_name": "Álex Carbonell",
+    "valuation_amount": 100000,
+    "valuation_date": "30/12/2021",
+    "club_name_at_valuation": "Real Sociedad C",
+    "club_id_at_valuation": "44822",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "3a3926ae6266",
+    "player_id": "625648",
+    "player_name": "Álex Carbonell",
+    "valuation_amount": 100000,
+    "valuation_date": "29/06/2022",
+    "club_name_at_valuation": "Real Sociedad C",
+    "club_id_at_valuation": "44822",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "1ed359bac1fb",
+    "player_id": "625648",
+    "player_name": "Álex Carbonell",
+    "valuation_amount": 100000,
+    "valuation_date": "29/12/2022",
+    "club_name_at_valuation": "Real Sociedad B",
+    "club_id_at_valuation": "9899",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "b1bd804eb334",
+    "player_id": "625648",
+    "player_name": "Álex Carbonell",
+    "valuation_amount": 100000,
+    "valuation_date": "30/06/2023",
+    "club_name_at_valuation": "Real Sociedad B",
+    "club_id_at_valuation": "9899",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "6f47ad581674",
+    "player_id": "625648",
+    "player_name": "Álex Carbonell",
+    "valuation_amount": 100000,
+    "valuation_date": "20/12/2023",
+    "club_name_at_valuation": "Sestao River",
+    "club_id_at_valuation": "13240",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "cd47a8a6f528",
+    "player_id": "625648",
+    "player_name": "Álex Carbonell",
+    "valuation_amount": 150000,
+    "valuation_date": "26/03/2024",
+    "club_name_at_valuation": "Sestao River",
+    "club_id_at_valuation": "13240",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "47ee30f22aff",
+    "player_id": "625648",
+    "player_name": "Álex Carbonell",
+    "valuation_amount": 200000,
+    "valuation_date": "24/06/2024",
+    "club_name_at_valuation": "Sestao River",
+    "club_id_at_valuation": "13240",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "016fd144ef23",
+    "player_id": "625648",
+    "player_name": "Álex Carbonell",
+    "valuation_amount": 200000,
+    "valuation_date": "18/12/2024",
+    "club_name_at_valuation": "SD Amorebieta",
+    "club_id_at_valuation": "16575",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "94c2cd336b45",
+    "player_id": "625648",
+    "player_name": "Álex Carbonell",
+    "valuation_amount": 200000,
+    "valuation_date": "25/06/2025",
+    "club_name_at_valuation": "SD Amorebieta",
+    "club_id_at_valuation": "16575",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "0d1846d8bfdf",
+    "player_id": "625648",
+    "player_name": "Álex Carbonell",
+    "valuation_amount": 0,
+    "valuation_date": "16/09/2025",
+    "club_name_at_valuation": "SCU Torreense Sub-23",
+    "club_id_at_valuation": "109718",
+    "age_at_valuation": 0
+  },
+  {
+    "valuation_id": "28720f9f4bc3",
+    "player_id": "1064414",
+    "player_name": "Javirro",
+    "valuation_amount": 25000,
+    "valuation_date": "30/06/2023",
+    "club_name_at_valuation": "Cádiz CF U19",
+    "club_id_at_valuation": "16075",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "34a6a056577d",
+    "player_id": "1064414",
+    "player_name": "Javirro",
+    "valuation_amount": 25000,
+    "valuation_date": "20/12/2023",
+    "club_name_at_valuation": "Cádiz CF Mirandilla",
+    "club_id_at_valuation": "11669",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "4cd3309a9782",
+    "player_id": "1064414",
+    "player_name": "Javirro",
+    "valuation_amount": 25000,
+    "valuation_date": "24/06/2024",
+    "club_name_at_valuation": "Cádiz CF Mirandilla",
+    "club_id_at_valuation": "11669",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "3e91e83e5bbb",
+    "player_id": "1064414",
+    "player_name": "Javirro",
+    "valuation_amount": 50000,
+    "valuation_date": "18/12/2024",
+    "club_name_at_valuation": "Cádiz CF Mirandilla",
+    "club_id_at_valuation": "11669",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "079964f582ea",
+    "player_id": "1064414",
+    "player_name": "Javirro",
+    "valuation_amount": 50000,
+    "valuation_date": "25/06/2025",
+    "club_name_at_valuation": "Cádiz CF Mirandilla",
+    "club_id_at_valuation": "11669",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e257ddecc918",
+    "player_id": "1043547",
+    "player_name": "Kahuan",
+    "valuation_amount": 25000,
+    "valuation_date": "20/09/2023",
+    "club_name_at_valuation": "MFK Karvina B",
+    "club_id_at_valuation": "56737",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "db227a2d812a",
+    "player_id": "1043547",
+    "player_name": "Kahuan",
+    "valuation_amount": 75000,
+    "valuation_date": "27/03/2024",
+    "club_name_at_valuation": "MFK Karvina B",
+    "club_id_at_valuation": "56737",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "e25067c81603",
+    "player_id": "1043547",
+    "player_name": "Kahuan",
+    "valuation_amount": 75000,
+    "valuation_date": "05/06/2024",
+    "club_name_at_valuation": "MFK Karvina B",
+    "club_id_at_valuation": "56737",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "cc60dcd63294",
+    "player_id": "1043547",
+    "player_name": "Kahuan",
+    "valuation_amount": 325000,
+    "valuation_date": "20/12/2024",
+    "club_name_at_valuation": "MFK Karvina",
+    "club_id_at_valuation": "13726",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5ac71e76b542",
+    "player_id": "1043547",
+    "player_name": "Kahuan",
+    "valuation_amount": 325000,
+    "valuation_date": "17/06/2025",
+    "club_name_at_valuation": "MFK Karvina",
+    "club_id_at_valuation": "13726",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "7b534da88ac1",
+    "player_id": "861716",
+    "player_name": "Hollman McCormick",
+    "valuation_amount": 50000,
+    "valuation_date": "05/09/2022",
+    "club_name_at_valuation": "Tigres FC",
+    "club_id_at_valuation": "17915",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "0d6aea21ea43",
+    "player_id": "861716",
+    "player_name": "Hollman McCormick",
+    "valuation_amount": 50000,
+    "valuation_date": "30/12/2022",
+    "club_name_at_valuation": "Tigres FC",
+    "club_id_at_valuation": "17915",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "e124bedda195",
+    "player_id": "861716",
+    "player_name": "Hollman McCormick",
+    "valuation_amount": 0,
+    "valuation_date": "13/11/2023",
+    "club_name_at_valuation": "Independiente Santa Fe U20",
+    "club_id_at_valuation": "22896",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "f85dd0b708af",
+    "player_id": "861716",
+    "player_name": "Hollman McCormick",
+    "valuation_amount": 10000,
+    "valuation_date": "25/09/2025",
+    "club_name_at_valuation": "FC Van",
+    "club_id_at_valuation": "74661",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "497857d69d42",
+    "player_id": "861716",
+    "player_name": "Hollman McCormick",
+    "valuation_amount": 10000,
+    "valuation_date": "09/12/2025",
+    "club_name_at_valuation": "FC Van",
+    "club_id_at_valuation": "74661",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "e54a0e504ac9",
+    "player_id": "1236959",
+    "player_name": "Tomazinho",
+    "valuation_amount": 25000,
+    "valuation_date": "16/10/2025",
+    "club_name_at_valuation": "UD Almería B",
+    "club_id_at_valuation": "11986",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "10addba05eb6",
+    "player_id": "1236959",
+    "player_name": "Tomazinho",
+    "valuation_amount": 25000,
+    "valuation_date": "30/12/2025",
+    "club_name_at_valuation": "UD Almería B",
+    "club_id_at_valuation": "11986",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "d67a5c7caa1b",
+    "player_id": "688016",
+    "player_name": "Johan Bengtsson",
+    "valuation_amount": 50000,
+    "valuation_date": "25/10/2020",
+    "club_name_at_valuation": "GIF Sundsvall",
+    "club_id_at_valuation": "2843",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "19a40e6e5d55",
+    "player_id": "688016",
+    "player_name": "Johan Bengtsson",
+    "valuation_amount": 175000,
+    "valuation_date": "05/07/2021",
+    "club_name_at_valuation": "GIF Sundsvall",
+    "club_id_at_valuation": "2843",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "a16c20a845e2",
+    "player_id": "688016",
+    "player_name": "Johan Bengtsson",
+    "valuation_amount": 150000,
+    "valuation_date": "29/12/2021",
+    "club_name_at_valuation": "GIF Sundsvall",
+    "club_id_at_valuation": "2843",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "81ee06988907",
+    "player_id": "688016",
+    "player_name": "Johan Bengtsson",
+    "valuation_amount": 200000,
+    "valuation_date": "24/06/2022",
+    "club_name_at_valuation": "GIF Sundsvall",
+    "club_id_at_valuation": "2843",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "6cb8ca742cc6",
+    "player_id": "688016",
+    "player_name": "Johan Bengtsson",
+    "valuation_amount": 150000,
+    "valuation_date": "02/09/2022",
+    "club_name_at_valuation": "GIF Sundsvall",
+    "club_id_at_valuation": "2843",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "495a50c38187",
+    "player_id": "688016",
+    "player_name": "Johan Bengtsson",
+    "valuation_amount": 150000,
+    "valuation_date": "14/12/2022",
+    "club_name_at_valuation": "GIF Sundsvall",
+    "club_id_at_valuation": "2843",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "2786c05059a7",
+    "player_id": "688016",
+    "player_name": "Johan Bengtsson",
+    "valuation_amount": 300000,
+    "valuation_date": "27/06/2023",
+    "club_name_at_valuation": "GIF Sundsvall",
+    "club_id_at_valuation": "2843",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "65a43cdd7cd4",
+    "player_id": "688016",
+    "player_name": "Johan Bengtsson",
+    "valuation_amount": 225000,
+    "valuation_date": "08/12/2023",
+    "club_name_at_valuation": "GIF Sundsvall",
+    "club_id_at_valuation": "2843",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "a7068b03fa4d",
+    "player_id": "688016",
+    "player_name": "Johan Bengtsson",
+    "valuation_amount": 200000,
+    "valuation_date": "12/07/2024",
+    "club_name_at_valuation": "GIF Sundsvall",
+    "club_id_at_valuation": "2843",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "a85ee9777872",
+    "player_id": "688016",
+    "player_name": "Johan Bengtsson",
+    "valuation_amount": 300000,
+    "valuation_date": "27/12/2024",
+    "club_name_at_valuation": "GIF Sundsvall",
+    "club_id_at_valuation": "2843",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "ad760ef3f3d7",
+    "player_id": "688016",
+    "player_name": "Johan Bengtsson",
+    "valuation_amount": 0,
+    "valuation_date": "13/08/2025",
+    "club_name_at_valuation": "IF Karlstad Fotboll",
+    "club_id_at_valuation": "78287",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "6ac01b4fa89b",
+    "player_id": "1084065",
+    "player_name": "Arielson",
+    "valuation_amount": 150000,
+    "valuation_date": "25/07/2023",
+    "club_name_at_valuation": "Cruzeiro EC U20",
+    "club_id_at_valuation": "16658",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "197215a37716",
+    "player_id": "1084065",
+    "player_name": "Arielson",
+    "valuation_amount": 300000,
+    "valuation_date": "14/09/2023",
+    "club_name_at_valuation": "Polissya Zhytomyr",
+    "club_id_at_valuation": "53646",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "cf2b8118fbe9",
+    "player_id": "1084065",
+    "player_name": "Arielson",
+    "valuation_amount": 500000,
+    "valuation_date": "11/12/2023",
+    "club_name_at_valuation": "Polissya Zhytomyr",
+    "club_id_at_valuation": "53646",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e37c1d65914b",
+    "player_id": "1084065",
+    "player_name": "Arielson",
+    "valuation_amount": 350000,
+    "valuation_date": "06/06/2024",
+    "club_name_at_valuation": "Karpaty Lviv",
+    "club_id_at_valuation": "85465",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "b337526a7574",
+    "player_id": "1084065",
+    "player_name": "Arielson",
+    "valuation_amount": 350000,
+    "valuation_date": "30/05/2025",
+    "club_name_at_valuation": "SCU Torreense Sub-23",
+    "club_id_at_valuation": "109718",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5289f017b1fc",
+    "player_id": "1084065",
+    "player_name": "Arielson",
+    "valuation_amount": 300000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SC União Torreense",
+    "club_id_at_valuation": "2432",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "6e09b979d700",
+    "player_id": "964705",
+    "player_name": "Silas Bjerre",
+    "valuation_amount": 150000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "SCU Torreense Sub-23",
+    "club_id_at_valuation": "109718",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "215500844437",
+    "player_id": "964705",
+    "player_name": "Silas Bjerre",
+    "valuation_amount": 100000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "SC União Torreense",
+    "club_id_at_valuation": "2432",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "ec604fbb217a",
+    "player_id": "1002856",
+    "player_name": "Pedro Prado",
+    "valuation_amount": 25000,
+    "valuation_date": "05/09/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "0",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "15551cefb424",
+    "player_id": "1002856",
+    "player_name": "Pedro Prado",
+    "valuation_amount": 25000,
+    "valuation_date": "30/12/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "0",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "edbf42e0238f",
+    "player_id": "1002856",
+    "player_name": "Pedro Prado",
+    "valuation_amount": 0,
+    "valuation_date": "17/01/2024",
+    "club_name_at_valuation": "SCU Torreense Sub-23",
+    "club_id_at_valuation": "109718",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "a078aee90013",
+    "player_id": "1044871",
+    "player_name": "Vasco Sousa",
+    "valuation_amount": 100000,
+    "valuation_date": "01/11/2022",
+    "club_name_at_valuation": "FC Paços de Ferreira U19",
+    "club_id_at_valuation": "15565",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "848b88f6f1d6",
+    "player_id": "1044871",
+    "player_name": "Vasco Sousa",
+    "valuation_amount": 100000,
+    "valuation_date": "16/06/2023",
+    "club_name_at_valuation": "FC Paços de Ferreira U19",
+    "club_id_at_valuation": "15565",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "9ea21c9935c5",
+    "player_id": "1044871",
+    "player_name": "Vasco Sousa",
+    "valuation_amount": 0,
+    "valuation_date": "19/10/2023",
+    "club_name_at_valuation": "Amora FC",
+    "club_id_at_valuation": "1414",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "6847782d5c62",
+    "player_id": "1044871",
+    "player_name": "Vasco Sousa",
+    "valuation_amount": 150000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "SCU Torreense Sub-23",
+    "club_id_at_valuation": "109718",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "56d976bc564c",
+    "player_id": "1044871",
+    "player_name": "Vasco Sousa",
+    "valuation_amount": 100000,
+    "valuation_date": "30/12/2025",
+    "club_name_at_valuation": "SD Ponferradina",
+    "club_id_at_valuation": "4032",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "f4f868dff493",
+    "player_id": "983500",
+    "player_name": "David Kaiki",
+    "valuation_amount": 350000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "Damac FC",
+    "club_id_at_valuation": "50532",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "ac1b337aca46",
+    "player_id": "1061742",
+    "player_name": "Rodrigo Mendes",
+    "valuation_amount": 175000,
+    "valuation_date": "25/06/2024",
+    "club_name_at_valuation": "Torino Primavera",
+    "club_id_at_valuation": "12130",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "26599bcfcfee",
+    "player_id": "1061742",
+    "player_name": "Rodrigo Mendes",
+    "valuation_amount": 300000,
+    "valuation_date": "27/06/2025",
+    "club_name_at_valuation": "Torino Primavera",
+    "club_id_at_valuation": "12130",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "476920dedcdc",
+    "player_id": "1191944",
+    "player_name": "Andrey Carvalho",
+    "valuation_amount": 50000,
+    "valuation_date": "27/11/2023",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "0",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "3a67be1bd4b3",
+    "player_id": "1191944",
+    "player_name": "Andrey Carvalho",
+    "valuation_amount": 100000,
+    "valuation_date": "28/03/2024",
+    "club_name_at_valuation": "Athletico Paranaense U20",
+    "club_id_at_valuation": "15038",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "4c57eea7bcde",
+    "player_id": "1191944",
+    "player_name": "Andrey Carvalho",
+    "valuation_amount": 0,
+    "valuation_date": "28/03/2025",
+    "club_name_at_valuation": "Athletico Paranaense U20",
+    "club_id_at_valuation": "15038",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "d33a81ded70a",
+    "player_id": "965613",
+    "player_name": "Isaac",
+    "valuation_amount": 100000,
+    "valuation_date": "19/08/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "0",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "fb99840f2c10",
+    "player_id": "965613",
+    "player_name": "Isaac",
+    "valuation_amount": 100000,
+    "valuation_date": "14/11/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "0",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "6e6dd5d3e2e9",
+    "player_id": "965613",
+    "player_name": "Isaac",
+    "valuation_amount": 100000,
+    "valuation_date": "17/01/2024",
+    "club_name_at_valuation": "CD Santa Clara U23",
+    "club_id_at_valuation": "110983",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "32924aa6fdb3",
+    "player_id": "965613",
+    "player_name": "Isaac",
+    "valuation_amount": 0,
+    "valuation_date": "07/03/2024",
+    "club_name_at_valuation": "CD Santa Clara U23",
+    "club_id_at_valuation": "110983",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "50320154496e",
+    "player_id": "1302176",
+    "player_name": "Winilson Lopes",
+    "valuation_amount": 50000,
+    "valuation_date": "02/10/2025",
+    "club_name_at_valuation": "Sporting CP U23",
+    "club_id_at_valuation": "67909",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "311465c3389c",
+    "player_id": "743592",
+    "player_name": "Daniel da Silva",
+    "valuation_amount": 800000,
+    "valuation_date": "25/07/2023",
+    "club_name_at_valuation": "SE Palmeiras São Paulo U20",
+    "club_id_at_valuation": "14807",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "c4bf4a7aa03e",
+    "player_id": "743592",
+    "player_name": "Daniel da Silva",
+    "valuation_amount": 800000,
+    "valuation_date": "19/07/2024",
+    "club_name_at_valuation": "SE Palmeiras São Paulo U20",
+    "club_id_at_valuation": "14807",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "92f0b6e92c34",
+    "player_id": "743592",
+    "player_name": "Daniel da Silva",
+    "valuation_amount": 800000,
+    "valuation_date": "31/03/2025",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "d35be7771d9c",
+    "player_id": "743592",
+    "player_name": "Daniel da Silva",
+    "valuation_amount": 0,
+    "valuation_date": "16/09/2025",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "386d3838b00e",
+    "player_id": "1074124",
+    "player_name": "Davis",
+    "valuation_amount": 100000,
+    "valuation_date": "06/06/2024",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "1d73139513bf",
+    "player_id": "1074124",
+    "player_name": "Davis",
+    "valuation_amount": 175000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Portimonense SAD",
+    "club_id_at_valuation": "7378",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "66482792649f",
+    "player_id": "1074124",
+    "player_name": "Davis",
+    "valuation_amount": 175000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Portimonense SAD",
+    "club_id_at_valuation": "7378",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "a13c754c64eb",
+    "player_id": "1074124",
+    "player_name": "Davis",
+    "valuation_amount": 0,
+    "valuation_date": "16/09/2025",
+    "club_name_at_valuation": "AD Fafe",
+    "club_id_at_valuation": "3326",
+    "age_at_valuation": 0
+  },
+  {
+    "valuation_id": "b24b789ea281",
+    "player_id": "1056441",
+    "player_name": "Miguel Pires",
+    "valuation_amount": 125000,
+    "valuation_date": "14/12/2023",
+    "club_name_at_valuation": "CD Santa Clara U23",
+    "club_id_at_valuation": "110983",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "a2992714c451",
+    "player_id": "1056441",
+    "player_name": "Miguel Pires",
+    "valuation_amount": 0,
+    "valuation_date": "07/03/2024",
+    "club_name_at_valuation": "FC Alverca",
+    "club_id_at_valuation": "2521",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "acfa4878e92b",
+    "player_id": "1056441",
+    "player_name": "Miguel Pires",
+    "valuation_amount": 150000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "FC Alverca",
+    "club_id_at_valuation": "2521",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "6442742f3a84",
+    "player_id": "1056441",
+    "player_name": "Miguel Pires",
+    "valuation_amount": 225000,
+    "valuation_date": "29/10/2024",
+    "club_name_at_valuation": "FC Alverca",
+    "club_id_at_valuation": "2521",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "fa099a64e46e",
+    "player_id": "1056441",
+    "player_name": "Miguel Pires",
+    "valuation_amount": 600000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "FC Alverca",
+    "club_id_at_valuation": "2521",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "298b318b7ba3",
+    "player_id": "1056441",
+    "player_name": "Miguel Pires",
+    "valuation_amount": 1100000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "FC Alverca",
+    "club_id_at_valuation": "2521",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "7151fd237748",
+    "player_id": "1056441",
+    "player_name": "Miguel Pires",
+    "valuation_amount": 800000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "UD Leiria",
+    "club_id_at_valuation": "2639",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "d1060f7ed66c",
+    "player_id": "916700",
+    "player_name": "Gabriel Morais",
+    "valuation_amount": 50000,
+    "valuation_date": "25/11/2021",
+    "club_name_at_valuation": "North Texas SC",
+    "club_id_at_valuation": "71021",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "ba92697e3405",
+    "player_id": "916700",
+    "player_name": "Gabriel Morais",
+    "valuation_amount": 0,
+    "valuation_date": "17/01/2024",
+    "club_name_at_valuation": "CD Santa Clara U23",
+    "club_id_at_valuation": "110983",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "4daf74c0e35b",
+    "player_id": "1066521",
+    "player_name": "Kauan",
+    "valuation_amount": 100000,
+    "valuation_date": "14/11/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "0",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e2a4bc3ea97d",
+    "player_id": "1066521",
+    "player_name": "Kauan",
+    "valuation_amount": 0,
+    "valuation_date": "17/01/2024",
+    "club_name_at_valuation": "CD Santa Clara U23",
+    "club_id_at_valuation": "110983",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "4745816f67ab",
+    "player_id": "1066521",
+    "player_name": "Kauan",
+    "valuation_amount": 75000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "FC Alverca",
+    "club_id_at_valuation": "2521",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "4debfd449631",
+    "player_id": "1066521",
+    "player_name": "Kauan",
+    "valuation_amount": 0,
+    "valuation_date": "18/03/2025",
+    "club_name_at_valuation": "UD Santarém",
+    "club_id_at_valuation": "74155",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "7788cf26d7d8",
+    "player_id": "1066521",
+    "player_name": "Kauan",
+    "valuation_amount": 350000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "FC Paços de Ferreira",
+    "club_id_at_valuation": "2995",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "300bdf4ebdb4",
+    "player_id": "863689",
+    "player_name": "Maycon",
+    "valuation_amount": 25000,
+    "valuation_date": "16/10/2025",
+    "club_name_at_valuation": "SD Sarriana",
+    "club_id_at_valuation": "78623",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "c8741c45881d",
+    "player_id": "863689",
+    "player_name": "Maycon",
+    "valuation_amount": 50000,
+    "valuation_date": "30/12/2025",
+    "club_name_at_valuation": "SD Sarriana",
+    "club_id_at_valuation": "78623",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "a3a2c4c630a5",
+    "player_id": "574769",
+    "player_name": "Alejandro Viniegra",
+    "valuation_amount": 25000,
+    "valuation_date": "10/04/2021",
+    "club_name_at_valuation": "North Texas SC",
+    "club_id_at_valuation": "71021",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "ed04a4db1b09",
+    "player_id": "574769",
+    "player_name": "Alejandro Viniegra",
+    "valuation_amount": 50000,
+    "valuation_date": "25/11/2021",
+    "club_name_at_valuation": "North Texas SC",
+    "club_id_at_valuation": "71021",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "799a3983d7c4",
+    "player_id": "574769",
+    "player_name": "Alejandro Viniegra",
+    "valuation_amount": 50000,
+    "valuation_date": "18/07/2023",
+    "club_name_at_valuation": "Ituano Futebol Clube (SP)",
+    "club_id_at_valuation": "4773",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "9a32010e9f26",
+    "player_id": "574769",
+    "player_name": "Alejandro Viniegra",
+    "valuation_amount": 50000,
+    "valuation_date": "27/11/2023",
+    "club_name_at_valuation": "Ituano Futebol Clube (SP)",
+    "club_id_at_valuation": "4773",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "a4ff504d6ba1",
+    "player_id": "574769",
+    "player_name": "Alejandro Viniegra",
+    "valuation_amount": 50000,
+    "valuation_date": "18/04/2024",
+    "club_name_at_valuation": "Clube de Regatas Brasil (AL)",
+    "club_id_at_valuation": "11449",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "32507db08ba7",
+    "player_id": "574769",
+    "player_name": "Alejandro Viniegra",
+    "valuation_amount": 0,
+    "valuation_date": "27/09/2024",
+    "club_name_at_valuation": "CD Santa Clara U23",
+    "club_id_at_valuation": "110983",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "0737f219f97c",
+    "player_id": "574769",
+    "player_name": "Alejandro Viniegra",
+    "valuation_amount": 25000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Tlaxcala FC",
+    "club_id_at_valuation": "42781",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "8951d36d6701",
+    "player_id": "427107",
+    "player_name": "Rodolfo Cardoso",
+    "valuation_amount": 25000,
+    "valuation_date": "30/09/2016",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "9770fe1b3ea4",
+    "player_id": "427107",
+    "player_name": "Rodolfo Cardoso",
+    "valuation_amount": 25000,
+    "valuation_date": "30/06/2017",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "33bedc31e30b",
+    "player_id": "427107",
+    "player_name": "Rodolfo Cardoso",
+    "valuation_amount": 25000,
+    "valuation_date": "08/09/2017",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "2000dc8a9ece",
+    "player_id": "427107",
+    "player_name": "Rodolfo Cardoso",
+    "valuation_amount": 0,
+    "valuation_date": "15/02/2018",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "bb82acf6eea4",
+    "player_id": "427107",
+    "player_name": "Rodolfo Cardoso",
+    "valuation_amount": 50000,
+    "valuation_date": "23/02/2018",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "f20e9a9f77ba",
+    "player_id": "427107",
+    "player_name": "Rodolfo Cardoso",
+    "valuation_amount": 50000,
+    "valuation_date": "29/06/2018",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "1750ef36d2a8",
+    "player_id": "427107",
+    "player_name": "Rodolfo Cardoso",
+    "valuation_amount": 100000,
+    "valuation_date": "17/08/2020",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "aec74b1ae896",
+    "player_id": "427107",
+    "player_name": "Rodolfo Cardoso",
+    "valuation_amount": 100000,
+    "valuation_date": "28/01/2021",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "6df79f07774a",
+    "player_id": "427107",
+    "player_name": "Rodolfo Cardoso",
+    "valuation_amount": 100000,
+    "valuation_date": "21/05/2021",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "e734e952ce6a",
+    "player_id": "427107",
+    "player_name": "Rodolfo Cardoso",
+    "valuation_amount": 100000,
+    "valuation_date": "27/12/2021",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "9334e0b18432",
+    "player_id": "427107",
+    "player_name": "Rodolfo Cardoso",
+    "valuation_amount": 100000,
+    "valuation_date": "31/05/2022",
+    "club_name_at_valuation": "CD Santa Clara",
+    "club_id_at_valuation": "2423",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "5f43248f9dc3",
+    "player_id": "427107",
+    "player_name": "Rodolfo Cardoso",
+    "valuation_amount": 0,
+    "valuation_date": "17/01/2024",
+    "club_name_at_valuation": "CD Santa Clara U23",
+    "club_id_at_valuation": "110983",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "a3cefae4168f",
+    "player_id": "535676",
+    "player_name": "Sérgio Dutra",
+    "valuation_amount": 100000,
+    "valuation_date": "28/12/2022",
+    "club_name_at_valuation": "Moreirense FC",
+    "club_id_at_valuation": "979",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "30271b51cb39",
+    "player_id": "535676",
+    "player_name": "Sérgio Dutra",
+    "valuation_amount": 125000,
+    "valuation_date": "28/06/2023",
+    "club_name_at_valuation": "Moreirense FC",
+    "club_id_at_valuation": "979",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "8b47575b908a",
+    "player_id": "535676",
+    "player_name": "Sérgio Dutra",
+    "valuation_amount": 0,
+    "valuation_date": "07/03/2024",
+    "club_name_at_valuation": "CD Santa Clara U23",
+    "club_id_at_valuation": "110983",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "74a5d5c4c19d",
+    "player_id": "764861",
+    "player_name": "André Picornell",
+    "valuation_amount": 50000,
+    "valuation_date": "02/09/2022",
+    "club_name_at_valuation": "Djurgårdens IF U19",
+    "club_id_at_valuation": "8858",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "47d7f56de3f5",
+    "player_id": "764861",
+    "player_name": "André Picornell",
+    "valuation_amount": 100000,
+    "valuation_date": "14/12/2022",
+    "club_name_at_valuation": "Djurgårdens IF U19",
+    "club_id_at_valuation": "8858",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "fecfad75f9da",
+    "player_id": "764861",
+    "player_name": "André Picornell",
+    "valuation_amount": 200000,
+    "valuation_date": "27/06/2023",
+    "club_name_at_valuation": "Djurgårdens IF",
+    "club_id_at_valuation": "1044",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "8bdbd1283874",
+    "player_id": "764861",
+    "player_name": "André Picornell",
+    "valuation_amount": 200000,
+    "valuation_date": "08/12/2023",
+    "club_name_at_valuation": "Djurgårdens IF",
+    "club_id_at_valuation": "1044",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e33c09caffed",
+    "player_id": "764861",
+    "player_name": "André Picornell",
+    "valuation_amount": 0,
+    "valuation_date": "27/09/2024",
+    "club_name_at_valuation": "Gil Vicente U23",
+    "club_id_at_valuation": "99764",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "653296bd6476",
+    "player_id": "1173054",
+    "player_name": "Diogo Pereira",
+    "valuation_amount": 100000,
+    "valuation_date": "30/05/2025",
+    "club_name_at_valuation": "Gil Vicente U23",
+    "club_id_at_valuation": "99764",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "70e78d66abd9",
+    "player_id": "1173054",
+    "player_name": "Diogo Pereira",
+    "valuation_amount": 0,
+    "valuation_date": "16/09/2025",
+    "club_name_at_valuation": "Gil Vicente U23",
+    "club_id_at_valuation": "99764",
+    "age_at_valuation": 0
+  },
+  {
+    "valuation_id": "47ebb96d65f5",
+    "player_id": "1089809",
+    "player_name": "Gonçalo Maia",
+    "valuation_amount": 100000,
+    "valuation_date": "30/09/2025",
+    "club_name_at_valuation": "Gil Vicente U23",
+    "club_id_at_valuation": "99764",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "d2a6871d335a",
+    "player_id": "1089809",
+    "player_name": "Gonçalo Maia",
+    "valuation_amount": 100000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "Gil Vicente U23",
+    "club_id_at_valuation": "99764",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "b9e17ba9563f",
+    "player_id": "1076584",
+    "player_name": "Bassco Soyer",
+    "valuation_amount": 75000,
+    "valuation_date": "04/09/2023",
+    "club_name_at_valuation": "Club Alianza Lima II",
+    "club_id_at_valuation": "21379",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "9e3581b87335",
+    "player_id": "1076584",
+    "player_name": "Bassco Soyer",
+    "valuation_amount": 75000,
+    "valuation_date": "20/11/2023",
+    "club_name_at_valuation": "Club Alianza Lima II",
+    "club_id_at_valuation": "21379",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "848a1ac6460c",
+    "player_id": "1076584",
+    "player_name": "Bassco Soyer",
+    "valuation_amount": 75000,
+    "valuation_date": "28/05/2024",
+    "club_name_at_valuation": "Club Alianza Lima",
+    "club_id_at_valuation": "184",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "aee1a3d07012",
+    "player_id": "1076584",
+    "player_name": "Bassco Soyer",
+    "valuation_amount": 100000,
+    "valuation_date": "07/11/2024",
+    "club_name_at_valuation": "Club Alianza Lima",
+    "club_id_at_valuation": "184",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "d0716a2bbb23",
+    "player_id": "1076584",
+    "player_name": "Bassco Soyer",
+    "valuation_amount": 200000,
+    "valuation_date": "12/06/2025",
+    "club_name_at_valuation": "Club Alianza Lima",
+    "club_id_at_valuation": "184",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "175d014af962",
+    "player_id": "1037592",
+    "player_name": "Ilyas Abil",
+    "valuation_amount": 10000,
+    "valuation_date": "15/11/2022",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "0",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "e9d660e243d4",
+    "player_id": "1037592",
+    "player_name": "Ilyas Abil",
+    "valuation_amount": 50000,
+    "valuation_date": "06/06/2023",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "0",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "203635f1959a",
+    "player_id": "1037592",
+    "player_name": "Ilyas Abil",
+    "valuation_amount": 50000,
+    "valuation_date": "15/11/2023",
+    "club_name_at_valuation": "",
+    "club_id_at_valuation": "0",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "ba725945ea1f",
+    "player_id": "1037592",
+    "player_name": "Ilyas Abil",
+    "valuation_amount": 50000,
+    "valuation_date": "14/11/2024",
+    "club_name_at_valuation": "Gil Vicente FC U19",
+    "club_id_at_valuation": "15567",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "e466fb5a5cca",
+    "player_id": "1037592",
+    "player_name": "Ilyas Abil",
+    "valuation_amount": 50000,
+    "valuation_date": "30/05/2025",
+    "club_name_at_valuation": "Gil Vicente FC U19",
+    "club_id_at_valuation": "15567",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "fb7c701c2016",
+    "player_id": "1037592",
+    "player_name": "Ilyas Abil",
+    "valuation_amount": 0,
+    "valuation_date": "21/10/2025",
+    "club_name_at_valuation": "Gil Vicente U23",
+    "club_id_at_valuation": "99764",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "84c7e24d21d4",
+    "player_id": "975202",
+    "player_name": "James Rodrigues",
+    "valuation_amount": 25000,
+    "valuation_date": "13/06/2023",
+    "club_name_at_valuation": "Venezia Primavera",
+    "club_id_at_valuation": "17257",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "20b7e1b7eb0a",
+    "player_id": "975202",
+    "player_name": "James Rodrigues",
+    "valuation_amount": 25000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "Venezia Primavera",
+    "club_id_at_valuation": "17257",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "0d5e06241215",
+    "player_id": "975202",
+    "player_name": "James Rodrigues",
+    "valuation_amount": 0,
+    "valuation_date": "25/09/2024",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "e30fcad88a05",
+    "player_id": "975202",
+    "player_name": "James Rodrigues",
+    "valuation_amount": 25000,
+    "valuation_date": "19/06/2025",
+    "club_name_at_valuation": "Jeunesse Esch",
+    "club_id_at_valuation": "1257",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "e391f4b8f472",
+    "player_id": "975202",
+    "player_name": "James Rodrigues",
+    "valuation_amount": 0,
+    "valuation_date": "24/07/2025",
+    "club_name_at_valuation": "Gil Vicente U23",
+    "club_id_at_valuation": "99764",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "3476f81970e2",
+    "player_id": "1292918",
+    "player_name": "Mario Genovés",
+    "valuation_amount": 25000,
+    "valuation_date": "30/12/2025",
+    "club_name_at_valuation": "Torrent CF",
+    "club_id_at_valuation": "67509",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "aeeaa7746e37",
+    "player_id": "670716",
+    "player_name": "Luís Martins",
+    "valuation_amount": 25000,
+    "valuation_date": "16/10/2025",
+    "club_name_at_valuation": "UD Almería B",
+    "club_id_at_valuation": "11986",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "349c20ba3a8c",
+    "player_id": "670716",
+    "player_name": "Luís Martins",
+    "valuation_amount": 25000,
+    "valuation_date": "30/12/2025",
+    "club_name_at_valuation": "UD Almería B",
+    "club_id_at_valuation": "11986",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "bfab7c1472f1",
+    "player_id": "1095317",
+    "player_name": "Jucélio",
+    "valuation_amount": 100000,
+    "valuation_date": "08/03/2024",
+    "club_name_at_valuation": "Gil Vicente U23",
+    "club_id_at_valuation": "99764",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "837d26a0e84f",
+    "player_id": "1095317",
+    "player_name": "Jucélio",
+    "valuation_amount": 0,
+    "valuation_date": "27/09/2024",
+    "club_name_at_valuation": "Gil Vicente U23",
+    "club_id_at_valuation": "99764",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "90df54344641",
+    "player_id": "1183411",
+    "player_name": "Karel Pérez",
+    "valuation_amount": 100000,
+    "valuation_date": "25/09/2025",
+    "club_name_at_valuation": "SC Vianense",
+    "club_id_at_valuation": "7211",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "9488fa8a5aa3",
+    "player_id": "936483",
+    "player_name": "Amadu Baldé",
+    "valuation_amount": 200000,
+    "valuation_date": "20/09/2021",
+    "club_name_at_valuation": "Real SC",
+    "club_id_at_valuation": "11085",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "42073bba99b2",
+    "player_id": "936483",
+    "player_name": "Amadu Baldé",
+    "valuation_amount": 0,
+    "valuation_date": "04/10/2022",
+    "club_name_at_valuation": "Sporting CP U19",
+    "club_id_at_valuation": "10283",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "3cee09bfdf24",
+    "player_id": "936483",
+    "player_name": "Amadu Baldé",
+    "valuation_amount": 125000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Leixões SC U23",
+    "club_id_at_valuation": "75123",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "e1e3447eb815",
+    "player_id": "843084",
+    "player_name": "Rajani",
+    "valuation_amount": 100000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Leixões SC U23",
+    "club_id_at_valuation": "75123",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "ebb1e9add19a",
+    "player_id": "588296",
+    "player_name": "Fábio Matos",
+    "valuation_amount": 75000,
+    "valuation_date": "12/02/2019",
+    "club_name_at_valuation": "Leixões SC U23",
+    "club_id_at_valuation": "75123",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "1e2d8d167b7f",
+    "player_id": "588296",
+    "player_name": "Fábio Matos",
+    "valuation_amount": 75000,
+    "valuation_date": "29/06/2019",
+    "club_name_at_valuation": "Leixões SC U23",
+    "club_id_at_valuation": "75123",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "b27d1014402c",
+    "player_id": "588296",
+    "player_name": "Fábio Matos",
+    "valuation_amount": 75000,
+    "valuation_date": "31/12/2019",
+    "club_name_at_valuation": "Leixões SC U23",
+    "club_id_at_valuation": "75123",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "282920fa90e8",
+    "player_id": "588296",
+    "player_name": "Fábio Matos",
+    "valuation_amount": 0,
+    "valuation_date": "31/03/2020",
+    "club_name_at_valuation": "Leixões SC U23",
+    "club_id_at_valuation": "75123",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "67cc1e26658e",
+    "player_id": "984093",
+    "player_name": "Thiago Balieiro",
+    "valuation_amount": 500000,
+    "valuation_date": "30/09/2025",
+    "club_name_at_valuation": "Vitória Guimarães SC",
+    "club_id_at_valuation": "2420",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "4121c02199cb",
+    "player_id": "984093",
+    "player_name": "Thiago Balieiro",
+    "valuation_amount": 500000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "Vitória Guimarães SC",
+    "club_id_at_valuation": "2420",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "b3ae89c4086c",
+    "player_id": "982573",
+    "player_name": "Gonçalo Santos",
+    "valuation_amount": 125000,
+    "valuation_date": "14/12/2023",
+    "club_name_at_valuation": "Leixões SC U23",
+    "club_id_at_valuation": "75123",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "8265ec754067",
+    "player_id": "982573",
+    "player_name": "Gonçalo Santos",
+    "valuation_amount": 75000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "Leixões SC U23",
+    "club_id_at_valuation": "75123",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "25318d17e5ef",
+    "player_id": "982573",
+    "player_name": "Gonçalo Santos",
+    "valuation_amount": 0,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Leixões SC U23",
+    "club_id_at_valuation": "75123",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "d1e3ce9be4c1",
+    "player_id": "655470",
+    "player_name": "Manolis Pavlis",
+    "valuation_amount": 50000,
+    "valuation_date": "21/05/2021",
+    "club_name_at_valuation": "Apollon Larisas",
+    "club_id_at_valuation": "8699",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "2a14e8ca9711",
+    "player_id": "655470",
+    "player_name": "Manolis Pavlis",
+    "valuation_amount": 50000,
+    "valuation_date": "22/02/2022",
+    "club_name_at_valuation": "AO Egaleo",
+    "club_id_at_valuation": "2984",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "dc85d7a287fc",
+    "player_id": "655470",
+    "player_name": "Manolis Pavlis",
+    "valuation_amount": 50000,
+    "valuation_date": "27/06/2022",
+    "club_name_at_valuation": "AO Egaleo",
+    "club_id_at_valuation": "2984",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "f0ada2fc1ff1",
+    "player_id": "655470",
+    "player_name": "Manolis Pavlis",
+    "valuation_amount": 0,
+    "valuation_date": "04/10/2022",
+    "club_name_at_valuation": "Juventude de Pedras Salgadas",
+    "club_id_at_valuation": "41746",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "661a07c3c572",
+    "player_id": "1064656",
+    "player_name": "Ninte Nater",
+    "valuation_amount": 25000,
+    "valuation_date": "18/09/2023",
+    "club_name_at_valuation": "Bremer SV",
+    "club_id_at_valuation": "1328",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "ddde3c2193f2",
+    "player_id": "1064656",
+    "player_name": "Ninte Nater",
+    "valuation_amount": 25000,
+    "valuation_date": "30/12/2023",
+    "club_name_at_valuation": "Bremer SV",
+    "club_id_at_valuation": "1328",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "7fe6bc3075e1",
+    "player_id": "1064656",
+    "player_name": "Ninte Nater",
+    "valuation_amount": 10000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "Bremer SV",
+    "club_id_at_valuation": "1328",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "f703e286f8d3",
+    "player_id": "1064656",
+    "player_name": "Ninte Nater",
+    "valuation_amount": 0,
+    "valuation_date": "16/06/2025",
+    "club_name_at_valuation": "Leixões SC U23",
+    "club_id_at_valuation": "75123",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "ae64689ce24d",
+    "player_id": "1100197",
+    "player_name": "Lagartinho",
+    "valuation_amount": 100000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "790e8988e96e",
+    "player_id": "707986",
+    "player_name": "Kristofer Käit",
+    "valuation_amount": 50000,
+    "valuation_date": "05/09/2024",
+    "club_name_at_valuation": "Kalev Tallinn",
+    "club_id_at_valuation": "23370",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "eaf60187ca89",
+    "player_id": "707986",
+    "player_name": "Kristofer Käit",
+    "valuation_amount": 50000,
+    "valuation_date": "11/11/2024",
+    "club_name_at_valuation": "Kalev Tallinn",
+    "club_id_at_valuation": "23370",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "97bacc765f63",
+    "player_id": "707986",
+    "player_name": "Kristofer Käit",
+    "valuation_amount": 50000,
+    "valuation_date": "21/10/2025",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "b04190adacc8",
+    "player_id": "707986",
+    "player_name": "Kristofer Käit",
+    "valuation_amount": 75000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "c8c01f866b08",
+    "player_id": "626291",
+    "player_name": "Lucas De Bolle",
+    "valuation_amount": 100000,
+    "valuation_date": "06/09/2022",
+    "club_name_at_valuation": "Hamilton Academical FC",
+    "club_id_at_valuation": "2999",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "9b9a03bdbc63",
+    "player_id": "626291",
+    "player_name": "Lucas De Bolle",
+    "valuation_amount": 100000,
+    "valuation_date": "13/12/2022",
+    "club_name_at_valuation": "Hamilton Academical FC",
+    "club_id_at_valuation": "2999",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5edd03a1bd21",
+    "player_id": "626291",
+    "player_name": "Lucas De Bolle",
+    "valuation_amount": 125000,
+    "valuation_date": "22/03/2023",
+    "club_name_at_valuation": "Hamilton Academical FC",
+    "club_id_at_valuation": "2999",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "f6e6632b9dc2",
+    "player_id": "626291",
+    "player_name": "Lucas De Bolle",
+    "valuation_amount": 150000,
+    "valuation_date": "19/12/2023",
+    "club_name_at_valuation": "Newcastle United U21",
+    "club_id_at_valuation": "9253",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "9ad3c954a635",
+    "player_id": "626291",
+    "player_name": "Lucas De Bolle",
+    "valuation_amount": 0,
+    "valuation_date": "01/11/2024",
+    "club_name_at_valuation": "South Shields FC",
+    "club_id_at_valuation": "34798",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "8ea62042aba2",
+    "player_id": "997472",
+    "player_name": "Zinho",
+    "valuation_amount": 400000,
+    "valuation_date": "07/04/2023",
+    "club_name_at_valuation": "Grêmio Foot-Ball Porto Alegrense",
+    "club_id_at_valuation": "210",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "17d96affc577",
+    "player_id": "997472",
+    "player_name": "Zinho",
+    "valuation_amount": 700000,
+    "valuation_date": "25/07/2023",
+    "club_name_at_valuation": "Grêmio Foot-Ball Porto Alegrense",
+    "club_id_at_valuation": "210",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "53ca5b8b84c4",
+    "player_id": "997472",
+    "player_name": "Zinho",
+    "valuation_amount": 600000,
+    "valuation_date": "27/12/2023",
+    "club_name_at_valuation": "Portimonense SAD",
+    "club_id_at_valuation": "7378",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "0e91d1f2804f",
+    "player_id": "997472",
+    "player_name": "Zinho",
+    "valuation_amount": 400000,
+    "valuation_date": "06/06/2024",
+    "club_name_at_valuation": "Portimonense SAD",
+    "club_id_at_valuation": "7378",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "36a4897afaa9",
+    "player_id": "997472",
+    "player_name": "Zinho",
+    "valuation_amount": 200000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Portimonense SAD",
+    "club_id_at_valuation": "7378",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "1297e7bc8caf",
+    "player_id": "997472",
+    "player_name": "Zinho",
+    "valuation_amount": 50000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Portimonense SAD",
+    "club_id_at_valuation": "7378",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "2ad3f4508f3e",
+    "player_id": "899164",
+    "player_name": "Jardeu",
+    "valuation_amount": 50000,
+    "valuation_date": "28/06/2023",
+    "club_name_at_valuation": "FC Džiugas Telšiai",
+    "club_id_at_valuation": "28740",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "60175d4f7c27",
+    "player_id": "899164",
+    "player_name": "Jardeu",
+    "valuation_amount": 50000,
+    "valuation_date": "29/11/2023",
+    "club_name_at_valuation": "FC Džiugas Telšiai",
+    "club_id_at_valuation": "28740",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "58c51b52c0de",
+    "player_id": "899164",
+    "player_name": "Jardeu",
+    "valuation_amount": 0,
+    "valuation_date": "22/04/2024",
+    "club_name_at_valuation": "Afogados da Ingazeira FC",
+    "club_id_at_valuation": "73545",
+    "age_at_valuation": 25
+  },
+  {
+    "valuation_id": "f93812e17d6d",
+    "player_id": "1298164",
+    "player_name": "Feliciano Mendes",
+    "valuation_amount": 175000,
+    "valuation_date": "29/10/2024",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "45ecc9c824f5",
+    "player_id": "1298164",
+    "player_name": "Feliciano Mendes",
+    "valuation_amount": 225000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "b37ac27bc991",
+    "player_id": "1298164",
+    "player_name": "Feliciano Mendes",
+    "valuation_amount": 150000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "dc4bfa45259e",
+    "player_id": "1298164",
+    "player_name": "Feliciano Mendes",
+    "valuation_amount": 0,
+    "valuation_date": "10/07/2025",
+    "club_name_at_valuation": "Amarante FC",
+    "club_id_at_valuation": "7789",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "c4c03428ee55",
+    "player_id": "1223583",
+    "player_name": "Tae-won Kim",
+    "valuation_amount": 125000,
+    "valuation_date": "25/09/2025",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "fddae3b80e85",
+    "player_id": "839541",
+    "player_name": "Sho Sawada",
+    "valuation_amount": 25000,
+    "valuation_date": "28/06/2021",
+    "club_name_at_valuation": "Ryukyu Okinawa",
+    "club_id_at_valuation": "23569",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "fc25b3a09e05",
+    "player_id": "839541",
+    "player_name": "Sho Sawada",
+    "valuation_amount": 25000,
+    "valuation_date": "13/01/2022",
+    "club_name_at_valuation": "Ryukyu Okinawa",
+    "club_id_at_valuation": "23569",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "d3b731cdd981",
+    "player_id": "839541",
+    "player_name": "Sho Sawada",
+    "valuation_amount": 25000,
+    "valuation_date": "28/06/2022",
+    "club_name_at_valuation": "Ryukyu Okinawa",
+    "club_id_at_valuation": "23569",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "86822ed76b07",
+    "player_id": "839541",
+    "player_name": "Sho Sawada",
+    "valuation_amount": 25000,
+    "valuation_date": "06/01/2023",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "05d4ded3e04b",
+    "player_id": "839541",
+    "player_name": "Sho Sawada",
+    "valuation_amount": 0,
+    "valuation_date": "17/01/2024",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "52c4453b1c01",
+    "player_id": "660150",
+    "player_name": "Patrick Bohui",
+    "valuation_amount": 50000,
+    "valuation_date": "13/09/2022",
+    "club_name_at_valuation": "Vejle Boldklub",
+    "club_id_at_valuation": "443",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "dcd2a38d6c62",
+    "player_id": "660150",
+    "player_name": "Patrick Bohui",
+    "valuation_amount": 50000,
+    "valuation_date": "22/12/2022",
+    "club_name_at_valuation": "Vejle Boldklub",
+    "club_id_at_valuation": "443",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e0f4ecd12909",
+    "player_id": "660150",
+    "player_name": "Patrick Bohui",
+    "valuation_amount": 0,
+    "valuation_date": "17/01/2024",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "46dc2f1b6ac2",
+    "player_id": "1071235",
+    "player_name": "Diogo Ferreira",
+    "valuation_amount": 250000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "8be4281cceda",
+    "player_id": "1071235",
+    "player_name": "Diogo Ferreira",
+    "valuation_amount": 250000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Portimonense SAD U23",
+    "club_id_at_valuation": "67731",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "1a4a9919cf2e",
+    "player_id": "1071235",
+    "player_name": "Diogo Ferreira",
+    "valuation_amount": 100000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "b476805fb4ab",
+    "player_id": "1294213",
+    "player_name": "Dânio Djassi",
+    "valuation_amount": 225000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Portimonense SAD",
+    "club_id_at_valuation": "7378",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "b6d7e327c43a",
+    "player_id": "1296567",
+    "player_name": "Fletcher Smythe-Lowe",
+    "valuation_amount": 150000,
+    "valuation_date": "24/09/2025",
+    "club_name_at_valuation": "Estoril Praia U23",
+    "club_id_at_valuation": "68403",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "448ddbfc61b3",
+    "player_id": "940367",
+    "player_name": "Željko Vitorović",
+    "valuation_amount": 10000,
+    "valuation_date": "25/09/2023",
+    "club_name_at_valuation": "FK Radnicki Belgrade U19",
+    "club_id_at_valuation": "33948",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "1fbd5f09254e",
+    "player_id": "940367",
+    "player_name": "Željko Vitorović",
+    "valuation_amount": 10000,
+    "valuation_date": "27/12/2023",
+    "club_name_at_valuation": "FK Radnicki Belgrade U19",
+    "club_id_at_valuation": "33948",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "f4063d741e7f",
+    "player_id": "940367",
+    "player_name": "Željko Vitorović",
+    "valuation_amount": 0,
+    "valuation_date": "19/03/2024",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "fae124e3eb88",
+    "player_id": "1157427",
+    "player_name": "Júlio Gil",
+    "valuation_amount": 150000,
+    "valuation_date": "14/12/2023",
+    "club_name_at_valuation": "Académico de Viseu Sub-23",
+    "club_id_at_valuation": "110988",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "25d14978a0fb",
+    "player_id": "1157427",
+    "player_name": "Júlio Gil",
+    "valuation_amount": 0,
+    "valuation_date": "07/03/2024",
+    "club_name_at_valuation": "Académico de Viseu Sub-23",
+    "club_id_at_valuation": "110988",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "ee4b5992baf8",
+    "player_id": "1330630",
+    "player_name": "Mohamed Haytham",
+    "valuation_amount": 50000,
+    "valuation_date": "25/09/2025",
+    "club_name_at_valuation": "Al Ahly FC U19",
+    "club_id_at_valuation": "15897",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "c0a51cbd5163",
+    "player_id": "825834",
+    "player_name": "Rodrigo Ramos",
+    "valuation_amount": 275000,
+    "valuation_date": "29/10/2024",
+    "club_name_at_valuation": "CD Tondela",
+    "club_id_at_valuation": "7179",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "49bec0a896cd",
+    "player_id": "825834",
+    "player_name": "Rodrigo Ramos",
+    "valuation_amount": 550000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "CD Tondela",
+    "club_id_at_valuation": "7179",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "259031294be8",
+    "player_id": "825834",
+    "player_name": "Rodrigo Ramos",
+    "valuation_amount": 550000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "CD Tondela",
+    "club_id_at_valuation": "7179",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "788f71881995",
+    "player_id": "825834",
+    "player_name": "Rodrigo Ramos",
+    "valuation_amount": 500000,
+    "valuation_date": "25/09/2025",
+    "club_name_at_valuation": "FC Ararat-Armenia ",
+    "club_id_at_valuation": "53453",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "934d42c81f72",
+    "player_id": "825834",
+    "player_name": "Rodrigo Ramos",
+    "valuation_amount": 400000,
+    "valuation_date": "09/12/2025",
+    "club_name_at_valuation": "FC Ararat-Armenia ",
+    "club_id_at_valuation": "53453",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "23c328a5272f",
+    "player_id": "880244",
+    "player_name": "Isnaba Mané",
+    "valuation_amount": 200000,
+    "valuation_date": "04/09/2025",
+    "club_name_at_valuation": "Arda Kardzhali",
+    "club_id_at_valuation": "40604",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "fcbbbd8d80fb",
+    "player_id": "880244",
+    "player_name": "Isnaba Mané",
+    "valuation_amount": 200000,
+    "valuation_date": "08/12/2025",
+    "club_name_at_valuation": "Arda Kardzhali",
+    "club_id_at_valuation": "40604",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "53cce4d47ef9",
+    "player_id": "1135416",
+    "player_name": "Ruben Silva-Richards",
+    "valuation_amount": 100000,
+    "valuation_date": "14/10/2025",
+    "club_name_at_valuation": "ADO Den Haag",
+    "club_id_at_valuation": "1268",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "61c1ebcdd86e",
+    "player_id": "1135416",
+    "player_name": "Ruben Silva-Richards",
+    "valuation_amount": 100000,
+    "valuation_date": "16/12/2025",
+    "club_name_at_valuation": "ADO Den Haag",
+    "club_id_at_valuation": "1268",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "bff17474f273",
+    "player_id": "1044429",
+    "player_name": "Diogo Brasido",
+    "valuation_amount": 75000,
+    "valuation_date": "26/09/2025",
+    "club_name_at_valuation": "Polonia Warsaw",
+    "club_id_at_valuation": "2745",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "e455d52744d8",
+    "player_id": "1044429",
+    "player_name": "Diogo Brasido",
+    "valuation_amount": 200000,
+    "valuation_date": "08/12/2025",
+    "club_name_at_valuation": "Polonia Warsaw",
+    "club_id_at_valuation": "2745",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "efd1dc786c67",
+    "player_id": "1047861",
+    "player_name": "Watts",
+    "valuation_amount": 200000,
+    "valuation_date": "28/12/2022",
+    "club_name_at_valuation": "CD Nacional U19",
+    "club_id_at_valuation": "15561",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "936f7cfab414",
+    "player_id": "1047861",
+    "player_name": "Watts",
+    "valuation_amount": 200000,
+    "valuation_date": "28/06/2023",
+    "club_name_at_valuation": "CD Nacional U19",
+    "club_id_at_valuation": "15561",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "aa03049e8624",
+    "player_id": "1047861",
+    "player_name": "Watts",
+    "valuation_amount": 300000,
+    "valuation_date": "14/12/2023",
+    "club_name_at_valuation": "CD Nacional",
+    "club_id_at_valuation": "982",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "70a0e0365db1",
+    "player_id": "1047861",
+    "player_name": "Watts",
+    "valuation_amount": 250000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "CD Nacional",
+    "club_id_at_valuation": "982",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "9ab849328d65",
+    "player_id": "1047861",
+    "player_name": "Watts",
+    "valuation_amount": 0,
+    "valuation_date": "16/06/2025",
+    "club_name_at_valuation": "Estoril Praia U23",
+    "club_id_at_valuation": "68403",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "40ac9b5c9977",
+    "player_id": "1047861",
+    "player_name": "Watts",
+    "valuation_amount": 200000,
+    "valuation_date": "30/09/2025",
+    "club_name_at_valuation": "CD Nacional",
+    "club_id_at_valuation": "982",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "e024ab95b5cf",
+    "player_id": "1047861",
+    "player_name": "Watts",
+    "valuation_amount": 200000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "CD Nacional",
+    "club_id_at_valuation": "982",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "86872f58ea82",
+    "player_id": "1143375",
+    "player_name": "Foe Ondoa",
+    "valuation_amount": 50000,
+    "valuation_date": "13/12/2023",
+    "club_name_at_valuation": "Valenciennes FC B",
+    "club_id_at_valuation": "16663",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "2708911f24de",
+    "player_id": "1143375",
+    "player_name": "Foe Ondoa",
+    "valuation_amount": 300000,
+    "valuation_date": "26/03/2024",
+    "club_name_at_valuation": "Valenciennes FC",
+    "club_id_at_valuation": "1423",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "4bfa804d6b20",
+    "player_id": "1143375",
+    "player_name": "Foe Ondoa",
+    "valuation_amount": 400000,
+    "valuation_date": "11/06/2024",
+    "club_name_at_valuation": "Valenciennes FC",
+    "club_id_at_valuation": "1423",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "bd6d6dc4f5ad",
+    "player_id": "1143375",
+    "player_name": "Foe Ondoa",
+    "valuation_amount": 400000,
+    "valuation_date": "19/12/2024",
+    "club_name_at_valuation": "GD Estoril Praia",
+    "club_id_at_valuation": "1465",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "1923cac39fdd",
+    "player_id": "1143375",
+    "player_name": "Foe Ondoa",
+    "valuation_amount": 400000,
+    "valuation_date": "30/05/2025",
+    "club_name_at_valuation": "GD Estoril Praia",
+    "club_id_at_valuation": "1465",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "00e8987d3814",
+    "player_id": "1143375",
+    "player_name": "Foe Ondoa",
+    "valuation_amount": 400000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "UD Oliveirense",
+    "club_id_at_valuation": "8827",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "85acc71f4ff8",
+    "player_id": "906307",
+    "player_name": "Diogo Dias",
+    "valuation_amount": 200000,
+    "valuation_date": "29/09/2023",
+    "club_name_at_valuation": "Estoril Praia U23",
+    "club_id_at_valuation": "68403",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "97208469734e",
+    "player_id": "906307",
+    "player_name": "Diogo Dias",
+    "valuation_amount": 200000,
+    "valuation_date": "27/12/2023",
+    "club_name_at_valuation": "Estoril Praia U23",
+    "club_id_at_valuation": "68403",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "a811e8db8c44",
+    "player_id": "906307",
+    "player_name": "Diogo Dias",
+    "valuation_amount": 300000,
+    "valuation_date": "06/06/2024",
+    "club_name_at_valuation": "Estoril Praia U23",
+    "club_id_at_valuation": "68403",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "212d507c83f2",
+    "player_id": "906307",
+    "player_name": "Diogo Dias",
+    "valuation_amount": 200000,
+    "valuation_date": "30/05/2025",
+    "club_name_at_valuation": "Estoril Praia U23",
+    "club_id_at_valuation": "68403",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "9cd18f4717ec",
+    "player_id": "906307",
+    "player_name": "Diogo Dias",
+    "valuation_amount": 200000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "GD Estoril Praia",
+    "club_id_at_valuation": "1465",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "61f3ef28e631",
+    "player_id": "925417",
+    "player_name": "Tiago Parente",
+    "valuation_amount": 500000,
+    "valuation_date": "30/09/2025",
+    "club_name_at_valuation": "GD Estoril Praia",
+    "club_id_at_valuation": "1465",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "61c18f7a8de2",
+    "player_id": "925417",
+    "player_name": "Tiago Parente",
+    "valuation_amount": 500000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "GD Estoril Praia",
+    "club_id_at_valuation": "1465",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "e51e87ad7941",
+    "player_id": "1020686",
+    "player_name": "Tiago Brito",
+    "valuation_amount": 200000,
+    "valuation_date": "30/09/2025",
+    "club_name_at_valuation": "GD Estoril Praia",
+    "club_id_at_valuation": "1465",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "8b301115fa3a",
+    "player_id": "1020686",
+    "player_name": "Tiago Brito",
+    "valuation_amount": 200000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "GD Estoril Praia",
+    "club_id_at_valuation": "1465",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "9d4e2e4f2a4c",
+    "player_id": "925843",
+    "player_name": "Andrei Florea",
+    "valuation_amount": 150000,
+    "valuation_date": "25/06/2024",
+    "club_name_at_valuation": "Juventus Primavera",
+    "club_id_at_valuation": "11008",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "bcbf92a7247d",
+    "player_id": "925843",
+    "player_name": "Andrei Florea",
+    "valuation_amount": 100000,
+    "valuation_date": "30/06/2025",
+    "club_name_at_valuation": "Juventus Primavera",
+    "club_id_at_valuation": "11008",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "dd88b480fe20",
+    "player_id": "925843",
+    "player_name": "Andrei Florea",
+    "valuation_amount": 125000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "MSK Zilina",
+    "club_id_at_valuation": "1443",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "c4fba14d8c51",
+    "player_id": "1153785",
+    "player_name": "Luís Pires",
+    "valuation_amount": 100000,
+    "valuation_date": "27/12/2023",
+    "club_name_at_valuation": "Boavista FC",
+    "club_id_at_valuation": "2503",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "338a61a6eafd",
+    "player_id": "1153785",
+    "player_name": "Luís Pires",
+    "valuation_amount": 100000,
+    "valuation_date": "06/06/2024",
+    "club_name_at_valuation": "Boavista FC",
+    "club_id_at_valuation": "2503",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "7e1ec7c1ca9e",
+    "player_id": "1153785",
+    "player_name": "Luís Pires",
+    "valuation_amount": 100000,
+    "valuation_date": "19/12/2024",
+    "club_name_at_valuation": "Boavista FC",
+    "club_id_at_valuation": "2503",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "3408d37aeb65",
+    "player_id": "1153785",
+    "player_name": "Luís Pires",
+    "valuation_amount": 100000,
+    "valuation_date": "30/05/2025",
+    "club_name_at_valuation": "Boavista FC",
+    "club_id_at_valuation": "2503",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "6f75fcc728d5",
+    "player_id": "1153785",
+    "player_name": "Luís Pires",
+    "valuation_amount": 0,
+    "valuation_date": "16/09/2025",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 0
+  },
+  {
+    "valuation_id": "efa11c6820c1",
+    "player_id": "858597",
+    "player_name": "José González",
+    "valuation_amount": 25000,
+    "valuation_date": "24/03/2021",
+    "club_name_at_valuation": "Mineros de Guayana",
+    "club_id_at_valuation": "17194",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "ec8a18ee1d66",
+    "player_id": "858597",
+    "player_name": "José González",
+    "valuation_amount": 50000,
+    "valuation_date": "05/06/2021",
+    "club_name_at_valuation": "Mineros de Guayana",
+    "club_id_at_valuation": "17194",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "2b19eff03e25",
+    "player_id": "858597",
+    "player_name": "José González",
+    "valuation_amount": 75000,
+    "valuation_date": "18/10/2021",
+    "club_name_at_valuation": "Mineros de Guayana",
+    "club_id_at_valuation": "17194",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "0c1a27f87c26",
+    "player_id": "858597",
+    "player_name": "José González",
+    "valuation_amount": 75000,
+    "valuation_date": "06/06/2022",
+    "club_name_at_valuation": "Mineros de Guayana",
+    "club_id_at_valuation": "17194",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "ae1c882fb2c3",
+    "player_id": "858597",
+    "player_name": "José González",
+    "valuation_amount": 75000,
+    "valuation_date": "31/10/2022",
+    "club_name_at_valuation": "Mineros de Guayana",
+    "club_id_at_valuation": "17194",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "388131b3b811",
+    "player_id": "858597",
+    "player_name": "José González",
+    "valuation_amount": 75000,
+    "valuation_date": "19/07/2023",
+    "club_name_at_valuation": "Academia Puerto Cabello",
+    "club_id_at_valuation": "45193",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "8e04fc9d94ed",
+    "player_id": "858597",
+    "player_name": "José González",
+    "valuation_amount": 0,
+    "valuation_date": "01/08/2023",
+    "club_name_at_valuation": "AC Vila Meã",
+    "club_id_at_valuation": "12522",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "72ee06e501c9",
+    "player_id": "862279",
+    "player_name": "Nur Asis",
+    "valuation_amount": 10000,
+    "valuation_date": "17/06/2021",
+    "club_name_at_valuation": "Lion City Sailors U21 (- 2025)",
+    "club_id_at_valuation": "87837",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "ec2349b9117f",
+    "player_id": "862279",
+    "player_name": "Nur Asis",
+    "valuation_amount": 10000,
+    "valuation_date": "22/10/2021",
+    "club_name_at_valuation": "Lion City Sailors U21 (- 2025)",
+    "club_id_at_valuation": "87837",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "57cab251f9e2",
+    "player_id": "862279",
+    "player_name": "Nur Asis",
+    "valuation_amount": 10000,
+    "valuation_date": "30/06/2022",
+    "club_name_at_valuation": "Mattar Sailors",
+    "club_id_at_valuation": "44397",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "52033cece514",
+    "player_id": "862279",
+    "player_name": "Nur Asis",
+    "valuation_amount": 10000,
+    "valuation_date": "24/02/2023",
+    "club_name_at_valuation": "Lion City Sailors U21 (- 2025)",
+    "club_id_at_valuation": "87837",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "29eb7f4eb030",
+    "player_id": "862279",
+    "player_name": "Nur Asis",
+    "valuation_amount": 10000,
+    "valuation_date": "19/12/2023",
+    "club_name_at_valuation": "Lion City Sailors U21 (- 2025)",
+    "club_id_at_valuation": "87837",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "bf8aac59b256",
+    "player_id": "862279",
+    "player_name": "Nur Asis",
+    "valuation_amount": 100000,
+    "valuation_date": "08/10/2024",
+    "club_name_at_valuation": "CF Estrela Amadora U23",
+    "club_id_at_valuation": "101419",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "c850fa9a27c4",
+    "player_id": "862279",
+    "player_name": "Nur Asis",
+    "valuation_amount": 100000,
+    "valuation_date": "19/12/2024",
+    "club_name_at_valuation": "CF Estrela Amadora U23",
+    "club_id_at_valuation": "101419",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "6429e7c6b790",
+    "player_id": "862279",
+    "player_name": "Nur Asis",
+    "valuation_amount": 75000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "FC Vizela U23",
+    "club_id_at_valuation": "91910",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "d04484a6f60c",
+    "player_id": "746152",
+    "player_name": "Khairin Nadim",
+    "valuation_amount": 75000,
+    "valuation_date": "29/12/2020",
+    "club_name_at_valuation": "Young Lions",
+    "club_id_at_valuation": "15367",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "9ed53cf6a71d",
+    "player_id": "746152",
+    "player_name": "Khairin Nadim",
+    "valuation_amount": 75000,
+    "valuation_date": "17/06/2021",
+    "club_name_at_valuation": "Young Lions",
+    "club_id_at_valuation": "15367",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "329faf8b49ac",
+    "player_id": "746152",
+    "player_name": "Khairin Nadim",
+    "valuation_amount": 50000,
+    "valuation_date": "22/10/2021",
+    "club_name_at_valuation": "Young Lions",
+    "club_id_at_valuation": "15367",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "ce873e65cd24",
+    "player_id": "746152",
+    "player_name": "Khairin Nadim",
+    "valuation_amount": 50000,
+    "valuation_date": "30/06/2022",
+    "club_name_at_valuation": "Young Lions",
+    "club_id_at_valuation": "15367",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "55c4abc7b3ca",
+    "player_id": "746152",
+    "player_name": "Khairin Nadim",
+    "valuation_amount": 50000,
+    "valuation_date": "21/11/2022",
+    "club_name_at_valuation": "Young Lions",
+    "club_id_at_valuation": "15367",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "afc34d1eb9ae",
+    "player_id": "746152",
+    "player_name": "Khairin Nadim",
+    "valuation_amount": 50000,
+    "valuation_date": "15/06/2023",
+    "club_name_at_valuation": "military service (Singapore)",
+    "club_id_at_valuation": "86984",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "892f69f5e21b",
+    "player_id": "746152",
+    "player_name": "Khairin Nadim",
+    "valuation_amount": 50000,
+    "valuation_date": "19/08/2024",
+    "club_name_at_valuation": "Young Lions",
+    "club_id_at_valuation": "15367",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "ffffdd6fd953",
+    "player_id": "746152",
+    "player_name": "Khairin Nadim",
+    "valuation_amount": 50000,
+    "valuation_date": "04/12/2024",
+    "club_name_at_valuation": "Lion City Sailors U21 (- 2025)",
+    "club_id_at_valuation": "87837",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "b82695bd911c",
+    "player_id": "746152",
+    "player_name": "Khairin Nadim",
+    "valuation_amount": 0,
+    "valuation_date": "31/01/2025",
+    "club_name_at_valuation": "FC Vizela U23",
+    "club_id_at_valuation": "91910",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "0535007841ee",
+    "player_id": "1294052",
+    "player_name": "João Barros",
+    "valuation_amount": 150000,
+    "valuation_date": "08/10/2024",
+    "club_name_at_valuation": "Boavista FC",
+    "club_id_at_valuation": "2503",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "bbafa6309ae4",
+    "player_id": "1294052",
+    "player_name": "João Barros",
+    "valuation_amount": 150000,
+    "valuation_date": "19/12/2024",
+    "club_name_at_valuation": "Boavista FC",
+    "club_id_at_valuation": "2503",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "67f65a2c4932",
+    "player_id": "1294052",
+    "player_name": "João Barros",
+    "valuation_amount": 200000,
+    "valuation_date": "30/05/2025",
+    "club_name_at_valuation": "Boavista FC",
+    "club_id_at_valuation": "2503",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "9239ab474832",
+    "player_id": "1294052",
+    "player_name": "João Barros",
+    "valuation_amount": 0,
+    "valuation_date": "16/09/2025",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 0
+  },
+  {
+    "valuation_id": "c5f0216a4497",
+    "player_id": "1041113",
+    "player_name": "Jonan Tan",
+    "valuation_amount": 10000,
+    "valuation_date": "24/02/2023",
+    "club_name_at_valuation": "Lion City Sailors U21 (- 2025)",
+    "club_id_at_valuation": "87837",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "fe72fae58f2b",
+    "player_id": "1041113",
+    "player_name": "Jonan Tan",
+    "valuation_amount": 10000,
+    "valuation_date": "15/06/2023",
+    "club_name_at_valuation": "Lion City Sailors U21 (- 2025)",
+    "club_id_at_valuation": "87837",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "980a5f60643d",
+    "player_id": "1041113",
+    "player_name": "Jonan Tan",
+    "valuation_amount": 10000,
+    "valuation_date": "19/12/2023",
+    "club_name_at_valuation": "Lion City Sailors U21 (- 2025)",
+    "club_id_at_valuation": "87837",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "bb69eb776260",
+    "player_id": "1041113",
+    "player_name": "Jonan Tan",
+    "valuation_amount": 25000,
+    "valuation_date": "19/08/2024",
+    "club_name_at_valuation": "Young Lions",
+    "club_id_at_valuation": "15367",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "72348527a707",
+    "player_id": "1041113",
+    "player_name": "Jonan Tan",
+    "valuation_amount": 25000,
+    "valuation_date": "04/12/2024",
+    "club_name_at_valuation": "Young Lions",
+    "club_id_at_valuation": "15367",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "40436052bd4c",
+    "player_id": "1041113",
+    "player_name": "Jonan Tan",
+    "valuation_amount": 25000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "CF Estrela Amadora U23",
+    "club_id_at_valuation": "101419",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "3841905ede0c",
+    "player_id": "1159043",
+    "player_name": "Brandão",
+    "valuation_amount": 150000,
+    "valuation_date": "14/12/2023",
+    "club_name_at_valuation": "UD Oliveirense",
+    "club_id_at_valuation": "8827",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "e82559624df2",
+    "player_id": "1159043",
+    "player_name": "Brandão",
+    "valuation_amount": 200000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "UD Oliveirense",
+    "club_id_at_valuation": "8827",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "af9c96d2e0f6",
+    "player_id": "1159043",
+    "player_name": "Brandão",
+    "valuation_amount": 0,
+    "valuation_date": "10/06/2025",
+    "club_name_at_valuation": "FC Vizela U23",
+    "club_id_at_valuation": "91910",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "3426ae14f991",
+    "player_id": "1281501",
+    "player_name": "Joy",
+    "valuation_amount": 100000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "FC Vizela U23",
+    "club_id_at_valuation": "91910",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "d6710f10a22e",
+    "player_id": "1281501",
+    "player_name": "Joy",
+    "valuation_amount": 0,
+    "valuation_date": "02/08/2025",
+    "club_name_at_valuation": "AC Vila Meã",
+    "club_id_at_valuation": "12522",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "5b15512fdf9a",
+    "player_id": "1153675",
+    "player_name": "Pedro Ramos",
+    "valuation_amount": 150000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "FC Vizela U23",
+    "club_id_at_valuation": "91910",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "4826e4b66703",
+    "player_id": "1153675",
+    "player_name": "Pedro Ramos",
+    "valuation_amount": 150000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "FC Vizela",
+    "club_id_at_valuation": "6912",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "985dd1afe5a4",
+    "player_id": "1073604",
+    "player_name": "José Sampaio",
+    "valuation_amount": 600000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "FC Vizela",
+    "club_id_at_valuation": "6912",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "428d93d804ec",
+    "player_id": "980483",
+    "player_name": "Luphumlo Sifumba",
+    "valuation_amount": 75000,
+    "valuation_date": "30/06/2022",
+    "club_name_at_valuation": "Cape Town City FC ",
+    "club_id_at_valuation": "2303",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "da6ca6ca031d",
+    "player_id": "980483",
+    "player_name": "Luphumlo Sifumba",
+    "valuation_amount": 175000,
+    "valuation_date": "03/02/2023",
+    "club_name_at_valuation": "Cape Town City FC ",
+    "club_id_at_valuation": "2303",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "f8ff027f8cc7",
+    "player_id": "980483",
+    "player_name": "Luphumlo Sifumba",
+    "valuation_amount": 200000,
+    "valuation_date": "30/05/2023",
+    "club_name_at_valuation": "Cape Town City FC ",
+    "club_id_at_valuation": "2303",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "467c5f0c50ff",
+    "player_id": "980483",
+    "player_name": "Luphumlo Sifumba",
+    "valuation_amount": 300000,
+    "valuation_date": "05/01/2024",
+    "club_name_at_valuation": "Cape Town City FC ",
+    "club_id_at_valuation": "2303",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "117ab8f54dd0",
+    "player_id": "980483",
+    "player_name": "Luphumlo Sifumba",
+    "valuation_amount": 400000,
+    "valuation_date": "11/06/2024",
+    "club_name_at_valuation": "Cape Town City FC ",
+    "club_id_at_valuation": "2303",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "632d26619f43",
+    "player_id": "980483",
+    "player_name": "Luphumlo Sifumba",
+    "valuation_amount": 300000,
+    "valuation_date": "28/05/2025",
+    "club_name_at_valuation": "Cape Town City FC ",
+    "club_id_at_valuation": "2303",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "936f5a4745bc",
+    "player_id": "980483",
+    "player_name": "Luphumlo Sifumba",
+    "valuation_amount": 300000,
+    "valuation_date": "12/12/2025",
+    "club_name_at_valuation": "Durban City Football Club",
+    "club_id_at_valuation": "14187",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "646b801b1c99",
+    "player_id": "863819",
+    "player_name": "Kimiss Zavala",
+    "valuation_amount": 50000,
+    "valuation_date": "17/12/2025",
+    "club_name_at_valuation": "CS Marítimo U23",
+    "club_id_at_valuation": "67837",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "a61453a81feb",
+    "player_id": "979037",
+    "player_name": "David Nunes",
+    "valuation_amount": 25000,
+    "valuation_date": "14/10/2024",
+    "club_name_at_valuation": "Recreativo Granada",
+    "club_id_at_valuation": "21550",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "d3cd6a4950e5",
+    "player_id": "979037",
+    "player_name": "David Nunes",
+    "valuation_amount": 25000,
+    "valuation_date": "18/12/2024",
+    "club_name_at_valuation": "Recreativo Granada",
+    "club_id_at_valuation": "21550",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "e0d4a255955f",
+    "player_id": "979037",
+    "player_name": "David Nunes",
+    "valuation_amount": 25000,
+    "valuation_date": "25/06/2025",
+    "club_name_at_valuation": "Recreativo Granada",
+    "club_id_at_valuation": "21550",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "f9300498c4bb",
+    "player_id": "979037",
+    "player_name": "David Nunes",
+    "valuation_amount": 0,
+    "valuation_date": "11/09/2025",
+    "club_name_at_valuation": "Académico de Viseu Sub-23",
+    "club_id_at_valuation": "110988",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5debad742148",
+    "player_id": "1052970",
+    "player_name": "Kauã Vinicius",
+    "valuation_amount": 100000,
+    "valuation_date": "28/12/2022",
+    "club_name_at_valuation": "Académico Viseu U19",
+    "club_id_at_valuation": "22212",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "f2a205337864",
+    "player_id": "1052970",
+    "player_name": "Kauã Vinicius",
+    "valuation_amount": 100000,
+    "valuation_date": "28/06/2023",
+    "club_name_at_valuation": "Académico Viseu U19",
+    "club_id_at_valuation": "22212",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e9145aa663cd",
+    "player_id": "1052970",
+    "player_name": "Kauã Vinicius",
+    "valuation_amount": 125000,
+    "valuation_date": "14/12/2023",
+    "club_name_at_valuation": "Académico de Viseu Sub-23",
+    "club_id_at_valuation": "110988",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "0b88fc6253b4",
+    "player_id": "1052970",
+    "player_name": "Kauã Vinicius",
+    "valuation_amount": 0,
+    "valuation_date": "07/03/2024",
+    "club_name_at_valuation": "Académico de Viseu Sub-23",
+    "club_id_at_valuation": "110988",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "cf5bdf3fd4e9",
+    "player_id": "1052970",
+    "player_name": "Kauã Vinicius",
+    "valuation_amount": 150000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Académico de Viseu Sub-23",
+    "club_id_at_valuation": "110988",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "7b4868668640",
+    "player_id": "1052970",
+    "player_name": "Kauã Vinicius",
+    "valuation_amount": 0,
+    "valuation_date": "16/09/2025",
+    "club_name_at_valuation": "Académico de Viseu Sub-23",
+    "club_id_at_valuation": "110988",
+    "age_at_valuation": 0
+  },
+  {
+    "valuation_id": "d3f913f71a2f",
+    "player_id": "947116",
+    "player_name": "Ricardinho",
+    "valuation_amount": 125000,
+    "valuation_date": "01/04/2022",
+    "club_name_at_valuation": "CD Mafra U19",
+    "club_id_at_valuation": "26989",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "a4cb8c81f2a5",
+    "player_id": "947116",
+    "player_name": "Ricardinho",
+    "valuation_amount": 125000,
+    "valuation_date": "27/06/2022",
+    "club_name_at_valuation": "CD Mafra U19",
+    "club_id_at_valuation": "26989",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "5fd892bbac31",
+    "player_id": "947116",
+    "player_name": "Ricardinho",
+    "valuation_amount": 150000,
+    "valuation_date": "28/12/2022",
+    "club_name_at_valuation": "CD Mafra U23",
+    "club_id_at_valuation": "100335",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "58a113139763",
+    "player_id": "947116",
+    "player_name": "Ricardinho",
+    "valuation_amount": 125000,
+    "valuation_date": "28/06/2023",
+    "club_name_at_valuation": "CD Mafra U23",
+    "club_id_at_valuation": "100335",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "08e2b6a01e83",
+    "player_id": "947116",
+    "player_name": "Ricardinho",
+    "valuation_amount": 0,
+    "valuation_date": "07/03/2024",
+    "club_name_at_valuation": "Gil Vicente FC U19",
+    "club_id_at_valuation": "15567",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "ffbd5e1b104c",
+    "player_id": "869923",
+    "player_name": "Kaique",
+    "valuation_amount": 300000,
+    "valuation_date": "27/11/2024",
+    "club_name_at_valuation": "Ceará Sporting Club",
+    "club_id_at_valuation": "2029",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "901f3d48e642",
+    "player_id": "869923",
+    "player_name": "Kaique",
+    "valuation_amount": 0,
+    "valuation_date": "14/02/2025",
+    "club_name_at_valuation": "Londrina EC (PR) U20",
+    "club_id_at_valuation": "76667",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "4e1f188b6717",
+    "player_id": "1111613",
+    "player_name": "Chamito Alfandega",
+    "valuation_amount": 100000,
+    "valuation_date": "17/12/2025",
+    "club_name_at_valuation": "Académico de Viseu Sub-23",
+    "club_id_at_valuation": "110988",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "ee6b7753a05f",
+    "player_id": "1111613",
+    "player_name": "Chamito Alfandega",
+    "valuation_amount": 125000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Académico de Viseu Sub-23",
+    "club_id_at_valuation": "110988",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "ccdfee2de9cf",
+    "player_id": "1126756",
+    "player_name": "Kelve Semedo",
+    "valuation_amount": 50000,
+    "valuation_date": "02/10/2025",
+    "club_name_at_valuation": "CD Fátima",
+    "club_id_at_valuation": "6987",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "c95b56bb09cc",
+    "player_id": "1229922",
+    "player_name": "Facundo Alarcón",
+    "valuation_amount": 50000,
+    "valuation_date": "08/12/2025",
+    "club_name_at_valuation": "Beroe Stara Zagora",
+    "club_id_at_valuation": "6764",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "9f61df7dc1b7",
+    "player_id": "1157429",
+    "player_name": "Gu Costa",
+    "valuation_amount": 400000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Académico Viseu FC",
+    "club_id_at_valuation": "7788",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5b4038713b74",
+    "player_id": "1256478",
+    "player_name": "Lorougnon Gohi",
+    "valuation_amount": 150000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Académico de Viseu Sub-23",
+    "club_id_at_valuation": "110988",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "c625f479fa18",
+    "player_id": "1256478",
+    "player_name": "Lorougnon Gohi",
+    "valuation_amount": 250000,
+    "valuation_date": "22/12/2025",
+    "club_name_at_valuation": "Académico Viseu FC",
+    "club_id_at_valuation": "7788",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "d10fb7ff3269",
+    "player_id": "1193471",
+    "player_name": "Yavuz Selim Toprak",
+    "valuation_amount": 10000,
+    "valuation_date": "03/06/2024",
+    "club_name_at_valuation": "Kirsehir FSK",
+    "club_id_at_valuation": "41556",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "c329ae74a16c",
+    "player_id": "1193471",
+    "player_name": "Yavuz Selim Toprak",
+    "valuation_amount": 0,
+    "valuation_date": "27/09/2024",
+    "club_name_at_valuation": "Büyükcekmece Tepecik Spor",
+    "club_id_at_valuation": "25253",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "ebbb370ca0ca",
+    "player_id": "1004346",
+    "player_name": "Pape Führer",
+    "valuation_amount": 200000,
+    "valuation_date": "27/12/2024",
+    "club_name_at_valuation": "FK Partizan Belgrade",
+    "club_id_at_valuation": "669",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "cb5b04f6aa88",
+    "player_id": "1004346",
+    "player_name": "Pape Führer",
+    "valuation_amount": 200000,
+    "valuation_date": "12/06/2025",
+    "club_name_at_valuation": "FK Partizan Belgrade",
+    "club_id_at_valuation": "669",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "c68486e41b34",
+    "player_id": "1094885",
+    "player_name": "Otávio",
+    "valuation_amount": 500000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "CF Estrela Amadora",
+    "club_id_at_valuation": "2431",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "7a8ad45d9590",
+    "player_id": "891970",
+    "player_name": "Daniel Carvalho",
+    "valuation_amount": 125000,
+    "valuation_date": "29/06/2021",
+    "club_name_at_valuation": "Vitória Setúbal FC",
+    "club_id_at_valuation": "1085",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "b16124dbdb63",
+    "player_id": "891970",
+    "player_name": "Daniel Carvalho",
+    "valuation_amount": 250000,
+    "valuation_date": "28/12/2022",
+    "club_name_at_valuation": "Vitória Setúbal FC",
+    "club_id_at_valuation": "1085",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "50811fd285f4",
+    "player_id": "891970",
+    "player_name": "Daniel Carvalho",
+    "valuation_amount": 200000,
+    "valuation_date": "18/01/2024",
+    "club_name_at_valuation": "Vitória Setúbal FC",
+    "club_id_at_valuation": "1085",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "35882b761540",
+    "player_id": "891970",
+    "player_name": "Daniel Carvalho",
+    "valuation_amount": 0,
+    "valuation_date": "27/09/2024",
+    "club_name_at_valuation": "Anadia FC",
+    "club_id_at_valuation": "4747",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "8b22448ed78e",
+    "player_id": "1271379",
+    "player_name": "Sérgio Malé",
+    "valuation_amount": 75000,
+    "valuation_date": "02/10/2025",
+    "club_name_at_valuation": "CF Estrela Amadora U23",
+    "club_id_at_valuation": "101419",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "cd63bff9675f",
+    "player_id": "765728",
+    "player_name": "Manu Figueiredo",
+    "valuation_amount": 125000,
+    "valuation_date": "28/06/2023",
+    "club_name_at_valuation": "CF Estrela Amadora U23",
+    "club_id_at_valuation": "101419",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "1081aa872757",
+    "player_id": "765728",
+    "player_name": "Manu Figueiredo",
+    "valuation_amount": 0,
+    "valuation_date": "28/06/2024",
+    "club_name_at_valuation": "CF Estrela Amadora U23",
+    "club_id_at_valuation": "101419",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "ed4fbae36634",
+    "player_id": "637553",
+    "player_name": "Georgiy Tunguliyadi",
+    "valuation_amount": 10000,
+    "valuation_date": "24/12/2021",
+    "club_name_at_valuation": "FC Sochi II",
+    "club_id_at_valuation": "74845",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "a30bba461a53",
+    "player_id": "637553",
+    "player_name": "Georgiy Tunguliyadi",
+    "valuation_amount": 0,
+    "valuation_date": "21/04/2022",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "2ff15573d30f",
+    "player_id": "1216111",
+    "player_name": "Alex Sola",
+    "valuation_amount": 100000,
+    "valuation_date": "30/09/2025",
+    "club_name_at_valuation": "CF Estrela Amadora",
+    "club_id_at_valuation": "2431",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "18b167642b66",
+    "player_id": "1216111",
+    "player_name": "Alex Sola",
+    "valuation_amount": 100000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "CF Estrela Amadora",
+    "club_id_at_valuation": "2431",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "a26f70f32af6",
+    "player_id": "1321718",
+    "player_name": "João Gastão",
+    "valuation_amount": 200000,
+    "valuation_date": "30/09/2025",
+    "club_name_at_valuation": "CF Estrela Amadora",
+    "club_id_at_valuation": "2431",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "357a4ad0a98c",
+    "player_id": "1321718",
+    "player_name": "João Gastão",
+    "valuation_amount": 200000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "CF Estrela Amadora",
+    "club_id_at_valuation": "2431",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "bd3d037e0392",
+    "player_id": "1064124",
+    "player_name": "Martim Ribeiro",
+    "valuation_amount": 50000,
+    "valuation_date": "29/09/2023",
+    "club_name_at_valuation": "União Leiria U19",
+    "club_id_at_valuation": "15580",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "b63e359b86ba",
+    "player_id": "1064124",
+    "player_name": "Martim Ribeiro",
+    "valuation_amount": 200000,
+    "valuation_date": "14/12/2023",
+    "club_name_at_valuation": "União Leiria U19",
+    "club_id_at_valuation": "15580",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "9a578773ed4e",
+    "player_id": "1064124",
+    "player_name": "Martim Ribeiro",
+    "valuation_amount": 200000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "União Leiria U19",
+    "club_id_at_valuation": "15580",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "48f9dfce71cb",
+    "player_id": "1064124",
+    "player_name": "Martim Ribeiro",
+    "valuation_amount": 100000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "União Leiria U19",
+    "club_id_at_valuation": "15580",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "57fb81509782",
+    "player_id": "1064124",
+    "player_name": "Martim Ribeiro",
+    "valuation_amount": 0,
+    "valuation_date": "16/09/2025",
+    "club_name_at_valuation": "UD Leiria Under 23",
+    "club_id_at_valuation": "132946",
+    "age_at_valuation": 0
+  }
+]

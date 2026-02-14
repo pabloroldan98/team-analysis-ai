@@ -25,6 +25,7 @@ ROOT_DIR = Path(__file__).parent
 sys.path.insert(0, str(ROOT_DIR))
 
 from webapp.i18n import t, format_currency
+from scraping.utils.helpers import list_json_bases, load_json
 
 # ── constants ────────────────────────────────────────────────────────────────
 ASSETS_DIR = ROOT_DIR / "assets"
@@ -78,36 +79,31 @@ TODAY_SEASON = "today"
 
 
 def _get_available_seasons(lang: str = "en") -> List[str]:
-    """Return sorted list of seasons with 'Today' prepended."""
-    if not DATA_DIR.exists():
-        return []
-    seasons = set()
-    for f in DATA_DIR.glob("teams_all_*.json"):
-        if "_OLD" not in f.name:
-            s = f.stem.replace("teams_all_", "")
-            seasons.add(s)
+    """Return sorted list of seasons with 'Today' prepended. Supports multi-part files."""
+    seasons = []
+    for base in list_json_bases("teams_all_*.json"):
+        s = base.replace("teams_all_", "")
+        if s and s not in seasons:
+            seasons.append(s)
     return sorted(seasons, reverse=True)
 
 
 def _get_clubs_for_season(season: str) -> List[Dict]:
     """Load teams_all_{season}.json sorted by league priority then market value.
+    Supports multi-part files when >90MB.
 
     When *season* is ``"today"``, loads the most recent teams file available.
     """
     if season.lower() == TODAY_SEASON:
-        # Find the latest teams_all_*.json by filename (alphabetical = chronological)
-        candidates = sorted(
-            [f for f in DATA_DIR.glob("teams_all_*.json") if "_OLD" not in f.name],
-        )
-        fp = candidates[-1] if candidates else None
+        bases = list_json_bases("teams_all_*.json")
+        base = bases[-1] if bases else None
     else:
-        fp = DATA_DIR / f"teams_all_{season}.json"
+        base = f"teams_all_{season}"
 
-    if fp is None or not fp.exists():
+    if base is None:
         return []
-    with open(fp, "r", encoding="utf-8") as fh:
-        data = json.load(fh)
-    if not isinstance(data, list):
+    data = load_json(base)
+    if data is None or not isinstance(data, list):
         return []
     # Sort: first by league priority, then by total_market_value descending
     data.sort(key=lambda c: (

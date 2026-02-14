@@ -8,6 +8,7 @@ import json
 import os
 import re
 import shutil
+from datetime import datetime
 from pathlib import Path
 from typing import Optional, List, Dict, Any
 from difflib import SequenceMatcher
@@ -16,6 +17,9 @@ from unidecode import unidecode
 
 ROOT_DIR = Path(__file__).parent.parent.parent
 DATA_DIR = ROOT_DIR / "data" / "json"
+
+# Maximum file size per part (90 MB leaves headroom under GitHub's 100 MB limit)
+MAX_JSON_PART_BYTES = 90 * 1024 * 1024
 
 
 # =============================================================================
@@ -27,55 +31,220 @@ def ensure_data_dir():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def write_dict_to_json(data: Any, file_name: str) -> bool:
+def _get_json_base_path(file_name: str) -> Path:
+    """Return full path for base JSON file (with .json extension)."""
+    return DATA_DIR / f"{file_name}.json"
+
+
+def _get_json_part_paths(file_name: str) -> List[Path]:
     """
-    Write data to JSON file.
-    
+    Return sorted list of existing part files for a dataset.
+    Parts follow the pattern ``<file_name>_part1.json``, ``<file_name>_part2.json``, …
+    Falls back to the single-file ``<file_name>.json`` if no parts exist.
+    Returns empty list if nothing exists.
+    """
+    base_path = _get_json_base_path(file_name)
+    stem = base_path.stem  # file_name (no .json)
+    parts = sorted(DATA_DIR.glob(f"{stem}_part*.json"))
+    # Filter out _OLD backups
+    parts = [p for p in parts if "_OLD" not in p.stem]
+    if parts:
+        return parts
+    if base_path.exists():
+        return [base_path]
+    return []
+
+
+def save_json_with_parts(
+    data: Any,
+    file_name: str,
+    max_part_bytes: int = MAX_JSON_PART_BYTES,
+) -> bool:
+    """
+    Save data to JSON, splitting into parts when size exceeds max_part_bytes.
+
+    For lists: when serialized size > max_part_bytes, saves as ``<file>_part1.json``,
+    ``<file>_part2.json``, … with format ``{"metadata": {...}, "items": [...]}``.
+    For dicts or small lists: saves as single file (backward compatible).
+
     Args:
-        data: Data to save (dict, list, etc.)
+        data: Data to save (list or dict)
         file_name: Base filename without extension
-    
+        max_part_bytes: Maximum bytes per part file (default 90 MB)
+
     Returns:
         True if successful
     """
     ensure_data_dir()
-    file_path = DATA_DIR / f"{file_name}.json"
-    
-    try:
-        with open(file_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2, default=str)
-        return True
-    except Exception as e:
-        print(f"Error writing to {file_name}: {e}")
-        return False
+    base_path = _get_json_base_path(file_name)
+
+    def _write_single(blob: bytes, path: Path) -> bool:
+        try:
+            with open(path, "wb") as f:
+                f.write(blob)
+            return True
+        except Exception as e:
+            print(f"Error writing to {path.name}: {e}")
+            return False
+
+    # Serialize to measure size
+    full_blob = json.dumps(data, ensure_ascii=False, indent=2, default=str).encode("utf-8")
+
+    if len(full_blob) <= max_part_bytes:
+        # Single file: remove old parts
+        for old_part in DATA_DIR.glob(f"{base_path.stem}_part*.json"):
+            if "_OLD" not in old_part.stem:
+                try:
+                    old_part.unlink()
+                except OSError:
+                    pass
+        return _write_single(full_blob, base_path)
+
+    # Split into parts (only for lists)
+    if not isinstance(data, list):
+        # Dict or other: save as single file anyway (may exceed limit)
+        return _write_single(full_blob, base_path)
+
+    # Remove legacy single file and old parts
+    if base_path.exists():
+        base_path.unlink()
+    for old_part in DATA_DIR.glob(f"{base_path.stem}_part*.json"):
+        if "_OLD" not in old_part.stem:
+            try:
+                old_part.unlink()
+            except OSError:
+                pass
+
+    metadata = {
+        "num_items": len(data),
+        "created_at": datetime.now().isoformat(),
+    }
+
+    # Build chunks so each part stays under max_part_bytes (iterative size-based split)
+    def _serialize_chunk(chunk: List[Any], part_num: int, total: int) -> bytes:
+        part_meta = {**metadata, "part": part_num, "total_parts": total}
+        part_output = {"metadata": part_meta, "items": chunk}
+        return json.dumps(part_output, ensure_ascii=False, indent=2, default=str).encode("utf-8")
+
+    chunks: List[List[Any]] = []
+    start = 0
+    avg_bytes_per_item = len(full_blob) / len(data) if data else 0
+    # Reserve ~2KB for metadata
+    target_bytes = max(1, max_part_bytes - 2048)
+
+    while start < len(data):
+        remaining = len(data) - start
+        # Estimate chunk size from average, with 5% safety margin
+        est_count = int(target_bytes / avg_bytes_per_item * 0.95) if avg_bytes_per_item else remaining
+        est_count = max(1, min(est_count, remaining))
+
+        chunk = data[start : start + est_count]
+        blob = _serialize_chunk(chunk, len(chunks) + 1, 0)
+        # Shrink until it fits
+        while len(blob) > max_part_bytes and len(chunk) > 1:
+            est_count = max(1, int(est_count * 0.9))
+            chunk = data[start : start + est_count]
+            blob = _serialize_chunk(chunk, len(chunks) + 1, 0)
+        if len(blob) > max_part_bytes:
+            chunk = data[start : start + 1]  # Single item exceeds limit – take one anyway
+        chunks.append(chunk)
+        start += len(chunk)
+
+    # Write each chunk
+    for i, chunk in enumerate(chunks):
+        part_meta = {**metadata, "part": i + 1, "total_parts": len(chunks)}
+        part_output = {"metadata": part_meta, "items": chunk}
+        part_path = DATA_DIR / f"{base_path.stem}_part{i + 1}.json"
+        try:
+            with open(part_path, "w", encoding="utf-8") as f:
+                json.dump(part_output, f, ensure_ascii=False, indent=2, default=str)
+        except Exception as e:
+            print(f"Error writing to {part_path.name}: {e}")
+            return False
+
+    return True
 
 
-def read_dict_from_json(file_name: str) -> Optional[Any]:
+def load_json_with_parts(file_name: str) -> Optional[Any]:
     """
-    Read data from JSON file.
-    
+    Load data from JSON file(s), supporting both single file and multi-part.
+
+    For part files (``<file>_part1.json``, …): concatenates ``items`` and returns the list.
+    For single file: returns the raw content (list or dict).
+
     Args:
         file_name: Base filename without extension
-    
+
     Returns:
-        Data or None if file doesn't exist
+        Data or None if no file(s) exist
     """
-    file_path = DATA_DIR / f"{file_name}.json"
-    
-    if not file_path.exists():
-        return None
-    
-    try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception as e:
-        print(f"Error reading from {file_name}: {e}")
+    paths = _get_json_part_paths(file_name)
+    if not paths:
         return None
 
+    if len(paths) == 1 and "_part" not in paths[0].stem:
+        # Single file (legacy or small)
+        try:
+            with open(paths[0], "r", encoding="utf-8") as f:
+                raw = json.load(f)
+            # Support wrapped format from old part files that were later saved as single
+            if isinstance(raw, dict) and "items" in raw and "metadata" in raw:
+                return raw["items"]
+            return raw
+        except Exception as e:
+            print(f"Error reading from {paths[0].name}: {e}")
+            return None
 
-# Aliases for compatibility
+    # Multi-part
+    all_items: List[Any] = []
+    for pp in paths:
+        try:
+            with open(pp, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            if isinstance(data, dict) and "items" in data:
+                all_items.extend(data["items"])
+            else:
+                all_items.append(data)
+        except Exception as e:
+            print(f"Error reading from {pp.name}: {e}")
+            return None
+
+    return all_items
+
+
+def write_dict_to_json(data: Any, file_name: str) -> bool:
+    """
+    Write data to JSON file.
+    Uses part splitting when data exceeds 90 MB (for lists).
+
+    Args:
+        data: Data to save (dict, list, etc.)
+        file_name: Base filename without extension
+
+    Returns:
+        True if successful
+    """
+    return save_json_with_parts(data, file_name)
+
+
+def load_json(file_name: str) -> Optional[Any]:
+    """
+    Load data from JSON file(s) in data/json.
+    Supports single file and multi-part (``*_part1.json``, …).
+
+    Args:
+        file_name: Base filename without extension (e.g. "players_all_2024-2025")
+
+    Returns:
+        Data (list, dict, etc.) or None if file(s) don't exist
+    """
+    return load_json_with_parts(file_name)
+
+
+# Aliases for backward compatibility
+read_dict_from_json = load_json
+read_dict_data = load_json
 write_dict_data = write_dict_to_json
-read_dict_data = read_dict_from_json
 
 
 def is_valid_data(
@@ -216,12 +385,13 @@ def overwrite_dict_data(
     
     file_path = DATA_DIR / f"{file_name}.json"
     file_path_old = DATA_DIR / f"{file_name}_OLD.json"
-    
-    # Read old data for potential merge
+
+    # Read old data for potential merge (supports single and part files)
     old_data = None
-    if not ignore_old_data and file_path.exists():
+    existing_paths = _get_json_part_paths(file_name)
+    if not ignore_old_data and existing_paths:
         old_data = read_dict_from_json(file_name)
-    
+
     # Validate new data
     if not ignore_valid_file:
         if not is_valid_data(data, min_items=min_items, data_type=data_type):
@@ -244,23 +414,20 @@ def overwrite_dict_data(
         if isinstance(data, list) and isinstance(old_data, list):
             data = merge_with_old_data(data, old_data, id_field)
     
-    # Create backup of current file
-    if file_path.exists():
+    # Create backup of current file(s) and remove them
+    if existing_paths:
         try:
-            # Remove old backup if exists
-            if file_path_old.exists():
-                os.remove(file_path_old)
-            
-            # Copy current to _OLD
-            shutil.copy(file_path, file_path_old)
-            print(f"  Backup created: {file_name}_OLD.json")
-            
-            # Remove current
-            os.remove(file_path)
+            for path in existing_paths:
+                backup_path = path.parent / f"{path.stem}_OLD.json"
+                if backup_path.exists():
+                    backup_path.unlink()
+                shutil.copy(path, backup_path)
+                print(f"  Backup created: {backup_path.name}")
+                path.unlink()
         except Exception as e:
             print(f"  Warning: Could not create backup: {e}")
-    
-    # Write new data
+
+    # Write new data (single or parts)
     return write_dict_to_json(data, file_name)
 
 
@@ -311,6 +478,28 @@ def list_json_files(pattern: str = "*.json") -> List[str]:
             files.append(f.stem)
     
     return sorted(files)
+
+
+def list_json_bases(glob_pattern: str = "*.json") -> List[str]:
+    """
+    Return unique base names for JSON files, treating _part1, _part2 as one logical file.
+    E.g. players_all_2024_part1.json + players_all_2024_part2.json -> "players_all_2024".
+
+    Args:
+        glob_pattern: Glob pattern (e.g. "players_all_*.json")
+
+    Returns:
+        Sorted list of unique base names (without .json, without _partN)
+    """
+    if not DATA_DIR.exists():
+        return []
+    seen = set()
+    for f in DATA_DIR.glob(glob_pattern):
+        if f.suffix != ".json" or "_OLD" in f.stem:
+            continue
+        base = re.sub(r"_part\d+$", "", f.stem)
+        seen.add(base)
+    return sorted(seen)
 
 
 # =============================================================================

@@ -552,8 +552,8 @@ class BaseScraper:
         Returns:
             Data or None if file doesn't exist
         """
-        from scraping.utils.helpers import read_dict_from_json
-        return read_dict_from_json(file_name)
+        from scraping.utils.helpers import load_json
+        return load_json(file_name)
     
     @staticmethod
     def normalize_string(s: str) -> str:

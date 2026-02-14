@@ -69,15 +69,72 @@ class TransfermarktTeamsScraper(BaseScraper):
         if logo_img:
             logo_url = logo_img.get("src", "") or logo_img.get("data-src", "")
 
-        # Get market value
-        market_value_el = soup.select_one("a.data-header__market-value-wrapper")
-        total_market_value = None
-        if market_value_el:
-            total_market_value = self.parse_market_value(market_value_el.text)
-        
-        # Get squad size, average age, foreigners, stadium
+        # Get squad size: count tr in tbody of the detailed squad table (responsive-table).
+        # Prefer the table with thead containing "Market value" / "Age" (detailed view).
+        # Fallback: first responsive-table; if count seems wrong, use total_mv / avg_mv.
         squad_size = None
+        for table in soup.select("div.responsive-table table"):
+            thead = table.find("thead")
+            if thead:
+                header_text = thead.get_text(separator=" ", strip=True).lower()
+                # Detailed squad table has "market value" and "age" in header
+                if "market value" in header_text or ("age" in header_text and "player" in header_text):
+                    tbody_rows = table.select("tbody tr")
+                    if tbody_rows:
+                        squad_size = len(tbody_rows)
+                        break
+        if squad_size is None:
+            first_responsive = soup.select_one("div.responsive-table")
+            if first_responsive:
+                tbody_rows = first_responsive.select("table tbody tr")
+                squad_size = len(tbody_rows) if tbody_rows else None
+
+        # Get total_market_value, average_market_value, average_age from tfoot (Squad details by position)
+        total_market_value = None
+        average_market_value = None
         average_age = None
+
+        def _parse_total_row(cells):
+            """Parse Total row: Position, ø-Age, Market value, ø-Market value."""
+            nonlocal average_age, total_market_value, average_market_value
+            if len(cells) >= 4:
+                first_text = cells[0].get_text(strip=True).lower()
+                if "total" in first_text:
+                    try:
+                        average_age = float(cells[1].get_text(strip=True).replace(",", "."))
+                    except (ValueError, IndexError):
+                        pass
+                    total_market_value = self.parse_market_value(cells[2].get_text(strip=True))
+                    average_market_value = self.parse_market_value(cells[3].get_text(strip=True))
+                    return True
+            return False
+
+        for table in soup.select("table"):
+            tfoot = table.find("tfoot")
+            if tfoot:
+                for tr in tfoot.select("tr"):
+                    if _parse_total_row(tr.select("td, th")):
+                        break
+            if total_market_value is None and average_age is None:
+                # Fallback: last tbody row (some layouts put Total there)
+                tbody_rows = table.select("tbody tr")
+                if tbody_rows:
+                    if _parse_total_row(tbody_rows[-1].select("td, th")):
+                        pass
+            if total_market_value is not None or average_age is not None:
+                break
+        
+        # Fallback: total_market_value from header if tfoot not found
+        if total_market_value is None:
+            market_value_el = soup.select_one("a.data-header__market-value-wrapper")
+            if market_value_el:
+                total_market_value = self.parse_market_value(market_value_el.text)
+
+        # Fallback: squad_size from total/avg when both are available
+        if total_market_value and average_market_value and average_market_value > 0:
+            squad_size = round(total_market_value / average_market_value)
+
+        # Get foreigners, stadium (keep existing logic)
         foreign_players_count = None
         national_players_count = None
         stadium_name = ""
@@ -100,19 +157,21 @@ class TransfermarktTeamsScraper(BaseScraper):
             
             content_text = content_span.get_text(strip=True)
             
-            # Parse based on label
+            # Parse based on label (squad_size and average_age now from table; only overwrite if not set)
             if "squad size" in label_text or "squad" in label_text or "kader" in label_text:
-                match = re.search(r"(\d+)", content_text)
-                if match:
-                    squad_size = int(match.group(1))
+                if squad_size is None:
+                    match = re.search(r"(\d+)", content_text)
+                    if match:
+                        squad_size = int(match.group(1))
             
             elif "ø-age" in label_text or "average age" in label_text or "-age" in label_text:
-                match = re.search(r"([\d,.]+)", content_text.replace(",", "."))
-                if match:
-                    try:
-                        average_age = float(match.group(1))
-                    except ValueError:
-                        pass
+                if average_age is None:
+                    match = re.search(r"([\d,.]+)", content_text.replace(",", "."))
+                    if match:
+                        try:
+                            average_age = float(match.group(1))
+                        except ValueError:
+                            pass
             
             elif "foreigner" in label_text or "legionäre" in label_text:
                 match = re.search(r"(\d+)", content_text)
@@ -174,6 +233,7 @@ class TransfermarktTeamsScraper(BaseScraper):
             squad_size=squad_size,
             average_age=average_age,
             total_market_value=total_market_value,
+            average_market_value=average_market_value,
             foreign_players_count=foreign_players_count,
             national_players_count=national_players_count,
             stadium_name=stadium_name,

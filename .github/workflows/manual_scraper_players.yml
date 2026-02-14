@@ -33,6 +33,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+      
       - name: Run players scraper for ${{ matrix.league }} (${{ matrix.season }})
         run: |
           python scraping_tasks/scrape_players.py --leagues ${{ matrix.league }} --season ${{ matrix.season }}
