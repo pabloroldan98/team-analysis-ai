@@ -71,7 +71,7 @@ ATHLETIC_FAMILY_NAMES = {
 ATHLETIC_BILBAO_ID = "621"
 
 # Minimum market value (euros) for players outside top leagues when filtering
-MIN_FILTER_MARKET_VALUE = 1_000_000
+MIN_FILTER_MARKET_VALUE = 10_000_000
 
 
 @dataclass
@@ -596,7 +596,7 @@ class TransferSimulator:
         team_league_mapping: Dict[str, Dict[str, Dict[str, str]]],
     ) -> List[Player]:
         """
-        Filter out players with market value < 1M unless they play in:
+        Filter out players with market value < €10M unless they play in:
         - A top 5 league (GB1, IT1, L1, FR1, ES1), or
         - The same league as the club we're simulating for.
         """
@@ -616,7 +616,7 @@ class TransferSimulator:
             if mv >= MIN_FILTER_MARKET_VALUE:
                 result.append(p)
                 continue
-            # Below 1M: keep only if in top 5 league or club's league
+            # Below €10M: keep only if in top 5 league or club's league
             player_league_id = ""
             if (p.team_id or "").strip():
                 player_league_id = (
@@ -650,7 +650,7 @@ class TransferSimulator:
             max_per_position: Max players to sell per position
             verbose: Print progress to stdout
             generate_summary: If True, attempt to generate LLM summary
-            filter_players: If True, exclude players <1M value unless in top 5
+            filter_players: If True, exclude players <€10M value unless in top 5
                 leagues or the club's league (default: True)
             llm_provider: LLM provider ("openai", "anthropic", "gemini")
             llm_api_key: Optional API key override
@@ -759,7 +759,7 @@ class TransferSimulator:
                 available_players, club_players, team_league_mapping
             )
             if verbose:
-                print(f"  Filtered {before} -> {len(available_players)} players (excluded <€1M outside top leagues)")
+                print(f"  Filtered {before} -> {len(available_players)} players (excluded <€10M outside top leagues)")
 
         if verbose:
             print(f"  {len(available_players)} players available for signing")
@@ -833,7 +833,7 @@ def main():
     parser.add_argument("--salary-budget", type=int, default=15, help="Salary budget (millions/year)")
     parser.add_argument("--no-summary", action="store_true", help="Skip LLM summary generation")
     parser.add_argument("--filter-players", action="store_true", default=True,
-                        help="Exclude players <€1M unless in top 5 leagues or club's league (default: True)")
+                        help="Exclude players <€10M unless in top 5 leagues or club's league (default: True)")
     parser.add_argument("--no-filter-players", dest="filter_players", action="store_false",
                         help="Disable value/league filter")
     parser.add_argument("--verbose", action="store_true", default=True, help="Print progress (default: True)")

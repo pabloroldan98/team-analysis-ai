@@ -266,6 +266,7 @@ def train_model(
     rebuild_dataset: bool = False,
     cutoff_months: int = 12,
     test_years: int = 1,
+    n_jobs: int = 1,
     **xgb_params,
 ) -> Path:
     """
@@ -353,6 +354,7 @@ def train_model(
             min_valuations=min_valuations,
             cutoff_months=cutoff_months,
             all_transfers=all_transfers,
+            n_jobs=n_jobs,
         )
         
         # Save dataset for future use
@@ -511,6 +513,12 @@ def main():
         default=1,
         help="Number of most recent years for validation split (temporal). Default: 1",
     )
+    parser.add_argument(
+        "--n-jobs",
+        type=int,
+        default=1,
+        help="Parallel workers for dataset building (e.g., 4 for 4 cores). Default: 1",
+    )
     
     args = parser.parse_args()
     
@@ -530,7 +538,7 @@ def main():
     
     # Train
     try:
-        model_path = train_model(
+        model_path =         train_model(
             season=season,
             cutoff_date=cutoff_date,
             output_name=args.output,
@@ -539,6 +547,7 @@ def main():
             rebuild_dataset=args.rebuild_dataset,
             cutoff_months=args.cutoff_months,
             test_years=args.test_years,
+            n_jobs=args.n_jobs,
             n_estimators=args.n_estimators,
             max_depth=args.max_depth,
             learning_rate=args.learning_rate,

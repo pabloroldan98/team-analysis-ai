@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple
@@ -401,6 +402,7 @@ def _percentile_rank(values: List[float], x: float) -> float:
     """
     Compute percentile rank of x within values (0-100).
     Uses 'rank' method: (count of values <= x) / n * 100.
+    (Kept for small inputs; use _percentile_ranks_vectorized for large batches.)
     """
     if not values:
         return 0.0
@@ -409,33 +411,61 @@ def _percentile_rank(values: List[float], x: float) -> float:
     return 100.0 * count / n
 
 
-def _compute_percentile_features(batch: List[PlayerFeatures]) -> None:
+def _percentile_ranks_vectorized(values: np.ndarray, mask: np.ndarray) -> np.ndarray:
+    """
+    Compute percentile rank (0-100) for each value: (count of values <= x) / n * 100.
+    O(n log n) via sort + searchsorted instead of O(n²) with naive per-element rank.
+
+    Args:
+        values: array of values (may contain NaN)
+        mask: boolean mask, True = use this value in distribution and compute its percentile
+
+    Returns:
+        array same shape as values; percentile for masked positions, np.nan for others
+    """
+    valid = values[mask].astype(float)
+    if len(valid) == 0:
+        return np.full(len(values), np.nan, dtype=float)
+    n = len(valid)
+    valid_sorted = np.sort(valid)
+    # For each valid value: count how many <= it, then pct = count/n*100
+    counts = np.searchsorted(valid_sorted, valid, side="right")
+    percentiles_valid = 100.0 * counts / n
+    out = np.full(len(values), np.nan, dtype=float)
+    out[mask] = percentiles_valid
+    return out
+
+
+def _compute_percentile_features(batch: List[PlayerFeatures], verbose: bool = False) -> None:
     """
     Compute all percentile features for a batch (mutates in place).
     Requires distribution per cutoff - call once per cutoff batch.
+    Uses vectorized percentile computation for O(n log n) instead of O(n²).
     """
     if not batch:
         return
-    # Current value percentile
-    current_values = [f.current_value for f in batch]
-    for f in batch:
-        f.current_value_percentile = _percentile_rank(current_values, f.current_value)
+    n = len(batch)
+    # Current value percentile (vectorized)
+    current_values = np.array([f.current_value for f in batch], dtype=float)
+    mask_curr = np.isfinite(current_values)
+    pct_arr = _percentile_ranks_vectorized(current_values, mask_curr)
+    for i, f in enumerate(batch):
+        f.current_value_percentile = float(pct_arr[i]) if mask_curr[i] else np.nan
+
     # Historical value percentiles and derived (diff, trend, pct)
-    for h in _PERCENTILE_HORIZONS:
+    horizons_iter = tqdm(_PERCENTILE_HORIZONS, desc="Computing percentile features", disable=not verbose)
+    for h in horizons_iter:
         attr_val = f"value_{h}_ago"
         attr_pct = f"value_{h}_ago_percentile"
         attr_diff = f"diff_percentile_{h}"
         attr_trend = f"trend_percentile_{h}"
         attr_pct_pct = f"pct_percentile_{h}"
-        values_h = [getattr(f, attr_val) for f in batch if getattr(f, attr_val) is not None]
-        for f in batch:
-            val = getattr(f, attr_val)
-            if val is not None and values_h:
-                pct = _percentile_rank(values_h, val)
-            else:
-                pct = np.nan
+        raw = np.array([getattr(f, attr_val) if getattr(f, attr_val) is not None else np.nan for f in batch], dtype=float)
+        mask_finite = np.isfinite(raw)
+        pct_arr = _percentile_ranks_vectorized(raw, mask_finite)
+        for i, f in enumerate(batch):
+            pct = float(pct_arr[i]) if mask_finite[i] else np.nan
             setattr(f, attr_pct, pct)
-            # Derived: diff, trend, pct (current percentile vs past percentile)
             curr = f.current_value_percentile
             past = pct
             if not np.isnan(past):
@@ -490,6 +520,40 @@ def _get_transfer_map_at_cutoff(
         if prev is None or td > prev[0]:
             best[t.player_id] = (td, t)
     return {pid: tr for pid, (_, tr) in best.items()}
+
+
+def _get_transfer_maps_for_all_cutoffs(
+    all_transfers: List[Transfer],
+    cutoff_dates: List[datetime],
+) -> Dict[datetime, Dict[str, Transfer]]:
+    """
+    Build transfer maps for all cutoffs in a single O(transfers) pass.
+    Much faster than calling _get_transfer_map_at_cutoff per cutoff.
+    """
+    if not all_transfers or not cutoff_dates:
+        return {c: {} for c in cutoff_dates}
+    # Parse and sort transfers by date
+    parsed: List[Tuple[datetime, Transfer]] = []
+    for t in all_transfers:
+        td = parse_date(t.transfer_date)
+        if td is not None:
+            parsed.append((td, t))
+    parsed.sort(key=lambda x: x[0])
+    sorted_cutoffs = sorted(cutoff_dates)
+    # Single pass: process transfers in order, snapshot best per player at each cutoff
+    result: Dict[datetime, Dict[str, Transfer]] = {}
+    best: Dict[str, Tuple[datetime, Transfer]] = {}
+    transfer_idx = 0
+    for cutoff in sorted_cutoffs:
+        while transfer_idx < len(parsed) and parsed[transfer_idx][0] <= cutoff:
+            td, t = parsed[transfer_idx]
+            pid = t.player_id
+            prev = best.get(pid)
+            if prev is None or td > prev[0]:
+                best[pid] = (td, t)
+            transfer_idx += 1
+        result[cutoff] = {pid: tr for pid, (_, tr) in best.items()}
+    return result
 
 
 def _normalize_position(pos: str) -> str:
@@ -882,6 +946,38 @@ def _detect_cutoff_dates(
     return sorted(cutoffs)
 
 
+def _process_cutoff_batch(
+    cutoff_date: datetime,
+    by_player: Dict[str, List[Valuation]],
+    transfer_map: Dict[str, Transfer],
+    players: Optional[Dict[str, Player]],
+    team_league_mapping: Optional[Dict[str, Dict[str, Dict[str, str]]]],
+    min_valuations: int,
+) -> Tuple[datetime, str, List[PlayerFeatures]]:
+    """Process one cutoff: extract features for all players, compute percentiles."""
+    cutoff_season = _get_season_for_cutoff(cutoff_date)
+    batch: List[PlayerFeatures] = []
+    for player_id, player_vals in by_player.items():
+        if len(player_vals) < min_valuations:
+            continue
+        player_info = players.get(player_id) if players else None
+        player_transfer = transfer_map.get(player_id)
+        features = extract_player_features(
+            player_vals,
+            cutoff_date,
+            player_info=player_info,
+            team_league_mapping=team_league_mapping,
+            include_target=True,
+            cutoff_season=cutoff_season,
+            player_transfer=player_transfer,
+        )
+        if features and features.target_value is not None:
+            batch.append(features)
+    if batch:
+        _compute_percentile_features(batch, verbose=False)
+    return (cutoff_date, cutoff_season, batch)
+
+
 def build_training_dataset(
     all_valuations: List[Valuation],
     players: Optional[Dict[str, Player]] = None,
@@ -890,6 +986,7 @@ def build_training_dataset(
     cutoff_dates: Optional[List[datetime]] = None,
     cutoff_months: int = 12,
     all_transfers: Optional[List[Transfer]] = None,
+    n_jobs: int = 1,
 ) -> List[PlayerFeatures]:
     """
     Build complete training dataset with multiple cutoff dates.
@@ -908,6 +1005,7 @@ def build_training_dataset(
         cutoff_dates: Optional list of cutoff dates. If None, auto-detects from data.
         cutoff_months: Months between cutoffs if auto-detecting (12=annual, 6=semi-annual)
         all_transfers: Optional list of ALL transfers. If None, loads from files.
+        n_jobs: Number of parallel workers for cutoff processing (default 1 = sequential)
     
     Returns:
         List of PlayerFeatures with target values and cutoff_season metadata
@@ -937,41 +1035,41 @@ def build_training_dataset(
     dataset = []
     total_players = len(by_player)
     
-    # For each cutoff date, generate features for all eligible players
-    for cutoff_idx, cutoff_date in enumerate(cutoff_dates):
-        cutoff_season = _get_season_for_cutoff(cutoff_date)
-        batch: List[PlayerFeatures] = []
-        
-        # Build transfer map for this cutoff
-        transfer_map = _get_transfer_map_at_cutoff(all_transfers, cutoff_date)
-        
-        for player_id, player_vals in by_player.items():
-            if len(player_vals) < min_valuations:
-                continue
-            
-            player_info = players.get(player_id) if players else None
-            player_transfer = transfer_map.get(player_id)
-            
-            features = extract_player_features(
-                player_vals,
-                cutoff_date,
-                player_info=player_info,
-                team_league_mapping=team_league_mapping,
-                include_target=True,
-                cutoff_season=cutoff_season,
-                player_transfer=player_transfer,
+    # Precompute transfer maps for all cutoffs in one pass (O(transfers) vs O(transfers × cutoffs))
+    transfer_maps = _get_transfer_maps_for_all_cutoffs(all_transfers, cutoff_dates)
+    
+    # Process cutoffs (parallel if n_jobs > 1)
+    cutoff_results: List[Tuple[datetime, str, List[PlayerFeatures]]] = []
+    if n_jobs <= 1:
+        for cutoff_date in cutoff_dates:
+            transfer_map = transfer_maps[cutoff_date]
+            res = _process_cutoff_batch(
+                cutoff_date, by_player, transfer_map,
+                players, team_league_mapping, min_valuations,
             )
-            
-            if features and features.target_value is not None:
-                batch.append(features)
-        
-        # Compute percentile features per cutoff
-        if batch:
-            _compute_percentile_features(batch)
-            dataset.extend(batch)
-        
-        print(f"  Cutoff {cutoff_date.strftime('%Y-%m-%d')} ({cutoff_season}): "
-              f"{len(batch)} players")
+            cutoff_results.append(res)
+            print(f"  Cutoff {res[0].strftime('%Y-%m-%d')} ({res[1]}): {len(res[2])} players")
+    else:
+        with ThreadPoolExecutor(max_workers=n_jobs) as executor:
+            futures = {
+                executor.submit(
+                    _process_cutoff_batch,
+                    cutoff_date, by_player, transfer_maps[cutoff_date],
+                    players, team_league_mapping, min_valuations,
+                ): cutoff_date
+                for cutoff_date in cutoff_dates
+            }
+            results_by_date: Dict[datetime, Tuple[datetime, str, List[PlayerFeatures]]] = {}
+            for future in as_completed(futures):
+                res = future.result()
+                results_by_date[res[0]] = res
+            for cutoff_date in cutoff_dates:
+                cutoff_results.append(results_by_date[cutoff_date])
+                r = results_by_date[cutoff_date]
+                print(f"  Cutoff {r[0].strftime('%Y-%m-%d')} ({r[1]}): {len(r[2])} players")
+    
+    for _, _, batch in cutoff_results:
+        dataset.extend(batch)
     
     print(f"Total training samples: {len(dataset)} "
           f"({len(cutoff_dates)} cutoffs x ~{len(dataset) // max(1, len(cutoff_dates))} players/cutoff)")
@@ -1308,6 +1406,6 @@ def build_prediction_dataset(
     
     # Compute percentile features per cutoff
     if dataset:
-        _compute_percentile_features(dataset)
+        _compute_percentile_features(dataset, verbose=verbose)
     
     return dataset
