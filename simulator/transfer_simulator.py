@@ -33,6 +33,7 @@ from transfer import Transfer
 from valuation import Valuation
 from simulator.knapsack_solver import best_full_teams
 from scraping.utils.helpers import list_json_bases, load_json
+from ml.feature_engineering import TOP_LEAGUE_IDS, load_team_league_mapping
 
 # Paths
 ROOT_DIR = Path(__file__).parent.parent
@@ -68,6 +69,9 @@ ATHLETIC_FAMILY_NAMES = {
     "cd basconia",
 }
 ATHLETIC_BILBAO_ID = "621"
+
+# Minimum market value (euros) for players outside top leagues when filtering
+MIN_FILTER_MARKET_VALUE = 1_000_000
 
 
 @dataclass
@@ -292,28 +296,23 @@ class TransferSimulator:
             cutoff_date = datetime(start_year, 7, 1)
         
         # Load valuations for feature extraction
-        if verbose:
-            print("    Loading valuations...")
-        all_valuations = self._load_all_valuations()
-        team_league_mapping = load_team_league_mapping()
+        all_valuations = self._load_all_valuations(verbose=verbose)
+        team_league_mapping = load_team_league_mapping(verbose=verbose)
         
         # Create player dict for feature extraction
         player_dict = {p.player_id: p for p in players}
         
         # Build prediction dataset
-        if verbose:
-            print("    Building features...")
         features = build_prediction_dataset(
             all_valuations,
             cutoff_date,
             players=player_dict,
             team_league_mapping=team_league_mapping,
+            verbose=verbose,
         )
         
-        # Get predictions
+        # Get predictions (single batch call, no tqdm needed)
         if features:
-            if verbose:
-                print(f"    Predicting values for {len(features)} players...")
             predictions = self.predictor.predict_batch(features)
             
             # Map predictions back to players with progress bar
@@ -329,10 +328,12 @@ class TransferSimulator:
         
         return players
     
-    def _load_all_valuations(self) -> List[Valuation]:
+    def _load_all_valuations(self, verbose: bool = False) -> List[Valuation]:
         """Load all valuations for feature extraction. Supports multi-part files."""
         all_valuations = []
-        for base in list_json_bases("valuations_all_*.json"):
+        bases = list(list_json_bases("valuations_all_*.json"))
+        iterator = tqdm(bases, desc="Loading valuations", disable=not verbose)
+        for base in iterator:
             data = load_json(base)
             if isinstance(data, list):
                 for item in data:
@@ -587,7 +588,46 @@ class TransferSimulator:
             available = [p for p in available if p.player_id in athletic_eligible_ids]
 
         return available
-    
+
+    def _filter_players_by_value_and_league(
+        self,
+        players: List[Player],
+        club_players: List[Player],
+        team_league_mapping: Dict[str, Dict[str, Dict[str, str]]],
+    ) -> List[Player]:
+        """
+        Filter out players with market value < 1M unless they play in:
+        - A top 5 league (GB1, IT1, L1, FR1, ES1), or
+        - The same league as the club we're simulating for.
+        """
+        if not club_players:
+            return players
+
+        club_team_id = (club_players[0].team_id or "").strip()
+        club_league_id = ""
+        if club_team_id and self.season:
+            club_league_id = (
+                team_league_mapping.get(club_team_id, {}).get(self.season, {}).get("league_id", "") or ""
+            )
+
+        result = []
+        for p in players:
+            mv = p.market_value or 0
+            if mv >= MIN_FILTER_MARKET_VALUE:
+                result.append(p)
+                continue
+            # Below 1M: keep only if in top 5 league or club's league
+            player_league_id = ""
+            if (p.team_id or "").strip():
+                player_league_id = (
+                    team_league_mapping.get(p.team_id, {}).get(self.season, {}).get("league_id", "") or ""
+                )
+            if player_league_id in TOP_LEAGUE_IDS:
+                result.append(p)
+            elif club_league_id and player_league_id == club_league_id:
+                result.append(p)
+        return result
+
     def run(
         self,
         min_sales: int = 5,
@@ -595,6 +635,7 @@ class TransferSimulator:
         max_per_position: int = 3,
         verbose: bool = True,
         generate_summary: bool = True,
+        filter_players: bool = True,
         llm_provider: Optional[str] = None,
         llm_api_key: Optional[str] = None,
         progress_callback: Optional[object] = None,
@@ -609,6 +650,8 @@ class TransferSimulator:
             max_per_position: Max players to sell per position
             verbose: Print progress to stdout
             generate_summary: If True, attempt to generate LLM summary
+            filter_players: If True, exclude players <1M value unless in top 5
+                leagues or the club's league (default: True)
             llm_provider: LLM provider ("openai", "anthropic", "gemini")
             llm_api_key: Optional API key override
             progress_callback: Optional ``callable(pct: float, step_key: str)``
@@ -706,10 +749,22 @@ class TransferSimulator:
         )
         available_players = [p for p in available_players if p.player_id not in sold_player_ids]
 
+        # Filter out players <1M unless in top 5 leagues or club's league
+        if filter_players:
+            if verbose:
+                print("  Filtering players by value and league...")
+            team_league_mapping = load_team_league_mapping(verbose=verbose)
+            before = len(available_players)
+            available_players = self._filter_players_by_value_and_league(
+                available_players, club_players, team_league_mapping
+            )
+            if verbose:
+                print(f"  Filtered {before} -> {len(available_players)} players (excluded <€1M outside top leagues)")
+
         if verbose:
             print(f"  {len(available_players)} players available for signing")
 
-        available_players = self._predict_values(available_players)
+        available_players = self._predict_values(available_players, verbose=verbose)
 
         # ── Step 6/8: Knapsack optimisation ──────────────────────────────
         _progress(0.80, "step_knapsack")
@@ -777,6 +832,12 @@ def main():
     parser.add_argument("--transfer-budget", type=int, default=100, help="Transfer budget (millions)")
     parser.add_argument("--salary-budget", type=int, default=15, help="Salary budget (millions/year)")
     parser.add_argument("--no-summary", action="store_true", help="Skip LLM summary generation")
+    parser.add_argument("--filter-players", action="store_true", default=True,
+                        help="Exclude players <€1M unless in top 5 leagues or club's league (default: True)")
+    parser.add_argument("--no-filter-players", dest="filter_players", action="store_false",
+                        help="Disable value/league filter")
+    parser.add_argument("--verbose", action="store_true", default=True, help="Print progress (default: True)")
+    parser.add_argument("--no-verbose", dest="verbose", action="store_false", help="Quiet mode")
     parser.add_argument("--llm-provider", type=str, default=None, 
                         help="LLM provider (openai, anthropic, gemini)")
     parser.add_argument("--llm-api-key", type=str, default=None,
@@ -793,6 +854,8 @@ def main():
     
     result = sim.run(
         generate_summary=not args.no_summary,
+        filter_players=args.filter_players,
+        verbose=args.verbose,
         llm_provider=args.llm_provider,
         llm_api_key=args.llm_api_key,
     )

@@ -16,6 +16,7 @@ from typing import Dict, List, Optional, Set, Tuple
 from dataclasses import dataclass, field
 
 import numpy as np
+from tqdm import tqdm
 
 ROOT_DIR = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT_DIR))
@@ -510,7 +511,7 @@ def _normalize_position(pos: str) -> str:
     return "MID"
 
 
-def load_team_league_mapping() -> Dict[str, Dict[str, Dict[str, str]]]:
+def load_team_league_mapping(verbose: bool = False) -> Dict[str, Dict[str, Dict[str, str]]]:
     """
     Load mapping of (team_id, season) -> {league_id, country} for ALL seasons.
     
@@ -525,7 +526,9 @@ def load_team_league_mapping() -> Dict[str, Dict[str, Dict[str, str]]]:
     team_mapping: Dict[str, Dict[str, Dict[str, str]]] = {}
 
     # Load from all teams_all_*.json files (supports multi-part)
-    for base in list_json_bases("teams_all_*.json"):
+    bases = list(list_json_bases("teams_all_*.json"))
+    iterator = tqdm(bases, desc="Loading team-league mapping", disable=not verbose)
+    for base in iterator:
         season = base.replace("teams_all_", "")
 
         try:
@@ -1263,6 +1266,7 @@ def build_prediction_dataset(
     team_league_mapping: Optional[Dict[str, Dict[str, Dict[str, str]]]] = None,
     min_valuations: int = 2,
     all_transfers: Optional[List[Transfer]] = None,
+    verbose: bool = False,
 ) -> List[PlayerFeatures]:
     """
     Build dataset for prediction (no target required).
@@ -1281,7 +1285,9 @@ def build_prediction_dataset(
         by_player.setdefault(v.player_id, []).append(v)
     
     dataset: List[PlayerFeatures] = []
-    for player_id, player_vals in by_player.items():
+    items = list(by_player.items())
+    iterator = tqdm(items, desc="Building prediction features", disable=not verbose)
+    for player_id, player_vals in iterator:
         if len(player_vals) < min_valuations:
             continue
         
