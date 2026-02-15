@@ -408,6 +408,7 @@ class TransfermarktTransfersScraper(BaseScraper):
         league: str,
         details: bool = True,
         skip_player_ids: Set[str] = None,
+        all_years_player_records: Dict[str, List[dict]] = None,
     ) -> Dict[str, List[Transfer]]:
         """
         Scrape transfers for all players in all teams of a league.
@@ -438,6 +439,9 @@ class TransfermarktTransfersScraper(BaseScraper):
         if not details:
             return self._scrape_league_transfers_simple(league)
 
+        all_years_player_records = all_years_player_records or {}
+        filled_player_ids: Set[str] = set()
+
         from scraping.transfermarkt_players import TransfermarktPlayersScraper
         players_scraper = TransfermarktPlayersScraper(
             season=self.season, delay=self.delay, verbose=False,
@@ -460,6 +464,10 @@ class TransfermarktTransfersScraper(BaseScraper):
             for i, (pid, pname) in enumerate(player_info):
                 if pid in global_seen:
                     self.log(f"  [{i + 1}/{len(player_info)}] {pname} (already scraped, skipping)")
+                    if pid not in filled_player_ids and pid in all_years_player_records:
+                        for d in all_years_player_records[pid]:
+                            team_transfers.append(Transfer.from_dict(d))
+                        filled_player_ids.add(pid)
                     continue
                 global_seen.add(pid)
 
@@ -487,22 +495,28 @@ class TransfermarktTransfersScraper(BaseScraper):
             # Scrape the season transfer page to discover player IDs
             page_players = self.get_transferred_player_ids(tid, tname)
 
-            # Collect player IDs + names we haven't seen yet
+            # Collect player IDs + names we haven't seen yet (to scrape)
             new_players: List[tuple] = []
             for pid, pname in page_players:
                 if pid not in global_seen:
                     new_players.append((pid, pname))
                     global_seen.add(pid)
 
+            # Fill skipped players from all-years pool (add only once per player)
+            if tid not in all_transfers:
+                all_transfers[tid] = []
+            for pid, pname in page_players:
+                if pid in global_seen and pid not in filled_player_ids and pid in all_years_player_records:
+                    self.log(f"  Fill {pname or pid} from all years")
+                    for d in all_years_player_records[pid]:
+                        all_transfers[tid].append(Transfer.from_dict(d))
+                    filled_player_ids.add(pid)
+
             if not new_players:
                 self.log(f"  No new players found on transfer page")
                 continue
 
             self.log(f"  {len(new_players)} new player(s) from transfer page")
-
-            # Ensure team has an entry in all_transfers
-            if tid not in all_transfers:
-                all_transfers[tid] = []
 
             for j, (pid, pname) in enumerate(new_players):
                 self.log(f"  [{j + 1}/{len(new_players)}] {pname or pid}")
@@ -744,20 +758,30 @@ class TransfermarktTransfersScraper(BaseScraper):
 
         all_data: Dict[str, Dict[str, List[Transfer]]] = {}
         loaded_data: list = []
+        all_years_player_records: Dict[str, List[dict]] = {}
 
-        # Load existing data for incremental scraping
+        # Load existing data for incremental scraping (all years for skip+fill)
         skip_player_ids: Set[str] = set()
         if self.use_downloaded_data:
-            existing_all = self.load_json(f"transfers_all_{self.season}")
-            if existing_all:
-                skip_player_ids = {t["player_id"] for t in existing_all if "player_id" in t}
-                loaded_data = existing_all
-                self.log(f"\nIncremental mode: {len(skip_player_ids)} players already scraped")
+            from scraping.utils.helpers import load_entity_all_from_all_years
+
+            skip_player_ids, all_years_player_records, loaded_data = load_entity_all_from_all_years(
+                entity="transfers",
+                id_field="player_id",
+                current_season=self.season,
+            )
+            self.log(
+                f"\nIncremental mode: {len(skip_player_ids)} players from all years, "
+                f"{len(loaded_data)} in current season"
+            )
 
         for league in leagues:
             self.log(f"\n=== Scraping transfers from {league.upper()} ===")
             transfers_by_team = self.scrape_league_transfers(
-                league, details=details, skip_player_ids=skip_player_ids,
+                league,
+                details=details,
+                skip_player_ids=skip_player_ids,
+                all_years_player_records=all_years_player_records,
             )
             all_data[league] = transfers_by_team
 

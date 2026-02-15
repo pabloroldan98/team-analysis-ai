@@ -247,6 +247,66 @@ read_dict_data = load_json
 write_dict_data = write_dict_to_json
 
 
+def load_entity_all_from_all_years(
+    entity: str,
+    id_field: str,
+    current_season: str = None,
+) -> tuple[set, Dict[str, List[dict]], List[dict]]:
+    """
+    Load all ``{entity}_all_*.json`` files from every season.
+    Used for --use-downloaded-data to skip and fill from any year.
+
+    Args:
+        entity: Base name (e.g. "transfers", "valuations", "players")
+        id_field: Field to use as unique ID (e.g. "player_id")
+        current_season: Optional season for current-season records (e.g. "2024-2025")
+
+    Returns:
+        (skip_ids, id_to_records, current_season_records)
+        - skip_ids: set of IDs we already have data for (from any year)
+        - id_to_records: mapping id -> list of records (for filling when skipping)
+        - current_season_records: records from current season only (for merge)
+    """
+    pattern = f"{entity}_all_*.json"
+    bases = list_json_bases(pattern)
+    if not bases:
+        return set(), {}, []
+
+    skip_ids: set = set()
+    id_to_records: Dict[str, List[dict]] = {}
+    current_season_records: List[dict] = []
+    seen_record_ids: set = set()  # for deduplication (e.g. transfer_id)
+
+    for base in bases:
+        data = load_json(base)
+        if not isinstance(data, list):
+            continue
+        for item in data:
+            if not isinstance(item, dict):
+                continue
+            rid = item.get(id_field)
+            if not rid:
+                continue
+            rid = str(rid)
+            skip_ids.add(rid)
+
+            # Current season records for merge (before dedup so we capture all)
+            if current_season and base.endswith(f"_{current_season}"):
+                current_season_records.append(item)
+
+            # Build id_to_records with deduplication
+            record_key = item.get("transfer_id") or item.get("valuation_id") or id(item)
+            if record_key in seen_record_ids:
+                continue
+            seen_record_ids.add(record_key)
+
+            if rid not in id_to_records:
+                id_to_records[rid] = []
+            id_to_records[rid].append(item)
+
+    return skip_ids, id_to_records, current_season_records
+
+
 def is_valid_data(
     data: Any,
     min_items: int = 10,

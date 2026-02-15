@@ -478,14 +478,20 @@ class TransfermarktPlayersScraper(BaseScraper):
         all_data = {}
         loaded_data: list = []
 
-        # Load existing data for incremental scraping
+        # Load existing data for incremental scraping (all years for skip - player details are reusable)
         skip_player_ids: set = set()
         if self.use_downloaded_data:
-            existing_all = self.load_json(f"players_all_{self.season}")
-            if existing_all:
-                skip_player_ids = {p["player_id"] for p in existing_all if "player_id" in p}
-                loaded_data = existing_all
-                self.log(f"\nIncremental mode: {len(skip_player_ids)} players already scraped")
+            from scraping.utils.helpers import load_entity_all_from_all_years
+
+            skip_player_ids, _, loaded_data = load_entity_all_from_all_years(
+                entity="players",
+                id_field="player_id",
+                current_season=self.season,
+            )
+            self.log(
+                f"\nIncremental mode: {len(skip_player_ids)} players from all years, "
+                f"{len(loaded_data)} in current season"
+            )
         
         for league in leagues:
             self.log(f"\n=== Scraping players from {league.upper()} ===")

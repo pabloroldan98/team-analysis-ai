@@ -377,6 +377,7 @@ class TransfermarktValuationsScraper(BaseScraper):
         league: str,
         details: bool = True,
         skip_player_ids: set = None,
+        all_years_player_records: dict = None,
     ) -> Dict[str, Dict[str, List[Valuation]]]:
         """
         Scrape valuations for all players in a league.
@@ -401,6 +402,9 @@ class TransfermarktValuationsScraper(BaseScraper):
         Returns:
             Dict mapping team_id -> player_id -> list of valuations
         """
+        all_years_player_records = all_years_player_records or {}
+        filled_player_ids: set = set()
+
         from scraping.transfermarkt_players import TransfermarktPlayersScraper
         players_scraper = TransfermarktPlayersScraper(season=self.season, delay=self.delay, verbose=False)
         players_by_team = players_scraper.scrape_league_players(league)
@@ -430,9 +434,17 @@ class TransfermarktValuationsScraper(BaseScraper):
                 player_ids=player_info
             )
 
-            all_valuations[team_id] = team_valuations
+            if team_id not in all_valuations:
+                all_valuations[team_id] = {}
+            all_valuations[team_id].update(team_valuations)
             for p in players:
+                was_skipped = p.player_id in global_seen
                 global_seen.add(p.player_id)
+                if was_skipped and p.player_id not in filled_player_ids and p.player_id in all_years_player_records:
+                    all_valuations[team_id][p.player_id] = [
+                        Valuation.from_dict(d) for d in all_years_player_records[p.player_id]
+                    ]
+                    filled_player_ids.add(p.player_id)
 
         # ── Phase 2: transferred players from season transfer pages ──────
         self.log(f"\n--- Phase 2: Transferred players ({league.upper()}) ---")
@@ -448,14 +460,23 @@ class TransfermarktValuationsScraper(BaseScraper):
 
             new_players = [(pid, pname) for pid, pname in page_players if pid not in global_seen]
 
+            if tid not in all_valuations:
+                all_valuations[tid] = {}
+
+            # Fill skipped players from all-years pool
+            for pid, pname in page_players:
+                if pid in global_seen and pid not in filled_player_ids and pid in all_years_player_records:
+                    self.log(f"  Fill {pname or pid} from all years")
+                    all_valuations[tid][pid] = [
+                        Valuation.from_dict(d) for d in all_years_player_records[pid]
+                    ]
+                    filled_player_ids.add(pid)
+
             if not new_players:
                 self.log(f"  No new players found on transfer page")
                 continue
 
             self.log(f"  {len(new_players)} new player(s) from transfer page")
-
-            if tid not in all_valuations:
-                all_valuations[tid] = {}
 
             for j, (pid, pname) in enumerate(new_players):
                 global_seen.add(pid)
@@ -642,20 +663,30 @@ class TransfermarktValuationsScraper(BaseScraper):
 
         all_data = {}
         loaded_data: list = []
+        all_years_player_records: dict = {}
 
-        # Load existing data for incremental scraping
+        # Load existing data for incremental scraping (all years for skip+fill)
         skip_player_ids: set = set()
         if self.use_downloaded_data:
-            existing_all = self.load_json(f"valuations_all_{self.season}")
-            if existing_all:
-                skip_player_ids = {v["player_id"] for v in existing_all if "player_id" in v}
-                loaded_data = existing_all
-                self.log(f"\nIncremental mode: {len(skip_player_ids)} players already scraped")
-        
+            from scraping.utils.helpers import load_entity_all_from_all_years
+
+            skip_player_ids, all_years_player_records, loaded_data = load_entity_all_from_all_years(
+                entity="valuations",
+                id_field="player_id",
+                current_season=self.season,
+            )
+            self.log(
+                f"\nIncremental mode: {len(skip_player_ids)} players from all years, "
+                f"{len(loaded_data)} in current season"
+            )
+
         for league in leagues:
             self.log(f"\n=== Scraping valuations from {league.upper()} ===")
             valuations_data = self.scrape_league_valuations(
-                league, details=details, skip_player_ids=skip_player_ids,
+                league,
+                details=details,
+                skip_player_ids=skip_player_ids,
+                all_years_player_records=all_years_player_records,
             )
             all_data[league] = valuations_data
             

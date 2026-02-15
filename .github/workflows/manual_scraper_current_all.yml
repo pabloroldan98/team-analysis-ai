@@ -104,7 +104,7 @@ jobs:
           - u19_bundesliga_a
           - u19_bundesliga_h
           - liga_revelacao
-        season: ['2025-2026']
+        season: ['2025-2026', '2024-2025', '2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020', '2018-2019', '2017-2018', '2016-2017']
 
     steps:
       - name: Checkout repository
@@ -168,7 +168,9 @@ jobs:
 
       - name: Combine into _all_ files
         run: |
-          python scraping_tasks/combine_data.py --entity leagues --season 2025-2026
+          for season in $(ls data/json/leagues_*.json 2>/dev/null | grep -v '_all_' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u); do
+            python scraping_tasks/combine_data.py --entity leagues --season $season
+          done
 
       - name: Upload all leagues data
         uses: actions/upload-artifact@v4
@@ -272,7 +274,7 @@ jobs:
           - u19_bundesliga_a
           - u19_bundesliga_h
           - liga_revelacao
-        season: ['2025-2026']
+        season: ['2025-2026', '2024-2025', '2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020', '2018-2019', '2017-2018', '2016-2017']
 
     steps:
       - name: Checkout repository
@@ -336,7 +338,9 @@ jobs:
 
       - name: Combine into _all_ files
         run: |
-          python scraping_tasks/combine_data.py --entity teams --season 2025-2026
+          for season in $(ls data/json/teams_*.json 2>/dev/null | grep -v '_all_' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u); do
+            python scraping_tasks/combine_data.py --entity teams --season $season
+          done
 
       - name: Upload all teams data
         uses: actions/upload-artifact@v4
@@ -440,7 +444,7 @@ jobs:
           - u19_bundesliga_a
           - u19_bundesliga_h
           - liga_revelacao
-        season: ['2025-2026']
+        season: ['2025-2026', '2024-2025', '2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020', '2018-2019', '2017-2018', '2016-2017']
 
     steps:
       - name: Checkout repository
@@ -504,7 +508,9 @@ jobs:
 
       - name: Combine into _all_ files
         run: |
-          python scraping_tasks/combine_data.py --entity players --season 2025-2026
+          for season in $(ls data/json/players_*.json 2>/dev/null | grep -v '_all_' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u); do
+            python scraping_tasks/combine_data.py --entity players --season $season
+          done
 
       - name: Upload all players data
         uses: actions/upload-artifact@v4
@@ -608,7 +614,7 @@ jobs:
           - u19_bundesliga_a
           - u19_bundesliga_h
           - liga_revelacao
-        season: ['2025-2026']
+        season: ['2025-2026', '2024-2025', '2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020', '2018-2019', '2017-2018', '2016-2017']
 
     steps:
       - name: Checkout repository
@@ -672,7 +678,9 @@ jobs:
 
       - name: Combine into _all_ files
         run: |
-          python scraping_tasks/combine_data.py --entity transfers --season 2025-2026
+          for season in $(ls data/json/transfers_*.json 2>/dev/null | grep -v '_all_' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u); do
+            python scraping_tasks/combine_data.py --entity transfers --season $season
+          done
 
       - name: Upload all transfers data
         uses: actions/upload-artifact@v4
@@ -776,7 +784,7 @@ jobs:
           - u19_bundesliga_a
           - u19_bundesliga_h
           - liga_revelacao
-        season: ['2025-2026']
+        season: ['2025-2026', '2024-2025', '2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020', '2018-2019', '2017-2018', '2016-2017']
 
     steps:
       - name: Checkout repository
@@ -840,7 +848,9 @@ jobs:
 
       - name: Combine into _all_ files
         run: |
-          python scraping_tasks/combine_data.py --entity valuations --season 2025-2026
+          for season in $(ls data/json/valuations_*.json 2>/dev/null | grep -v '_all_' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u); do
+            python scraping_tasks/combine_data.py --entity valuations --season $season
+          done
 
       - name: Upload all valuations data
         uses: actions/upload-artifact@v4
@@ -915,7 +925,7 @@ jobs:
       - name: Commit changes
         run: |
           git add data/json/ streamlit_app.py
-          git diff --staged --quiet || git commit -m "All leagues data update 2025-2026 [$(date -u '+%Y-%m-%d')]"
+          git diff --staged --quiet || git commit -m "All leagues data update [$(date -u '+%Y-%m-%d')]"
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0

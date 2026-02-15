@@ -80,7 +80,7 @@ jobs:
       
       - name: Combine into _all_ files
         run: |
-          for season in 2025-2026 2024-2025 2023-2024 2022-2023 2021-2022 2020-2021 2019-2020 2018-2019 2017-2018 2016-2017; do
+          for season in $(ls data/json/valuations_*.json 2>/dev/null | grep -v '_all_' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u); do
             python scraping_tasks/combine_data.py --entity valuations --season $season
           done
       
