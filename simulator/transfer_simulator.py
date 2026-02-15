@@ -517,7 +517,53 @@ class TransferSimulator:
         ]
         
         return sold_players, formation_needed
-    
+
+    def _sell_players_by_value_decline(
+        self,
+        club_players: List[Player],
+        athletic_eligible_ids: Optional[set] = None,
+    ) -> Tuple[List[SoldPlayer], List[int]]:
+        """
+        Sell all players whose predicted_value < market_value (expected to decline).
+
+        Uses _find_destination_team for each candidate (same logic as _sell_random_players).
+        Requires club_players to have predicted_value set (call _predict_values first).
+
+        Returns:
+            (sold_players, formation_needed) where formation_needed is [GK, DEF, MID, ATT]
+        """
+        available = []
+        for p in club_players:
+            if p.position not in ["GK", "DEF", "MID", "ATT"] or p.on_loan:
+                continue
+            mv = p.market_value or 0
+            pv = p.predicted_value
+            if pv is not None and mv > 0 and pv < mv:
+                available.append(p)
+        # Sort by (market_value - predicted_value) desc: sell biggest expected declines first
+        available.sort(key=lambda p: (p.market_value or 0) - (p.predicted_value or 0), reverse=True)
+
+        sales_per_position = {"GK": 0, "DEF": 0, "MID": 0, "ATT": 0}
+        sold_players: List[SoldPlayer] = []
+
+        for player in available:
+            destination = self._find_destination_team(
+                player,
+                excluded_teams=[self.club_name],
+                athletic_eligible_ids=athletic_eligible_ids,
+            )
+            sold_players.append(SoldPlayer(player=player, destination_team=destination))
+            if destination is not None:
+                sales_per_position[player.position] += 1
+
+        formation_needed = [
+            sales_per_position["GK"],
+            sales_per_position["DEF"],
+            sales_per_position["MID"],
+            sales_per_position["ATT"],
+        ]
+        return sold_players, formation_needed
+
     def _load_all_transfers(self) -> List[Transfer]:
         """Load all transfers from every ``transfers_all_*.json`` file. Supports multi-part files."""
         all_transfers: List[Transfer] = []
@@ -636,6 +682,7 @@ class TransferSimulator:
         verbose: bool = True,
         generate_summary: bool = True,
         filter_players: bool = True,
+        sell_by_value_decline: bool = False,
         llm_provider: Optional[str] = None,
         llm_api_key: Optional[str] = None,
         progress_callback: Optional[object] = None,
@@ -645,13 +692,15 @@ class TransferSimulator:
         Run the transfer simulation.
 
         Args:
-            min_sales: Minimum players to sell
-            max_sales: Maximum players to sell
-            max_per_position: Max players to sell per position
+            min_sales: Minimum players to sell (random mode only)
+            max_sales: Maximum players to sell (random mode only)
+            max_per_position: Max players to sell per position (random mode only)
             verbose: Print progress to stdout
             generate_summary: If True, attempt to generate LLM summary
             filter_players: If True, exclude players <€10M value unless in top 5
                 leagues or the club's league (default: True)
+            sell_by_value_decline: If True, sell players with predicted_value < market_value
+                instead of random selection (default: False)
             llm_provider: LLM provider ("openai", "anthropic", "gemini")
             llm_api_key: Optional API key override
             progress_callback: Optional ``callable(pct: float, step_key: str)``
@@ -717,13 +766,22 @@ class TransferSimulator:
 
         # ── Step 4/8: Sell players ───────────────────────────────────────
         _progress(0.50, "step_selling")
-        sold_players, formation_needed = self._sell_random_players(
-            club_players,
-            min_sales=min_sales,
-            max_sales=max_sales,
-            max_per_position=max_per_position,
-            athletic_eligible_ids=athletic_eligible_ids,
-        )
+        if sell_by_value_decline:
+            if verbose:
+                print("  Predicting values for squad (sell-by-decline mode)...")
+            club_players = self._predict_values(club_players, verbose=verbose)
+            sold_players, formation_needed = self._sell_players_by_value_decline(
+                club_players,
+                athletic_eligible_ids=athletic_eligible_ids,
+            )
+        else:
+            sold_players, formation_needed = self._sell_random_players(
+                club_players,
+                min_sales=min_sales,
+                max_sales=max_sales,
+                max_per_position=max_per_position,
+                athletic_eligible_ids=athletic_eligible_ids,
+            )
 
         actually_sold = [sp for sp in sold_players if sp.was_sold]
         sales_revenue = sum((sp.player.market_value or 0) for sp in actually_sold) / 1_000_000
@@ -836,6 +894,8 @@ def main():
                         help="Exclude players <€10M unless in top 5 leagues or club's league (default: True)")
     parser.add_argument("--no-filter-players", dest="filter_players", action="store_false",
                         help="Disable value/league filter")
+    parser.add_argument("--sell-by-value-decline", action="store_true",
+                        help="Sell players with predicted value < market value (instead of random)")
     parser.add_argument("--verbose", action="store_true", default=True, help="Print progress (default: True)")
     parser.add_argument("--no-verbose", dest="verbose", action="store_false", help="Quiet mode")
     parser.add_argument("--llm-provider", type=str, default=None, 
@@ -855,6 +915,7 @@ def main():
     result = sim.run(
         generate_summary=not args.no_summary,
         filter_players=args.filter_players,
+        sell_by_value_decline=args.sell_by_value_decline,
         verbose=args.verbose,
         llm_provider=args.llm_provider,
         llm_api_key=args.llm_api_key,
