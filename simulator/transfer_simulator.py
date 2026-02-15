@@ -71,7 +71,7 @@ ATHLETIC_FAMILY_NAMES = {
 ATHLETIC_BILBAO_ID = "621"
 
 # Minimum market value (euros) for players outside top leagues when filtering
-MIN_FILTER_MARKET_VALUE = 10_000_000
+MIN_FILTER_MARKET_VALUE = 1_000_000
 
 
 @dataclass
@@ -641,8 +641,8 @@ class TransferSimulator:
         club_players: List[Player],
         team_league_mapping: Dict[str, Dict[str, Dict[str, str]]],
     ) -> List[Player]:
-        """
-        Filter out players with market value < €10M unless they play in:
+        f"""
+        Filter out players with market value < €{MIN_FILTER_MARKET_VALUE/1_000_000:.1f}M unless they play in:
         - A top 5 league (GB1, IT1, L1, FR1, ES1), or
         - The same league as the club we're simulating for.
         """
@@ -662,7 +662,7 @@ class TransferSimulator:
             if mv >= MIN_FILTER_MARKET_VALUE:
                 result.append(p)
                 continue
-            # Below €10M: keep only if in top 5 league or club's league
+            # Below MIN_FILTER_MARKET_VALUE: keep only if in top 5 league or club's league
             player_league_id = ""
             if (p.team_id or "").strip():
                 player_league_id = (
@@ -688,7 +688,7 @@ class TransferSimulator:
         progress_callback: Optional[object] = None,
         unlimited_budget: bool = False,
     ) -> TransferResult:
-        """
+        f"""
         Run the transfer simulation.
 
         Args:
@@ -697,7 +697,7 @@ class TransferSimulator:
             max_per_position: Max players to sell per position (random mode only)
             verbose: Print progress to stdout
             generate_summary: If True, attempt to generate LLM summary
-            filter_players: If True, exclude players <€10M value unless in top 5
+            filter_players: If True, exclude players <€{MIN_FILTER_MARKET_VALUE/1_000_000:.1f}M value unless in top 5
                 leagues or the club's league (default: True)
             sell_by_value_decline: If True, sell players with predicted_value < market_value
                 instead of random selection (default: False)
@@ -817,7 +817,7 @@ class TransferSimulator:
                 available_players, club_players, team_league_mapping
             )
             if verbose:
-                print(f"  Filtered {before} -> {len(available_players)} players (excluded <€10M outside top leagues)")
+                print(f"  Filtered {before} -> {len(available_players)} players (excluded <€{MIN_FILTER_MARKET_VALUE/1_000_000:.1f}M outside top leagues)")
 
         if verbose:
             print(f"  {len(available_players)} players available for signing")
@@ -891,7 +891,7 @@ def main():
     parser.add_argument("--salary-budget", type=int, default=15, help="Salary budget (millions/year)")
     parser.add_argument("--no-summary", action="store_true", help="Skip LLM summary generation")
     parser.add_argument("--filter-players", action="store_true", default=True,
-                        help="Exclude players <€10M unless in top 5 leagues or club's league (default: True)")
+                        help=f"Exclude players <€{MIN_FILTER_MARKET_VALUE/1_000_000:.1f}M unless in top 5 leagues or club's league (default: True)")
     parser.add_argument("--no-filter-players", dest="filter_players", action="store_false",
                         help="Disable value/league filter")
     parser.add_argument("--sell-by-value-decline", action="store_true",

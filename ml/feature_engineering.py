@@ -1382,8 +1382,12 @@ def build_prediction_dataset(
     for v in all_valuations:
         by_player.setdefault(v.player_id, []).append(v)
     
+    # When players dict is provided, only process those player_ids (reduces work when filtered)
+    if players:
+        items = [(pid, vals) for pid, vals in by_player.items() if pid in players]
+    else:
+        items = list(by_player.items())
     dataset: List[PlayerFeatures] = []
-    items = list(by_player.items())
     iterator = tqdm(items, desc="Building prediction features", disable=not verbose)
     for player_id, player_vals in iterator:
         if len(player_vals) < min_valuations:
