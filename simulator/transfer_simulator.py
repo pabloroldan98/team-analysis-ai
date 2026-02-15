@@ -71,7 +71,7 @@ ATHLETIC_FAMILY_NAMES = {
 ATHLETIC_BILBAO_ID = "621"
 
 # Minimum market value (euros) for players outside top leagues when filtering
-MIN_FILTER_MARKET_VALUE = 1_000_000
+MIN_FILTER_MARKET_VALUE = 10_000_000
 
 
 @dataclass
