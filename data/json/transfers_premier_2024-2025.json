@@ -40144,6 +40144,22 @@
     "market_value_at_transfer": 0
   },
   {
+    "transfer_id": "6181891",
+    "player_id": "874902",
+    "player_name": "Travis Patterson",
+    "from_club_name": "Aston Villa U21",
+    "from_club_id": "12124",
+    "to_club_name": "FC Annecy",
+    "to_club_id": "30204",
+    "price": null,
+    "price_str": "loan transfer",
+    "transfer_date": "12/02/2026",
+    "season": "2025-2026",
+    "transfer_type": "loan_out",
+    "is_loan": true,
+    "market_value_at_transfer": 0
+  },
+  {
     "transfer_id": "3042733",
     "player_id": "425334",
     "player_name": "Matty Cash",
