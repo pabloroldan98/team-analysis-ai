@@ -44640,6 +44640,146 @@
     "age_at_valuation": 27
   },
   {
+    "valuation_id": "c2934d4d04b0",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 200000,
+    "valuation_date": "09/03/2021",
+    "club_name_at_valuation": "FC Nantes B",
+    "club_id_at_valuation": "10850",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "8c3570870062",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 800000,
+    "valuation_date": "08/10/2021",
+    "club_name_at_valuation": "FC Nantes",
+    "club_id_at_valuation": "995",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "5e300d5e8b3c",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 1500000,
+    "valuation_date": "16/12/2021",
+    "club_name_at_valuation": "FC Nantes",
+    "club_id_at_valuation": "995",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "19a6a8121d55",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 3000000,
+    "valuation_date": "23/03/2022",
+    "club_name_at_valuation": "FC Nantes",
+    "club_id_at_valuation": "995",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "33b658d60871",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 5000000,
+    "valuation_date": "30/05/2022",
+    "club_name_at_valuation": "FC Nantes",
+    "club_id_at_valuation": "995",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "6b31fbb331eb",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 7000000,
+    "valuation_date": "19/09/2022",
+    "club_name_at_valuation": "FC Nantes",
+    "club_id_at_valuation": "995",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "71fd344767a7",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 7000000,
+    "valuation_date": "02/11/2022",
+    "club_name_at_valuation": "FC Nantes",
+    "club_id_at_valuation": "995",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "2a0df9bea0e3",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 7000000,
+    "valuation_date": "27/06/2023",
+    "club_name_at_valuation": "FC Nantes",
+    "club_id_at_valuation": "995",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "e7730f27259a",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 10000000,
+    "valuation_date": "16/10/2023",
+    "club_name_at_valuation": "FC Nantes",
+    "club_id_at_valuation": "995",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "ff27e5fbbc79",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 10000000,
+    "valuation_date": "18/12/2023",
+    "club_name_at_valuation": "FC Nantes",
+    "club_id_at_valuation": "995",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "9a44a4e9446b",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 10000000,
+    "valuation_date": "03/06/2024",
+    "club_name_at_valuation": "Olympique Marseille",
+    "club_id_at_valuation": "244",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "4638ff42ac9a",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 12000000,
+    "valuation_date": "10/12/2024",
+    "club_name_at_valuation": "Olympique Marseille",
+    "club_id_at_valuation": "244",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "5dc3aea176f6",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 15000000,
+    "valuation_date": "03/06/2025",
+    "club_name_at_valuation": "Olympique Marseille",
+    "club_id_at_valuation": "244",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "28ffeda7b371",
+    "player_id": "557613",
+    "player_name": "Quentin Merlin",
+    "valuation_amount": 12000000,
+    "valuation_date": "15/12/2025",
+    "club_name_at_valuation": "Stade Rennais FC",
+    "club_id_at_valuation": "273",
+    "age_at_valuation": 23
+  },
+  {
     "valuation_id": "fada10c3d9fa",
     "player_id": "192616",
     "player_name": "Ulisses Garcia",
@@ -48158,146 +48298,6 @@
     "club_name_at_valuation": "Inter Milan",
     "club_id_at_valuation": "46",
     "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "c2934d4d04b0",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 200000,
-    "valuation_date": "09/03/2021",
-    "club_name_at_valuation": "FC Nantes B",
-    "club_id_at_valuation": "10850",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "8c3570870062",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 800000,
-    "valuation_date": "08/10/2021",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "5e300d5e8b3c",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 1500000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "19a6a8121d55",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 3000000,
-    "valuation_date": "23/03/2022",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "33b658d60871",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 5000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "6b31fbb331eb",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 7000000,
-    "valuation_date": "19/09/2022",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "71fd344767a7",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 7000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "2a0df9bea0e3",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 7000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "e7730f27259a",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 10000000,
-    "valuation_date": "16/10/2023",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "ff27e5fbbc79",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 10000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "9a44a4e9446b",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 10000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "4638ff42ac9a",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 12000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "5dc3aea176f6",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 15000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "28ffeda7b371",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 12000000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 23
   },
   {
     "valuation_id": "ee1abc0229af",
@@ -59440,386 +59440,6 @@
     "age_at_valuation": 23
   },
   {
-    "valuation_id": "e6513d70e63c",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 350000,
-    "valuation_date": "21/10/2008",
-    "club_name_at_valuation": "FC VSS Kosice (2005 - 2017)",
-    "club_id_at_valuation": "779",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "e451de8f39c5",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 1500000,
-    "valuation_date": "22/02/2009",
-    "club_name_at_valuation": "FC VSS Kosice (2005 - 2017)",
-    "club_id_at_valuation": "779",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "6a5355281849",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 2000000,
-    "valuation_date": "25/01/2010",
-    "club_name_at_valuation": "Chelsea FC",
-    "club_id_at_valuation": "631",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "53eb3f12abcd",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 2250000,
-    "valuation_date": "17/01/2011",
-    "club_name_at_valuation": "Vitesse Arnhem",
-    "club_id_at_valuation": "499",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "aedb2d24068d",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 3000000,
-    "valuation_date": "28/06/2011",
-    "club_name_at_valuation": "Vitesse Arnhem",
-    "club_id_at_valuation": "499",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "2bd340ec1bd8",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 4000000,
-    "valuation_date": "02/02/2012",
-    "club_name_at_valuation": "SL Benfica",
-    "club_id_at_valuation": "294",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "f5a53448c35c",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 6000000,
-    "valuation_date": "07/07/2012",
-    "club_name_at_valuation": "SL Benfica",
-    "club_id_at_valuation": "294",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "3cb04b23fcaa",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 14000000,
-    "valuation_date": "27/03/2013",
-    "club_name_at_valuation": "SL Benfica",
-    "club_id_at_valuation": "294",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "cd099197c944",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 22000000,
-    "valuation_date": "02/07/2013",
-    "club_name_at_valuation": "SL Benfica",
-    "club_id_at_valuation": "294",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "c14b9d0ab122",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 27000000,
-    "valuation_date": "08/10/2013",
-    "club_name_at_valuation": "SL Benfica",
-    "club_id_at_valuation": "294",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "26faa840fcb3",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 25000000,
-    "valuation_date": "05/02/2014",
-    "club_name_at_valuation": "Chelsea FC",
-    "club_id_at_valuation": "631",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "42143baee4be",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 26000000,
-    "valuation_date": "12/08/2014",
-    "club_name_at_valuation": "Chelsea FC",
-    "club_id_at_valuation": "631",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "8358697be180",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 34000000,
-    "valuation_date": "12/02/2015",
-    "club_name_at_valuation": "Chelsea FC",
-    "club_id_at_valuation": "631",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "e20aa989971e",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 40000000,
-    "valuation_date": "01/07/2015",
-    "club_name_at_valuation": "Chelsea FC",
-    "club_id_at_valuation": "631",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "87be1861d7c1",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 38000000,
-    "valuation_date": "09/02/2016",
-    "club_name_at_valuation": "Chelsea FC",
-    "club_id_at_valuation": "631",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "e4526a73b767",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 32000000,
-    "valuation_date": "01/08/2016",
-    "club_name_at_valuation": "Chelsea FC",
-    "club_id_at_valuation": "631",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "792333dd0740",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 35000000,
-    "valuation_date": "20/02/2017",
-    "club_name_at_valuation": "Chelsea FC",
-    "club_id_at_valuation": "631",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "db0c9c29b5dc",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 35000000,
-    "valuation_date": "28/06/2017",
-    "club_name_at_valuation": "Chelsea FC",
-    "club_id_at_valuation": "631",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "7448ab4e4095",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 40000000,
-    "valuation_date": "02/01/2018",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "b8627dc4cd27",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 40000000,
-    "valuation_date": "28/05/2018",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "c06e8be56765",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 35000000,
-    "valuation_date": "19/12/2018",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 30
-  },
-  {
-    "valuation_id": "f69046602796",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 30000000,
-    "valuation_date": "13/06/2019",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 30
-  },
-  {
-    "valuation_id": "de4c41ee4414",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 25000000,
-    "valuation_date": "12/09/2019",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 31
-  },
-  {
-    "valuation_id": "b52e723eab4a",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 20000000,
-    "valuation_date": "10/12/2019",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 31
-  },
-  {
-    "valuation_id": "86b91dd15964",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 16000000,
-    "valuation_date": "08/04/2020",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 31
-  },
-  {
-    "valuation_id": "aa41251cca27",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 16000000,
-    "valuation_date": "13/10/2020",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 32
-  },
-  {
-    "valuation_id": "7642eb850a33",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 12000000,
-    "valuation_date": "17/12/2020",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 32
-  },
-  {
-    "valuation_id": "7dcffb5a20f6",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 10000000,
-    "valuation_date": "18/03/2021",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 32
-  },
-  {
-    "valuation_id": "1d51edb1920e",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 8000000,
-    "valuation_date": "08/06/2021",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 32
-  },
-  {
-    "valuation_id": "0ecb7a0dd249",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 6000000,
-    "valuation_date": "23/12/2021",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 33
-  },
-  {
-    "valuation_id": "8d4ef1f14a70",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 5000000,
-    "valuation_date": "15/06/2022",
-    "club_name_at_valuation": "Manchester United",
-    "club_id_at_valuation": "985",
-    "age_at_valuation": 33
-  },
-  {
-    "valuation_id": "7f775bff012c",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 4000000,
-    "valuation_date": "11/11/2022",
-    "club_name_at_valuation": "AS Roma",
-    "club_id_at_valuation": "12",
-    "age_at_valuation": 34
-  },
-  {
-    "valuation_id": "b7cfc18ce7cc",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 4000000,
-    "valuation_date": "15/06/2023",
-    "club_name_at_valuation": "AS Roma",
-    "club_id_at_valuation": "12",
-    "age_at_valuation": 34
-  },
-  {
-    "valuation_id": "f3555bc78ca7",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 3500000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 35
-  },
-  {
-    "valuation_id": "f66976a5981a",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 3000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 35
-  },
-  {
-    "valuation_id": "6d26e4ac4e8e",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 2500000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 36
-  },
-  {
-    "valuation_id": "81aeef81c35d",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 2000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 36
-  },
-  {
-    "valuation_id": "af3e289196fb",
-    "player_id": "74683",
-    "player_name": "Nemanja Matić",
-    "valuation_amount": 1800000,
-    "valuation_date": "23/12/2025",
-    "club_name_at_valuation": "US Sassuolo",
-    "club_id_at_valuation": "6574",
-    "age_at_valuation": 37
-  },
-  {
     "valuation_id": "7f002e66d31b",
     "player_id": "429901",
     "player_name": "Paul Akouokou",
@@ -61318,156 +60938,6 @@
     "club_name_at_valuation": "Heracles Almelo",
     "club_id_at_valuation": "1304",
     "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "301a392b79e6",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 500000,
-    "valuation_date": "23/03/2022",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "5989a186b3b1",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 1000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "3fc3599988ee",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 2000000,
-    "valuation_date": "19/09/2022",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "b7bbb795ab5a",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 2000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "b32cb154133a",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 7000000,
-    "valuation_date": "27/03/2023",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "4d118a738ef3",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 18000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "1ea53c49e9a0",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 35000000,
-    "valuation_date": "16/10/2023",
-    "club_name_at_valuation": "Paris Saint-Germain",
-    "club_id_at_valuation": "583",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "bfc0eba82933",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 30000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "Paris Saint-Germain",
-    "club_id_at_valuation": "583",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "78351c530de4",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 40000000,
-    "valuation_date": "19/03/2024",
-    "club_name_at_valuation": "Paris Saint-Germain",
-    "club_id_at_valuation": "583",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "837d725b6e15",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 50000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Paris Saint-Germain",
-    "club_id_at_valuation": "583",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "f26e18a54755",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 65000000,
-    "valuation_date": "07/10/2024",
-    "club_name_at_valuation": "Paris Saint-Germain",
-    "club_id_at_valuation": "583",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "4736de011981",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 65000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "Paris Saint-Germain",
-    "club_id_at_valuation": "583",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "7d25b1e5209d",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 70000000,
-    "valuation_date": "24/03/2025",
-    "club_name_at_valuation": "Paris Saint-Germain",
-    "club_id_at_valuation": "583",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "91ec82a7f7ce",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 70000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "Paris Saint-Germain",
-    "club_id_at_valuation": "583",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "6527f21e0916",
-    "player_id": "708265",
-    "player_name": "Bradley Barcola",
-    "valuation_amount": 70000000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "Paris Saint-Germain",
-    "club_id_at_valuation": "583",
-    "age_at_valuation": 23
   },
   {
     "valuation_id": "1a1784338de4",
@@ -80480,284 +79950,334 @@
     "age_at_valuation": 33
   },
   {
-    "valuation_id": "4cddbbfda2cc",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
+    "valuation_id": "0f77fa241357",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 50000,
+    "valuation_date": "12/11/2012",
+    "club_name_at_valuation": "Lechia Gdansk",
+    "club_id_at_valuation": "4000",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "642a42cc193d",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 50000,
+    "valuation_date": "07/02/2013",
+    "club_name_at_valuation": "Lechia Gdansk",
+    "club_id_at_valuation": "4000",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "d8eed9e0566e",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 200000,
+    "valuation_date": "22/07/2013",
+    "club_name_at_valuation": "Lechia Gdansk",
+    "club_id_at_valuation": "4000",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "16381ad836cd",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 250000,
+    "valuation_date": "14/02/2014",
+    "club_name_at_valuation": "Lechia Gdansk",
+    "club_id_at_valuation": "4000",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "7c516cb4b9d4",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 300000,
+    "valuation_date": "21/07/2014",
+    "club_name_at_valuation": "Lechia Gdansk",
+    "club_id_at_valuation": "4000",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "9d9685760079",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 250000,
+    "valuation_date": "05/03/2015",
+    "club_name_at_valuation": "Jagiellonia Bialystok",
+    "club_id_at_valuation": "2300",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e073a47d5a88",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 350000,
+    "valuation_date": "30/06/2015",
+    "club_name_at_valuation": "Jagiellonia Bialystok",
+    "club_id_at_valuation": "2300",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "8b0c820026ae",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 500000,
+    "valuation_date": "10/01/2016",
+    "club_name_at_valuation": "Jagiellonia Bialystok",
+    "club_id_at_valuation": "2300",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "2adc3cc2f0b5",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
     "valuation_amount": 400000,
-    "valuation_date": "20/11/2014",
-    "club_name_at_valuation": "AJ Auxerre",
-    "club_id_at_valuation": "290",
+    "valuation_date": "28/03/2016",
+    "club_name_at_valuation": "Jagiellonia Bialystok",
+    "club_id_at_valuation": "2300",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "cbdc748eb6dc",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 400000,
+    "valuation_date": "24/07/2016",
+    "club_name_at_valuation": "Jagiellonia Bialystok",
+    "club_id_at_valuation": "2300",
     "age_at_valuation": 21
   },
   {
-    "valuation_id": "d34986a6cb32",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 400000,
-    "valuation_date": "06/06/2015",
-    "club_name_at_valuation": "AJ Auxerre",
-    "club_id_at_valuation": "290",
+    "valuation_id": "1385058241a9",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 800000,
+    "valuation_date": "21/01/2017",
+    "club_name_at_valuation": "Jagiellonia Bialystok",
+    "club_id_at_valuation": "2300",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "0af6e0f8c16c",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 1000000,
+    "valuation_date": "05/07/2017",
+    "club_name_at_valuation": "Jagiellonia Bialystok",
+    "club_id_at_valuation": "2300",
     "age_at_valuation": 22
   },
   {
-    "valuation_id": "5a91ee72fb63",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 500000,
-    "valuation_date": "04/02/2016",
-    "club_name_at_valuation": "AJ Auxerre",
-    "club_id_at_valuation": "290",
+    "valuation_id": "205a4e607510",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 1250000,
+    "valuation_date": "16/01/2018",
+    "club_name_at_valuation": "Jagiellonia Bialystok",
+    "club_id_at_valuation": "2300",
     "age_at_valuation": 22
   },
   {
-    "valuation_id": "593f496c2388",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 700000,
-    "valuation_date": "13/07/2016",
-    "club_name_at_valuation": "AJ Auxerre",
-    "club_id_at_valuation": "290",
+    "valuation_id": "a6b2f04a68af",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 1500000,
+    "valuation_date": "03/07/2018",
+    "club_name_at_valuation": "Jagiellonia Bialystok",
+    "club_id_at_valuation": "2300",
     "age_at_valuation": 23
   },
   {
-    "valuation_id": "b92d1c0e7390",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 900000,
-    "valuation_date": "20/03/2017",
-    "club_name_at_valuation": "AJ Auxerre",
-    "club_id_at_valuation": "290",
+    "valuation_id": "586ca8c9fe85",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 1500000,
+    "valuation_date": "20/03/2019",
+    "club_name_at_valuation": "Chicago Fire FC",
+    "club_id_at_valuation": "432",
     "age_at_valuation": 23
   },
   {
-    "valuation_id": "b4d0fd475cd2",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 900000,
-    "valuation_date": "15/06/2017",
-    "club_name_at_valuation": "AJ Auxerre",
-    "club_id_at_valuation": "290",
+    "valuation_id": "7e77d354f0b5",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 1500000,
+    "valuation_date": "27/05/2019",
+    "club_name_at_valuation": "Chicago Fire FC",
+    "club_id_at_valuation": "432",
     "age_at_valuation": 24
   },
   {
-    "valuation_id": "09f26be822c4",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 2500000,
-    "valuation_date": "24/01/2018",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
+    "valuation_id": "8fbff7fddcd6",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 2000000,
+    "valuation_date": "30/11/2019",
+    "club_name_at_valuation": "Chicago Fire FC",
+    "club_id_at_valuation": "432",
     "age_at_valuation": 24
   },
   {
-    "valuation_id": "430d43c016f4",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 4000000,
-    "valuation_date": "20/03/2018",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "f0474f317dda",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 6000000,
-    "valuation_date": "04/06/2018",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "204e9c2fd885",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 6000000,
-    "valuation_date": "17/12/2018",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "ea2fa539ecae",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 8000000,
-    "valuation_date": "03/06/2019",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "4f074f90b733",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 8000000,
-    "valuation_date": "19/12/2019",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "b6d6b8c44b54",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 6500000,
+    "valuation_id": "f545f5f2ab77",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 1600000,
     "valuation_date": "08/04/2020",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
+    "club_name_at_valuation": "Chicago Fire FC",
+    "club_id_at_valuation": "432",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "d7af525513ac",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 2000000,
+    "valuation_date": "26/08/2020",
+    "club_name_at_valuation": "Chicago Fire FC",
+    "club_id_at_valuation": "432",
+    "age_at_valuation": 25
+  },
+  {
+    "valuation_id": "608b92dbf53c",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 2000000,
+    "valuation_date": "18/12/2020",
+    "club_name_at_valuation": "Chicago Fire FC",
+    "club_id_at_valuation": "432",
+    "age_at_valuation": 25
+  },
+  {
+    "valuation_id": "2b86fa0dddee",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 2000000,
+    "valuation_date": "31/05/2021",
+    "club_name_at_valuation": "Chicago Fire FC",
+    "club_id_at_valuation": "432",
     "age_at_valuation": 26
   },
   {
-    "valuation_id": "c2f62194df9e",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 8000000,
-    "valuation_date": "15/10/2020",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 27
+    "valuation_id": "90a56dbbe107",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 2000000,
+    "valuation_date": "09/07/2021",
+    "club_name_at_valuation": "Chicago Fire FC",
+    "club_id_at_valuation": "432",
+    "age_at_valuation": 26
   },
   {
-    "valuation_id": "a6723ea76c89",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 10000000,
-    "valuation_date": "07/01/2021",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "d2a21e61395f",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 12000000,
-    "valuation_date": "09/04/2021",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "4d690823b5c1",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 12000000,
-    "valuation_date": "04/06/2021",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "56c90a9d2e91",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 10000000,
+    "valuation_id": "fbdbebf2c889",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 4500000,
     "valuation_date": "08/10/2021",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "9d84032ef202",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 10000000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "b8f38febf5d7",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 10000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "6f9fb1e84150",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 10000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "089975cafeb6",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 7000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 30
-  },
-  {
-    "valuation_id": "c7f91b90e4b5",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 6000000,
-    "valuation_date": "16/10/2023",
     "club_name_at_valuation": "RC Lens",
     "club_id_at_valuation": "826",
-    "age_at_valuation": 30
+    "age_at_valuation": 26
   },
   {
-    "valuation_id": "3ad523a11541",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 6000000,
+    "valuation_id": "af219b765867",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 7000000,
+    "valuation_date": "16/12/2021",
+    "club_name_at_valuation": "RC Lens",
+    "club_id_at_valuation": "826",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "caafc979a8d5",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 8000000,
+    "valuation_date": "30/05/2022",
+    "club_name_at_valuation": "RC Lens",
+    "club_id_at_valuation": "826",
+    "age_at_valuation": 27
+  },
+  {
+    "valuation_id": "0832402eef1c",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 7000000,
+    "valuation_date": "02/11/2022",
+    "club_name_at_valuation": "RC Lens",
+    "club_id_at_valuation": "826",
+    "age_at_valuation": 27
+  },
+  {
+    "valuation_id": "d90fa515b163",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 9000000,
+    "valuation_date": "27/06/2023",
+    "club_name_at_valuation": "RC Lens",
+    "club_id_at_valuation": "826",
+    "age_at_valuation": 28
+  },
+  {
+    "valuation_id": "63f28fd4ac92",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 9000000,
     "valuation_date": "18/12/2023",
     "club_name_at_valuation": "RC Lens",
     "club_id_at_valuation": "826",
-    "age_at_valuation": 30
+    "age_at_valuation": 28
   },
   {
-    "valuation_id": "a33e5e27796b",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 5000000,
+    "valuation_id": "8a932aa07ee4",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 9000000,
     "valuation_date": "03/06/2024",
     "club_name_at_valuation": "RC Lens",
     "club_id_at_valuation": "826",
-    "age_at_valuation": 31
+    "age_at_valuation": 29
   },
   {
-    "valuation_id": "377193e8e5a7",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 4000000,
+    "valuation_id": "308e9a162d20",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 8000000,
     "valuation_date": "10/12/2024",
     "club_name_at_valuation": "RC Lens",
     "club_id_at_valuation": "826",
-    "age_at_valuation": 31
+    "age_at_valuation": 29
   },
   {
-    "valuation_id": "b55f763da4f0",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 3500000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 32
+    "valuation_id": "1e106499c67d",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 8000000,
+    "valuation_date": "20/03/2025",
+    "club_name_at_valuation": "Galatasaray",
+    "club_id_at_valuation": "141",
+    "age_at_valuation": 29
   },
   {
-    "valuation_id": "a1b788933085",
-    "player_id": "203746",
-    "player_name": "Ruben Aguilar",
-    "valuation_amount": 3000000,
+    "valuation_id": "c9e15e055ccc",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 7000000,
+    "valuation_date": "18/06/2025",
+    "club_name_at_valuation": "Galatasaray",
+    "club_id_at_valuation": "141",
+    "age_at_valuation": 30
+  },
+  {
+    "valuation_id": "55e4c0ae9b07",
+    "player_id": "239743",
+    "player_name": "Przemyslaw Frankowski",
+    "valuation_amount": 7000000,
     "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 32
+    "club_name_at_valuation": "Stade Rennais FC",
+    "club_id_at_valuation": "273",
+    "age_at_valuation": 30
   },
   {
     "valuation_id": "2ad2bad10c0f",
@@ -82448,336 +81968,6 @@
     "club_name_at_valuation": "Bröndby IF",
     "club_id_at_valuation": "206",
     "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "0f77fa241357",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 50000,
-    "valuation_date": "12/11/2012",
-    "club_name_at_valuation": "Lechia Gdansk",
-    "club_id_at_valuation": "4000",
-    "age_at_valuation": 17
-  },
-  {
-    "valuation_id": "642a42cc193d",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 50000,
-    "valuation_date": "07/02/2013",
-    "club_name_at_valuation": "Lechia Gdansk",
-    "club_id_at_valuation": "4000",
-    "age_at_valuation": 17
-  },
-  {
-    "valuation_id": "d8eed9e0566e",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 200000,
-    "valuation_date": "22/07/2013",
-    "club_name_at_valuation": "Lechia Gdansk",
-    "club_id_at_valuation": "4000",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "16381ad836cd",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 250000,
-    "valuation_date": "14/02/2014",
-    "club_name_at_valuation": "Lechia Gdansk",
-    "club_id_at_valuation": "4000",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "7c516cb4b9d4",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 300000,
-    "valuation_date": "21/07/2014",
-    "club_name_at_valuation": "Lechia Gdansk",
-    "club_id_at_valuation": "4000",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "9d9685760079",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 250000,
-    "valuation_date": "05/03/2015",
-    "club_name_at_valuation": "Jagiellonia Bialystok",
-    "club_id_at_valuation": "2300",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "e073a47d5a88",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 350000,
-    "valuation_date": "30/06/2015",
-    "club_name_at_valuation": "Jagiellonia Bialystok",
-    "club_id_at_valuation": "2300",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "8b0c820026ae",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 500000,
-    "valuation_date": "10/01/2016",
-    "club_name_at_valuation": "Jagiellonia Bialystok",
-    "club_id_at_valuation": "2300",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "2adc3cc2f0b5",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 400000,
-    "valuation_date": "28/03/2016",
-    "club_name_at_valuation": "Jagiellonia Bialystok",
-    "club_id_at_valuation": "2300",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "cbdc748eb6dc",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 400000,
-    "valuation_date": "24/07/2016",
-    "club_name_at_valuation": "Jagiellonia Bialystok",
-    "club_id_at_valuation": "2300",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "1385058241a9",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 800000,
-    "valuation_date": "21/01/2017",
-    "club_name_at_valuation": "Jagiellonia Bialystok",
-    "club_id_at_valuation": "2300",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "0af6e0f8c16c",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 1000000,
-    "valuation_date": "05/07/2017",
-    "club_name_at_valuation": "Jagiellonia Bialystok",
-    "club_id_at_valuation": "2300",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "205a4e607510",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 1250000,
-    "valuation_date": "16/01/2018",
-    "club_name_at_valuation": "Jagiellonia Bialystok",
-    "club_id_at_valuation": "2300",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "a6b2f04a68af",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 1500000,
-    "valuation_date": "03/07/2018",
-    "club_name_at_valuation": "Jagiellonia Bialystok",
-    "club_id_at_valuation": "2300",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "586ca8c9fe85",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 1500000,
-    "valuation_date": "20/03/2019",
-    "club_name_at_valuation": "Chicago Fire FC",
-    "club_id_at_valuation": "432",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "7e77d354f0b5",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 1500000,
-    "valuation_date": "27/05/2019",
-    "club_name_at_valuation": "Chicago Fire FC",
-    "club_id_at_valuation": "432",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "8fbff7fddcd6",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 2000000,
-    "valuation_date": "30/11/2019",
-    "club_name_at_valuation": "Chicago Fire FC",
-    "club_id_at_valuation": "432",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "f545f5f2ab77",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 1600000,
-    "valuation_date": "08/04/2020",
-    "club_name_at_valuation": "Chicago Fire FC",
-    "club_id_at_valuation": "432",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "d7af525513ac",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 2000000,
-    "valuation_date": "26/08/2020",
-    "club_name_at_valuation": "Chicago Fire FC",
-    "club_id_at_valuation": "432",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "608b92dbf53c",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 2000000,
-    "valuation_date": "18/12/2020",
-    "club_name_at_valuation": "Chicago Fire FC",
-    "club_id_at_valuation": "432",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "2b86fa0dddee",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 2000000,
-    "valuation_date": "31/05/2021",
-    "club_name_at_valuation": "Chicago Fire FC",
-    "club_id_at_valuation": "432",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "90a56dbbe107",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 2000000,
-    "valuation_date": "09/07/2021",
-    "club_name_at_valuation": "Chicago Fire FC",
-    "club_id_at_valuation": "432",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "fbdbebf2c889",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 4500000,
-    "valuation_date": "08/10/2021",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "af219b765867",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 7000000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "caafc979a8d5",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 8000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "0832402eef1c",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 7000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "d90fa515b163",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 9000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "63f28fd4ac92",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 9000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "8a932aa07ee4",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 9000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "308e9a162d20",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 8000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "1e106499c67d",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 8000000,
-    "valuation_date": "20/03/2025",
-    "club_name_at_valuation": "Galatasaray",
-    "club_id_at_valuation": "141",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "c9e15e055ccc",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 7000000,
-    "valuation_date": "18/06/2025",
-    "club_name_at_valuation": "Galatasaray",
-    "club_id_at_valuation": "141",
-    "age_at_valuation": 30
-  },
-  {
-    "valuation_id": "55e4c0ae9b07",
-    "player_id": "239743",
-    "player_name": "Przemyslaw Frankowski",
-    "valuation_amount": 7000000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 30
   },
   {
     "valuation_id": "6579d6060854",
@@ -99690,186 +98880,6 @@
     "age_at_valuation": 20
   },
   {
-    "valuation_id": "a960b0f17aab",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 1500000,
-    "valuation_date": "31/12/2018",
-    "club_name_at_valuation": "APOEL Nicosia",
-    "club_id_at_valuation": "2784",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "112f23804eac",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 2000000,
-    "valuation_date": "25/06/2019",
-    "club_name_at_valuation": "APOEL Nicosia",
-    "club_id_at_valuation": "2784",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "42517b40b4d3",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 2000000,
-    "valuation_date": "06/01/2020",
-    "club_name_at_valuation": "APOEL Nicosia",
-    "club_id_at_valuation": "2784",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "a078fdf75af2",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 1600000,
-    "valuation_date": "08/04/2020",
-    "club_name_at_valuation": "APOEL Nicosia",
-    "club_id_at_valuation": "2784",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "33e2537cf2a1",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 1800000,
-    "valuation_date": "16/10/2020",
-    "club_name_at_valuation": "Oud-Heverlee Leuven",
-    "club_id_at_valuation": "2727",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "acea119172a4",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 1500000,
-    "valuation_date": "07/06/2021",
-    "club_name_at_valuation": "Oud-Heverlee Leuven",
-    "club_id_at_valuation": "2727",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "a9a38ae364ff",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 1300000,
-    "valuation_date": "06/10/2021",
-    "club_name_at_valuation": "Oud-Heverlee Leuven",
-    "club_id_at_valuation": "2727",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "9915b492e64c",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 1200000,
-    "valuation_date": "06/01/2022",
-    "club_name_at_valuation": "Oud-Heverlee Leuven",
-    "club_id_at_valuation": "2727",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "cce870baf956",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 1200000,
-    "valuation_date": "12/04/2022",
-    "club_name_at_valuation": "Oud-Heverlee Leuven",
-    "club_id_at_valuation": "2727",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "1b25d4a0edc5",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 1800000,
-    "valuation_date": "04/11/2022",
-    "club_name_at_valuation": "Oud-Heverlee Leuven",
-    "club_id_at_valuation": "2727",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "12d1dfb8f99c",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 2500000,
-    "valuation_date": "09/06/2023",
-    "club_name_at_valuation": "Oud-Heverlee Leuven",
-    "club_id_at_valuation": "2727",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "ec3146a6a6a1",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 5000000,
-    "valuation_date": "16/10/2023",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "65cc358cc2ad",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 6000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "e6204a193fef",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 7000000,
-    "valuation_date": "21/02/2024",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "a71888c71980",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 8000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "6533f281ffde",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 6000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "871fade888b4",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 6000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "2e8869604694",
-    "player_id": "551505",
-    "player_name": "Mousa Tamari",
-    "valuation_amount": 6000000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 28
-  },
-  {
     "valuation_id": "99fa5551e958",
     "player_id": "127156",
     "player_name": "Téji Savanier",
@@ -101220,6 +100230,186 @@
     "age_at_valuation": 27
   },
   {
+    "valuation_id": "a960b0f17aab",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 1500000,
+    "valuation_date": "31/12/2018",
+    "club_name_at_valuation": "APOEL Nicosia",
+    "club_id_at_valuation": "2784",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "112f23804eac",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 2000000,
+    "valuation_date": "25/06/2019",
+    "club_name_at_valuation": "APOEL Nicosia",
+    "club_id_at_valuation": "2784",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "42517b40b4d3",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 2000000,
+    "valuation_date": "06/01/2020",
+    "club_name_at_valuation": "APOEL Nicosia",
+    "club_id_at_valuation": "2784",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "a078fdf75af2",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 1600000,
+    "valuation_date": "08/04/2020",
+    "club_name_at_valuation": "APOEL Nicosia",
+    "club_id_at_valuation": "2784",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "33e2537cf2a1",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 1800000,
+    "valuation_date": "16/10/2020",
+    "club_name_at_valuation": "Oud-Heverlee Leuven",
+    "club_id_at_valuation": "2727",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "acea119172a4",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 1500000,
+    "valuation_date": "07/06/2021",
+    "club_name_at_valuation": "Oud-Heverlee Leuven",
+    "club_id_at_valuation": "2727",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "a9a38ae364ff",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 1300000,
+    "valuation_date": "06/10/2021",
+    "club_name_at_valuation": "Oud-Heverlee Leuven",
+    "club_id_at_valuation": "2727",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "9915b492e64c",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 1200000,
+    "valuation_date": "06/01/2022",
+    "club_name_at_valuation": "Oud-Heverlee Leuven",
+    "club_id_at_valuation": "2727",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "cce870baf956",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 1200000,
+    "valuation_date": "12/04/2022",
+    "club_name_at_valuation": "Oud-Heverlee Leuven",
+    "club_id_at_valuation": "2727",
+    "age_at_valuation": 24
+  },
+  {
+    "valuation_id": "1b25d4a0edc5",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 1800000,
+    "valuation_date": "04/11/2022",
+    "club_name_at_valuation": "Oud-Heverlee Leuven",
+    "club_id_at_valuation": "2727",
+    "age_at_valuation": 25
+  },
+  {
+    "valuation_id": "12d1dfb8f99c",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 2500000,
+    "valuation_date": "09/06/2023",
+    "club_name_at_valuation": "Oud-Heverlee Leuven",
+    "club_id_at_valuation": "2727",
+    "age_at_valuation": 25
+  },
+  {
+    "valuation_id": "ec3146a6a6a1",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 5000000,
+    "valuation_date": "16/10/2023",
+    "club_name_at_valuation": "Montpellier HSC",
+    "club_id_at_valuation": "969",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "65cc358cc2ad",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 6000000,
+    "valuation_date": "18/12/2023",
+    "club_name_at_valuation": "Montpellier HSC",
+    "club_id_at_valuation": "969",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "e6204a193fef",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 7000000,
+    "valuation_date": "21/02/2024",
+    "club_name_at_valuation": "Montpellier HSC",
+    "club_id_at_valuation": "969",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "a71888c71980",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 8000000,
+    "valuation_date": "03/06/2024",
+    "club_name_at_valuation": "Montpellier HSC",
+    "club_id_at_valuation": "969",
+    "age_at_valuation": 26
+  },
+  {
+    "valuation_id": "6533f281ffde",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 6000000,
+    "valuation_date": "10/12/2024",
+    "club_name_at_valuation": "Montpellier HSC",
+    "club_id_at_valuation": "969",
+    "age_at_valuation": 27
+  },
+  {
+    "valuation_id": "871fade888b4",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 6000000,
+    "valuation_date": "03/06/2025",
+    "club_name_at_valuation": "Stade Rennais FC",
+    "club_id_at_valuation": "273",
+    "age_at_valuation": 27
+  },
+  {
+    "valuation_id": "2e8869604694",
+    "player_id": "551505",
+    "player_name": "Mousa Tamari",
+    "valuation_amount": 6000000,
+    "valuation_date": "15/12/2025",
+    "club_name_at_valuation": "Stade Rennais FC",
+    "club_id_at_valuation": "273",
+    "age_at_valuation": 28
+  },
+  {
     "valuation_id": "08744e86f8ec",
     "player_id": "618425",
     "player_name": "Tanguy Coulibaly",
@@ -101528,186 +100718,6 @@
     "club_name_at_valuation": "Watford FC",
     "club_id_at_valuation": "1010",
     "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "90d87b2b1bfe",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 3000000,
-    "valuation_date": "09/03/2021",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "430b1b4c7744",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 5000000,
-    "valuation_date": "04/06/2021",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "b8d1c8c2e11c",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 6000000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "d83dc5b130ee",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 8000000,
-    "valuation_date": "23/03/2022",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "c42ad07e0b43",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 12000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "7bdc179b3422",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 14000000,
-    "valuation_date": "19/09/2022",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "8b12daac415c",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 18000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "ea7578d1d5a9",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 25000000,
-    "valuation_date": "27/03/2023",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "a120563553c0",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 35000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "bd5f7a5b733e",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 40000000,
-    "valuation_date": "16/10/2023",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "708eab6dc159",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 40000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "4b7a0e7eb5c6",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 35000000,
-    "valuation_date": "19/03/2024",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "3b821a5e71f8",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 35000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "ec43293aab83",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 30000000,
-    "valuation_date": "07/10/2024",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "309feef4b1d8",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 25000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "e2c7dcedb10d",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 22000000,
-    "valuation_date": "05/06/2025",
-    "club_name_at_valuation": "Eintracht Frankfurt",
-    "club_id_at_valuation": "24",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "dc8957c68895",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 18000000,
-    "valuation_date": "14/10/2025",
-    "club_name_at_valuation": "Eintracht Frankfurt",
-    "club_id_at_valuation": "24",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "a7b890d7ba80",
-    "player_id": "659542",
-    "player_name": "Elye Wahi",
-    "valuation_amount": 12000000,
-    "valuation_date": "19/12/2025",
-    "club_name_at_valuation": "Eintracht Frankfurt",
-    "club_id_at_valuation": "24",
-    "age_at_valuation": 22
   },
   {
     "valuation_id": "23df21ff347a",
@@ -106208,286 +105218,6 @@
     "club_name_at_valuation": "Eintracht Frankfurt",
     "club_id_at_valuation": "24",
     "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "9d5cafc19c95",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 50000,
-    "valuation_date": "06/02/2015",
-    "club_name_at_valuation": "AZ Alkmaar U21",
-    "club_id_at_valuation": "11368",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "956d3acec3bf",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 150000,
-    "valuation_date": "01/07/2015",
-    "club_name_at_valuation": "AZ Alkmaar",
-    "club_id_at_valuation": "1090",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "753b4990e98d",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 150000,
-    "valuation_date": "05/02/2016",
-    "club_name_at_valuation": "Sparta Rotterdam",
-    "club_id_at_valuation": "468",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "83d19630209e",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 150000,
-    "valuation_date": "15/07/2016",
-    "club_name_at_valuation": "Sparta Rotterdam",
-    "club_id_at_valuation": "468",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "04ec57485138",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 350000,
-    "valuation_date": "18/01/2017",
-    "club_name_at_valuation": "Sparta Rotterdam",
-    "club_id_at_valuation": "468",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "829c3f472f05",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 500000,
-    "valuation_date": "07/06/2017",
-    "club_name_at_valuation": "Sparta Rotterdam",
-    "club_id_at_valuation": "468",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "aab0e46ce870",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 400000,
-    "valuation_date": "17/01/2018",
-    "club_name_at_valuation": "Sparta Rotterdam",
-    "club_id_at_valuation": "468",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "b2e127886972",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 400000,
-    "valuation_date": "12/06/2018",
-    "club_name_at_valuation": "Sparta Rotterdam",
-    "club_id_at_valuation": "468",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "6c876ff60b63",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 300000,
-    "valuation_date": "21/01/2019",
-    "club_name_at_valuation": "RKC Waalwijk",
-    "club_id_at_valuation": "235",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "8c34bab76994",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 450000,
-    "valuation_date": "03/07/2019",
-    "club_name_at_valuation": "RKC Waalwijk",
-    "club_id_at_valuation": "235",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "67cce515bb29",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 650000,
-    "valuation_date": "19/09/2019",
-    "club_name_at_valuation": "RKC Waalwijk",
-    "club_id_at_valuation": "235",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "d32429158710",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 700000,
-    "valuation_date": "18/12/2019",
-    "club_name_at_valuation": "RKC Waalwijk",
-    "club_id_at_valuation": "235",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "6aa5788a9a10",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 550000,
-    "valuation_date": "08/04/2020",
-    "club_name_at_valuation": "Levski Sofia",
-    "club_id_at_valuation": "156",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "a7343ab8e6f2",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 700000,
-    "valuation_date": "11/11/2020",
-    "club_name_at_valuation": "FC Toulouse",
-    "club_id_at_valuation": "415",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "8da4c9810029",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 1000000,
-    "valuation_date": "11/03/2021",
-    "club_name_at_valuation": "FC Toulouse",
-    "club_id_at_valuation": "415",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "8a534b3b4825",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 1200000,
-    "valuation_date": "25/06/2021",
-    "club_name_at_valuation": "FC Toulouse",
-    "club_id_at_valuation": "415",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "daad7e156cb9",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 1200000,
-    "valuation_date": "27/12/2021",
-    "club_name_at_valuation": "FC Toulouse",
-    "club_id_at_valuation": "415",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "58d87d4b15d7",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 1800000,
-    "valuation_date": "24/03/2022",
-    "club_name_at_valuation": "FC Toulouse",
-    "club_id_at_valuation": "415",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "c31d4dfc2a7b",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 2000000,
-    "valuation_date": "02/06/2022",
-    "club_name_at_valuation": "FC Toulouse",
-    "club_id_at_valuation": "415",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "a281ea104b39",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 3000000,
-    "valuation_date": "19/09/2022",
-    "club_name_at_valuation": "FC Toulouse",
-    "club_id_at_valuation": "415",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "d9ee65204e4e",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 4000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "FC Toulouse",
-    "club_id_at_valuation": "415",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "778d46860a3c",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 6000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "FC Toulouse",
-    "club_id_at_valuation": "415",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "e26d7bb2ba10",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 5000000,
-    "valuation_date": "16/10/2023",
-    "club_name_at_valuation": "FC Toulouse",
-    "club_id_at_valuation": "415",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "73f8d7ec58af",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 5000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "FC Toulouse",
-    "club_id_at_valuation": "415",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "b42147691f4c",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 4500000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "FC Toulouse",
-    "club_id_at_valuation": "415",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "0b0a81cc9020",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 3500000,
-    "valuation_date": "09/12/2024",
-    "club_name_at_valuation": "Bröndby IF",
-    "club_id_at_valuation": "206",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "61962df3f436",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 2000000,
-    "valuation_date": "16/06/2025",
-    "club_name_at_valuation": "Bröndby IF",
-    "club_id_at_valuation": "206",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "220883915dfd",
-    "player_id": "241501",
-    "player_name": "Stijn Spierings",
-    "valuation_amount": 1200000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "Bröndby IF",
-    "club_id_at_valuation": "206",
-    "age_at_valuation": 29
   },
   {
     "valuation_id": "dcba62b9652e",
@@ -115240,276 +113970,6 @@
     "age_at_valuation": 22
   },
   {
-    "valuation_id": "de5bc120b0ae",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 25000,
-    "valuation_date": "21/11/2016",
-    "club_name_at_valuation": "Ajax Amsterdam U19",
-    "club_id_at_valuation": "2824",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "a59d5f8801f9",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 50000,
-    "valuation_date": "02/02/2017",
-    "club_name_at_valuation": "Ajax Amsterdam U19",
-    "club_id_at_valuation": "2824",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "81e981f0b34f",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 75000,
-    "valuation_date": "21/06/2017",
-    "club_name_at_valuation": "Ajax Amsterdam U19",
-    "club_id_at_valuation": "2824",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "0ed3fb8a124e",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 100000,
-    "valuation_date": "01/03/2018",
-    "club_name_at_valuation": "Ajax Amsterdam U21",
-    "club_id_at_valuation": "8817",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "f2a2ace2f02f",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 150000,
-    "valuation_date": "29/06/2018",
-    "club_name_at_valuation": "Ajax Amsterdam U21",
-    "club_id_at_valuation": "8817",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "f2ca4ee3f4bf",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 550000,
-    "valuation_date": "13/03/2019",
-    "club_name_at_valuation": "De Graafschap Doetinchem",
-    "club_id_at_valuation": "642",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "9cc0dfc4505c",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 1000000,
-    "valuation_date": "12/06/2019",
-    "club_name_at_valuation": "De Graafschap Doetinchem",
-    "club_id_at_valuation": "642",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "48c6caa81036",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 1000000,
-    "valuation_date": "16/12/2019",
-    "club_name_at_valuation": "FC Groningen",
-    "club_id_at_valuation": "202",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "4f395b3cb524",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 900000,
-    "valuation_date": "08/04/2020",
-    "club_name_at_valuation": "FC Groningen",
-    "club_id_at_valuation": "202",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "3f8a5d1bda6b",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 3000000,
-    "valuation_date": "12/08/2020",
-    "club_name_at_valuation": "FC Groningen",
-    "club_id_at_valuation": "202",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "166fcf691734",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 3500000,
-    "valuation_date": "14/10/2020",
-    "club_name_at_valuation": "FC Groningen",
-    "club_id_at_valuation": "202",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "ea84c84833ba",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 5000000,
-    "valuation_date": "06/01/2021",
-    "club_name_at_valuation": "FC Groningen",
-    "club_id_at_valuation": "202",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "469fa108f795",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 5000000,
-    "valuation_date": "19/05/2021",
-    "club_name_at_valuation": "FC Groningen",
-    "club_id_at_valuation": "202",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "09c55a81ced6",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 5000000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "Stade Reims",
-    "club_id_at_valuation": "1421",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "26ddb4f357de",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 6000000,
-    "valuation_date": "23/03/2022",
-    "club_name_at_valuation": "Stade Reims",
-    "club_id_at_valuation": "1421",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "8201bf5f1bd7",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 7000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "Stade Reims",
-    "club_id_at_valuation": "1421",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "aab46defe801",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 6000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "Stade Reims",
-    "club_id_at_valuation": "1421",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "92eeec4c7136",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 7500000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "Stade Reims",
-    "club_id_at_valuation": "1421",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "5f3af5a0e628",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 9000000,
-    "valuation_date": "16/10/2023",
-    "club_name_at_valuation": "Stade Reims",
-    "club_id_at_valuation": "1421",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "3a6ecfdd2c5e",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 10000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "Stade Reims",
-    "club_id_at_valuation": "1421",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "2207cf65112a",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 13000000,
-    "valuation_date": "19/03/2024",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "e05a571e79a6",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 12000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "d0431c7d4dfb",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 12000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "46617a81404f",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 10000000,
-    "valuation_date": "24/03/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "e73f2ea05a3b",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 8000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "7845afaa75f0",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 11000000,
-    "valuation_date": "06/10/2025",
-    "club_name_at_valuation": "Ipswich Town",
-    "club_id_at_valuation": "677",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "1cf0676cd095",
-    "player_id": "315145",
-    "player_name": "Azor Matusiwa",
-    "valuation_amount": 11000000,
-    "valuation_date": "03/12/2025",
-    "club_name_at_valuation": "Ipswich Town",
-    "club_id_at_valuation": "677",
-    "age_at_valuation": 27
-  },
-  {
     "valuation_id": "22cbc6833de3",
     "player_id": "127160",
     "player_name": "Benjamin Stambouli",
@@ -123090,426 +121550,6 @@
     "age_at_valuation": 32
   },
   {
-    "valuation_id": "6f5a81f64981",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 75000,
-    "valuation_date": "14/08/2005",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 17
-  },
-  {
-    "valuation_id": "c5bede858b83",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 500000,
-    "valuation_date": "20/09/2005",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 17
-  },
-  {
-    "valuation_id": "be8b70bb6a65",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 593000,
-    "valuation_date": "25/04/2007",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "8c7c6d08e0f4",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 600000,
-    "valuation_date": "27/04/2007",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "c09bd7255292",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 500000,
-    "valuation_date": "29/07/2007",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "033aac708bbd",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 0,
-    "valuation_date": "09/03/2008",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "979bc9eca592",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 100000,
-    "valuation_date": "04/07/2008",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "507c5e188ffc",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 200000,
-    "valuation_date": "23/02/2009",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "dbf86398d955",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 300000,
-    "valuation_date": "29/06/2009",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "0d8116845364",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 1000000,
-    "valuation_date": "25/01/2010",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "0e298f11a49d",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 1000000,
-    "valuation_date": "13/08/2010",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "dbfa771f5d37",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 750000,
-    "valuation_date": "07/02/2012",
-    "club_name_at_valuation": "Hull City",
-    "club_id_at_valuation": "3008",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "61986d3aba76",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 750000,
-    "valuation_date": "24/06/2012",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "967942268cce",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 1000000,
-    "valuation_date": "28/01/2013",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "e80b459595fe",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 1000000,
-    "valuation_date": "02/07/2013",
-    "club_name_at_valuation": "Arsenal FC",
-    "club_id_at_valuation": "11",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "dc7528e9e0f1",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 2000000,
-    "valuation_date": "18/09/2013",
-    "club_name_at_valuation": "Sunderland AFC",
-    "club_id_at_valuation": "289",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "8ccc8bda89e1",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 3000000,
-    "valuation_date": "15/01/2014",
-    "club_name_at_valuation": "Sunderland AFC",
-    "club_id_at_valuation": "289",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "b9356e70c542",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 3500000,
-    "valuation_date": "12/08/2014",
-    "club_name_at_valuation": "Sunderland AFC",
-    "club_id_at_valuation": "289",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "4cd3edd9a655",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 3000000,
-    "valuation_date": "12/02/2015",
-    "club_name_at_valuation": "Sunderland AFC",
-    "club_id_at_valuation": "289",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "797a213fdd43",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 2500000,
-    "valuation_date": "01/07/2015",
-    "club_name_at_valuation": "Sunderland AFC",
-    "club_id_at_valuation": "289",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "2200c6d54689",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 2500000,
-    "valuation_date": "09/02/2016",
-    "club_name_at_valuation": "Sunderland AFC",
-    "club_id_at_valuation": "289",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "0d5bd8833898",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 2500000,
-    "valuation_date": "01/08/2016",
-    "club_name_at_valuation": "Sunderland AFC",
-    "club_id_at_valuation": "289",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "b6776eb24fb8",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 2500000,
-    "valuation_date": "20/02/2017",
-    "club_name_at_valuation": "Sunderland AFC",
-    "club_id_at_valuation": "289",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "ca8e76c6668a",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 2500000,
-    "valuation_date": "28/06/2017",
-    "club_name_at_valuation": "Sunderland AFC",
-    "club_id_at_valuation": "289",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "7064f9895d95",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 2000000,
-    "valuation_date": "24/09/2018",
-    "club_name_at_valuation": "Reading FC",
-    "club_id_at_valuation": "1032",
-    "age_at_valuation": 30
-  },
-  {
-    "valuation_id": "af7ded34ae44",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 1750000,
-    "valuation_date": "20/03/2019",
-    "club_name_at_valuation": "Minnesota United FC",
-    "club_id_at_valuation": "56089",
-    "age_at_valuation": 31
-  },
-  {
-    "valuation_id": "7bafa712cf92",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 1250000,
-    "valuation_date": "27/05/2019",
-    "club_name_at_valuation": "Minnesota United FC",
-    "club_id_at_valuation": "56089",
-    "age_at_valuation": 31
-  },
-  {
-    "valuation_id": "df91223bd686",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 1500000,
-    "valuation_date": "30/11/2019",
-    "club_name_at_valuation": "Minnesota United FC",
-    "club_id_at_valuation": "56089",
-    "age_at_valuation": 31
-  },
-  {
-    "valuation_id": "a5b2e414a5d1",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 1200000,
-    "valuation_date": "08/04/2020",
-    "club_name_at_valuation": "Esbjerg fB",
-    "club_id_at_valuation": "3426",
-    "age_at_valuation": 32
-  },
-  {
-    "valuation_id": "72919efbfb15",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 1000000,
-    "valuation_date": "30/07/2020",
-    "club_name_at_valuation": "Esbjerg fB",
-    "club_id_at_valuation": "3426",
-    "age_at_valuation": 32
-  },
-  {
-    "valuation_id": "42e6d62b4196",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 1000000,
-    "valuation_date": "12/10/2020",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 32
-  },
-  {
-    "valuation_id": "07d77d643df4",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 800000,
-    "valuation_date": "09/04/2021",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 33
-  },
-  {
-    "valuation_id": "855147936cd2",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 800000,
-    "valuation_date": "04/06/2021",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 33
-  },
-  {
-    "valuation_id": "363b781285e7",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 600000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 33
-  },
-  {
-    "valuation_id": "03a05e391a12",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 500000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 34
-  },
-  {
-    "valuation_id": "b443f65c4d6e",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 300000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 34
-  },
-  {
-    "valuation_id": "e334847469c6",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 300000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 35
-  },
-  {
-    "valuation_id": "321922243cdd",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 250000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "LOSC Lille",
-    "club_id_at_valuation": "1082",
-    "age_at_valuation": 35
-  },
-  {
-    "valuation_id": "9b630f2b757e",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 200000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "LOSC Lille",
-    "club_id_at_valuation": "1082",
-    "age_at_valuation": 36
-  },
-  {
-    "valuation_id": "30207ab3b04c",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 200000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "LOSC Lille",
-    "club_id_at_valuation": "1082",
-    "age_at_valuation": 36
-  },
-  {
-    "valuation_id": "18a5e704cbb3",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 150000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "LOSC Lille",
-    "club_id_at_valuation": "1082",
-    "age_at_valuation": 37
-  },
-  {
-    "valuation_id": "07411c164f72",
-    "player_id": "33781",
-    "player_name": "Vito Mannone",
-    "valuation_amount": 0,
-    "valuation_date": "01/07/2025",
-    "club_name_at_valuation": "Retired",
-    "club_id_at_valuation": "123",
-    "age_at_valuation": 37
-  },
-  {
     "valuation_id": "e301a42cde8f",
     "player_id": "591190",
     "player_name": "Dominique Youfeigane",
@@ -123898,306 +121938,6 @@
     "club_name_at_valuation": "FC Lorient",
     "club_id_at_valuation": "1158",
     "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "ab616c090129",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 250000,
-    "valuation_date": "11/11/2020",
-    "club_name_at_valuation": "AC Le Havre B",
-    "club_id_at_valuation": "15439",
-    "age_at_valuation": 17
-  },
-  {
-    "valuation_id": "0ce81c05753d",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 250000,
-    "valuation_date": "25/06/2021",
-    "club_name_at_valuation": "AC Le Havre B",
-    "club_id_at_valuation": "15439",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "f20cd7313a12",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 700000,
-    "valuation_date": "27/10/2021",
-    "club_name_at_valuation": "Le Havre AC",
-    "club_id_at_valuation": "738",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "f6d20686377b",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 600000,
-    "valuation_date": "27/12/2021",
-    "club_name_at_valuation": "Le Havre AC",
-    "club_id_at_valuation": "738",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "2d10c401185b",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 1000000,
-    "valuation_date": "24/03/2022",
-    "club_name_at_valuation": "Le Havre AC",
-    "club_id_at_valuation": "738",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "9a75c0a9d196",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 5000000,
-    "valuation_date": "02/06/2022",
-    "club_name_at_valuation": "Le Havre AC",
-    "club_id_at_valuation": "738",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "13d5eb499fc9",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 5000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "2b5a162bc3ef",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 6000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "AJ Auxerre",
-    "club_id_at_valuation": "290",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "7095fdf2ba29",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 8000000,
-    "valuation_date": "16/10/2023",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "aa6447c060d3",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 8000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "2ca2f88aff97",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 7000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "13f73a095d80",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 8000000,
-    "valuation_date": "18/12/2024",
-    "club_name_at_valuation": "Udinese Calcio",
-    "club_id_at_valuation": "410",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "95673b35b77e",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 7000000,
-    "valuation_date": "17/06/2025",
-    "club_name_at_valuation": "Udinese Calcio",
-    "club_id_at_valuation": "410",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "3311ac5c83de",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 3000000,
-    "valuation_date": "10/10/2025",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "383e63c4826e",
-    "player_id": "708678",
-    "player_name": "Isaak Touré",
-    "valuation_amount": 2500000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "20d127674530",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 50000,
-    "valuation_date": "11/11/2020",
-    "club_name_at_valuation": "Stade Lavallois",
-    "club_id_at_valuation": "1080",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "3a3cc2c2fc27",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 100000,
-    "valuation_date": "25/06/2021",
-    "club_name_at_valuation": "Stade Lavallois",
-    "club_id_at_valuation": "1080",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "4d142207cf98",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 100000,
-    "valuation_date": "30/03/2022",
-    "club_name_at_valuation": "FC Lorient B",
-    "club_id_at_valuation": "16662",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "43d9ef6d6bf1",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 100000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "FC Lorient B",
-    "club_id_at_valuation": "16662",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "9a8a193da8f3",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 100000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "b31857abab25",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 1500000,
-    "valuation_date": "27/03/2023",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "3ed732708de3",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 2500000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "a05170f0806b",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 4000000,
-    "valuation_date": "16/10/2023",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "cba9b1fdfa72",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 4000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "4bef34d5c482",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 5000000,
-    "valuation_date": "19/03/2024",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "95899662bfc3",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 6000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "e1dfe63dec34",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 7000000,
-    "valuation_date": "07/10/2024",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "b31ad050b804",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 5000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "2e75208d0b7a",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 4000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "Montpellier HSC",
-    "club_id_at_valuation": "969",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "3a726fff9c5b",
-    "player_id": "807165",
-    "player_name": "Bamo Meïté",
-    "valuation_amount": 4000000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 24
   },
   {
     "valuation_id": "cdf3ed6121f0",
@@ -129088,116 +126828,6 @@
     "club_name_at_valuation": "AS Cannes",
     "club_id_at_valuation": "895",
     "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "78040633d942",
-    "player_id": "707242",
-    "player_name": "Badredine Bouanani",
-    "valuation_amount": 150000,
-    "valuation_date": "19/09/2022",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 17
-  },
-  {
-    "valuation_id": "3d71b1afa19d",
-    "player_id": "707242",
-    "player_name": "Badredine Bouanani",
-    "valuation_amount": 150000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 17
-  },
-  {
-    "valuation_id": "525b74213710",
-    "player_id": "707242",
-    "player_name": "Badredine Bouanani",
-    "valuation_amount": 2500000,
-    "valuation_date": "27/03/2023",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "9a4271b26eae",
-    "player_id": "707242",
-    "player_name": "Badredine Bouanani",
-    "valuation_amount": 6000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "b01d522fe44f",
-    "player_id": "707242",
-    "player_name": "Badredine Bouanani",
-    "valuation_amount": 6000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "453cf7e3430e",
-    "player_id": "707242",
-    "player_name": "Badredine Bouanani",
-    "valuation_amount": 5000000,
-    "valuation_date": "19/03/2024",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "b3fa5366e118",
-    "player_id": "707242",
-    "player_name": "Badredine Bouanani",
-    "valuation_amount": 5000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "e2b9ba4e1848",
-    "player_id": "707242",
-    "player_name": "Badredine Bouanani",
-    "valuation_amount": 5000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "b10eda647185",
-    "player_id": "707242",
-    "player_name": "Badredine Bouanani",
-    "valuation_amount": 7000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "22c70fb1dc01",
-    "player_id": "707242",
-    "player_name": "Badredine Bouanani",
-    "valuation_amount": 12000000,
-    "valuation_date": "14/10/2025",
-    "club_name_at_valuation": "VfB Stuttgart",
-    "club_id_at_valuation": "79",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "79ba5fcd9643",
-    "player_id": "707242",
-    "player_name": "Badredine Bouanani",
-    "valuation_amount": 12000000,
-    "valuation_date": "19/12/2025",
-    "club_name_at_valuation": "VfB Stuttgart",
-    "club_id_at_valuation": "79",
-    "age_at_valuation": 21
   },
   {
     "valuation_id": "b13054119827",
@@ -136830,146 +134460,6 @@
     "age_at_valuation": 20
   },
   {
-    "valuation_id": "c2934d4d04b0",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 200000,
-    "valuation_date": "09/03/2021",
-    "club_name_at_valuation": "FC Nantes B",
-    "club_id_at_valuation": "10850",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "8c3570870062",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 800000,
-    "valuation_date": "08/10/2021",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "5e300d5e8b3c",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 1500000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "19a6a8121d55",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 3000000,
-    "valuation_date": "23/03/2022",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "33b658d60871",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 5000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "6b31fbb331eb",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 7000000,
-    "valuation_date": "19/09/2022",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "71fd344767a7",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 7000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "2a0df9bea0e3",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 7000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "e7730f27259a",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 10000000,
-    "valuation_date": "16/10/2023",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "ff27e5fbbc79",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 10000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "9a44a4e9446b",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 10000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "4638ff42ac9a",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 12000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "5dc3aea176f6",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 15000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "Olympique Marseille",
-    "club_id_at_valuation": "244",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "28ffeda7b371",
-    "player_id": "557613",
-    "player_name": "Quentin Merlin",
-    "valuation_amount": 12000000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 23
-  },
-  {
     "valuation_id": "0f5ebf997f14",
     "player_id": "222859",
     "player_name": "Florent Mollet",
@@ -138540,166 +136030,6 @@
     "age_at_valuation": 28
   },
   {
-    "valuation_id": "92c5819c0045",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 400000,
-    "valuation_date": "06/08/2021",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "9ec6f7e807cd",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 1000000,
-    "valuation_date": "08/10/2021",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "73cc544627b1",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 2000000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "879d83bddda7",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 3000000,
-    "valuation_date": "02/06/2022",
-    "club_name_at_valuation": "Le Havre AC",
-    "club_id_at_valuation": "738",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "b8f55452f080",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 3000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "d9add68e1ee3",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 4000000,
-    "valuation_date": "27/03/2023",
-    "club_name_at_valuation": "AJ Auxerre",
-    "club_id_at_valuation": "290",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "a055f4119b05",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 4500000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "AJ Auxerre",
-    "club_id_at_valuation": "290",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "cd28ce58d752",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 4500000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "5318631ba1c4",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 4000000,
-    "valuation_date": "19/03/2024",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "1f8698e03da4",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 6000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "bafbddcc94db",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 9000000,
-    "valuation_date": "07/10/2024",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "21a306fb46d1",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 9000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "d3338d5798ca",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 12000000,
-    "valuation_date": "24/03/2025",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "b259355a3825",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 18000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "3057c2d1b922",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 22000000,
-    "valuation_date": "10/10/2025",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "4d4cc9e4beec",
-    "player_id": "659543",
-    "player_name": "Matthis Abline",
-    "valuation_amount": 20000000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 22
-  },
-  {
     "valuation_id": "edefcc8dd4f5",
     "player_id": "531949",
     "player_name": "Ignatius Ganago",
@@ -138888,276 +136218,6 @@
     "club_name_at_valuation": "New England Revolution",
     "club_id_at_valuation": "626",
     "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "c6d7ee58a445",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 100000,
-    "valuation_date": "16/08/2015",
-    "club_name_at_valuation": "Djurgårdens IF",
-    "club_id_at_valuation": "1044",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "5cd8e46dcc6b",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 100000,
-    "valuation_date": "29/11/2015",
-    "club_name_at_valuation": "Djurgårdens IF",
-    "club_id_at_valuation": "1044",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "b876df2f5bc8",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 100000,
-    "valuation_date": "17/06/2016",
-    "club_name_at_valuation": "Djurgårdens IF",
-    "club_id_at_valuation": "1044",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "50ef62d71b3b",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 400000,
-    "valuation_date": "11/12/2016",
-    "club_name_at_valuation": "Djurgårdens IF",
-    "club_id_at_valuation": "1044",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "6a52138d9b67",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 200000,
-    "valuation_date": "20/06/2017",
-    "club_name_at_valuation": "Djurgårdens IF",
-    "club_id_at_valuation": "1044",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "24d716cae726",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 125000,
-    "valuation_date": "17/11/2017",
-    "club_name_at_valuation": "Djurgårdens IF",
-    "club_id_at_valuation": "1044",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "362f91c986f6",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 800000,
-    "valuation_date": "20/06/2018",
-    "club_name_at_valuation": "Djurgårdens IF",
-    "club_id_at_valuation": "1044",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "ff73a1c1531e",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 1250000,
-    "valuation_date": "08/01/2019",
-    "club_name_at_valuation": "Le Havre AC",
-    "club_id_at_valuation": "738",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "3709655d7044",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 2000000,
-    "valuation_date": "30/09/2019",
-    "club_name_at_valuation": "Le Havre AC",
-    "club_id_at_valuation": "738",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "5ffe8a177fbb",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 4000000,
-    "valuation_date": "06/01/2020",
-    "club_name_at_valuation": "Le Havre AC",
-    "club_id_at_valuation": "738",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "53dd44fe0309",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 8000000,
-    "valuation_date": "11/02/2020",
-    "club_name_at_valuation": "Le Havre AC",
-    "club_id_at_valuation": "738",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "15673b55c5a1",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 6500000,
-    "valuation_date": "08/04/2020",
-    "club_name_at_valuation": "Le Havre AC",
-    "club_id_at_valuation": "738",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "0d66f4224083",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 6500000,
-    "valuation_date": "15/10/2020",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "b2985d74d2a1",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 12000000,
-    "valuation_date": "07/01/2021",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "57300c4c76df",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 14000000,
-    "valuation_date": "09/04/2021",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "37b56bae2122",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 13000000,
-    "valuation_date": "04/06/2021",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "0cbd1c6d525f",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 8000000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "b93befb73dc6",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 6000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "dff71a500da9",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 5000000,
-    "valuation_date": "07/11/2022",
-    "club_name_at_valuation": "RCD Mallorca",
-    "club_id_at_valuation": "237",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "081de819cc7a",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 4000000,
-    "valuation_date": "13/06/2023",
-    "club_name_at_valuation": "RCD Mallorca",
-    "club_id_at_valuation": "237",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "d1ec3117ee1c",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 3000000,
-    "valuation_date": "16/10/2023",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "9667695b45f0",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 2500000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "Olympique Lyon",
-    "club_id_at_valuation": "1041",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "f6bd431536d7",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 2500000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "e65e73f40c6f",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 3000000,
-    "valuation_date": "07/10/2024",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "fd1d0cb2680b",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 3000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "8da40ba527fa",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 2500000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "FC Nantes",
-    "club_id_at_valuation": "995",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "8e859b771ac2",
-    "player_id": "384060",
-    "player_name": "Tino Kadewere",
-    "valuation_amount": 1800000,
-    "valuation_date": "12/12/2025",
-    "club_name_at_valuation": "Aris Thessaloniki",
-    "club_id_at_valuation": "605",
-    "age_at_valuation": 29
   },
   {
     "valuation_id": "1a265c8d4ac9",
@@ -142330,146 +139390,6 @@
     "age_at_valuation": 33
   },
   {
-    "valuation_id": "2febb13c574a",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 350000,
-    "valuation_date": "11/11/2020",
-    "club_name_at_valuation": "SC Bastia",
-    "club_id_at_valuation": "595",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "5ec9895210be",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 350000,
-    "valuation_date": "25/06/2021",
-    "club_name_at_valuation": "SC Bastia",
-    "club_id_at_valuation": "595",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "63f792dadf9b",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 500000,
-    "valuation_date": "27/10/2021",
-    "club_name_at_valuation": "SC Bastia",
-    "club_id_at_valuation": "595",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "9da9e8e0991a",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 600000,
-    "valuation_date": "27/12/2021",
-    "club_name_at_valuation": "SC Bastia",
-    "club_id_at_valuation": "595",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "76ebe3c6a605",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 700000,
-    "valuation_date": "24/03/2022",
-    "club_name_at_valuation": "SC Bastia",
-    "club_id_at_valuation": "595",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "8a035e5e3127",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 900000,
-    "valuation_date": "02/06/2022",
-    "club_name_at_valuation": "SC Bastia",
-    "club_id_at_valuation": "595",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "2f5b2d1f7bd5",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 1000000,
-    "valuation_date": "28/10/2022",
-    "club_name_at_valuation": "Paris FC",
-    "club_id_at_valuation": "10004",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "641a72b9e45c",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 2500000,
-    "valuation_date": "27/03/2023",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "0b6582683b91",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 2000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "RC Lens",
-    "club_id_at_valuation": "826",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "4ab532c93d2d",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 1500000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "abc9bb89f4c3",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 1500000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "58448f3545a1",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 1500000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "9c23564b8177",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 2000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "ebc223350aab",
-    "player_id": "794349",
-    "player_name": "Julien Le Cardinal",
-    "valuation_amount": 1500000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 28
-  },
-  {
     "valuation_id": "1119733098a4",
     "player_id": "862972",
     "player_name": "Josué Escartin",
@@ -143018,66 +139938,6 @@
     "club_name_at_valuation": "Without Club",
     "club_id_at_valuation": "515",
     "age_at_valuation": 31
-  },
-  {
-    "valuation_id": "729572dc4db3",
-    "player_id": "774772",
-    "player_name": "Antonin Cartillier",
-    "valuation_amount": 200000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "AS Monaco U21",
-    "club_id_at_valuation": "9668",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "e469056c720c",
-    "player_id": "774772",
-    "player_name": "Antonin Cartillier",
-    "valuation_amount": 200000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "748d8659b6dd",
-    "player_id": "774772",
-    "player_name": "Antonin Cartillier",
-    "valuation_amount": 150000,
-    "valuation_date": "02/12/2024",
-    "club_name_at_valuation": "US Orléans",
-    "club_id_at_valuation": "10868",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "0cac80ce3769",
-    "player_id": "774772",
-    "player_name": "Antonin Cartillier",
-    "valuation_amount": 100000,
-    "valuation_date": "26/05/2025",
-    "club_name_at_valuation": "US Orléans",
-    "club_id_at_valuation": "10868",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "8cb0ee50e8aa",
-    "player_id": "774772",
-    "player_name": "Antonin Cartillier",
-    "valuation_amount": 50000,
-    "valuation_date": "15/10/2025",
-    "club_name_at_valuation": "FC Rouen 1899",
-    "club_id_at_valuation": "1564",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "74940fd09507",
-    "player_id": "774772",
-    "player_name": "Antonin Cartillier",
-    "valuation_amount": 50000,
-    "valuation_date": "08/12/2025",
-    "club_name_at_valuation": "FC Rouen 1899",
-    "club_id_at_valuation": "1564",
-    "age_at_valuation": 21
   },
   {
     "valuation_id": "9de638463c99",
@@ -144750,126 +141610,6 @@
     "age_at_valuation": 25
   },
   {
-    "valuation_id": "53cd3cd4ab85",
-    "player_id": "671594",
-    "player_name": "Kamory Doumbia",
-    "valuation_amount": 300000,
-    "valuation_date": "23/03/2022",
-    "club_name_at_valuation": "Stade Reims B",
-    "club_id_at_valuation": "11204",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "a6f8315a51aa",
-    "player_id": "671594",
-    "player_name": "Kamory Doumbia",
-    "valuation_amount": 1000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "Stade Reims B",
-    "club_id_at_valuation": "11204",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "c104fca87078",
-    "player_id": "671594",
-    "player_name": "Kamory Doumbia",
-    "valuation_amount": 2000000,
-    "valuation_date": "19/09/2022",
-    "club_name_at_valuation": "Stade Reims",
-    "club_id_at_valuation": "1421",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "3d79a942753e",
-    "player_id": "671594",
-    "player_name": "Kamory Doumbia",
-    "valuation_amount": 2500000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "Stade Reims",
-    "club_id_at_valuation": "1421",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "3ee235a72114",
-    "player_id": "671594",
-    "player_name": "Kamory Doumbia",
-    "valuation_amount": 2500000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "Stade Reims",
-    "club_id_at_valuation": "1421",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "2941f4108e3a",
-    "player_id": "671594",
-    "player_name": "Kamory Doumbia",
-    "valuation_amount": 2000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "bb7bac99cb58",
-    "player_id": "671594",
-    "player_name": "Kamory Doumbia",
-    "valuation_amount": 3000000,
-    "valuation_date": "19/03/2024",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "184adb5c7a5c",
-    "player_id": "671594",
-    "player_name": "Kamory Doumbia",
-    "valuation_amount": 5000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "8fd8ee0a48ec",
-    "player_id": "671594",
-    "player_name": "Kamory Doumbia",
-    "valuation_amount": 5000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "e603ef874e4a",
-    "player_id": "671594",
-    "player_name": "Kamory Doumbia",
-    "valuation_amount": 4000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "8712d0aaaeff",
-    "player_id": "671594",
-    "player_name": "Kamory Doumbia",
-    "valuation_amount": 5000000,
-    "valuation_date": "10/10/2025",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "4fd5c5302a2c",
-    "player_id": "671594",
-    "player_name": "Kamory Doumbia",
-    "valuation_amount": 7000000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 22
-  },
-  {
     "valuation_id": "dc2c3a719936",
     "player_id": "466602",
     "player_name": "Karamoko Dembélé",
@@ -145658,166 +142398,6 @@
     "club_name_at_valuation": "Stade Brestois 29",
     "club_id_at_valuation": "3911",
     "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "74cda09262cc",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 150000,
-    "valuation_date": "14/08/2020",
-    "club_name_at_valuation": "Le Mans FC",
-    "club_id_at_valuation": "1164",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "e3e3ddfb5c88",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 800000,
-    "valuation_date": "11/11/2020",
-    "club_name_at_valuation": "Le Mans FC",
-    "club_id_at_valuation": "1164",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "055427a95767",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 1200000,
-    "valuation_date": "25/06/2021",
-    "club_name_at_valuation": "Le Mans FC",
-    "club_id_at_valuation": "1164",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "4e03e437b777",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 1200000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "Angers SCO",
-    "club_id_at_valuation": "1420",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "613827c59bb6",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 4000000,
-    "valuation_date": "23/03/2022",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "d404888118c9",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 5000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "e9aad4aa7961",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 4000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "c4e4ff4ea0c1",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 7000000,
-    "valuation_date": "27/03/2023",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "f5d4344cef4d",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 7000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "72b14addd1bd",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 5000000,
-    "valuation_date": "16/10/2023",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "7b35b33528be",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 4000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "8713f8c179e1",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 3000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "83a743950a7f",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 2500000,
-    "valuation_date": "11/12/2024",
-    "club_name_at_valuation": "Sint-Truidense VV",
-    "club_id_at_valuation": "475",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "5fb268bc4860",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 2000000,
-    "valuation_date": "26/03/2025",
-    "club_name_at_valuation": "Sint-Truidense VV",
-    "club_id_at_valuation": "475",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "3ea4232c2a6b",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 1800000,
-    "valuation_date": "12/06/2025",
-    "club_name_at_valuation": "Sint-Truidense VV",
-    "club_id_at_valuation": "475",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "20fb7ddbf196",
-    "player_id": "543051",
-    "player_name": "Billal Brahimi",
-    "valuation_amount": 1500000,
-    "valuation_date": "10/12/2025",
-    "club_name_at_valuation": "Santos FC",
-    "club_id_at_valuation": "221",
-    "age_at_valuation": 25
   },
   {
     "valuation_id": "55cf110b2e46",
@@ -157630,276 +154210,6 @@
     "age_at_valuation": 27
   },
   {
-    "valuation_id": "8561301bd11d",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 250000,
-    "valuation_date": "06/09/2015",
-    "club_name_at_valuation": "US Créteil-Lusitanos",
-    "club_id_at_valuation": "2067",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "660695800199",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 400000,
-    "valuation_date": "04/02/2016",
-    "club_name_at_valuation": "US Créteil-Lusitanos",
-    "club_id_at_valuation": "2067",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "b0b32eed8772",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 700000,
-    "valuation_date": "20/03/2017",
-    "club_name_at_valuation": "ESTAC Troyes",
-    "club_id_at_valuation": "1095",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "248a9e79049a",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 900000,
-    "valuation_date": "15/06/2017",
-    "club_name_at_valuation": "ESTAC Troyes",
-    "club_id_at_valuation": "1095",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "d3437f428264",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 3000000,
-    "valuation_date": "24/01/2018",
-    "club_name_at_valuation": "ESTAC Troyes",
-    "club_id_at_valuation": "1095",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "df8f5ba73267",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 6000000,
-    "valuation_date": "20/03/2018",
-    "club_name_at_valuation": "ESTAC Troyes",
-    "club_id_at_valuation": "1095",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "f91fbbd3f162",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 6000000,
-    "valuation_date": "04/06/2018",
-    "club_name_at_valuation": "ESTAC Troyes",
-    "club_id_at_valuation": "1095",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "02519212faec",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 8000000,
-    "valuation_date": "17/12/2018",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "a30f2051274f",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 9000000,
-    "valuation_date": "03/06/2019",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 26
-  },
-  {
-    "valuation_id": "cb7ebafef1af",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 7000000,
-    "valuation_date": "19/12/2019",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "ad804dc24bb1",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 5500000,
-    "valuation_date": "08/04/2020",
-    "club_name_at_valuation": "OGC Nice",
-    "club_id_at_valuation": "417",
-    "age_at_valuation": 27
-  },
-  {
-    "valuation_id": "ba21389596e0",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 5000000,
-    "valuation_date": "15/10/2020",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "4b283c0b9e21",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 4500000,
-    "valuation_date": "09/04/2021",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "a02969ca0219",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 3500000,
-    "valuation_date": "04/06/2021",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "f0eb6227685b",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 3500000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "558f9383f893",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 4000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 29
-  },
-  {
-    "valuation_id": "1f871b5d4392",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 3000000,
-    "valuation_date": "19/09/2022",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 30
-  },
-  {
-    "valuation_id": "ee6447b451c7",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 2500000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 30
-  },
-  {
-    "valuation_id": "1ae9d230f65a",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 2000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "Stade Brestois 29",
-    "club_id_at_valuation": "3911",
-    "age_at_valuation": 30
-  },
-  {
-    "valuation_id": "98e1d05ea092",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 1800000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "FC Metz",
-    "club_id_at_valuation": "347",
-    "age_at_valuation": 31
-  },
-  {
-    "valuation_id": "c732be03740b",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 1500000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "FC Metz",
-    "club_id_at_valuation": "347",
-    "age_at_valuation": 31
-  },
-  {
-    "valuation_id": "091565190824",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 1100000,
-    "valuation_date": "04/10/2024",
-    "club_name_at_valuation": "Bodrum FK",
-    "club_id_at_valuation": "44006",
-    "age_at_valuation": 32
-  },
-  {
-    "valuation_id": "6692a842fa36",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 850000,
-    "valuation_date": "23/12/2024",
-    "club_name_at_valuation": "Bodrum FK",
-    "club_id_at_valuation": "44006",
-    "age_at_valuation": 32
-  },
-  {
-    "valuation_id": "66241036b9f3",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 650000,
-    "valuation_date": "20/03/2025",
-    "club_name_at_valuation": "Bodrum FK",
-    "club_id_at_valuation": "44006",
-    "age_at_valuation": 32
-  },
-  {
-    "valuation_id": "77d2d6893b33",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 500000,
-    "valuation_date": "18/06/2025",
-    "club_name_at_valuation": "Bodrum FK",
-    "club_id_at_valuation": "44006",
-    "age_at_valuation": 32
-  },
-  {
-    "valuation_id": "f3eebc050fc4",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 400000,
-    "valuation_date": "08/10/2025",
-    "club_name_at_valuation": "Manisa FK",
-    "club_id_at_valuation": "48913",
-    "age_at_valuation": 33
-  },
-  {
-    "valuation_id": "67933dbce7b6",
-    "player_id": "170544",
-    "player_name": "Christophe Hérelle",
-    "valuation_amount": 300000,
-    "valuation_date": "29/12/2025",
-    "club_name_at_valuation": "Manisa FK",
-    "club_id_at_valuation": "48913",
-    "age_at_valuation": 33
-  },
-  {
     "valuation_id": "3abbc6ffdfc6",
     "player_id": "1111777",
     "player_name": "Sadibou Sané",
@@ -165180,306 +161490,6 @@
     "age_at_valuation": 23
   },
   {
-    "valuation_id": "40110653455f",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 250000,
-    "valuation_date": "11/11/2020",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "36ca9f049c66",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 400000,
-    "valuation_date": "11/03/2021",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "47eca3ec5816",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 800000,
-    "valuation_date": "25/06/2021",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "27b0215c7cdb",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 700000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "9b9fff61319e",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 1500000,
-    "valuation_date": "23/03/2022",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "e0f9adc61492",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 2000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "bc8726208ac4",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 3000000,
-    "valuation_date": "19/09/2022",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "d0833626e1f3",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 4500000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "2da8fb9d70a3",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 5000000,
-    "valuation_date": "27/03/2023",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "3618f9c80003",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 7000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "0ff69b819b0b",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 7000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "ab9ab6d72f9f",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 9000000,
-    "valuation_date": "19/03/2024",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "0007e7097d6e",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 9000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "bb6e505d6c55",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 9000000,
-    "valuation_date": "10/12/2024",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "9124e06c64f9",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 9000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 24
-  },
-  {
-    "valuation_id": "40a82cdd01a6",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 6000000,
-    "valuation_date": "10/10/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "d2bacc88bb21",
-    "player_id": "798404",
-    "player_name": "Alidu Seidu",
-    "valuation_amount": 6000000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 25
-  },
-  {
-    "valuation_id": "cfd71a7a4703",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 800000,
-    "valuation_date": "12/10/2020",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "e3bdf18515a2",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 4000000,
-    "valuation_date": "07/01/2021",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "6eea7e067289",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 6000000,
-    "valuation_date": "04/06/2021",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "2b5d0432ef09",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 6000000,
-    "valuation_date": "16/12/2021",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "b32a1f46c87c",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 5000000,
-    "valuation_date": "30/05/2022",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "ee9c363ea0d2",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 4000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "FC Lorient",
-    "club_id_at_valuation": "1158",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "39793be6a1e1",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 6000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "fb7606160e6b",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 7000000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "AS Monaco",
-    "club_id_at_valuation": "162",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "d23afc646d77",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 7000000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "82e791ae25c9",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 7000000,
-    "valuation_date": "20/12/2024",
-    "club_name_at_valuation": "FC Augsburg",
-    "club_id_at_valuation": "167",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "92cccd9517aa",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 17000000,
-    "valuation_date": "27/03/2025",
-    "club_name_at_valuation": "FC Augsburg",
-    "club_id_at_valuation": "167",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "b0a54b396b2a",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 22000000,
-    "valuation_date": "05/06/2025",
-    "club_name_at_valuation": "FC Augsburg",
-    "club_id_at_valuation": "167",
-    "age_at_valuation": 23
-  },
-  {
-    "valuation_id": "0d31e502dc32",
-    "player_id": "569383",
-    "player_name": "Chrislain Matsima",
-    "valuation_amount": 22000000,
-    "valuation_date": "19/12/2025",
-    "club_name_at_valuation": "FC Augsburg",
-    "club_id_at_valuation": "167",
-    "age_at_valuation": 23
-  },
-  {
     "valuation_id": "f27930cdd356",
     "player_id": "494236",
     "player_name": "Andy Pelmard",
@@ -166228,106 +162238,6 @@
     "club_name_at_valuation": "Clermont Foot 63",
     "club_id_at_valuation": "3524",
     "age_at_valuation": 28
-  },
-  {
-    "valuation_id": "20c00715c3f4",
-    "player_id": "1004301",
-    "player_name": "Jérémy Jacquet",
-    "valuation_amount": 50000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "Stade Rennais FC B",
-    "club_id_at_valuation": "8154",
-    "age_at_valuation": 17
-  },
-  {
-    "valuation_id": "4c2e6d34149b",
-    "player_id": "1004301",
-    "player_name": "Jérémy Jacquet",
-    "valuation_amount": 50000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "Stade Rennais FC B",
-    "club_id_at_valuation": "8154",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "7b34b146c48f",
-    "player_id": "1004301",
-    "player_name": "Jérémy Jacquet",
-    "valuation_amount": 300000,
-    "valuation_date": "19/03/2024",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "23f228f5561f",
-    "player_id": "1004301",
-    "player_name": "Jérémy Jacquet",
-    "valuation_amount": 500000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "efc1e40148ad",
-    "player_id": "1004301",
-    "player_name": "Jérémy Jacquet",
-    "valuation_amount": 600000,
-    "valuation_date": "03/10/2024",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "17d47eed5852",
-    "player_id": "1004301",
-    "player_name": "Jérémy Jacquet",
-    "valuation_amount": 1000000,
-    "valuation_date": "04/12/2024",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "73084d26524f",
-    "player_id": "1004301",
-    "player_name": "Jérémy Jacquet",
-    "valuation_amount": 5000000,
-    "valuation_date": "24/03/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "2245a8c13dd0",
-    "player_id": "1004301",
-    "player_name": "Jérémy Jacquet",
-    "valuation_amount": 10000000,
-    "valuation_date": "03/06/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "3f09c944e137",
-    "player_id": "1004301",
-    "player_name": "Jérémy Jacquet",
-    "valuation_amount": 12000000,
-    "valuation_date": "10/10/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "875b00cfcc7d",
-    "player_id": "1004301",
-    "player_name": "Jérémy Jacquet",
-    "valuation_amount": 20000000,
-    "valuation_date": "15/12/2025",
-    "club_name_at_valuation": "Stade Rennais FC",
-    "club_id_at_valuation": "273",
-    "age_at_valuation": 20
   },
   {
     "valuation_id": "c1b1b327f6c3",
@@ -168568,176 +164478,6 @@
     "club_name_at_valuation": "Clermont Foot 63",
     "club_id_at_valuation": "3524",
     "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "b63875fb84b9",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 100000,
-    "valuation_date": "14/08/2020",
-    "club_name_at_valuation": "FC Sochaux-Montbéliard",
-    "club_id_at_valuation": "750",
-    "age_at_valuation": 17
-  },
-  {
-    "valuation_id": "6a68d91e792f",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 200000,
-    "valuation_date": "11/11/2020",
-    "club_name_at_valuation": "FC Sochaux-Montbéliard",
-    "club_id_at_valuation": "750",
-    "age_at_valuation": 17
-  },
-  {
-    "valuation_id": "76785f789869",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 300000,
-    "valuation_date": "11/03/2021",
-    "club_name_at_valuation": "FC Sochaux-Montbéliard",
-    "club_id_at_valuation": "750",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "6147459b6c4a",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 500000,
-    "valuation_date": "25/06/2021",
-    "club_name_at_valuation": "FC Sochaux-Montbéliard",
-    "club_id_at_valuation": "750",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "829f22111ee2",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 700000,
-    "valuation_date": "27/10/2021",
-    "club_name_at_valuation": "FC Sochaux-Montbéliard",
-    "club_id_at_valuation": "750",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "b0c7b8229790",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 800000,
-    "valuation_date": "27/12/2021",
-    "club_name_at_valuation": "FC Sochaux-Montbéliard",
-    "club_id_at_valuation": "750",
-    "age_at_valuation": 18
-  },
-  {
-    "valuation_id": "0b434a88c9fc",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 1500000,
-    "valuation_date": "24/03/2022",
-    "club_name_at_valuation": "FC Sochaux-Montbéliard",
-    "club_id_at_valuation": "750",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "afd9c9dcfb2a",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 2000000,
-    "valuation_date": "02/06/2022",
-    "club_name_at_valuation": "FC Sochaux-Montbéliard",
-    "club_id_at_valuation": "750",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "d89cbdf348b4",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 4000000,
-    "valuation_date": "19/09/2022",
-    "club_name_at_valuation": "LOSC Lille",
-    "club_id_at_valuation": "1082",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "c17f5e14878d",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 4000000,
-    "valuation_date": "02/11/2022",
-    "club_name_at_valuation": "LOSC Lille",
-    "club_id_at_valuation": "1082",
-    "age_at_valuation": 19
-  },
-  {
-    "valuation_id": "e476b069cc64",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 4000000,
-    "valuation_date": "27/06/2023",
-    "club_name_at_valuation": "LOSC Lille",
-    "club_id_at_valuation": "1082",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "ab88ce5b155a",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 3500000,
-    "valuation_date": "18/12/2023",
-    "club_name_at_valuation": "LOSC Lille",
-    "club_id_at_valuation": "1082",
-    "age_at_valuation": 20
-  },
-  {
-    "valuation_id": "f64654001eac",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 3500000,
-    "valuation_date": "03/06/2024",
-    "club_name_at_valuation": "Clermont Foot 63",
-    "club_id_at_valuation": "3524",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "cad1eee4096e",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 5000000,
-    "valuation_date": "23/12/2024",
-    "club_name_at_valuation": "BSC Young Boys",
-    "club_id_at_valuation": "452",
-    "age_at_valuation": 21
-  },
-  {
-    "valuation_id": "5211f34987f3",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 3000000,
-    "valuation_date": "20/03/2025",
-    "club_name_at_valuation": "BSC Young Boys",
-    "club_id_at_valuation": "452",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "3f38ff54edfe",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 3000000,
-    "valuation_date": "10/06/2025",
-    "club_name_at_valuation": "BSC Young Boys",
-    "club_id_at_valuation": "452",
-    "age_at_valuation": 22
-  },
-  {
-    "valuation_id": "442b67ceb18a",
-    "player_id": "654415",
-    "player_name": "Alan Virginius",
-    "valuation_amount": 2500000,
-    "valuation_date": "29/12/2025",
-    "club_name_at_valuation": "BSC Young Boys",
-    "club_id_at_valuation": "452",
-    "age_at_valuation": 22
   },
   {
     "valuation_id": "05c76b8f9f7e",

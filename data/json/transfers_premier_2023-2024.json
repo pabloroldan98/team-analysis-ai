@@ -25168,6 +25168,22 @@
     "market_value_at_transfer": 0
   },
   {
+    "transfer_id": "6184488",
+    "player_id": "633652",
+    "player_name": "Calvin Ramsay",
+    "from_club_name": "Liverpool FC U21",
+    "from_club_id": "9252",
+    "to_club_name": "Liverpool FC",
+    "to_club_id": "31",
+    "price": null,
+    "price_str": "Unknown",
+    "transfer_date": "01/07/2025",
+    "season": "2025-2026",
+    "transfer_type": "out",
+    "is_loan": false,
+    "market_value_at_transfer": 2500000
+  },
+  {
     "transfer_id": "4624722",
     "player_id": "478573",
     "player_name": "Ryan Gravenberch",
@@ -45965,6 +45981,22 @@
     "season": "2021-2022",
     "transfer_type": "out",
     "is_loan": false,
+    "market_value_at_transfer": 0
+  },
+  {
+    "transfer_id": "6181891",
+    "player_id": "874902",
+    "player_name": "Travis Patterson",
+    "from_club_name": "Aston Villa U21",
+    "from_club_id": "12124",
+    "to_club_name": "FC Annecy",
+    "to_club_id": "30204",
+    "price": null,
+    "price_str": "loan transfer",
+    "transfer_date": "12/02/2026",
+    "season": "2025-2026",
+    "transfer_type": "loan_out",
+    "is_loan": true,
     "market_value_at_transfer": 0
   },
   {
@@ -74430,6 +74462,22 @@
     "transfer_type": "out",
     "is_loan": false,
     "market_value_at_transfer": 50000
+  },
+  {
+    "transfer_id": "6182371",
+    "player_id": "61644",
+    "player_name": "Jack Colback",
+    "from_club_name": "Without Club",
+    "from_club_id": "515",
+    "to_club_name": "Anstey Nomads",
+    "to_club_id": "87055",
+    "price": null,
+    "price_str": "Unknown",
+    "transfer_date": "12/02/2026",
+    "season": "2025-2026",
+    "transfer_type": "out",
+    "is_loan": false,
+    "market_value_at_transfer": 100000
   },
   {
     "transfer_id": "5007174",
@@ -148334,6 +148382,22 @@
     "transfer_type": "out",
     "is_loan": false,
     "market_value_at_transfer": 0
+  },
+  {
+    "transfer_id": "6180655",
+    "player_id": "985717",
+    "player_name": "Taylan Harris",
+    "from_club_name": "Luton Town U21",
+    "from_club_id": "92433",
+    "to_club_name": "Braintree Town",
+    "to_club_id": "6340",
+    "price": null,
+    "price_str": "loan transfer",
+    "transfer_date": "11/02/2026",
+    "season": "2025-2026",
+    "transfer_type": "loan_out",
+    "is_loan": true,
+    "market_value_at_transfer": 50000
   },
   {
     "transfer_id": "5751638",
