@@ -1,0 +1,1473 @@
+{
+  "all": [
+    {
+      "name": "Premier League",
+      "country": "England",
+      "league_id": "GB1",
+      "url_path": "/premier-league/startseite/wettbewerb/GB1",
+      "value_m": 12430.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "LaLiga",
+      "country": "Spain",
+      "league_id": "ES1",
+      "url_path": "/laliga/startseite/wettbewerb/ES1",
+      "value_m": 5470.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Serie A",
+      "country": "Italy",
+      "league_id": "IT1",
+      "url_path": "/serie-a/startseite/wettbewerb/IT1",
+      "value_m": 5240.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Bundesliga",
+      "country": "Germany",
+      "league_id": "L1",
+      "url_path": "/bundesliga/startseite/wettbewerb/L1",
+      "value_m": 4820.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Ligue 1",
+      "country": "France",
+      "league_id": "FR1",
+      "url_path": "/ligue-1/startseite/wettbewerb/FR1",
+      "value_m": 3860.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Copa do Brasil",
+      "country": "Brazil",
+      "league_id": "BRC",
+      "url_path": "/copa-do-brasil/startseite/wettbewerb/BRC",
+      "value_m": 2050.0,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Championship",
+      "country": "England",
+      "league_id": "GB2",
+      "url_path": "/championship/startseite/wettbewerb/GB2",
+      "value_m": 2009.9999999999998,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Série A",
+      "country": "Brazil",
+      "league_id": "BRA1",
+      "url_path": "/campeonato-brasileiro-serie-a/startseite/wettbewerb/BRA1",
+      "value_m": 1820.0,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Liga Portugal",
+      "country": "Portugal",
+      "league_id": "PO1",
+      "url_path": "/liga-portugal/startseite/wettbewerb/PO1",
+      "value_m": 1810.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Süper Lig",
+      "country": "Türkiye",
+      "league_id": "TR1",
+      "url_path": "/super-lig/startseite/wettbewerb/TR1",
+      "value_m": 1330.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "MLS",
+      "country": "United States",
+      "league_id": "MLS1",
+      "url_path": "/major-league-soccer/startseite/wettbewerb/MLS1",
+      "value_m": 1310.0,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Eredivisie",
+      "country": "Netherlands",
+      "league_id": "NL1",
+      "url_path": "/eredivisie/startseite/wettbewerb/NL1",
+      "value_m": 1230.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "King's Cup",
+      "country": "Saudi Arabia",
+      "league_id": "SAKC",
+      "url_path": "/kings-cup/startseite/wettbewerb/SAKC",
+      "value_m": 1160.0,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Saudi Pro League",
+      "country": "Saudi Arabia",
+      "league_id": "SA1",
+      "url_path": "/saudi-pro-league/startseite/wettbewerb/SA1",
+      "value_m": 1110.0,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Premier Liga",
+      "country": "Russia",
+      "league_id": "RU1",
+      "url_path": "/premier-liga/startseite/wettbewerb/RU1",
+      "value_m": 1040.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Copa Argentina",
+      "country": "Argentina",
+      "league_id": "ARCA",
+      "url_path": "/copa-argentina/startseite/wettbewerb/ARCA",
+      "value_m": 1020.0,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Torneo Apertura",
+      "country": "Argentina",
+      "league_id": "ARG1",
+      "url_path": "/torneo-apertura/startseite/wettbewerb/ARG1",
+      "value_m": 956.35,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Jupiler Pro League",
+      "country": "Belgium",
+      "league_id": "BE1",
+      "url_path": "/jupiler-pro-league/startseite/wettbewerb/BE1",
+      "value_m": 955.7,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Liga MX Clausura",
+      "country": "Mexico",
+      "league_id": "MEX1",
+      "url_path": "/liga-mx-clausura/startseite/wettbewerb/MEX1",
+      "value_m": 873.95,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Campeonato Paulista",
+      "country": "Brazil",
+      "league_id": "BCP1",
+      "url_path": "/campeonato-paulista/startseite/wettbewerb/BCP1",
+      "value_m": 648.23,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Saudi Super Cup",
+      "country": "Saudi Arabia",
+      "league_id": "SASS",
+      "url_path": "/saudi-super-cup/startseite/wettbewerb/SASS",
+      "value_m": 588.45,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "2. Bundesliga",
+      "country": "Germany",
+      "league_id": "L2",
+      "url_path": "/2-bundesliga/startseite/wettbewerb/L2",
+      "value_m": 584.73,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Serie B",
+      "country": "Italy",
+      "league_id": "IT2",
+      "url_path": "/serie-b/startseite/wettbewerb/IT2",
+      "value_m": 559.18,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Campeonato Carioca",
+      "country": "Brazil",
+      "league_id": "BRCG",
+      "url_path": "/campeonato-carioca/startseite/wettbewerb/BRCG",
+      "value_m": 539.53,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Super League 1",
+      "country": "Greece",
+      "league_id": "GR1",
+      "url_path": "/super-league-1/startseite/wettbewerb/GR1",
+      "value_m": 535.43,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "LaLiga2",
+      "country": "Spain",
+      "league_id": "ES2",
+      "url_path": "/laliga2/startseite/wettbewerb/ES2",
+      "value_m": 529.75,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Superliga",
+      "country": "Denmark",
+      "league_id": "DK1",
+      "url_path": "/superliga/startseite/wettbewerb/DK1",
+      "value_m": 412.93,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Premier Liga",
+      "country": "Ukraine",
+      "league_id": "UKR1",
+      "url_path": "/premier-liga/startseite/wettbewerb/UKR1",
+      "value_m": 405.08,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Chance Liga",
+      "country": "Czech Republic",
+      "league_id": "TS1",
+      "url_path": "/chance-liga/startseite/wettbewerb/TS1",
+      "value_m": 401.88,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Qatari Stars Cup",
+      "country": "Qatar",
+      "league_id": "QSCP",
+      "url_path": "/qatari-stars-cup-ooredoo-/startseite/wettbewerb/QSCP",
+      "value_m": 394.73,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Ekstraklasa",
+      "country": "Poland",
+      "league_id": "PL1",
+      "url_path": "/pko-bp-ekstraklasa/startseite/wettbewerb/PL1",
+      "value_m": 381.88,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Super League",
+      "country": "Switzerland",
+      "league_id": "C1",
+      "url_path": "/super-league/startseite/wettbewerb/C1",
+      "value_m": 371.75,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Stars League",
+      "country": "Qatar",
+      "league_id": "QSL",
+      "url_path": "/qatar-stars-league/startseite/wettbewerb/QSL",
+      "value_m": 365.78,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Premiership",
+      "country": "Scotland",
+      "league_id": "SC1",
+      "url_path": "/scottish-premiership/startseite/wettbewerb/SC1",
+      "value_m": 365.57,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "UAE President's Cup",
+      "country": "United Arab Emirates",
+      "league_id": "UAEP",
+      "url_path": "/uae-presidents-cup/startseite/wettbewerb/UAEP",
+      "value_m": 361.74,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "UAE Pro League",
+      "country": "United Arab Emirates",
+      "league_id": "UAE1",
+      "url_path": "/uae-pro-league/startseite/wettbewerb/UAE1",
+      "value_m": 357.57,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "UAE League Cup",
+      "country": "United Arab Emirates",
+      "league_id": "UALC",
+      "url_path": "/uae-league-cup/startseite/wettbewerb/UALC",
+      "value_m": 357.57,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Ligue 2",
+      "country": "France",
+      "league_id": "FR2",
+      "url_path": "/ligue-2/startseite/wettbewerb/FR2",
+      "value_m": 347.08,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Bundesliga",
+      "country": "Austria",
+      "league_id": "A1",
+      "url_path": "/bundesliga/startseite/wettbewerb/A1",
+      "value_m": 346.29,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Supercopa Rei",
+      "country": "Brazil",
+      "league_id": "SCBR",
+      "url_path": "/supercopa-rei/startseite/wettbewerb/SCBR",
+      "value_m": 342.6,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "J1 League",
+      "country": "Japan",
+      "league_id": "JAP1",
+      "url_path": "/j1-league/startseite/wettbewerb/JAP1",
+      "value_m": 309.53,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "J1 Special Season",
+      "country": "Japan",
+      "league_id": "J1YV",
+      "url_path": "/j1-100-year-vision-league/startseite/wettbewerb/J1YV",
+      "value_m": 309.53,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Eliteserien",
+      "country": "Norway",
+      "league_id": "NO1",
+      "url_path": "/eliteserien/startseite/wettbewerb/NO1",
+      "value_m": 304.48,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Super liga Srbije",
+      "country": "Serbia",
+      "league_id": "SER1",
+      "url_path": "/super-liga-srbije/startseite/wettbewerb/SER1",
+      "value_m": 272.7,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Campeonato Mineiro",
+      "country": "Brazil",
+      "league_id": "BRCM",
+      "url_path": "/campeonato-mineiro/startseite/wettbewerb/BRCM",
+      "value_m": 262.08,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "SuperLiga",
+      "country": "Romania",
+      "league_id": "RO1",
+      "url_path": "/superliga/startseite/wettbewerb/RO1",
+      "value_m": 235.11,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Allsvenskan",
+      "country": "Sweden",
+      "league_id": "SE1",
+      "url_path": "/allsvenskan/startseite/wettbewerb/SE1",
+      "value_m": 231.64,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Copa Chile",
+      "country": "Chile",
+      "league_id": "CH1C",
+      "url_path": "/copa-chile/startseite/wettbewerb/CH1C",
+      "value_m": 216.31,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Série B",
+      "country": "Brazil",
+      "league_id": "BRA2",
+      "url_path": "/campeonato-brasileiro-serie-b/startseite/wettbewerb/BRA2",
+      "value_m": 213.4,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "SuperSport HNL",
+      "country": "Croatia",
+      "league_id": "KR1",
+      "url_path": "/supersport-hnl/startseite/wettbewerb/KR1",
+      "value_m": 200.08,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "efbet Liga",
+      "country": "Bulgaria",
+      "league_id": "BU1",
+      "url_path": "/efbet-liga/startseite/wettbewerb/BU1",
+      "value_m": 195.5,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Liga DIMAYOR I",
+      "country": "Colombia",
+      "league_id": "COLP",
+      "url_path": "/liga-dimayor-apertura/startseite/wettbewerb/COLP",
+      "value_m": 189.73,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Liga Portugal 2",
+      "country": "Portugal",
+      "league_id": "PO2",
+      "url_path": "/liga-portugal-2/startseite/wettbewerb/PO2",
+      "value_m": 185.53,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Campeonato Gaúcho",
+      "country": "Brazil",
+      "league_id": "BRRS",
+      "url_path": "/campeonato-gaucho/startseite/wettbewerb/BRRS",
+      "value_m": 183.81,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Egypt Cup",
+      "country": "Egypt",
+      "league_id": "EGYP",
+      "url_path": "/egypt-cup/startseite/wettbewerb/EGYP",
+      "value_m": 179.85,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Premier League",
+      "country": "Egypt",
+      "league_id": "EGY1",
+      "url_path": "/egyptian-premier-league/startseite/wettbewerb/EGY1",
+      "value_m": 179.5,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Egyptian League Cup",
+      "country": "Egypt",
+      "league_id": "EGLC",
+      "url_path": "/egyptian-league-cup/startseite/wettbewerb/EGLC",
+      "value_m": 179.5,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Hazfi Cup",
+      "country": "Iran",
+      "league_id": "IRNP",
+      "url_path": "/hazfi-cup/startseite/wettbewerb/IRNP",
+      "value_m": 176.33,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Ligat ha'Al",
+      "country": "Israel",
+      "league_id": "ISR1",
+      "url_path": "/ligat-haal/startseite/wettbewerb/ISR1",
+      "value_m": 163.77,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "1.Lig",
+      "country": "Türkiye",
+      "league_id": "TR2",
+      "url_path": "/1-lig/startseite/wettbewerb/TR2",
+      "value_m": 163.67,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Liga AUF Apertura",
+      "country": "Uruguay",
+      "league_id": "URU1",
+      "url_path": "/liga-auf-apertura/startseite/wettbewerb/URU1",
+      "value_m": 161.92,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Nedbank Cup",
+      "country": "South Africa",
+      "league_id": "NEDC",
+      "url_path": "/nedbank-cup/startseite/wettbewerb/NEDC",
+      "value_m": 159.1,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Liga Primera",
+      "country": "Chile",
+      "league_id": "CLPD",
+      "url_path": "/liga-de-primera/startseite/wettbewerb/CLPD",
+      "value_m": 158.36,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Copa de la Liga",
+      "country": "Chile",
+      "league_id": "CLLC",
+      "url_path": "/copa-de-la-liga-de-chile/startseite/wettbewerb/CLLC",
+      "value_m": 158.36,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Betway Premiership",
+      "country": "South Africa",
+      "league_id": "SFA1",
+      "url_path": "/betway-premiership/startseite/wettbewerb/SFA1",
+      "value_m": 155.48,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Carling Knockout",
+      "country": "South Africa",
+      "league_id": "TELK",
+      "url_path": "/carling-knockout/startseite/wettbewerb/TELK",
+      "value_m": 155.48,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "LigaPro Serie A",
+      "country": "Ecuador",
+      "league_id": "EC1N",
+      "url_path": "/ligapro-serie-a/startseite/wettbewerb/EC1N",
+      "value_m": 153.47,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Cyprus League",
+      "country": "Cyprus",
+      "league_id": "ZYP1",
+      "url_path": "/cyprus-league/startseite/wettbewerb/ZYP1",
+      "value_m": 153.28,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Super League",
+      "country": "China",
+      "league_id": "CSL",
+      "url_path": "/chinese-super-league/startseite/wettbewerb/CSL",
+      "value_m": 152.67,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Campeonato Baiano",
+      "country": "Brazil",
+      "league_id": "BRCB",
+      "url_path": "/campeonato-baiano/startseite/wettbewerb/BRCB",
+      "value_m": 152.48,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "J2/J3 Special Season",
+      "country": "Japan",
+      "league_id": "J2J3",
+      "url_path": "/j2-j3-100-year-vision-league/startseite/wettbewerb/J2J3",
+      "value_m": 149.29,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "NB I.",
+      "country": "Hungary",
+      "league_id": "UNG1",
+      "url_path": "/nemzeti-bajnoksag/startseite/wettbewerb/UNG1",
+      "value_m": 147.08,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "1.Division",
+      "country": "Russia",
+      "league_id": "RU2",
+      "url_path": "/1-division/startseite/wettbewerb/RU2",
+      "value_m": 142.93,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Botola Pro Inwi",
+      "country": "Morocco",
+      "league_id": "MAR1",
+      "url_path": "/botola-pro-inwi/startseite/wettbewerb/MAR1",
+      "value_m": 140.24,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Keuken Kampioen Divisie",
+      "country": "Netherlands",
+      "league_id": "NL2",
+      "url_path": "/keuken-kampioen-divisie/startseite/wettbewerb/NL2",
+      "value_m": 140.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Challenger Pro League",
+      "country": "Belgium",
+      "league_id": "BE2",
+      "url_path": "/challenger-pro-league/startseite/wettbewerb/BE2",
+      "value_m": 139.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Persian Gulf League",
+      "country": "Iran",
+      "league_id": "IRN1",
+      "url_path": "/persian-gulf-pro-league/startseite/wettbewerb/IRN1",
+      "value_m": 133.23,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Liga 1 Apertura",
+      "country": "Peru",
+      "league_id": "TDeA",
+      "url_path": "/liga-1-apertura/startseite/wettbewerb/TDeA",
+      "value_m": 132.8,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Copa do Nordeste",
+      "country": "Brazil",
+      "league_id": "BRNE",
+      "url_path": "/copa-do-nordeste/startseite/wettbewerb/BRNE",
+      "value_m": 131.63,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Primera División Apertura",
+      "country": "Paraguay",
+      "league_id": "PR1A",
+      "url_path": "/primera-division-apertura/startseite/wettbewerb/PR1A",
+      "value_m": 129.08,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "J2 League",
+      "country": "Japan",
+      "league_id": "JAP2",
+      "url_path": "/j2-league/startseite/wettbewerb/JAP2",
+      "value_m": 125.08,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Premyer Liqa",
+      "country": "Azerbaijan",
+      "league_id": "AZ1",
+      "url_path": "/premyer-liqa/startseite/wettbewerb/AZ1",
+      "value_m": 123.75,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "K League 1",
+      "country": "Korea, South",
+      "league_id": "RSK1",
+      "url_path": "/k-league-1/startseite/wettbewerb/RSK1",
+      "value_m": 121.18,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Primera Nacional",
+      "country": "Argentina",
+      "league_id": "ARG2",
+      "url_path": "/primera-nacional/startseite/wettbewerb/ARG2",
+      "value_m": 116.43,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Niké Liga",
+      "country": "Slovakia",
+      "league_id": "SLO1",
+      "url_path": "/nike-liga/startseite/wettbewerb/SLO1",
+      "value_m": 105.77,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "A-League Men",
+      "country": "Australia",
+      "league_id": "AUS1",
+      "url_path": "/a-league-men/startseite/wettbewerb/AUS1",
+      "value_m": 105.33,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Thai FA Cup",
+      "country": "Thailand",
+      "league_id": "THFA",
+      "url_path": "/thai-fa-cup/startseite/wettbewerb/THFA",
+      "value_m": 103.09,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Thai Cup",
+      "country": "Thailand",
+      "league_id": "THLC",
+      "url_path": "/thai-cup/startseite/wettbewerb/THLC",
+      "value_m": 101.43,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "MTN8",
+      "country": "South Africa",
+      "league_id": "SFAL",
+      "url_path": "/mtn8/startseite/wettbewerb/SFAL",
+      "value_m": 100.73,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Primavera 1",
+      "country": "Italy",
+      "league_id": "IJ1",
+      "url_path": "/primavera-1/startseite/wettbewerb/IJ1",
+      "value_m": 39.19,
+      "region": "europaJugend",
+      "is_youth": true
+    },
+    {
+      "name": "U19 Nachwuchsliga - Liga A",
+      "country": "Germany",
+      "league_id": "19LA",
+      "url_path": "/u19-dfb-nachwuchsliga-hauptrunde-liga-a/startseite/wettbewerb/19LA",
+      "value_m": 28.53,
+      "region": "europaJugend",
+      "is_youth": true
+    },
+    {
+      "name": "U19 Nachwuchsliga - Gr. H",
+      "country": "Germany",
+      "league_id": "19D8",
+      "url_path": "/u19-dfb-nachwuchsliga-vorrunde-gruppe-h/startseite/wettbewerb/19D8",
+      "value_m": 13.68,
+      "region": "europaJugend",
+      "is_youth": true
+    },
+    {
+      "name": "Liga Revelação",
+      "country": "Portugal",
+      "league_id": "PT23",
+      "url_path": "/liga-revelacao-u23/startseite/wettbewerb/PT23",
+      "value_m": 11.48,
+      "region": "europaJugend",
+      "is_youth": true
+    }
+  ],
+  "new": [
+    {
+      "name": "Copa do Brasil",
+      "country": "Brazil",
+      "league_id": "BRC",
+      "url_path": "/copa-do-brasil/startseite/wettbewerb/BRC",
+      "value_m": 2050.0,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "King's Cup",
+      "country": "Saudi Arabia",
+      "league_id": "SAKC",
+      "url_path": "/kings-cup/startseite/wettbewerb/SAKC",
+      "value_m": 1160.0,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Saudi Pro League",
+      "country": "Saudi Arabia",
+      "league_id": "SA1",
+      "url_path": "/saudi-pro-league/startseite/wettbewerb/SA1",
+      "value_m": 1110.0,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Copa Argentina",
+      "country": "Argentina",
+      "league_id": "ARCA",
+      "url_path": "/copa-argentina/startseite/wettbewerb/ARCA",
+      "value_m": 1020.0,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Torneo Apertura",
+      "country": "Argentina",
+      "league_id": "ARG1",
+      "url_path": "/torneo-apertura/startseite/wettbewerb/ARG1",
+      "value_m": 956.35,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Campeonato Paulista",
+      "country": "Brazil",
+      "league_id": "BCP1",
+      "url_path": "/campeonato-paulista/startseite/wettbewerb/BCP1",
+      "value_m": 648.23,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Saudi Super Cup",
+      "country": "Saudi Arabia",
+      "league_id": "SASS",
+      "url_path": "/saudi-super-cup/startseite/wettbewerb/SASS",
+      "value_m": 588.45,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Campeonato Carioca",
+      "country": "Brazil",
+      "league_id": "BRCG",
+      "url_path": "/campeonato-carioca/startseite/wettbewerb/BRCG",
+      "value_m": 539.53,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Superliga",
+      "country": "Denmark",
+      "league_id": "DK1",
+      "url_path": "/superliga/startseite/wettbewerb/DK1",
+      "value_m": 412.93,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Chance Liga",
+      "country": "Czech Republic",
+      "league_id": "TS1",
+      "url_path": "/chance-liga/startseite/wettbewerb/TS1",
+      "value_m": 401.88,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Qatari Stars Cup",
+      "country": "Qatar",
+      "league_id": "QSCP",
+      "url_path": "/qatari-stars-cup-ooredoo-/startseite/wettbewerb/QSCP",
+      "value_m": 394.73,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Ekstraklasa",
+      "country": "Poland",
+      "league_id": "PL1",
+      "url_path": "/pko-bp-ekstraklasa/startseite/wettbewerb/PL1",
+      "value_m": 381.88,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Stars League",
+      "country": "Qatar",
+      "league_id": "QSL",
+      "url_path": "/qatar-stars-league/startseite/wettbewerb/QSL",
+      "value_m": 365.78,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "UAE President's Cup",
+      "country": "United Arab Emirates",
+      "league_id": "UAEP",
+      "url_path": "/uae-presidents-cup/startseite/wettbewerb/UAEP",
+      "value_m": 361.74,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "UAE Pro League",
+      "country": "United Arab Emirates",
+      "league_id": "UAE1",
+      "url_path": "/uae-pro-league/startseite/wettbewerb/UAE1",
+      "value_m": 357.57,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "UAE League Cup",
+      "country": "United Arab Emirates",
+      "league_id": "UALC",
+      "url_path": "/uae-league-cup/startseite/wettbewerb/UALC",
+      "value_m": 357.57,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Supercopa Rei",
+      "country": "Brazil",
+      "league_id": "SCBR",
+      "url_path": "/supercopa-rei/startseite/wettbewerb/SCBR",
+      "value_m": 342.6,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "J1 League",
+      "country": "Japan",
+      "league_id": "JAP1",
+      "url_path": "/j1-league/startseite/wettbewerb/JAP1",
+      "value_m": 309.53,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "J1 Special Season",
+      "country": "Japan",
+      "league_id": "J1YV",
+      "url_path": "/j1-100-year-vision-league/startseite/wettbewerb/J1YV",
+      "value_m": 309.53,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Eliteserien",
+      "country": "Norway",
+      "league_id": "NO1",
+      "url_path": "/eliteserien/startseite/wettbewerb/NO1",
+      "value_m": 304.48,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Super liga Srbije",
+      "country": "Serbia",
+      "league_id": "SER1",
+      "url_path": "/super-liga-srbije/startseite/wettbewerb/SER1",
+      "value_m": 272.7,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Campeonato Mineiro",
+      "country": "Brazil",
+      "league_id": "BRCM",
+      "url_path": "/campeonato-mineiro/startseite/wettbewerb/BRCM",
+      "value_m": 262.08,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "SuperLiga",
+      "country": "Romania",
+      "league_id": "RO1",
+      "url_path": "/superliga/startseite/wettbewerb/RO1",
+      "value_m": 235.11,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Allsvenskan",
+      "country": "Sweden",
+      "league_id": "SE1",
+      "url_path": "/allsvenskan/startseite/wettbewerb/SE1",
+      "value_m": 231.64,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Copa Chile",
+      "country": "Chile",
+      "league_id": "CH1C",
+      "url_path": "/copa-chile/startseite/wettbewerb/CH1C",
+      "value_m": 216.31,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Série B",
+      "country": "Brazil",
+      "league_id": "BRA2",
+      "url_path": "/campeonato-brasileiro-serie-b/startseite/wettbewerb/BRA2",
+      "value_m": 213.4,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "SuperSport HNL",
+      "country": "Croatia",
+      "league_id": "KR1",
+      "url_path": "/supersport-hnl/startseite/wettbewerb/KR1",
+      "value_m": 200.08,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "efbet Liga",
+      "country": "Bulgaria",
+      "league_id": "BU1",
+      "url_path": "/efbet-liga/startseite/wettbewerb/BU1",
+      "value_m": 195.5,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Liga DIMAYOR I",
+      "country": "Colombia",
+      "league_id": "COLP",
+      "url_path": "/liga-dimayor-apertura/startseite/wettbewerb/COLP",
+      "value_m": 189.73,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Liga Portugal 2",
+      "country": "Portugal",
+      "league_id": "PO2",
+      "url_path": "/liga-portugal-2/startseite/wettbewerb/PO2",
+      "value_m": 185.53,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Campeonato Gaúcho",
+      "country": "Brazil",
+      "league_id": "BRRS",
+      "url_path": "/campeonato-gaucho/startseite/wettbewerb/BRRS",
+      "value_m": 183.81,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Egypt Cup",
+      "country": "Egypt",
+      "league_id": "EGYP",
+      "url_path": "/egypt-cup/startseite/wettbewerb/EGYP",
+      "value_m": 179.85,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Premier League",
+      "country": "Egypt",
+      "league_id": "EGY1",
+      "url_path": "/egyptian-premier-league/startseite/wettbewerb/EGY1",
+      "value_m": 179.5,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Egyptian League Cup",
+      "country": "Egypt",
+      "league_id": "EGLC",
+      "url_path": "/egyptian-league-cup/startseite/wettbewerb/EGLC",
+      "value_m": 179.5,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Hazfi Cup",
+      "country": "Iran",
+      "league_id": "IRNP",
+      "url_path": "/hazfi-cup/startseite/wettbewerb/IRNP",
+      "value_m": 176.33,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Ligat ha'Al",
+      "country": "Israel",
+      "league_id": "ISR1",
+      "url_path": "/ligat-haal/startseite/wettbewerb/ISR1",
+      "value_m": 163.77,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "1.Lig",
+      "country": "Türkiye",
+      "league_id": "TR2",
+      "url_path": "/1-lig/startseite/wettbewerb/TR2",
+      "value_m": 163.67,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Liga AUF Apertura",
+      "country": "Uruguay",
+      "league_id": "URU1",
+      "url_path": "/liga-auf-apertura/startseite/wettbewerb/URU1",
+      "value_m": 161.92,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Nedbank Cup",
+      "country": "South Africa",
+      "league_id": "NEDC",
+      "url_path": "/nedbank-cup/startseite/wettbewerb/NEDC",
+      "value_m": 159.1,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Liga Primera",
+      "country": "Chile",
+      "league_id": "CLPD",
+      "url_path": "/liga-de-primera/startseite/wettbewerb/CLPD",
+      "value_m": 158.36,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Copa de la Liga",
+      "country": "Chile",
+      "league_id": "CLLC",
+      "url_path": "/copa-de-la-liga-de-chile/startseite/wettbewerb/CLLC",
+      "value_m": 158.36,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Betway Premiership",
+      "country": "South Africa",
+      "league_id": "SFA1",
+      "url_path": "/betway-premiership/startseite/wettbewerb/SFA1",
+      "value_m": 155.48,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Carling Knockout",
+      "country": "South Africa",
+      "league_id": "TELK",
+      "url_path": "/carling-knockout/startseite/wettbewerb/TELK",
+      "value_m": 155.48,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "LigaPro Serie A",
+      "country": "Ecuador",
+      "league_id": "EC1N",
+      "url_path": "/ligapro-serie-a/startseite/wettbewerb/EC1N",
+      "value_m": 153.47,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Cyprus League",
+      "country": "Cyprus",
+      "league_id": "ZYP1",
+      "url_path": "/cyprus-league/startseite/wettbewerb/ZYP1",
+      "value_m": 153.28,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Super League",
+      "country": "China",
+      "league_id": "CSL",
+      "url_path": "/chinese-super-league/startseite/wettbewerb/CSL",
+      "value_m": 152.67,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Campeonato Baiano",
+      "country": "Brazil",
+      "league_id": "BRCB",
+      "url_path": "/campeonato-baiano/startseite/wettbewerb/BRCB",
+      "value_m": 152.48,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "J2/J3 Special Season",
+      "country": "Japan",
+      "league_id": "J2J3",
+      "url_path": "/j2-j3-100-year-vision-league/startseite/wettbewerb/J2J3",
+      "value_m": 149.29,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "NB I.",
+      "country": "Hungary",
+      "league_id": "UNG1",
+      "url_path": "/nemzeti-bajnoksag/startseite/wettbewerb/UNG1",
+      "value_m": 147.08,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "1.Division",
+      "country": "Russia",
+      "league_id": "RU2",
+      "url_path": "/1-division/startseite/wettbewerb/RU2",
+      "value_m": 142.93,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Botola Pro Inwi",
+      "country": "Morocco",
+      "league_id": "MAR1",
+      "url_path": "/botola-pro-inwi/startseite/wettbewerb/MAR1",
+      "value_m": 140.24,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Keuken Kampioen Divisie",
+      "country": "Netherlands",
+      "league_id": "NL2",
+      "url_path": "/keuken-kampioen-divisie/startseite/wettbewerb/NL2",
+      "value_m": 140.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Challenger Pro League",
+      "country": "Belgium",
+      "league_id": "BE2",
+      "url_path": "/challenger-pro-league/startseite/wettbewerb/BE2",
+      "value_m": 139.0,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "Persian Gulf League",
+      "country": "Iran",
+      "league_id": "IRN1",
+      "url_path": "/persian-gulf-pro-league/startseite/wettbewerb/IRN1",
+      "value_m": 133.23,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Liga 1 Apertura",
+      "country": "Peru",
+      "league_id": "TDeA",
+      "url_path": "/liga-1-apertura/startseite/wettbewerb/TDeA",
+      "value_m": 132.8,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Copa do Nordeste",
+      "country": "Brazil",
+      "league_id": "BRNE",
+      "url_path": "/copa-do-nordeste/startseite/wettbewerb/BRNE",
+      "value_m": 131.63,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Primera División Apertura",
+      "country": "Paraguay",
+      "league_id": "PR1A",
+      "url_path": "/primera-division-apertura/startseite/wettbewerb/PR1A",
+      "value_m": 129.08,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "J2 League",
+      "country": "Japan",
+      "league_id": "JAP2",
+      "url_path": "/j2-league/startseite/wettbewerb/JAP2",
+      "value_m": 125.08,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Premyer Liqa",
+      "country": "Azerbaijan",
+      "league_id": "AZ1",
+      "url_path": "/premyer-liqa/startseite/wettbewerb/AZ1",
+      "value_m": 123.75,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "K League 1",
+      "country": "Korea, South",
+      "league_id": "RSK1",
+      "url_path": "/k-league-1/startseite/wettbewerb/RSK1",
+      "value_m": 121.18,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Primera Nacional",
+      "country": "Argentina",
+      "league_id": "ARG2",
+      "url_path": "/primera-nacional/startseite/wettbewerb/ARG2",
+      "value_m": 116.43,
+      "region": "amerika",
+      "is_youth": false
+    },
+    {
+      "name": "Niké Liga",
+      "country": "Slovakia",
+      "league_id": "SLO1",
+      "url_path": "/nike-liga/startseite/wettbewerb/SLO1",
+      "value_m": 105.77,
+      "region": "europa",
+      "is_youth": false
+    },
+    {
+      "name": "A-League Men",
+      "country": "Australia",
+      "league_id": "AUS1",
+      "url_path": "/a-league-men/startseite/wettbewerb/AUS1",
+      "value_m": 105.33,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Thai FA Cup",
+      "country": "Thailand",
+      "league_id": "THFA",
+      "url_path": "/thai-fa-cup/startseite/wettbewerb/THFA",
+      "value_m": 103.09,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "Thai Cup",
+      "country": "Thailand",
+      "league_id": "THLC",
+      "url_path": "/thai-cup/startseite/wettbewerb/THLC",
+      "value_m": 101.43,
+      "region": "asien",
+      "is_youth": false
+    },
+    {
+      "name": "MTN8",
+      "country": "South Africa",
+      "league_id": "SFAL",
+      "url_path": "/mtn8/startseite/wettbewerb/SFAL",
+      "value_m": 100.73,
+      "region": "afrika",
+      "is_youth": false
+    },
+    {
+      "name": "Primavera 1",
+      "country": "Italy",
+      "league_id": "IJ1",
+      "url_path": "/primavera-1/startseite/wettbewerb/IJ1",
+      "value_m": 39.19,
+      "region": "europaJugend",
+      "is_youth": true
+    },
+    {
+      "name": "U19 Nachwuchsliga - Liga A",
+      "country": "Germany",
+      "league_id": "19LA",
+      "url_path": "/u19-dfb-nachwuchsliga-hauptrunde-liga-a/startseite/wettbewerb/19LA",
+      "value_m": 28.53,
+      "region": "europaJugend",
+      "is_youth": true
+    },
+    {
+      "name": "U19 Nachwuchsliga - Gr. H",
+      "country": "Germany",
+      "league_id": "19D8",
+      "url_path": "/u19-dfb-nachwuchsliga-vorrunde-gruppe-h/startseite/wettbewerb/19D8",
+      "value_m": 13.68,
+      "region": "europaJugend",
+      "is_youth": true
+    },
+    {
+      "name": "Liga Revelação",
+      "country": "Portugal",
+      "league_id": "PT23",
+      "url_path": "/liga-revelacao-u23/startseite/wettbewerb/PT23",
+      "value_m": 11.48,
+      "region": "europaJugend",
+      "is_youth": true
+    }
+  ]
+}
