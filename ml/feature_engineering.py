@@ -8,6 +8,7 @@ Age is computed from birth_date + cutoff_date.
 """
 from __future__ import annotations
 
+import bisect
 import json
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -26,6 +27,7 @@ from valuation import Valuation
 from player import Player
 from transfer import Transfer
 from scraping.utils.helpers import DATA_DIR, list_json_bases, load_json, parse_date
+from scraping.base_scraper import BaseScraper
 
 # Top 5 leagues (league_id values)
 TOP_LEAGUE_IDS: Set[str] = {"GB1", "IT1", "L1", "FR1", "ES1"}
@@ -47,6 +49,14 @@ TOP_NATIONALITIES: List[str] = [
 
 # Top clubs for binning (rest will be "Other")
 # These are the most valuable/prominent clubs
+# league_id -> (league_key, tier_str) built from LEAGUE_INFO; unknown -> ("Other", "Other")
+LEAGUE_ID_TO_KEY_AND_TIER: Dict[str, Tuple[str, str]] = {}
+for _key, _info in BaseScraper.LEAGUE_INFO.items():
+    _lid = _info.get("id", "")
+    if _lid:
+        _t = _info.get("tier", "Other")
+        LEAGUE_ID_TO_KEY_AND_TIER[_lid] = (_key, str(_t) if isinstance(_t, int) else _t)
+
 TOP_CLUBS: List[str] = [
     "Real Madrid", "FC Barcelona", "Manchester City", "Manchester United",
     "Liverpool FC", "Chelsea FC", "Arsenal FC", "Tottenham Hotspur",
@@ -72,7 +82,10 @@ class PlayerFeatures:
     player_nationality_bin: str  # Binned nationality (top nationalities or "Other")
     is_in_top_league: bool  # Is player in one of top 5 leagues
     is_in_home_league: bool  # Is player playing in their home country
+    current_league: str  # League key from LEAGUE_INFO or "Other"
+    league_tier: str  # Tier from LEAGUE_INFO (1, 2, 3, 4, youth, cup) or "Other"
     current_club: str  # Club name at valuation time
+    current_club_value: float  # Sum of market values of all players in team at cutoff (€)
     current_club_bin: str  # Binned club (top 25 clubs or "Other")
     valuation_date: datetime  # Date of valuation (important for market inflation)
     
@@ -173,7 +186,10 @@ class PlayerFeatures:
             "player_nationality_bin": self.player_nationality_bin,
             "is_in_top_league": self.is_in_top_league,
             "is_in_home_league": self.is_in_home_league,
+            "current_league": self.current_league,
+            "league_tier": self.league_tier,
             "current_club": self.current_club,
+            "current_club_value": self.current_club_value,
             "current_club_bin": self.current_club_bin,
             "valuation_date": self.valuation_date.strftime("%Y-%m-%d") if self.valuation_date else None,
             "valuation_year": self.valuation_date.year + self.valuation_date.month / 12.0 if self.valuation_date else None,
@@ -248,6 +264,9 @@ class PlayerFeatures:
             "position": self.position,  # Categorical
             "player_nationality_bin": self.player_nationality_bin,  # Categorical
             "current_club_bin": self.current_club_bin,  # Categorical
+            "current_league": self.current_league,  # Categorical (league key or "Other")
+            "league_tier": self.league_tier,  # Categorical ("1", "2", "3", "4", "youth", "cup", "Other")
+            "current_club_value_M": self.current_club_value / 1_000_000,
             "is_in_top_league": 1.0 if self.is_in_top_league else 0.0,
             "is_in_home_league": 1.0 if self.is_in_home_league else 0.0,
             "valuation_year": valuation_year,
@@ -323,22 +342,24 @@ def _get_value_at_date(
 ) -> Optional[float]:
     """
     Get valuation closest to target_date within tolerance.
+    Uses binary search when list is sorted by date (O(log n) vs O(n)).
     """
     if not valuations:
         return None
     
-    best_val = None
-    best_diff = timedelta(days=tolerance_days + 1)
-    
-    for val_date, val_amount in valuations:
-        diff = abs(val_date - target_date)
-        if diff < best_diff:
-            best_diff = diff
-            best_val = val_amount
-    
-    if best_diff <= timedelta(days=tolerance_days):
-        return best_val
-    return None
+    tolerance = timedelta(days=tolerance_days)
+    # Binary search for closest date (list must be sorted by date)
+    dates = [v[0] for v in valuations]
+    idx = bisect.bisect_left(dates, target_date)
+    candidates: List[Tuple[timedelta, float]] = []
+    if idx < len(dates):
+        candidates.append((abs(dates[idx] - target_date), valuations[idx][1]))
+    if idx > 0:
+        candidates.append((abs(dates[idx - 1] - target_date), valuations[idx - 1][1]))
+    if not candidates:
+        return None
+    best_diff, best_val = min(candidates, key=lambda x: x[0])
+    return best_val if best_diff <= tolerance else None
 
 
 def _compute_trend(current: float, past: Optional[float]) -> float:
@@ -479,6 +500,16 @@ def _compute_percentile_features(batch: List[PlayerFeatures], verbose: bool = Fa
                 setattr(f, attr_pct_pct, np.nan)
 
 
+def _get_league_and_tier(league_id: str) -> Tuple[str, str]:
+    """Get league_key and tier from league_id. Returns ('Other', 'Other') if not in LEAGUE_INFO."""
+    if not league_id:
+        return "Other", "Other"
+    info = LEAGUE_ID_TO_KEY_AND_TIER.get(league_id)
+    if info is None:
+        return "Other", "Other"
+    return info
+
+
 def _bin_club(club: str) -> str:
     """Bin club to top categories or 'Other'."""
     if not club:
@@ -499,6 +530,35 @@ def _load_all_transfers() -> List[Transfer]:
             if isinstance(item, dict):
                 transfers.append(Transfer.from_dict(item))
     return transfers
+
+
+def _get_team_total_values_at_cutoff(
+    by_player: Dict[str, List[Valuation]],
+    transfer_map: Dict[str, Transfer],
+    cutoff_date: datetime,
+) -> Dict[str, float]:
+    """
+    Compute sum of market values per team at cutoff (single O(players) pass).
+    Used for current_club_value feature.
+    """
+    team_totals: Dict[str, float] = {}
+    for player_id, vals in by_player.items():
+        t = transfer_map.get(player_id)
+        if not t or not t.to_club_id:
+            continue
+        val_list = []
+        for v in vals:
+            d = parse_date(v.valuation_date)
+            if d is not None and v.valuation_amount is not None:
+                val_list.append((d, v.valuation_amount))
+        if not val_list:
+            continue
+        val_list.sort(key=lambda x: x[0])
+        v_at = _get_value_at_date(val_list, cutoff_date, tolerance_days=90)
+        if v_at is not None and v_at > 0:
+            tid = str(t.to_club_id)
+            team_totals[tid] = team_totals.get(tid, 0.0) + v_at
+    return team_totals
 
 
 def _get_transfer_map_at_cutoff(
@@ -670,6 +730,7 @@ def extract_player_features(
     include_target: bool = False,
     cutoff_season: str = "",
     player_transfer: Optional[Transfer] = None,
+    team_total_values: Optional[Dict[str, float]] = None,
 ) -> Optional[PlayerFeatures]:
     """
     Extract features for a player from their valuation history.
@@ -685,6 +746,8 @@ def extract_player_features(
         player_transfer: Optional Transfer for current club determination.
             If provided, the player's club is taken from to_club (transfer-based).
             If None, falls back to the most recent valuation's club.
+        team_total_values: Optional dict team_id -> sum of squad market values at cutoff.
+            If provided, current_club_value is looked up. If None, current_club_value=0.
     
     Returns:
         PlayerFeatures or None if insufficient data
@@ -755,11 +818,16 @@ def extract_player_features(
     league_id = team_info.get("league_id", "")
     team_country = any_team_info.get("country", "")
     is_in_top_league = league_id in TOP_LEAGUE_IDS
-    
+
+    # Current league and tier (from LEAGUE_INFO, or "Other" if unknown)
+    current_league, league_tier = _get_league_and_tier(league_id)
+
     # Is in home league? Check if player nationality matches team's country
     is_in_home_league = _is_home_league(player_nationality, team_country)
 
     current_club_bin = _bin_club(current_club)
+    team_total_values = team_total_values or {}
+    current_club_value = team_total_values.get(club_id, 0.0) if club_id else 0.0
     valuation_date = last_date  # Date of the most recent valuation before cutoff
     
     # Historical stats
@@ -825,7 +893,10 @@ def extract_player_features(
         player_nationality_bin=player_nationality_bin,
         is_in_top_league=is_in_top_league,
         is_in_home_league=is_in_home_league,
+        current_league=current_league,
+        league_tier=league_tier,
         current_club=current_club,
+        current_club_value=current_club_value,
         current_club_bin=current_club_bin,
         valuation_date=valuation_date,
         max_value=max_value,
@@ -956,6 +1027,7 @@ def _process_cutoff_batch(
 ) -> Tuple[datetime, str, List[PlayerFeatures]]:
     """Process one cutoff: extract features for all players, compute percentiles."""
     cutoff_season = _get_season_for_cutoff(cutoff_date)
+    team_total_values = _get_team_total_values_at_cutoff(by_player, transfer_map, cutoff_date)
     batch: List[PlayerFeatures] = []
     for player_id, player_vals in by_player.items():
         if len(player_vals) < min_valuations:
@@ -970,6 +1042,7 @@ def _process_cutoff_batch(
             include_target=True,
             cutoff_season=cutoff_season,
             player_transfer=player_transfer,
+            team_total_values=team_total_values,
         )
         if features and features.target_value is not None:
             batch.append(features)
@@ -1250,7 +1323,10 @@ def load_training_dataset(cutoff_months: int = 12) -> Optional[List[PlayerFeatur
             player_nationality_bin=item.get("player_nationality_bin", "Other"),
             is_in_top_league=item.get("is_in_top_league", False),
             is_in_home_league=item.get("is_in_home_league", False),
+            current_league=item.get("current_league", "Other"),
+            league_tier=item.get("league_tier", "Other"),
             current_club=item.get("current_club", ""),
+            current_club_value=item.get("current_club_value", 0.0),
             current_club_bin=item.get("current_club_bin", "Other"),
             valuation_date=val_date,
             max_value=item.get("max_value", 0),
@@ -1381,7 +1457,9 @@ def build_prediction_dataset(
     by_player: Dict[str, List[Valuation]] = {}
     for v in all_valuations:
         by_player.setdefault(v.player_id, []).append(v)
-    
+
+    team_total_values = _get_team_total_values_at_cutoff(by_player, transfer_map, cutoff_date)
+
     # When players dict is provided, only process those player_ids (reduces work when filtered)
     if players:
         items = [(pid, vals) for pid, vals in by_player.items() if pid in players]
@@ -1403,6 +1481,7 @@ def build_prediction_dataset(
             team_league_mapping=team_league_mapping,
             include_target=False,
             player_transfer=player_transfer,
+            team_total_values=team_total_values,
         )
         
         if features:

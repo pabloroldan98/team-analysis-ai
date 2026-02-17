@@ -42,6 +42,9 @@ class ValuePredictor:
         "position",  # Categorical
         "player_nationality_bin",  # Categorical
         "current_club_bin",  # Categorical
+        "current_league",  # Categorical
+        "league_tier",  # Categorical
+        "current_club_value_M",
         "is_in_top_league",
         "is_in_home_league",
         "valuation_year",
@@ -100,7 +103,7 @@ class ValuePredictor:
     ]
     
     # Categorical feature names for XGBoost
-    CATEGORICAL_FEATURES = ["position", "player_nationality_bin", "current_club_bin"]
+    CATEGORICAL_FEATURES = ["position", "player_nationality_bin", "current_club_bin", "current_league", "league_tier"]
     
     def __init__(self, model_path: Optional[Path] = None):
         """
