@@ -1,0 +1,5922 @@
+[
+  {
+    "valuation_id": "2e75647c2c7e",
+    "player_id": "463571",
+    "player_name": "Phil Kemper",
+    "valuation_amount": 50000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "bfc9797d4944",
+    "player_id": "463571",
+    "player_name": "Phil Kemper",
+    "valuation_amount": 75000,
+    "valuation_date": "27/09/2021",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e4e8ab11acff",
+    "player_id": "463571",
+    "player_name": "Phil Kemper",
+    "valuation_amount": 100000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "79d024daa202",
+    "player_id": "463571",
+    "player_name": "Phil Kemper",
+    "valuation_amount": 100000,
+    "valuation_date": "13/06/2022",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "02c22b848d16",
+    "player_id": "463571",
+    "player_name": "Phil Kemper",
+    "valuation_amount": 100000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "c8e8adea24ae",
+    "player_id": "463571",
+    "player_name": "Phil Kemper",
+    "valuation_amount": 100000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "0cadbcdf1f4c",
+    "player_id": "463571",
+    "player_name": "Phil Kemper",
+    "valuation_amount": 100000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "15f4d550e586",
+    "player_id": "463571",
+    "player_name": "Phil Kemper",
+    "valuation_amount": 100000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "fbafd01f7dbf",
+    "player_id": "463571",
+    "player_name": "Phil Kemper",
+    "valuation_amount": 75000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "FC Schalke 04 II",
+    "club_id_at_valuation": "34",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "3a84f46e818e",
+    "player_id": "463571",
+    "player_name": "Phil Kemper",
+    "valuation_amount": 50000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "FC Schalke 04 II",
+    "club_id_at_valuation": "34",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "1fc004bcd00e",
+    "player_id": "463571",
+    "player_name": "Phil Kemper",
+    "valuation_amount": 100000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "05fd413d4ff3",
+    "player_id": "530162",
+    "player_name": "Niklas Determann",
+    "valuation_amount": 25000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "Sportfreunde Lotte",
+    "club_id_at_valuation": "668",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "602826926a19",
+    "player_id": "530162",
+    "player_name": "Niklas Determann",
+    "valuation_amount": 25000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "Sportfreunde Lotte",
+    "club_id_at_valuation": "668",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "281360cdc906",
+    "player_id": "530162",
+    "player_name": "Niklas Determann",
+    "valuation_amount": 0,
+    "valuation_date": "01/07/2022",
+    "club_name_at_valuation": "Sportfreunde Lotte",
+    "club_id_at_valuation": "668",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "bd943c2e39a1",
+    "player_id": "530162",
+    "player_name": "Niklas Determann",
+    "valuation_amount": 50000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Sportfreunde Lotte",
+    "club_id_at_valuation": "668",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "3418362160ab",
+    "player_id": "530162",
+    "player_name": "Niklas Determann",
+    "valuation_amount": 50000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Sportfreunde Lotte",
+    "club_id_at_valuation": "668",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "eb15268249ce",
+    "player_id": "530162",
+    "player_name": "Niklas Determann",
+    "valuation_amount": 0,
+    "valuation_date": "29/09/2025",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "3dd4c8f872c5",
+    "player_id": "552553",
+    "player_name": "Michel Eickschläger",
+    "valuation_amount": 25000,
+    "valuation_date": "06/09/2025",
+    "club_name_at_valuation": "Kickers Emden",
+    "club_id_at_valuation": "139",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "dc5fab1bd507",
+    "player_id": "552553",
+    "player_name": "Michel Eickschläger",
+    "valuation_amount": 25000,
+    "valuation_date": "15/12/2025",
+    "club_name_at_valuation": "Kickers Emden",
+    "club_id_at_valuation": "139",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "1382f2c6f1ac",
+    "player_id": "552553",
+    "player_name": "Michel Eickschläger",
+    "valuation_amount": 0,
+    "valuation_date": "03/02/2026",
+    "club_name_at_valuation": "TuS Bersenbrück",
+    "club_id_at_valuation": "18603",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "4fed7623f859",
+    "player_id": "604098",
+    "player_name": "Kingsley Sarpei",
+    "valuation_amount": 25000,
+    "valuation_date": "27/09/2021",
+    "club_name_at_valuation": "Wuppertaler SV",
+    "club_id_at_valuation": "299",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "538786413a54",
+    "player_id": "604098",
+    "player_name": "Kingsley Sarpei",
+    "valuation_amount": 75000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "Wuppertaler SV",
+    "club_id_at_valuation": "299",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "d89a8266003d",
+    "player_id": "604098",
+    "player_name": "Kingsley Sarpei",
+    "valuation_amount": 75000,
+    "valuation_date": "13/06/2022",
+    "club_name_at_valuation": "Wuppertaler SV",
+    "club_id_at_valuation": "299",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "9d2ec8e805e8",
+    "player_id": "604098",
+    "player_name": "Kingsley Sarpei",
+    "valuation_amount": 50000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "ce79070a87cf",
+    "player_id": "604098",
+    "player_name": "Kingsley Sarpei",
+    "valuation_amount": 50000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "9f8dc179575e",
+    "player_id": "604098",
+    "player_name": "Kingsley Sarpei",
+    "valuation_amount": 50000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "33f7270d11f4",
+    "player_id": "604098",
+    "player_name": "Kingsley Sarpei",
+    "valuation_amount": 50000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "c73f21d1663c",
+    "player_id": "604098",
+    "player_name": "Kingsley Sarpei",
+    "valuation_amount": 50000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "8fb7bfed93bd",
+    "player_id": "604098",
+    "player_name": "Kingsley Sarpei",
+    "valuation_amount": 50000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "e94ebdb6962d",
+    "player_id": "604098",
+    "player_name": "Kingsley Sarpei",
+    "valuation_amount": 0,
+    "valuation_date": "08/09/2025",
+    "club_name_at_valuation": "SC Fliesteden 1931",
+    "club_id_at_valuation": "51794",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "04dba4b0d26d",
+    "player_id": "1077670",
+    "player_name": "Axel Tape",
+    "valuation_amount": 2000000,
+    "valuation_date": "03/06/2025",
+    "club_name_at_valuation": "Paris Saint-Germain Espoirs",
+    "club_id_at_valuation": "43570",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "8fe1da0bd417",
+    "player_id": "1077670",
+    "player_name": "Axel Tape",
+    "valuation_amount": 8000000,
+    "valuation_date": "14/10/2025",
+    "club_name_at_valuation": "Bayer 04 Leverkusen",
+    "club_id_at_valuation": "15",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "eb7dad70e2d8",
+    "player_id": "1077670",
+    "player_name": "Axel Tape",
+    "valuation_amount": 8000000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Bayer 04 Leverkusen",
+    "club_id_at_valuation": "15",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "4c480ca01a5c",
+    "player_id": "1131924",
+    "player_name": "Jeremiah Mensah",
+    "valuation_amount": 2000000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Bayer 04 Leverkusen U19",
+    "club_id_at_valuation": "4713",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "5eb1f970e29d",
+    "player_id": "1058514",
+    "player_name": "Montrell Culbreath",
+    "valuation_amount": 1000000,
+    "valuation_date": "20/12/2025",
+    "club_name_at_valuation": "Bayer 04 Leverkusen U19",
+    "club_id_at_valuation": "4713",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "aa85334d507a",
+    "player_id": "896597",
+    "player_name": "Jardell Kanga",
+    "valuation_amount": 50000,
+    "valuation_date": "10/06/2024",
+    "club_name_at_valuation": "De Graafschap Doetinchem",
+    "club_id_at_valuation": "642",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "ad92f982d410",
+    "player_id": "896597",
+    "player_name": "Jardell Kanga",
+    "valuation_amount": 0,
+    "valuation_date": "20/12/2024",
+    "club_name_at_valuation": "Hammarby IF",
+    "club_id_at_valuation": "1059",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "c97557419ddc",
+    "player_id": "896597",
+    "player_name": "Jardell Kanga",
+    "valuation_amount": 100000,
+    "valuation_date": "05/05/2025",
+    "club_name_at_valuation": "Ilves Tampere",
+    "club_id_at_valuation": "3189",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "7a3e95ff8a89",
+    "player_id": "896597",
+    "player_name": "Jardell Kanga",
+    "valuation_amount": 250000,
+    "valuation_date": "02/09/2025",
+    "club_name_at_valuation": "Ilves Tampere",
+    "club_id_at_valuation": "3189",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "2d02549d9a27",
+    "player_id": "896597",
+    "player_name": "Jardell Kanga",
+    "valuation_amount": 350000,
+    "valuation_date": "20/11/2025",
+    "club_name_at_valuation": "Ilves Tampere",
+    "club_id_at_valuation": "3189",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "44a3ee1b4d9b",
+    "player_id": "779186",
+    "player_name": "Dominik Burghard",
+    "valuation_amount": 10000,
+    "valuation_date": "23/09/2023",
+    "club_name_at_valuation": "Rot-Weiß Oberhausen",
+    "club_id_at_valuation": "57",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "b7a1a89cfbdc",
+    "player_id": "779186",
+    "player_name": "Dominik Burghard",
+    "valuation_amount": 10000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "Rot-Weiß Oberhausen",
+    "club_id_at_valuation": "57",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "a9184fbb4e96",
+    "player_id": "779186",
+    "player_name": "Dominik Burghard",
+    "valuation_amount": 25000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "Rot-Weiß Oberhausen",
+    "club_id_at_valuation": "57",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "1c71e4fdb03f",
+    "player_id": "779186",
+    "player_name": "Dominik Burghard",
+    "valuation_amount": 25000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Rot-Weiß Oberhausen",
+    "club_id_at_valuation": "57",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "58c5d3f5eed5",
+    "player_id": "779186",
+    "player_name": "Dominik Burghard",
+    "valuation_amount": 0,
+    "valuation_date": "05/01/2025",
+    "club_name_at_valuation": "Rot Weiss Ahlen",
+    "club_id_at_valuation": "50",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "ddbd5edbbd11",
+    "player_id": "741292",
+    "player_name": "Iker Bravo",
+    "valuation_amount": 700000,
+    "valuation_date": "07/11/2021",
+    "club_name_at_valuation": "Bayer 04 Leverkusen U19",
+    "club_id_at_valuation": "4713",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "f3f35891f7d0",
+    "player_id": "741292",
+    "player_name": "Iker Bravo",
+    "valuation_amount": 1000000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "Bayer 04 Leverkusen U19",
+    "club_id_at_valuation": "4713",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "4ac8b2f6d633",
+    "player_id": "741292",
+    "player_name": "Iker Bravo",
+    "valuation_amount": 1000000,
+    "valuation_date": "09/06/2022",
+    "club_name_at_valuation": "Bayer 04 Leverkusen U19",
+    "club_id_at_valuation": "4713",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "86da0a160362",
+    "player_id": "741292",
+    "player_name": "Iker Bravo",
+    "valuation_amount": 1000000,
+    "valuation_date": "29/12/2022",
+    "club_name_at_valuation": "Real Madrid Castilla",
+    "club_id_at_valuation": "6767",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "7fc66679bc00",
+    "player_id": "741292",
+    "player_name": "Iker Bravo",
+    "valuation_amount": 1000000,
+    "valuation_date": "30/06/2023",
+    "club_name_at_valuation": "Real Madrid Castilla",
+    "club_id_at_valuation": "6767",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "5862fbdbc47d",
+    "player_id": "741292",
+    "player_name": "Iker Bravo",
+    "valuation_amount": 500000,
+    "valuation_date": "13/10/2023",
+    "club_name_at_valuation": "Real Madrid U19",
+    "club_id_at_valuation": "28870",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "f7ba8e0d4636",
+    "player_id": "741292",
+    "player_name": "Iker Bravo",
+    "valuation_amount": 1500000,
+    "valuation_date": "18/10/2024",
+    "club_name_at_valuation": "Udinese Calcio",
+    "club_id_at_valuation": "410",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e4a49131ce84",
+    "player_id": "741292",
+    "player_name": "Iker Bravo",
+    "valuation_amount": 1500000,
+    "valuation_date": "18/12/2024",
+    "club_name_at_valuation": "Udinese Calcio",
+    "club_id_at_valuation": "410",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "95348bcc62e0",
+    "player_id": "741292",
+    "player_name": "Iker Bravo",
+    "valuation_amount": 2500000,
+    "valuation_date": "25/03/2025",
+    "club_name_at_valuation": "Udinese Calcio",
+    "club_id_at_valuation": "410",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "08dcac2d1931",
+    "player_id": "741292",
+    "player_name": "Iker Bravo",
+    "valuation_amount": 3000000,
+    "valuation_date": "17/06/2025",
+    "club_name_at_valuation": "Udinese Calcio",
+    "club_id_at_valuation": "410",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "2e93d3b300b9",
+    "player_id": "741292",
+    "player_name": "Iker Bravo",
+    "valuation_amount": 5000000,
+    "valuation_date": "07/10/2025",
+    "club_name_at_valuation": "Udinese Calcio",
+    "club_id_at_valuation": "410",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "a5d87733184a",
+    "player_id": "741292",
+    "player_name": "Iker Bravo",
+    "valuation_amount": 5000000,
+    "valuation_date": "23/12/2025",
+    "club_name_at_valuation": "Udinese Calcio",
+    "club_id_at_valuation": "410",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "06e39d615841",
+    "player_id": "729011",
+    "player_name": "Roy Steur",
+    "valuation_amount": 150000,
+    "valuation_date": "03/04/2023",
+    "club_name_at_valuation": "PSV Eindhoven U21",
+    "club_id_at_valuation": "9715",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "3ebcd2d1c2f3",
+    "player_id": "729011",
+    "player_name": "Roy Steur",
+    "valuation_amount": 150000,
+    "valuation_date": "04/07/2023",
+    "club_name_at_valuation": "PSV Eindhoven U21",
+    "club_id_at_valuation": "9715",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "ff24330731ed",
+    "player_id": "729011",
+    "player_name": "Roy Steur",
+    "valuation_amount": 175000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "PSV Eindhoven U21",
+    "club_id_at_valuation": "9715",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "d0905ab8996a",
+    "player_id": "729011",
+    "player_name": "Roy Steur",
+    "valuation_amount": 175000,
+    "valuation_date": "10/06/2024",
+    "club_name_at_valuation": "PSV Eindhoven U21",
+    "club_id_at_valuation": "9715",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "9c10f67d014c",
+    "player_id": "729011",
+    "player_name": "Roy Steur",
+    "valuation_amount": 150000,
+    "valuation_date": "10/12/2024",
+    "club_name_at_valuation": "PSV Eindhoven U21",
+    "club_id_at_valuation": "9715",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "d6517e6592fa",
+    "player_id": "729011",
+    "player_name": "Roy Steur",
+    "valuation_amount": 150000,
+    "valuation_date": "09/06/2025",
+    "club_name_at_valuation": "PSV Eindhoven U21",
+    "club_id_at_valuation": "9715",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "e08971f9d51a",
+    "player_id": "729011",
+    "player_name": "Roy Steur",
+    "valuation_amount": 125000,
+    "valuation_date": "02/12/2025",
+    "club_name_at_valuation": "FC Volendam",
+    "club_id_at_valuation": "724",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "94e27fd29116",
+    "player_id": "698842",
+    "player_name": "Abdul-Wahid Bancé",
+    "valuation_amount": 25000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "SC Fortuna Köln U23",
+    "club_id_at_valuation": "21476",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "8ac64da96105",
+    "player_id": "698842",
+    "player_name": "Abdul-Wahid Bancé",
+    "valuation_amount": 25000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "SC Fortuna Köln U23",
+    "club_id_at_valuation": "21476",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "cf8a40f8a2a0",
+    "player_id": "698842",
+    "player_name": "Abdul-Wahid Bancé",
+    "valuation_amount": 0,
+    "valuation_date": "14/07/2025",
+    "club_name_at_valuation": "FC Hennef 05",
+    "club_id_at_valuation": "15171",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "521d6b8c4301",
+    "player_id": "696022",
+    "player_name": "Maximilian Neutgens",
+    "valuation_amount": 10000,
+    "valuation_date": "23/09/2023",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "51803c4da011",
+    "player_id": "696022",
+    "player_name": "Maximilian Neutgens",
+    "valuation_amount": 25000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "855705b09b3a",
+    "player_id": "696022",
+    "player_name": "Maximilian Neutgens",
+    "valuation_amount": 25000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "1319bde3d17e",
+    "player_id": "696022",
+    "player_name": "Maximilian Neutgens",
+    "valuation_amount": 25000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "dbde3efe23f8",
+    "player_id": "696022",
+    "player_name": "Maximilian Neutgens",
+    "valuation_amount": 75000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "af395fa3cf33",
+    "player_id": "696022",
+    "player_name": "Maximilian Neutgens",
+    "valuation_amount": 50000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "b653530f167a",
+    "player_id": "810503",
+    "player_name": "In-gyom Jung",
+    "valuation_amount": 10000,
+    "valuation_date": "23/09/2023",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "630877d35aba",
+    "player_id": "810503",
+    "player_name": "In-gyom Jung",
+    "valuation_amount": 50000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "61d15dc5d957",
+    "player_id": "810503",
+    "player_name": "In-gyom Jung",
+    "valuation_amount": 50000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "c8fb19f8d06f",
+    "player_id": "810503",
+    "player_name": "In-gyom Jung",
+    "valuation_amount": 50000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "66f8125ca994",
+    "player_id": "810503",
+    "player_name": "In-gyom Jung",
+    "valuation_amount": 50000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "faef4e19737c",
+    "player_id": "810503",
+    "player_name": "In-gyom Jung",
+    "valuation_amount": 50000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "FC Schalke 04 II",
+    "club_id_at_valuation": "34",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "b33551e431a3",
+    "player_id": "698844",
+    "player_name": "Volkan Ballicalioglu",
+    "valuation_amount": 50000,
+    "valuation_date": "18/09/2025",
+    "club_name_at_valuation": "Racing FC Union Luxembourg",
+    "club_id_at_valuation": "13467",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "23464ba36ade",
+    "player_id": "698844",
+    "player_name": "Volkan Ballicalioglu",
+    "valuation_amount": 25000,
+    "valuation_date": "30/12/2025",
+    "club_name_at_valuation": "Racing FC Union Luxembourg",
+    "club_id_at_valuation": "13467",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "f45d5959362f",
+    "player_id": "696025",
+    "player_name": "Jan Ecke",
+    "valuation_amount": 50000,
+    "valuation_date": "23/09/2023",
+    "club_name_at_valuation": "1.FC Düren",
+    "club_id_at_valuation": "67453",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "04c64b683c5b",
+    "player_id": "696025",
+    "player_name": "Jan Ecke",
+    "valuation_amount": 25000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "1.FC Düren",
+    "club_id_at_valuation": "67453",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "8c40c0174082",
+    "player_id": "696025",
+    "player_name": "Jan Ecke",
+    "valuation_amount": 10000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "1.FC Düren",
+    "club_id_at_valuation": "67453",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "d6a9d0ec3ad8",
+    "player_id": "696025",
+    "player_name": "Jan Ecke",
+    "valuation_amount": 0,
+    "valuation_date": "27/09/2024",
+    "club_name_at_valuation": "SV Bergisch Gladbach 09",
+    "club_id_at_valuation": "2442",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "df6aeb92d64a",
+    "player_id": "696028",
+    "player_name": "Noah Pesch",
+    "valuation_amount": 300000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "293b579ff103",
+    "player_id": "696028",
+    "player_name": "Noah Pesch",
+    "valuation_amount": 300000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Borussia Mönchengladbach II",
+    "club_id_at_valuation": "1006",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "6026828f907d",
+    "player_id": "696028",
+    "player_name": "Noah Pesch",
+    "valuation_amount": 600000,
+    "valuation_date": "09/10/2025",
+    "club_name_at_valuation": "1.FC Magdeburg",
+    "club_id_at_valuation": "187",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "714761145e8d",
+    "player_id": "696028",
+    "player_name": "Noah Pesch",
+    "valuation_amount": 600000,
+    "valuation_date": "16/12/2025",
+    "club_name_at_valuation": "1.FC Magdeburg",
+    "club_id_at_valuation": "187",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "13563aa805a7",
+    "player_id": "696026",
+    "player_name": "Can Moustfa",
+    "valuation_amount": 125000,
+    "valuation_date": "24/08/2025",
+    "club_name_at_valuation": "FC Energie Cottbus",
+    "club_id_at_valuation": "25",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "1e505ac01fc7",
+    "player_id": "696026",
+    "player_name": "Can Moustfa",
+    "valuation_amount": 175000,
+    "valuation_date": "10/10/2025",
+    "club_name_at_valuation": "FC Energie Cottbus",
+    "club_id_at_valuation": "25",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "a3a96484c97c",
+    "player_id": "696026",
+    "player_name": "Can Moustfa",
+    "valuation_amount": 200000,
+    "valuation_date": "23/12/2025",
+    "club_name_at_valuation": "FC Energie Cottbus",
+    "club_id_at_valuation": "25",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "a9c1cf4129c8",
+    "player_id": "696027",
+    "player_name": "Ayman Aourir",
+    "valuation_amount": 300000,
+    "valuation_date": "14/12/2023",
+    "club_name_at_valuation": "Bayer 04 Leverkusen",
+    "club_id_at_valuation": "15",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "74e6ac368a82",
+    "player_id": "696027",
+    "player_name": "Ayman Aourir",
+    "valuation_amount": 300000,
+    "valuation_date": "29/05/2024",
+    "club_name_at_valuation": "Bayer 04 Leverkusen",
+    "club_id_at_valuation": "15",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "c7a73fffdd30",
+    "player_id": "696027",
+    "player_name": "Ayman Aourir",
+    "valuation_amount": 150000,
+    "valuation_date": "27/09/2024",
+    "club_name_at_valuation": "Alemannia Aachen",
+    "club_id_at_valuation": "8",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "4f265e6b5794",
+    "player_id": "696027",
+    "player_name": "Ayman Aourir",
+    "valuation_amount": 100000,
+    "valuation_date": "30/12/2024",
+    "club_name_at_valuation": "Alemannia Aachen",
+    "club_id_at_valuation": "8",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "c7bbf46037ca",
+    "player_id": "696027",
+    "player_name": "Ayman Aourir",
+    "valuation_amount": 75000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Eintracht Hohkeppel",
+    "club_id_at_valuation": "46368",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5dc7fccd6d07",
+    "player_id": "696027",
+    "player_name": "Ayman Aourir",
+    "valuation_amount": 50000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Rot-Weiß Oberhausen",
+    "club_id_at_valuation": "57",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "9221bc9590d1",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 400000,
+    "valuation_date": "10/02/2021",
+    "club_name_at_valuation": "Bayer 04 Leverkusen U19",
+    "club_id_at_valuation": "4713",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "7271a7007c02",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 500000,
+    "valuation_date": "09/06/2021",
+    "club_name_at_valuation": "Bayer 04 Leverkusen U19",
+    "club_id_at_valuation": "4713",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "9540445f9576",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 375000,
+    "valuation_date": "12/10/2021",
+    "club_name_at_valuation": "Fatih Karagümrük",
+    "club_id_at_valuation": "6646",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "44b80a827dea",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 325000,
+    "valuation_date": "04/01/2022",
+    "club_name_at_valuation": "Fatih Karagümrük",
+    "club_id_at_valuation": "6646",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "dae4e1f79b3f",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 300000,
+    "valuation_date": "31/03/2022",
+    "club_name_at_valuation": "Fatih Karagümrük",
+    "club_id_at_valuation": "6646",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "736b9cfe9db0",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 500000,
+    "valuation_date": "01/06/2022",
+    "club_name_at_valuation": "Fatih Karagümrük",
+    "club_id_at_valuation": "6646",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "dd8bc52a06ce",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 450000,
+    "valuation_date": "27/10/2022",
+    "club_name_at_valuation": "Fatih Karagümrük",
+    "club_id_at_valuation": "6646",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "fee4a66856cb",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 450000,
+    "valuation_date": "14/03/2023",
+    "club_name_at_valuation": "Fatih Karagümrük",
+    "club_id_at_valuation": "6646",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "19e1ec00d3fe",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 375000,
+    "valuation_date": "08/06/2023",
+    "club_name_at_valuation": "Fatih Karagümrük",
+    "club_id_at_valuation": "6646",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "f34e4dc15eec",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 350000,
+    "valuation_date": "27/09/2023",
+    "club_name_at_valuation": "Fatih Karagümrük",
+    "club_id_at_valuation": "6646",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "b3646d9c825e",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 300000,
+    "valuation_date": "21/12/2023",
+    "club_name_at_valuation": "Fatih Karagümrük",
+    "club_id_at_valuation": "6646",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "dadc8e602bd4",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 300000,
+    "valuation_date": "26/03/2024",
+    "club_name_at_valuation": "Sakaryaspor",
+    "club_id_at_valuation": "2463",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "b3bab5a4dee0",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 400000,
+    "valuation_date": "13/06/2024",
+    "club_name_at_valuation": "Sakaryaspor",
+    "club_id_at_valuation": "2463",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "494c41cda274",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 350000,
+    "valuation_date": "16/10/2024",
+    "club_name_at_valuation": "Genclerbirligi Ankara",
+    "club_id_at_valuation": "820",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "1eb57b02a022",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 350000,
+    "valuation_date": "09/01/2025",
+    "club_name_at_valuation": "Genclerbirligi Ankara",
+    "club_id_at_valuation": "820",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "3bda04d98e3a",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 350000,
+    "valuation_date": "02/04/2025",
+    "club_name_at_valuation": "Genclerbirligi Ankara",
+    "club_id_at_valuation": "820",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "d70c2d49e62c",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 350000,
+    "valuation_date": "25/06/2025",
+    "club_name_at_valuation": "Genclerbirligi Ankara",
+    "club_id_at_valuation": "820",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "dc582a6d1159",
+    "player_id": "538864",
+    "player_name": "Samed Onur",
+    "valuation_amount": 500000,
+    "valuation_date": "17/12/2025",
+    "club_name_at_valuation": "Genclerbirligi Ankara",
+    "club_id_at_valuation": "820",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "2185fc31e703",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 100000,
+    "valuation_date": "31/03/2021",
+    "club_name_at_valuation": "Bayer 04 Leverkusen U19",
+    "club_id_at_valuation": "4713",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "b70bfbe63ece",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 100000,
+    "valuation_date": "09/06/2021",
+    "club_name_at_valuation": "Bayer 04 Leverkusen U19",
+    "club_id_at_valuation": "4713",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "85030ef02b02",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 100000,
+    "valuation_date": "30/12/2021",
+    "club_name_at_valuation": "1.FC Saarbrücken",
+    "club_id_at_valuation": "1",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "052df32ace81",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 75000,
+    "valuation_date": "01/06/2022",
+    "club_name_at_valuation": "1.FC Saarbrücken",
+    "club_id_at_valuation": "1",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "a0ee63ecca8a",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 50000,
+    "valuation_date": "06/10/2022",
+    "club_name_at_valuation": "Alemannia Aachen",
+    "club_id_at_valuation": "8",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e25cb17b17e6",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 75000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "Alemannia Aachen",
+    "club_id_at_valuation": "8",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "8d7bfd289d4b",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 125000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "Alemannia Aachen",
+    "club_id_at_valuation": "8",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "50811a9d101b",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 150000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "Alemannia Aachen",
+    "club_id_at_valuation": "8",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "594fd6edc7b4",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 200000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "Alemannia Aachen",
+    "club_id_at_valuation": "8",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "fbe3ecc53d91",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 250000,
+    "valuation_date": "27/09/2024",
+    "club_name_at_valuation": "Alemannia Aachen",
+    "club_id_at_valuation": "8",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "611a83162c07",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 225000,
+    "valuation_date": "30/12/2024",
+    "club_name_at_valuation": "Alemannia Aachen",
+    "club_id_at_valuation": "8",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "df9735fa545a",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 175000,
+    "valuation_date": "24/03/2025",
+    "club_name_at_valuation": "Alemannia Aachen",
+    "club_id_at_valuation": "8",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "096a7eb54841",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 150000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "Alemannia Aachen",
+    "club_id_at_valuation": "8",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "b28f30d7c70a",
+    "player_id": "527555",
+    "player_name": "Marcel Johnen",
+    "valuation_amount": 125000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "c34680ed476c",
+    "player_id": "530165",
+    "player_name": "Seymour Fünger",
+    "valuation_amount": 25000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "2139b61331e7",
+    "player_id": "530165",
+    "player_name": "Seymour Fünger",
+    "valuation_amount": 75000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "42201d7660e8",
+    "player_id": "530165",
+    "player_name": "Seymour Fünger",
+    "valuation_amount": 100000,
+    "valuation_date": "25/03/2022",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "f309e495586f",
+    "player_id": "530165",
+    "player_name": "Seymour Fünger",
+    "valuation_amount": 125000,
+    "valuation_date": "13/06/2022",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "686d7c57ec49",
+    "player_id": "530165",
+    "player_name": "Seymour Fünger",
+    "valuation_amount": 125000,
+    "valuation_date": "08/12/2022",
+    "club_name_at_valuation": "Hallescher FC",
+    "club_id_at_valuation": "440",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "e0752e7a3470",
+    "player_id": "530165",
+    "player_name": "Seymour Fünger",
+    "valuation_amount": 125000,
+    "valuation_date": "13/06/2023",
+    "club_name_at_valuation": "Hallescher FC",
+    "club_id_at_valuation": "440",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "ec1ed3e3ab8e",
+    "player_id": "530165",
+    "player_name": "Seymour Fünger",
+    "valuation_amount": 100000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "266d9df0ae5e",
+    "player_id": "530165",
+    "player_name": "Seymour Fünger",
+    "valuation_amount": 100000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "4db937b7d56c",
+    "player_id": "530165",
+    "player_name": "Seymour Fünger",
+    "valuation_amount": 100000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "aaaf3994a1ba",
+    "player_id": "530165",
+    "player_name": "Seymour Fünger",
+    "valuation_amount": 125000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "1e56aeb36c13",
+    "player_id": "530165",
+    "player_name": "Seymour Fünger",
+    "valuation_amount": 125000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "2e90ff4d2338",
+    "player_id": "541836",
+    "player_name": "Tiago Estêvão",
+    "valuation_amount": 10000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "FC Wegberg-Beeck",
+    "club_id_at_valuation": "2681",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "c24e918f23a8",
+    "player_id": "541836",
+    "player_name": "Tiago Estêvão",
+    "valuation_amount": 25000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "FC Wegberg-Beeck",
+    "club_id_at_valuation": "2681",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "225f744e477a",
+    "player_id": "541836",
+    "player_name": "Tiago Estêvão",
+    "valuation_amount": 50000,
+    "valuation_date": "13/06/2022",
+    "club_name_at_valuation": "FC Wegberg-Beeck",
+    "club_id_at_valuation": "2681",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "f075a5fca182",
+    "player_id": "541836",
+    "player_name": "Tiago Estêvão",
+    "valuation_amount": 100000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "SV Rödinghausen",
+    "club_id_at_valuation": "26957",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "33ae42ccb6da",
+    "player_id": "541836",
+    "player_name": "Tiago Estêvão",
+    "valuation_amount": 100000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "SV Rödinghausen",
+    "club_id_at_valuation": "26957",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "74e69f7020bf",
+    "player_id": "541836",
+    "player_name": "Tiago Estêvão",
+    "valuation_amount": 75000,
+    "valuation_date": "28/12/2023",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "9d61cd869111",
+    "player_id": "541836",
+    "player_name": "Tiago Estêvão",
+    "valuation_amount": 75000,
+    "valuation_date": "11/06/2024",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "46af6018c115",
+    "player_id": "541836",
+    "player_name": "Tiago Estêvão",
+    "valuation_amount": 75000,
+    "valuation_date": "30/12/2024",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "e0f57e9bf607",
+    "player_id": "541836",
+    "player_name": "Tiago Estêvão",
+    "valuation_amount": 75000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "1644bfc580c3",
+    "player_id": "541836",
+    "player_name": "Tiago Estêvão",
+    "valuation_amount": 200000,
+    "valuation_date": "22/09/2025",
+    "club_name_at_valuation": "SKU Amstetten",
+    "club_id_at_valuation": "12210",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "20cfea8982ad",
+    "player_id": "541836",
+    "player_name": "Tiago Estêvão",
+    "valuation_amount": 250000,
+    "valuation_date": "15/12/2025",
+    "club_name_at_valuation": "SKU Amstetten",
+    "club_id_at_valuation": "12210",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "095dfb03aff1",
+    "player_id": "467435",
+    "player_name": "Yannik Schlößer",
+    "valuation_amount": 100000,
+    "valuation_date": "20/09/2021",
+    "club_name_at_valuation": "1.FC Nuremberg II",
+    "club_id_at_valuation": "473",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "65f5c9a0fab0",
+    "player_id": "467435",
+    "player_name": "Yannik Schlößer",
+    "valuation_amount": 75000,
+    "valuation_date": "15/12/2021",
+    "club_name_at_valuation": "1.FC Nuremberg II",
+    "club_id_at_valuation": "473",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "363030458c31",
+    "player_id": "467435",
+    "player_name": "Yannik Schlößer",
+    "valuation_amount": 75000,
+    "valuation_date": "27/06/2022",
+    "club_name_at_valuation": "1.FC Nuremberg II",
+    "club_id_at_valuation": "473",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5cc87b367df6",
+    "player_id": "467435",
+    "player_name": "Yannik Schlößer",
+    "valuation_amount": 50000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "1.FC Düren",
+    "club_id_at_valuation": "67453",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "d4efc6b2368a",
+    "player_id": "467435",
+    "player_name": "Yannik Schlößer",
+    "valuation_amount": 50000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "1.FC Düren",
+    "club_id_at_valuation": "67453",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "c0a253f5047b",
+    "player_id": "467435",
+    "player_name": "Yannik Schlößer",
+    "valuation_amount": 75000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "1.FC Düren",
+    "club_id_at_valuation": "67453",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "173025796212",
+    "player_id": "467435",
+    "player_name": "Yannik Schlößer",
+    "valuation_amount": 75000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "1.FC Düren",
+    "club_id_at_valuation": "67453",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "e7516abcac7b",
+    "player_id": "467435",
+    "player_name": "Yannik Schlößer",
+    "valuation_amount": 75000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "1.FC Düren",
+    "club_id_at_valuation": "67453",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "03e384241e5c",
+    "player_id": "467435",
+    "player_name": "Yannik Schlößer",
+    "valuation_amount": 50000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "2eff68301ce7",
+    "player_id": "467435",
+    "player_name": "Yannik Schlößer",
+    "valuation_amount": 50000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Bonner SC",
+    "club_id_at_valuation": "215",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "e7ab4fa8c742",
+    "player_id": "467714",
+    "player_name": "Tim Böhmer",
+    "valuation_amount": 25000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "04a1f09f5d72",
+    "player_id": "467714",
+    "player_name": "Tim Böhmer",
+    "valuation_amount": 100000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "76ec6b02997a",
+    "player_id": "467714",
+    "player_name": "Tim Böhmer",
+    "valuation_amount": 100000,
+    "valuation_date": "13/06/2022",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "55ff0d78cf5f",
+    "player_id": "467714",
+    "player_name": "Tim Böhmer",
+    "valuation_amount": 100000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "53c064fdba97",
+    "player_id": "467714",
+    "player_name": "Tim Böhmer",
+    "valuation_amount": 100000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "c8c5f98f0590",
+    "player_id": "467714",
+    "player_name": "Tim Böhmer",
+    "valuation_amount": 75000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "e3f7c916d30c",
+    "player_id": "467714",
+    "player_name": "Tim Böhmer",
+    "valuation_amount": 75000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "59ad47607cd9",
+    "player_id": "467714",
+    "player_name": "Tim Böhmer",
+    "valuation_amount": 75000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "SC Paderborn 07 II",
+    "club_id_at_valuation": "6604",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "196d50069f79",
+    "player_id": "467714",
+    "player_name": "Tim Böhmer",
+    "valuation_amount": 75000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "SC Paderborn 07 II",
+    "club_id_at_valuation": "6604",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "100af95210c4",
+    "player_id": "467714",
+    "player_name": "Tim Böhmer",
+    "valuation_amount": 75000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "SC Paderborn 07 II",
+    "club_id_at_valuation": "6604",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "58597ec09198",
+    "player_id": "580275",
+    "player_name": "Tekin Gencoglu",
+    "valuation_amount": 10000,
+    "valuation_date": "06/10/2022",
+    "club_name_at_valuation": "Rot Weiss Ahlen",
+    "club_id_at_valuation": "50",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "ff287f88ced4",
+    "player_id": "580275",
+    "player_name": "Tekin Gencoglu",
+    "valuation_amount": 10000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "Rot Weiss Ahlen",
+    "club_id_at_valuation": "50",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "02eef5b0bebf",
+    "player_id": "580275",
+    "player_name": "Tekin Gencoglu",
+    "valuation_amount": 0,
+    "valuation_date": "07/03/2023",
+    "club_name_at_valuation": "FC Gütersloh",
+    "club_id_at_valuation": "220",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "0cba2c623fd7",
+    "player_id": "684310",
+    "player_name": "Ken Mata",
+    "valuation_amount": 75000,
+    "valuation_date": "06/10/2022",
+    "club_name_at_valuation": "SV Straelen",
+    "club_id_at_valuation": "1068",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "92f676c7eac8",
+    "player_id": "684310",
+    "player_name": "Ken Mata",
+    "valuation_amount": 75000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "SV Straelen",
+    "club_id_at_valuation": "1068",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "fe4b70785b18",
+    "player_id": "684310",
+    "player_name": "Ken Mata",
+    "valuation_amount": 150000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "SV Straelen",
+    "club_id_at_valuation": "1068",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "db4852f8cea5",
+    "player_id": "684310",
+    "player_name": "Ken Mata",
+    "valuation_amount": 150000,
+    "valuation_date": "10/01/2024",
+    "club_name_at_valuation": "1.FSV Mainz 05 II",
+    "club_id_at_valuation": "851",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "7550f0ff1c18",
+    "player_id": "684310",
+    "player_name": "Ken Mata",
+    "valuation_amount": 150000,
+    "valuation_date": "30/06/2024",
+    "club_name_at_valuation": "1.FSV Mainz 05 II",
+    "club_id_at_valuation": "851",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "660d7bd0fe39",
+    "player_id": "684310",
+    "player_name": "Ken Mata",
+    "valuation_amount": 125000,
+    "valuation_date": "06/01/2025",
+    "club_name_at_valuation": "1.FSV Mainz 05 II",
+    "club_id_at_valuation": "851",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "f44745dd5a65",
+    "player_id": "684310",
+    "player_name": "Ken Mata",
+    "valuation_amount": 100000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "1.FSV Mainz 05 II",
+    "club_id_at_valuation": "851",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "4d3847304496",
+    "player_id": "684310",
+    "player_name": "Ken Mata",
+    "valuation_amount": 100000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "FC 08 Homburg",
+    "club_id_at_valuation": "459",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "dab6962d1deb",
+    "player_id": "467423",
+    "player_name": "Albin Thaqi",
+    "valuation_amount": 50000,
+    "valuation_date": "05/04/2021",
+    "club_name_at_valuation": "Borussia Dortmund U19",
+    "club_id_at_valuation": "1464",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "8a607375451e",
+    "player_id": "467423",
+    "player_name": "Albin Thaqi",
+    "valuation_amount": 75000,
+    "valuation_date": "26/06/2021",
+    "club_name_at_valuation": "Borussia Dortmund U19",
+    "club_id_at_valuation": "1464",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "b927791c627f",
+    "player_id": "467423",
+    "player_name": "Albin Thaqi",
+    "valuation_amount": 75000,
+    "valuation_date": "30/12/2021",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "07979bc4bf21",
+    "player_id": "467423",
+    "player_name": "Albin Thaqi",
+    "valuation_amount": 75000,
+    "valuation_date": "13/06/2022",
+    "club_name_at_valuation": "SC Fortuna Köln",
+    "club_id_at_valuation": "92",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "48c4b0e86c87",
+    "player_id": "467423",
+    "player_name": "Albin Thaqi",
+    "valuation_amount": 0,
+    "valuation_date": "19/09/2022",
+    "club_name_at_valuation": "TuS Bövinghausen (- 2025)",
+    "club_id_at_valuation": "44963",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5aa5c73a4cd9",
+    "player_id": "467423",
+    "player_name": "Albin Thaqi",
+    "valuation_amount": 50000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Sportfreunde Lotte",
+    "club_id_at_valuation": "668",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "7f770aa460c1",
+    "player_id": "467423",
+    "player_name": "Albin Thaqi",
+    "valuation_amount": 50000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Sportfreunde Lotte",
+    "club_id_at_valuation": "668",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "eec8cb5177b9",
+    "player_id": "467423",
+    "player_name": "Albin Thaqi",
+    "valuation_amount": 0,
+    "valuation_date": "16/07/2025",
+    "club_name_at_valuation": "SG Wattenscheid 09",
+    "club_id_at_valuation": "97",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "1bfd026cb395",
+    "player_id": "429873",
+    "player_name": "Lloyd-Addo Kuffour",
+    "valuation_amount": 50000,
+    "valuation_date": "05/10/2021",
+    "club_name_at_valuation": "FSV Optik Rathenow",
+    "club_id_at_valuation": "562",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "33acff2867a7",
+    "player_id": "429873",
+    "player_name": "Lloyd-Addo Kuffour",
+    "valuation_amount": 25000,
+    "valuation_date": "14/12/2021",
+    "club_name_at_valuation": "FSV Optik Rathenow",
+    "club_id_at_valuation": "562",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "c03a7293b71b",
+    "player_id": "429873",
+    "player_name": "Lloyd-Addo Kuffour",
+    "valuation_amount": 50000,
+    "valuation_date": "17/06/2022",
+    "club_name_at_valuation": "FSV Optik Rathenow",
+    "club_id_at_valuation": "562",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "f9163e23ad06",
+    "player_id": "429873",
+    "player_name": "Lloyd-Addo Kuffour",
+    "valuation_amount": 50000,
+    "valuation_date": "19/12/2022",
+    "club_name_at_valuation": "TSV Steinbach Haiger",
+    "club_id_at_valuation": "39470",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "af6ae10ae49f",
+    "player_id": "429873",
+    "player_name": "Lloyd-Addo Kuffour",
+    "valuation_amount": 50000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "Rot Weiss Ahlen",
+    "club_id_at_valuation": "50",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "d1fafc3ac536",
+    "player_id": "429873",
+    "player_name": "Lloyd-Addo Kuffour",
+    "valuation_amount": 50000,
+    "valuation_date": "30/12/2023",
+    "club_name_at_valuation": "FSV Zwickau",
+    "club_id_at_valuation": "275",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "a44a2dbd87b4",
+    "player_id": "429873",
+    "player_name": "Lloyd-Addo Kuffour",
+    "valuation_amount": 75000,
+    "valuation_date": "19/03/2024",
+    "club_name_at_valuation": "FSV Zwickau",
+    "club_id_at_valuation": "275",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "47b6a1f7c8e5",
+    "player_id": "429873",
+    "player_name": "Lloyd-Addo Kuffour",
+    "valuation_amount": 75000,
+    "valuation_date": "17/06/2024",
+    "club_name_at_valuation": "FSV Zwickau",
+    "club_id_at_valuation": "275",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "4add78c7b2ab",
+    "player_id": "429873",
+    "player_name": "Lloyd-Addo Kuffour",
+    "valuation_amount": 75000,
+    "valuation_date": "17/12/2024",
+    "club_name_at_valuation": "FSV Zwickau",
+    "club_id_at_valuation": "275",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "fe81436f62db",
+    "player_id": "429873",
+    "player_name": "Lloyd-Addo Kuffour",
+    "valuation_amount": 75000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "FSV Zwickau",
+    "club_id_at_valuation": "275",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "360fa1f3f491",
+    "player_id": "429873",
+    "player_name": "Lloyd-Addo Kuffour",
+    "valuation_amount": 50000,
+    "valuation_date": "15/12/2025",
+    "club_name_at_valuation": "SKU Amstetten",
+    "club_id_at_valuation": "12210",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "e600151a711a",
+    "player_id": "467717",
+    "player_name": "Rilind Hetemi",
+    "valuation_amount": 50000,
+    "valuation_date": "07/04/2022",
+    "club_name_at_valuation": "VfB Stuttgart II",
+    "club_id_at_valuation": "102",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "fabc34b6c016",
+    "player_id": "467717",
+    "player_name": "Rilind Hetemi",
+    "valuation_amount": 50000,
+    "valuation_date": "28/06/2022",
+    "club_name_at_valuation": "VfB Stuttgart II",
+    "club_id_at_valuation": "102",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "837a94aec1db",
+    "player_id": "467717",
+    "player_name": "Rilind Hetemi",
+    "valuation_amount": 50000,
+    "valuation_date": "19/12/2022",
+    "club_name_at_valuation": "VfB Stuttgart II",
+    "club_id_at_valuation": "102",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5cffd6e7de39",
+    "player_id": "467717",
+    "player_name": "Rilind Hetemi",
+    "valuation_amount": 50000,
+    "valuation_date": "29/06/2023",
+    "club_name_at_valuation": "VfB Stuttgart II",
+    "club_id_at_valuation": "102",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "a830298932e2",
+    "player_id": "467717",
+    "player_name": "Rilind Hetemi",
+    "valuation_amount": 25000,
+    "valuation_date": "11/01/2024",
+    "club_name_at_valuation": "SSVg Velbert 02",
+    "club_id_at_valuation": "954",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "b4f6ebb94031",
+    "player_id": "467717",
+    "player_name": "Rilind Hetemi",
+    "valuation_amount": 25000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "SSVg Velbert 02",
+    "club_id_at_valuation": "954",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "2a24f65853b3",
+    "player_id": "467717",
+    "player_name": "Rilind Hetemi",
+    "valuation_amount": 25000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Türkspor Dortmund",
+    "club_id_at_valuation": "60834",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "01a2c9586c89",
+    "player_id": "467717",
+    "player_name": "Rilind Hetemi",
+    "valuation_amount": 25000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Türkspor Dortmund",
+    "club_id_at_valuation": "60834",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "b02f585abc61",
+    "player_id": "467717",
+    "player_name": "Rilind Hetemi",
+    "valuation_amount": 25000,
+    "valuation_date": "23/12/2025",
+    "club_name_at_valuation": "FC Malisheva",
+    "club_id_at_valuation": "80996",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "db02f3ced2fe",
+    "player_id": "598267",
+    "player_name": "Wesley Heimann",
+    "valuation_amount": 10000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "SV Lippstadt 08",
+    "club_id_at_valuation": "767",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "5a948ac196e1",
+    "player_id": "598267",
+    "player_name": "Wesley Heimann",
+    "valuation_amount": 10000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "SV Lippstadt 08",
+    "club_id_at_valuation": "767",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "15e31fc45642",
+    "player_id": "598267",
+    "player_name": "Wesley Heimann",
+    "valuation_amount": 0,
+    "valuation_date": "13/06/2022",
+    "club_name_at_valuation": "SV Lippstadt 08",
+    "club_id_at_valuation": "767",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e9adef13f870",
+    "player_id": "1074990",
+    "player_name": "Luca Reggiani",
+    "valuation_amount": 1000000,
+    "valuation_date": "07/02/2026",
+    "club_name_at_valuation": "Borussia Dortmund U19",
+    "club_id_at_valuation": "1464",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "676d54e8deab",
+    "player_id": "931668",
+    "player_name": "Elias Benkara",
+    "valuation_amount": 50000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "6bd7394f268a",
+    "player_id": "1025800",
+    "player_name": "Jonas Feddersen",
+    "valuation_amount": 25000,
+    "valuation_date": "05/09/2025",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "ce57e72dfd9a",
+    "player_id": "1025800",
+    "player_name": "Jonas Feddersen",
+    "valuation_amount": 25000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "f793c575bf11",
+    "player_id": "724709",
+    "player_name": "Marian Kirsch",
+    "valuation_amount": 100000,
+    "valuation_date": "01/08/2023",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "0052ef159252",
+    "player_id": "724709",
+    "player_name": "Marian Kirsch",
+    "valuation_amount": 100000,
+    "valuation_date": "28/12/2023",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "0a4af49df269",
+    "player_id": "724709",
+    "player_name": "Marian Kirsch",
+    "valuation_amount": 75000,
+    "valuation_date": "11/06/2024",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "d344f2f21436",
+    "player_id": "724709",
+    "player_name": "Marian Kirsch",
+    "valuation_amount": 75000,
+    "valuation_date": "19/12/2024",
+    "club_name_at_valuation": "Preußen Münster",
+    "club_id_at_valuation": "91",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "d0262d517a59",
+    "player_id": "724709",
+    "player_name": "Marian Kirsch",
+    "valuation_amount": 75000,
+    "valuation_date": "19/06/2025",
+    "club_name_at_valuation": "Preußen Münster",
+    "club_id_at_valuation": "91",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "13ab031042ef",
+    "player_id": "724709",
+    "player_name": "Marian Kirsch",
+    "valuation_amount": 75000,
+    "valuation_date": "16/12/2025",
+    "club_name_at_valuation": "Preußen Münster",
+    "club_id_at_valuation": "91",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "c88b987feed5",
+    "player_id": "883007",
+    "player_name": "Filippo Mane",
+    "valuation_amount": 400000,
+    "valuation_date": "27/09/2024",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e339ddabd9f1",
+    "player_id": "883007",
+    "player_name": "Filippo Mane",
+    "valuation_amount": 400000,
+    "valuation_date": "30/12/2024",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "a61516770644",
+    "player_id": "883007",
+    "player_name": "Filippo Mane",
+    "valuation_amount": 600000,
+    "valuation_date": "24/03/2025",
+    "club_name_at_valuation": "Borussia Dortmund",
+    "club_id_at_valuation": "16",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "8894eadd2264",
+    "player_id": "883007",
+    "player_name": "Filippo Mane",
+    "valuation_amount": 600000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "Borussia Dortmund",
+    "club_id_at_valuation": "16",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "ebba10e0ddc1",
+    "player_id": "883007",
+    "player_name": "Filippo Mane",
+    "valuation_amount": 2500000,
+    "valuation_date": "14/10/2025",
+    "club_name_at_valuation": "Borussia Dortmund",
+    "club_id_at_valuation": "16",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "a53dc8b0b412",
+    "player_id": "883007",
+    "player_name": "Filippo Mane",
+    "valuation_amount": 2500000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Borussia Dortmund",
+    "club_id_at_valuation": "16",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "6b37bc2716b4",
+    "player_id": "798043",
+    "player_name": "Tom Rothe",
+    "valuation_amount": 1200000,
+    "valuation_date": "09/06/2022",
+    "club_name_at_valuation": "Borussia Dortmund U19",
+    "club_id_at_valuation": "1464",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "2db228541970",
+    "player_id": "798043",
+    "player_name": "Tom Rothe",
+    "valuation_amount": 3500000,
+    "valuation_date": "09/11/2022",
+    "club_name_at_valuation": "Borussia Dortmund",
+    "club_id_at_valuation": "16",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "cd938d113fd8",
+    "player_id": "798043",
+    "player_name": "Tom Rothe",
+    "valuation_amount": 3500000,
+    "valuation_date": "22/06/2023",
+    "club_name_at_valuation": "Borussia Dortmund",
+    "club_id_at_valuation": "16",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "5c18b7abe875",
+    "player_id": "798043",
+    "player_name": "Tom Rothe",
+    "valuation_amount": 5000000,
+    "valuation_date": "20/10/2023",
+    "club_name_at_valuation": "Holstein Kiel",
+    "club_id_at_valuation": "269",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "0cac6f80905c",
+    "player_id": "798043",
+    "player_name": "Tom Rothe",
+    "valuation_amount": 6000000,
+    "valuation_date": "15/12/2023",
+    "club_name_at_valuation": "Holstein Kiel",
+    "club_id_at_valuation": "269",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "04d3c25fca93",
+    "player_id": "798043",
+    "player_name": "Tom Rothe",
+    "valuation_amount": 8000000,
+    "valuation_date": "06/06/2024",
+    "club_name_at_valuation": "Holstein Kiel",
+    "club_id_at_valuation": "269",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "51d056302267",
+    "player_id": "798043",
+    "player_name": "Tom Rothe",
+    "valuation_amount": 12000000,
+    "valuation_date": "20/12/2024",
+    "club_name_at_valuation": "1.FC Union Berlin",
+    "club_id_at_valuation": "89",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "16c1072bc85c",
+    "player_id": "798043",
+    "player_name": "Tom Rothe",
+    "valuation_amount": 10000000,
+    "valuation_date": "27/03/2025",
+    "club_name_at_valuation": "1.FC Union Berlin",
+    "club_id_at_valuation": "89",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "6a6e9dc6b31c",
+    "player_id": "798043",
+    "player_name": "Tom Rothe",
+    "valuation_amount": 10000000,
+    "valuation_date": "05/06/2025",
+    "club_name_at_valuation": "1.FC Union Berlin",
+    "club_id_at_valuation": "89",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "556acea8200d",
+    "player_id": "798043",
+    "player_name": "Tom Rothe",
+    "valuation_amount": 10000000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "1.FC Union Berlin",
+    "club_id_at_valuation": "89",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "4265c1b36e02",
+    "player_id": "804833",
+    "player_name": "Jonah Husseck",
+    "valuation_amount": 75000,
+    "valuation_date": "01/08/2023",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "742c92d18cc3",
+    "player_id": "804833",
+    "player_name": "Jonah Husseck",
+    "valuation_amount": 75000,
+    "valuation_date": "28/12/2023",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "3d8627e71495",
+    "player_id": "804833",
+    "player_name": "Jonah Husseck",
+    "valuation_amount": 50000,
+    "valuation_date": "11/06/2024",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "eb95e8f56d3f",
+    "player_id": "804833",
+    "player_name": "Jonah Husseck",
+    "valuation_amount": 50000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Rot-Weiß Oberhausen",
+    "club_id_at_valuation": "57",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "4df510133afc",
+    "player_id": "804833",
+    "player_name": "Jonah Husseck",
+    "valuation_amount": 25000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Rot-Weiß Oberhausen",
+    "club_id_at_valuation": "57",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "9bc6bcc6426e",
+    "player_id": "804833",
+    "player_name": "Jonah Husseck",
+    "valuation_amount": 0,
+    "valuation_date": "08/09/2025",
+    "club_name_at_valuation": "TSG Sprockhövel",
+    "club_id_at_valuation": "1000",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "ec5597975dc1",
+    "player_id": "684317",
+    "player_name": "Faroukou Cissé",
+    "valuation_amount": 200000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "Standard de Liège 16 FC",
+    "club_id_at_valuation": "24394",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "7044bb8e60d8",
+    "player_id": "684317",
+    "player_name": "Faroukou Cissé",
+    "valuation_amount": 100000,
+    "valuation_date": "11/12/2024",
+    "club_name_at_valuation": "Standard de Liège 16 FC",
+    "club_id_at_valuation": "24394",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "3b270f648e58",
+    "player_id": "684317",
+    "player_name": "Faroukou Cissé",
+    "valuation_amount": 0,
+    "valuation_date": "20/12/2024",
+    "club_name_at_valuation": "Standard de Liège 16 FC",
+    "club_id_at_valuation": "24394",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "8f9d9b38fddf",
+    "player_id": "684316",
+    "player_name": "Noah Mrosek",
+    "valuation_amount": 10000,
+    "valuation_date": "23/09/2023",
+    "club_name_at_valuation": "SC Paderborn 07 II",
+    "club_id_at_valuation": "6604",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "bbb2f60b8b7e",
+    "player_id": "684316",
+    "player_name": "Noah Mrosek",
+    "valuation_amount": 25000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "SC Paderborn 07 II",
+    "club_id_at_valuation": "6604",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "76e15198f920",
+    "player_id": "684316",
+    "player_name": "Noah Mrosek",
+    "valuation_amount": 25000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "SC Paderborn 07 II",
+    "club_id_at_valuation": "6604",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "395bb6cd2442",
+    "player_id": "684316",
+    "player_name": "Noah Mrosek",
+    "valuation_amount": 100000,
+    "valuation_date": "13/09/2024",
+    "club_name_at_valuation": "Bruk-Bet Termalica Nieciecza",
+    "club_id_at_valuation": "15906",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "3f360e0046ac",
+    "player_id": "684316",
+    "player_name": "Noah Mrosek",
+    "valuation_amount": 100000,
+    "valuation_date": "05/12/2024",
+    "club_name_at_valuation": "Bruk-Bet Termalica Nieciecza",
+    "club_id_at_valuation": "15906",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "09ba0300b17b",
+    "player_id": "684316",
+    "player_name": "Noah Mrosek",
+    "valuation_amount": 75000,
+    "valuation_date": "06/06/2025",
+    "club_name_at_valuation": "Bruk-Bet Termalica Nieciecza",
+    "club_id_at_valuation": "15906",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "8c37f24f383d",
+    "player_id": "684316",
+    "player_name": "Noah Mrosek",
+    "valuation_amount": 50000,
+    "valuation_date": "08/12/2025",
+    "club_name_at_valuation": "Bruk-Bet Termalica Nieciecza",
+    "club_id_at_valuation": "15906",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "1b21a7748aa6",
+    "player_id": "798542",
+    "player_name": "Niclas Dühring",
+    "valuation_amount": 100000,
+    "valuation_date": "13/04/2023",
+    "club_name_at_valuation": "FC St. Pauli II",
+    "club_id_at_valuation": "225",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e7d157142a15",
+    "player_id": "798542",
+    "player_name": "Niclas Dühring",
+    "valuation_amount": 75000,
+    "valuation_date": "21/06/2023",
+    "club_name_at_valuation": "FC St. Pauli II",
+    "club_id_at_valuation": "225",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "6bdf1a0467e9",
+    "player_id": "798542",
+    "player_name": "Niclas Dühring",
+    "valuation_amount": 75000,
+    "valuation_date": "30/12/2023",
+    "club_name_at_valuation": "FC St. Pauli II",
+    "club_id_at_valuation": "225",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "33646cc26fca",
+    "player_id": "798542",
+    "player_name": "Niclas Dühring",
+    "valuation_amount": 125000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "FC St. Pauli II",
+    "club_id_at_valuation": "225",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "d419f5e9e7e8",
+    "player_id": "798542",
+    "player_name": "Niclas Dühring",
+    "valuation_amount": 200000,
+    "valuation_date": "27/09/2024",
+    "club_name_at_valuation": "FC Ingolstadt 04",
+    "club_id_at_valuation": "4795",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "cf905b551f6e",
+    "player_id": "798542",
+    "player_name": "Niclas Dühring",
+    "valuation_amount": 200000,
+    "valuation_date": "30/12/2024",
+    "club_name_at_valuation": "FC Ingolstadt 04",
+    "club_id_at_valuation": "4795",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "33a0c4ae33b2",
+    "player_id": "798542",
+    "player_name": "Niclas Dühring",
+    "valuation_amount": 175000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "FC Ingolstadt 04",
+    "club_id_at_valuation": "4795",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "dbab92837186",
+    "player_id": "798542",
+    "player_name": "Niclas Dühring",
+    "valuation_amount": 175000,
+    "valuation_date": "16/12/2025",
+    "club_name_at_valuation": "Karlsruher SC",
+    "club_id_at_valuation": "48",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "a518472cce94",
+    "player_id": "798546",
+    "player_name": "Ayukayoh Mengot",
+    "valuation_amount": 100000,
+    "valuation_date": "06/02/2023",
+    "club_name_at_valuation": "Hamburger SV II",
+    "club_id_at_valuation": "389",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "2aa3516881f3",
+    "player_id": "798546",
+    "player_name": "Ayukayoh Mengot",
+    "valuation_amount": 100000,
+    "valuation_date": "21/06/2023",
+    "club_name_at_valuation": "Hamburger SV II",
+    "club_id_at_valuation": "389",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "8dc33321abb4",
+    "player_id": "798546",
+    "player_name": "Ayukayoh Mengot",
+    "valuation_amount": 75000,
+    "valuation_date": "30/12/2023",
+    "club_name_at_valuation": "Hamburger SV II",
+    "club_id_at_valuation": "389",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e631d7554105",
+    "player_id": "798546",
+    "player_name": "Ayukayoh Mengot",
+    "valuation_amount": 75000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "Hamburger SV II",
+    "club_id_at_valuation": "389",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "b0759a155c7e",
+    "player_id": "798546",
+    "player_name": "Ayukayoh Mengot",
+    "valuation_amount": 100000,
+    "valuation_date": "20/12/2024",
+    "club_name_at_valuation": "Hamburger SV II",
+    "club_id_at_valuation": "389",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "7378fde94ccf",
+    "player_id": "798546",
+    "player_name": "Ayukayoh Mengot",
+    "valuation_amount": 75000,
+    "valuation_date": "24/06/2025",
+    "club_name_at_valuation": "Hamburger SV II",
+    "club_id_at_valuation": "389",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "f91acb2c0eeb",
+    "player_id": "798546",
+    "player_name": "Ayukayoh Mengot",
+    "valuation_amount": 50000,
+    "valuation_date": "21/10/2025",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "1cab06f87e7e",
+    "player_id": "700145",
+    "player_name": "Michel Ludwig",
+    "valuation_amount": 200000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "Helmond Sport",
+    "club_id_at_valuation": "500",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "21395d28bfba",
+    "player_id": "700145",
+    "player_name": "Michel Ludwig",
+    "valuation_amount": 300000,
+    "valuation_date": "10/06/2024",
+    "club_name_at_valuation": "Helmond Sport",
+    "club_id_at_valuation": "500",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "9dd527baf02a",
+    "player_id": "700145",
+    "player_name": "Michel Ludwig",
+    "valuation_amount": 300000,
+    "valuation_date": "10/12/2024",
+    "club_name_at_valuation": "Helmond Sport",
+    "club_id_at_valuation": "500",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "4d67d1b0299a",
+    "player_id": "700145",
+    "player_name": "Michel Ludwig",
+    "valuation_amount": 300000,
+    "valuation_date": "09/06/2025",
+    "club_name_at_valuation": "Helmond Sport",
+    "club_id_at_valuation": "500",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "d6f7ccdb9f6d",
+    "player_id": "700145",
+    "player_name": "Michel Ludwig",
+    "valuation_amount": 250000,
+    "valuation_date": "16/10/2025",
+    "club_name_at_valuation": "Helmond Sport",
+    "club_id_at_valuation": "500",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "95f4de7beac1",
+    "player_id": "700145",
+    "player_name": "Michel Ludwig",
+    "valuation_amount": 225000,
+    "valuation_date": "16/12/2025",
+    "club_name_at_valuation": "Helmond Sport",
+    "club_id_at_valuation": "500",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "36ffa66557fb",
+    "player_id": "684103",
+    "player_name": "Vasco Walz",
+    "valuation_amount": 25000,
+    "valuation_date": "01/02/2024",
+    "club_name_at_valuation": "1.FC Bocholt",
+    "club_id_at_valuation": "392",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "3593b706dcd1",
+    "player_id": "684103",
+    "player_name": "Vasco Walz",
+    "valuation_amount": 25000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "1.FC Bocholt",
+    "club_id_at_valuation": "392",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "4434930a7b9d",
+    "player_id": "684103",
+    "player_name": "Vasco Walz",
+    "valuation_amount": 50000,
+    "valuation_date": "06/01/2025",
+    "club_name_at_valuation": "Bahlinger SC",
+    "club_id_at_valuation": "1193",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "2fd0ab933b28",
+    "player_id": "684103",
+    "player_name": "Vasco Walz",
+    "valuation_amount": 100000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "Bahlinger SC",
+    "club_id_at_valuation": "1193",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "772984144da1",
+    "player_id": "684103",
+    "player_name": "Vasco Walz",
+    "valuation_amount": 100000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Bahlinger SC",
+    "club_id_at_valuation": "1193",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "e6f0b291f567",
+    "player_id": "798541",
+    "player_name": "Daniel Dudek",
+    "valuation_amount": 25000,
+    "valuation_date": "06/10/2022",
+    "club_name_at_valuation": "SG Wattenscheid 09",
+    "club_id_at_valuation": "97",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "fd0f333f5eeb",
+    "player_id": "798541",
+    "player_name": "Daniel Dudek",
+    "valuation_amount": 25000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "SG Wattenscheid 09",
+    "club_id_at_valuation": "97",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "485ea77542af",
+    "player_id": "798541",
+    "player_name": "Daniel Dudek",
+    "valuation_amount": 0,
+    "valuation_date": "18/01/2023",
+    "club_name_at_valuation": "SC Westfalia Herne",
+    "club_id_at_valuation": "387",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "8d374ae9eb7c",
+    "player_id": "798543",
+    "player_name": "Isaak Nwachukwu",
+    "valuation_amount": 25000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Sportfreunde Lotte",
+    "club_id_at_valuation": "668",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "17139b5f6dc6",
+    "player_id": "804831",
+    "player_name": "Hendry Blank",
+    "valuation_amount": 150000,
+    "valuation_date": "01/08/2023",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "6a5ccbe40974",
+    "player_id": "804831",
+    "player_name": "Hendry Blank",
+    "valuation_amount": 400000,
+    "valuation_date": "19/10/2023",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "d456ab4b8d47",
+    "player_id": "804831",
+    "player_name": "Hendry Blank",
+    "valuation_amount": 1000000,
+    "valuation_date": "28/12/2023",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "eafee0479e10",
+    "player_id": "804831",
+    "player_name": "Hendry Blank",
+    "valuation_amount": 3000000,
+    "valuation_date": "11/03/2024",
+    "club_name_at_valuation": "Red Bull Salzburg",
+    "club_id_at_valuation": "409",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "9f1825ff9ef7",
+    "player_id": "804831",
+    "player_name": "Hendry Blank",
+    "valuation_amount": 2500000,
+    "valuation_date": "21/05/2024",
+    "club_name_at_valuation": "Red Bull Salzburg",
+    "club_id_at_valuation": "409",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "814522963936",
+    "player_id": "804831",
+    "player_name": "Hendry Blank",
+    "valuation_amount": 4000000,
+    "valuation_date": "10/10/2024",
+    "club_name_at_valuation": "Red Bull Salzburg",
+    "club_id_at_valuation": "409",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "b5f8990176fb",
+    "player_id": "804831",
+    "player_name": "Hendry Blank",
+    "valuation_amount": 3500000,
+    "valuation_date": "17/12/2024",
+    "club_name_at_valuation": "Red Bull Salzburg",
+    "club_id_at_valuation": "409",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "c32735cb5f64",
+    "player_id": "804831",
+    "player_name": "Hendry Blank",
+    "valuation_amount": 3000000,
+    "valuation_date": "06/06/2025",
+    "club_name_at_valuation": "Red Bull Salzburg",
+    "club_id_at_valuation": "409",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "2cb44bfd9089",
+    "player_id": "804831",
+    "player_name": "Hendry Blank",
+    "valuation_amount": 2500000,
+    "valuation_date": "09/10/2025",
+    "club_name_at_valuation": "Hannover 96",
+    "club_id_at_valuation": "42",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "55a09b1af0b6",
+    "player_id": "804831",
+    "player_name": "Hendry Blank",
+    "valuation_amount": 2000000,
+    "valuation_date": "16/12/2025",
+    "club_name_at_valuation": "Hannover 96",
+    "club_id_at_valuation": "42",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "de040543cf97",
+    "player_id": "720799",
+    "player_name": "Julian Rijkhoff",
+    "valuation_amount": 1000000,
+    "valuation_date": "12/02/2024",
+    "club_name_at_valuation": "Ajax Amsterdam U21",
+    "club_id_at_valuation": "8817",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "522debf07220",
+    "player_id": "720799",
+    "player_name": "Julian Rijkhoff",
+    "valuation_amount": 1500000,
+    "valuation_date": "31/05/2024",
+    "club_name_at_valuation": "Ajax Amsterdam U21",
+    "club_id_at_valuation": "8817",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "ae82829e96ce",
+    "player_id": "720799",
+    "player_name": "Julian Rijkhoff",
+    "valuation_amount": 1000000,
+    "valuation_date": "17/12/2024",
+    "club_name_at_valuation": "Ajax Amsterdam U21",
+    "club_id_at_valuation": "8817",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "799b00b9a53f",
+    "player_id": "720799",
+    "player_name": "Julian Rijkhoff",
+    "valuation_amount": 800000,
+    "valuation_date": "14/03/2025",
+    "club_name_at_valuation": "Ajax Amsterdam U21",
+    "club_id_at_valuation": "8817",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5fd16715d29a",
+    "player_id": "720799",
+    "player_name": "Julian Rijkhoff",
+    "valuation_amount": 650000,
+    "valuation_date": "09/06/2025",
+    "club_name_at_valuation": "Ajax Amsterdam U21",
+    "club_id_at_valuation": "8817",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "6c8db60fd6e7",
+    "player_id": "720799",
+    "player_name": "Julian Rijkhoff",
+    "valuation_amount": 650000,
+    "valuation_date": "16/12/2025",
+    "club_name_at_valuation": "Almere City FC",
+    "club_id_at_valuation": "723",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "51dc75d9f768",
+    "player_id": "467424",
+    "player_name": "Maik Amedick",
+    "valuation_amount": 100000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "6a82c97b0bcf",
+    "player_id": "467424",
+    "player_name": "Maik Amedick",
+    "valuation_amount": 75000,
+    "valuation_date": "30/12/2021",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "22e6d284d9d9",
+    "player_id": "467424",
+    "player_name": "Maik Amedick",
+    "valuation_amount": 75000,
+    "valuation_date": "13/06/2022",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "6e8e5dec087b",
+    "player_id": "467424",
+    "player_name": "Maik Amedick",
+    "valuation_amount": 75000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "3ff0344d9ba1",
+    "player_id": "467424",
+    "player_name": "Maik Amedick",
+    "valuation_amount": 75000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "e487331f461c",
+    "player_id": "467424",
+    "player_name": "Maik Amedick",
+    "valuation_amount": 75000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "59fbb4b4cf76",
+    "player_id": "467424",
+    "player_name": "Maik Amedick",
+    "valuation_amount": 75000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "5fb866bb9bcd",
+    "player_id": "467424",
+    "player_name": "Maik Amedick",
+    "valuation_amount": 75000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "SC Paderborn 07 II",
+    "club_id_at_valuation": "6604",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "489cfa41613b",
+    "player_id": "467424",
+    "player_name": "Maik Amedick",
+    "valuation_amount": 75000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "1.FC Bocholt",
+    "club_id_at_valuation": "392",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "ee116e406887",
+    "player_id": "467424",
+    "player_name": "Maik Amedick",
+    "valuation_amount": 75000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "1.FC Bocholt",
+    "club_id_at_valuation": "392",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "082de6d47037",
+    "player_id": "546882",
+    "player_name": "Kamal Bafounta",
+    "valuation_amount": 100000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "c0c3d313a1cc",
+    "player_id": "546882",
+    "player_name": "Kamal Bafounta",
+    "valuation_amount": 75000,
+    "valuation_date": "30/12/2021",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "819f57c93c03",
+    "player_id": "546882",
+    "player_name": "Kamal Bafounta",
+    "valuation_amount": 75000,
+    "valuation_date": "01/06/2022",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "3b9a249ed362",
+    "player_id": "546882",
+    "player_name": "Kamal Bafounta",
+    "valuation_amount": 100000,
+    "valuation_date": "08/12/2023",
+    "club_name_at_valuation": "SO Cholet",
+    "club_id_at_valuation": "3525",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "f28ff1401e29",
+    "player_id": "546882",
+    "player_name": "Kamal Bafounta",
+    "valuation_amount": 100000,
+    "valuation_date": "14/06/2024",
+    "club_name_at_valuation": "SO Cholet",
+    "club_id_at_valuation": "3525",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "5d4c88fed496",
+    "player_id": "546882",
+    "player_name": "Kamal Bafounta",
+    "valuation_amount": 100000,
+    "valuation_date": "11/12/2024",
+    "club_name_at_valuation": "NK Tabor Sezana",
+    "club_id_at_valuation": "20656",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "fdf414ad2486",
+    "player_id": "546882",
+    "player_name": "Kamal Bafounta",
+    "valuation_amount": 75000,
+    "valuation_date": "27/05/2025",
+    "club_name_at_valuation": "NK Tabor Sezana",
+    "club_id_at_valuation": "20656",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "c35ae2e261bf",
+    "player_id": "387708",
+    "player_name": "Leon Klußmann",
+    "valuation_amount": 50000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "a72d10bd5010",
+    "player_id": "387708",
+    "player_name": "Leon Klußmann",
+    "valuation_amount": 50000,
+    "valuation_date": "30/12/2021",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "0f94ff182e2f",
+    "player_id": "387708",
+    "player_name": "Leon Klußmann",
+    "valuation_amount": 0,
+    "valuation_date": "12/01/2022",
+    "club_name_at_valuation": "FC Kray",
+    "club_id_at_valuation": "7249",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "36e34ff822e2",
+    "player_id": "387708",
+    "player_name": "Leon Klußmann",
+    "valuation_amount": 25000,
+    "valuation_date": "06/10/2022",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "9ed4354ecfe0",
+    "player_id": "387708",
+    "player_name": "Leon Klußmann",
+    "valuation_amount": 25000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "580f74e072df",
+    "player_id": "387708",
+    "player_name": "Leon Klußmann",
+    "valuation_amount": 50000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "4fb436030ba9",
+    "player_id": "387708",
+    "player_name": "Leon Klußmann",
+    "valuation_amount": 25000,
+    "valuation_date": "10/01/2024",
+    "club_name_at_valuation": "KSV Hessen Kassel",
+    "club_id_at_valuation": "373",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "37f303f1bc2c",
+    "player_id": "387708",
+    "player_name": "Leon Klußmann",
+    "valuation_amount": 50000,
+    "valuation_date": "11/06/2024",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "86b91d9562d5",
+    "player_id": "387708",
+    "player_name": "Leon Klußmann",
+    "valuation_amount": 50000,
+    "valuation_date": "30/12/2024",
+    "club_name_at_valuation": "Borussia Dortmund II",
+    "club_id_at_valuation": "17",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "3f31dd6e22b9",
+    "player_id": "387708",
+    "player_name": "Leon Klußmann",
+    "valuation_amount": 0,
+    "valuation_date": "15/01/2025",
+    "club_name_at_valuation": "Sportfreunde Siegen",
+    "club_id_at_valuation": "63",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "d9c4d0ffabc1",
+    "player_id": "387708",
+    "player_name": "Leon Klußmann",
+    "valuation_amount": 50000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Sportfreunde Siegen",
+    "club_id_at_valuation": "63",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "9cc07406c84e",
+    "player_id": "572441",
+    "player_name": "Maximilian Adamski",
+    "valuation_amount": 25000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "VfB Homberg",
+    "club_id_at_valuation": "4840",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "bf8cce8c3743",
+    "player_id": "572441",
+    "player_name": "Maximilian Adamski",
+    "valuation_amount": 50000,
+    "valuation_date": "27/09/2021",
+    "club_name_at_valuation": "VfB Homberg",
+    "club_id_at_valuation": "4840",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "3020f06fb5c9",
+    "player_id": "572441",
+    "player_name": "Maximilian Adamski",
+    "valuation_amount": 50000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "VfB Homberg",
+    "club_id_at_valuation": "4840",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "4e33dffdf809",
+    "player_id": "572441",
+    "player_name": "Maximilian Adamski",
+    "valuation_amount": 75000,
+    "valuation_date": "13/06/2022",
+    "club_name_at_valuation": "VfB Homberg",
+    "club_id_at_valuation": "4840",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "82d6962be36f",
+    "player_id": "572441",
+    "player_name": "Maximilian Adamski",
+    "valuation_amount": 75000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "87ef3fa24000",
+    "player_id": "572441",
+    "player_name": "Maximilian Adamski",
+    "valuation_amount": 75000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "b3a043e2bebb",
+    "player_id": "572441",
+    "player_name": "Maximilian Adamski",
+    "valuation_amount": 75000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "a4f90cef06c8",
+    "player_id": "572441",
+    "player_name": "Maximilian Adamski",
+    "valuation_amount": 75000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "0942f273186e",
+    "player_id": "572441",
+    "player_name": "Maximilian Adamski",
+    "valuation_amount": 50000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "0ad3b0e58661",
+    "player_id": "572441",
+    "player_name": "Maximilian Adamski",
+    "valuation_amount": 50000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "1.FC Bocholt",
+    "club_id_at_valuation": "392",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "61c656aab0db",
+    "player_id": "572441",
+    "player_name": "Maximilian Adamski",
+    "valuation_amount": 50000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "1.FC Bocholt",
+    "club_id_at_valuation": "392",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "7865f4d43cdf",
+    "player_id": "817920",
+    "player_name": "Jovan Jovic",
+    "valuation_amount": 10000,
+    "valuation_date": "01/08/2021",
+    "club_name_at_valuation": "KFC Uerdingen 05",
+    "club_id_at_valuation": "95",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "7c87dc6440e2",
+    "player_id": "817920",
+    "player_name": "Jovan Jovic",
+    "valuation_amount": 25000,
+    "valuation_date": "27/09/2021",
+    "club_name_at_valuation": "KFC Uerdingen 05",
+    "club_id_at_valuation": "95",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "3909b0b56a0a",
+    "player_id": "817920",
+    "player_name": "Jovan Jovic",
+    "valuation_amount": 50000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "KFC Uerdingen 05",
+    "club_id_at_valuation": "95",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "e4ac09a736dc",
+    "player_id": "817920",
+    "player_name": "Jovan Jovic",
+    "valuation_amount": 75000,
+    "valuation_date": "25/03/2022",
+    "club_name_at_valuation": "KFC Uerdingen 05",
+    "club_id_at_valuation": "95",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "7f977def80e0",
+    "player_id": "817920",
+    "player_name": "Jovan Jovic",
+    "valuation_amount": 75000,
+    "valuation_date": "13/06/2022",
+    "club_name_at_valuation": "KFC Uerdingen 05",
+    "club_id_at_valuation": "95",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "5466ef5a8e07",
+    "player_id": "817920",
+    "player_name": "Jovan Jovic",
+    "valuation_amount": 0,
+    "valuation_date": "01/07/2022",
+    "club_name_at_valuation": "SC Paderborn 07 II",
+    "club_id_at_valuation": "6604",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "abd011d59768",
+    "player_id": "817920",
+    "player_name": "Jovan Jovic",
+    "valuation_amount": 25000,
+    "valuation_date": "23/09/2023",
+    "club_name_at_valuation": "SC Paderborn 07 II",
+    "club_id_at_valuation": "6604",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "966b4c4d5d85",
+    "player_id": "817920",
+    "player_name": "Jovan Jovic",
+    "valuation_amount": 25000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "SC Paderborn 07 II",
+    "club_id_at_valuation": "6604",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "feb4a1a4b1a4",
+    "player_id": "817920",
+    "player_name": "Jovan Jovic",
+    "valuation_amount": 25000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "SSVg Velbert 02",
+    "club_id_at_valuation": "954",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "636907618d11",
+    "player_id": "817920",
+    "player_name": "Jovan Jovic",
+    "valuation_amount": 25000,
+    "valuation_date": "20/12/2024",
+    "club_name_at_valuation": "SC Weiche Flensburg 08",
+    "club_id_at_valuation": "10284",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "a2d90530d3a7",
+    "player_id": "817920",
+    "player_name": "Jovan Jovic",
+    "valuation_amount": 25000,
+    "valuation_date": "24/06/2025",
+    "club_name_at_valuation": "SC Weiche Flensburg 08",
+    "club_id_at_valuation": "10284",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "efaa49e2e457",
+    "player_id": "817920",
+    "player_name": "Jovan Jovic",
+    "valuation_amount": 0,
+    "valuation_date": "25/07/2025",
+    "club_name_at_valuation": "Preußen Münster II",
+    "club_id_at_valuation": "7019",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "36214da6e574",
+    "player_id": "467417",
+    "player_name": "Ibrahim Sori-Kaba",
+    "valuation_amount": 25000,
+    "valuation_date": "06/08/2021",
+    "club_name_at_valuation": "SV Rödinghausen",
+    "club_id_at_valuation": "26957",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "4b099d4bcea9",
+    "player_id": "467417",
+    "player_name": "Ibrahim Sori-Kaba",
+    "valuation_amount": 50000,
+    "valuation_date": "27/09/2021",
+    "club_name_at_valuation": "SV Rödinghausen",
+    "club_id_at_valuation": "26957",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "aa1dbca821cc",
+    "player_id": "467417",
+    "player_name": "Ibrahim Sori-Kaba",
+    "valuation_amount": 50000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "SV Rödinghausen",
+    "club_id_at_valuation": "26957",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "0a7a2f0beeb5",
+    "player_id": "467417",
+    "player_name": "Ibrahim Sori-Kaba",
+    "valuation_amount": 50000,
+    "valuation_date": "13/06/2022",
+    "club_name_at_valuation": "SV Rödinghausen",
+    "club_id_at_valuation": "26957",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "769ff0167daa",
+    "player_id": "467417",
+    "player_name": "Ibrahim Sori-Kaba",
+    "valuation_amount": 50000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "SV Rödinghausen",
+    "club_id_at_valuation": "26957",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "93a1e6fbffdc",
+    "player_id": "467417",
+    "player_name": "Ibrahim Sori-Kaba",
+    "valuation_amount": 50000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "SV Rödinghausen",
+    "club_id_at_valuation": "26957",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "d711d2207828",
+    "player_id": "467417",
+    "player_name": "Ibrahim Sori-Kaba",
+    "valuation_amount": 50000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "SV Rödinghausen",
+    "club_id_at_valuation": "26957",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "5705d5e9858f",
+    "player_id": "467417",
+    "player_name": "Ibrahim Sori-Kaba",
+    "valuation_amount": 50000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "SV Lippstadt 08",
+    "club_id_at_valuation": "767",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "05358a31ba86",
+    "player_id": "467417",
+    "player_name": "Ibrahim Sori-Kaba",
+    "valuation_amount": 0,
+    "valuation_date": "27/09/2024",
+    "club_name_at_valuation": "VfL Theesen",
+    "club_id_at_valuation": "5383",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "c57ce5f08f0c",
+    "player_id": "627040",
+    "player_name": "Maxim Schröder",
+    "valuation_amount": 25000,
+    "valuation_date": "06/10/2022",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "2a6c9af60e5b",
+    "player_id": "627040",
+    "player_name": "Maxim Schröder",
+    "valuation_amount": 50000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "36b57b1ca13f",
+    "player_id": "627040",
+    "player_name": "Maxim Schröder",
+    "valuation_amount": 50000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "435f08ec0586",
+    "player_id": "627040",
+    "player_name": "Maxim Schröder",
+    "valuation_amount": 50000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "b29cf95a849a",
+    "player_id": "627040",
+    "player_name": "Maxim Schröder",
+    "valuation_amount": 50000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "69cf7c1d2955",
+    "player_id": "627040",
+    "player_name": "Maxim Schröder",
+    "valuation_amount": 50000,
+    "valuation_date": "06/01/2025",
+    "club_name_at_valuation": "1.FSV Mainz 05 II",
+    "club_id_at_valuation": "851",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "381cd1ca2602",
+    "player_id": "627040",
+    "player_name": "Maxim Schröder",
+    "valuation_amount": 50000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "1.FSV Mainz 05 II",
+    "club_id_at_valuation": "851",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "93e6da4a10a3",
+    "player_id": "627040",
+    "player_name": "Maxim Schröder",
+    "valuation_amount": 25000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "1.FSV Mainz 05 II",
+    "club_id_at_valuation": "851",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "76657a1ec624",
+    "player_id": "1056989",
+    "player_name": "Darnell Keumo",
+    "valuation_amount": 300000,
+    "valuation_date": "03/09/2025",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "e6fae1c54a57",
+    "player_id": "1056989",
+    "player_name": "Darnell Keumo",
+    "valuation_amount": 300000,
+    "valuation_date": "16/12/2025",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "8342886d654a",
+    "player_id": "1058515",
+    "player_name": "Kacper Koscierski",
+    "valuation_amount": 200000,
+    "valuation_date": "05/06/2025",
+    "club_name_at_valuation": "VfL Bochum U19",
+    "club_id_at_valuation": "3862",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "96511fed0929",
+    "player_id": "1058515",
+    "player_name": "Kacper Koscierski",
+    "valuation_amount": 500000,
+    "valuation_date": "09/10/2025",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "5e042a18b535",
+    "player_id": "1058515",
+    "player_name": "Kacper Koscierski",
+    "valuation_amount": 700000,
+    "valuation_date": "16/12/2025",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "402d8962ac4d",
+    "player_id": "681197",
+    "player_name": "Florian Berisha",
+    "valuation_amount": 10000,
+    "valuation_date": "23/09/2023",
+    "club_name_at_valuation": "SSVg Velbert 02",
+    "club_id_at_valuation": "954",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "136ba1aac2c7",
+    "player_id": "681197",
+    "player_name": "Florian Berisha",
+    "valuation_amount": 25000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "SSVg Velbert 02",
+    "club_id_at_valuation": "954",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "f1eea8b0c6d3",
+    "player_id": "681197",
+    "player_name": "Florian Berisha",
+    "valuation_amount": 25000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "SSVg Velbert 02",
+    "club_id_at_valuation": "954",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "7044a87bc946",
+    "player_id": "681197",
+    "player_name": "Florian Berisha",
+    "valuation_amount": 0,
+    "valuation_date": "15/08/2024",
+    "club_name_at_valuation": "VfB Homberg",
+    "club_id_at_valuation": "4840",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "e47733e284a7",
+    "player_id": "796221",
+    "player_name": "Mats Pannewig",
+    "valuation_amount": 50000,
+    "valuation_date": "01/02/2024",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "a6a71cd76669",
+    "player_id": "796221",
+    "player_name": "Mats Pannewig",
+    "valuation_amount": 125000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "f4576a1d9170",
+    "player_id": "796221",
+    "player_name": "Mats Pannewig",
+    "valuation_amount": 600000,
+    "valuation_date": "09/10/2024",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "dd9559deddc1",
+    "player_id": "796221",
+    "player_name": "Mats Pannewig",
+    "valuation_amount": 600000,
+    "valuation_date": "20/12/2024",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5bbd220dc642",
+    "player_id": "796221",
+    "player_name": "Mats Pannewig",
+    "valuation_amount": 1000000,
+    "valuation_date": "05/06/2025",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "e4da0d7a8258",
+    "player_id": "796221",
+    "player_name": "Mats Pannewig",
+    "valuation_amount": 2500000,
+    "valuation_date": "16/12/2025",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "60fa3af28553",
+    "player_id": "713719",
+    "player_name": "Finn Kotyrba",
+    "valuation_amount": 25000,
+    "valuation_date": "01/01/2024",
+    "club_name_at_valuation": "1.FC Saarbrücken",
+    "club_id_at_valuation": "1",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "949934ab6452",
+    "player_id": "713719",
+    "player_name": "Finn Kotyrba",
+    "valuation_amount": 25000,
+    "valuation_date": "11/06/2024",
+    "club_name_at_valuation": "1.FC Saarbrücken",
+    "club_id_at_valuation": "1",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "3417b1e081d8",
+    "player_id": "713719",
+    "player_name": "Finn Kotyrba",
+    "valuation_amount": 25000,
+    "valuation_date": "06/01/2025",
+    "club_name_at_valuation": "TSV Steinbach Haiger",
+    "club_id_at_valuation": "39470",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "4092f9ea70c8",
+    "player_id": "713719",
+    "player_name": "Finn Kotyrba",
+    "valuation_amount": 25000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "FC Schalke 04 II",
+    "club_id_at_valuation": "34",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "af45d616add5",
+    "player_id": "713719",
+    "player_name": "Finn Kotyrba",
+    "valuation_amount": 25000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "VfL Bochum II",
+    "club_id_at_valuation": "446",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "3da05d84a0b4",
+    "player_id": "813739",
+    "player_name": "Josue Santo",
+    "valuation_amount": 75000,
+    "valuation_date": "05/09/2025",
+    "club_name_at_valuation": "Sportfreunde Siegen",
+    "club_id_at_valuation": "63",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "70cf32eba40f",
+    "player_id": "813739",
+    "player_name": "Josue Santo",
+    "valuation_amount": 75000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Sportfreunde Siegen",
+    "club_id_at_valuation": "63",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "e1525690dbb3",
+    "player_id": "813733",
+    "player_name": "Artur Golubytskyi",
+    "valuation_amount": 10000,
+    "valuation_date": "05/09/2025",
+    "club_name_at_valuation": "Rot-Weiß Erfurt",
+    "club_id_at_valuation": "111",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "55f3dd869298",
+    "player_id": "813733",
+    "player_name": "Artur Golubytskyi",
+    "valuation_amount": 50000,
+    "valuation_date": "10/12/2025",
+    "club_name_at_valuation": "Rot-Weiß Erfurt",
+    "club_id_at_valuation": "111",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "11ce5846e635",
+    "player_id": "813735",
+    "player_name": "Leon Tasov",
+    "valuation_amount": 100000,
+    "valuation_date": "24/06/2025",
+    "club_name_at_valuation": "SV Meppen",
+    "club_id_at_valuation": "247",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "ed37577f86e3",
+    "player_id": "813735",
+    "player_name": "Leon Tasov",
+    "valuation_amount": 250000,
+    "valuation_date": "16/12/2025",
+    "club_name_at_valuation": "Preußen Münster",
+    "club_id_at_valuation": "91",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "0fa79177d728",
+    "player_id": "813730",
+    "player_name": "Mohammed Tolba",
+    "valuation_amount": 200000,
+    "valuation_date": "21/09/2022",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "26613a18cbcf",
+    "player_id": "813730",
+    "player_name": "Mohammed Tolba",
+    "valuation_amount": 200000,
+    "valuation_date": "09/11/2022",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "f3a1c176a2bf",
+    "player_id": "813730",
+    "player_name": "Mohammed Tolba",
+    "valuation_amount": 200000,
+    "valuation_date": "22/06/2023",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "a10f6b31fc76",
+    "player_id": "813730",
+    "player_name": "Mohammed Tolba",
+    "valuation_amount": 200000,
+    "valuation_date": "14/12/2023",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "f488e58002d9",
+    "player_id": "813730",
+    "player_name": "Mohammed Tolba",
+    "valuation_amount": 200000,
+    "valuation_date": "29/05/2024",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "876835c960b1",
+    "player_id": "813730",
+    "player_name": "Mohammed Tolba",
+    "valuation_amount": 200000,
+    "valuation_date": "20/12/2024",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "f067869c58ff",
+    "player_id": "813730",
+    "player_name": "Mohammed Tolba",
+    "valuation_amount": 200000,
+    "valuation_date": "05/06/2025",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "395c0662f97f",
+    "player_id": "813730",
+    "player_name": "Mohammed Tolba",
+    "valuation_amount": 175000,
+    "valuation_date": "21/10/2025",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "e5f57277e98e",
+    "player_id": "571140",
+    "player_name": "Luis Hartwig",
+    "valuation_amount": 200000,
+    "valuation_date": "07/08/2021",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "69c98a21ef7e",
+    "player_id": "571140",
+    "player_name": "Luis Hartwig",
+    "valuation_amount": 200000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "ea2bb05e37ae",
+    "player_id": "571140",
+    "player_name": "Luis Hartwig",
+    "valuation_amount": 200000,
+    "valuation_date": "09/06/2022",
+    "club_name_at_valuation": "VfL Bochum",
+    "club_id_at_valuation": "80",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "f6d03f04aaff",
+    "player_id": "571140",
+    "player_name": "Luis Hartwig",
+    "valuation_amount": 350000,
+    "valuation_date": "17/11/2022",
+    "club_name_at_valuation": "SKN St. Pölten",
+    "club_id_at_valuation": "2662",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "b6d667d05fea",
+    "player_id": "571140",
+    "player_name": "Luis Hartwig",
+    "valuation_amount": 350000,
+    "valuation_date": "05/06/2023",
+    "club_name_at_valuation": "SKN St. Pölten",
+    "club_id_at_valuation": "2662",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "f4d5446e2c1c",
+    "player_id": "571140",
+    "player_name": "Luis Hartwig",
+    "valuation_amount": 300000,
+    "valuation_date": "28/12/2023",
+    "club_name_at_valuation": "KV Oostende (-2024)",
+    "club_id_at_valuation": "2861",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "67096fcd95d0",
+    "player_id": "571140",
+    "player_name": "Luis Hartwig",
+    "valuation_amount": 300000,
+    "valuation_date": "20/06/2024",
+    "club_name_at_valuation": "KV Oostende (-2024)",
+    "club_id_at_valuation": "2861",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "0a16e2c6fa50",
+    "player_id": "571140",
+    "player_name": "Luis Hartwig",
+    "valuation_amount": 150000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "MSV Duisburg",
+    "club_id_at_valuation": "52",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "5ad612c5a08d",
+    "player_id": "571140",
+    "player_name": "Luis Hartwig",
+    "valuation_amount": 100000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "MSV Duisburg",
+    "club_id_at_valuation": "52",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "5d1e07b84232",
+    "player_id": "571140",
+    "player_name": "Luis Hartwig",
+    "valuation_amount": 100000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "VfL Bochum II",
+    "club_id_at_valuation": "446",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "6d17541c666d",
+    "player_id": "594715",
+    "player_name": "Paul Lennart Sapper",
+    "valuation_amount": 10000,
+    "valuation_date": "12/07/2021",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "fe586283cf51",
+    "player_id": "594715",
+    "player_name": "Paul Lennart Sapper",
+    "valuation_amount": 10000,
+    "valuation_date": "31/12/2021",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "8aedcd0e4071",
+    "player_id": "594715",
+    "player_name": "Paul Lennart Sapper",
+    "valuation_amount": 10000,
+    "valuation_date": "28/06/2022",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "3cd512cd6584",
+    "player_id": "594715",
+    "player_name": "Paul Lennart Sapper",
+    "valuation_amount": 0,
+    "valuation_date": "04/10/2022",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "423b8c0d917e",
+    "player_id": "501728",
+    "player_name": "Nino Cassaniti",
+    "valuation_amount": 50000,
+    "valuation_date": "12/09/2023",
+    "club_name_at_valuation": "Eintracht Frankfurt II",
+    "club_id_at_valuation": "177",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "050179cc6516",
+    "player_id": "501728",
+    "player_name": "Nino Cassaniti",
+    "valuation_amount": 50000,
+    "valuation_date": "10/01/2024",
+    "club_name_at_valuation": "Eintracht Frankfurt II",
+    "club_id_at_valuation": "177",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "37883f37d93d",
+    "player_id": "501728",
+    "player_name": "Nino Cassaniti",
+    "valuation_amount": 50000,
+    "valuation_date": "30/06/2024",
+    "club_name_at_valuation": "Eintracht Frankfurt II",
+    "club_id_at_valuation": "177",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "babf25b7eef5",
+    "player_id": "501728",
+    "player_name": "Nino Cassaniti",
+    "valuation_amount": 50000,
+    "valuation_date": "06/01/2025",
+    "club_name_at_valuation": "Eintracht Frankfurt II",
+    "club_id_at_valuation": "177",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "3edaa9a58ce2",
+    "player_id": "501728",
+    "player_name": "Nino Cassaniti",
+    "valuation_amount": 50000,
+    "valuation_date": "24/06/2025",
+    "club_name_at_valuation": "SV Viktoria Aschaffenburg",
+    "club_id_at_valuation": "565",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "cd66f5e9f2ae",
+    "player_id": "501728",
+    "player_name": "Nino Cassaniti",
+    "valuation_amount": 50000,
+    "valuation_date": "29/12/2025",
+    "club_name_at_valuation": "SV Viktoria Aschaffenburg",
+    "club_id_at_valuation": "565",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "d264f05f2a88",
+    "player_id": "604409",
+    "player_name": "Maximilian Grote",
+    "valuation_amount": 10000,
+    "valuation_date": "07/04/2022",
+    "club_name_at_valuation": "FC Rot-Weiß Koblenz",
+    "club_id_at_valuation": "22327",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "492df5a81f2e",
+    "player_id": "604409",
+    "player_name": "Maximilian Grote",
+    "valuation_amount": 10000,
+    "valuation_date": "28/06/2022",
+    "club_name_at_valuation": "FC Rot-Weiß Koblenz",
+    "club_id_at_valuation": "22327",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "9c786f8af43f",
+    "player_id": "604409",
+    "player_name": "Maximilian Grote",
+    "valuation_amount": 0,
+    "valuation_date": "01/07/2022",
+    "club_name_at_valuation": "FV Engers 07",
+    "club_id_at_valuation": "2085",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "2e25cc7b1d4b",
+    "player_id": "604409",
+    "player_name": "Maximilian Grote",
+    "valuation_amount": 75000,
+    "valuation_date": "20/10/2025",
+    "club_name_at_valuation": "FC Shkupi",
+    "club_id_at_valuation": "4644",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "5fb592fcf61c",
+    "player_id": "604409",
+    "player_name": "Maximilian Grote",
+    "valuation_amount": 75000,
+    "valuation_date": "18/12/2025",
+    "club_name_at_valuation": "FC Shkupi",
+    "club_id_at_valuation": "4644",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "e01a8d292a05",
+    "player_id": "1137144",
+    "player_name": "Tim Neubert",
+    "valuation_amount": 100000,
+    "valuation_date": "26/01/2026",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "b4511eb06b5b",
+    "player_id": "1137145",
+    "player_name": "Ben Nink",
+    "valuation_amount": 250000,
+    "valuation_date": "30/12/2024",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "cc43280096a1",
+    "player_id": "1137145",
+    "player_name": "Ben Nink",
+    "valuation_amount": 400000,
+    "valuation_date": "24/03/2025",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "104530b83561",
+    "player_id": "1137145",
+    "player_name": "Ben Nink",
+    "valuation_amount": 500000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "768cfecbbe0a",
+    "player_id": "1137145",
+    "player_name": "Ben Nink",
+    "valuation_amount": 400000,
+    "valuation_date": "23/12/2025",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "e06ad75b5e9c",
+    "player_id": "1144297",
+    "player_name": "Ibrahim Ati Allah",
+    "valuation_amount": 100000,
+    "valuation_date": "09/02/2026",
+    "club_name_at_valuation": "SV Wehen Wiesbaden U19",
+    "club_id_at_valuation": "9451",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "8e2a5c8c732f",
+    "player_id": "586670",
+    "player_name": "Resul Musolli",
+    "valuation_amount": 10000,
+    "valuation_date": "17/01/2024",
+    "club_name_at_valuation": "FC Marisca Mersch",
+    "club_id_at_valuation": "21271",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "97f20df54994",
+    "player_id": "586670",
+    "player_name": "Resul Musolli",
+    "valuation_amount": 10000,
+    "valuation_date": "21/06/2024",
+    "club_name_at_valuation": "FC Marisca Mersch",
+    "club_id_at_valuation": "21271",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "bfe8e11fc034",
+    "player_id": "586670",
+    "player_name": "Resul Musolli",
+    "valuation_amount": 10000,
+    "valuation_date": "27/12/2024",
+    "club_name_at_valuation": "FC Rodange 91",
+    "club_id_at_valuation": "21803",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "9ba26a30f183",
+    "player_id": "586670",
+    "player_name": "Resul Musolli",
+    "valuation_amount": 10000,
+    "valuation_date": "19/06/2025",
+    "club_name_at_valuation": "FC Rodange 91",
+    "club_id_at_valuation": "21803",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "9918c3cd966d",
+    "player_id": "586670",
+    "player_name": "Resul Musolli",
+    "valuation_amount": 0,
+    "valuation_date": "01/07/2025",
+    "club_name_at_valuation": "FC Marisca Mersch",
+    "club_id_at_valuation": "21271",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "ec83ef8d4749",
+    "player_id": "696016",
+    "player_name": "Tobias Pawelczyk",
+    "valuation_amount": 10000,
+    "valuation_date": "23/09/2023",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "174f7c8a475a",
+    "player_id": "696016",
+    "player_name": "Tobias Pawelczyk",
+    "valuation_amount": 10000,
+    "valuation_date": "08/01/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "0220084cc8bf",
+    "player_id": "696016",
+    "player_name": "Tobias Pawelczyk",
+    "valuation_amount": 10000,
+    "valuation_date": "18/06/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "78f3bd9b0b6e",
+    "player_id": "696016",
+    "player_name": "Tobias Pawelczyk",
+    "valuation_amount": 25000,
+    "valuation_date": "16/12/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "baa7ae07863c",
+    "player_id": "696016",
+    "player_name": "Tobias Pawelczyk",
+    "valuation_amount": 50000,
+    "valuation_date": "23/06/2025",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "b24880ddb988",
+    "player_id": "696016",
+    "player_name": "Tobias Pawelczyk",
+    "valuation_amount": 50000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "Fortuna Düsseldorf II",
+    "club_id_at_valuation": "4690",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "6c49111c6cdd",
+    "player_id": "829255",
+    "player_name": "Robin Rosenberger",
+    "valuation_amount": 75000,
+    "valuation_date": "12/09/2023",
+    "club_name_at_valuation": "Eintracht Frankfurt II",
+    "club_id_at_valuation": "177",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "7ae3bdda751d",
+    "player_id": "829255",
+    "player_name": "Robin Rosenberger",
+    "valuation_amount": 50000,
+    "valuation_date": "10/01/2024",
+    "club_name_at_valuation": "Eintracht Frankfurt II",
+    "club_id_at_valuation": "177",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "f1f643732dba",
+    "player_id": "829255",
+    "player_name": "Robin Rosenberger",
+    "valuation_amount": 25000,
+    "valuation_date": "30/06/2024",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "4fa29398e41c",
+    "player_id": "829255",
+    "player_name": "Robin Rosenberger",
+    "valuation_amount": 0,
+    "valuation_date": "15/08/2024",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "03820ae85ba9",
+    "player_id": "829255",
+    "player_name": "Robin Rosenberger",
+    "valuation_amount": 10000,
+    "valuation_date": "28/10/2025",
+    "club_name_at_valuation": "FC Bayern Alzenau",
+    "club_id_at_valuation": "4900",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "5afb2f6ee42f",
+    "player_id": "829255",
+    "player_name": "Robin Rosenberger",
+    "valuation_amount": 10000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "FC Bayern Alzenau",
+    "club_id_at_valuation": "4900",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "cebe5d1fd184",
+    "player_id": "829255",
+    "player_name": "Robin Rosenberger",
+    "valuation_amount": 0,
+    "valuation_date": "05/02/2026",
+    "club_name_at_valuation": "Sportfreunde Seligenstadt",
+    "club_id_at_valuation": "7678",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "bfd13cacd780",
+    "player_id": "601101",
+    "player_name": "Lukas Haubenwaller",
+    "valuation_amount": 150000,
+    "valuation_date": "12/01/2023",
+    "club_name_at_valuation": "Young Violets Austria Wien",
+    "club_id_at_valuation": "4383",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "eed53e033b6b",
+    "player_id": "601101",
+    "player_name": "Lukas Haubenwaller",
+    "valuation_amount": 150000,
+    "valuation_date": "05/06/2023",
+    "club_name_at_valuation": "Young Violets Austria Wien",
+    "club_id_at_valuation": "4383",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "7eda7785e9cb",
+    "player_id": "601101",
+    "player_name": "Lukas Haubenwaller",
+    "valuation_amount": 150000,
+    "valuation_date": "05/12/2023",
+    "club_name_at_valuation": "SV Stripfing (-2025)",
+    "club_id_at_valuation": "20296",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "2e7fe2e5e137",
+    "player_id": "601101",
+    "player_name": "Lukas Haubenwaller",
+    "valuation_amount": 0,
+    "valuation_date": "01/01/2024",
+    "club_name_at_valuation": "SC Neusiedl/See",
+    "club_id_at_valuation": "9114",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "c576f85bbc5c",
+    "player_id": "601101",
+    "player_name": "Lukas Haubenwaller",
+    "valuation_amount": 75000,
+    "valuation_date": "22/09/2025",
+    "club_name_at_valuation": "SV Stripfing (-2025)",
+    "club_id_at_valuation": "20296",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "90892ce2b263",
+    "player_id": "601101",
+    "player_name": "Lukas Haubenwaller",
+    "valuation_amount": 75000,
+    "valuation_date": "15/12/2025",
+    "club_name_at_valuation": "Young Violets Austria Wien",
+    "club_id_at_valuation": "4383",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "cf0b6fa65665",
+    "player_id": "820717",
+    "player_name": "Georgios Makridis",
+    "valuation_amount": 25000,
+    "valuation_date": "05/09/2025",
+    "club_name_at_valuation": "SV Viktoria Aschaffenburg",
+    "club_id_at_valuation": "565",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "d9495ec1ed1e",
+    "player_id": "820717",
+    "player_name": "Georgios Makridis",
+    "valuation_amount": 50000,
+    "valuation_date": "29/12/2025",
+    "club_name_at_valuation": "SV Viktoria Aschaffenburg",
+    "club_id_at_valuation": "565",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "db523190018f",
+    "player_id": "570552",
+    "player_name": "Lucas Becker",
+    "valuation_amount": 25000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "3016ca9d892d",
+    "player_id": "570552",
+    "player_name": "Lucas Becker",
+    "valuation_amount": 25000,
+    "valuation_date": "30/12/2021",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "f685d040252b",
+    "player_id": "570552",
+    "player_name": "Lucas Becker",
+    "valuation_amount": 25000,
+    "valuation_date": "01/06/2022",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "53b73ab294d7",
+    "player_id": "570552",
+    "player_name": "Lucas Becker",
+    "valuation_amount": 25000,
+    "valuation_date": "08/12/2022",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "a08003d0be6a",
+    "player_id": "570552",
+    "player_name": "Lucas Becker",
+    "valuation_amount": 25000,
+    "valuation_date": "13/06/2023",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "f59900b0e477",
+    "player_id": "570552",
+    "player_name": "Lucas Becker",
+    "valuation_amount": 25000,
+    "valuation_date": "10/01/2024",
+    "club_name_at_valuation": "Kickers Offenbach",
+    "club_id_at_valuation": "107",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "30c0171dea94",
+    "player_id": "570552",
+    "player_name": "Lucas Becker",
+    "valuation_amount": 25000,
+    "valuation_date": "30/06/2024",
+    "club_name_at_valuation": "Kickers Offenbach",
+    "club_id_at_valuation": "107",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "5c520524cae8",
+    "player_id": "570552",
+    "player_name": "Lucas Becker",
+    "valuation_amount": 25000,
+    "valuation_date": "06/01/2025",
+    "club_name_at_valuation": "Kickers Offenbach",
+    "club_id_at_valuation": "107",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "7a0b84669d36",
+    "player_id": "570552",
+    "player_name": "Lucas Becker",
+    "valuation_amount": 25000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "Kickers Offenbach",
+    "club_id_at_valuation": "107",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "0c9a13f40bbd",
+    "player_id": "570552",
+    "player_name": "Lucas Becker",
+    "valuation_amount": 75000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "406de5babb59",
+    "player_id": "692397",
+    "player_name": "Amin Farouk",
+    "valuation_amount": 75000,
+    "valuation_date": "16/08/2021",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "27e4b32c99c4",
+    "player_id": "692397",
+    "player_name": "Amin Farouk",
+    "valuation_amount": 125000,
+    "valuation_date": "30/12/2021",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "d7804624d746",
+    "player_id": "692397",
+    "player_name": "Amin Farouk",
+    "valuation_amount": 125000,
+    "valuation_date": "01/06/2022",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "54bddfb1be51",
+    "player_id": "692397",
+    "player_name": "Amin Farouk",
+    "valuation_amount": 100000,
+    "valuation_date": "08/12/2022",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "a1e4ac3d9932",
+    "player_id": "692397",
+    "player_name": "Amin Farouk",
+    "valuation_amount": 100000,
+    "valuation_date": "29/06/2023",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "8a3db340d99b",
+    "player_id": "692397",
+    "player_name": "Amin Farouk",
+    "valuation_amount": 100000,
+    "valuation_date": "15/12/2023",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "d1068e0d4f13",
+    "player_id": "692397",
+    "player_name": "Amin Farouk",
+    "valuation_amount": 100000,
+    "valuation_date": "06/06/2024",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "e0c68b1c5b1a",
+    "player_id": "692397",
+    "player_name": "Amin Farouk",
+    "valuation_amount": 75000,
+    "valuation_date": "30/12/2024",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "6326dbc3377c",
+    "player_id": "692397",
+    "player_name": "Amin Farouk",
+    "valuation_amount": 75000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "SV Wehen Wiesbaden",
+    "club_id_at_valuation": "108",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "5572063dbf0e",
+    "player_id": "692397",
+    "player_name": "Amin Farouk",
+    "valuation_amount": 100000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "85d440851a32",
+    "player_id": "867398",
+    "player_name": "Marco Speck",
+    "valuation_amount": 25000,
+    "valuation_date": "30/06/2021",
+    "club_name_at_valuation": "FSV Frankfurt U19",
+    "club_id_at_valuation": "8274",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "aadd093015d0",
+    "player_id": "867398",
+    "player_name": "Marco Speck",
+    "valuation_amount": 0,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "SC Hessen Dreieich",
+    "club_id_at_valuation": "42005",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "ef80a25c2a98",
+    "player_id": "813905",
+    "player_name": "Sebastian Schreiber",
+    "valuation_amount": 25000,
+    "valuation_date": "15/02/2021",
+    "club_name_at_valuation": "FSV Frankfurt U19",
+    "club_id_at_valuation": "8274",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "52519fbcfd84",
+    "player_id": "813905",
+    "player_name": "Sebastian Schreiber",
+    "valuation_amount": 25000,
+    "valuation_date": "30/06/2021",
+    "club_name_at_valuation": "FSV Frankfurt U19",
+    "club_id_at_valuation": "8274",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "6d2a23dd5d92",
+    "player_id": "813905",
+    "player_name": "Sebastian Schreiber",
+    "valuation_amount": 25000,
+    "valuation_date": "31/12/2021",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "35d3e405377e",
+    "player_id": "813905",
+    "player_name": "Sebastian Schreiber",
+    "valuation_amount": 10000,
+    "valuation_date": "19/12/2022",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "039e37612352",
+    "player_id": "813905",
+    "player_name": "Sebastian Schreiber",
+    "valuation_amount": 10000,
+    "valuation_date": "29/06/2023",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "19e4d7facb7c",
+    "player_id": "813905",
+    "player_name": "Sebastian Schreiber",
+    "valuation_amount": 0,
+    "valuation_date": "01/07/2023",
+    "club_name_at_valuation": "FC Bayern Alzenau",
+    "club_id_at_valuation": "4900",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "49fa3339f78f",
+    "player_id": "889169",
+    "player_name": "Miguel Costa",
+    "valuation_amount": 25000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "758d2a9011b5",
+    "player_id": "889169",
+    "player_name": "Miguel Costa",
+    "valuation_amount": 25000,
+    "valuation_date": "31/12/2021",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "f055f8d63606",
+    "player_id": "889169",
+    "player_name": "Miguel Costa",
+    "valuation_amount": 25000,
+    "valuation_date": "28/06/2022",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "bb2006e36765",
+    "player_id": "889169",
+    "player_name": "Miguel Costa",
+    "valuation_amount": 25000,
+    "valuation_date": "19/12/2022",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "d8208ed28061",
+    "player_id": "889169",
+    "player_name": "Miguel Costa",
+    "valuation_amount": 25000,
+    "valuation_date": "29/06/2023",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "c6fd2f3d4121",
+    "player_id": "889169",
+    "player_name": "Miguel Costa",
+    "valuation_amount": 10000,
+    "valuation_date": "10/01/2024",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "1e13362b5034",
+    "player_id": "889169",
+    "player_name": "Miguel Costa",
+    "valuation_amount": 0,
+    "valuation_date": "30/06/2024",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "925d38146f22",
+    "player_id": "894976",
+    "player_name": "Louis Evis",
+    "valuation_amount": 25000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "014e4da088bf",
+    "player_id": "894976",
+    "player_name": "Louis Evis",
+    "valuation_amount": 25000,
+    "valuation_date": "31/12/2021",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "914a5566fc14",
+    "player_id": "894976",
+    "player_name": "Louis Evis",
+    "valuation_amount": 25000,
+    "valuation_date": "28/06/2022",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "a09c977be0d1",
+    "player_id": "894976",
+    "player_name": "Louis Evis",
+    "valuation_amount": 0,
+    "valuation_date": "30/08/2022",
+    "club_name_at_valuation": "SV Langensteinbach",
+    "club_id_at_valuation": "2320",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "4912b4574318",
+    "player_id": "999662",
+    "player_name": "Marlon Liivaru",
+    "valuation_amount": 10000,
+    "valuation_date": "06/03/2024",
+    "club_name_at_valuation": "Kalju FC",
+    "club_id_at_valuation": "22783",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "e28481d4e015",
+    "player_id": "999662",
+    "player_name": "Marlon Liivaru",
+    "valuation_amount": 10000,
+    "valuation_date": "15/05/2024",
+    "club_name_at_valuation": "Kalju FC",
+    "club_id_at_valuation": "22783",
+    "age_at_valuation": 16
+  },
+  {
+    "valuation_id": "8d770df94f40",
+    "player_id": "999662",
+    "player_name": "Marlon Liivaru",
+    "valuation_amount": 0,
+    "valuation_date": "14/03/2025",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "ff07a250e970",
+    "player_id": "1013869",
+    "player_name": "Seok-min Park",
+    "valuation_amount": 25000,
+    "valuation_date": "17/10/2022",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "e13d13e64522",
+    "player_id": "1013869",
+    "player_name": "Seok-min Park",
+    "valuation_amount": 25000,
+    "valuation_date": "19/12/2022",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "34813ca9758d",
+    "player_id": "1013869",
+    "player_name": "Seok-min Park",
+    "valuation_amount": 25000,
+    "valuation_date": "29/06/2023",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "b26cfe1e7909",
+    "player_id": "1013869",
+    "player_name": "Seok-min Park",
+    "valuation_amount": 0,
+    "valuation_date": "28/07/2023",
+    "club_name_at_valuation": "SV Rot-Weiss Walldorf",
+    "club_id_at_valuation": "7702",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "0569e391ac34",
+    "player_id": "829338",
+    "player_name": "George Iorga",
+    "valuation_amount": 25000,
+    "valuation_date": "06/01/2025",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "b7d777b11c6e",
+    "player_id": "829338",
+    "player_name": "George Iorga",
+    "valuation_amount": 50000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "baeab3ccf643",
+    "player_id": "829338",
+    "player_name": "George Iorga",
+    "valuation_amount": 75000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "cb3650a578c8",
+    "player_id": "902982",
+    "player_name": "Matteo Costa",
+    "valuation_amount": 25000,
+    "valuation_date": "17/10/2022",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "55d0f4835059",
+    "player_id": "902982",
+    "player_name": "Matteo Costa",
+    "valuation_amount": 25000,
+    "valuation_date": "19/12/2022",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "2bd7768c16a3",
+    "player_id": "902982",
+    "player_name": "Matteo Costa",
+    "valuation_amount": 25000,
+    "valuation_date": "29/06/2023",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "755b4d8a7fbb",
+    "player_id": "902982",
+    "player_name": "Matteo Costa",
+    "valuation_amount": 25000,
+    "valuation_date": "10/01/2024",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "619f1594dbf0",
+    "player_id": "902982",
+    "player_name": "Matteo Costa",
+    "valuation_amount": 25000,
+    "valuation_date": "30/06/2024",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "d87656893778",
+    "player_id": "902982",
+    "player_name": "Matteo Costa",
+    "valuation_amount": 0,
+    "valuation_date": "25/09/2024",
+    "club_name_at_valuation": "UMass Lowell River Hawks (Massachusetts Uni.)",
+    "club_id_at_valuation": "59561",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "a820e70cad24",
+    "player_id": "815914",
+    "player_name": "Ajet Grajcevci",
+    "valuation_amount": 25000,
+    "valuation_date": "12/09/2023",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "d83dde4c3d2d",
+    "player_id": "815914",
+    "player_name": "Ajet Grajcevci",
+    "valuation_amount": 10000,
+    "valuation_date": "10/01/2024",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "9496628e753d",
+    "player_id": "815914",
+    "player_name": "Ajet Grajcevci",
+    "valuation_amount": 10000,
+    "valuation_date": "30/06/2024",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "31e2f83d5be0",
+    "player_id": "815914",
+    "player_name": "Ajet Grajcevci",
+    "valuation_amount": 0,
+    "valuation_date": "25/09/2024",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "d61e6cfd90a0",
+    "player_id": "814188",
+    "player_name": "Timo Haböck",
+    "valuation_amount": 10000,
+    "valuation_date": "07/04/2022",
+    "club_name_at_valuation": "FSV Frankfurt U19",
+    "club_id_at_valuation": "8274",
+    "age_at_valuation": 17
+  },
+  {
+    "valuation_id": "83ec0819d15b",
+    "player_id": "814188",
+    "player_name": "Timo Haböck",
+    "valuation_amount": 10000,
+    "valuation_date": "28/06/2022",
+    "club_name_at_valuation": "FSV Frankfurt U19",
+    "club_id_at_valuation": "8274",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "97d9c8ab1d9c",
+    "player_id": "814188",
+    "player_name": "Timo Haböck",
+    "valuation_amount": 10000,
+    "valuation_date": "10/01/2024",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "b9fde0ff7cad",
+    "player_id": "814188",
+    "player_name": "Timo Haböck",
+    "valuation_amount": 10000,
+    "valuation_date": "30/06/2024",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "eb6aeecbe5f9",
+    "player_id": "814188",
+    "player_name": "Timo Haböck",
+    "valuation_amount": 0,
+    "valuation_date": "27/09/2024",
+    "club_name_at_valuation": "UCF Knights (University of Central Florida)",
+    "club_id_at_valuation": "31632",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "d2f7dc025eaf",
+    "player_id": "665529",
+    "player_name": "Viktor Grbic",
+    "valuation_amount": 200000,
+    "valuation_date": "17/12/2025",
+    "club_name_at_valuation": "FK Rudar Prijedor",
+    "club_id_at_valuation": "24197",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "ddc33dc3368f",
+    "player_id": "814190",
+    "player_name": "Timo Hildmann",
+    "valuation_amount": 75000,
+    "valuation_date": "12/09/2023",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "4876958d4693",
+    "player_id": "814190",
+    "player_name": "Timo Hildmann",
+    "valuation_amount": 75000,
+    "valuation_date": "10/01/2024",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "ecaf7c7309f1",
+    "player_id": "814190",
+    "player_name": "Timo Hildmann",
+    "valuation_amount": 75000,
+    "valuation_date": "30/06/2024",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "80299c497934",
+    "player_id": "814190",
+    "player_name": "Timo Hildmann",
+    "valuation_amount": 100000,
+    "valuation_date": "06/01/2025",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "b398dfdbcb7d",
+    "player_id": "814190",
+    "player_name": "Timo Hildmann",
+    "valuation_amount": 125000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "7b95e4934c71",
+    "player_id": "814190",
+    "player_name": "Timo Hildmann",
+    "valuation_amount": 150000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "5039cd9e5620",
+    "player_id": "649147",
+    "player_name": "Kerem Sari",
+    "valuation_amount": 10000,
+    "valuation_date": "10/09/2021",
+    "club_name_at_valuation": "SV Atlas Delmenhorst",
+    "club_id_at_valuation": "29988",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "f674d2d0e757",
+    "player_id": "649147",
+    "player_name": "Kerem Sari",
+    "valuation_amount": 25000,
+    "valuation_date": "28/12/2021",
+    "club_name_at_valuation": "SV Atlas Delmenhorst",
+    "club_id_at_valuation": "29988",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "55a2316c449e",
+    "player_id": "649147",
+    "player_name": "Kerem Sari",
+    "valuation_amount": 50000,
+    "valuation_date": "23/06/2022",
+    "club_name_at_valuation": "SV Atlas Delmenhorst",
+    "club_id_at_valuation": "29988",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "c14956fdbac6",
+    "player_id": "649147",
+    "player_name": "Kerem Sari",
+    "valuation_amount": 50000,
+    "valuation_date": "29/12/2022",
+    "club_name_at_valuation": "Holstein Kiel II",
+    "club_id_at_valuation": "1171",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "1a9185d56ebe",
+    "player_id": "649147",
+    "player_name": "Kerem Sari",
+    "valuation_amount": 25000,
+    "valuation_date": "21/06/2023",
+    "club_name_at_valuation": "Holstein Kiel II",
+    "club_id_at_valuation": "1171",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "f2e50cee59f4",
+    "player_id": "649147",
+    "player_name": "Kerem Sari",
+    "valuation_amount": 0,
+    "valuation_date": "05/07/2023",
+    "club_name_at_valuation": "SV Atlas Delmenhorst",
+    "club_id_at_valuation": "29988",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "7e03a8c8863e",
+    "player_id": "649147",
+    "player_name": "Kerem Sari",
+    "valuation_amount": 10000,
+    "valuation_date": "06/09/2025",
+    "club_name_at_valuation": "FSV Schöningen",
+    "club_id_at_valuation": "37381",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "ba6f13ac8a3b",
+    "player_id": "649147",
+    "player_name": "Kerem Sari",
+    "valuation_amount": 10000,
+    "valuation_date": "15/12/2025",
+    "club_name_at_valuation": "FSV Schöningen",
+    "club_id_at_valuation": "37381",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "ecc9b8edcd06",
+    "player_id": "656320",
+    "player_name": "Bakir Basic",
+    "valuation_amount": 50000,
+    "valuation_date": "04/03/2024",
+    "club_name_at_valuation": "NK GOSK Gabela",
+    "club_id_at_valuation": "9544",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "5ab9c38bd12b",
+    "player_id": "656320",
+    "player_name": "Bakir Basic",
+    "valuation_amount": 50000,
+    "valuation_date": "11/06/2024",
+    "club_name_at_valuation": "NK GOSK Gabela",
+    "club_id_at_valuation": "9544",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "1bcca6fa0c14",
+    "player_id": "656320",
+    "player_name": "Bakir Basic",
+    "valuation_amount": 50000,
+    "valuation_date": "19/12/2024",
+    "club_name_at_valuation": "FK Gorazde",
+    "club_id_at_valuation": "25435",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "ed7cecc03865",
+    "player_id": "656320",
+    "player_name": "Bakir Basic",
+    "valuation_amount": 75000,
+    "valuation_date": "04/06/2025",
+    "club_name_at_valuation": "FK Gorazde",
+    "club_id_at_valuation": "25435",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "add5e91c8ff6",
+    "player_id": "656320",
+    "player_name": "Bakir Basic",
+    "valuation_amount": 0,
+    "valuation_date": "09/09/2025",
+    "club_name_at_valuation": "FK Gorazde",
+    "club_id_at_valuation": "25435",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "95854acc26b1",
+    "player_id": "698672",
+    "player_name": "Ben Heuser",
+    "valuation_amount": 50000,
+    "valuation_date": "01/08/2023",
+    "club_name_at_valuation": "Rot-Weiss Essen",
+    "club_id_at_valuation": "56",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "a501f2d22db0",
+    "player_id": "698672",
+    "player_name": "Ben Heuser",
+    "valuation_amount": 0,
+    "valuation_date": "01/07/2024",
+    "club_name_at_valuation": "VfL Bochum II",
+    "club_id_at_valuation": "446",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "10cdf9258c97",
+    "player_id": "698672",
+    "player_name": "Ben Heuser",
+    "valuation_amount": 25000,
+    "valuation_date": "05/09/2025",
+    "club_name_at_valuation": "VfL Bochum II",
+    "club_id_at_valuation": "446",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "bad1353c5c22",
+    "player_id": "698672",
+    "player_name": "Ben Heuser",
+    "valuation_amount": 25000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "VfL Bochum II",
+    "club_id_at_valuation": "446",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "87e257a7506c",
+    "player_id": "790918",
+    "player_name": "Joshua Quarshie",
+    "valuation_amount": 200000,
+    "valuation_date": "17/10/2022",
+    "club_name_at_valuation": "TSG 1899 Hoffenheim II",
+    "club_id_at_valuation": "983",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "339639ca0acd",
+    "player_id": "790918",
+    "player_name": "Joshua Quarshie",
+    "valuation_amount": 250000,
+    "valuation_date": "19/12/2022",
+    "club_name_at_valuation": "TSG 1899 Hoffenheim II",
+    "club_id_at_valuation": "983",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "7bc63a961928",
+    "player_id": "790918",
+    "player_name": "Joshua Quarshie",
+    "valuation_amount": 250000,
+    "valuation_date": "22/06/2023",
+    "club_name_at_valuation": "TSG 1899 Hoffenheim II",
+    "club_id_at_valuation": "983",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "8cd1e3331cb4",
+    "player_id": "790918",
+    "player_name": "Joshua Quarshie",
+    "valuation_amount": 250000,
+    "valuation_date": "14/12/2023",
+    "club_name_at_valuation": "TSG 1899 Hoffenheim",
+    "club_id_at_valuation": "533",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "4c48515b7fc6",
+    "player_id": "790918",
+    "player_name": "Joshua Quarshie",
+    "valuation_amount": 800000,
+    "valuation_date": "22/03/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf",
+    "club_id_at_valuation": "38",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "b85607ce56dc",
+    "player_id": "790918",
+    "player_name": "Joshua Quarshie",
+    "valuation_amount": 800000,
+    "valuation_date": "06/06/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf",
+    "club_id_at_valuation": "38",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "6039d200d754",
+    "player_id": "790918",
+    "player_name": "Joshua Quarshie",
+    "valuation_amount": 800000,
+    "valuation_date": "19/12/2024",
+    "club_name_at_valuation": "Fortuna Düsseldorf",
+    "club_id_at_valuation": "38",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "3b7c4a8c7318",
+    "player_id": "790918",
+    "player_name": "Joshua Quarshie",
+    "valuation_amount": 1200000,
+    "valuation_date": "26/03/2025",
+    "club_name_at_valuation": "SpVgg Greuther Fürth",
+    "club_id_at_valuation": "65",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "4a62b340d64c",
+    "player_id": "790918",
+    "player_name": "Joshua Quarshie",
+    "valuation_amount": 3000000,
+    "valuation_date": "19/06/2025",
+    "club_name_at_valuation": "SpVgg Greuther Fürth",
+    "club_id_at_valuation": "65",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "c88003a1e8bc",
+    "player_id": "790918",
+    "player_name": "Joshua Quarshie",
+    "valuation_amount": 4000000,
+    "valuation_date": "06/10/2025",
+    "club_name_at_valuation": "Southampton FC",
+    "club_id_at_valuation": "180",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "8d15e97fa293",
+    "player_id": "790918",
+    "player_name": "Joshua Quarshie",
+    "valuation_amount": 4000000,
+    "valuation_date": "03/12/2025",
+    "club_name_at_valuation": "Southampton FC",
+    "club_id_at_valuation": "180",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "dc2cd64a9208",
+    "player_id": "606098",
+    "player_name": "Nils Kaiser",
+    "valuation_amount": 25000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "Rot-Weiss Essen",
+    "club_id_at_valuation": "56",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "bcd237129884",
+    "player_id": "606098",
+    "player_name": "Nils Kaiser",
+    "valuation_amount": 25000,
+    "valuation_date": "22/12/2021",
+    "club_name_at_valuation": "Rot-Weiss Essen",
+    "club_id_at_valuation": "56",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "0240afac952e",
+    "player_id": "606098",
+    "player_name": "Nils Kaiser",
+    "valuation_amount": 50000,
+    "valuation_date": "13/06/2022",
+    "club_name_at_valuation": "Rot-Weiss Essen",
+    "club_id_at_valuation": "56",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "f338fcc49cd2",
+    "player_id": "606098",
+    "player_name": "Nils Kaiser",
+    "valuation_amount": 50000,
+    "valuation_date": "12/12/2022",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "1503712c893a",
+    "player_id": "606098",
+    "player_name": "Nils Kaiser",
+    "valuation_amount": 50000,
+    "valuation_date": "12/06/2023",
+    "club_name_at_valuation": "SC Wiedenbrück",
+    "club_id_at_valuation": "4955",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "757cf21d0ca5",
+    "player_id": "606098",
+    "player_name": "Nils Kaiser",
+    "valuation_amount": 100000,
+    "valuation_date": "28/12/2023",
+    "club_name_at_valuation": "Rot-Weiss Essen",
+    "club_id_at_valuation": "56",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "d8bc4a3be3f2",
+    "player_id": "606098",
+    "player_name": "Nils Kaiser",
+    "valuation_amount": 150000,
+    "valuation_date": "20/03/2024",
+    "club_name_at_valuation": "Rot-Weiss Essen",
+    "club_id_at_valuation": "56",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "4baa85997903",
+    "player_id": "606098",
+    "player_name": "Nils Kaiser",
+    "valuation_amount": 200000,
+    "valuation_date": "11/06/2024",
+    "club_name_at_valuation": "Rot-Weiss Essen",
+    "club_id_at_valuation": "56",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "0032bc99cd44",
+    "player_id": "606098",
+    "player_name": "Nils Kaiser",
+    "valuation_amount": 150000,
+    "valuation_date": "30/12/2024",
+    "club_name_at_valuation": "Rot-Weiss Essen",
+    "club_id_at_valuation": "56",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "64388cd34267",
+    "player_id": "606098",
+    "player_name": "Nils Kaiser",
+    "valuation_amount": 125000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "Rot-Weiss Essen",
+    "club_id_at_valuation": "56",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "39eb6c17af33",
+    "player_id": "606098",
+    "player_name": "Nils Kaiser",
+    "valuation_amount": 125000,
+    "valuation_date": "23/12/2025",
+    "club_name_at_valuation": "Rot-Weiss Essen",
+    "club_id_at_valuation": "56",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "5c37aef6da5d",
+    "player_id": "821404",
+    "player_name": "Martin Dahlem",
+    "valuation_amount": 10000,
+    "valuation_date": "01/07/2021",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "d1bf34c95129",
+    "player_id": "821404",
+    "player_name": "Martin Dahlem",
+    "valuation_amount": 10000,
+    "valuation_date": "31/12/2021",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "f753bae8f7e6",
+    "player_id": "821404",
+    "player_name": "Martin Dahlem",
+    "valuation_amount": 0,
+    "valuation_date": "01/01/2022",
+    "club_name_at_valuation": "FC Basara Mainz",
+    "club_id_at_valuation": "46739",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "3d98144daa4a",
+    "player_id": "486455",
+    "player_name": "Birkan Celik",
+    "valuation_amount": 25000,
+    "valuation_date": "30/09/2021",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "8f9957fb97be",
+    "player_id": "486455",
+    "player_name": "Birkan Celik",
+    "valuation_amount": 25000,
+    "valuation_date": "31/12/2021",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "df3ead2dd06c",
+    "player_id": "486455",
+    "player_name": "Birkan Celik",
+    "valuation_amount": 50000,
+    "valuation_date": "28/06/2022",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "bdc451c446aa",
+    "player_id": "486455",
+    "player_name": "Birkan Celik",
+    "valuation_amount": 50000,
+    "valuation_date": "19/12/2022",
+    "club_name_at_valuation": "FC-Astoria Walldorf",
+    "club_id_at_valuation": "1348",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "b84ee68a913c",
+    "player_id": "486455",
+    "player_name": "Birkan Celik",
+    "valuation_amount": 25000,
+    "valuation_date": "29/06/2023",
+    "club_name_at_valuation": "FC-Astoria Walldorf",
+    "club_id_at_valuation": "1348",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "d9079abf7db0",
+    "player_id": "486455",
+    "player_name": "Birkan Celik",
+    "valuation_amount": 25000,
+    "valuation_date": "10/01/2024",
+    "club_name_at_valuation": "FC-Astoria Walldorf",
+    "club_id_at_valuation": "1348",
+    "age_at_valuation": 21
+  },
+  {
+    "valuation_id": "4b9acd64b3a0",
+    "player_id": "486455",
+    "player_name": "Birkan Celik",
+    "valuation_amount": 25000,
+    "valuation_date": "30/06/2024",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "fdc322da2405",
+    "player_id": "486455",
+    "player_name": "Birkan Celik",
+    "valuation_amount": 50000,
+    "valuation_date": "06/01/2025",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 22
+  },
+  {
+    "valuation_id": "70d7757236f4",
+    "player_id": "486455",
+    "player_name": "Birkan Celik",
+    "valuation_amount": 75000,
+    "valuation_date": "11/06/2025",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "c894825b377f",
+    "player_id": "486455",
+    "player_name": "Birkan Celik",
+    "valuation_amount": 125000,
+    "valuation_date": "19/12/2025",
+    "club_name_at_valuation": "FSV Frankfurt",
+    "club_id_at_valuation": "293",
+    "age_at_valuation": 23
+  },
+  {
+    "valuation_id": "69204441ea5e",
+    "player_id": "821403",
+    "player_name": "Elias Huber",
+    "valuation_amount": 10000,
+    "valuation_date": "27/08/2021",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 18
+  },
+  {
+    "valuation_id": "d35e26d45fed",
+    "player_id": "821403",
+    "player_name": "Elias Huber",
+    "valuation_amount": 10000,
+    "valuation_date": "31/12/2021",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "7c53acb94ecb",
+    "player_id": "821403",
+    "player_name": "Elias Huber",
+    "valuation_amount": 10000,
+    "valuation_date": "28/06/2022",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "94da8515089c",
+    "player_id": "821403",
+    "player_name": "Elias Huber",
+    "valuation_amount": 0,
+    "valuation_date": "04/10/2022",
+    "club_name_at_valuation": "Unknown",
+    "club_id_at_valuation": "75",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "17d6318535eb",
+    "player_id": "743508",
+    "player_name": "Tim Arnhold",
+    "valuation_amount": 10000,
+    "valuation_date": "12/09/2023",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "a4817f46ef8b",
+    "player_id": "743508",
+    "player_name": "Tim Arnhold",
+    "valuation_amount": 10000,
+    "valuation_date": "10/01/2024",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 19
+  },
+  {
+    "valuation_id": "a01255d06f59",
+    "player_id": "743508",
+    "player_name": "Tim Arnhold",
+    "valuation_amount": 10000,
+    "valuation_date": "30/06/2024",
+    "club_name_at_valuation": "TSV Schott Mainz",
+    "club_id_at_valuation": "9695",
+    "age_at_valuation": 20
+  },
+  {
+    "valuation_id": "1e185d698594",
+    "player_id": "743508",
+    "player_name": "Tim Arnhold",
+    "valuation_amount": 0,
+    "valuation_date": "25/09/2024",
+    "club_name_at_valuation": "Without Club",
+    "club_id_at_valuation": "515",
+    "age_at_valuation": 20
+  }
+]
