@@ -85,7 +85,8 @@ def load_all_json_files(data_dir: Path) -> List[FileRecord]:
     players, teams) are included. Uses load_json from utils (supports multi-part).
     """
     result: List[FileRecord] = []
-    bases = list_json_bases("*.json")
+    # bases = list_json_bases("*.json")
+    bases = list_json_bases("*_all_*.json")
     print(f"Loading JSON files from {data_dir} …")
 
     for base in bases:

@@ -129,7 +129,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: leagues-all-data
-          path: data/json/leagues_*.json
+          path: data/json/leagues_all_*.json
           retention-days: 1
 
   # ============================================================
@@ -216,7 +216,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: teams-all-data
-          path: data/json/teams_*.json
+          path: data/json/teams_all_*.json
           retention-days: 1
 
   # ============================================================
@@ -303,7 +303,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: players-all-data
-          path: data/json/players_*.json
+          path: data/json/players_all_*.json
           retention-days: 1
 
   # ============================================================
@@ -390,7 +390,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: transfers-all-data
-          path: data/json/transfers_*.json
+          path: data/json/transfers_all_*.json
           retention-days: 1
 
   # ============================================================
@@ -477,7 +477,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: valuations-all-data
-          path: data/json/valuations_*.json
+          path: data/json/valuations_all_*.json
           retention-days: 1
 
   # ============================================================
