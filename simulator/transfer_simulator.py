@@ -241,6 +241,50 @@ class TransferSimulator:
         self.team_market_values: Dict[str, float] = {}  # team_name -> total market value
         self.predictor = None
     
+    def preload_data(
+        self,
+        verbose: bool = False,
+        progress_callback: Optional[object] = None,
+    ) -> List[Player]:
+        """Load data, identify squad and calculate team values (steps 1-3).
+
+        Call this before ``run()`` when you need to show the squad to the user
+        (e.g. for manual sell selection).  The results are cached on the
+        instance so that ``run(preloaded=True)`` can skip these steps.
+
+        Returns:
+            The club's player list.
+        """
+        def _progress(pct: float, key: str) -> None:
+            if progress_callback is not None:
+                progress_callback(pct, key)
+
+        _progress(0.05, "step_loading")
+        all_players = self._load_active_players(verbose=verbose)
+        self.all_players = all_players
+
+        _progress(0.20, "step_team")
+        club_players = self._get_club_players(all_players)
+        if not club_players:
+            raise ValueError(f"No players found for club: {self.club_name}")
+        self.club_players = club_players
+
+        _progress(0.35, "step_team_values")
+        self.team_market_values = self._calculate_team_market_values(all_players)
+
+        self._athletic_eligible_ids: Optional[set] = None
+        self._is_athletic = self._is_athletic_club()
+        athletic_in_market = any(
+            name.lower() in ATHLETIC_FAMILY_NAMES
+            for name in self.team_market_values
+        )
+        if self._is_athletic or athletic_in_market:
+            self._athletic_eligible_ids = self._load_athletic_eligible_ids(verbose=verbose)
+
+        self._preloaded = True
+        _progress(0.40, "step_team_values")
+        return club_players
+
     def _load_active_players(self, verbose: bool = False) -> List[Player]:
         """
         Load active players at season start using the data_loader pipeline.
@@ -559,6 +603,47 @@ class TransferSimulator:
         
         return sold_players, formation_needed
 
+    def _sell_selected_players(
+        self,
+        club_players: List[Player],
+        player_ids_to_sell: List[str],
+        athletic_eligible_ids: Optional[set] = None,
+    ) -> Tuple[List[SoldPlayer], List[int]]:
+        """Sell specific players chosen by the user.
+
+        Same destination-finding logic as ``_sell_random_players`` but only
+        the players whose ``player_id`` is in *player_ids_to_sell* are put
+        up for sale.
+
+        Returns:
+            (sold_players, formation_needed) where formation_needed is [GK, DEF, MID, ATT]
+        """
+        ids_to_sell = set(player_ids_to_sell)
+        sales_per_position = {"GK": 0, "DEF": 0, "MID": 0, "ATT": 0}
+        sold_players: List[SoldPlayer] = []
+
+        for player in club_players:
+            if player.player_id not in ids_to_sell:
+                continue
+            if player.position not in sales_per_position:
+                continue
+            destination = self._find_destination_team(
+                player,
+                excluded_teams=[self.club_name],
+                athletic_eligible_ids=athletic_eligible_ids,
+            )
+            sold_players.append(SoldPlayer(player=player, destination_team=destination))
+            if destination is not None:
+                sales_per_position[player.position] += 1
+
+        formation_needed = [
+            sales_per_position["GK"],
+            sales_per_position["DEF"],
+            sales_per_position["MID"],
+            sales_per_position["ATT"],
+        ]
+        return sold_players, formation_needed
+
     def _sell_players_by_value_decline(
         self,
         club_players: List[Player],
@@ -769,6 +854,8 @@ class TransferSimulator:
         llm_api_key: Optional[str] = None,
         progress_callback: Optional[object] = None,
         unlimited_budget: bool = False,
+        players_to_sell: Optional[List[str]] = None,
+        buy_counts: Optional[Dict[str, int]] = None,
     ) -> TransferResult:
         f"""
         Run the transfer simulation.
@@ -790,6 +877,12 @@ class TransferSimulator:
                 used by the Streamlit UI (e.g. ``"step_loading"``).
             unlimited_budget: If True, ignore budget constraints in the
                 knapsack optimiser.
+            players_to_sell: Optional list of player IDs to sell manually.
+                When provided, ``sell_by_value_decline`` and random selling
+                are skipped.
+            buy_counts: Optional per-position count of players to buy.
+                E.g. ``{{"GK": 0, "DEF": 2, "MID": 1, "ATT": 1}}``.
+                Overrides the formation derived from sales.
 
         Returns:
             TransferResult with simulation details
@@ -799,56 +892,71 @@ class TransferSimulator:
             if progress_callback is not None:
                 progress_callback(pct, key)
 
-        # ── Step 1/8: Load data ──────────────────────────────────────────
-        _progress(0.05, "step_loading")
-        if verbose:
-            print(f"Loading data for {self.season}...")
+        preloaded = getattr(self, "_preloaded", False)
 
-        all_players = self._load_active_players(verbose=verbose)
-        self.all_players = all_players
-
-        if verbose:
-            print(f"  Loaded {len(all_players)} active players")
-
-        # ── Step 2/8: Identify club squad ────────────────────────────────
-        _progress(0.20, "step_team")
-        club_players = self._get_club_players(all_players)
-
-        if not club_players:
-            raise ValueError(f"No players found for club: {self.club_name}")
-
-        if verbose:
-            print(f"  {self.club_name} has {len(club_players)} players")
-
-        # ── Step 3/8: Calculate team market values ───────────────────────
-        _progress(0.35, "step_team_values")
-        self.team_market_values = self._calculate_team_market_values(all_players)
-
-        if verbose:
-            print(f"  Calculated market values for {len(self.team_market_values)} teams")
-
-        # Athletic Bilbao special case: Athletic can only BUY players with
-        # Athletic family history, and only Athletic-eligible players can be
-        # SOLD to Athletic.  Pre-compute the eligible set when relevant.
-        athletic_eligible_ids: Optional[set] = None
-        is_athletic = self._is_athletic_club()
-        athletic_in_market = any(
-            name.lower() in ATHLETIC_FAMILY_NAMES
-            for name in self.team_market_values
-        )
-        if is_athletic or athletic_in_market:
-            if verbose and is_athletic:
-                print("  Athletic Bilbao detected – loading transfer history for eligibility filter...")
-            elif verbose:
-                print("  Athletic family club(s) in market – loading transfer history for sell filter...")
-            athletic_eligible_ids = self._load_athletic_eligible_ids(verbose=verbose)
+        if preloaded:
+            all_players = self.all_players
+            club_players = self.club_players
+            athletic_eligible_ids = getattr(self, "_athletic_eligible_ids", None)
+            is_athletic = getattr(self, "_is_athletic", False)
             if verbose:
-                print(f"  {len(athletic_eligible_ids)} players with Athletic family history found")
+                print(f"Using preloaded data: {len(all_players)} players, "
+                      f"{len(club_players)} in squad")
+            _progress(0.40, "step_team_values")
+        else:
+            # ── Step 1/8: Load data ──────────────────────────────────────
+            _progress(0.05, "step_loading")
+            if verbose:
+                print(f"Loading data for {self.season}...")
+
+            all_players = self._load_active_players(verbose=verbose)
+            self.all_players = all_players
+
+            if verbose:
+                print(f"  Loaded {len(all_players)} active players")
+
+            # ── Step 2/8: Identify club squad ────────────────────────────
+            _progress(0.20, "step_team")
+            club_players = self._get_club_players(all_players)
+
+            if not club_players:
+                raise ValueError(f"No players found for club: {self.club_name}")
+
+            if verbose:
+                print(f"  {self.club_name} has {len(club_players)} players")
+
+            # ── Step 3/8: Calculate team market values ───────────────────
+            _progress(0.35, "step_team_values")
+            self.team_market_values = self._calculate_team_market_values(all_players)
+
+            if verbose:
+                print(f"  Calculated market values for {len(self.team_market_values)} teams")
+
+            athletic_eligible_ids: Optional[set] = None
+            is_athletic = self._is_athletic_club()
+            athletic_in_market = any(
+                name.lower() in ATHLETIC_FAMILY_NAMES
+                for name in self.team_market_values
+            )
+            if is_athletic or athletic_in_market:
+                if verbose and is_athletic:
+                    print("  Athletic Bilbao detected – loading transfer history for eligibility filter...")
+                elif verbose:
+                    print("  Athletic family club(s) in market – loading transfer history for sell filter...")
+                athletic_eligible_ids = self._load_athletic_eligible_ids(verbose=verbose)
+                if verbose:
+                    print(f"  {len(athletic_eligible_ids)} players with Athletic family history found")
 
         # ── Step 4/8: Sell players ───────────────────────────────────────
         _progress(0.50, "step_selling")
         pred_cache: Optional[dict] = None
-        if sell_by_value_decline:
+        if players_to_sell is not None:
+            sold_players, formation_needed = self._sell_selected_players(
+                club_players,
+                players_to_sell,
+                athletic_eligible_ids=athletic_eligible_ids,
+            )
+        elif sell_by_value_decline:
             if verbose:
                 print("  Predicting values for squad (sell-by-decline mode)...")
             pred_cache = {}
@@ -918,8 +1026,16 @@ class TransferSimulator:
         if verbose:
             print(f"  Finding optimal signings...")
 
-        gk_needed, def_needed, mid_needed, att_needed = formation_needed
-        custom_formation = [[gk_needed, def_needed, mid_needed, att_needed]]
+        if buy_counts:
+            custom_formation = [[
+                buy_counts.get("GK", 0),
+                buy_counts.get("DEF", 0),
+                buy_counts.get("MID", 0),
+                buy_counts.get("ATT", 0),
+            ]]
+        else:
+            gk_needed, def_needed, mid_needed, att_needed = formation_needed
+            custom_formation = [[gk_needed, def_needed, mid_needed, att_needed]]
 
         results = best_full_teams(
             available_players,

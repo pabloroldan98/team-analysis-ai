@@ -216,7 +216,12 @@ The reasoning: a player's annual salary is roughly **10% of their market value**
 
 #### Sell Phase
 
-The simulator randomly selects **5 to 10 players** to put on the transfer market (max 3 per position). For each player:
+The simulator supports two selling modes:
+
+1. **Manual selection** (Streamlit UI): The user loads the team data, then picks exactly which players to sell from multiselects grouped by position.
+2. **Random selection** (default / CLI): Randomly selects **5 to 10 players** to put on the transfer market (max 3 per position).
+
+In both modes, for each player:
 
 - **On-loan players are excluded** from the sellable pool — they belong to another club and cannot be sold.
 - A **destination club** is found at random among clubs whose total squad value is at least **10× the player's market value** (a rough proxy for "can afford this player").
@@ -226,7 +231,9 @@ The simulator randomly selects **5 to 10 players** to put on the transfer market
 
 #### Buy Phase
 
-The positions vacated by sold players need to be filled. The simulator:
+The positions vacated by sold players need to be filled. The user can configure **how many players to sign per position** (0–3 each, default 1). If no custom counts are provided, the simulator replaces each sold position 1-for-1.
+
+The simulator then:
 
 1. Takes all available players from the market (excluding the selling club's squad and sold players).
 2. **Predicts their future value** using the ML model for that season.
@@ -316,12 +323,23 @@ Set `LLM_PROVIDER` in your `.env` to choose the provider. The summary is generat
 The simulator is exposed through an interactive **Streamlit** web application, deployed at:
 
 > **[https://calculadorafichajes.streamlit.app/](https://calculadorafichajes.streamlit.app/)**
+>
+> **Note**: The hosted app may be down due to Streamlit Cloud resource limits. To test it, run it locally with `streamlit run streamlit_app.py` (see [How to Run](#how-to-run)).
+
+#### UI Flow
+
+The interface follows a sequential workflow:
+
+1. **Season & Club selection**: Choose a season and a club. Clubs are sorted by league priority (LaLiga → Premier League → Serie A → Bundesliga → Ligue 1) and then by descending total squad market value.
+2. **Load team data**: A mandatory step that loads all players, identifies the club squad, and calculates team market values. The rest of the UI is hidden until this completes.
+3. **Select players to sell**: Multiselects grouped by position (GK, DEF, MID, ATT), showing each player's name, position, and market value. If none are selected, random selling is used.
+4. **Signings per position**: Choose how many players to sign for each position (0–3, default 1).
+5. **Budget configuration**: Set transfer budget and salary budget. The budget is **additional** to the money obtained from player sales. A checkbox enables **unlimited budget** mode.
+6. **Simulate**: Runs the full simulation.
 
 #### UI Features
 
 - **Bilingual interface**: Toggle between Spanish and English with flag icons. All labels, captions, and AI analyses are language-aware.
-- **Season & Club selection**: Choose a season and a club. Clubs are sorted by league priority (LaLiga → Premier League → Serie A → Bundesliga → Ligue 1) and then by descending total squad market value.
-- **Budget configuration**: Set transfer budget and salary budget (with a caption explaining the `min(transfer, salary × 10)` formula). A checkbox enables **unlimited budget** mode, which disables the budget inputs and displays `€∞` in the results.
 - **Progress feedback**: A step-by-step progress bar with descriptive status messages (e.g., "Predicting future values with ML... [5/8]") and a spinner with a "May take a few minutes" caption.
 
 #### Output Display
@@ -427,7 +445,7 @@ team-analysis-ai/
 
 - **Salary approximation**: Real salaries are complex (bonuses, taxes, etc.). The "10% of market value" rule is a simplification.
 - **Transfer realism**: The simulation assumes any player can be bought if the budget allows, ignoring contracts, player will, or release clauses.
-- **Random sales**: The decision to sell is random (within position limits) rather than strategic. This is by design — it forces the optimizer to react to different scenarios.
+- **Sell realism**: In manual mode, the user picks who to sell. In random mode, the decision is random (within position limits) rather than strategic — this forces the optimizer to react to different scenarios.
 - **Data availability**: Relies on Transfermarkt data. Smaller leagues may have gaps in historical valuations.
 
 ### ML Model
@@ -441,9 +459,11 @@ team-analysis-ai/
 
 ### Option 1: Live App
 
-The simulator is deployed and ready to use — no installation needed:
+The simulator is deployed at:
 
 > **[https://calculadorafichajes.streamlit.app/](https://calculadorafichajes.streamlit.app/)**
+
+> **Note**: The hosted app may be down due to Streamlit Cloud resource limits. If it's unavailable, use Option 3 to run it locally.
 
 ### Option 2: GitHub Actions (Scraping)
 
@@ -565,8 +585,6 @@ python scraping_tasks/combine_data.py --entity valuations
 
 ## Future Improvements
 
-- **Customizable sell phase**: Allow the user to choose which players to sell (or protect from being sold) instead of random selection.
-- **Configurable signings per position**: Let the user decide how many players to sign for each position (e.g., "I want 2 DEF and 1 MID") rather than only replacing sold players.
 - **Strategic selling**: Sell players based on criteria (age, declining value, surplus in position) rather than purely at random.
 - **Transfer negotiation realism**: Add release clauses, contract length, and player willingness as factors that affect whether a transfer goes through.
 - **Multi-window simulation**: Simulate multiple consecutive transfer windows to see squad evolution over several seasons.

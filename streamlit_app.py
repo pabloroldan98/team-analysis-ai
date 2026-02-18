@@ -183,17 +183,16 @@ def header_language() -> str:
 
 
 # =============================================================================
-# INPUT FORM
+# STEP 1 – SEASON & CLUB
 # =============================================================================
 
-def render_inputs(lang: str):
-    """Render season / club / budget inputs and return them."""
+def render_season_club(lang: str):
+    """Render season + club selectors."""
     seasons = _get_available_seasons()
     if not seasons:
         st.warning(t(lang, "step_loading") + " (no data found)")
         st.stop()
 
-    # Prepend "Today" / "Hoy" as the first option; default selection is index 1
     today_label = t(lang, "today_option")
     display_seasons = [today_label] + seasons
     default_idx = 1 if len(display_seasons) > 1 else 0
@@ -203,25 +202,138 @@ def render_inputs(lang: str):
         selected = st.selectbox(
             t(lang, "select_season"), options=display_seasons, index=default_idx,
         )
-        # Map the display label back to the internal "today" token
         season = TODAY_SEASON if selected == today_label else selected
     with col_club:
         clubs_data = _get_clubs_for_season(season)
         club_names = [c.get("name", "") for c in clubs_data if c.get("name")]
         club_name = st.selectbox(t(lang, "select_club"), options=club_names)
 
+    return season, club_name, clubs_data
+
+
+# =============================================================================
+# STEP 2 – LOAD TEAM DATA
+# =============================================================================
+
+def _preload_team_data(lang: str, club_name: str, season: str):
+    """Create a TransferSimulator, run preload_data(), store in session_state."""
+    from simulator.transfer_simulator import TransferSimulator
+
+    progress = st.progress(0, text=t(lang, "loading_data"))
+
+    def _on_progress(pct: float, key: str):
+        progress.progress(min(pct, 1.0), text=f"⏳ {t(lang, key)}")
+
+    sim = TransferSimulator(
+        club_name=club_name,
+        season=season,
+        transfer_budget=0,
+        salary_budget=0,
+    )
+    try:
+        squad = sim.preload_data(verbose=False, progress_callback=_on_progress)
+    except ValueError as exc:
+        progress.empty()
+        st.error(str(exc))
+        return
+
+    progress.empty()
+
+    # Clear stale sell-selection widget keys
+    for pos in POS_ORDER:
+        st.session_state.pop(f"sell_{pos}", None)
+
+    st.session_state["preloaded_sim"] = sim
+    st.session_state["preloaded_squad"] = squad
+    st.session_state["preloaded_club"] = club_name
+    st.session_state["preloaded_season"] = season
+
+
+def _squad_label(p, lang: str) -> str:
+    """Build a display label for a player in the multiselect."""
+    pos = t(lang, POS_KEYS.get(p.position, "pos_def"))
+    mv = format_currency(p.market_value) if p.market_value else "?"
+    return f"{p.name}  ({pos}, {mv})"
+
+
+# =============================================================================
+# STEP 3 – SELECT PLAYERS TO SELL
+# =============================================================================
+
+def render_sell_selection(lang: str, squad) -> Optional[List[str]]:
+    """Render multiselects to choose which players to sell.
+
+    Returns list of player_id strings, or None if nothing selected.
+    """
+    st.subheader(t(lang, "select_players_to_sell"))
+    st.caption(t(lang, "sell_selection_help"))
+
+    by_pos = {pos: [] for pos in POS_ORDER}
+    for p in squad:
+        pos = p.position if p.position in by_pos else "DEF"
+        by_pos[pos].append(p)
+    for pos in by_pos:
+        by_pos[pos].sort(key=lambda p: p.market_value or 0, reverse=True)
+
+    selected_ids: list = []
+    for pos in POS_ORDER:
+        players_in_pos = by_pos[pos]
+        if not players_in_pos:
+            continue
+        options = {_squad_label(p, lang): p.player_id for p in players_in_pos}
+        chosen = st.multiselect(
+            t(lang, POS_KEYS[pos]),
+            options=list(options.keys()),
+            key=f"sell_{pos}",
+        )
+        selected_ids.extend(options[label] for label in chosen)
+
+    return selected_ids if selected_ids else None
+
+
+# =============================================================================
+# STEP 4 – SIGNINGS PER POSITION
+# =============================================================================
+
+def render_buy_counts(lang: str) -> Dict[str, int]:
+    """Render number inputs for how many players to sign per position (0-3)."""
+    st.subheader(t(lang, "signings_per_position"))
+    st.caption(t(lang, "signings_per_pos_help"))
+
+    buy_counts: Dict[str, int] = {}
+    cols = st.columns(len(POS_ORDER))
+    for i, pos in enumerate(POS_ORDER):
+        with cols[i]:
+            buy_counts[pos] = st.number_input(
+                t(lang, POS_KEYS[pos]),
+                min_value=0,
+                max_value=3,
+                value=1,
+                key=f"buy_count_{pos}",
+            )
+    return buy_counts
+
+
+# =============================================================================
+# STEP 5 – BUDGET
+# =============================================================================
+
+def render_budget(lang: str):
+    """Render budget inputs. Returns (transfer_budget, salary_budget, unlimited)."""
+    st.subheader(t(lang, "budget_title"))
+    st.caption(t(lang, "budget_extra_note"))
     col_tb, col_sb, col_ul = st.columns([2, 2, 1])
     with col_ul:
-        st.markdown("<br>", unsafe_allow_html=True)  # vertical align
+        st.markdown("<br>", unsafe_allow_html=True)
         unlimited = st.checkbox(t(lang, "unlimited_budget"), value=False)
     with col_tb:
         transfer_budget = st.number_input(
-            t(lang, "transfer_budget"), min_value=-2000, max_value=2000, value=100, step=10,
+            t(lang, "transfer_budget"), min_value=-2000, max_value=2000, value=0, step=10,
             disabled=unlimited,
         )
     with col_sb:
         salary_budget = st.number_input(
-            t(lang, "salary_budget"), min_value=-2000, max_value=2000, value=50, step=1,
+            t(lang, "salary_budget"), min_value=-2000, max_value=2000, value=0, step=1,
             disabled=unlimited,
         )
 
@@ -229,7 +341,7 @@ def render_inputs(lang: str):
     st.caption(t(lang, "budget_note"))
     st.caption(t(lang, "budget_example"))
 
-    return season, club_name, transfer_budget, salary_budget, unlimited, clubs_data
+    return transfer_budget, salary_budget, unlimited
 
 
 # =============================================================================
@@ -243,10 +355,10 @@ def run_simulation_with_progress(
     transfer_budget: int,
     salary_budget: int,
     unlimited: bool,
+    players_to_sell: Optional[List[str]] = None,
+    buy_counts: Optional[Dict[str, int]] = None,
 ):
     """Run TransferSimulator.run() while feeding a Streamlit progress bar + spinner."""
-    from simulator.transfer_simulator import TransferSimulator
-
     progress = st.progress(0, text=t(lang, "step_loading"))
     hint = st.empty()
     hint.caption(t(lang, "sim_may_take"))
@@ -255,20 +367,21 @@ def run_simulation_with_progress(
         icon = "✅" if pct >= 1.0 else "⏳"
         progress.progress(min(pct, 1.0), text=f"{icon} {t(lang, key)}")
 
-    with st.spinner(""):
-        sim = TransferSimulator(
-            club_name=club_name,
-            season=season,
-            transfer_budget=transfer_budget if not unlimited else 999_999,
-            salary_budget=salary_budget if not unlimited else 999_999,
-        )
+    sim = st.session_state["preloaded_sim"]
+    sim.budget = min(
+        transfer_budget if not unlimited else 999_999,
+        (salary_budget if not unlimited else 999_999) * 10,
+    )
 
+    with st.spinner(""):
         try:
             result = sim.run(
                 verbose=False,
                 generate_summary=False,
                 progress_callback=_on_progress,
                 unlimited_budget=unlimited,
+                players_to_sell=players_to_sell,
+                buy_counts=buy_counts,
             )
         except ValueError as exc:
             progress.empty()
@@ -538,48 +651,7 @@ def render_ai_section(lang: str, result):
 # MAIN
 # =============================================================================
 
-def main():
-    st.set_page_config(
-        page_title="Team Transfers Simulator",
-        page_icon=str(LOGO_PATH) if LOGO_PATH.exists() else "⚽",
-        layout="wide",
-        initial_sidebar_state="collapsed",
-    )
-
-    # Inject compact CSS
-    st.markdown(
-        """
-        <style>
-        /* tighter player cards */
-        .stMarkdown img { vertical-align: middle; }
-        section[data-testid="stSidebar"] { display: none; }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    lang = header_language()
-
-    st.caption(t(lang, "subtitle"))
-
-    # ── Inputs ──────────────────────────────────────────────────────────────
-    season, club_name, tb, sb, unlimited, clubs_data = render_inputs(lang)
-
-    # ── Simulate button ─────────────────────────────────────────────────────
-    if st.button(t(lang, "run_simulation"), type="primary", use_container_width=True):
-        result = run_simulation_with_progress(lang, club_name, season, tb, sb, unlimited)
-        st.session_state["sim_result"] = result
-        st.session_state["sim_clubs_data"] = clubs_data
-        st.session_state["llm_summaries"] = {}  # reset AI cache for new simulation
-
-    # ── Results (persisted in session_state) ────────────────────────────────
-    if "sim_result" in st.session_state:
-        result = st.session_state["sim_result"]
-        clubs_data_saved = st.session_state.get("sim_clubs_data", clubs_data)
-        render_results(lang, result, clubs_data_saved)
-        render_ai_section(lang, result)
-
-    # ── Footer ──────────────────────────────────────────────────────────────
+def _render_footer(lang: str):
     st.markdown("---")
     st.caption(t(lang, "footer"))
     linkedin_url = (
@@ -588,6 +660,81 @@ def main():
         else "https://www.linkedin.com/in/pablo-roldanp/"
     )
     st.caption(t(lang, "created_by", url=linkedin_url))
+
+
+def main():
+    st.set_page_config(
+        page_title="Team Transfers Simulator",
+        page_icon=str(LOGO_PATH) if LOGO_PATH.exists() else "⚽",
+        layout="wide",
+        initial_sidebar_state="collapsed",
+    )
+
+    st.markdown(
+        """
+        <style>
+        .stMarkdown img { vertical-align: middle; }
+        section[data-testid="stSidebar"] { display: none; }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    lang = header_language()
+    st.caption(t(lang, "subtitle"))
+
+    # ── Step 1: Season & Club ────────────────────────────────────────────────
+    season, club_name, clubs_data = render_season_club(lang)
+
+    # ── Step 2: Load team data ───────────────────────────────────────────────
+    preloaded_club = st.session_state.get("preloaded_club")
+    preloaded_season = st.session_state.get("preloaded_season")
+    data_loaded = (
+        preloaded_club == club_name
+        and preloaded_season == season
+        and "preloaded_squad" in st.session_state
+    )
+
+    if st.button(t(lang, "load_data"), type="secondary", use_container_width=True):
+        _preload_team_data(lang, club_name, season)
+        st.rerun()
+
+    if not data_loaded:
+        st.caption(t(lang, "load_data_hint"))
+        _render_footer(lang)
+        st.stop()
+
+    squad = st.session_state["preloaded_squad"]
+    st.success(f"{t(lang, 'data_loaded')} — {t(lang, 'squad_loaded', count=len(squad))}")
+
+    # ── Step 3: Select players to sell ───────────────────────────────────────
+    players_to_sell = render_sell_selection(lang, squad)
+
+    # ── Step 4: Signings per position ────────────────────────────────────────
+    buy_counts = render_buy_counts(lang)
+
+    # ── Step 5: Budget ───────────────────────────────────────────────────────
+    tb, sb, unlimited = render_budget(lang)
+
+    # ── Step 6: Simulate ─────────────────────────────────────────────────────
+    if st.button(t(lang, "run_simulation"), type="primary", use_container_width=True):
+        result = run_simulation_with_progress(
+            lang, club_name, season, tb, sb, unlimited,
+            players_to_sell=players_to_sell,
+            buy_counts=buy_counts,
+        )
+        st.session_state["sim_result"] = result
+        st.session_state["sim_clubs_data"] = clubs_data
+        st.session_state["llm_summaries"] = {}
+
+    # ── Results ──────────────────────────────────────────────────────────────
+    if "sim_result" in st.session_state:
+        result = st.session_state["sim_result"]
+        clubs_data_saved = st.session_state.get("sim_clubs_data", clubs_data)
+        render_results(lang, result, clubs_data_saved)
+        render_ai_section(lang, result)
+
+    _render_footer(lang)
 
 
 if __name__ == "__main__":

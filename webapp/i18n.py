@@ -65,6 +65,19 @@ TEXT = {
         "ai_error": "No se pudo generar el análisis. Comprueba tu API key.",
         "no_signings": "No se encontraron fichajes óptimos para esta configuración.",
 
+        # Team loading & sell/buy config
+        "load_data": "Cargar datos del equipo",
+        "loading_data": "Cargando datos...",
+        "data_loaded": "Datos cargados correctamente",
+        "squad_loaded": "plantilla de {count} jugadores cargada",
+        "load_data_hint": "Carga los datos del equipo para poder configurar la simulación.",
+        "select_players_to_sell": "Jugadores a vender",
+        "sell_selection_help": "Elige qué jugadores quieres vender.",
+        "signings_per_position": "Fichajes por posición",
+        "signings_per_pos_help": "Elige cuántos jugadores fichar en cada posición (0-3).",
+        "budget_title": "Presupuesto adicional",
+        "budget_extra_note": "Este presupuesto es adicional al dinero obtenido por las ventas.",
+
         # Positions
         "pos_gk": "POR",
         "pos_def": "DEF",
@@ -134,6 +147,19 @@ TEXT = {
         "generating": "Generating analysis...",
         "ai_error": "Could not generate analysis. Check your API key.",
         "no_signings": "No optimal signings found for this configuration.",
+
+        # Team loading & sell/buy config
+        "load_data": "Load team data",
+        "loading_data": "Loading data...",
+        "data_loaded": "Data loaded successfully",
+        "squad_loaded": "squad of {count} players loaded",
+        "load_data_hint": "Load team data to configure the simulation.",
+        "select_players_to_sell": "Players to sell",
+        "sell_selection_help": "Choose which players you want to sell.",
+        "signings_per_position": "Signings per position",
+        "signings_per_pos_help": "Choose how many players to sign per position (0-3).",
+        "budget_title": "Additional budget",
+        "budget_extra_note": "This budget is on top of the money obtained from player sales.",
 
         # Positions
         "pos_gk": "GK",
