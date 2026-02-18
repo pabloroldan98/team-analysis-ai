@@ -309,6 +309,7 @@ class TransfermarktTeamsScraper(BaseScraper):
         
         all_teams = {}
         loaded_data: list = []
+        loaded_by_id: dict = {}
 
         # Load existing data for incremental scraping
         skip_team_ids: set = set()
@@ -316,6 +317,7 @@ class TransfermarktTeamsScraper(BaseScraper):
             existing_all = self.load_json(f"teams_all_{self.season}")
             if existing_all:
                 skip_team_ids = {t["team_id"] for t in existing_all if "team_id" in t}
+                loaded_by_id = {t["team_id"]: t for t in existing_all if "team_id" in t}
                 loaded_data = existing_all
                 self.log(f"\nIncremental mode: {len(skip_team_ids)} teams already scraped")
         
@@ -326,6 +328,11 @@ class TransfermarktTeamsScraper(BaseScraper):
             
             # Save per-league file
             teams_data = [t.to_dict() for t in teams]
+            new_ids = {t.team_id for t in teams}
+            league_id = self.LEAGUE_INFO.get(league, {}).get("id", "")
+            for tid, tdict in loaded_by_id.items():
+                if tid not in new_ids and tdict.get("league_id") == league_id:
+                    teams_data.append(tdict)
             self.save_json(teams_data, f"teams_{league}_{self.season}")
 
             # Update skip set so subsequent leagues benefit
