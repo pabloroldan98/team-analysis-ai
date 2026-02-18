@@ -241,7 +241,7 @@ class TransferSimulator:
         self.team_market_values: Dict[str, float] = {}  # team_name -> total market value
         self.predictor = None
     
-    def _load_active_players(self) -> List[Player]:
+    def _load_active_players(self, verbose: bool = False) -> List[Player]:
         """
         Load active players at season start using the data_loader pipeline.
 
@@ -252,7 +252,7 @@ class TransferSimulator:
           4. Updates market_value & age from valuations
         """
         from simulator.data_loader import get_active_players_at_season_start
-        return get_active_players_at_season_start(self.season)
+        return get_active_players_at_season_start(self.season, verbose=verbose)
     
     def _load_predictor(self):
         """Load the ML model for this season.
@@ -281,34 +281,73 @@ class TransferSimulator:
         
         self.predictor = ValuePredictor(model_path=model_path)
     
-    def _predict_values(self, players: List[Player], verbose: bool = False) -> List[Player]:
-        """Add predicted_value to each player using the ML model."""
-        from ml.feature_engineering import build_prediction_dataset, load_team_league_mapping
-        
+    def _predict_values(
+        self,
+        players: List[Player],
+        verbose: bool = False,
+        _cache: Optional[dict] = None,
+    ) -> List[Player]:
+        """
+        Add predicted_value to each player using the ML model.
+
+        When _cache is provided (internal use), reuses pre-loaded valuations,
+        team_league_mapping, transfer_map, by_player, team_total_values to avoid
+        rebuilding when predicting for multiple player sets (e.g. sell-by-decline).
+        """
+        from ml.feature_engineering import (
+            build_prediction_context,
+            build_prediction_dataset,
+            load_team_league_mapping,
+        )
+
         if not self.predictor:
             self._load_predictor()
-        
+
         # Build features for prediction
         if self.season.lower() == "today":
             cutoff_date = datetime.now()
         else:
             start_year = int(self.season.split("-")[0])
             cutoff_date = datetime(start_year, 7, 1)
-        
-        # Load valuations for feature extraction
-        all_valuations = self._load_all_valuations(verbose=verbose)
-        team_league_mapping = load_team_league_mapping(verbose=verbose)
-        
+
+        # Use cached context if provided (avoids duplicate load when called twice, e.g. sell-by-decline)
+        if _cache is not None and _cache.get("cutoff_date") == cutoff_date:
+            all_valuations = _cache["all_valuations"]
+            team_league_mapping = _cache["team_league_mapping"]
+            transfer_map = _cache["transfer_map"]
+            by_player = _cache["by_player"]
+            team_total_values = _cache["team_total_values"]
+            use_cache = True
+        else:
+            all_valuations = self._load_all_valuations(verbose=verbose)
+            team_league_mapping = load_team_league_mapping(verbose=verbose)
+            if verbose:
+                print("  Building prediction dataset...", flush=True)
+            transfer_map, by_player, team_total_values = build_prediction_context(
+                all_valuations, cutoff_date, verbose=verbose
+            )
+            if _cache is not None:
+                _cache["cutoff_date"] = cutoff_date
+                _cache["all_valuations"] = all_valuations
+                _cache["team_league_mapping"] = team_league_mapping
+                _cache["transfer_map"] = transfer_map
+                _cache["by_player"] = by_player
+                _cache["team_total_values"] = team_total_values
+            use_cache = False
+
         # Create player dict for feature extraction
         player_dict = {p.player_id: p for p in players}
-        
-        # Build prediction dataset
+
+        # Build prediction dataset (reuses transfer_map, by_player, team_total_values)
         features = build_prediction_dataset(
             all_valuations,
             cutoff_date,
             players=player_dict,
             team_league_mapping=team_league_mapping,
-            verbose=verbose,
+            transfer_map=transfer_map,
+            by_player=by_player,
+            team_total_values=team_total_values,
+            verbose=verbose and not use_cache,
         )
         
         # Get predictions (single batch call, no tqdm needed)
@@ -332,11 +371,13 @@ class TransferSimulator:
         """Load all valuations for feature extraction. Supports multi-part files."""
         all_valuations = []
         bases = list(list_json_bases("valuations_all_*.json"))
-        iterator = tqdm(bases, desc="Loading valuations", disable=not verbose)
-        for base in iterator:
+        base_iter = tqdm(bases, desc="Loading valuations", disable=not verbose)
+        for base in base_iter:
+            if verbose:
+                base_iter.set_postfix_str(base)
             data = load_json(base)
             if isinstance(data, list):
-                for item in data:
+                for item in tqdm(data, desc=f"  {base}", disable=not verbose, leave=False):
                     if isinstance(item, dict):
                         all_valuations.append(Valuation.from_dict(item))
         return all_valuations
@@ -564,23 +605,60 @@ class TransferSimulator:
         ]
         return sold_players, formation_needed
 
-    def _load_all_transfers(self) -> List[Transfer]:
+    def _load_all_transfers(self, verbose: bool = False) -> List[Transfer]:
         """Load all transfers from every ``transfers_all_*.json`` file. Supports multi-part files."""
         all_transfers: List[Transfer] = []
-        for base in list_json_bases("transfers_all_*.json"):
+        bases = list_json_bases("transfers_all_*.json")
+        base_iter = tqdm(bases, desc="Loading transfers", disable=not verbose)
+
+        for base in base_iter:
+            if verbose:
+                base_iter.set_postfix_str(base)
             data = load_json(base)
             if isinstance(data, list):
-                for item in data:
+                for item in tqdm(data, desc=f"  {base}", disable=not verbose, leave=False):
                     if isinstance(item, dict):
                         all_transfers.append(Transfer.from_dict(item))
         return all_transfers
+
+    def _load_athletic_eligible_ids(self, verbose: bool = False) -> set:
+        """
+        Stream transfer files and return player IDs that have played for Athletic Bilbao
+        or any of its sub-clubs. Avoids loading all Transfer objects into memory.
+        """
+        eligible: set = set()
+        bases = list_json_bases("transfers_all_*.json")
+        base_iter = tqdm(bases, desc="Loading Athletic eligibility", disable=not verbose)
+
+        for base in base_iter:
+            if verbose:
+                base_iter.set_postfix_str(base)
+            data = load_json(base)
+            if not isinstance(data, list):
+                continue
+            for item in tqdm(data, desc=f"  {base}", disable=not verbose, leave=False):
+                if not isinstance(item, dict):
+                    continue
+                from_id = str(item.get("from_club_id", "") or "")
+                from_name = (item.get("from_club_name") or item.get("from_club", "") or "").lower()
+                to_id = str(item.get("to_club_id", "") or "")
+                to_name = (item.get("to_club_name") or item.get("to_club", "") or "").lower()
+                from_match = from_id in ATHLETIC_FAMILY_IDS or from_name in ATHLETIC_FAMILY_NAMES
+                to_match = to_id in ATHLETIC_FAMILY_IDS or to_name in ATHLETIC_FAMILY_NAMES
+                if from_match or to_match:
+                    pid = item.get("player_id", "")
+                    if pid:
+                        eligible.add(str(pid))
+        return eligible
 
     def _is_athletic_club(self) -> bool:
         """Return True if the current club is Athletic Bilbao or a related club."""
         club_lower = self.club_name.lower()
         return club_lower in ATHLETIC_FAMILY_NAMES
 
-    def _get_athletic_eligible_ids(self, all_transfers: List[Transfer]) -> set:
+    def _get_athletic_eligible_ids(
+        self, all_transfers: List[Transfer], verbose: bool = False
+    ) -> set:
         """
         Return player IDs that have played for Athletic Bilbao or any of its
         sub-clubs at any point in their career.
@@ -588,9 +666,13 @@ class TransferSimulator:
         A player is eligible if they appear in ANY transfer where either the
         ``from_club`` or ``to_club`` is an Athletic family club (checked by
         team_id **or** team_name).
+
+        Prefer ``_load_athletic_eligible_ids()`` when you don't have transfers
+        loaded yet – it streams files and avoids loading all Transfer objects.
         """
         eligible: set = set()
-        for t in all_transfers:
+        transfer_iter = tqdm(all_transfers, desc="Athletic eligibility", disable=not verbose)
+        for t in transfer_iter:
             from_match = (
                 t.from_club_id in ATHLETIC_FAMILY_IDS
                 or t.from_club_name.lower() in ATHLETIC_FAMILY_NAMES
@@ -722,7 +804,7 @@ class TransferSimulator:
         if verbose:
             print(f"Loading data for {self.season}...")
 
-        all_players = self._load_active_players()
+        all_players = self._load_active_players(verbose=verbose)
         self.all_players = all_players
 
         if verbose:
@@ -759,17 +841,18 @@ class TransferSimulator:
                 print("  Athletic Bilbao detected – loading transfer history for eligibility filter...")
             elif verbose:
                 print("  Athletic family club(s) in market – loading transfer history for sell filter...")
-            all_transfers = self._load_all_transfers()
-            athletic_eligible_ids = self._get_athletic_eligible_ids(all_transfers)
+            athletic_eligible_ids = self._load_athletic_eligible_ids(verbose=verbose)
             if verbose:
                 print(f"  {len(athletic_eligible_ids)} players with Athletic family history found")
 
         # ── Step 4/8: Sell players ───────────────────────────────────────
         _progress(0.50, "step_selling")
+        pred_cache: Optional[dict] = None
         if sell_by_value_decline:
             if verbose:
                 print("  Predicting values for squad (sell-by-decline mode)...")
-            club_players = self._predict_values(club_players, verbose=verbose)
+            pred_cache = {}
+            club_players = self._predict_values(club_players, verbose=verbose, _cache=pred_cache)
             sold_players, formation_needed = self._sell_players_by_value_decline(
                 club_players,
                 athletic_eligible_ids=athletic_eligible_ids,
@@ -811,7 +894,11 @@ class TransferSimulator:
         if filter_players:
             if verbose:
                 print("  Filtering players by value and league...")
-            team_league_mapping = load_team_league_mapping(verbose=verbose)
+            team_league_mapping = (
+                pred_cache["team_league_mapping"]
+                if (pred_cache and "team_league_mapping" in pred_cache)
+                else load_team_league_mapping(verbose=verbose)
+            )
             before = len(available_players)
             available_players = self._filter_players_by_value_and_league(
                 available_players, club_players, team_league_mapping
@@ -822,7 +909,9 @@ class TransferSimulator:
         if verbose:
             print(f"  {len(available_players)} players available for signing")
 
-        available_players = self._predict_values(available_players, verbose=verbose)
+        available_players = self._predict_values(
+            available_players, verbose=verbose, _cache=pred_cache if sell_by_value_decline else None
+        )
 
         # ── Step 6/8: Knapsack optimisation ──────────────────────────────
         _progress(0.80, "step_knapsack")

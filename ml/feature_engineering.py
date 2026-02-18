@@ -9,8 +9,10 @@ Age is computed from birth_date + cutoff_date.
 from __future__ import annotations
 
 import bisect
+import functools
 import json
 import sys
+from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -28,6 +30,12 @@ from player import Player
 from transfer import Transfer
 from scraping.utils.helpers import DATA_DIR, list_json_bases, load_json, parse_date
 from scraping.base_scraper import BaseScraper
+
+
+@functools.lru_cache(maxsize=50000)
+def _parse_date_cached(date_str: str):
+    """Cached parse_date for repeated date strings in transfers/valuations."""
+    return parse_date(date_str)
 
 # Top 5 leagues (league_id values)
 TOP_LEAGUE_IDS: Set[str] = {"GB1", "IT1", "L1", "FR1", "ES1"}
@@ -519,36 +527,110 @@ def _bin_club(club: str) -> str:
     return "Other"
 
 
-def _load_all_transfers() -> List[Transfer]:
+def _load_all_transfers(verbose: bool = False) -> List[Transfer]:
     """Load ALL ``transfers_all_*.json`` files into a flat list. Supports multi-part files."""
     transfers: List[Transfer] = []
-    for base in list_json_bases("transfers_all_*.json"):
+    bases = list_json_bases("transfers_all_*.json")
+    base_iter = tqdm(bases, desc="Loading transfers", disable=not verbose)
+
+    for base in base_iter:
+        if verbose:
+            base_iter.set_postfix_str(base)
         data = load_json(base)
         if not isinstance(data, list):
             continue
-        for item in data:
+        for item in tqdm(data, desc=f"  {base}", disable=not verbose, leave=False):
             if isinstance(item, dict):
                 transfers.append(Transfer.from_dict(item))
     return transfers
+
+
+def _process_transfer_file_for_cutoff(
+    base: str, cutoff_date: datetime
+) -> Dict[str, Tuple[datetime, Transfer]]:
+    """
+    Load one transfer file and return partial best map (player_id -> (date, Transfer)).
+    Used for parallel loading.
+    """
+    partial: Dict[str, Tuple[datetime, Transfer]] = {}
+    data = load_json(base)
+    if not isinstance(data, list):
+        return partial
+    for item in data:
+        if not isinstance(item, dict):
+            continue
+        date_str = item.get("transfer_date") or ""
+        td = _parse_date_cached(date_str)
+        if td is None or td > cutoff_date:
+            continue
+        pid = item.get("player_id", "")
+        if not pid:
+            continue
+        pid = str(pid)
+        prev = partial.get(pid)
+        if prev is None or td > prev[0]:
+            partial[pid] = (td, Transfer.from_dict(item))
+    return partial
+
+
+def _load_transfer_map_at_cutoff_date(
+    cutoff_date: datetime, verbose: bool = False
+) -> Dict[str, Transfer]:
+    """
+    Build transfer_map (player_id -> last Transfer before cutoff) by loading
+    transfer files. Uses parallel I/O when multiple files, orjson for fast parsing.
+    """
+    bases = list_json_bases("transfers_all_*.json")
+    if verbose:
+        tqdm.write("  Loading transfer map (for club assignment)...")
+
+    best: Dict[str, Tuple[datetime, Transfer]] = {}
+
+    if len(bases) <= 1:
+        for base in bases:
+            partial = _process_transfer_file_for_cutoff(base, cutoff_date)
+            for pid, (td, t) in partial.items():
+                prev = best.get(pid)
+                if prev is None or td > prev[0]:
+                    best[pid] = (td, t)
+    else:
+        # Parallel load and process
+        max_workers = min(len(bases), 4)
+        with ThreadPoolExecutor(max_workers=max_workers) as ex:
+            futures = {ex.submit(_process_transfer_file_for_cutoff, base, cutoff_date): base for base in bases}
+            done = tqdm(as_completed(futures), total=len(futures), desc="Loading transfer map", disable=not verbose)
+            for future in done:
+                if verbose:
+                    base = futures[future]
+                    done.set_postfix_str(base)
+                partial = future.result()
+                for pid, (td, t) in partial.items():
+                    prev = best.get(pid)
+                    if prev is None or td > prev[0]:
+                        best[pid] = (td, t)
+
+    return {pid: tr for pid, (_, tr) in best.items()}
 
 
 def _get_team_total_values_at_cutoff(
     by_player: Dict[str, List[Valuation]],
     transfer_map: Dict[str, Transfer],
     cutoff_date: datetime,
+    verbose: bool = False,
 ) -> Dict[str, float]:
     """
     Compute sum of market values per team at cutoff (single O(players) pass).
     Used for current_club_value feature.
     """
     team_totals: Dict[str, float] = {}
-    for player_id, vals in by_player.items():
+    items_iter = tqdm(by_player.items(), desc="Team total values", disable=not verbose)
+    for player_id, vals in items_iter:
         t = transfer_map.get(player_id)
         if not t or not t.to_club_id:
             continue
         val_list = []
         for v in vals:
-            d = parse_date(v.valuation_date)
+            d = _parse_date_cached(v.valuation_date or "")
             if d is not None and v.valuation_amount is not None:
                 val_list.append((d, v.valuation_amount))
         if not val_list:
@@ -1433,6 +1515,32 @@ def get_samples_for_season(
     return [f for f in dataset if f.cutoff_season == season]
 
 
+def build_prediction_context(
+    all_valuations: List[Valuation],
+    cutoff_date: datetime,
+    all_transfers: Optional[List[Transfer]] = None,
+    verbose: bool = False,
+) -> Tuple[Dict[str, Transfer], Dict[str, List[Valuation]], Dict[str, float]]:
+    """
+    Build transfer_map, by_player, team_total_values for prediction.
+    Reusable across multiple build_prediction_dataset calls (same cutoff).
+    """
+    if all_transfers is None:
+        transfer_map = _load_transfer_map_at_cutoff_date(cutoff_date, verbose=verbose)
+    else:
+        transfer_map = _get_transfer_map_at_cutoff(all_transfers, cutoff_date)
+
+    by_player: Dict[str, List[Valuation]] = defaultdict(list)
+    val_iter = tqdm(all_valuations, desc="Grouping valuations by player", disable=not verbose)
+    for v in val_iter:
+        by_player[v.player_id].append(v)
+
+    team_total_values = _get_team_total_values_at_cutoff(
+        by_player, transfer_map, cutoff_date, verbose=verbose
+    )
+    return transfer_map, by_player, team_total_values
+
+
 def build_prediction_dataset(
     all_valuations: List[Valuation],
     cutoff_date: datetime,
@@ -1440,6 +1548,9 @@ def build_prediction_dataset(
     team_league_mapping: Optional[Dict[str, Dict[str, Dict[str, str]]]] = None,
     min_valuations: int = 2,
     all_transfers: Optional[List[Transfer]] = None,
+    transfer_map: Optional[Dict[str, Transfer]] = None,
+    by_player: Optional[Dict[str, List[Valuation]]] = None,
+    team_total_values: Optional[Dict[str, float]] = None,
     verbose: bool = False,
 ) -> List[PlayerFeatures]:
     """
@@ -1447,18 +1558,26 @@ def build_prediction_dataset(
 
     Current club is determined from transfer data (last transfer <= cutoff).
     Age is computed from birth_date + cutoff_date.
+
+    Optional transfer_map, by_player, team_total_values allow reusing precomputed
+    context (avoids rebuilding when predicting for multiple player sets).
     """
-    # Load transfers for club determination
-    if all_transfers is None:
-        all_transfers = _load_all_transfers()
+    if transfer_map is None:
+        if all_transfers is None:
+            transfer_map = _load_transfer_map_at_cutoff_date(cutoff_date, verbose=verbose)
+        else:
+            transfer_map = _get_transfer_map_at_cutoff(all_transfers, cutoff_date)
 
-    transfer_map = _get_transfer_map_at_cutoff(all_transfers, cutoff_date)
+    if by_player is None:
+        by_player = defaultdict(list)
+        val_iter = tqdm(all_valuations, desc="Grouping valuations by player", disable=not verbose)
+        for v in val_iter:
+            by_player[v.player_id].append(v)
 
-    by_player: Dict[str, List[Valuation]] = {}
-    for v in all_valuations:
-        by_player.setdefault(v.player_id, []).append(v)
-
-    team_total_values = _get_team_total_values_at_cutoff(by_player, transfer_map, cutoff_date)
+    if team_total_values is None:
+        team_total_values = _get_team_total_values_at_cutoff(
+            by_player, transfer_map, cutoff_date, verbose=verbose
+        )
 
     # When players dict is provided, only process those player_ids (reduces work when filtered)
     if players:

@@ -7,6 +7,12 @@ from __future__ import annotations
 import json
 import os
 import re
+
+try:
+    import orjson
+    _HAS_ORJSON = True
+except ImportError:
+    _HAS_ORJSON = False
 import shutil
 from datetime import datetime
 from pathlib import Path
@@ -182,11 +188,18 @@ def load_json_with_parts(file_name: str) -> Optional[Any]:
     if not paths:
         return None
 
+    def _read_json(path: Path) -> Any:
+        """Load JSON from path. Uses orjson when available (~5-10x faster)."""
+        if _HAS_ORJSON:
+            with open(path, "rb") as f:
+                return orjson.loads(f.read())
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
     if len(paths) == 1 and "_part" not in paths[0].stem:
         # Single file (legacy or small)
         try:
-            with open(paths[0], "r", encoding="utf-8") as f:
-                raw = json.load(f)
+            raw = _read_json(paths[0])
             # Support wrapped format from old part files that were later saved as single
             if isinstance(raw, dict) and "items" in raw and "metadata" in raw:
                 return raw["items"]
@@ -199,8 +212,7 @@ def load_json_with_parts(file_name: str) -> Optional[Any]:
     all_items: List[Any] = []
     for pp in paths:
         try:
-            with open(pp, "r", encoding="utf-8") as f:
-                data = json.load(f)
+            data = _read_json(pp)
             if isinstance(data, dict) and "items" in data:
                 all_items.extend(data["items"])
             else:

@@ -52,7 +52,7 @@ def main():
 
     if args.verbose:
         print("Loading active players for 'today'...")
-    all_players = get_active_players_at_season_start("today")
+    all_players = get_active_players_at_season_start("today", verbose=args.verbose)
     if args.verbose:
         print(f"  Loaded {len(all_players)} players")
 

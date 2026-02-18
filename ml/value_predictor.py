@@ -17,6 +17,8 @@ sys.path.insert(0, str(ROOT_DIR))
 
 from ml.feature_engineering import (
     PlayerFeatures,
+    TOP_CLUBS,
+    TOP_NATIONALITIES,
     build_training_dataset,
     build_prediction_dataset,
     extract_player_features,
@@ -104,6 +106,30 @@ class ValuePredictor:
     
     # Categorical feature names for XGBoost
     CATEGORICAL_FEATURES = ["position", "player_nationality_bin", "current_club_bin", "current_league", "league_tier"]
+
+    # Fallback allowed values when model has no category mappings (old models).
+    # Any value not in these sets is mapped to "Other" to avoid XGBoost "category not in training set" errors.
+    # These must match what the training dataset actually contained (top-5 leagues only).
+    FALLBACK_CATEGORY_VALUES = {
+        "position": {"GK", "DEF", "MID", "ATT"},
+        "player_nationality_bin": {
+            "Albania", "Argentina", "Australia", "Austria", "Belgium", "Brazil",
+            "Cameroon", "Canada", "Chile", "China", "Colombia", "Croatia",
+            "Czech Republic", "Denmark", "Ecuador", "Egypt", "England", "France",
+            "Germany", "Ghana", "Greece", "Hungary", "Iran", "Italy", "Japan",
+            "Kosovo", "Mexico", "Morocco", "Netherlands", "Nigeria",
+            "North Macedonia", "Norway", "Other", "Paraguay", "Peru", "Poland",
+            "Portugal", "Qatar", "Romania", "Russia", "Saudi Arabia", "Scotland",
+            "Senegal", "Serbia", "Slovakia", "Slovenia", "South Africa", "Spain",
+            "Sweden", "Switzerland", "Ukraine", "United Arab Emirates",
+            "United States", "Uruguay", "Wales",
+        },
+        "current_club_bin": set(TOP_CLUBS) | {"Other"},
+        "current_league": {
+            "laliga", "premier", "seriea", "bundesliga", "ligue1", "Other",
+        },
+        "league_tier": {"1", "Other"},
+    }
     
     def __init__(self, model_path: Optional[Path] = None):
         """
@@ -251,6 +277,11 @@ class ValuePredictor:
         self.model.fit(**fit_kwargs)
         
         self.is_trained = True
+        self._category_mappings = {
+            col: set(X_train[col].dropna().astype(str).unique()) | {"Other"}
+            for col in self.CATEGORICAL_FEATURES
+            if col in X_train.columns
+        }
         
         # Compute metrics
         train_pred = self.model.predict(X_train)
@@ -294,6 +325,25 @@ class ValuePredictor:
             print(f"  Train MdAPE: {metrics['train_mdape']:.1f}%    |  Val MdAPE: {metrics['val_mdape']:.1f}%")
         
         return metrics
+
+    def _coerce_categories_for_prediction(self, X):
+        """
+        Map categorical values not seen during training to "Other".
+        Prevents XGBoostError when prediction data has categories the model wasn't trained on.
+        """
+        allowed = getattr(self, "_category_mappings", None) or self.FALLBACK_CATEGORY_VALUES
+
+        X = X.copy()
+        for col in self.CATEGORICAL_FEATURES:
+            if col not in X.columns:
+                continue
+            valid = allowed.get(col)
+            if valid is None:
+                continue
+            X[col] = X[col].fillna("Other").astype(str).apply(
+                lambda v: v if v in valid else "Other"
+            )
+        return X
     
     def predict(self, features: PlayerFeatures) -> float:
         """
@@ -311,6 +361,7 @@ class ValuePredictor:
             raise RuntimeError("Model not trained. Call train() or load() first.")
         
         X = pd.DataFrame([features.to_feature_dict()])
+        X = self._coerce_categories_for_prediction(X)
         for col in self.CATEGORICAL_FEATURES:
             if col in X.columns:
                 X[col] = X[col].astype("category")
@@ -338,6 +389,7 @@ class ValuePredictor:
             return []
         
         X = pd.DataFrame([f.to_feature_dict() for f in features_list])
+        X = self._coerce_categories_for_prediction(X)
         for col in self.CATEGORICAL_FEATURES:
             if col in X.columns:
                 X[col] = X[col].astype("category")
@@ -369,7 +421,11 @@ class ValuePredictor:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             path = MODELS_DIR / f"value_model_{timestamp}.joblib"
         
-        joblib.dump(self.model, path)
+        payload = {
+            "model": self.model,
+            "category_mappings": getattr(self, "_category_mappings", None),
+        }
+        joblib.dump(payload, path)
         self.model_path = path
         
         return path
@@ -389,7 +445,13 @@ class ValuePredictor:
         if not path.exists():
             raise FileNotFoundError(f"Model not found: {path}")
         
-        self.model = joblib.load(path)
+        loaded = joblib.load(path)
+        if isinstance(loaded, dict) and "model" in loaded:
+            self.model = loaded["model"]
+            self._category_mappings = loaded.get("category_mappings")
+        else:
+            self.model = loaded
+            self._category_mappings = None
         self.model_path = path
         self.is_trained = True
     

@@ -16,6 +16,7 @@ The pipeline is:
 """
 from __future__ import annotations
 
+import functools
 import json
 import sys
 from datetime import datetime
@@ -25,10 +26,18 @@ from typing import Dict, List, Optional, Tuple
 ROOT_DIR = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT_DIR))
 
+from tqdm import tqdm
+
 from scraping.utils.helpers import list_json_bases, load_json, parse_date, DATA_DIR
 from player import Player
 from transfer import Transfer
 from valuation import Valuation
+
+
+@functools.lru_cache(maxsize=20000)
+def _parse_date_cached(date_str: str) -> Optional[datetime]:
+    """Cached parse_date for repeated date strings (e.g. in transfers/valuations)."""
+    return parse_date(date_str)
 
 
 # Team IDs that represent "out-of-football" destinations
@@ -62,7 +71,7 @@ def _get_season_start_date(season: str) -> datetime:
 
 # ── Bulk loaders (all files) ────────────────────────────────────────────
 
-def _load_all_players() -> Dict[str, Player]:
+def _load_all_players(verbose: bool = False) -> Dict[str, Player]:
     """
     Load ALL ``players_all_*.json`` files.
     Supports single and multi-part files (when >90MB).
@@ -72,12 +81,16 @@ def _load_all_players() -> Dict[str, Player]:
     filename sort).
     """
     players: Dict[str, Player] = {}
+    bases = list_json_bases("players_all_*.json")
+    base_iter = tqdm(bases, desc="Loading players", disable=not verbose)
 
-    for base in list_json_bases("players_all_*.json"):
+    for base in base_iter:
+        if verbose:
+            base_iter.set_postfix_str(base)
         data = load_json(base)
         if not isinstance(data, list):
             continue
-        for item in data:
+        for item in tqdm(data, desc=f"  {base}", disable=not verbose, leave=False):
             if not isinstance(item, dict):
                 continue
             p = Player.from_dict(item)
@@ -116,6 +129,86 @@ def _load_all_valuations() -> List[Valuation]:
             valuations.append(Valuation.from_dict(item))
 
     return valuations
+
+
+def _load_transfer_map_at_cutoff(season: str, verbose: bool = False) -> Dict[str, Transfer]:
+    """
+    Build transfer_map (player_id -> last Transfer before cutoff) by iterating
+    files once. Avoids loading millions of Transfer objects into memory.
+    """
+    cutoff = _get_season_start_date(season)
+    best: Dict[str, Tuple[datetime, Transfer]] = {}
+    bases = list_json_bases("transfers_all_*.json")
+    base_iter = tqdm(bases, desc="Loading transfers", disable=not verbose)
+
+    for base in base_iter:
+        if verbose:
+            base_iter.set_postfix_str(base)
+        data = load_json(base)
+        if not isinstance(data, list):
+            continue
+        for item in tqdm(data, desc=f"  {base}", disable=not verbose, leave=False):
+            if not isinstance(item, dict):
+                continue
+            date_str = item.get("transfer_date") or ""
+            td = _parse_date_cached(date_str)
+            if td is None or td > cutoff:
+                continue
+
+            pid = item.get("player_id", "")
+            if not pid:
+                continue
+            pid = str(pid)
+
+            prev = best.get(pid)
+            if prev is None or td > prev[0]:
+                best[pid] = (td, Transfer.from_dict(item))
+
+    return {pid: tr for pid, (_, tr) in best.items()}
+
+
+def _load_valuation_map_at_cutoff(season: str, verbose: bool = False) -> Dict[str, float]:
+    """
+    Build player_id -> market_value map by iterating valuation files once.
+    Only stores the amount (float); avoids full Valuation objects.
+    """
+    cutoff = _get_season_start_date(season)
+    best: Dict[str, Tuple[datetime, float]] = {}
+    bases = list_json_bases("valuations_all_*.json")
+    base_iter = tqdm(bases, desc="Loading valuations", disable=not verbose)
+
+    for base in base_iter:
+        if verbose:
+            base_iter.set_postfix_str(base)
+        data = load_json(base)
+        if not isinstance(data, list):
+            continue
+        for item in tqdm(data, desc=f"  {base}", disable=not verbose, leave=False):
+            if not isinstance(item, dict):
+                continue
+            date_str = item.get("valuation_date") or ""
+            vd = _parse_date_cached(date_str)
+            if vd is None or vd > cutoff:
+                continue
+
+            pid = item.get("player_id", "")
+            if not pid:
+                continue
+            pid = str(pid)
+
+            amount = item.get("valuation_amount")
+            if amount is None:
+                continue
+            try:
+                amount = float(amount)
+            except (TypeError, ValueError):
+                continue
+
+            prev = best.get(pid)
+            if prev is None or vd > prev[0]:
+                best[pid] = (vd, amount)
+
+    return {pid: amt for pid, (_, amt) in best.items()}
 
 
 # ── Season-level queries ─────────────────────────────────────────────────
@@ -180,6 +273,7 @@ def get_valuation_at_season_start(
 def get_active_players_at_season_start(
     season: str,
     league: str = "all",
+    verbose: bool = False,
 ) -> List[Player]:
     """
     Build the definitive list of active players at season start (01/07).
@@ -197,20 +291,21 @@ def get_active_players_at_season_start(
     Args:
         season: e.g. "2023-2024"
         league: unused for now (kept for API compat)
+        verbose: if True, show tqdm progress bars during loading
 
     Returns:
         List of Player objects ready for simulation
     """
     # 1. All players
-    players = _load_all_players()
+    players = _load_all_players(verbose=verbose)
 
-    # 2. Transfers → team assignment
-    all_transfers = _load_all_transfers()
-    transfer_map = get_transfer_at_season_start(all_transfers, season)
+    # 2. Transfers → team assignment (streaming: no full list in memory)
+    transfer_map = _load_transfer_map_at_cutoff(season, verbose=verbose)
 
     # Inner join: only keep players that appear in the transfer map
     matched: Dict[str, Player] = {}
-    for pid, t in transfer_map.items():
+    transfer_iter = tqdm(transfer_map.items(), desc="Assigning teams", disable=not verbose)
+    for pid, t in transfer_iter:
         if pid not in players:
             continue  # player not in any players file, skip
 
@@ -234,7 +329,8 @@ def get_active_players_at_season_start(
 
     # 3. Filter out excluded teams and players without a team
     active: Dict[str, Player] = {}
-    for pid, p in matched.items():
+    matched_iter = tqdm(matched.items(), desc="Filtering active", disable=not verbose)
+    for pid, p in matched_iter:
         # Players with no team at all are excluded
         if not p.team:
             continue
@@ -251,7 +347,8 @@ def get_active_players_at_season_start(
 
     # 4. Compute age from birth_date + cutoff_date
     cutoff = _get_season_start_date(season)
-    for p in active.values():
+    age_iter = tqdm(active.values(), desc="Computing ages", disable=not verbose)
+    for p in age_iter:
         if p.birth_date:
             try:
                 bd = datetime.strptime(p.birth_date, "%Y-%m-%d")
@@ -263,16 +360,12 @@ def get_active_players_at_season_start(
                     age -= 1
                 p.age = age
 
-    # 5. Valuations → market_value update
-    all_valuations = _load_all_valuations()
-    valuation_map = get_valuation_at_season_start(all_valuations, season)
+    # 5. Valuations → market_value update (streaming: no full list in memory)
+    valuation_map = _load_valuation_map_at_cutoff(season, verbose=verbose)
 
-    for pid, p in active.items():
-        v = valuation_map.get(pid)
-        if v is not None:
-            p.market_value = v.valuation_amount
-        else:
-            p.market_value = 0  # player in the club but no valuation yet
+    value_iter = tqdm(active.items(), desc="Updating market values", disable=not verbose)
+    for pid, p in value_iter:
+        p.market_value = valuation_map.get(pid, 0)
 
     return list(active.values())
 

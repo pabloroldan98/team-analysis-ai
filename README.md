@@ -197,6 +197,13 @@ Before the simulation runs, the **data loader** builds an accurate snapshot of e
 4. **Compute age** from `birth_date` and the season cutoff date (01/07 of the starting year, or `now()` for "Today").
 5. **Load ALL valuations** from every `valuations_all_*.json` file. For each player, find their **most recent valuation ≤ cutoff** and update their market value. Players without a valuation receive `market_value = 0` (they're in the club but haven't been valued yet).
 
+**Performance optimizations** (for large datasets):
+
+- **Streaming**: Transfer and valuation maps are built in a single pass without loading full lists into memory.
+- **Parallel loading**: Multiple transfer/valuation files are loaded in parallel (up to 4 workers).
+- **Fast JSON parsing**: Uses `orjson` when available (~5–10× faster than stdlib).
+- **Multi-part files**: JSON files exceeding 90 MB are automatically split into `_part1.json`, `_part2.json`, etc. (to stay under GitHub's 100 MB limit).
+
 #### Budget Calculation
 
 Since exact player salaries are not publicly available, we approximate using a simple heuristic:
@@ -272,6 +279,10 @@ To prevent data leakage, models are **strictly limited to historical data**:
 
 The train/validation split is also **temporal**: older seasons go to training, the most recent season(s) go to validation.
 
+#### Categorical Features & Unknown Categories
+
+The model uses **XGBoost with native categorical support** for league, position, nationality, etc. At prediction time, if a category appears that was **not seen during training** (e.g. a new league like Serie B when the model was trained on older data), it is automatically mapped to `"Other"` to avoid `XGBoostError: category not in training set`. Newly trained models save their category mappings; older models use a conservative fallback set.
+
 ---
 
 ### Knapsack Optimization
@@ -336,7 +347,7 @@ Every time a scraping pipeline completes, an **auto-update trigger** comment in 
 | Language | Python 3.10+ |
 | HTTP Client | `tls-requests` (with `requests` fallback) |
 | HTML Parsing | BeautifulSoup4 |
-| Data Format | JSON |
+| Data Format | JSON (`orjson` for fast parsing when available) |
 | ML Framework | XGBoost + Scikit-learn |
 | Optimization | Custom Knapsack solver |
 | CI/CD | GitHub Actions |
@@ -366,7 +377,7 @@ team-analysis-ai/
 │   ├── arrows/              # UI arrow icons (red down, green up)
 │   ├── language/            # Flag SVGs for language toggle
 │   └── logo.png             # App logo
-├── data/json/               # Scraped data (JSON)
+├── data/json/               # Scraped data (JSON, supports _all_* and multi-part)
 ├── ml/
 │   ├── datasets/            # Cached training datasets (auto-split into parts if >90MB)
 │   ├── models/              # Trained XGBoost models (.joblib)
@@ -375,21 +386,28 @@ team-analysis-ai/
 │   └── value_predictor.py
 ├── scraping/
 │   ├── base_scraper.py      # Base class + API retry logic
+│   ├── utils/helpers.py     # JSON load/save, parse_date, list_json_bases, DATA_DIR
 │   ├── transfermarkt_leagues.py
 │   ├── transfermarkt_teams.py
 │   ├── transfermarkt_players.py
 │   ├── transfermarkt_transfers.py
 │   └── transfermarkt_valuations.py
 ├── scraping_tasks/          # CLI entry points for scrapers
+│   ├── scrape_*.py          # Individual entity scrapers
+│   └── combine_data.py      # Combine league-specific files into _all_ files
+├── scripts/
+│   └── export_predictions_to_xlsx.py  # Export all players + predicted values to xlsx
 ├── simulator/
 │   ├── data_loader.py       # Centralized player data pipeline
 │   ├── knapsack_solver.py   # MCKP optimization
 │   ├── transfer_simulator.py # Main simulation engine
+│   ├── transfer_engine.py   # Alternative API (SimulationResult)
 │   └── llm_summarizer.py    # LLM integration
 ├── webapp/
 │   └── i18n.py              # Internationalization (ES/EN)
 ├── league.py / team.py / player.py / transfer.py / valuation.py
 ├── fill_club_names.py       # Backfill missing club names (API → local → transfers)
+├── discover_leagues.py      # Discover leagues from Transfermarkt for scraper config
 ├── streamlit_app.py         # Web app entry point
 ├── requirements.txt
 └── README.md
@@ -437,6 +455,11 @@ The easiest way to run the scrapers is through GitHub Actions workflows:
 
 ### Option 3: Run Locally
 
+**Prerequisites**
+
+- Python 3.10+
+- The simulator and ML pipeline require `*_all_*.json` files in `data/json/` (e.g. `players_all_2024-2025.json`, `transfers_all_2024-2025.json`, `valuations_all_2024-2025.json`). Use the scrapers + `combine_data.py`, or download data from a repository that has pre-scraped `_all_` files.
+
 ```bash
 # Clone the repository
 git clone https://github.com/pabloroldan98/team-analysis-ai.git
@@ -475,11 +498,20 @@ Alternatively, you can enter the API key directly in the Streamlit app (in the A
 # Basic simulation (with AI summary if API key is configured)
 python -m simulator.transfer_simulator --club "Real Madrid" --season 2022-2023
 
+# Use current data snapshot ("today" instead of a fixed season)
+python -m simulator.transfer_simulator --club "Real Madrid" --season today
+
 # Without AI summary
 python -m simulator.transfer_simulator --club "Real Madrid" --season 2022-2023 --no-summary
 
+# Sell by value decline (sell players whose predicted value < market value)
+python -m simulator.transfer_simulator --club "FC Barcelona" --season 2023-2024 --sell-by-value-decline
+
 # With specific LLM provider
 python -m simulator.transfer_simulator --club "FC Barcelona" --season 2022-2023 --llm-provider gemini
+
+# Quiet mode (no progress output)
+python -m simulator.transfer_simulator --club "Real Madrid" --season 2022-2023 --no-verbose
 ```
 
 #### Run the ML Pipeline
@@ -488,8 +520,14 @@ python -m simulator.transfer_simulator --club "FC Barcelona" --season 2022-2023 
 # Train model for a specific season
 python -m ml.train_pipeline --season 2022-2023
 
-# Rebuild the training dataset from scratch
+# Rebuild the training dataset from scratch (e.g. after new data is scraped)
 python -m ml.train_pipeline --season 2022-2023 --rebuild-dataset
+
+# Use semi-annual cutoffs (more training rows, slower to build)
+python -m ml.train_pipeline --season 2023-2024 --cutoff-months 6 --rebuild-dataset
+
+# Verbose output
+python -m ml.train_pipeline --season 2023-2024 --verbose
 ```
 
 #### Run Scrapers Locally
@@ -502,7 +540,26 @@ python scraping_tasks/scrape_transfers.py --leagues laliga --season 2025-2026
 python scraping_tasks/scrape_valuations.py --leagues laliga --season 2025-2026
 ```
 
-Output files are saved to `data/json/`.
+Output files are saved to `data/json/`. Use `scraping_tasks/combine_data.py` to merge league-specific files into `*_all_*.json` (required for the simulator).
+
+#### Utility Scripts
+
+```bash
+# Export all players with predicted values to xlsx
+python -m scripts.export_predictions_to_xlsx [--output FILE.xlsx] [--verbose]
+
+# Fill missing club names in JSON files (API → local data → transfer history)
+python fill_club_names.py [--dry-run]
+
+# Discover leagues from Transfermarkt (output config for scrapers)
+python discover_leagues.py
+
+# Combine league-specific JSON into _all_ files
+python scraping_tasks/combine_data.py --entity teams --season 2025-2026
+python scraping_tasks/combine_data.py --entity players
+python scraping_tasks/combine_data.py --entity transfers
+python scraping_tasks/combine_data.py --entity valuations
+```
 
 ---
 

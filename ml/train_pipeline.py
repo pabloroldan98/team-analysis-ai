@@ -332,14 +332,14 @@ def train_model(
         if verbose:
             print(f"Loading all transfers for club assignment...")
         from ml.feature_engineering import _load_all_transfers
-        all_transfers = _load_all_transfers()
+        all_transfers = _load_all_transfers(verbose=verbose)
         if verbose:
             print(f"  Loaded {len(all_transfers)} transfers")
         
         # Load team -> league mapping for ALL seasons
         if verbose:
             print(f"Loading team league mapping (all seasons)...")
-        team_league_mapping = load_team_league_mapping()
+        team_league_mapping = load_team_league_mapping(verbose=verbose)
         if verbose:
             print(f"  Found {len(team_league_mapping)} unique teams across all seasons")
         
