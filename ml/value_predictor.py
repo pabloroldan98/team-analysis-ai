@@ -237,11 +237,18 @@ class ValuePredictor:
         # 
         # Then in predict(): return np.expm1(self.model.predict(X))
         
-        # Convert categorical columns to pandas category type
+        # Unify categories: val may have values unseen in train → map to "Other"
         for col in self.CATEGORICAL_FEATURES:
-            if col in X_train.columns:
-                X_train[col] = X_train[col].astype("category")
-                X_val[col] = X_val[col].astype("category")
+            if col not in X_train.columns:
+                continue
+            train_cats = set(X_train[col].dropna().unique())
+            X_val[col] = X_val[col].apply(
+                lambda v, cats=train_cats: v if v in cats else "Other"
+            )
+            all_cats = sorted(train_cats | {"Other"})
+            cat_type = pd.CategoricalDtype(categories=all_cats)
+            X_train[col] = X_train[col].astype(cat_type)
+            X_val[col] = X_val[col].astype(cat_type)
         
         if verbose:
             print(f"Features: {len(X_train.columns)} ({self.CATEGORICAL_FEATURES} are categorical)")

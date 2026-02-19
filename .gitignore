@@ -213,3 +213,5 @@ __marimo__/
 data/json/*
 !data/json/*_all_*
 !data/json/discovered_leagues.json
+
+ml/datasets/*
