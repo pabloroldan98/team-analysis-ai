@@ -220,9 +220,12 @@ def _preload_team_data(lang: str, club_name: str, season: str):
     from simulator.transfer_simulator import TransferSimulator
 
     progress = st.progress(0, text=t(lang, "loading_data"))
+    hint = st.empty()
+    hint.caption(t(lang, "sim_may_take"))
 
     def _on_progress(pct: float, key: str):
-        progress.progress(min(pct, 1.0), text=f"⏳ {t(lang, key)}")
+        icon = "✅" if pct >= 1.0 else "⏳"
+        progress.progress(min(pct, 1.0), text=f"{icon} {t(lang, key)}")
 
     sim = TransferSimulator(
         club_name=club_name,
@@ -230,14 +233,17 @@ def _preload_team_data(lang: str, club_name: str, season: str):
         transfer_budget=0,
         salary_budget=0,
     )
-    try:
-        squad = sim.preload_data(verbose=False, progress_callback=_on_progress)
-    except ValueError as exc:
-        progress.empty()
-        st.error(str(exc))
-        return
+    with st.spinner(""):
+        try:
+            squad = sim.preload_data(verbose=False, progress_callback=_on_progress)
+        except ValueError as exc:
+            progress.empty()
+            hint.empty()
+            st.error(str(exc))
+            return
 
     progress.empty()
+    hint.empty()
 
     # Clear stale sell-selection widget keys
     for pos in POS_ORDER:
@@ -254,8 +260,13 @@ def _squad_label(p, lang: str) -> str:
     pos = t(lang, POS_KEYS.get(p.position, "pos_def"))
     mv = format_currency(p.market_value) if p.market_value else "?"
     pv = getattr(p, "predicted_value", None)
-    if pv and p.market_value and pv != p.market_value:
-        arrow = "↑" if pv > p.market_value else "↓"
+    if pv is not None and p.market_value is not None:
+        if pv > p.market_value:
+            arrow = " ↑"
+        elif pv < p.market_value:
+            arrow = " ↓"
+        else:
+            arrow = ""
         return f"{p.name}  ({pos}, {mv}) → {format_currency(pv)} {arrow}"
     return f"{p.name}  ({pos}, {mv})"
 
@@ -292,7 +303,7 @@ def render_sell_selection(lang: str, squad) -> Optional[List[str]]:
         )
         selected_ids.extend(options[label] for label in chosen)
 
-    return selected_ids if selected_ids else None
+    return selected_ids
 
 
 # =============================================================================
