@@ -246,14 +246,14 @@ class TransferSimulator:
         verbose: bool = False,
         progress_callback: Optional[object] = None,
     ) -> List[Player]:
-        """Load data, identify squad and calculate team values (steps 1-3).
+        """Load data, identify squad, calculate team values and predict squad values.
 
         Call this before ``run()`` when you need to show the squad to the user
         (e.g. for manual sell selection).  The results are cached on the
         instance so that ``run(preloaded=True)`` can skip these steps.
 
         Returns:
-            The club's player list.
+            The club's player list (with ``predicted_value`` set).
         """
         def _progress(pct: float, key: str) -> None:
             if progress_callback is not None:
@@ -263,13 +263,13 @@ class TransferSimulator:
         all_players = self._load_active_players(verbose=verbose)
         self.all_players = all_players
 
-        _progress(0.20, "step_team")
+        _progress(0.15, "step_team")
         club_players = self._get_club_players(all_players)
         if not club_players:
             raise ValueError(f"No players found for club: {self.club_name}")
         self.club_players = club_players
 
-        _progress(0.35, "step_team_values")
+        _progress(0.25, "step_team_values")
         self.team_market_values = self._calculate_team_market_values(all_players)
 
         self._athletic_eligible_ids: Optional[set] = None
@@ -281,8 +281,12 @@ class TransferSimulator:
         if self._is_athletic or athletic_in_market:
             self._athletic_eligible_ids = self._load_athletic_eligible_ids(verbose=verbose)
 
+        _progress(0.35, "step_predicting")
+        self._pred_cache: dict = {}
+        self._predict_values(club_players, verbose=verbose, _cache=self._pred_cache)
+
         self._preloaded = True
-        _progress(0.40, "step_team_values")
+        _progress(0.45, "step_team_values")
         return club_players
 
     def _load_active_players(self, verbose: bool = False) -> List[Player]:
@@ -949,7 +953,7 @@ class TransferSimulator:
 
         # ── Step 4/8: Sell players ───────────────────────────────────────
         _progress(0.50, "step_selling")
-        pred_cache: Optional[dict] = None
+        pred_cache: Optional[dict] = getattr(self, "_pred_cache", None)
         if players_to_sell is not None:
             sold_players, formation_needed = self._sell_selected_players(
                 club_players,
@@ -959,7 +963,8 @@ class TransferSimulator:
         elif sell_by_value_decline:
             if verbose:
                 print("  Predicting values for squad (sell-by-decline mode)...")
-            pred_cache = {}
+            if pred_cache is None:
+                pred_cache = {}
             club_players = self._predict_values(club_players, verbose=verbose, _cache=pred_cache)
             sold_players, formation_needed = self._sell_players_by_value_decline(
                 club_players,
@@ -1018,7 +1023,7 @@ class TransferSimulator:
             print(f"  {len(available_players)} players available for signing")
 
         available_players = self._predict_values(
-            available_players, verbose=verbose, _cache=pred_cache if sell_by_value_decline else None
+            available_players, verbose=verbose, _cache=pred_cache
         )
 
         # ── Step 6/8: Knapsack optimisation ──────────────────────────────

@@ -3,9 +3,9 @@ name: Scheduled Scraper - All Data
 
 on:
   workflow_dispatch:
-  schedule:
-    # 1st of each month at 1:00 AM UTC
-    - cron: '0 1 1 * *'
+  # schedule:
+  #   # 1st of each month at 1:00 AM UTC
+  #   - cron: '0 1 1 * *'
 
 concurrency:
   group: scheduled-scraper

@@ -253,6 +253,10 @@ def _squad_label(p, lang: str) -> str:
     """Build a display label for a player in the multiselect."""
     pos = t(lang, POS_KEYS.get(p.position, "pos_def"))
     mv = format_currency(p.market_value) if p.market_value else "?"
+    pv = getattr(p, "predicted_value", None)
+    if pv and p.market_value and pv != p.market_value:
+        arrow = "↑" if pv > p.market_value else "↓"
+        return f"{p.name}  ({pos}, {mv}) → {format_currency(pv)} {arrow}"
     return f"{p.name}  ({pos}, {mv})"
 
 
@@ -459,7 +463,8 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
         fm = result.formation_needed
         sold_labels = ", ".join(
             f"{t(lang, POS_KEYS[pos])}: {fm[i]}"
-            for i, pos in enumerate(POS_ORDER) if fm[i] > 0
+            # for i, pos in enumerate(POS_ORDER) if fm[i] > 0
+            for i, pos in enumerate(POS_ORDER)
         )
         st.caption(sold_labels)
 
@@ -488,7 +493,8 @@ def render_results(lang: str, result, clubs_data: List[Dict]):
                 bought_counts[p.position] += 1
         bought_labels = ", ".join(
             f"{t(lang, POS_KEYS[pos])}: {bought_counts[pos]}"
-            for pos in POS_ORDER if bought_counts[pos] > 0
+            # for pos in POS_ORDER if bought_counts[pos] > 0
+            for pos in POS_ORDER
         )
         st.caption(bought_labels)
 
