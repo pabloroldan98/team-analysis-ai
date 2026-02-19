@@ -859,7 +859,7 @@ class TransferSimulator:
         progress_callback: Optional[object] = None,
         unlimited_budget: bool = False,
         players_to_sell: Optional[List[str]] = None,
-        buy_counts: Optional[Dict[str, int]] = None,
+        buy_counts: Optional[Dict[str, Tuple[int, int]]] = None,
     ) -> TransferResult:
         f"""
         Run the transfer simulation.
@@ -884,9 +884,9 @@ class TransferSimulator:
             players_to_sell: Optional list of player IDs to sell manually.
                 When provided, ``sell_by_value_decline`` and random selling
                 are skipped.
-            buy_counts: Optional per-position count of players to buy.
-                E.g. ``{{"GK": 0, "DEF": 2, "MID": 1, "ATT": 1}}``.
-                Overrides the formation derived from sales.
+            buy_counts: Optional per-position (min, max) range of players to buy.
+                E.g. ``{{"GK": (0, 1), "DEF": (1, 3), "MID": (0, 2), "ATT": (1, 2)}}``.
+                All combinations are evaluated and the best one is selected.
 
         Returns:
             TransferResult with simulation details
@@ -1032,12 +1032,21 @@ class TransferSimulator:
             print(f"  Finding optimal signings...")
 
         if buy_counts:
-            custom_formation = [[
-                buy_counts.get("GK", 0),
-                buy_counts.get("DEF", 0),
-                buy_counts.get("MID", 0),
-                buy_counts.get("ATT", 0),
-            ]]
+            from itertools import product as _product
+            gk_lo, gk_hi = buy_counts.get("GK", (0, 0))
+            def_lo, def_hi = buy_counts.get("DEF", (0, 0))
+            mid_lo, mid_hi = buy_counts.get("MID", (0, 0))
+            att_lo, att_hi = buy_counts.get("ATT", (0, 0))
+            custom_formation = [
+                list(combo) for combo in _product(
+                    range(gk_lo, gk_hi + 1),
+                    range(def_lo, def_hi + 1),
+                    range(mid_lo, mid_hi + 1),
+                    range(att_lo, att_hi + 1),
+                )
+            ]
+            if verbose:
+                print(f"  {len(custom_formation)} formation combinations to evaluate")
         else:
             gk_needed, def_needed, mid_needed, att_needed = formation_needed
             custom_formation = [[gk_needed, def_needed, mid_needed, att_needed]]

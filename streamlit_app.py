@@ -16,7 +16,7 @@ import os
 import sys
 import time
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 import streamlit as st
 
@@ -310,22 +310,59 @@ def render_sell_selection(lang: str, squad) -> Optional[List[str]]:
 # STEP 4 – SIGNINGS PER POSITION
 # =============================================================================
 
-def render_buy_counts(lang: str) -> Dict[str, int]:
-    """Render number inputs for how many players to sign per position (0-3)."""
-    st.subheader(t(lang, "signings_per_position"))
-    st.caption(t(lang, "signings_per_pos_help"))
+def render_buy_counts(lang: str) -> Dict[str, Tuple[int, int]]:
+    """Render exact or range inputs for how many players to sign per position.
 
-    buy_counts: Dict[str, int] = {}
-    cols = st.columns(len(POS_ORDER))
-    for i, pos in enumerate(POS_ORDER):
-        with cols[i]:
-            buy_counts[pos] = st.number_input(
-                t(lang, POS_KEYS[pos]),
-                min_value=0,
-                max_value=3,
-                value=1,
-                key=f"buy_count_{pos}",
-            )
+    Returns dict mapping position -> (min, max).  In exact mode min == max.
+    """
+    st.subheader(t(lang, "signings_per_position"))
+
+    mode = st.radio(
+        "mode",
+        options=["exact", "range"],
+        format_func=lambda m: t(lang, f"buy_mode_{m}"),
+        horizontal=True,
+        key="buy_mode",
+        label_visibility="collapsed",
+    )
+
+    buy_counts: Dict[str, Tuple[int, int]] = {}
+
+    if mode == "exact":
+        st.caption(t(lang, "signings_exact_help"))
+        cols = st.columns(len(POS_ORDER))
+        for i, pos in enumerate(POS_ORDER):
+            with cols[i]:
+                n = st.number_input(
+                    t(lang, POS_KEYS[pos]),
+                    min_value=0,
+                    max_value=3,
+                    value=1,
+                    key=f"buy_exact_{pos}",
+                )
+                buy_counts[pos] = (n, n)
+    else:
+        st.caption(t(lang, "signings_range_help"))
+        cols = st.columns(len(POS_ORDER))
+        for i, pos in enumerate(POS_ORDER):
+            with cols[i]:
+                st.markdown(f"**{t(lang, POS_KEYS[pos])}**")
+                lo = st.number_input(
+                    t(lang, "buy_min"),
+                    min_value=0,
+                    max_value=2,
+                    value=0,
+                    key=f"buy_min_{pos}",
+                )
+                hi = st.number_input(
+                    t(lang, "buy_max"),
+                    min_value=lo,
+                    max_value=2,
+                    value=max(lo, 1),
+                    key=f"buy_max_{pos}",
+                )
+                buy_counts[pos] = (lo, hi)
+
     return buy_counts
 
 
@@ -371,7 +408,7 @@ def run_simulation_with_progress(
     salary_budget: int,
     unlimited: bool,
     players_to_sell: Optional[List[str]] = None,
-    buy_counts: Optional[Dict[str, int]] = None,
+    buy_counts: Optional[Dict[str, Tuple[int, int]]] = None,
 ):
     """Run TransferSimulator.run() while feeding a Streamlit progress bar + spinner."""
     progress = st.progress(0, text=t(lang, "step_loading"))
