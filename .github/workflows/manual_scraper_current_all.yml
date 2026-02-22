@@ -193,6 +193,7 @@ jobs:
   # TEAMS
   # ============================================================
   scrape-teams:
+    if: false  # TEMPORARILY SKIPPED
     runs-on: ubuntu-latest
     timeout-minutes: 120
     strategy:
@@ -327,6 +328,7 @@ jobs:
           if-no-files-found: error
 
   combine-teams:
+    if: false  # TEMPORARILY SKIPPED
     needs: scrape-teams
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -373,6 +375,7 @@ jobs:
   # PLAYERS
   # ============================================================
   scrape-players:
+    if: false  # TEMPORARILY SKIPPED
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
@@ -507,6 +510,7 @@ jobs:
           if-no-files-found: error
 
   combine-players:
+    if: false  # TEMPORARILY SKIPPED
     needs: scrape-players
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -553,6 +557,7 @@ jobs:
   # TRANSFERS
   # ============================================================
   scrape-transfers:
+    if: false  # TEMPORARILY SKIPPED
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
@@ -687,6 +692,7 @@ jobs:
           if-no-files-found: error
 
   combine-transfers:
+    if: false  # TEMPORARILY SKIPPED
     needs: scrape-transfers
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -913,7 +919,8 @@ jobs:
   # FINAL COMMIT
   # ============================================================
   commit-all:
-    needs: [combine-leagues, combine-teams, combine-players, combine-transfers, combine-valuations]
+    # needs: [combine-leagues, combine-teams, combine-players, combine-transfers, combine-valuations]  # FULL VERSION
+    needs: [combine-leagues, combine-valuations]  # TEMPORARILY SKIPPED teams, players, transfers
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -929,23 +936,24 @@ jobs:
           name: leagues-all-data
           path: data/json/
 
-      - name: Download teams data
-        uses: actions/download-artifact@v4
-        with:
-          name: teams-all-data
-          path: data/json/
-
-      - name: Download players data
-        uses: actions/download-artifact@v4
-        with:
-          name: players-all-data
-          path: data/json/
-
-      - name: Download transfers data
-        uses: actions/download-artifact@v4
-        with:
-          name: transfers-all-data
-          path: data/json/
+      # TEMPORARILY SKIPPED – teams, players, transfers
+      # - name: Download teams data
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: teams-all-data
+      #     path: data/json/
+      #
+      # - name: Download players data
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: players-all-data
+      #     path: data/json/
+      #
+      # - name: Download transfers data
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: transfers-all-data
+      #     path: data/json/
 
       - name: Download valuations data
         uses: actions/download-artifact@v4
