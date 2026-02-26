@@ -143,7 +143,7 @@ jobs:
         with:
           name: leagues-${{ matrix.league }}-${{ matrix.season }}
           path: data/json/leagues_${{ matrix.league }}_${{ matrix.season }}.json
-          retention-days: 1
+          retention-days: 3
           if-no-files-found: error
 
   combine-leagues:
@@ -187,7 +187,7 @@ jobs:
         with:
           name: leagues-all-data
           path: data/json/leagues_all_*.json
-          retention-days: 1
+          retention-days: 3
 
   # ============================================================
   # TEAMS
@@ -323,7 +323,7 @@ jobs:
         with:
           name: teams-${{ matrix.league }}-${{ matrix.season }}
           path: data/json/teams_${{ matrix.league }}_${{ matrix.season }}.json
-          retention-days: 1
+          retention-days: 3
           if-no-files-found: error
 
   combine-teams:
@@ -367,7 +367,7 @@ jobs:
         with:
           name: teams-all-data
           path: data/json/teams_all_*.json
-          retention-days: 1
+          retention-days: 3
 
   # ============================================================
   # PLAYERS
@@ -503,7 +503,7 @@ jobs:
         with:
           name: players-${{ matrix.league }}-${{ matrix.season }}
           path: data/json/players_${{ matrix.league }}_${{ matrix.season }}.json
-          retention-days: 1
+          retention-days: 3
           if-no-files-found: error
 
   combine-players:
@@ -547,7 +547,7 @@ jobs:
         with:
           name: players-all-data
           path: data/json/players_all_*.json
-          retention-days: 1
+          retention-days: 3
 
   # ============================================================
   # TRANSFERS
@@ -683,7 +683,7 @@ jobs:
         with:
           name: transfers-${{ matrix.league }}-${{ matrix.season }}
           path: data/json/transfers_${{ matrix.league }}_${{ matrix.season }}.json
-          retention-days: 1
+          retention-days: 3
           if-no-files-found: error
 
   combine-transfers:
@@ -727,7 +727,7 @@ jobs:
         with:
           name: transfers-all-data
           path: data/json/transfers_all_*.json
-          retention-days: 1
+          retention-days: 3
 
   # ============================================================
   # VALUATIONS
@@ -863,7 +863,7 @@ jobs:
         with:
           name: valuations-${{ matrix.league }}-${{ matrix.season }}
           path: data/json/valuations_${{ matrix.league }}_${{ matrix.season }}.json
-          retention-days: 1
+          retention-days: 3
           if-no-files-found: error
 
   combine-valuations:
@@ -907,7 +907,7 @@ jobs:
         with:
           name: valuations-all-data
           path: data/json/valuations_all_*.json
-          retention-days: 1
+          retention-days: 3
 
   # ============================================================
   # FINAL COMMIT
