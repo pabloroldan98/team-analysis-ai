@@ -80,8 +80,13 @@ jobs:
       
       - name: Combine into _all_ files
         run: |
-          for season in $(ls data/json/players_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u); do
+          SEASONS=$(ls data/json/players_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity players --season $season
+          done
+          for f in data/json/players_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
           done
       
       - name: Upload all data

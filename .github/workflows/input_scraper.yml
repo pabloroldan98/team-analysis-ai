@@ -121,8 +121,13 @@ jobs:
       
       - name: Combine into _all_ files
         run: |
-          for season in ${{ join(fromJSON(inputs.seasons), ' ') }}; do
+          SEASONS="${{ join(fromJSON(inputs.seasons), ' ') }}"
+          for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity leagues --season $season
+          done
+          for f in data/json/leagues_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
           done
       
       - name: Upload all data
@@ -208,10 +213,15 @@ jobs:
       
       - name: Combine into _all_ files
         run: |
-          for season in ${{ join(fromJSON(inputs.seasons), ' ') }}; do
+          SEASONS="${{ join(fromJSON(inputs.seasons), ' ') }}"
+          for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity teams --season $season
           done
-      
+          for f in data/json/teams_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
+          done
+
       - name: Upload all data
         uses: actions/upload-artifact@v4
         with:
@@ -295,10 +305,15 @@ jobs:
       
       - name: Combine into _all_ files
         run: |
-          for season in ${{ join(fromJSON(inputs.seasons), ' ') }}; do
+          SEASONS="${{ join(fromJSON(inputs.seasons), ' ') }}"
+          for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity players --season $season
           done
-      
+          for f in data/json/players_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
+          done
+
       - name: Upload all data
         uses: actions/upload-artifact@v4
         with:
@@ -382,10 +397,15 @@ jobs:
       
       - name: Combine into _all_ files
         run: |
-          for season in ${{ join(fromJSON(inputs.seasons), ' ') }}; do
+          SEASONS="${{ join(fromJSON(inputs.seasons), ' ') }}"
+          for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity transfers --season $season
           done
-      
+          for f in data/json/transfers_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
+          done
+
       - name: Upload all data
         uses: actions/upload-artifact@v4
         with:
@@ -469,10 +489,15 @@ jobs:
       
       - name: Combine into _all_ files
         run: |
-          for season in ${{ join(fromJSON(inputs.seasons), ' ') }}; do
+          SEASONS="${{ join(fromJSON(inputs.seasons), ' ') }}"
+          for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity valuations --season $season
           done
-      
+          for f in data/json/valuations_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
+          done
+
       - name: Upload all data
         uses: actions/upload-artifact@v4
         with:

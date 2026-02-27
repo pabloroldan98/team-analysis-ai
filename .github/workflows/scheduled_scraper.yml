@@ -86,10 +86,15 @@ jobs:
       
       - name: Combine into _all_ files
         run: |
-          for season in $(ls data/json/leagues_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u); do
+          SEASONS=$(ls data/json/leagues_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity leagues --season $season
           done
-      
+          for f in data/json/leagues_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
+          done
+
       - name: Upload all leagues data
         uses: actions/upload-artifact@v4
         with:
@@ -171,10 +176,15 @@ jobs:
       
       - name: Combine into _all_ files
         run: |
-          for season in $(ls data/json/teams_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u); do
+          SEASONS=$(ls data/json/teams_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity teams --season $season
           done
-      
+          for f in data/json/teams_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
+          done
+
       - name: Upload all teams data
         uses: actions/upload-artifact@v4
         with:
@@ -256,10 +266,15 @@ jobs:
       
       - name: Combine into _all_ files
         run: |
-          for season in $(ls data/json/players_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u); do
+          SEASONS=$(ls data/json/players_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity players --season $season
           done
-      
+          for f in data/json/players_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
+          done
+
       - name: Upload all players data
         uses: actions/upload-artifact@v4
         with:
@@ -341,10 +356,15 @@ jobs:
       
       - name: Combine into _all_ files
         run: |
-          for season in $(ls data/json/transfers_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u); do
+          SEASONS=$(ls data/json/transfers_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity transfers --season $season
           done
-      
+          for f in data/json/transfers_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
+          done
+
       - name: Upload all transfers data
         uses: actions/upload-artifact@v4
         with:
@@ -426,10 +446,15 @@ jobs:
       
       - name: Combine into _all_ files
         run: |
-          for season in $(ls data/json/valuations_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u); do
+          SEASONS=$(ls data/json/valuations_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity valuations --season $season
           done
-      
+          for f in data/json/valuations_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
+          done
+
       - name: Upload all valuations data
         uses: actions/upload-artifact@v4
         with:

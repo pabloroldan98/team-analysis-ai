@@ -1,0 +1,55 @@
+# Precompute active players cache for "today"
+# Run daily at 00:30 Spain time (~23:30 UTC) to keep current squad data fresh
+
+name: Precompute Cache (Today)
+
+on:
+  workflow_dispatch:
+  # No funcionará porque no se suben los json
+  # schedule:
+  #   # 23:30 UTC ≈ 00:30 Madrid (winter) / 01:30 Madrid (summer)
+  #   - cron: '30 23 * * *'
+
+concurrency:
+  group: precompute-cache-today
+  cancel-in-progress: false
+
+jobs:
+  precompute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Precompute cache for today
+        run: |
+          TODAY=$(TZ='Europe/Madrid' date '+%Y-%m-%d')
+          echo "Computing cache for date: $TODAY"
+          python scripts/precompute_active_players_cache.py --season today --date "$TODAY"
+
+      - name: Check for changes and push
+        run: |
+          git add data/json/cache/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Cache unchanged."
+          else
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+            git commit -m "Precompute active players cache (today) [$(date -u '+%Y-%m-%d')]"
+            git push
+          fi

@@ -1,0 +1,53 @@
+# Precompute active players cache for all seasons
+# Run at season start (1 July) or manually to refresh historical season caches
+
+name: Precompute Cache (Seasons)
+
+on:
+  workflow_dispatch:
+  # No funcionará porque no se suben los json
+  # schedule:
+  #   # 1 July 00:30 UTC = season start
+  #   - cron: '30 0 1 7 *'
+
+concurrency:
+  group: precompute-cache-seasons
+  cancel-in-progress: false
+
+jobs:
+  precompute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Precompute cache for all seasons
+        run: python scripts/precompute_active_players_cache.py --all-seasons
+        continue-on-error: true
+
+      - name: Check for changes and push
+        run: |
+          git add data/json/cache/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No cache changes to commit."
+          else
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+            git commit -m "Precompute active players cache for seasons [$(date -u '+%Y-%m-%d')]"
+            git push
+          fi
