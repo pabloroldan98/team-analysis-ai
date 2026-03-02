@@ -1,0 +1,1018 @@
+# .github/workflows/manual_scraper_current_all.yml
+name: Manual Scraper - Current (valuations data of all leagues)
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: manual-scraper-current-all
+  cancel-in-progress: false
+
+jobs:
+  # ============================================================
+  # LEAGUES
+  # ============================================================
+  scrape-leagues:
+    if: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        league:
+          # Europe – Tier 1
+          - laliga
+          - premier
+          - seriea
+          - bundesliga
+          - ligue1
+          - liga_portugal
+          - turkish
+          - eredivisie
+          - russian
+          - belgian
+          - greek
+          - danish
+          - ukrainian
+          - czech
+          - polish
+          - swiss
+          - scottish
+          - austrian
+          - norwegian
+          - serbian
+          - romanian
+          - swedish
+          - croatian
+          - bulgarian
+          - israeli
+          - cypriot
+          - hungarian
+          - azerbaijani
+          - slovak
+          # Europe – Tier 2
+          - segunda
+          - championship
+          - serieb
+          - bundesliga2
+          - ligue2
+          - liga_portugal2
+          - turkish2
+          - dutch2
+          - belgian2
+          - russian2
+          # Europe – Tier 3
+          - leagueone
+          - bundesliga3
+          - seriec1
+          - seriec2
+          - seriec3
+          - primeraref1
+          - primeraref2
+          # Europe – Tier 4
+          - leaguetwo
+          # Americas – Tier 1
+          - brazilian
+          - mls
+          - argentine
+          - mexican
+          - colombian
+          - uruguayan
+          - chilean
+          - ecuadorian
+          - peruvian
+          - paraguayan
+          # Americas – Tier 2
+          - brazilian2
+          - argentine2
+          # Asia – Tier 1
+          - saudi
+          - qatari
+          - emirati
+          - japanese
+          - chinese
+          - iranian
+          - korean
+          - australian
+          # Asia – Tier 2
+          - japanese2
+          # Africa – Tier 1
+          - egyptian
+          - south_african
+          - moroccan
+          # Youth
+          - primavera1
+          - u19_bundesliga_a
+          - u19_bundesliga_h
+          - liga_revelacao
+        season:
+          - 2025-2026
+          # - 2024-2025
+          # - 2023-2024
+          # - 2022-2023
+          # - 2021-2022
+          # - 2020-2021
+          # - 2019-2020
+          # - 2018-2019
+          # - 2017-2018
+          # - 2016-2017
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
+      - name: Run leagues scraper for ${{ matrix.league }} (${{ matrix.season }})
+        run: |
+          python scraping_tasks/scrape_leagues.py --leagues ${{ matrix.league }} --season ${{ matrix.season }} --use-downloaded-data
+
+      - name: Upload league artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: leagues-${{ matrix.league }}-${{ matrix.season }}
+          path: data/json/leagues_${{ matrix.league }}_${{ matrix.season }}.json
+          retention-days: 3
+          if-no-files-found: error
+
+  combine-leagues:
+    if: false
+    needs: scrape-leagues
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
+      - name: Download all league artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/json/
+          pattern: leagues-*
+          merge-multiple: true
+
+      - name: Combine into _all_ files
+        run: |
+          SEASONS=$(ls data/json/leagues_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          for season in $SEASONS; do
+            python scraping_tasks/combine_data.py --entity leagues --season $season
+          done
+          for f in data/json/leagues_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
+          done
+
+      - name: Upload all leagues data
+        uses: actions/upload-artifact@v4
+        with:
+          name: leagues-all-data
+          path: data/json/leagues_all_*.json
+          retention-days: 3
+
+  # ============================================================
+  # TEAMS
+  # ============================================================
+  scrape-teams:
+    if: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        league:
+          # Europe – Tier 1
+          - laliga
+          - premier
+          - seriea
+          - bundesliga
+          - ligue1
+          - liga_portugal
+          - turkish
+          - eredivisie
+          - russian
+          - belgian
+          - greek
+          - danish
+          - ukrainian
+          - czech
+          - polish
+          - swiss
+          - scottish
+          - austrian
+          - norwegian
+          - serbian
+          - romanian
+          - swedish
+          - croatian
+          - bulgarian
+          - israeli
+          - cypriot
+          - hungarian
+          - azerbaijani
+          - slovak
+          # Europe – Tier 2
+          - segunda
+          - championship
+          - serieb
+          - bundesliga2
+          - ligue2
+          - liga_portugal2
+          - turkish2
+          - dutch2
+          - belgian2
+          - russian2
+          # Europe – Tier 3
+          - leagueone
+          - bundesliga3
+          - seriec1
+          - seriec2
+          - seriec3
+          - primeraref1
+          - primeraref2
+          # Europe – Tier 4
+          - leaguetwo
+          # Americas – Tier 1
+          - brazilian
+          - mls
+          - argentine
+          - mexican
+          - colombian
+          - uruguayan
+          - chilean
+          - ecuadorian
+          - peruvian
+          - paraguayan
+          # Americas – Tier 2
+          - brazilian2
+          - argentine2
+          # Asia – Tier 1
+          - saudi
+          - qatari
+          - emirati
+          - japanese
+          - chinese
+          - iranian
+          - korean
+          - australian
+          # Asia – Tier 2
+          - japanese2
+          # Africa – Tier 1
+          - egyptian
+          - south_african
+          - moroccan
+          # Youth
+          - primavera1
+          - u19_bundesliga_a
+          - u19_bundesliga_h
+          - liga_revelacao
+        season:
+          - 2025-2026
+          # - 2024-2025
+          # - 2023-2024
+          # - 2022-2023
+          # - 2021-2022
+          # - 2020-2021
+          # - 2019-2020
+          # - 2018-2019
+          # - 2017-2018
+          # - 2016-2017
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
+      - name: Run teams scraper for ${{ matrix.league }} (${{ matrix.season }})
+        run: |
+          python scraping_tasks/scrape_teams.py --leagues ${{ matrix.league }} --season ${{ matrix.season }} --use-downloaded-data
+
+      - name: Upload team artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: teams-${{ matrix.league }}-${{ matrix.season }}
+          path: data/json/teams_${{ matrix.league }}_${{ matrix.season }}.json
+          retention-days: 3
+          if-no-files-found: error
+
+  combine-teams:
+    if: false
+    needs: scrape-teams
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
+      - name: Download all team artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/json/
+          pattern: teams-*
+          merge-multiple: true
+
+      - name: Combine into _all_ files
+        run: |
+          SEASONS=$(ls data/json/teams_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          for season in $SEASONS; do
+            python scraping_tasks/combine_data.py --entity teams --season $season
+          done
+          for f in data/json/teams_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
+          done
+
+      - name: Upload all teams data
+        uses: actions/upload-artifact@v4
+        with:
+          name: teams-all-data
+          path: data/json/teams_all_*.json
+          retention-days: 3
+
+  # ============================================================
+  # PLAYERS
+  # ============================================================
+  scrape-players:
+    if: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        league:
+          # Europe – Tier 1
+          - laliga
+          - premier
+          - seriea
+          - bundesliga
+          - ligue1
+          - liga_portugal
+          - turkish
+          - eredivisie
+          - russian
+          - belgian
+          - greek
+          - danish
+          - ukrainian
+          - czech
+          - polish
+          - swiss
+          - scottish
+          - austrian
+          - norwegian
+          - serbian
+          - romanian
+          - swedish
+          - croatian
+          - bulgarian
+          - israeli
+          - cypriot
+          - hungarian
+          - azerbaijani
+          - slovak
+          # Europe – Tier 2
+          - segunda
+          - championship
+          - serieb
+          - bundesliga2
+          - ligue2
+          - liga_portugal2
+          - turkish2
+          - dutch2
+          - belgian2
+          - russian2
+          # Europe – Tier 3
+          - leagueone
+          - bundesliga3
+          - seriec1
+          - seriec2
+          - seriec3
+          - primeraref1
+          - primeraref2
+          # Europe – Tier 4
+          - leaguetwo
+          # Americas – Tier 1
+          - brazilian
+          - mls
+          - argentine
+          - mexican
+          - colombian
+          - uruguayan
+          - chilean
+          - ecuadorian
+          - peruvian
+          - paraguayan
+          # Americas – Tier 2
+          - brazilian2
+          - argentine2
+          # Asia – Tier 1
+          - saudi
+          - qatari
+          - emirati
+          - japanese
+          - chinese
+          - iranian
+          - korean
+          - australian
+          # Asia – Tier 2
+          - japanese2
+          # Africa – Tier 1
+          - egyptian
+          - south_african
+          - moroccan
+          # Youth
+          - primavera1
+          - u19_bundesliga_a
+          - u19_bundesliga_h
+          - liga_revelacao
+        season:
+          - 2025-2026
+          # - 2024-2025
+          # - 2023-2024
+          # - 2022-2023
+          # - 2021-2022
+          # - 2020-2021
+          # - 2019-2020
+          # - 2018-2019
+          # - 2017-2018
+          # - 2016-2017
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
+      - name: Run players scraper for ${{ matrix.league }} (${{ matrix.season }})
+        run: |
+          python scraping_tasks/scrape_players.py --leagues ${{ matrix.league }} --season ${{ matrix.season }} --use-downloaded-data
+
+      - name: Upload player artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: players-${{ matrix.league }}-${{ matrix.season }}
+          path: data/json/players_${{ matrix.league }}_${{ matrix.season }}.json
+          retention-days: 3
+          if-no-files-found: error
+
+  combine-players:
+    if: false
+    needs: scrape-players
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
+      - name: Download all player artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/json/
+          pattern: players-*
+          merge-multiple: true
+
+      - name: Combine into _all_ files
+        run: |
+          SEASONS=$(ls data/json/players_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          for season in $SEASONS; do
+            python scraping_tasks/combine_data.py --entity players --season $season
+          done
+          for f in data/json/players_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
+          done
+
+      - name: Upload all players data
+        uses: actions/upload-artifact@v4
+        with:
+          name: players-all-data
+          path: data/json/players_all_*.json
+          retention-days: 3
+
+  # ============================================================
+  # TRANSFERS
+  # ============================================================
+  scrape-transfers:
+    if: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        league:
+          # Europe – Tier 1
+          - laliga
+          - premier
+          - seriea
+          - bundesliga
+          - ligue1
+          - liga_portugal
+          - turkish
+          - eredivisie
+          - russian
+          - belgian
+          - greek
+          - danish
+          - ukrainian
+          - czech
+          - polish
+          - swiss
+          - scottish
+          - austrian
+          - norwegian
+          - serbian
+          - romanian
+          - swedish
+          - croatian
+          - bulgarian
+          - israeli
+          - cypriot
+          - hungarian
+          - azerbaijani
+          - slovak
+          # Europe – Tier 2
+          - segunda
+          - championship
+          - serieb
+          - bundesliga2
+          - ligue2
+          - liga_portugal2
+          - turkish2
+          - dutch2
+          - belgian2
+          - russian2
+          # Europe – Tier 3
+          - leagueone
+          - bundesliga3
+          - seriec1
+          - seriec2
+          - seriec3
+          - primeraref1
+          - primeraref2
+          # Europe – Tier 4
+          - leaguetwo
+          # Americas – Tier 1
+          - brazilian
+          - mls
+          - argentine
+          - mexican
+          - colombian
+          - uruguayan
+          - chilean
+          - ecuadorian
+          - peruvian
+          - paraguayan
+          # Americas – Tier 2
+          - brazilian2
+          - argentine2
+          # Asia – Tier 1
+          - saudi
+          - qatari
+          - emirati
+          - japanese
+          - chinese
+          - iranian
+          - korean
+          - australian
+          # Asia – Tier 2
+          - japanese2
+          # Africa – Tier 1
+          - egyptian
+          - south_african
+          - moroccan
+          # Youth
+          - primavera1
+          - u19_bundesliga_a
+          - u19_bundesliga_h
+          - liga_revelacao
+        season:
+          - 2025-2026
+          # - 2024-2025
+          # - 2023-2024
+          # - 2022-2023
+          # - 2021-2022
+          # - 2020-2021
+          # - 2019-2020
+          # - 2018-2019
+          # - 2017-2018
+          # - 2016-2017
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
+      - name: Run transfers scraper for ${{ matrix.league }} (${{ matrix.season }})
+        run: |
+          python scraping_tasks/scrape_transfers.py --leagues ${{ matrix.league }} --season ${{ matrix.season }} --use-downloaded-data
+
+      - name: Upload transfer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: transfers-${{ matrix.league }}-${{ matrix.season }}
+          path: data/json/transfers_${{ matrix.league }}_${{ matrix.season }}.json
+          retention-days: 3
+          if-no-files-found: error
+
+  combine-transfers:
+    if: false
+    needs: scrape-transfers
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
+      - name: Download all transfer artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/json/
+          pattern: transfers-*
+          merge-multiple: true
+
+      - name: Combine into _all_ files
+        run: |
+          SEASONS=$(ls data/json/transfers_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          for season in $SEASONS; do
+            python scraping_tasks/combine_data.py --entity transfers --season $season
+          done
+          for f in data/json/transfers_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
+          done
+
+      - name: Upload all transfers data
+        uses: actions/upload-artifact@v4
+        with:
+          name: transfers-all-data
+          path: data/json/transfers_all_*.json
+          retention-days: 3
+
+  # ============================================================
+  # VALUATIONS
+  # ============================================================
+  scrape-valuations:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        league:
+          # Europe – Tier 1
+          - laliga
+          - premier
+          - seriea
+          - bundesliga
+          - ligue1
+          - liga_portugal
+          - turkish
+          - eredivisie
+          - russian
+          - belgian
+          - greek
+          - danish
+          - ukrainian
+          - czech
+          - polish
+          - swiss
+          - scottish
+          - austrian
+          - norwegian
+          - serbian
+          - romanian
+          - swedish
+          - croatian
+          - bulgarian
+          - israeli
+          - cypriot
+          - hungarian
+          - azerbaijani
+          - slovak
+          # Europe – Tier 2
+          - segunda
+          - championship
+          - serieb
+          - bundesliga2
+          - ligue2
+          - liga_portugal2
+          - turkish2
+          - dutch2
+          - belgian2
+          - russian2
+          # Europe – Tier 3
+          - leagueone
+          - bundesliga3
+          - seriec1
+          - seriec2
+          - seriec3
+          - primeraref1
+          - primeraref2
+          # Europe – Tier 4
+          - leaguetwo
+          # Americas – Tier 1
+          - brazilian
+          - mls
+          - argentine
+          - mexican
+          - colombian
+          - uruguayan
+          - chilean
+          - ecuadorian
+          - peruvian
+          - paraguayan
+          # Americas – Tier 2
+          - brazilian2
+          - argentine2
+          # Asia – Tier 1
+          - saudi
+          - qatari
+          - emirati
+          - japanese
+          - chinese
+          - iranian
+          - korean
+          - australian
+          # Asia – Tier 2
+          - japanese2
+          # Africa – Tier 1
+          - egyptian
+          - south_african
+          - moroccan
+          # Youth
+          - primavera1
+          - u19_bundesliga_a
+          - u19_bundesliga_h
+          - liga_revelacao
+        season:
+          - 2025-2026
+          # - 2024-2025
+          # - 2023-2024
+          # - 2022-2023
+          # - 2021-2022
+          # - 2020-2021
+          # - 2019-2020
+          # - 2018-2019
+          # - 2017-2018
+          # - 2016-2017
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
+      - name: Run valuations scraper for ${{ matrix.league }} (${{ matrix.season }})
+        run: |
+          python scraping_tasks/scrape_valuations.py --leagues ${{ matrix.league }} --season ${{ matrix.season }} --use-downloaded-data
+
+      - name: Upload valuation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: valuations-${{ matrix.league }}-${{ matrix.season }}
+          path: data/json/valuations_${{ matrix.league }}_${{ matrix.season }}.json
+          retention-days: 3
+          if-no-files-found: error
+
+  combine-valuations:
+    needs: scrape-valuations
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+
+      - name: Download all valuation artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/json/
+          pattern: valuations-*
+          merge-multiple: true
+
+      - name: Combine into _all_ files
+        run: |
+          SEASONS=$(ls data/json/valuations_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          for season in $SEASONS; do
+            python scraping_tasks/combine_data.py --entity valuations --season $season
+          done
+          for f in data/json/valuations_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
+          done
+
+      - name: Upload all valuations data
+        uses: actions/upload-artifact@v4
+        with:
+          name: valuations-all-data
+          path: data/json/valuations_all_*.json
+          retention-days: 3
+
+  # ============================================================
+  # FINAL COMMIT
+  # ============================================================
+  commit-all:
+    # needs: [combine-leagues, combine-teams, combine-players, combine-transfers, combine-valuations]
+    needs: combine-valuations
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # - name: Download leagues data
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: leagues-all-data
+      #     path: data/json/
+
+      # - name: Download teams data
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: teams-all-data
+      #     path: data/json/
+
+      # - name: Download players data
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: players-all-data
+      #     path: data/json/
+
+      # - name: Download transfers data
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: transfers-all-data
+      #     path: data/json/
+
+      - name: Download valuations data
+        uses: actions/download-artifact@v4
+        with:
+          name: valuations-all-data
+          path: data/json/
+
+      - name: List downloaded files
+        run: |
+          echo "Downloaded files:"
+          ls -la data/json/
+
+      - name: Configure git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Update auto-update trigger in streamlit_app.py
+        run: |
+          TRIGGER_LINE="# Auto-update trigger: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          if grep -q "^# Auto-update trigger:" streamlit_app.py; then
+            sed -i "s/^# Auto-update trigger:.*/$TRIGGER_LINE/" streamlit_app.py
+          else
+            echo "$TRIGGER_LINE" >> streamlit_app.py
+          fi
+
+      - name: Commit changes
+        run: |
+          git add data/json/ streamlit_app.py
+          git diff --staged --quiet || git commit -m "All leagues (valuations) data update [$(date -u '+%Y-%m-%d')]"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
