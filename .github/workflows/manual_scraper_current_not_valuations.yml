@@ -1,5 +1,5 @@
 # .github/workflows/manual_scraper_current_all.yml
-name: Manual Scraper - Current (valuations data of all leagues)
+name: Manual Scraper - Current (not valuations data of all leagues)
 
 on:
   workflow_dispatch:
