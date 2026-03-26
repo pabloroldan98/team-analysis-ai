@@ -80,9 +80,12 @@ def main():
     
     # Summary
     print(f"\n=== Complete ===")
-    print(f"Total competitions scraped: {len(results)}")
+    total_competitions = sum(len(standings) for standings in results.values())
+    print(f"Total standings extracted: {total_competitions}")
+    print(f"Leagues processed: {len(results)}")
     for league_key, standings in results.items():
-        print(f"  {league_key.upper()}: {len(standings)} teams")
+        print(f"  {league_key}: {len(standings)} teams")
+    print()
     
     return 0
 

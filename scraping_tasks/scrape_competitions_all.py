@@ -43,9 +43,9 @@ def main():
     parser = argparse.ArgumentParser(description="Scrape ALL competition standings from Transfermarkt")
     parser.add_argument(
         "--season", 
-        type=int, 
+        type=str, 
         required=True, 
-        help="Season start year (e.g. 2024)"
+        help="Season string (e.g. 2024-2025)"
     )
     parser.add_argument(
         "--delay", 
@@ -71,6 +71,13 @@ def main():
     
     args = parser.parse_args()
 
+    print(f"=== Transfermarkt All Competitions Scraper ===")
+    print(f"Total leagues to scrape: {len(ALL_LEAGUES)}")
+    print(f"Season: {args.season}")
+    if args.use_downloaded_data:
+        print(f"Reuse: downloaded data when available")
+    print()
+
     scraper = TransfermarktCompetitionsScraper(
         season=args.season,
         delay=args.delay,
@@ -78,24 +85,21 @@ def main():
         use_downloaded_data=args.use_downloaded_data
     )
 
-    print(f"============================================================")
-    print(f"Starting complete scraping of competitions for season {args.season}...")
-    print(f"Total leagues to scrape: {len(ALL_LEAGUES)}")
-    print(f"============================================================")
-
     results = scraper.run(leagues=ALL_LEAGUES)
 
+    # Summary
     total_competitions = sum(len(standings) for standings in results.values())
-    print("\n============================================================")
-    print("Scraping Completed")
-    print(f"Leagues processed: {len(results)}")
+    
+    print(f"\n=== Complete ===")
     print(f"Total standings extracted: {total_competitions}")
-    print("============================================================\n")
+    print(f"Leagues processed: {len(results)}")
+    for league, standings in results.items():
+        print(f"  {league}: {len(standings)} teams")
+    print()
 
     if args.combine:
         print("Combining into _all_ file...")
-        season_str = f"{args.season}-{args.season+1}"
-        sys.argv = ['combine_data.py', '--entity', 'competitions', '--season', season_str]
+        sys.argv = ['combine_data.py', '--entity', 'competitions', '--season', args.season]
         combine_data.main()
         print("Done.")
 
