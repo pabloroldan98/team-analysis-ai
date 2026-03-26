@@ -62,13 +62,15 @@ The codebase follows an **object-oriented design** with dedicated classes for ea
 ├── player.py      # Player data model
 ├── transfer.py    # Transfer data model
 ├── valuation.py   # Valuation data model
+├── competition.py # Competition standing data model
 └── scraping/
     ├── base_scraper.py              # Base class with common utilities
     ├── transfermarkt_leagues.py     # League-specific scraper
     ├── transfermarkt_teams.py       # Team-specific scraper
     ├── transfermarkt_players.py     # Player-specific scraper
     ├── transfermarkt_transfers.py   # Transfer-specific scraper
-    └── transfermarkt_valuations.py  # Valuation-specific scraper
+    ├── transfermarkt_valuations.py  # Valuation-specific scraper
+    └── transfermarkt_competitions.py# Competition standings scraper
 ```
 
 This approach makes it easier to:
@@ -164,6 +166,7 @@ I capture more data than required:
 | Valuation | player_id, amount, date | club_at_valuation |
 | Team | - | stadium, capacity, logo, coach, squad_size, average_age, foreign_players_count |
 | League | - | total_market_value, num_teams, num_players, most_valuable_player |
+| Competition | - | position, matches_played, wins, draws, losses, goals_for, goals_against, goal_difference, points |
 
 #### Multi-League, Multi-Season, Parallel Execution
 
@@ -558,6 +561,7 @@ python scraping_tasks/scrape_teams.py --leagues laliga --season 2025-2026
 python scraping_tasks/scrape_players.py --leagues laliga --season 2025-2026
 python scraping_tasks/scrape_transfers.py --leagues laliga --season 2025-2026
 python scraping_tasks/scrape_valuations.py --leagues laliga --season 2025-2026
+python scraping_tasks/scrape_competitions.py --leagues laliga --season 2025-2026
 ```
 
 Output files are saved to `data/json/`. Use `scraping_tasks/combine_data.py` to merge league-specific files into `*_all_*.json` (required for the simulator).
@@ -579,6 +583,7 @@ python scraping_tasks/combine_data.py --entity teams --season 2025-2026
 python scraping_tasks/combine_data.py --entity players
 python scraping_tasks/combine_data.py --entity transfers
 python scraping_tasks/combine_data.py --entity valuations
+python scraping_tasks/combine_data.py --entity competitions
 ```
 
 ---

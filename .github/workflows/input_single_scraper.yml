@@ -67,6 +67,7 @@ on:
           - players
           - transfers
           - valuations
+          - competitions
 
 concurrency:
   group: input-single-scraper
@@ -264,17 +265,56 @@ jobs:
           if-no-files-found: error
 
   # ============================================================
+  # COMPETITIONS
+  # ============================================================
+  scrape-competitions:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'competitions' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+      
+      - name: Run competitions scraper for ${{ inputs.league }} (${{ inputs.season }})
+        run: |
+          python scraping_tasks/scrape_competitions.py --leagues ${{ inputs.league }} --season ${{ inputs.season }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: competitions-${{ inputs.league }}-${{ inputs.season }}
+          path: data/json/competitions_${{ inputs.league }}_${{ inputs.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  # ============================================================
   # FINAL COMMIT
   # ============================================================
   commit-all:
-    needs: [scrape-leagues, scrape-teams, scrape-players, scrape-transfers, scrape-valuations]
+    needs: [scrape-leagues, scrape-teams, scrape-players, scrape-transfers, scrape-valuations, scrape-competitions]
     if: |
       always() &&
       (needs.scrape-leagues.result == 'success' || needs.scrape-leagues.result == 'skipped') &&
       (needs.scrape-teams.result == 'success' || needs.scrape-teams.result == 'skipped') &&
       (needs.scrape-players.result == 'success' || needs.scrape-players.result == 'skipped') &&
       (needs.scrape-transfers.result == 'success' || needs.scrape-transfers.result == 'skipped') &&
-      (needs.scrape-valuations.result == 'success' || needs.scrape-valuations.result == 'skipped')
+      (needs.scrape-valuations.result == 'success' || needs.scrape-valuations.result == 'skipped') &&
+      (needs.scrape-competitions.result == 'success' || needs.scrape-competitions.result == 'skipped')
     runs-on: ubuntu-latest
     timeout-minutes: 30
     
@@ -321,6 +361,14 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: valuations-${{ inputs.league }}-${{ inputs.season }}
+          path: data/json/
+        continue-on-error: true
+
+      - name: Download competitions data
+        if: ${{ inputs.entity == 'all' || inputs.entity == 'competitions' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: competitions-${{ inputs.league }}-${{ inputs.season }}
           path: data/json/
         continue-on-error: true
       

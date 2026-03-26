@@ -2,7 +2,7 @@
 # scraping_tasks/scrape_all.py
 """
 Task: Run all scrapers for complete data download.
-This runs teams, players, and transfers scrapers.
+This runs teams, players, transfers, and competitions scrapers.
 
 NOTE: Valuations are excluded by default due to time requirements.
 Use --include-valuations to include them.
@@ -23,6 +23,7 @@ from scraping.transfermarkt_teams import TransfermarktTeamsScraper
 from scraping.transfermarkt_players import TransfermarktPlayersScraper
 from scraping.transfermarkt_transfers import TransfermarktTransfersScraper
 from scraping.transfermarkt_valuations import TransfermarktValuationsScraper
+from scraping.transfermarkt_competitions import TransfermarktCompetitionsScraper
 
 
 # Default leagues to scrape
@@ -111,12 +112,21 @@ def main():
     
     # 3. Transfers
     print("\n" + "="*50)
-    print("STEP 3/3: Scraping Transfers")
+    print("STEP 3/4: Scraping Transfers")
     print("="*50)
     transfers_scraper = TransfermarktTransfersScraper(**scraper_kwargs)
     transfers_results = transfers_scraper.run(leagues=args.leagues)
     total_transfers = sum(len(t) for ld in transfers_results.values() for t in ld.values())
     print(f"Transfers scraped: {total_transfers}")
+    
+    # 4. Competitions
+    print("\n" + "="*50)
+    print("STEP 4/4: Scraping Competitions")
+    print("="*50)
+    competitions_scraper = TransfermarktCompetitionsScraper(**scraper_kwargs)
+    competitions_results = competitions_scraper.run(leagues=args.leagues)
+    total_competitions = sum(len(c) for c in competitions_results.values())
+    print(f"Competitions standings scraped: {total_competitions}")
     
     # Optional: Valuations
     if args.include_valuations:
@@ -133,6 +143,7 @@ def main():
     print(f"Teams: {total_teams}")
     print(f"Players: {total_players}")
     print(f"Transfers: {total_transfers}")
+    print(f"Competitions Standings: {total_competitions}")
     
     return 0
 

@@ -1,0 +1,139 @@
+# .github/workflows/manual_scraper_competitions.yml
+name: Manual Scraper - Competitions
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: scraper-competitions
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        league: [laliga, premier, bundesliga, seriea, ligue1]
+        season: ['2025-2026', '2024-2025', '2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020', '2018-2019', '2017-2018', '2016-2017']
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+      
+      - name: Run competitions scraper for ${{ matrix.league }} (${{ matrix.season }})
+        run: |
+          python scraping_tasks/scrape_competitions.py --leagues ${{ matrix.league }} --season ${{ matrix.season }}
+      
+      - name: Upload league artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: competitions-${{ matrix.league }}-${{ matrix.season }}
+          path: data/json/competitions_${{ matrix.league }}_${{ matrix.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  combine:
+    needs: scrape
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+      
+      - name: Download all league artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/json/
+          pattern: competitions-*
+          merge-multiple: true
+      
+      - name: Combine into _all_ files
+        run: |
+          SEASONS=$(ls data/json/competitions_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          for season in $SEASONS; do
+            python scraping_tasks/combine_data.py --entity competitions --season $season
+          done
+          for f in data/json/competitions_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
+          done
+      
+      - name: Upload all data
+        uses: actions/upload-artifact@v4
+        with:
+          name: competitions-all-data
+          path: data/json/competitions_all_*.json
+          retention-days: 1
+
+  commit:
+    needs: combine
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      
+      - name: Download all data
+        uses: actions/download-artifact@v4
+        with:
+          name: competitions-all-data
+          path: data/json/
+      
+      - name: Configure git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      
+      - name: Update auto-update trigger in streamlit_app.py
+        run: |
+          TRIGGER_LINE="# Auto-update trigger: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          if grep -q "^# Auto-update trigger:" streamlit_app.py; then
+            sed -i "s/^# Auto-update trigger:.*/$TRIGGER_LINE/" streamlit_app.py
+          else
+            echo "$TRIGGER_LINE" >> streamlit_app.py
+          fi
+
+      - name: Commit changes
+        run: |
+          git add data/json/ streamlit_app.py
+          git diff --staged --quiet || git commit -m "Update competitions data [$(date -u '+%Y-%m-%d')]"
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main

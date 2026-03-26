@@ -8,6 +8,7 @@ Usage:
     python scraping_tasks/combine_data.py --entity players
     python scraping_tasks/combine_data.py --entity transfers
     python scraping_tasks/combine_data.py --entity valuations
+    python scraping_tasks/combine_data.py --entity competitions
 """
 import sys
 import json
@@ -64,7 +65,7 @@ def combine_entity_files(entity: str, season: str = None) -> int:
     # Combine all data
     combined = []
     # Known ID fields that indicate a single entity object
-    entity_id_fields = ["league_id", "team_id", "player_id", "transfer_id", "valuation_id"]
+    entity_id_fields = ["league_id", "team_id", "player_id", "transfer_id", "valuation_id", "id"]
     
     for filepath in files:
         try:
@@ -108,7 +109,7 @@ def main():
     parser.add_argument(
         "--entity",
         required=True,
-        choices=["leagues", "teams", "players", "transfers", "valuations"],
+        choices=["leagues", "teams", "players", "transfers", "valuations", "competitions"],
         help="Entity type to combine"
     )
     parser.add_argument(

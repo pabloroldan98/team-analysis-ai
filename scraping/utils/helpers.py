@@ -362,7 +362,7 @@ def is_valid_data(
         
         # Check if it's a single entity object (e.g., a League with league_id)
         # These have known ID fields as keys, not nested collections
-        entity_id_fields = ["league_id", "team_id", "player_id", "transfer_id", "valuation_id"]
+        entity_id_fields = ["league_id", "team_id", "player_id", "transfer_id", "valuation_id", "id"]
         for id_field in entity_id_fields:
             if id_field in data:
                 # It's a single entity object - validate it has required fields
@@ -373,6 +373,8 @@ def is_valid_data(
                     return bool(data.get("team_id") and data.get("name"))
                 elif data_type == "players":
                     return bool(data.get("player_id") and data.get("name"))
+                elif data_type == "competitions":
+                    return bool(data.get("competition_id") and data.get("team_id"))
                 # Generic: just having the ID field is enough
                 return True
         
