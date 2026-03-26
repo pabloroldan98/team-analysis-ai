@@ -3,6 +3,60 @@ name: Manual Scraper - Current (all data of all leagues)
 
 on:
   workflow_dispatch:
+    inputs:
+      season:
+        description: 'Season to scrape'
+        required: true
+        default: '2025-2026'
+        type: choice
+        options:
+          - '2025-2026'
+          - '2024-2025'
+          - '2023-2024'
+          - '2022-2023'
+          - '2021-2022'
+          - '2020-2021'
+          - '2019-2020'
+          - '2018-2019'
+          - '2017-2018'
+          - '2016-2017'
+          - '2015-2016'
+          - '2014-2015'
+          - '2013-2014'
+          - '2012-2013'
+          - '2011-2012'
+          - '2010-2011'
+          - '2009-2010'
+          - '2008-2009'
+          - '2007-2008'
+          - '2006-2007'
+          - '2005-2006'
+          - '2004-2005'
+          - '2003-2004'
+          - '2002-2003'
+          - '2001-2002'
+          - '2000-2001'
+          - '1999-2000'
+          - '1998-1999'
+          - '1997-1998'
+          - '1996-1997'
+          - '1995-1996'
+          - '1994-1995'
+          - '1993-1994'
+          - '1992-1993'
+      entity:
+        description: 'Entity to scrape'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - leagues
+          - teams
+          - players
+          - transfers
+          - valuations
+          - competitions
 
 concurrency:
   group: manual-scraper-current-all
@@ -13,6 +67,7 @@ jobs:
   # LEAGUES
   # ============================================================
   scrape-leagues:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'leagues' }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
     strategy:
@@ -105,16 +160,7 @@ jobs:
           - u19_bundesliga_h
           - liga_revelacao
         season:
-          # - 2025-2026
-          # - 2024-2025
-          # - 2023-2024
-          # - 2022-2023
-          # - 2021-2022
-          # - 2020-2021
-          # - 2019-2020
-          - 2018-2019
-          # - 2017-2018
-          # - 2016-2017
+          - ${{ inputs.season }}
 
     steps:
       - name: Checkout repository
@@ -147,6 +193,7 @@ jobs:
           if-no-files-found: error
 
   combine-leagues:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'leagues' }}
     needs: scrape-leagues
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -198,6 +245,7 @@ jobs:
   # TEAMS
   # ============================================================
   scrape-teams:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'teams' }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
     strategy:
@@ -290,16 +338,7 @@ jobs:
           - u19_bundesliga_h
           - liga_revelacao
         season:
-          # - 2025-2026
-          # - 2024-2025
-          # - 2023-2024
-          # - 2022-2023
-          # - 2021-2022
-          # - 2020-2021
-          # - 2019-2020
-          - 2018-2019
-          # - 2017-2018
-          # - 2016-2017
+          - ${{ inputs.season }}
 
     steps:
       - name: Checkout repository
@@ -332,6 +371,7 @@ jobs:
           if-no-files-found: error
 
   combine-teams:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'teams' }}
     needs: scrape-teams
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -383,6 +423,7 @@ jobs:
   # PLAYERS
   # ============================================================
   scrape-players:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'players' }}
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
@@ -475,16 +516,7 @@ jobs:
           - u19_bundesliga_h
           - liga_revelacao
         season:
-          # - 2025-2026
-          # - 2024-2025
-          # - 2023-2024
-          # - 2022-2023
-          # - 2021-2022
-          # - 2020-2021
-          # - 2019-2020
-          - 2018-2019
-          # - 2017-2018
-          # - 2016-2017
+          - ${{ inputs.season }}
 
     steps:
       - name: Checkout repository
@@ -517,6 +549,7 @@ jobs:
           if-no-files-found: error
 
   combine-players:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'players' }}
     needs: scrape-players
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -568,6 +601,7 @@ jobs:
   # TRANSFERS
   # ============================================================
   scrape-transfers:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'transfers' }}
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
@@ -660,16 +694,7 @@ jobs:
           - u19_bundesliga_h
           - liga_revelacao
         season:
-          # - 2025-2026
-          # - 2024-2025
-          # - 2023-2024
-          # - 2022-2023
-          # - 2021-2022
-          # - 2020-2021
-          # - 2019-2020
-          - 2018-2019
-          # - 2017-2018
-          # - 2016-2017
+          - ${{ inputs.season }}
 
     steps:
       - name: Checkout repository
@@ -702,6 +727,7 @@ jobs:
           if-no-files-found: error
 
   combine-transfers:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'transfers' }}
     needs: scrape-transfers
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -753,6 +779,7 @@ jobs:
   # VALUATIONS
   # ============================================================
   scrape-valuations:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'valuations' }}
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
@@ -845,16 +872,7 @@ jobs:
           - u19_bundesliga_h
           - liga_revelacao
         season:
-          # - 2025-2026
-          # - 2024-2025
-          # - 2023-2024
-          # - 2022-2023
-          # - 2021-2022
-          # - 2020-2021
-          # - 2019-2020
-          - 2018-2019
-          # - 2017-2018
-          # - 2016-2017
+          - ${{ inputs.season }}
 
     steps:
       - name: Checkout repository
@@ -887,6 +905,7 @@ jobs:
           if-no-files-found: error
 
   combine-valuations:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'valuations' }}
     needs: scrape-valuations
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -938,6 +957,7 @@ jobs:
   # COMPETITIONS
   # ============================================================
   scrape-competitions:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'competitions' }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
     strategy:
@@ -1030,16 +1050,7 @@ jobs:
           - u19_bundesliga_h
           - liga_revelacao
         season:
-          # - 2025-2026
-          # - 2024-2025
-          # - 2023-2024
-          # - 2022-2023
-          # - 2021-2022
-          # - 2020-2021
-          # - 2019-2020
-          - 2018-2019
-          # - 2017-2018
-          # - 2016-2017
+          - ${{ inputs.season }}
 
     steps:
       - name: Checkout repository
@@ -1072,6 +1083,7 @@ jobs:
           if-no-files-found: error
 
   combine-competitions:
+    if: ${{ inputs.entity == 'all' || inputs.entity == 'competitions' }}
     needs: scrape-competitions
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -1124,6 +1136,14 @@ jobs:
   # ============================================================
   commit-all:
     needs: [combine-leagues, combine-teams, combine-players, combine-transfers, combine-valuations, combine-competitions]
+    if: |
+      always() &&
+      (needs.combine-leagues.result == 'success' || needs.combine-leagues.result == 'skipped') &&
+      (needs.combine-teams.result == 'success' || needs.combine-teams.result == 'skipped') &&
+      (needs.combine-players.result == 'success' || needs.combine-players.result == 'skipped') &&
+      (needs.combine-transfers.result == 'success' || needs.combine-transfers.result == 'skipped') &&
+      (needs.combine-valuations.result == 'success' || needs.combine-valuations.result == 'skipped') &&
+      (needs.combine-competitions.result == 'success' || needs.combine-competitions.result == 'skipped')
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -1134,40 +1154,52 @@ jobs:
           persist-credentials: false
 
       - name: Download leagues data
+        if: ${{ inputs.entity == 'all' || inputs.entity == 'leagues' }}
         uses: actions/download-artifact@v4
         with:
           name: leagues-all-data
           path: data/json/
+        continue-on-error: true
 
       - name: Download teams data
+        if: ${{ inputs.entity == 'all' || inputs.entity == 'teams' }}
         uses: actions/download-artifact@v4
         with:
           name: teams-all-data
           path: data/json/
+        continue-on-error: true
 
       - name: Download players data
+        if: ${{ inputs.entity == 'all' || inputs.entity == 'players' }}
         uses: actions/download-artifact@v4
         with:
           name: players-all-data
           path: data/json/
+        continue-on-error: true
 
       - name: Download transfers data
+        if: ${{ inputs.entity == 'all' || inputs.entity == 'transfers' }}
         uses: actions/download-artifact@v4
         with:
           name: transfers-all-data
           path: data/json/
+        continue-on-error: true
 
       - name: Download valuations data
+        if: ${{ inputs.entity == 'all' || inputs.entity == 'valuations' }}
         uses: actions/download-artifact@v4
         with:
           name: valuations-all-data
           path: data/json/
+        continue-on-error: true
 
       - name: Download competitions data
+        if: ${{ inputs.entity == 'all' || inputs.entity == 'competitions' }}
         uses: actions/download-artifact@v4
         with:
           name: competitions-all-data
           path: data/json/
+        continue-on-error: true
 
       - name: List downloaded files
         run: |
