@@ -44,6 +44,11 @@ on:
         required: false
         default: true
         type: boolean
+      scrape_injuries:
+        description: 'Scrape Injuries'
+        required: false
+        default: true
+        type: boolean
 
 concurrency:
   group: input-scraper
@@ -603,10 +608,102 @@ jobs:
           retention-days: 1
 
   # ============================================================
+  # INJURIES
+  # ============================================================
+  scrape-injuries:
+    if: ${{ inputs.scrape_injuries }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        league: ${{ fromJSON(inputs.leagues) }}
+        season: ${{ fromJSON(inputs.seasons) }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+      
+      - name: Run injuries scraper for ${{ matrix.league }} (${{ matrix.season }})
+        run: |
+          python scraping_tasks/scrape_injuries.py --leagues ${{ matrix.league }} --season ${{ matrix.season }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: injuries-${{ matrix.league }}-${{ matrix.season }}
+          path: data/json/injuries_${{ matrix.league }}_${{ matrix.season }}.json
+          retention-days: 1
+          if-no-files-found: error
+
+  combine-injuries:
+    if: ${{ inputs.scrape_injuries }}
+    needs: scrape-injuries
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Pre-load TLS client (suppress download progress)
+        run: python -c "import tls_requests; tls_requests.get('https://httpbin.org/get', timeout=10)" > /dev/null 2>&1 || true
+      
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: data/json/
+          pattern: injuries-*
+          merge-multiple: true
+      
+      - name: Combine into _all_ files
+        run: |
+          SEASONS="${{ join(fromJSON(inputs.seasons), ' ') }}"
+          for season in $SEASONS; do
+            python scraping_tasks/combine_data.py --entity injuries --season $season
+          done
+          for f in data/json/injuries_all_*.json; do
+            s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
+            echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
+          done
+
+      - name: Upload all data
+        uses: actions/upload-artifact@v4
+        with:
+          name: injuries-all-data
+          path: data/json/injuries_all_*.json
+          retention-days: 1
+
+  # ============================================================
   # FINAL COMMIT
   # ============================================================
   commit-all:
-    needs: [combine-leagues, combine-teams, combine-players, combine-transfers, combine-valuations, combine-competitions]
+    needs: [combine-leagues, combine-teams, combine-players, combine-transfers, combine-valuations, combine-competitions, combine-injuries]
     if: |
       always() &&
       (needs.combine-leagues.result == 'success' || needs.combine-leagues.result == 'skipped') &&
@@ -614,7 +711,8 @@ jobs:
       (needs.combine-players.result == 'success' || needs.combine-players.result == 'skipped') &&
       (needs.combine-transfers.result == 'success' || needs.combine-transfers.result == 'skipped') &&
       (needs.combine-valuations.result == 'success' || needs.combine-valuations.result == 'skipped') &&
-      (needs.combine-competitions.result == 'success' || needs.combine-competitions.result == 'skipped')
+      (needs.combine-competitions.result == 'success' || needs.combine-competitions.result == 'skipped') &&
+      (needs.combine-injuries.result == 'success' || needs.combine-injuries.result == 'skipped')
     runs-on: ubuntu-latest
     timeout-minutes: 30
     
@@ -669,6 +767,14 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: competitions-all-data
+          path: data/json/
+        continue-on-error: true
+      
+      - name: Download injuries data
+        if: ${{ inputs.scrape_injuries }}
+        uses: actions/download-artifact@v4
+        with:
+          name: injuries-all-data
           path: data/json/
         continue-on-error: true
       
