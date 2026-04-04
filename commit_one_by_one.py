@@ -25,8 +25,13 @@ def main():
             continue
         
         # El formato de 'git status --porcelain' es "XY PATH"
-        # Status está en los primeros dos caracteres, el path a partir del índice 3.
-        filepath = line[3:].strip()
+        # Separar por el primer espacio después de los caracteres de estado
+        # A veces es " M path", "?? path", "A  path"
+        parts = line.strip().split(maxsplit=1)
+        if len(parts) < 2:
+            continue
+            
+        filepath = parts[1].strip()
         
         # Manejar archivos renombrados (ej: R  old_file -> new_file)
         if "->" in filepath:
