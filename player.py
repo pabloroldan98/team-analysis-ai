@@ -36,6 +36,8 @@ class Player:
         on_loan: bool = False,
         loaning_team: str = "",
         loaning_team_id: str = "",
+        signed_date: str = None,
+        contract_end_date: str = None,
     ):
         self.player_id = player_id
         self.name = name
@@ -59,6 +61,8 @@ class Player:
         self.on_loan = on_loan
         self.loaning_team = loaning_team  # team that owns the player (if on loan)
         self.loaning_team_id = loaning_team_id
+        self.signed_date = signed_date
+        self.contract_end_date = contract_end_date
     
     def __str__(self):
         value_str = f"€{self.market_value/1_000_000:.1f}M" if self.market_value is not None else "N/A"
@@ -156,6 +160,10 @@ class Player:
             "profile_url": self.profile_url,
             "season": self.season,
         }
+        if self.signed_date is not None:
+            result["signed_date"] = self.signed_date
+        if self.contract_end_date is not None:
+            result["contract_end_date"] = self.contract_end_date
         # Only include predicted_value if set (ML feature)
         if self.predicted_value is not None:
             result["predicted_value"] = self.predicted_value
@@ -191,4 +199,6 @@ class Player:
             on_loan=data.get("on_loan", False),
             loaning_team=data.get("loaning_team", ""),
             loaning_team_id=data.get("loaning_team_id", ""),
+            signed_date=data.get("signed_date"),
+            contract_end_date=data.get("contract_end_date"),
         )
