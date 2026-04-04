@@ -75,8 +75,8 @@ jobs:
       matrix:
         league:
           # Europe – Tier 1
-          - laliga
           - premier
+          - laliga
           - seriea
           - bundesliga
           - ligue1
@@ -86,17 +86,17 @@ jobs:
           - russian
           - belgian
           - greek
-          - danish
           - ukrainian
           - czech
+          - danish
+          - scottish
           - polish
           - swiss
-          - scottish
           - austrian
           - norwegian
           - serbian
-          - romanian
           - swedish
+          - romanian
           - croatian
           - bulgarian
           - israeli
@@ -104,27 +104,105 @@ jobs:
           - hungarian
           - azerbaijani
           - slovak
+          - premier_liga_kas1
+          - prva_liga_sl1
+          - vysheyshaya_liga_wer1
+          - premijer_liga_bih_bos1
+          - premier_league_arm1
+          - superliga_e_kosovës_ko1
+          - kategoria_superiore_alb1
+          - premier_league_opening_round_mt1n
+          - premier_league_closing_round_mt1p
+          - virsliga_let1
+          - toplyga_li1
+          - veikkausliiga_fi1
+          - prva_liga_maz1
+          - premier_division_ir1
+          - besta_deild_is1
+          - erovnuli_liga_ge1n
+          - meridianbet_1_cfl_mne1
+          - premiership_nir1
+          - super_liga_mo1n
+          - bgl_ligue_lux1
+          - super_liga_(phase_2)_mop2
+          - primera_divisió_and1
+          - premium_liiga_est1
+          - cymru_premier_wal1
+          - meistaradeildin_faro
+          - camp_sammarinese_smr1
+          - gibraltar_football_league_gi1
+
           # Europe – Tier 2
-          - segunda
           - championship
           - serieb
           - bundesliga2
+          - segunda
           - ligue2
           - liga_portugal2
           - turkish2
           - dutch2
-          - belgian2
           - russian2
+          - belgian2
+          - super_league_2_grs2
+          - betclic_1_liga_pl2
+          - 1division_dk2
+          - 2_liga_a2
+          - superettan_se2
+          - obos_ligaen_no2
+          - chnl_ts2
+          - liga_2_ro2
+          - prva_liga_srbije_ser2
+          - challenge_league_c2
+          - liga_leumit_isr2
+          - persha_liga_ukr2
+          - vtora_liga_bu2
+          - nb_ii_un2
+          - prva_nl_kr2
+          - championship_sc2
+          - druga_liga_sl2
+          - kategoria_e_parë_alb2
+          - pershaya_liga_wer2
+          - prva_liga_fbih_bos2
+          - monacobet_liga_sk2
+          - prva_liga_rs_bh2s
+
           # Europe – Tier 3
           - leagueone
           - bundesliga3
+          - primeraref1
+          - seriec3
+          - primeraref2
           - seriec1
           - seriec2
-          - seriec3
-          - primeraref1
-          - primeraref2
+          - championnat_national_fr3
+          - 2_division_a_(phase_2)_r3d2
+          - 2_division_a_(phase_1)_r3d1
+          - 2lig_kirmizi_tr3b
+          - 2lig_beyaz_tr3a
+          - liga_3_pt3a
+
           # Europe – Tier 4
           - leaguetwo
+          - segunda_federación___gr_iii_e4g3
+          - regionalliga_bayern_rlb3
+          - regionalliga_west_rlw3
+          - regionalliga_südwest_rlsw
+          - segunda_federación___gr_v_e4g5
+          - regionalliga_northeast_rln4
+          - segunda_federación___gr_iv_e4g4
+          - segunda_federación___gr_i_e4g1
+          - segunda_federación___gr_ii_e4g2
+          - regionalliga_nord_rln3
+          - serie_d___b_it4b
+          - serie_d___h_it4h
+          - serie_d___f_it4f
+          - serie_d___e_it4e
+          - serie_d___d_it4d
+          - serie_d___c_it4c
+          - serie_d___a_it4a
+          - serie_d___g_it4g
+          - serie_d___i_it4i
+
           # Americas – Tier 1
           - brazilian
           - mls
@@ -132,32 +210,100 @@ jobs:
           - mexican
           - colombian
           - uruguayan
-          - chilean
           - ecuadorian
+          - chilean
           - peruvian
           - paraguayan
+          - división_profesional_bo1a
+          - liga_futve_apertura_vz1a
+          - primera_división_apertura_crpd
+          - primera_división_clausura_pdv1
+          - national_league_apertura_gu1a
+          - national_league_clausura_gu1c
+          - primera_división_apertura_sl1a
+          - primera_división_clausura_sl1c
+          - liga_nacional_apertura_ho1a
+          - liga_nacional_clausura_hoc1
+          - liga_panameña_clausura_pn1c
+          - canpl_cdn1
+
           # Americas – Tier 2
           - brazilian2
           - argentine2
+          - liga_expansión_mx_cl_mex2
+          - liga_expansión_mx_ap_mexb
+          - uslc_usl
+          - liga_de_ascenso_cl2b
+          - torneo_dimayor_i_co2t
+          - liga_2_per2
+          - segunda_división_uru2
+          - liga_pro_serie_b_ec2l
+          - liga_futve_2_vn2a
+
+          # Americas – Tier 3
+          - usl1_usc3
+          - mls_next_pro_mnp3
+
           # Asia – Tier 1
           - saudi
-          - qatari
           - emirati
+          - qatari
           - japanese
           - chinese
           - iranian
           - korean
           - australian
+          - superliga_uz1
+          - iraq_stars_league_irq1
+          - super_league_in1l
+          - thai_league_tha1
+          - super_league_mys1
+          - vleague_1_vie1
+          - jindal_league_om1l
+          - jogorku_liga_kg1l
+          - indian_super_league_ind1
+          - lebanese_premier_league_lib1
+          - jordanian_pro_league_jo1l
+          - hong_kong_premier_league_hgkg
+          - vysshaya_liga_tad1
+          - premier_league_sin1
+          - c_premier_league_khm1
+          - myanmar_national_league_mya1
+          - bfl_bgd1
+          - national_league___north_nnl1
+          - fiji_premier_league_fij1
+          - pfl_pfl1
+
           # Asia – Tier 2
           - japanese2
+          - k_league_2_rsk2
+          - saudi_first_division_league_sa2l
+          - league_one_clo
+          - azadegan_league_irn2
+          - championship_ili2
+          - qatari_second_division_qu2l
+          - thai_league_2_tha2
+          - o'zbekiston_pro_liga_uz2l
+
           # Africa – Tier 1
           - egyptian
           - south_african
           - moroccan
+          - ligue_1_alg1
+          - ligue_1_tun1
+          - libyan_premier_league_lpl
+          - uganda_premier_league_ugl1
+          - premier_league_etp1
+          - premier_league_ghpl
+          - ligue_1_sen1
+
+          # Asia – Tier 3
+          - j3_league_jap3
+
           # Youth
           - primavera1
+          - cbf_brasileiro_u20_cb20
           - u19_bundesliga_a
-          - u19_bundesliga_h
           - liga_revelacao
         season:
           - ${{ inputs.season }}
@@ -253,8 +399,8 @@ jobs:
       matrix:
         league:
           # Europe – Tier 1
-          - laliga
           - premier
+          - laliga
           - seriea
           - bundesliga
           - ligue1
@@ -264,17 +410,17 @@ jobs:
           - russian
           - belgian
           - greek
-          - danish
           - ukrainian
           - czech
+          - danish
+          - scottish
           - polish
           - swiss
-          - scottish
           - austrian
           - norwegian
           - serbian
-          - romanian
           - swedish
+          - romanian
           - croatian
           - bulgarian
           - israeli
@@ -282,27 +428,105 @@ jobs:
           - hungarian
           - azerbaijani
           - slovak
+          - premier_liga_kas1
+          - prva_liga_sl1
+          - vysheyshaya_liga_wer1
+          - premijer_liga_bih_bos1
+          - premier_league_arm1
+          - superliga_e_kosovës_ko1
+          - kategoria_superiore_alb1
+          - premier_league_opening_round_mt1n
+          - premier_league_closing_round_mt1p
+          - virsliga_let1
+          - toplyga_li1
+          - veikkausliiga_fi1
+          - prva_liga_maz1
+          - premier_division_ir1
+          - besta_deild_is1
+          - erovnuli_liga_ge1n
+          - meridianbet_1_cfl_mne1
+          - premiership_nir1
+          - super_liga_mo1n
+          - bgl_ligue_lux1
+          - super_liga_(phase_2)_mop2
+          - primera_divisió_and1
+          - premium_liiga_est1
+          - cymru_premier_wal1
+          - meistaradeildin_faro
+          - camp_sammarinese_smr1
+          - gibraltar_football_league_gi1
+
           # Europe – Tier 2
-          - segunda
           - championship
           - serieb
           - bundesliga2
+          - segunda
           - ligue2
           - liga_portugal2
           - turkish2
           - dutch2
-          - belgian2
           - russian2
+          - belgian2
+          - super_league_2_grs2
+          - betclic_1_liga_pl2
+          - 1division_dk2
+          - 2_liga_a2
+          - superettan_se2
+          - obos_ligaen_no2
+          - chnl_ts2
+          - liga_2_ro2
+          - prva_liga_srbije_ser2
+          - challenge_league_c2
+          - liga_leumit_isr2
+          - persha_liga_ukr2
+          - vtora_liga_bu2
+          - nb_ii_un2
+          - prva_nl_kr2
+          - championship_sc2
+          - druga_liga_sl2
+          - kategoria_e_parë_alb2
+          - pershaya_liga_wer2
+          - prva_liga_fbih_bos2
+          - monacobet_liga_sk2
+          - prva_liga_rs_bh2s
+
           # Europe – Tier 3
           - leagueone
           - bundesliga3
+          - primeraref1
+          - seriec3
+          - primeraref2
           - seriec1
           - seriec2
-          - seriec3
-          - primeraref1
-          - primeraref2
+          - championnat_national_fr3
+          - 2_division_a_(phase_2)_r3d2
+          - 2_division_a_(phase_1)_r3d1
+          - 2lig_kirmizi_tr3b
+          - 2lig_beyaz_tr3a
+          - liga_3_pt3a
+
           # Europe – Tier 4
           - leaguetwo
+          - segunda_federación___gr_iii_e4g3
+          - regionalliga_bayern_rlb3
+          - regionalliga_west_rlw3
+          - regionalliga_südwest_rlsw
+          - segunda_federación___gr_v_e4g5
+          - regionalliga_northeast_rln4
+          - segunda_federación___gr_iv_e4g4
+          - segunda_federación___gr_i_e4g1
+          - segunda_federación___gr_ii_e4g2
+          - regionalliga_nord_rln3
+          - serie_d___b_it4b
+          - serie_d___h_it4h
+          - serie_d___f_it4f
+          - serie_d___e_it4e
+          - serie_d___d_it4d
+          - serie_d___c_it4c
+          - serie_d___a_it4a
+          - serie_d___g_it4g
+          - serie_d___i_it4i
+
           # Americas – Tier 1
           - brazilian
           - mls
@@ -310,32 +534,100 @@ jobs:
           - mexican
           - colombian
           - uruguayan
-          - chilean
           - ecuadorian
+          - chilean
           - peruvian
           - paraguayan
+          - división_profesional_bo1a
+          - liga_futve_apertura_vz1a
+          - primera_división_apertura_crpd
+          - primera_división_clausura_pdv1
+          - national_league_apertura_gu1a
+          - national_league_clausura_gu1c
+          - primera_división_apertura_sl1a
+          - primera_división_clausura_sl1c
+          - liga_nacional_apertura_ho1a
+          - liga_nacional_clausura_hoc1
+          - liga_panameña_clausura_pn1c
+          - canpl_cdn1
+
           # Americas – Tier 2
           - brazilian2
           - argentine2
+          - liga_expansión_mx_cl_mex2
+          - liga_expansión_mx_ap_mexb
+          - uslc_usl
+          - liga_de_ascenso_cl2b
+          - torneo_dimayor_i_co2t
+          - liga_2_per2
+          - segunda_división_uru2
+          - liga_pro_serie_b_ec2l
+          - liga_futve_2_vn2a
+
+          # Americas – Tier 3
+          - usl1_usc3
+          - mls_next_pro_mnp3
+
           # Asia – Tier 1
           - saudi
-          - qatari
           - emirati
+          - qatari
           - japanese
           - chinese
           - iranian
           - korean
           - australian
+          - superliga_uz1
+          - iraq_stars_league_irq1
+          - super_league_in1l
+          - thai_league_tha1
+          - super_league_mys1
+          - vleague_1_vie1
+          - jindal_league_om1l
+          - jogorku_liga_kg1l
+          - indian_super_league_ind1
+          - lebanese_premier_league_lib1
+          - jordanian_pro_league_jo1l
+          - hong_kong_premier_league_hgkg
+          - vysshaya_liga_tad1
+          - premier_league_sin1
+          - c_premier_league_khm1
+          - myanmar_national_league_mya1
+          - bfl_bgd1
+          - national_league___north_nnl1
+          - fiji_premier_league_fij1
+          - pfl_pfl1
+
           # Asia – Tier 2
           - japanese2
+          - k_league_2_rsk2
+          - saudi_first_division_league_sa2l
+          - league_one_clo
+          - azadegan_league_irn2
+          - championship_ili2
+          - qatari_second_division_qu2l
+          - thai_league_2_tha2
+          - o'zbekiston_pro_liga_uz2l
+
           # Africa – Tier 1
           - egyptian
           - south_african
           - moroccan
+          - ligue_1_alg1
+          - ligue_1_tun1
+          - libyan_premier_league_lpl
+          - uganda_premier_league_ugl1
+          - premier_league_etp1
+          - premier_league_ghpl
+          - ligue_1_sen1
+
+          # Asia – Tier 3
+          - j3_league_jap3
+
           # Youth
           - primavera1
+          - cbf_brasileiro_u20_cb20
           - u19_bundesliga_a
-          - u19_bundesliga_h
           - liga_revelacao
         season:
           - ${{ inputs.season }}
@@ -431,8 +723,8 @@ jobs:
       matrix:
         league:
           # Europe – Tier 1
-          - laliga
           - premier
+          - laliga
           - seriea
           - bundesliga
           - ligue1
@@ -442,17 +734,17 @@ jobs:
           - russian
           - belgian
           - greek
-          - danish
           - ukrainian
           - czech
+          - danish
+          - scottish
           - polish
           - swiss
-          - scottish
           - austrian
           - norwegian
           - serbian
-          - romanian
           - swedish
+          - romanian
           - croatian
           - bulgarian
           - israeli
@@ -460,27 +752,105 @@ jobs:
           - hungarian
           - azerbaijani
           - slovak
+          - premier_liga_kas1
+          - prva_liga_sl1
+          - vysheyshaya_liga_wer1
+          - premijer_liga_bih_bos1
+          - premier_league_arm1
+          - superliga_e_kosovës_ko1
+          - kategoria_superiore_alb1
+          - premier_league_opening_round_mt1n
+          - premier_league_closing_round_mt1p
+          - virsliga_let1
+          - toplyga_li1
+          - veikkausliiga_fi1
+          - prva_liga_maz1
+          - premier_division_ir1
+          - besta_deild_is1
+          - erovnuli_liga_ge1n
+          - meridianbet_1_cfl_mne1
+          - premiership_nir1
+          - super_liga_mo1n
+          - bgl_ligue_lux1
+          - super_liga_(phase_2)_mop2
+          - primera_divisió_and1
+          - premium_liiga_est1
+          - cymru_premier_wal1
+          - meistaradeildin_faro
+          - camp_sammarinese_smr1
+          - gibraltar_football_league_gi1
+
           # Europe – Tier 2
-          - segunda
           - championship
           - serieb
           - bundesliga2
+          - segunda
           - ligue2
           - liga_portugal2
           - turkish2
           - dutch2
-          - belgian2
           - russian2
+          - belgian2
+          - super_league_2_grs2
+          - betclic_1_liga_pl2
+          - 1division_dk2
+          - 2_liga_a2
+          - superettan_se2
+          - obos_ligaen_no2
+          - chnl_ts2
+          - liga_2_ro2
+          - prva_liga_srbije_ser2
+          - challenge_league_c2
+          - liga_leumit_isr2
+          - persha_liga_ukr2
+          - vtora_liga_bu2
+          - nb_ii_un2
+          - prva_nl_kr2
+          - championship_sc2
+          - druga_liga_sl2
+          - kategoria_e_parë_alb2
+          - pershaya_liga_wer2
+          - prva_liga_fbih_bos2
+          - monacobet_liga_sk2
+          - prva_liga_rs_bh2s
+
           # Europe – Tier 3
           - leagueone
           - bundesliga3
+          - primeraref1
+          - seriec3
+          - primeraref2
           - seriec1
           - seriec2
-          - seriec3
-          - primeraref1
-          - primeraref2
+          - championnat_national_fr3
+          - 2_division_a_(phase_2)_r3d2
+          - 2_division_a_(phase_1)_r3d1
+          - 2lig_kirmizi_tr3b
+          - 2lig_beyaz_tr3a
+          - liga_3_pt3a
+
           # Europe – Tier 4
           - leaguetwo
+          - segunda_federación___gr_iii_e4g3
+          - regionalliga_bayern_rlb3
+          - regionalliga_west_rlw3
+          - regionalliga_südwest_rlsw
+          - segunda_federación___gr_v_e4g5
+          - regionalliga_northeast_rln4
+          - segunda_federación___gr_iv_e4g4
+          - segunda_federación___gr_i_e4g1
+          - segunda_federación___gr_ii_e4g2
+          - regionalliga_nord_rln3
+          - serie_d___b_it4b
+          - serie_d___h_it4h
+          - serie_d___f_it4f
+          - serie_d___e_it4e
+          - serie_d___d_it4d
+          - serie_d___c_it4c
+          - serie_d___a_it4a
+          - serie_d___g_it4g
+          - serie_d___i_it4i
+
           # Americas – Tier 1
           - brazilian
           - mls
@@ -488,32 +858,100 @@ jobs:
           - mexican
           - colombian
           - uruguayan
-          - chilean
           - ecuadorian
+          - chilean
           - peruvian
           - paraguayan
+          - división_profesional_bo1a
+          - liga_futve_apertura_vz1a
+          - primera_división_apertura_crpd
+          - primera_división_clausura_pdv1
+          - national_league_apertura_gu1a
+          - national_league_clausura_gu1c
+          - primera_división_apertura_sl1a
+          - primera_división_clausura_sl1c
+          - liga_nacional_apertura_ho1a
+          - liga_nacional_clausura_hoc1
+          - liga_panameña_clausura_pn1c
+          - canpl_cdn1
+
           # Americas – Tier 2
           - brazilian2
           - argentine2
+          - liga_expansión_mx_cl_mex2
+          - liga_expansión_mx_ap_mexb
+          - uslc_usl
+          - liga_de_ascenso_cl2b
+          - torneo_dimayor_i_co2t
+          - liga_2_per2
+          - segunda_división_uru2
+          - liga_pro_serie_b_ec2l
+          - liga_futve_2_vn2a
+
+          # Americas – Tier 3
+          - usl1_usc3
+          - mls_next_pro_mnp3
+
           # Asia – Tier 1
           - saudi
-          - qatari
           - emirati
+          - qatari
           - japanese
           - chinese
           - iranian
           - korean
           - australian
+          - superliga_uz1
+          - iraq_stars_league_irq1
+          - super_league_in1l
+          - thai_league_tha1
+          - super_league_mys1
+          - vleague_1_vie1
+          - jindal_league_om1l
+          - jogorku_liga_kg1l
+          - indian_super_league_ind1
+          - lebanese_premier_league_lib1
+          - jordanian_pro_league_jo1l
+          - hong_kong_premier_league_hgkg
+          - vysshaya_liga_tad1
+          - premier_league_sin1
+          - c_premier_league_khm1
+          - myanmar_national_league_mya1
+          - bfl_bgd1
+          - national_league___north_nnl1
+          - fiji_premier_league_fij1
+          - pfl_pfl1
+
           # Asia – Tier 2
           - japanese2
+          - k_league_2_rsk2
+          - saudi_first_division_league_sa2l
+          - league_one_clo
+          - azadegan_league_irn2
+          - championship_ili2
+          - qatari_second_division_qu2l
+          - thai_league_2_tha2
+          - o'zbekiston_pro_liga_uz2l
+
           # Africa – Tier 1
           - egyptian
           - south_african
           - moroccan
+          - ligue_1_alg1
+          - ligue_1_tun1
+          - libyan_premier_league_lpl
+          - uganda_premier_league_ugl1
+          - premier_league_etp1
+          - premier_league_ghpl
+          - ligue_1_sen1
+
+          # Asia – Tier 3
+          - j3_league_jap3
+
           # Youth
           - primavera1
+          - cbf_brasileiro_u20_cb20
           - u19_bundesliga_a
-          - u19_bundesliga_h
           - liga_revelacao
         season:
           - ${{ inputs.season }}
@@ -609,8 +1047,8 @@ jobs:
       matrix:
         league:
           # Europe – Tier 1
-          - laliga
           - premier
+          - laliga
           - seriea
           - bundesliga
           - ligue1
@@ -620,17 +1058,17 @@ jobs:
           - russian
           - belgian
           - greek
-          - danish
           - ukrainian
           - czech
+          - danish
+          - scottish
           - polish
           - swiss
-          - scottish
           - austrian
           - norwegian
           - serbian
-          - romanian
           - swedish
+          - romanian
           - croatian
           - bulgarian
           - israeli
@@ -638,27 +1076,105 @@ jobs:
           - hungarian
           - azerbaijani
           - slovak
+          - premier_liga_kas1
+          - prva_liga_sl1
+          - vysheyshaya_liga_wer1
+          - premijer_liga_bih_bos1
+          - premier_league_arm1
+          - superliga_e_kosovës_ko1
+          - kategoria_superiore_alb1
+          - premier_league_opening_round_mt1n
+          - premier_league_closing_round_mt1p
+          - virsliga_let1
+          - toplyga_li1
+          - veikkausliiga_fi1
+          - prva_liga_maz1
+          - premier_division_ir1
+          - besta_deild_is1
+          - erovnuli_liga_ge1n
+          - meridianbet_1_cfl_mne1
+          - premiership_nir1
+          - super_liga_mo1n
+          - bgl_ligue_lux1
+          - super_liga_(phase_2)_mop2
+          - primera_divisió_and1
+          - premium_liiga_est1
+          - cymru_premier_wal1
+          - meistaradeildin_faro
+          - camp_sammarinese_smr1
+          - gibraltar_football_league_gi1
+
           # Europe – Tier 2
-          - segunda
           - championship
           - serieb
           - bundesliga2
+          - segunda
           - ligue2
           - liga_portugal2
           - turkish2
           - dutch2
-          - belgian2
           - russian2
+          - belgian2
+          - super_league_2_grs2
+          - betclic_1_liga_pl2
+          - 1division_dk2
+          - 2_liga_a2
+          - superettan_se2
+          - obos_ligaen_no2
+          - chnl_ts2
+          - liga_2_ro2
+          - prva_liga_srbije_ser2
+          - challenge_league_c2
+          - liga_leumit_isr2
+          - persha_liga_ukr2
+          - vtora_liga_bu2
+          - nb_ii_un2
+          - prva_nl_kr2
+          - championship_sc2
+          - druga_liga_sl2
+          - kategoria_e_parë_alb2
+          - pershaya_liga_wer2
+          - prva_liga_fbih_bos2
+          - monacobet_liga_sk2
+          - prva_liga_rs_bh2s
+
           # Europe – Tier 3
           - leagueone
           - bundesliga3
+          - primeraref1
+          - seriec3
+          - primeraref2
           - seriec1
           - seriec2
-          - seriec3
-          - primeraref1
-          - primeraref2
+          - championnat_national_fr3
+          - 2_division_a_(phase_2)_r3d2
+          - 2_division_a_(phase_1)_r3d1
+          - 2lig_kirmizi_tr3b
+          - 2lig_beyaz_tr3a
+          - liga_3_pt3a
+
           # Europe – Tier 4
           - leaguetwo
+          - segunda_federación___gr_iii_e4g3
+          - regionalliga_bayern_rlb3
+          - regionalliga_west_rlw3
+          - regionalliga_südwest_rlsw
+          - segunda_federación___gr_v_e4g5
+          - regionalliga_northeast_rln4
+          - segunda_federación___gr_iv_e4g4
+          - segunda_federación___gr_i_e4g1
+          - segunda_federación___gr_ii_e4g2
+          - regionalliga_nord_rln3
+          - serie_d___b_it4b
+          - serie_d___h_it4h
+          - serie_d___f_it4f
+          - serie_d___e_it4e
+          - serie_d___d_it4d
+          - serie_d___c_it4c
+          - serie_d___a_it4a
+          - serie_d___g_it4g
+          - serie_d___i_it4i
+
           # Americas – Tier 1
           - brazilian
           - mls
@@ -666,32 +1182,100 @@ jobs:
           - mexican
           - colombian
           - uruguayan
-          - chilean
           - ecuadorian
+          - chilean
           - peruvian
           - paraguayan
+          - división_profesional_bo1a
+          - liga_futve_apertura_vz1a
+          - primera_división_apertura_crpd
+          - primera_división_clausura_pdv1
+          - national_league_apertura_gu1a
+          - national_league_clausura_gu1c
+          - primera_división_apertura_sl1a
+          - primera_división_clausura_sl1c
+          - liga_nacional_apertura_ho1a
+          - liga_nacional_clausura_hoc1
+          - liga_panameña_clausura_pn1c
+          - canpl_cdn1
+
           # Americas – Tier 2
           - brazilian2
           - argentine2
+          - liga_expansión_mx_cl_mex2
+          - liga_expansión_mx_ap_mexb
+          - uslc_usl
+          - liga_de_ascenso_cl2b
+          - torneo_dimayor_i_co2t
+          - liga_2_per2
+          - segunda_división_uru2
+          - liga_pro_serie_b_ec2l
+          - liga_futve_2_vn2a
+
+          # Americas – Tier 3
+          - usl1_usc3
+          - mls_next_pro_mnp3
+
           # Asia – Tier 1
           - saudi
-          - qatari
           - emirati
+          - qatari
           - japanese
           - chinese
           - iranian
           - korean
           - australian
+          - superliga_uz1
+          - iraq_stars_league_irq1
+          - super_league_in1l
+          - thai_league_tha1
+          - super_league_mys1
+          - vleague_1_vie1
+          - jindal_league_om1l
+          - jogorku_liga_kg1l
+          - indian_super_league_ind1
+          - lebanese_premier_league_lib1
+          - jordanian_pro_league_jo1l
+          - hong_kong_premier_league_hgkg
+          - vysshaya_liga_tad1
+          - premier_league_sin1
+          - c_premier_league_khm1
+          - myanmar_national_league_mya1
+          - bfl_bgd1
+          - national_league___north_nnl1
+          - fiji_premier_league_fij1
+          - pfl_pfl1
+
           # Asia – Tier 2
           - japanese2
+          - k_league_2_rsk2
+          - saudi_first_division_league_sa2l
+          - league_one_clo
+          - azadegan_league_irn2
+          - championship_ili2
+          - qatari_second_division_qu2l
+          - thai_league_2_tha2
+          - o'zbekiston_pro_liga_uz2l
+
           # Africa – Tier 1
           - egyptian
           - south_african
           - moroccan
+          - ligue_1_alg1
+          - ligue_1_tun1
+          - libyan_premier_league_lpl
+          - uganda_premier_league_ugl1
+          - premier_league_etp1
+          - premier_league_ghpl
+          - ligue_1_sen1
+
+          # Asia – Tier 3
+          - j3_league_jap3
+
           # Youth
           - primavera1
+          - cbf_brasileiro_u20_cb20
           - u19_bundesliga_a
-          - u19_bundesliga_h
           - liga_revelacao
         season:
           - ${{ inputs.season }}
@@ -787,8 +1371,8 @@ jobs:
       matrix:
         league:
           # Europe – Tier 1
-          - laliga
           - premier
+          - laliga
           - seriea
           - bundesliga
           - ligue1
@@ -798,17 +1382,17 @@ jobs:
           - russian
           - belgian
           - greek
-          - danish
           - ukrainian
           - czech
+          - danish
+          - scottish
           - polish
           - swiss
-          - scottish
           - austrian
           - norwegian
           - serbian
-          - romanian
           - swedish
+          - romanian
           - croatian
           - bulgarian
           - israeli
@@ -816,27 +1400,105 @@ jobs:
           - hungarian
           - azerbaijani
           - slovak
+          - premier_liga_kas1
+          - prva_liga_sl1
+          - vysheyshaya_liga_wer1
+          - premijer_liga_bih_bos1
+          - premier_league_arm1
+          - superliga_e_kosovës_ko1
+          - kategoria_superiore_alb1
+          - premier_league_opening_round_mt1n
+          - premier_league_closing_round_mt1p
+          - virsliga_let1
+          - toplyga_li1
+          - veikkausliiga_fi1
+          - prva_liga_maz1
+          - premier_division_ir1
+          - besta_deild_is1
+          - erovnuli_liga_ge1n
+          - meridianbet_1_cfl_mne1
+          - premiership_nir1
+          - super_liga_mo1n
+          - bgl_ligue_lux1
+          - super_liga_(phase_2)_mop2
+          - primera_divisió_and1
+          - premium_liiga_est1
+          - cymru_premier_wal1
+          - meistaradeildin_faro
+          - camp_sammarinese_smr1
+          - gibraltar_football_league_gi1
+
           # Europe – Tier 2
-          - segunda
           - championship
           - serieb
           - bundesliga2
+          - segunda
           - ligue2
           - liga_portugal2
           - turkish2
           - dutch2
-          - belgian2
           - russian2
+          - belgian2
+          - super_league_2_grs2
+          - betclic_1_liga_pl2
+          - 1division_dk2
+          - 2_liga_a2
+          - superettan_se2
+          - obos_ligaen_no2
+          - chnl_ts2
+          - liga_2_ro2
+          - prva_liga_srbije_ser2
+          - challenge_league_c2
+          - liga_leumit_isr2
+          - persha_liga_ukr2
+          - vtora_liga_bu2
+          - nb_ii_un2
+          - prva_nl_kr2
+          - championship_sc2
+          - druga_liga_sl2
+          - kategoria_e_parë_alb2
+          - pershaya_liga_wer2
+          - prva_liga_fbih_bos2
+          - monacobet_liga_sk2
+          - prva_liga_rs_bh2s
+
           # Europe – Tier 3
           - leagueone
           - bundesliga3
+          - primeraref1
+          - seriec3
+          - primeraref2
           - seriec1
           - seriec2
-          - seriec3
-          - primeraref1
-          - primeraref2
+          - championnat_national_fr3
+          - 2_division_a_(phase_2)_r3d2
+          - 2_division_a_(phase_1)_r3d1
+          - 2lig_kirmizi_tr3b
+          - 2lig_beyaz_tr3a
+          - liga_3_pt3a
+
           # Europe – Tier 4
           - leaguetwo
+          - segunda_federación___gr_iii_e4g3
+          - regionalliga_bayern_rlb3
+          - regionalliga_west_rlw3
+          - regionalliga_südwest_rlsw
+          - segunda_federación___gr_v_e4g5
+          - regionalliga_northeast_rln4
+          - segunda_federación___gr_iv_e4g4
+          - segunda_federación___gr_i_e4g1
+          - segunda_federación___gr_ii_e4g2
+          - regionalliga_nord_rln3
+          - serie_d___b_it4b
+          - serie_d___h_it4h
+          - serie_d___f_it4f
+          - serie_d___e_it4e
+          - serie_d___d_it4d
+          - serie_d___c_it4c
+          - serie_d___a_it4a
+          - serie_d___g_it4g
+          - serie_d___i_it4i
+
           # Americas – Tier 1
           - brazilian
           - mls
@@ -844,32 +1506,100 @@ jobs:
           - mexican
           - colombian
           - uruguayan
-          - chilean
           - ecuadorian
+          - chilean
           - peruvian
           - paraguayan
+          - división_profesional_bo1a
+          - liga_futve_apertura_vz1a
+          - primera_división_apertura_crpd
+          - primera_división_clausura_pdv1
+          - national_league_apertura_gu1a
+          - national_league_clausura_gu1c
+          - primera_división_apertura_sl1a
+          - primera_división_clausura_sl1c
+          - liga_nacional_apertura_ho1a
+          - liga_nacional_clausura_hoc1
+          - liga_panameña_clausura_pn1c
+          - canpl_cdn1
+
           # Americas – Tier 2
           - brazilian2
           - argentine2
+          - liga_expansión_mx_cl_mex2
+          - liga_expansión_mx_ap_mexb
+          - uslc_usl
+          - liga_de_ascenso_cl2b
+          - torneo_dimayor_i_co2t
+          - liga_2_per2
+          - segunda_división_uru2
+          - liga_pro_serie_b_ec2l
+          - liga_futve_2_vn2a
+
+          # Americas – Tier 3
+          - usl1_usc3
+          - mls_next_pro_mnp3
+
           # Asia – Tier 1
           - saudi
-          - qatari
           - emirati
+          - qatari
           - japanese
           - chinese
           - iranian
           - korean
           - australian
+          - superliga_uz1
+          - iraq_stars_league_irq1
+          - super_league_in1l
+          - thai_league_tha1
+          - super_league_mys1
+          - vleague_1_vie1
+          - jindal_league_om1l
+          - jogorku_liga_kg1l
+          - indian_super_league_ind1
+          - lebanese_premier_league_lib1
+          - jordanian_pro_league_jo1l
+          - hong_kong_premier_league_hgkg
+          - vysshaya_liga_tad1
+          - premier_league_sin1
+          - c_premier_league_khm1
+          - myanmar_national_league_mya1
+          - bfl_bgd1
+          - national_league___north_nnl1
+          - fiji_premier_league_fij1
+          - pfl_pfl1
+
           # Asia – Tier 2
           - japanese2
+          - k_league_2_rsk2
+          - saudi_first_division_league_sa2l
+          - league_one_clo
+          - azadegan_league_irn2
+          - championship_ili2
+          - qatari_second_division_qu2l
+          - thai_league_2_tha2
+          - o'zbekiston_pro_liga_uz2l
+
           # Africa – Tier 1
           - egyptian
           - south_african
           - moroccan
+          - ligue_1_alg1
+          - ligue_1_tun1
+          - libyan_premier_league_lpl
+          - uganda_premier_league_ugl1
+          - premier_league_etp1
+          - premier_league_ghpl
+          - ligue_1_sen1
+
+          # Asia – Tier 3
+          - j3_league_jap3
+
           # Youth
           - primavera1
+          - cbf_brasileiro_u20_cb20
           - u19_bundesliga_a
-          - u19_bundesliga_h
           - liga_revelacao
         season:
           - ${{ inputs.season }}
@@ -965,8 +1695,8 @@ jobs:
       matrix:
         league:
           # Europe – Tier 1
-          - laliga
           - premier
+          - laliga
           - seriea
           - bundesliga
           - ligue1
@@ -976,17 +1706,17 @@ jobs:
           - russian
           - belgian
           - greek
-          - danish
           - ukrainian
           - czech
+          - danish
+          - scottish
           - polish
           - swiss
-          - scottish
           - austrian
           - norwegian
           - serbian
-          - romanian
           - swedish
+          - romanian
           - croatian
           - bulgarian
           - israeli
@@ -994,27 +1724,105 @@ jobs:
           - hungarian
           - azerbaijani
           - slovak
+          - premier_liga_kas1
+          - prva_liga_sl1
+          - vysheyshaya_liga_wer1
+          - premijer_liga_bih_bos1
+          - premier_league_arm1
+          - superliga_e_kosovës_ko1
+          - kategoria_superiore_alb1
+          - premier_league_opening_round_mt1n
+          - premier_league_closing_round_mt1p
+          - virsliga_let1
+          - toplyga_li1
+          - veikkausliiga_fi1
+          - prva_liga_maz1
+          - premier_division_ir1
+          - besta_deild_is1
+          - erovnuli_liga_ge1n
+          - meridianbet_1_cfl_mne1
+          - premiership_nir1
+          - super_liga_mo1n
+          - bgl_ligue_lux1
+          - super_liga_(phase_2)_mop2
+          - primera_divisió_and1
+          - premium_liiga_est1
+          - cymru_premier_wal1
+          - meistaradeildin_faro
+          - camp_sammarinese_smr1
+          - gibraltar_football_league_gi1
+
           # Europe – Tier 2
-          - segunda
           - championship
           - serieb
           - bundesliga2
+          - segunda
           - ligue2
           - liga_portugal2
           - turkish2
           - dutch2
-          - belgian2
           - russian2
+          - belgian2
+          - super_league_2_grs2
+          - betclic_1_liga_pl2
+          - 1division_dk2
+          - 2_liga_a2
+          - superettan_se2
+          - obos_ligaen_no2
+          - chnl_ts2
+          - liga_2_ro2
+          - prva_liga_srbije_ser2
+          - challenge_league_c2
+          - liga_leumit_isr2
+          - persha_liga_ukr2
+          - vtora_liga_bu2
+          - nb_ii_un2
+          - prva_nl_kr2
+          - championship_sc2
+          - druga_liga_sl2
+          - kategoria_e_parë_alb2
+          - pershaya_liga_wer2
+          - prva_liga_fbih_bos2
+          - monacobet_liga_sk2
+          - prva_liga_rs_bh2s
+
           # Europe – Tier 3
           - leagueone
           - bundesliga3
+          - primeraref1
+          - seriec3
+          - primeraref2
           - seriec1
           - seriec2
-          - seriec3
-          - primeraref1
-          - primeraref2
+          - championnat_national_fr3
+          - 2_division_a_(phase_2)_r3d2
+          - 2_division_a_(phase_1)_r3d1
+          - 2lig_kirmizi_tr3b
+          - 2lig_beyaz_tr3a
+          - liga_3_pt3a
+
           # Europe – Tier 4
           - leaguetwo
+          - segunda_federación___gr_iii_e4g3
+          - regionalliga_bayern_rlb3
+          - regionalliga_west_rlw3
+          - regionalliga_südwest_rlsw
+          - segunda_federación___gr_v_e4g5
+          - regionalliga_northeast_rln4
+          - segunda_federación___gr_iv_e4g4
+          - segunda_federación___gr_i_e4g1
+          - segunda_federación___gr_ii_e4g2
+          - regionalliga_nord_rln3
+          - serie_d___b_it4b
+          - serie_d___h_it4h
+          - serie_d___f_it4f
+          - serie_d___e_it4e
+          - serie_d___d_it4d
+          - serie_d___c_it4c
+          - serie_d___a_it4a
+          - serie_d___g_it4g
+          - serie_d___i_it4i
+
           # Americas – Tier 1
           - brazilian
           - mls
@@ -1022,32 +1830,100 @@ jobs:
           - mexican
           - colombian
           - uruguayan
-          - chilean
           - ecuadorian
+          - chilean
           - peruvian
           - paraguayan
+          - división_profesional_bo1a
+          - liga_futve_apertura_vz1a
+          - primera_división_apertura_crpd
+          - primera_división_clausura_pdv1
+          - national_league_apertura_gu1a
+          - national_league_clausura_gu1c
+          - primera_división_apertura_sl1a
+          - primera_división_clausura_sl1c
+          - liga_nacional_apertura_ho1a
+          - liga_nacional_clausura_hoc1
+          - liga_panameña_clausura_pn1c
+          - canpl_cdn1
+
           # Americas – Tier 2
           - brazilian2
           - argentine2
+          - liga_expansión_mx_cl_mex2
+          - liga_expansión_mx_ap_mexb
+          - uslc_usl
+          - liga_de_ascenso_cl2b
+          - torneo_dimayor_i_co2t
+          - liga_2_per2
+          - segunda_división_uru2
+          - liga_pro_serie_b_ec2l
+          - liga_futve_2_vn2a
+
+          # Americas – Tier 3
+          - usl1_usc3
+          - mls_next_pro_mnp3
+
           # Asia – Tier 1
           - saudi
-          - qatari
           - emirati
+          - qatari
           - japanese
           - chinese
           - iranian
           - korean
           - australian
+          - superliga_uz1
+          - iraq_stars_league_irq1
+          - super_league_in1l
+          - thai_league_tha1
+          - super_league_mys1
+          - vleague_1_vie1
+          - jindal_league_om1l
+          - jogorku_liga_kg1l
+          - indian_super_league_ind1
+          - lebanese_premier_league_lib1
+          - jordanian_pro_league_jo1l
+          - hong_kong_premier_league_hgkg
+          - vysshaya_liga_tad1
+          - premier_league_sin1
+          - c_premier_league_khm1
+          - myanmar_national_league_mya1
+          - bfl_bgd1
+          - national_league___north_nnl1
+          - fiji_premier_league_fij1
+          - pfl_pfl1
+
           # Asia – Tier 2
           - japanese2
+          - k_league_2_rsk2
+          - saudi_first_division_league_sa2l
+          - league_one_clo
+          - azadegan_league_irn2
+          - championship_ili2
+          - qatari_second_division_qu2l
+          - thai_league_2_tha2
+          - o'zbekiston_pro_liga_uz2l
+
           # Africa – Tier 1
           - egyptian
           - south_african
           - moroccan
+          - ligue_1_alg1
+          - ligue_1_tun1
+          - libyan_premier_league_lpl
+          - uganda_premier_league_ugl1
+          - premier_league_etp1
+          - premier_league_ghpl
+          - ligue_1_sen1
+
+          # Asia – Tier 3
+          - j3_league_jap3
+
           # Youth
           - primavera1
+          - cbf_brasileiro_u20_cb20
           - u19_bundesliga_a
-          - u19_bundesliga_h
           - liga_revelacao
         season:
           - ${{ inputs.season }}
