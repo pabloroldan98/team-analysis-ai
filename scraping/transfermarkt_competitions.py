@@ -44,8 +44,10 @@ class TransfermarktCompetitionsScraper(BaseScraper):
         competition_id = info.get("id", "")
         
         standings = []
-        table = soup.select_one("div.responsive-table table")
-        if table:
+        seen_teams = set()
+        
+        tables = soup.select("div.responsive-table table")
+        for table in tables:
             tbody = table.select_one("tbody")
             if tbody:
                 for tr in tbody.select("tr"):
@@ -53,7 +55,8 @@ class TransfermarktCompetitionsScraper(BaseScraper):
                     # Transfermarkt standings tables usually have around 10 columns
                     if len(tds) > 8:
                         try:
-                            position = int(tds[0].text.strip())
+                            pos_text = tds[0].text.strip().replace(".", "").replace("*", "")
+                            position = int(pos_text) if pos_text else 0
                         except ValueError:
                             continue
                             
@@ -66,23 +69,39 @@ class TransfermarktCompetitionsScraper(BaseScraper):
                         href = a_tag.get("href", "")
                         team_id = self.extract_team_id(href) or ""
                         
+                        if not team_id or team_id in seen_teams:
+                            continue
+                            
+                        seen_teams.add(team_id)
+                        
                         try:
-                            matches_played = int(tds[3].text.strip())
-                            wins = int(tds[4].text.strip())
-                            draws = int(tds[5].text.strip())
-                            losses = int(tds[6].text.strip())
+                            # Extract text and remove asterisks that might appear
+                            mp_text = tds[3].text.strip().replace("*", "")
+                            matches_played = int(mp_text) if mp_text else 0
+                            
+                            w_text = tds[4].text.strip().replace("*", "")
+                            wins = int(w_text) if w_text else 0
+                            
+                            d_text = tds[5].text.strip().replace("*", "")
+                            draws = int(d_text) if d_text else 0
+                            
+                            l_text = tds[6].text.strip().replace("*", "")
+                            losses = int(l_text) if l_text else 0
                             
                             goals_text = tds[7].text.strip()
                             goals_for, goals_against = 0, 0
                             if ":" in goals_text:
                                 gf, ga = goals_text.split(":")
-                                goals_for = int(gf)
-                                goals_against = int(ga)
+                                gf = gf.strip().replace("*", "")
+                                ga = ga.strip().replace("*", "")
+                                goals_for = int(gf) if gf else 0
+                                goals_against = int(ga) if ga else 0
                                 
-                            gd_text = tds[8].text.strip().replace("+", "")
+                            gd_text = tds[8].text.strip().replace("+", "").replace("*", "")
                             goal_difference = int(gd_text) if gd_text else 0
                             
-                            points = int(tds[9].text.strip())
+                            pts_text = tds[9].text.strip().replace("*", "")
+                            points = int(pts_text) if pts_text else 0
                             
                             standing = CompetitionStanding(
                                 competition_id=competition_id,
