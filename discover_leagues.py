@@ -29,7 +29,7 @@ COMPETITION_PAGES = {
 }
 
 MAX_PAGES = 10
-MIN_VALUE_M   = 100   # €100M for regular leagues
+MIN_VALUE_M   = 10   # €10M for regular leagues
 MIN_YOUTH_M   = 10    # €10M  for youth leagues
 
 HEADERS = {
