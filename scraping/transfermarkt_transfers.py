@@ -186,22 +186,28 @@ class TransfermarktTransfersScraper(BaseScraper):
             self.log(f"  {len(still_missing)} IDs still unresolved – "
                      f"trying local file fallback …")
             try:
-                from fill_club_names import load_all_json_files, build_local_name_map
+                from scraping.base_scraper import BaseScraper
                 from pathlib import Path as _Path
 
-                data_dir = _Path("data/json")
-                if data_dir.exists():
-                    file_records = load_all_json_files(data_dir)
-                    local_map = build_local_name_map(file_records)
+                if BaseScraper._local_name_map is None:
+                    from fill_club_names import load_all_json_files, build_local_name_map
+                    data_dir = _Path("data/json")
+                    if data_dir.exists():
+                        file_records = load_all_json_files(data_dir)
+                        BaseScraper._local_name_map = build_local_name_map(file_records)
+                    else:
+                        BaseScraper._local_name_map = {}
+
+                if BaseScraper._local_name_map:
                     found = 0
                     for t in transfers:
                         if t.from_club_id and not t.from_club_name:
-                            name = local_map.get(t.from_club_id)
+                            name = BaseScraper._local_name_map.get(t.from_club_id)
                             if name:
                                 t.from_club_name = name
                                 found += 1
                         if t.to_club_id and not t.to_club_name:
-                            name = local_map.get(t.to_club_id)
+                            name = BaseScraper._local_name_map.get(t.to_club_id)
                             if name:
                                 t.to_club_name = name
                                 found += 1
@@ -409,6 +415,7 @@ class TransfermarktTransfersScraper(BaseScraper):
         details: bool = True,
         skip_player_ids: Set[str] = None,
         all_years_player_records: Dict[str, List[dict]] = None,
+        players_by_team: Dict[str, List['Player']] = None,
     ) -> Dict[str, List[Transfer]]:
         """
         Scrape transfers for all players in all teams of a league.
@@ -442,11 +449,12 @@ class TransfermarktTransfersScraper(BaseScraper):
         all_years_player_records = all_years_player_records or {}
         filled_player_ids: Set[str] = set()
 
-        from scraping.transfermarkt_players import TransfermarktPlayersScraper
-        players_scraper = TransfermarktPlayersScraper(
-            season=self.season, delay=self.delay, verbose=False,
-        )
-        players_by_team = players_scraper.scrape_league_players(league)
+        if players_by_team is None:
+            from scraping.transfermarkt_players import TransfermarktPlayersScraper
+            players_scraper = TransfermarktPlayersScraper(
+                season=self.season, delay=self.delay, verbose=False,
+            )
+            players_by_team = players_scraper.scrape_league_players(league)
 
         all_transfers: Dict[str, List[Transfer]] = {}
         global_seen: Set[str] = set(skip_player_ids) if skip_player_ids else set()
@@ -744,7 +752,7 @@ class TransfermarktTransfersScraper(BaseScraper):
 
     # ── run() entry-point ────────────────────────────────────────────────
 
-    def run(self, leagues: List[str] = None, details: bool = True) -> dict:
+    def run(self, leagues: List[str] = None, details: bool = True, players_by_league: dict = None) -> dict:
         """
         Run the scraper for specified leagues.
 
@@ -777,11 +785,17 @@ class TransfermarktTransfersScraper(BaseScraper):
 
         for league in leagues:
             self.log(f"\n=== Scraping transfers from {league.upper()} ===")
+            
+            league_players = None
+            if players_by_league and league in players_by_league:
+                league_players = players_by_league[league]
+                
             transfers_by_team = self.scrape_league_transfers(
                 league,
                 details=details,
                 skip_player_ids=skip_player_ids,
                 all_years_player_records=all_years_player_records,
+                players_by_team=league_players,
             )
             all_data[league] = transfers_by_team
 
