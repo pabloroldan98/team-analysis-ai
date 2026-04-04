@@ -52,8 +52,12 @@ def _get_json_part_paths(file_name: str) -> List[Path]:
     base_path = _get_json_base_path(file_name)
     stem = base_path.stem  # file_name (no .json)
     parts = sorted(DATA_DIR.glob(f"{stem}_part*.json"))
-    # Filter out _OLD backups
-    parts = [p for p in parts if "_OLD" not in p.stem]
+    
+    # Filter out _OLD backups IF the base_name itself doesn't end with _OLD
+    # This allows treating _OLD files as their own base_names when explicitly requested
+    if not stem.endswith("_OLD"):
+        parts = [p for p in parts if not p.stem.replace(f"{stem}_part", "").endswith("_OLD")]
+        
     if parts:
         return parts
     if base_path.exists():
@@ -99,7 +103,7 @@ def save_json_with_parts(
     if len(full_blob) <= max_part_bytes:
         # Single file: remove old parts
         for old_part in DATA_DIR.glob(f"{base_path.stem}_part*.json"):
-            if "_OLD" not in old_part.stem:
+            if base_path.stem.endswith("_OLD") or not old_part.stem.endswith("_OLD"):
                 try:
                     old_part.unlink()
                 except OSError:
@@ -115,7 +119,7 @@ def save_json_with_parts(
     if base_path.exists():
         base_path.unlink()
     for old_part in DATA_DIR.glob(f"{base_path.stem}_part*.json"):
-        if "_OLD" not in old_part.stem:
+        if base_path.stem.endswith("_OLD") or not old_part.stem.endswith("_OLD"):
             try:
                 old_part.unlink()
             except OSError:
@@ -572,9 +576,24 @@ def list_json_bases(glob_pattern: str = "*.json") -> List[str]:
         return []
     seen = set()
     for f in DATA_DIR.glob(glob_pattern):
-        if f.suffix != ".json" or "_OLD" in f.stem:
+        if f.suffix != ".json":
             continue
-        base = re.sub(r"_part\d+$", "", f.stem)
+            
+        stem = f.stem
+        # Ensure we treat "_OLD" files as separate base files if they exist
+        is_old = stem.endswith("_OLD")
+        
+        # Remove _partN suffix but maintain _OLD if it exists
+        if "_part" in stem:
+            # Check if it looks like ..._OLD_partN or ..._partN_OLD
+            if stem.endswith("_OLD") and "_part" in stem[:-4]:
+                # It's like ..._part1_OLD
+                base = re.sub(r"_part\d+_OLD$", "_OLD", stem)
+            else:
+                base = re.sub(r"_part\d+$", "", stem)
+        else:
+            base = stem
+            
         seen.add(base)
     return sorted(seen)
 
