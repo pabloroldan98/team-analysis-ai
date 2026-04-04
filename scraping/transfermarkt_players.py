@@ -93,13 +93,15 @@ class TransfermarktPlayersScraper(BaseScraper):
         Returns:
             List of Player objects
         """
-        # Build URL to squad page
+        # Build URL to squad page (extended view /plus/1 to get contract dates)
         if not team_url:
-            url = f"{self.BASE_URL}/-/kader/verein/{team_id}/saison_id/{self.season_year}"
+            url = f"{self.BASE_URL}/-/kader/verein/{team_id}/saison_id/{self.season_year}/plus/1"
         else:
             url = team_url.replace("/startseite/", "/kader/")
             if "/saison_id/" not in url:
                 url = f"{url}/saison_id/{self.season_year}"
+            if "/plus/1" not in url:
+                url = f"{url}/plus/1"
         
         self.log(f"Scraping players from: {team_name or team_id}")
         soup = self.fetch_page(url)
@@ -193,6 +195,44 @@ class TransfermarktPlayersScraper(BaseScraper):
             value_td = row.select_one("td.rechts.hauptlink a, td.rechts.hauptlink")
             if value_td:
                 market_value = self.parse_market_value(value_td.text)
+                
+            # Signed date and Contract end date (extended view /plus/1)
+            signed_date = None
+            contract_end_date = None
+            cells = row.find_all("td", recursive=False)
+            if len(cells) >= 9:
+                try:
+                    # Joined date is typically index 6
+                    joined_cell = cells[6]
+                    joined_text = joined_cell.get_text(strip=True)
+                    
+                    if joined_text in ["-", "", "?"] or "?" in joined_text:
+                        signed_date = None
+                    elif "cedido" not in joined_text.lower() and "on loan" not in joined_text.lower():
+                        if len(joined_text.split("/")) == 3:
+                            signed_date = joined_text
+                        elif re.search(r'\d', joined_text):
+                            signed_date = joined_text
+                    
+                    # Contract date is typically index 8
+                    contract_cell = cells[8]
+                    contract_text = contract_cell.get_text(strip=True)
+                    
+                    if contract_text in ["-", "", "?"] or "?" in contract_text:
+                        contract_end_date = None
+                    elif "cedido" not in contract_text.lower() and "on loan" not in contract_text.lower():
+                        if len(contract_text.split("/")) == 3:
+                            contract_end_date = contract_text
+                        elif re.search(r'\d', contract_text):
+                            contract_end_date = contract_text
+                            
+                    # Final strict check
+                    if signed_date and not re.search(r'\d', signed_date):
+                        signed_date = None
+                    if contract_end_date and not re.search(r'\d', contract_end_date):
+                        contract_end_date = None
+                except IndexError:
+                    pass
             
             return Player(
                 player_id=player_id,
@@ -210,6 +250,8 @@ class TransfermarktPlayersScraper(BaseScraper):
                 img_url=img_url,
                 profile_url=f"{self.BASE_URL}{href}",
                 season=self.season,
+                signed_date=signed_date,
+                contract_end_date=contract_end_date,
             )
         except Exception as e:
             self.log(f"  Error parsing player row: {e}")
@@ -296,10 +338,47 @@ class TransfermarktPlayersScraper(BaseScraper):
                 # Foot: "right" or "left" (static)
                 elif "foot" in label_text:
                     player.preferred_foot = content_text
+                    
+                # Signed date
+                elif "joined" in label_text:
+                    date_text = content_text.strip()
+                    if date_text and date_text.lower() not in ["-", "?", "", "none", "right", "left", "both"]:
+                        if "?" not in date_text and "cedido" not in date_text.lower():
+                            if len(date_text.split("/")) == 3:
+                                player.signed_date = date_text
+                            elif re.search(r'\d', date_text):
+                                player.signed_date = date_text
+                    
+                # Contract end date
+                elif "contract expires" in label_text and "there expires" not in label_text:
+                    date_text = content_text.strip()
+                    if date_text and date_text.lower() not in ["-", "?", "", "none", "right", "left", "both"]:
+                        if "?" not in date_text and "cedido" not in date_text.lower():
+                            if len(date_text.split("/")) == 3:
+                                player.contract_end_date = date_text
+                            elif re.search(r'\d', date_text):
+                                player.contract_end_date = date_text
+                                
+                # Check for loan status
+                elif "on loan from" in label_text or "prestado de" in label_text:
+                    player.on_loan = True
+                    player.loaning_team = content_text.strip()
+                    
+                    # Try to extract the team ID of the loaning team
+                    a_tag = value_el.find("a")
+                    if a_tag and a_tag.get("href"):
+                        team_href = a_tag.get("href")
+                        # e.g. /juventus-turin/startseite/verein/506
+                        team_id_match = re.search(r'/verein/(\d+)', team_href)
+                        if team_id_match:
+                            player.loaning_team_id = team_id_match.group(1)
+                    
+            # We don't clear dates for on-loan players anymore, as requested to get their signed/contract dates.
+            # if getattr(player, 'on_loan', False):
+            #     player.signed_date = None
+            #     player.contract_end_date = None
                 
                 # NOTE: We skip "position" here - position comes from team page
-                # NOTE: We skip "contract expires" - removed from model
-                # NOTE: We skip "joined" - this is current club join date, not historical
         
         # Parse position details from detail-position__position elements
         # Each element may contain a title (detail-position__title) that we need to exclude
@@ -461,17 +540,22 @@ class TransfermarktPlayersScraper(BaseScraper):
 
         return all_players
     
-    def run(self, leagues: List[str] = None, include_details: bool = False) -> dict:
+    def run(self, leagues: List[str] = None, include_details: bool = False, players_by_league: dict = None) -> dict:
         """
         Run the scraper for specified leagues.
         
         Args:
             leagues: List of league identifiers. Defaults to top 5.
             include_details: Whether to fetch detailed player info
+            players_by_league: Optional pre-loaded players dictionary to skip fetching
         
         Returns:
             Dict with league -> team_id -> list of players
         """
+        if players_by_league is not None:
+            self.log(f"Using pre-loaded players_by_league mapping with {sum(sum(len(p) for p in t.values()) for t in players_by_league.values())} total players.")
+            return players_by_league
+            
         if leagues is None:
             leagues = ["laliga", "premier", "bundesliga", "seriea", "ligue1"]
         
