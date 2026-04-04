@@ -1350,6 +1350,10 @@ def main():
     
     args = parser.parse_args()
     
+    if 'all' in args.leagues:
+        from scraping.base_scraper import BaseScraper
+        args.leagues = list(BaseScraper.LEAGUE_INFO.keys())
+    
     scraper = TransfermarktScraper(
         season=args.season,
         delay=args.delay,
