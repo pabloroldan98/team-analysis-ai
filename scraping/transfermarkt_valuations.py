@@ -28,7 +28,8 @@ class TransfermarktValuationsScraper(BaseScraper):
     # Cache for club names to avoid repeated API calls
     _club_name_cache: Dict[str, str] = {}
     
-    # ── Resilient API request helper ────────────────────────────────────
+    # Cache for local file name map (loaded once)
+    _local_name_map: Optional[Dict[str, str]] = None
 
     def _api_get(
         self,
@@ -195,19 +196,25 @@ class TransfermarktValuationsScraper(BaseScraper):
             self.log(f"  {len(still_missing)} IDs still unresolved – "
                      f"trying local file fallback …")
             try:
-                from fill_club_names import load_all_json_files, build_local_name_map
+                from scraping.base_scraper import BaseScraper
                 from pathlib import Path as _Path
 
-                data_dir = _Path("data/json")
-                if data_dir.exists():
-                    file_records = load_all_json_files(data_dir)
-                    local_map = build_local_name_map(file_records)
+                if BaseScraper._local_name_map is None:
+                    from fill_club_names import load_all_json_files, build_local_name_map
+                    data_dir = _Path("data/json")
+                    if data_dir.exists():
+                        file_records = load_all_json_files(data_dir)
+                        BaseScraper._local_name_map = build_local_name_map(file_records)
+                    else:
+                        BaseScraper._local_name_map = {}
+
+                if BaseScraper._local_name_map:
                     found = 0
                     for v in valuations:
                         if (v.club_id_at_valuation
                                 and not v.club_name_at_valuation
-                                and v.club_id_at_valuation in local_map):
-                            v.club_name_at_valuation = local_map[v.club_id_at_valuation]
+                                and v.club_id_at_valuation in BaseScraper._local_name_map):
+                            v.club_name_at_valuation = BaseScraper._local_name_map[v.club_id_at_valuation]
                             found += 1
                     self.log(f"  Local fallback resolved {found} additional names")
             except Exception as exc:
@@ -378,6 +385,7 @@ class TransfermarktValuationsScraper(BaseScraper):
         details: bool = True,
         skip_player_ids: set = None,
         all_years_player_records: dict = None,
+        players_by_team: dict = None,
     ) -> Dict[str, Dict[str, List[Valuation]]]:
         """
         Scrape valuations for all players in a league.
@@ -405,9 +413,10 @@ class TransfermarktValuationsScraper(BaseScraper):
         all_years_player_records = all_years_player_records or {}
         filled_player_ids: set = set()
 
-        from scraping.transfermarkt_players import TransfermarktPlayersScraper
-        players_scraper = TransfermarktPlayersScraper(season=self.season, delay=self.delay, verbose=False)
-        players_by_team = players_scraper.scrape_league_players(league)
+        if players_by_team is None:
+            from scraping.transfermarkt_players import TransfermarktPlayersScraper
+            players_scraper = TransfermarktPlayersScraper(season=self.season, delay=self.delay, verbose=False)
+            players_by_team = players_scraper.scrape_league_players(league)
 
         all_valuations: Dict[str, Dict[str, List[Valuation]]] = {}
         global_seen: set = set(skip_player_ids) if skip_player_ids else set()
@@ -630,7 +639,7 @@ class TransfermarktValuationsScraper(BaseScraper):
         if fixed:
             self.log(f"  Fixed {fixed} club names from transfer history")
 
-    def run(self, leagues: List[str] = None, details: bool = True) -> dict:
+    def run(self, leagues: List[str] = None, details: bool = True, players_by_league: dict = None) -> dict:
         """
         Run the scraper for specified leagues.
         
@@ -682,11 +691,17 @@ class TransfermarktValuationsScraper(BaseScraper):
 
         for league in leagues:
             self.log(f"\n=== Scraping valuations from {league.upper()} ===")
+            
+            league_players = None
+            if players_by_league and league in players_by_league:
+                league_players = players_by_league[league]
+                
             valuations_data = self.scrape_league_valuations(
                 league,
                 details=details,
                 skip_player_ids=skip_player_ids,
                 all_years_player_records=all_years_player_records,
+                players_by_team=league_players,
             )
             all_data[league] = valuations_data
             
