@@ -64,6 +64,10 @@ def main():
     
     args = parser.parse_args()
     
+    if 'all' in args.leagues:
+        from scraping.base_scraper import BaseScraper
+        args.leagues = list(BaseScraper.LEAGUE_INFO.keys())
+    
     print(f"=== Transfermarkt Leagues Scraper ===")
     print(f"Leagues: {', '.join(args.leagues)}")
     print(f"Season: {args.season or 'current'}")
