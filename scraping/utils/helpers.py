@@ -307,7 +307,7 @@ def load_entity_all_from_all_years(
                 current_season_records.append(item)
 
             # Build id_to_records with deduplication
-            record_key = item.get("transfer_id") or item.get("valuation_id") or id(item)
+            record_key = item.get("transfer_id") or item.get("valuation_id") or item.get("injury_id") or id(item)
             if record_key in seen_record_ids:
                 continue
             seen_record_ids.add(record_key)
@@ -422,7 +422,10 @@ def merge_with_old_data(
         old_id = old_item.get(id_field)
         if old_id and old_id not in new_ids:
             merged.append(old_item)
-            print(f"  Recovered from old data: {old_item.get('name', old_id)}")
+            try:
+                print(f"  Recovered from old data: {old_item.get('name', old_id)}")
+            except UnicodeEncodeError:
+                print(f"  Recovered from old data: {old_id} (name has special chars)")
     
     return merged
 
@@ -679,6 +682,56 @@ def get_season_year(season: str) -> int:
     
     return 2024
 
+
+def load_players_by_league_from_files(season: str) -> Optional[Dict[str, Dict[str, Any]]]:
+    """
+    Load players_by_league dictionary from saved JSON files for a given season.
+    This skips scraping players/squads and uses already downloaded data.
+    
+    Returns:
+        Dict mapping league_key -> team_id -> List of Player objects,
+        or None if required files are missing.
+    """
+    teams_data = load_json_with_parts(f"teams_all_{season}")
+    players_data = load_json_with_parts(f"players_all_{season}")
+    
+    if not teams_data or not players_data:
+        return None
+        
+    # Build mapping from team_id -> league_key
+    from scraping.base_scraper import BaseScraper
+    team_to_league_key = {}
+    
+    # BaseScraper.LEAGUE_INFO has structure: "laliga": {"id": "ES1", ...}
+    league_id_to_key = {
+        info.get("id"): key 
+        for key, info in BaseScraper.LEAGUE_INFO.items() 
+        if info.get("id")
+    }
+    
+    for t in teams_data:
+        tid = str(t.get("team_id", ""))
+        lid = t.get("league_id", "")
+        if lid in league_id_to_key:
+            team_to_league_key[tid] = league_id_to_key[lid]
+            
+    # Build players_by_league
+    from player import Player
+    players_by_league = {}
+    
+    for p_dict in players_data:
+        tid = str(p_dict.get("team_id", ""))
+        if tid in team_to_league_key:
+            l_key = team_to_league_key[tid]
+            if l_key not in players_by_league:
+                players_by_league[l_key] = {}
+            if tid not in players_by_league[l_key]:
+                players_by_league[l_key][tid] = []
+                
+            player = Player.from_dict(p_dict)
+            players_by_league[l_key][tid].append(player)
+            
+    return players_by_league
 
 def format_season(year: int) -> str:
     """Format season string from starting year."""
