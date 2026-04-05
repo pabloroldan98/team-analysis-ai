@@ -690,6 +690,26 @@ class TransfermarktValuationsScraper(BaseScraper):
             )
 
         for league in leagues:
+            file_name = f"valuations_{league}_{self.season}"
+            if self.skip_scraped and self._has_scraped_file(file_name):
+                existing = self.load_json(file_name)
+                if existing is not None:
+                    self.log(f"\n=== {league.upper()}: file exists, skipping scraping ===")
+                    from valuation import Valuation
+                    valuations_by_team = {}
+                    for d in existing:
+                        v = Valuation.from_dict(d)
+                        tid = v.club_id_at_valuation if v.club_id_at_valuation else "unknown"
+                        if tid not in valuations_by_team:
+                            valuations_by_team[tid] = {}
+                        if v.player_id not in valuations_by_team[tid]:
+                            valuations_by_team[tid][v.player_id] = []
+                        valuations_by_team[tid][v.player_id].append(v)
+                        if v.player_id:
+                            skip_player_ids.add(v.player_id)
+                    all_data[league] = valuations_by_team
+                    continue
+
             self.log(f"\n=== Scraping valuations from {league.upper()} ===")
             
             league_players = None

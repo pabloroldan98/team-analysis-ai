@@ -75,6 +75,13 @@ def main():
         help="Skip leagues whose JSON already exists and reuse downloaded data"
     )
     
+    parser.add_argument(
+        "--skip-scraped",
+        action="store_true",
+        default=False,
+        help="Skip scraping for leagues that already have a saved JSON file"
+    )
+    
     args = parser.parse_args()
     
     print(f"=== Transfermarkt Full Scrape ===")
@@ -90,6 +97,7 @@ def main():
         "delay": args.delay,
         "verbose": args.verbose,
         "use_downloaded_data": args.use_downloaded_data,
+        "skip_scraped": args.skip_scraped,
     }
     
     # 1. Teams

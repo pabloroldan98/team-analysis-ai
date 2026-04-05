@@ -330,6 +330,24 @@ class TransfermarktInjuriesScraper(BaseScraper):
             )
 
         for league in leagues:
+            file_name = f"injuries_{league}_{self.season}"
+            if self.skip_scraped and self._has_scraped_file(file_name):
+                existing = self.load_json(file_name)
+                if existing is not None:
+                    self.log(f"\n=== {league.upper()}: file exists, skipping scraping ===")
+                    from injury import Injury
+                    injuries_by_team = {}
+                    for d in existing:
+                        inj = Injury.from_dict(d)
+                        tid = inj.club_id if hasattr(inj, 'club_id') and inj.club_id else "unknown"
+                        if tid not in injuries_by_team:
+                            injuries_by_team[tid] = []
+                        injuries_by_team[tid].append(inj)
+                        if inj.player_id:
+                            skip_player_ids.add(inj.player_id)
+                    all_data[league] = injuries_by_team
+                    continue
+
             self.log(f"\n=== Scraping injuries from {league.upper()} ===")
 
             league_players = None

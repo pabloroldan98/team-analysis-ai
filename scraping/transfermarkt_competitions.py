@@ -161,6 +161,15 @@ class TransfermarktCompetitionsScraper(BaseScraper):
                 self.log(f"\n=== {league_key.upper()}: already scraped, skipping ===")
                 continue
             
+            file_name = f"competitions_{league_key}_{self.season}"
+            if self.skip_scraped and self._has_scraped_file(file_name):
+                existing = self.load_json(file_name)
+                if existing is not None:
+                    self.log(f"\n=== {league_key.upper()}: file exists, skipping scraping ===")
+                    from competition import CompetitionStanding
+                    all_competitions[league_key] = [CompetitionStanding.from_dict(d) for d in existing]
+                    continue
+            
             self.log(f"\n=== Scraping {league_key.upper()} ===")
             standings = self.scrape_competition(league_key)
             

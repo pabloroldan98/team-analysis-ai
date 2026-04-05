@@ -77,6 +77,13 @@ def main():
         help="Load players_by_league from players_all files instead of scraping players"
     )
     
+    parser.add_argument(
+        "--skip-scraped",
+        action="store_true",
+        default=False,
+        help="Skip scraping for leagues that already have a saved JSON file"
+    )
+    
     args = parser.parse_args()
     
     if 'all' in args.leagues:
@@ -98,6 +105,7 @@ def main():
         delay=args.delay,
         verbose=args.verbose,
         use_downloaded_data=args.use_downloaded_data,
+        skip_scraped=args.skip_scraped,
     )
     
     players_by_league = None

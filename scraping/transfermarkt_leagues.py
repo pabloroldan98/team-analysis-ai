@@ -254,6 +254,20 @@ class TransfermarktLeaguesScraper(BaseScraper):
                 )
                 continue
             
+            file_name = f"leagues_{league_key}_{self.season}"
+            if self.skip_scraped and self._has_scraped_file(file_name):
+                existing = self.load_json(file_name)
+                if existing is not None and len(existing) > 0:
+                    self.log(f"\n=== {league_key.upper()}: file exists, skipping scraping ===")
+                    from league import League
+                    try:
+                        lg = League.from_dict(existing[0])
+                        all_leagues[league_key] = lg
+                    except AttributeError:
+                        lg = League(**existing[0])
+                        all_leagues[league_key] = lg
+                    continue
+            
             self.log(f"\n=== Scraping {league_key.upper()} ===")
             league = self.scrape_league(league_key)
             

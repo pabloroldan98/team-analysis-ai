@@ -583,6 +583,23 @@ class TransfermarktPlayersScraper(BaseScraper):
             )
         
         for league in leagues:
+            file_name = f"players_{league}_{self.season}"
+            if self.skip_scraped and self._has_scraped_file(file_name):
+                existing = self.load_json(file_name)
+                if existing is not None:
+                    self.log(f"\n=== {league.upper()}: file exists, skipping scraping ===")
+                    from player import Player
+                    players_by_team = {}
+                    for d in existing:
+                        p = Player.from_dict(d)
+                        if p.team_id not in players_by_team:
+                            players_by_team[p.team_id] = []
+                        players_by_team[p.team_id].append(p)
+                        if p.player_id:
+                            skip_player_ids.add(p.player_id)
+                    all_data[league] = players_by_team
+                    continue
+
             self.log(f"\n=== Scraping players from {league.upper()} ===")
             players_by_team = self.scrape_league_players(
                 league, include_details, skip_player_ids=skip_player_ids,

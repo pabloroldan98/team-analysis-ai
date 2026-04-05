@@ -322,6 +322,17 @@ class TransfermarktTeamsScraper(BaseScraper):
                 self.log(f"\nIncremental mode: {len(skip_team_ids)} teams already scraped")
         
         for league in leagues:
+            file_name = f"teams_{league}_{self.season}"
+            if self.skip_scraped and self._has_scraped_file(file_name):
+                existing = self.load_json(file_name)
+                if existing is not None:
+                    self.log(f"\n=== {league.upper()}: file exists, skipping scraping ===")
+                    from team import Team
+                    all_teams[league] = [Team.from_dict(d) for d in existing]
+                    for t in existing:
+                        skip_team_ids.add(t.get("team_id"))
+                    continue
+
             self.log(f"\n=== Scraping teams from {league.upper()} ===")
             teams = self.scrape_league_teams(league, skip_team_ids=skip_team_ids)
             all_teams[league] = teams

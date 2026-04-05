@@ -429,6 +429,7 @@ class BaseScraper:
         retry_pause: float = 60.0,
         verbose: bool = True,
         use_downloaded_data: bool = False,
+        skip_scraped: bool = False,
     ):
         """
         Initialize the scraper.
@@ -441,6 +442,7 @@ class BaseScraper:
             verbose: Print progress information.
             use_downloaded_data: If True, skip leagues whose per-league JSON
                 already exists and reuse the downloaded data instead.
+            skip_scraped: If True, skip scraping for leagues that already have a saved JSON file.
         """
         if season:
             self.season = season
@@ -457,9 +459,15 @@ class BaseScraper:
         self.retry_pause = retry_pause
         self.verbose = verbose
         self.use_downloaded_data = use_downloaded_data
+        self.skip_scraped = skip_scraped
         
         # Ensure data directory exists
         DATA_DIR.mkdir(parents=True, exist_ok=True)
+    
+    def _has_scraped_file(self, file_name: str) -> bool:
+        """Check if a saved JSON file already exists (including multi-part files)."""
+        from scraping.utils.helpers import _get_json_part_paths
+        return len(_get_json_part_paths(file_name)) > 0
     
     def _get_season_year(self, season: str) -> int:
         """Extract starting year from season string."""
