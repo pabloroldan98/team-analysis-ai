@@ -345,6 +345,9 @@ class TransfermarktInjuriesScraper(BaseScraper):
                         injuries_by_team[tid].append(inj)
                         if inj.player_id:
                             skip_player_ids.add(inj.player_id)
+                            if inj.player_id not in all_years_player_records:
+                                all_years_player_records[inj.player_id] = []
+                            all_years_player_records[inj.player_id].append(d)
                     all_data[league] = injuries_by_team
                     continue
 

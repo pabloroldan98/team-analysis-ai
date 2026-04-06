@@ -597,6 +597,7 @@ class TransfermarktPlayersScraper(BaseScraper):
                         players_by_team[p.team_id].append(p)
                         if p.player_id:
                             skip_player_ids.add(p.player_id)
+                            loaded_player_map[p.player_id] = d
                     all_data[league] = players_by_team
                     continue
 

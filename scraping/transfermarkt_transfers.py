@@ -799,6 +799,9 @@ class TransfermarktTransfersScraper(BaseScraper):
                         transfers_by_team[tid].append(t)
                         if t.player_id:
                             skip_player_ids.add(t.player_id)
+                            if t.player_id not in all_years_player_records:
+                                all_years_player_records[t.player_id] = []
+                            all_years_player_records[t.player_id].append(d)
                     all_data[league] = transfers_by_team
                     continue
 

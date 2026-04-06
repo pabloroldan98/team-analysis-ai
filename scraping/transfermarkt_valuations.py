@@ -707,6 +707,9 @@ class TransfermarktValuationsScraper(BaseScraper):
                         valuations_by_team[tid][v.player_id].append(v)
                         if v.player_id:
                             skip_player_ids.add(v.player_id)
+                            if v.player_id not in all_years_player_records:
+                                all_years_player_records[v.player_id] = []
+                            all_years_player_records[v.player_id].append(d)
                     all_data[league] = valuations_by_team
                     continue
 
