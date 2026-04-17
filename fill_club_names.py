@@ -42,7 +42,7 @@ TM_API_URL = "https://tmapi-alpha.transfermarkt.technology"
 
 MAX_RETRIES = 50
 RETRY_PAUSE = 10  # seconds
-REQUEST_DELAY = 0.3  # polite delay between requests
+REQUEST_DELAY = 0.0  # polite delay between requests
 
 # Name-key → ID-key mappings per file prefix.
 # Each tuple is (name_key, id_key).
