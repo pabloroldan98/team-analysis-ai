@@ -220,10 +220,13 @@ class TransfermarktInjuriesScraper(BaseScraper):
         all_years_player_records = all_years_player_records or {}
         filled_player_ids: Set[str] = set()
 
+        players_by_team_passed_in = players_by_team is not None
+
         if players_by_team is None:
+            self.log("  [!] Pre-loaded players not found for this league. Scraping squad pages first (this may take a while)...")
             from scraping.transfermarkt_players import TransfermarktPlayersScraper
             players_scraper = TransfermarktPlayersScraper(
-                season=self.season, delay=self.delay, verbose=False,
+                season=self.season, delay=self.delay, verbose=self.verbose,
             )
             players_by_team = players_scraper.scrape_league_players(league)
 
@@ -256,41 +259,43 @@ class TransfermarktInjuriesScraper(BaseScraper):
             all_injuries[team_id] = team_injuries
 
         # ── Phase 2: transferred players ──────────────────────────
-        self.log(f"\n--- Phase 2: Transferred players ({league.upper()}) ---")
+        # Only perform Phase 2 if we are NOT using a pre-loaded players list
+        if not players_by_team_passed_in:
+            self.log(f"\n--- Phase 2: Transferred players ({league.upper()}) ---")
 
-        team_infos = self.get_league_teams(league)
+            team_infos = self.get_league_teams(league)
 
-        for i, info in enumerate(team_infos):
-            tid = info["team_id"]
-            tname = info["team_name"]
-            self.log(f"\n[{i + 1}/{len(team_infos)}] {tname} (transfer page)")
+            for i, info in enumerate(team_infos):
+                tid = info["team_id"]
+                tname = info["team_name"]
+                self.log(f"\n[{i + 1}/{len(team_infos)}] {tname} (transfer page)")
 
-            page_players = self.get_transferred_player_ids(tid, tname)
+                page_players = self.get_transferred_player_ids(tid, tname)
 
-            if tid not in all_injuries:
-                all_injuries[tid] = []
+                if tid not in all_injuries:
+                    all_injuries[tid] = []
 
-            # Fill skipped players from all-years pool
-            for pid, pname in page_players:
-                if pid in global_seen and pid not in filled_player_ids and pid in all_years_player_records:
-                    self.log(f"  Fill {pname or pid} from all years")
-                    for d in all_years_player_records[pid]:
-                        all_injuries[tid].append(Injury.from_dict(d))
-                    filled_player_ids.add(pid)
+                # Fill skipped players from all-years pool
+                for pid, pname in page_players:
+                    if pid in global_seen and pid not in filled_player_ids and pid in all_years_player_records:
+                        self.log(f"  Fill {pname or pid} from all years")
+                        for d in all_years_player_records[pid]:
+                            all_injuries[tid].append(Injury.from_dict(d))
+                        filled_player_ids.add(pid)
 
-            new_players = [(pid, pname) for pid, pname in page_players if pid not in global_seen]
+                new_players = [(pid, pname) for pid, pname in page_players if pid not in global_seen]
 
-            if not new_players:
-                self.log(f"  No new players found on transfer page")
-                continue
+                if not new_players:
+                    self.log(f"  No new players found on transfer page")
+                    continue
 
-            self.log(f"  {len(new_players)} new player(s) from transfer page")
+                self.log(f"  {len(new_players)} new player(s) from transfer page")
 
-            for j, (pid, pname) in enumerate(new_players):
-                global_seen.add(pid)
-                self.log(f"  [{j + 1}/{len(new_players)}] {pname or pid}")
-                injuries = self.scrape_player_injuries(pid, pname)
-                all_injuries[tid].extend(injuries)
+                for j, (pid, pname) in enumerate(new_players):
+                    global_seen.add(pid)
+                    self.log(f"  [{j + 1}/{len(new_players)}] {pname or pid}")
+                    injuries = self.scrape_player_injuries(pid, pname)
+                    all_injuries[tid].extend(injuries)
 
         return all_injuries
 
