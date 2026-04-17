@@ -726,7 +726,7 @@ class BaseScraper:
     def __init__(
         self,
         season: str = None,
-        delay: float = 0.25,
+        delay: float = 0.0,
         max_retries: int = 5,
         retry_pause: float = 60.0,
         verbose: bool = True,
@@ -806,15 +806,24 @@ class BaseScraper:
         tries = tries or self.max_retries
         pause = pause or self.retry_pause
         
+        if not hasattr(self, '_html_session'):
+            self._html_session = requests.Session()
+            adapter = requests.adapters.HTTPAdapter(pool_connections=10, pool_maxsize=10, max_retries=1)
+            self._html_session.mount('https://', adapter)
+            self._html_session.mount('http://', adapter)
+
+        if USE_TLS and not hasattr(self, '_tls_session'):
+            self._tls_session = tls_requests.Client()
+        
         for attempt in range(1, tries + 1):
             try:
                 time.sleep(self.delay)
                 headers = pick_headers()
                 
                 if USE_TLS:
-                    response = tls_requests.get(url, headers=headers)
+                    response = self._tls_session.get(url, headers=headers)
                 else:
-                    response = requests.get(url, headers=headers)
+                    response = self._html_session.get(url, headers=headers)
                 
                 if response.status_code == 200:
                     return BeautifulSoup(response.content, "html.parser")
