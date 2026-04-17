@@ -33,12 +33,18 @@ class TransfermarktLeaguesScraper(BaseScraper):
         import time as _time
         import requests
         
+        if not hasattr(self, '_api_session'):
+            self._api_session = requests.Session()
+            adapter = requests.adapters.HTTPAdapter(pool_connections=10, pool_maxsize=10, max_retries=1)
+            self._api_session.mount('https://', adapter)
+            self._api_session.mount('http://', adapter)
+        
         api_url = f"{self.TM_API_URL}/competition/{league_id}"
         
         for attempt in range(1, self.max_retries + 1):
             try:
                 _time.sleep(self.delay)
-                resp = requests.get(api_url, timeout=60)
+                resp = self._api_session.get(api_url, timeout=60)
                 
                 if resp.status_code == 200:
                     data = resp.json()
