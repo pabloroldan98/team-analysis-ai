@@ -209,12 +209,15 @@ class TransfermarktScraper:
         tries = tries or self.max_retries
         pause = pause or self.retry_pause
         
+        if not hasattr(self, '_tls_session'):
+            self._tls_session = tls_requests.Client()
+        
         for attempt in range(1, tries + 1):
             try:
                 time.sleep(self.delay)
                 headers = pick_headers()
                 
-                response = tls_requests.get(url, headers=headers)
+                response = self._tls_session.get(url, headers=headers)
                 
                 if response.status_code == 200:
                     return BeautifulSoup(response.content, "html.parser")
