@@ -449,10 +449,13 @@ class TransfermarktTransfersScraper(BaseScraper):
         all_years_player_records = all_years_player_records or {}
         filled_player_ids: Set[str] = set()
 
+        players_by_team_passed_in = players_by_team is not None
+
         if players_by_team is None:
+            self.log("  [!] Pre-loaded players not found for this league. Scraping squad pages first (this may take a while)...")
             from scraping.transfermarkt_players import TransfermarktPlayersScraper
             players_scraper = TransfermarktPlayersScraper(
-                season=self.season, delay=self.delay, verbose=False,
+                season=self.season, delay=self.delay, verbose=self.verbose,
             )
             players_by_team = players_scraper.scrape_league_players(league)
 
@@ -491,50 +494,52 @@ class TransfermarktTransfersScraper(BaseScraper):
             all_transfers[team_id] = team_transfers
 
         # ── Phase 2: transferred players from season transfer pages ──────
-        self.log(f"\n--- Phase 2: Transferred players ({league.upper()}) ---")
+        # Only perform Phase 2 if we are NOT using a pre-loaded players list
+        if not players_by_team_passed_in:
+            self.log(f"\n--- Phase 2: Transferred players ({league.upper()}) ---")
 
-        team_infos = self.get_league_teams(league)
+            team_infos = self.get_league_teams(league)
 
-        for i, info in enumerate(team_infos):
-            tid = info["team_id"]
-            tname = info["team_name"]
-            self.log(f"\n[{i + 1}/{len(team_infos)}] {tname} (transfer page)")
+            for i, info in enumerate(team_infos):
+                tid = info["team_id"]
+                tname = info["team_name"]
+                self.log(f"\n[{i + 1}/{len(team_infos)}] {tname} (transfer page)")
 
-            # Scrape the season transfer page to discover player IDs
-            page_players = self.get_transferred_player_ids(tid, tname)
+                # Scrape the season transfer page to discover player IDs
+                page_players = self.get_transferred_player_ids(tid, tname)
 
-            # Collect player IDs + names we haven't seen yet (to scrape)
-            new_players: List[tuple] = []
-            for pid, pname in page_players:
-                if pid not in global_seen:
-                    new_players.append((pid, pname))
-                    global_seen.add(pid)
+                # Collect player IDs + names we haven't seen yet (to scrape)
+                new_players: List[tuple] = []
+                for pid, pname in page_players:
+                    if pid not in global_seen:
+                        new_players.append((pid, pname))
+                        global_seen.add(pid)
 
-            # Fill skipped players from all-years pool (add only once per player)
-            if tid not in all_transfers:
-                all_transfers[tid] = []
-            for pid, pname in page_players:
-                if pid in global_seen and pid not in filled_player_ids and pid in all_years_player_records:
-                    self.log(f"  Fill {pname or pid} from all years")
-                    for d in all_years_player_records[pid]:
-                        all_transfers[tid].append(Transfer.from_dict(d))
-                    filled_player_ids.add(pid)
+                # Fill skipped players from all-years pool (add only once per player)
+                if tid not in all_transfers:
+                    all_transfers[tid] = []
+                for pid, pname in page_players:
+                    if pid in global_seen and pid not in filled_player_ids and pid in all_years_player_records:
+                        self.log(f"  Fill {pname or pid} from all years")
+                        for d in all_years_player_records[pid]:
+                            all_transfers[tid].append(Transfer.from_dict(d))
+                        filled_player_ids.add(pid)
 
-            if not new_players:
-                self.log(f"  No new players found on transfer page")
-                continue
+                if not new_players:
+                    self.log(f"  No new players found on transfer page")
+                    continue
 
-            self.log(f"  {len(new_players)} new player(s) from transfer page")
+                self.log(f"  {len(new_players)} new player(s) from transfer page")
 
-            for j, (pid, pname) in enumerate(new_players):
-                self.log(f"  [{j + 1}/{len(new_players)}] {pname or pid}")
-                transfers = self.scrape_player_all_transfers(pid, pname)
+                for j, (pid, pname) in enumerate(new_players):
+                    self.log(f"  [{j + 1}/{len(new_players)}] {pname or pid}")
+                    transfers = self.scrape_player_all_transfers(pid, pname)
 
-                if not transfers:
-                    debut = self._make_debut_transfer(pid, pname, tid, tname)
-                    all_transfers[tid].append(debut)
-                else:
-                    all_transfers[tid].extend(transfers)
+                    if not transfers:
+                        debut = self._make_debut_transfer(pid, pname, tid, tname)
+                        all_transfers[tid].append(debut)
+                    else:
+                        all_transfers[tid].extend(transfers)
 
         return all_transfers
 
@@ -825,17 +830,17 @@ class TransfermarktTransfersScraper(BaseScraper):
             for transfers in transfers_by_team.values():
                 all_transfers.extend(transfers)
 
-            # Fill club names from API (single batch call)
+            # Update skip set so subsequent leagues benefit
+            for t in all_transfers:
+                skip_player_ids.add(t.player_id)
+                
+            # Intermediate save per league so we don't lose progress if crashed
             if details:
                 self._fill_club_names(all_transfers)
 
             # Save per-league file
             transfers_dicts = [t.to_dict() for t in all_transfers]
             self.save_json(transfers_dicts, f"transfers_{league}_{self.season}")
-
-            # Update skip set so subsequent leagues benefit
-            for t in all_transfers:
-                skip_player_ids.add(t.player_id)
 
         # Save combined _all_ file (new + existing)
         combined: List[dict] = []
