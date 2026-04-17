@@ -413,9 +413,12 @@ class TransfermarktValuationsScraper(BaseScraper):
         all_years_player_records = all_years_player_records or {}
         filled_player_ids: set = set()
 
+        players_by_team_passed_in = players_by_team is not None
+
         if players_by_team is None:
+            self.log("  [!] Pre-loaded players not found for this league. Scraping squad pages first (this may take a while)...")
             from scraping.transfermarkt_players import TransfermarktPlayersScraper
-            players_scraper = TransfermarktPlayersScraper(season=self.season, delay=self.delay, verbose=False)
+            players_scraper = TransfermarktPlayersScraper(season=self.season, delay=self.delay, verbose=self.verbose)
             players_by_team = players_scraper.scrape_league_players(league)
 
         all_valuations: Dict[str, Dict[str, List[Valuation]]] = {}
@@ -456,47 +459,49 @@ class TransfermarktValuationsScraper(BaseScraper):
                     filled_player_ids.add(p.player_id)
 
         # ── Phase 2: transferred players from season transfer pages ──────
-        self.log(f"\n--- Phase 2: Transferred players ({league.upper()}) ---")
+        # Only perform Phase 2 if we are NOT using a pre-loaded players list
+        if not players_by_team_passed_in:
+            self.log(f"\n--- Phase 2: Transferred players ({league.upper()}) ---")
 
-        team_infos = self.get_league_teams(league)
+            team_infos = self.get_league_teams(league)
 
-        for i, info in enumerate(team_infos):
-            tid = info["team_id"]
-            tname = info["team_name"]
-            self.log(f"\n[{i+1}/{len(team_infos)}] {tname} (transfer page)")
+            for i, info in enumerate(team_infos):
+                tid = info["team_id"]
+                tname = info["team_name"]
+                self.log(f"\n[{i+1}/{len(team_infos)}] {tname} (transfer page)")
 
-            page_players = self.get_transferred_player_ids(tid, tname)
+                page_players = self.get_transferred_player_ids(tid, tname)
 
-            new_players = [(pid, pname) for pid, pname in page_players if pid not in global_seen]
+                new_players = [(pid, pname) for pid, pname in page_players if pid not in global_seen]
 
-            if tid not in all_valuations:
-                all_valuations[tid] = {}
+                if tid not in all_valuations:
+                    all_valuations[tid] = {}
 
-            # Fill skipped players from all-years pool
-            for pid, pname in page_players:
-                if pid in global_seen and pid not in filled_player_ids and pid in all_years_player_records:
-                    self.log(f"  Fill {pname or pid} from all years")
-                    all_valuations[tid][pid] = [
-                        Valuation.from_dict(d) for d in all_years_player_records[pid]
-                    ]
-                    filled_player_ids.add(pid)
+                # Fill skipped players from all-years pool
+                for pid, pname in page_players:
+                    if pid in global_seen and pid not in filled_player_ids and pid in all_years_player_records:
+                        self.log(f"  Fill {pname or pid} from all years")
+                        all_valuations[tid][pid] = [
+                            Valuation.from_dict(d) for d in all_years_player_records[pid]
+                        ]
+                        filled_player_ids.add(pid)
 
-            if not new_players:
-                self.log(f"  No new players found on transfer page")
-                continue
+                if not new_players:
+                    self.log(f"  No new players found on transfer page")
+                    continue
 
-            self.log(f"  {len(new_players)} new player(s) from transfer page")
+                self.log(f"  {len(new_players)} new player(s) from transfer page")
 
-            for j, (pid, pname) in enumerate(new_players):
-                global_seen.add(pid)
-                self.log(f"  [{j+1}/{len(new_players)}] {pname or pid}")
+                for j, (pid, pname) in enumerate(new_players):
+                    global_seen.add(pid)
+                    self.log(f"  [{j+1}/{len(new_players)}] {pname or pid}")
 
-                if details:
-                    valuations = self.scrape_player_valuations(pid, pname)
-                else:
-                    valuations = []
+                    if details:
+                        valuations = self.scrape_player_valuations(pid, pname)
+                    else:
+                        valuations = []
 
-                all_valuations[tid][pid] = valuations
+                    all_valuations[tid][pid] = valuations
 
         return all_valuations
     
@@ -734,27 +739,20 @@ class TransfermarktValuationsScraper(BaseScraper):
                 for player_valuations in team_data.values():
                     all_valuations.extend(player_valuations)
             
-            if details:
-                # Fix empty valuation dates before any club-name logic
-                self._fix_empty_valuation_dates(all_valuations)
-
-                # Fill club names from API (single batch call)
-                self._fill_club_names(all_valuations)
-
-                # Fix remaining empty club names from transfer history
-                if transfer_index:
-                    self._fix_club_names_from_transfers(
-                        all_valuations, transfer_index,
-                    )
-            
-            # Save per-league file
-            valuations_dicts = [v.to_dict() for v in all_valuations]
-            self.save_json(valuations_dicts, f"valuations_{league}_{self.season}")
-
             # Update skip set so subsequent leagues benefit
             for v in all_valuations:
                 skip_player_ids.add(v.player_id)
-        
+                
+            # Immediate save per league so progress isn't lost
+            if details:
+                self._fix_empty_valuation_dates(all_valuations)
+                self._fill_club_names(all_valuations)
+                if transfer_index:
+                    self._fix_club_names_from_transfers(all_valuations, transfer_index)
+            
+            valuations_dicts = [v.to_dict() for v in all_valuations]
+            self.save_json(valuations_dicts, f"valuations_{league}_{self.season}")
+
         # Save combined _all_ file (new + existing)
         combined = []
         for league_data in all_data.values():
