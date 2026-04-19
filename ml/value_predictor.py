@@ -305,9 +305,31 @@ class ValuePredictor:
 
     def _coerce_categories_for_prediction(self, X):
         """
-        Map categorical values not seen during training to "Other".
-        Prevents XGBoostError when prediction data has categories the model wasn't trained on.
+        For every categorical feature, coerce values to the exact set the
+        booster saw at training time and force the column dtype to a
+        ``CategoricalDtype`` with those same ordered categories.
+
+        Rules applied per column (based on ``_category_mappings[col]`` or the
+        ``FALLBACK_CATEGORY_VALUES`` set):
+
+        - Value in the training set          → kept as-is.
+        - Value NOT in the training set      → mapped to ``"Other"`` if that
+                                               label is in the training set,
+                                               otherwise to NaN (null).
+        - Null / empty / "nan" / "None"      → mapped to ``"None"`` if that
+                                               label is in the training set,
+                                               otherwise to NaN (null).
+
+        Forcing the explicit category list is required because
+        ``X[col].astype("category")`` would otherwise build a category set
+        from only the values present in ``X``, producing different positional
+        category codes than the booster was trained with.  XGBoost validates
+        by code position and reports "Found a category not in the training
+        set" even for values that ARE in the training distribution but land
+        at a different code.
         """
+        import pandas as pd
+
         allowed = getattr(self, "_category_mappings", None) or self.FALLBACK_CATEGORY_VALUES
 
         X = X.copy()
@@ -316,10 +338,26 @@ class ValuePredictor:
                 continue
             valid = allowed.get(col)
             if valid is None:
+                X[col] = X[col].astype("category")
                 continue
-            X[col] = X[col].fillna("None").astype(str).apply(
-                lambda v: v if v in valid else ("None" if v in ("", "nan", "None") else "Other")
-            )
+            valid_set = set(valid)
+            other_label = "Other" if "Other" in valid_set else None
+            none_label = "None" if "None" in valid_set else None
+            null_tokens = ("", "nan", "None", "<NA>")
+
+            def _map(v, _valid=valid_set, _other=other_label, _none=none_label, _nulls=null_tokens):
+                if v is None:
+                    return _none
+                s = str(v)
+                if s in _nulls:
+                    return _none
+                if s in _valid:
+                    return s
+                return _other
+
+            coerced = X[col].map(_map)
+            cat_dtype = pd.CategoricalDtype(categories=sorted(valid_set))
+            X[col] = coerced.astype(cat_dtype)
         return X
     
     def predict(self, features: PlayerFeatures) -> float:
@@ -347,9 +385,6 @@ class ValuePredictor:
             X = X[[c for c in model_features if c in X.columns]]
 
         X = self._coerce_categories_for_prediction(X)
-        for col in self.CATEGORICAL_FEATURES:
-            if col in X.columns:
-                X[col] = X[col].astype("category")
         
         pred_millions = self.model.predict(X)[0]
         
@@ -386,9 +421,6 @@ class ValuePredictor:
             X = X[[c for c in model_features if c in X.columns]]
 
         X = self._coerce_categories_for_prediction(X)
-        for col in self.CATEGORICAL_FEATURES:
-            if col in X.columns:
-                X[col] = X[col].astype("category")
         
         preds_millions = self.model.predict(X)
         
