@@ -9,7 +9,7 @@ import re
 from typing import List, Optional, Dict
 
 from scraping.base_scraper import BaseScraper
-from team import Team
+from entities.team import Team
 
 
 class TransfermarktTeamsScraper(BaseScraper):
@@ -327,7 +327,7 @@ class TransfermarktTeamsScraper(BaseScraper):
                 existing = self.load_json(file_name)
                 if existing is not None:
                     self.log(f"\n=== {league.upper()}: file exists, skipping scraping ===")
-                    from team import Team
+                    from entities.team import Team
                     all_teams[league] = [Team.from_dict(d) for d in existing]
                     for t in existing:
                         skip_team_ids.add(t.get("team_id"))

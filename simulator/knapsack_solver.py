@@ -21,7 +21,7 @@ except Exception:
     STREAMLIT_ACTIVE = False
 
 
-from player import Player
+from entities.player import Player
 
 # Scale factor: market_value in euros -> knapsack weight (millions)
 # e.g. 50M€ player -> price=50, budget 200M -> budget_int=200
@@ -98,7 +98,8 @@ def _players_to_knapsack_format(
         
         # Value to maximize: predicted_value or market_value (scaled to int)
         if use_predicted_value:
-            value = int(round((p.predicted_value or p.market_value or 0.0) / _PRICE_SCALE))
+            pv = p.predicted_value if p.predicted_value is not None else (p.market_value or 0.0)
+            value = max(0, int(round(pv / _PRICE_SCALE)))
         else:
             value = int(round(mv / _PRICE_SCALE))
         
@@ -304,11 +305,18 @@ def players_preproc(
     return all_values, all_weights, all_indexes
 
 
+_SPEED_LIMITS = {
+    "local": {6: 50, 5: 60, 4: 80, "default": 100},
+    "fast":  {6: 90, 5: 100, 4: 150, "default": 200},
+}
+
+
 def best_full_teams(
     players: List[Player],
     formations: Optional[List[List[int]]] = None,
     budget: float = 300_000_000,
     speed_up: bool = False,
+    speed: str = "standard",
     verbose: int = 0,
     progress_callback: Optional[Callable[[float], None]] = None,
     use_predicted_value: bool = False,
@@ -321,7 +329,8 @@ def best_full_teams(
         players: List of Player objects.
         formations: List of [DEF, MID, ATT] or [GK, DEF, MID, ATT].
         budget: Max spend in euros (ignored if unlimited_budget=True).
-        speed_up: Limit candidate list for faster computation.
+        speed_up: Legacy flag – equivalent to speed="fast".
+        speed: "local" (fastest), "fast", or "standard" (best results).
         verbose: 0=quiet, 1=print, 2=verbose.
         progress_callback: Optional fn(percent: float) for UI progress.
         use_predicted_value: If True, maximize predicted_value instead of market_value.
@@ -330,6 +339,9 @@ def best_full_teams(
     Returns:
         List of (formation, score, best_11_players) sorted by score descending.
     """
+    if speed_up and speed == "standard":
+        speed = "fast"
+
     formations = formations or FORMATIONS
     
     # If unlimited budget, set budget_int=1 and prices will be 0
@@ -345,17 +357,16 @@ def best_full_teams(
         unlimited_budget=unlimited_budget,
     )
 
+    limits = _SPEED_LIMITS.get(speed)
+
     def limit_list(plist: List, formation: List[int]) -> List:
-        if not speed_up:
+        if limits is None:
             return plist
-        # Limit candidates to keep combinations tractable (C(n,r) grows fast)
-        if any(x >= 6 for x in formation):
-            return plist[:90]
-        if any(x >= 5 for x in formation):
-            return plist[:100]
-        if any(x >= 4 for x in formation):
-            return plist[:150]
-        return plist
+        max_pos = max(formation) if formation else 0
+        for threshold in sorted((k for k in limits if isinstance(k, int)), reverse=True):
+            if max_pos >= threshold:
+                return plist[:limits[threshold]]
+        return plist[:limits["default"]]
 
     total_ops = 0
     precomputed = []

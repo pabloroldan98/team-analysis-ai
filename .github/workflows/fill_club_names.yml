@@ -31,7 +31,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run fill_club_names
-        run: python fill_club_names.py
+        run: python scripts/fill_club_names.py
 
       - name: Check for changes
         id: changes

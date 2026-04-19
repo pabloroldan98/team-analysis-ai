@@ -37,6 +37,7 @@ This will:
 from __future__ import annotations
 
 import argparse
+import gc
 import json
 import sys
 from datetime import datetime
@@ -55,9 +56,9 @@ from ml.feature_engineering import (
     filter_dataset_for_season,
     get_samples_for_season,
 )
-from ml.value_predictor import ValuePredictor, MODELS_DIR
-from valuation import Valuation
-from player import Player
+from ml.value_predictor import ValuePredictor, MODELS_DIR, SEGMENT_THRESHOLDS, _segment_for_value
+from entities.valuation import Valuation
+from entities.player import Player
 from scraping.utils.helpers import DATA_DIR, list_json_bases, load_json
 
 import numpy as np
@@ -444,6 +445,155 @@ def train_model(
     return model_path
 
 
+_WEIGHTED_METRICS = [
+    "val_rmse", "val_mae", "val_mape", "val_mdape",
+    "eval_rmse_M", "eval_mae_M", "eval_r2",
+    "eval_mape", "eval_mdape",
+    "eval_within_10pct", "eval_within_25pct", "eval_within_50pct",
+]
+
+
+def _compute_weighted_average(segment_metrics: Dict[str, dict]) -> dict:
+    """Weighted average of numeric metrics across trained segments (by eval_samples)."""
+    trained = {k: v for k, v in segment_metrics.items() if v.get("status") == "trained"}
+    if not trained:
+        return {}
+
+    total_eval = sum(v.get("eval_samples", 0) for v in trained.values())
+    total_train = sum(v.get("num_train_samples", 0) for v in trained.values())
+    total_val = sum(v.get("num_val_samples", 0) for v in trained.values())
+    if total_eval == 0:
+        return {}
+
+    avg: dict = {"total_eval_samples": total_eval, "total_train_samples": total_train, "total_val_samples": total_val}
+    for metric in _WEIGHTED_METRICS:
+        weighted_sum = 0.0
+        count = 0
+        for seg in trained.values():
+            n = seg.get("eval_samples", 0)
+            val = seg.get(metric)
+            if val is not None and n > 0:
+                weighted_sum += val * n
+                count += n
+        if count > 0:
+            avg[metric] = weighted_sum / count
+
+    return avg
+
+
+def train_segmented_models(
+    season: str,
+    full_dataset: List[PlayerFeatures],
+    verbose: bool = True,
+    test_years: int = 1,
+    **xgb_params,
+) -> Dict[str, Path]:
+    """
+    Train 4 segment-specific models by value range.
+
+    Segments: <1M, 1M-10M, 10M-100M, >=100M.
+    Each model is trained only on players in its value range, producing
+    better predictions especially at extreme values.
+
+    Returns dict of segment_name -> model_path.
+    """
+    training_data = filter_dataset_for_season(full_dataset, season)
+    if len(training_data) < 100:
+        raise ValueError(f"Insufficient training data ({len(training_data)} samples)")
+
+    MODELS_DIR.mkdir(parents=True, exist_ok=True)
+    saved: Dict[str, Path] = {}
+    all_segment_metrics: Dict[str, dict] = {}
+
+    for seg_name, lo, hi in SEGMENT_THRESHOLDS:
+        seg_data = [f for f in training_data if lo <= f.current_value < hi]
+        if len(seg_data) < 50:
+            if verbose:
+                print(f"  Segment {seg_name}: only {len(seg_data)} samples — skipping (will use global fallback)")
+            all_segment_metrics[seg_name] = {
+                "segment": seg_name,
+                "status": "skipped",
+                "reason": f"insufficient samples ({len(seg_data)})",
+                "samples": len(seg_data),
+            }
+            continue
+
+        seg_seasons = sorted(set(f.cutoff_season for f in seg_data if f.cutoff_season))
+        seg_test_years = min(test_years, max(1, len(seg_seasons) - 1))
+
+        if verbose:
+            print(f"\n{'='*60}")
+            print(f"Training segment: {seg_name}  ({len(seg_data)} samples, "
+                  f"{len(seg_seasons)} seasons, test_years={seg_test_years})")
+            print(f"{'='*60}")
+
+        predictor = ValuePredictor()
+        try:
+            train_metrics = predictor.train(seg_data, test_years=seg_test_years, verbose=verbose, **xgb_params)
+        except Exception as e:
+            if verbose:
+                import traceback
+                print(f"  Segment {seg_name} failed: {type(e).__name__}: {e}")
+                traceback.print_exc()
+            all_segment_metrics[seg_name] = {
+                "segment": seg_name,
+                "status": "failed",
+                "error": f"{type(e).__name__}: {e}",
+                "samples": len(seg_data),
+                "seasons": len(seg_seasons),
+            }
+            del predictor
+            gc.collect()
+            continue
+
+        model_path = MODELS_DIR / f"value_model_{season}_{seg_name}.joblib"
+        predictor.save(model_path)
+        saved[seg_name] = model_path
+
+        eval_data = [f for f in get_samples_for_season(full_dataset, season) if lo <= f.current_value < hi]
+        if verbose:
+            print(f"\n  Evaluating segment {seg_name}...")
+        eval_metrics = _evaluate_predictions(predictor, eval_data, season, verbose)
+
+        seg_metrics = {**train_metrics, **eval_metrics}
+        seg_metrics["segment"] = seg_name
+        seg_metrics["status"] = "trained"
+        seg_metrics["season"] = season
+        seg_metrics["segment_range"] = f"€{lo/1e6:.0f}M – €{hi/1e6:.0f}M" if hi < float("inf") else f"≥€{lo/1e6:.0f}M"
+        seg_metrics["total_segment_samples"] = len(seg_data)
+
+        all_segment_metrics[seg_name] = seg_metrics
+
+        if verbose:
+            print(f"  Saved: {model_path}")
+
+        del predictor
+        gc.collect()
+
+    # Weighted average across trained segments (weighted by eval_samples)
+    weighted_avg = _compute_weighted_average(all_segment_metrics)
+
+    combined_path = MODELS_DIR / f"value_model_{season}_segmented.json"
+    combined = {
+        "season": season,
+        "weighted_average": weighted_avg,
+        "segments": all_segment_metrics,
+    }
+    with open(combined_path, "w") as f:
+        json.dump(combined, f, indent=2, default=str)
+    if verbose:
+        print(f"\nCombined segmented metrics saved to: {combined_path}")
+        if weighted_avg:
+            print(f"  Weighted average (by eval samples):")
+            for k, v in weighted_avg.items():
+                if isinstance(v, float):
+                    print(f"    {k}: {v:.4f}")
+                else:
+                    print(f"    {k}: {v}")
+
+    return saved
+
+
 def main():
     """CLI entry point."""
     parser = argparse.ArgumentParser(
@@ -519,15 +669,103 @@ def main():
         default=1,
         help="Parallel workers for dataset building (e.g., 4 for 4 cores). Default: 1",
     )
+    parser.add_argument(
+        "--segmented",
+        action="store_true",
+        help="Also train 4 segment-specific models by value range (<1M, 1M-10M, 10M-100M, >=100M)",
+    )
+    parser.add_argument(
+        "--all-seasons",
+        action="store_true",
+        help="Train for ALL seasons from 1998-1999 to 2025-2026 in one go (combines with --segmented)",
+    )
     
     args = parser.parse_args()
     
+    # --all-seasons: train every season in one shot
+    if args.all_seasons:
+        ALL_SEASONS = [f"{y}-{y+1}" for y in range(1998, 2026)]
+        verbose = not args.quiet
+        xgb_kw = dict(
+            n_estimators=args.n_estimators,
+            max_depth=args.max_depth,
+            learning_rate=args.learning_rate,
+        )
+
+        try:
+            first_season = ALL_SEASONS[0]
+            if verbose:
+                print(f"\n{'#'*60}")
+                print(f"  ALL-SEASONS TRAINING ({len(ALL_SEASONS)} seasons)")
+                print(f"  Range: {ALL_SEASONS[0]} → {ALL_SEASONS[-1]}")
+                print(f"  Segmented: {args.segmented}")
+                print(f"{'#'*60}")
+
+            # Build dataset once (on the first season or if requested)
+            train_model(
+                season=first_season,
+                min_valuations=args.min_valuations,
+                verbose=verbose,
+                rebuild_dataset=args.rebuild_dataset,
+                cutoff_months=args.cutoff_months,
+                test_years=args.test_years,
+                n_jobs=args.n_jobs,
+                **xgb_kw,
+            )
+
+            full_ds = load_training_dataset(cutoff_months=args.cutoff_months) or []
+
+            if args.segmented and full_ds:
+                train_segmented_models(
+                    season=first_season,
+                    full_dataset=full_ds,
+                    verbose=verbose,
+                    test_years=args.test_years,
+                    **xgb_kw,
+                )
+
+            # Remaining seasons reuse the cached dataset
+            for s in ALL_SEASONS[1:]:
+                if verbose:
+                    print(f"\n{'='*60}")
+                    print(f"  Season: {s}")
+                    print(f"{'='*60}")
+                train_model(
+                    season=s,
+                    min_valuations=args.min_valuations,
+                    verbose=verbose,
+                    rebuild_dataset=False,
+                    cutoff_months=args.cutoff_months,
+                    test_years=args.test_years,
+                    n_jobs=args.n_jobs,
+                    **xgb_kw,
+                )
+                if args.segmented and full_ds:
+                    train_segmented_models(
+                        season=s,
+                        full_dataset=full_ds,
+                        verbose=verbose,
+                        test_years=args.test_years,
+                        **xgb_kw,
+                    )
+
+            if verbose:
+                print(f"\n{'#'*60}")
+                print(f"  ALL-SEASONS TRAINING COMPLETE")
+                print(f"  Trained {len(ALL_SEASONS)} global models" +
+                      (f" + segmented" if args.segmented else ""))
+                print(f"{'#'*60}")
+        except Exception as e:
+            print(f"Error: {e}")
+            import traceback; traceback.print_exc()
+            sys.exit(1)
+        return
+
     # Determine season or cutoff
     season = args.season
     cutoff_date = None
     
     if not season and not args.cutoff:
-        # Default to 2023-2024
         season = "2023-2024"
     elif args.cutoff and not season:
         try:
@@ -538,7 +776,7 @@ def main():
     
     # Train
     try:
-        model_path =         train_model(
+        model_path = train_model(
             season=season,
             cutoff_date=cutoff_date,
             output_name=args.output,
@@ -553,6 +791,27 @@ def main():
             learning_rate=args.learning_rate,
         )
         
+        if args.segmented:
+            if not args.quiet:
+                print(f"\n{'='*60}")
+                print(f"Training segmented models for {season}")
+                print(f"{'='*60}")
+            ds = load_training_dataset(cutoff_months=args.cutoff_months)
+            if ds is None:
+                ds = []
+            seg_paths = train_segmented_models(
+                season=season,
+                full_dataset=ds,
+                verbose=not args.quiet,
+                test_years=args.test_years,
+                n_estimators=args.n_estimators,
+                max_depth=args.max_depth,
+                learning_rate=args.learning_rate,
+            )
+            if not args.quiet:
+                for sn, sp in seg_paths.items():
+                    print(f"  {sn}: {sp}")
+
         if not args.quiet:
             print(f"\n{'='*60}")
             print(f"Training complete!")

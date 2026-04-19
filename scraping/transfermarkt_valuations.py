@@ -16,7 +16,7 @@ from typing import List, Optional, Dict, Set, Tuple
 
 from scraping.base_scraper import BaseScraper
 from scraping.utils.helpers import normalize_date, parse_date
-from valuation import Valuation
+from entities.valuation import Valuation
 
 
 class TransfermarktValuationsScraper(BaseScraper):
@@ -693,7 +693,7 @@ class TransfermarktValuationsScraper(BaseScraper):
                 existing = self.load_json(file_name)
                 if existing is not None:
                     self.log(f"\n=== {league.upper()}: file exists, skipping scraping ===")
-                    from valuation import Valuation
+                    from entities.valuation import Valuation
                     valuations_by_team = {}
                     for d in existing:
                         v = Valuation.from_dict(d)

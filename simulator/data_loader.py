@@ -29,9 +29,13 @@ sys.path.insert(0, str(ROOT_DIR))
 from tqdm import tqdm
 
 from scraping.utils.helpers import list_json_bases, load_json, parse_date, DATA_DIR
-from player import Player
-from transfer import Transfer
-from valuation import Valuation
+from entities.player import Player
+from entities.transfer import Transfer
+from entities.valuation import Valuation
+
+# Precomputed season cache (see scripts/precompute_active_players_cache.py)
+CACHE_DIR = DATA_DIR / "cache"
+CACHE_PREFIX = "season_data"
 
 
 @functools.lru_cache(maxsize=20000)
@@ -349,11 +353,14 @@ def get_active_players_at_season_start(
     cutoff = _get_season_start_date(season)
     age_iter = tqdm(active.values(), desc="Computing ages", disable=not verbose)
     for p in age_iter:
-        if p.birth_date:
-            try:
-                bd = datetime.strptime(p.birth_date, "%Y-%m-%d")
-            except (ValueError, TypeError):
-                bd = None
+        if p.birth_date and p.birth_date != "Unknown":
+            bd = None
+            for fmt in ("%d/%m/%Y", "%Y-%m-%d"):
+                try:
+                    bd = datetime.strptime(p.birth_date, fmt)
+                    break
+                except (ValueError, TypeError):
+                    continue
             if bd:
                 age = cutoff.year - bd.year
                 if (cutoff.month, cutoff.day) < (bd.month, bd.day):
@@ -468,6 +475,32 @@ def load_valuations(season: str, league: str = "all") -> List[Valuation]:
     return [Valuation.from_dict(v) for v in raw if isinstance(v, dict)]
 
 
+def _enrich_fair_prices(
+    players: List[Player],
+    valuations: List[Valuation],
+    season: str,
+) -> None:
+    """Set fair_price via linear extrapolation from the last 2 valuations <= cutoff.
+
+    Groups valuations by player, then delegates to
+    ``feature_engineering.compute_fair_prices``.
+    """
+    from collections import defaultdict
+    from ml.feature_engineering import compute_fair_prices
+
+    cutoff = _get_season_start_date(season)
+
+    by_player: Dict[str, List[Valuation]] = defaultdict(list)
+    for v in valuations:
+        by_player[v.player_id].append(v)
+
+    fp_map = compute_fair_prices(by_player, cutoff)
+    for p in players:
+        fp = fp_map.get(p.player_id)
+        if fp is not None:
+            p.fair_price = fp
+
+
 def enrich_players_with_predictions(
     players: List[Player],
     valuations: List[Valuation],
@@ -476,28 +509,55 @@ def enrich_players_with_predictions(
 ) -> List[Player]:
     """
     Enrich players with ML-predicted future values.
+
+    Tries segmented models first (better accuracy at extreme values),
+    then falls back to the global model.
     """
     try:
-        from ml.value_predictor import ValuePredictor, predict_player_values
+        from ml.value_predictor import (
+            ValuePredictor, SegmentedValuePredictor, predict_player_values,
+        )
     except ImportError:
         return players
 
-    if model_path is None:
-        model_path = ValuePredictor.get_latest_model()
+    predictor = None
+    # Try segmented models: exact season first, then fall back
+    seg_seasons = [season]
+    if season.lower() != "today":
+        start_yr = int(season.split("-")[0])
+        seg_seasons += [f"{start_yr - i}-{start_yr - i + 1}" for i in range(1, 6)]
+    for seg_s in seg_seasons:
+        try:
+            seg = SegmentedValuePredictor(seg_s)
+            if seg.is_trained:
+                predictor = seg
+                break
+        except Exception:
+            continue
 
-    if model_path is None or not model_path.exists():
-        return players
+    if predictor is None:
+        if model_path is None:
+            model_path = ValuePredictor.find_model_with_fallback(season) if season.lower() != "today" else ValuePredictor.get_latest_model()
+        if model_path is None or not model_path.exists():
+            return players
+        try:
+            predictor = ValuePredictor(model_path)
+        except Exception:
+            return players
 
-    try:
-        predictor = ValuePredictor(model_path)
-    except Exception:
-        return players
+    # fair_price uses START of season cutoff (01/07/YYYY)
+    _enrich_fair_prices(players, valuations, season)
 
-    cutoff_date = _get_season_start_date(season)
+    # predicted_value uses END of season cutoff (01/07/(YYYY+1))
+    if season.lower() == "today":
+        pred_cutoff = datetime.now()
+    else:
+        start_year = int(season.split("-")[0])
+        pred_cutoff = datetime(start_year + 1, 7, 1)
 
     predictions = predict_player_values(
         valuations,
-        cutoff_date,
+        pred_cutoff,
         predictor,
         players={p.player_id: p for p in players},
     )
@@ -510,14 +570,102 @@ def enrich_players_with_predictions(
     return players
 
 
+def load_season_cache(season: str, max_age_days: int = 1) -> Optional[dict]:
+    """
+    Load the precomputed season cache.
+
+    For ``"today"`` the file is ``season_data_today.json``; for historical
+    seasons it is ``season_data_{season}.json``.  For "today" the cache is
+    only considered fresh if ``computed_date`` is within *max_age_days* of
+    the current date.
+
+    Returns a dict with keys:
+        players          : List[Player]
+        team_market_values : Dict[str, float]
+        athletic_eligible_ids : Set[str]
+    or None when no cache exists / is stale / fails.
+    """
+    if season.lower() == "today":
+        cache_path = CACHE_DIR / f"{CACHE_PREFIX}_today.json"
+    else:
+        cache_path = CACHE_DIR / f"{CACHE_PREFIX}_{season}.json"
+
+    if not cache_path.exists():
+        return None
+
+    try:
+        with open(cache_path, encoding="utf-8") as f:
+            raw = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return None
+
+    # Freshness check for "today"
+    if season.lower() == "today":
+        computed = raw.get("computed_date")
+        if computed:
+            try:
+                computed_dt = datetime.strptime(computed, "%Y-%m-%d")
+                delta = (datetime.now() - computed_dt).days
+                if delta > max_age_days:
+                    return None
+            except ValueError:
+                return None
+
+    players_raw = raw.get("players", [])
+    if not isinstance(players_raw, list):
+        return None
+
+    players = [Player.from_dict(p) for p in players_raw if isinstance(p, dict)]
+
+    # Recalculate ages from birth_date to fix stale/incorrect values in cache
+    cutoff = _get_season_start_date(season)
+    for p in players:
+        if p.birth_date and p.birth_date != "Unknown":
+            bd = None
+            for fmt in ("%d/%m/%Y", "%Y-%m-%d"):
+                try:
+                    bd = datetime.strptime(p.birth_date, fmt)
+                    break
+                except (ValueError, TypeError):
+                    continue
+            if bd:
+                age = cutoff.year - bd.year
+                if (cutoff.month, cutoff.day) < (bd.month, bd.day):
+                    age -= 1
+                p.age = age
+
+    team_market_values = raw.get("team_market_values", {})
+    athletic_ids = set(raw.get("athletic_eligible_ids", []))
+
+    result = {
+        "players": players,
+        "team_market_values": team_market_values,
+        "athletic_eligible_ids": athletic_ids,
+    }
+    horizon_preds = raw.get("horizon_predictions")
+    if horizon_preds and isinstance(horizon_preds, dict):
+        result["horizon_predictions"] = horizon_preds
+    return result
+
+
 def get_active_players_with_predictions(
     season: str,
     league: str = "all",
     model_path: Optional[Path] = None,
+    use_cache: bool = True,
 ) -> List[Player]:
     """
     Get active players at season start with ML-predicted values.
+
+    If use_cache is True and a precomputed season cache exists, loads
+    players (with predictions already set) from cache.
+    Otherwise computes on the fly.
     """
+    if use_cache:
+        cached = load_season_cache(season)
+        if cached is not None:
+            return cached["players"]
+
     players = get_active_players_at_season_start(season, league)
     if not players:
         return []

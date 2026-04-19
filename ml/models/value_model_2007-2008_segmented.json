@@ -1,0 +1,136 @@
+{
+  "season": "2007-2008",
+  "weighted_average": {
+    "total_eval_samples": 2050,
+    "total_train_samples": 2325,
+    "total_val_samples": 2050,
+    "val_rmse": 1.6124403652986665,
+    "val_mae": 1.0789017611959484,
+    "val_mape": 82.76804344185072,
+    "val_mdape": 52.6846616158566,
+    "eval_rmse_M": 1.6109231214443085,
+    "eval_mae_M": 1.075180242738424,
+    "eval_r2": 0.21171443518442212,
+    "eval_mape": 82.15377004945913,
+    "eval_mdape": 52.68466294451458,
+    "eval_within_10pct": 10.142631809667341,
+    "eval_within_25pct": 24.57849738056551,
+    "eval_within_50pct": 48.59023118715973
+  },
+  "segments": {
+    "under_1M": {
+      "train_rmse": 0.16596211664516444,
+      "val_rmse": 0.9387377682342928,
+      "train_mae": 0.10494004369773248,
+      "val_mae": 0.5782507261008559,
+      "train_mape": 17.25465824691224,
+      "val_mape": 89.99072896302998,
+      "train_mdape": 10.881757736206055,
+      "val_mdape": 58.483409423094535,
+      "num_train_samples": 1633,
+      "num_val_samples": 1427,
+      "num_features": 66,
+      "train_seasons": [
+        "2002-2003",
+        "2003-2004",
+        "2004-2005",
+        "2005-2006",
+        "2006-2007"
+      ],
+      "val_seasons": [
+        "2007-2008"
+      ],
+      "eval_season": "2007-2008",
+      "eval_samples": 1427,
+      "eval_rmse_M": 0.936607627356794,
+      "eval_mae_M": 0.5734443440102227,
+      "eval_r2": 0.14592707473442423,
+      "eval_mape": 89.10920442619005,
+      "eval_mdape": 58.4834098815918,
+      "eval_within_10pct": 7.724425887265135,
+      "eval_within_25pct": 20.354906054279752,
+      "eval_within_50pct": 43.73695198329854,
+      "segment": "under_1M",
+      "status": "trained",
+      "season": "2007-2008",
+      "segment_range": "\u20ac0M \u2013 \u20ac1M",
+      "total_segment_samples": 3060
+    },
+    "1M_10M": {
+      "train_rmse": 0.17764395259321017,
+      "val_rmse": 2.7246645576559803,
+      "train_mae": 0.10416149500642348,
+      "val_mae": 1.8874455328179258,
+      "train_mape": 3.166474964071067,
+      "val_mape": 69.91273893531223,
+      "train_mdape": 1.6079394022623699,
+      "val_mdape": 41.36701583862305,
+      "num_train_samples": 623,
+      "num_val_samples": 560,
+      "num_features": 66,
+      "train_seasons": [
+        "2005-2006",
+        "2006-2007"
+      ],
+      "val_seasons": [
+        "2007-2008"
+      ],
+      "eval_season": "2007-2008",
+      "eval_samples": 560,
+      "eval_rmse_M": 2.7245384106523822,
+      "eval_mae_M": 1.8860698017299107,
+      "eval_r2": 0.3362251150150565,
+      "eval_mape": 69.91037327661913,
+      "eval_mdape": 41.36701965332031,
+      "eval_within_10pct": 14.231499051233396,
+      "eval_within_25pct": 31.499051233396585,
+      "eval_within_50pct": 57.49525616698292,
+      "segment": "1M_10M",
+      "status": "trained",
+      "season": "2007-2008",
+      "segment_range": "\u20ac1M \u2013 \u20ac10M",
+      "total_segment_samples": 1183
+    },
+    "10M_100M": {
+      "train_rmse": 0.3382621441184812,
+      "val_rmse": 6.985901608009232,
+      "train_mae": 0.12519450056218157,
+      "val_mae": 5.231989300440228,
+      "train_mape": 0.449661030253353,
+      "val_mape": 33.43785748849713,
+      "train_mdape": 0.14667510986328125,
+      "val_mdape": 21.93971739874946,
+      "num_train_samples": 69,
+      "num_val_samples": 63,
+      "num_features": 66,
+      "train_seasons": [
+        "2005-2006",
+        "2006-2007"
+      ],
+      "val_seasons": [
+        "2007-2008"
+      ],
+      "eval_season": "2007-2008",
+      "eval_samples": 63,
+      "eval_rmse_M": 6.985901662815133,
+      "eval_mae_M": 5.231989360990978,
+      "eval_r2": 0.5950887630731809,
+      "eval_mape": 33.4378547668457,
+      "eval_mdape": 21.939716339111328,
+      "eval_within_10pct": 28.57142857142857,
+      "eval_within_25pct": 58.730158730158735,
+      "eval_within_50pct": 79.36507936507937,
+      "segment": "10M_100M",
+      "status": "trained",
+      "season": "2007-2008",
+      "segment_range": "\u20ac10M \u2013 \u20ac100M",
+      "total_segment_samples": 132
+    },
+    "over_100M": {
+      "segment": "over_100M",
+      "status": "skipped",
+      "reason": "insufficient samples (0)",
+      "samples": 0
+    }
+  }
+}

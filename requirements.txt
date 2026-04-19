@@ -3,6 +3,10 @@ streamlit>=1.45.0
 pandas>=2.2.0
 numpy>=2.0.0
 
+# API backend
+fastapi>=0.115.0
+uvicorn>=0.34.0
+
 # Web scraping
 requests>=2.32.0
 beautifulsoup4>=4.12.0

@@ -15,7 +15,7 @@ from typing import List, Optional, Dict, Set
 
 from scraping.base_scraper import BaseScraper
 from scraping.utils.helpers import normalize_date
-from injury import Injury
+from entities.injury import Injury
 
 
 class TransfermarktInjuriesScraper(BaseScraper):
@@ -323,7 +323,7 @@ class TransfermarktInjuriesScraper(BaseScraper):
                 existing = self.load_json(file_name)
                 if existing is not None:
                     self.log(f"\n=== {league.upper()}: file exists, skipping scraping ===")
-                    from injury import Injury
+                    from entities.injury import Injury
                     injuries_by_team = {}
                     for d in existing:
                         inj = Injury.from_dict(d)

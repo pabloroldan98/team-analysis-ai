@@ -12,28 +12,14 @@ except ImportError:
 
 if TYPE_CHECKING:
     from simulator.transfer_simulator import TransferResult, SoldPlayer
-    from player import Player
+    from entities.player import Player
 
 
-def generate_summary_from_result(
+def _build_prompt_from_result(
     result: "TransferResult",
-    provider: Optional[str] = None,
-    api_key: Optional[str] = None,
     language: Optional[str] = None,
-) -> Optional[str]:
-    """
-    Generate AI summary from a TransferResult object.
-    
-    Args:
-        result: TransferResult from the simulation
-        provider: LLM provider ("openai", "anthropic", "gemini")
-        api_key: Optional API key override
-        language: Response language ("es" for Spanish, "en" for English, etc.)
-    
-    Returns:
-        AI-generated summary text, or None if no API key is available
-    """
-    # Build detailed info about sold players
+) -> str:
+    """Build the LLM prompt from a TransferResult (without calling any LLM)."""
     sold_info = []
     for sp in result.players_sold:
         p = sp.player
@@ -42,49 +28,41 @@ def generate_summary_from_result(
             sold_info.append(f"  - {p.name} ({p.position}): €{mv:.1f}M -> {sp.destination_team}")
         else:
             sold_info.append(f"  - {p.name} ({p.position}): €{mv:.1f}M (no buyer found)")
-    
-    # Build detailed info about bought players
+
     bought_info = []
     for p in result.recommended_signings:
         mv = (p.market_value or 0) / 1e6
         pv = (p.predicted_value or 0) / 1e6
         bought_info.append(f"  - {p.name} ({p.position}, from {p.team}): €{mv:.1f}M -> €{pv:.1f}M predicted")
-    
-    # Get IDs of sold players to exclude them from remaining squad
+
     sold_player_ids = {sp.player.player_id for sp in result.players_sold}
-    
-    # Build remaining squad info (current squad minus sold players, grouped by position)
-    rest_squad_by_position = {"GK": [], "DEF": [], "MID": [], "ATT": [], "Other": []}
+    rest_squad_by_position: dict = {"GK": [], "DEF": [], "MID": [], "ATT": [], "Other": []}
     rest_squad_players = [p for p in result.current_squad if p.player_id not in sold_player_ids]
-    
+
     for p in rest_squad_players:
         mv = (p.market_value or 0) / 1e6
         pv = (p.predicted_value or 0) / 1e6
         player_str = f"    - {p.name}: €{mv:.1f}M (predicted: €{pv:.1f}M)"
         pos = p.position if p.position in rest_squad_by_position else "Other"
         rest_squad_by_position[pos].append(player_str)
-    
-    rest_squad_info = []
+
+    rest_squad_info: list = []
     for pos in ["GK", "DEF", "MID", "ATT"]:
         if rest_squad_by_position[pos]:
             rest_squad_info.append(f"  {pos} ({len(rest_squad_by_position[pos])}):")
             rest_squad_info.extend(rest_squad_by_position[pos])
-    
-    # Calculate squad totals
+
     sold_total_value = sum((sp.player.market_value or 0) for sp in result.players_sold) / 1e6
     sold_total_predicted = sum((sp.player.predicted_value or 0) for sp in result.players_sold) / 1e6
     bought_total_value = sum((p.market_value or 0) for p in result.recommended_signings) / 1e6
     bought_total_predicted = sum((p.predicted_value or 0) for p in result.recommended_signings) / 1e6
     rest_squad_total_value = sum((p.market_value or 0) for p in rest_squad_players) / 1e6
     rest_squad_total_predicted = sum((p.predicted_value or 0) for p in rest_squad_players) / 1e6
-    # squad_total_predicted = sum((p.predicted_value or 0) for p in result.current_squad) / 1e6
-    
-    # Calculate totals
-    total_cost = sum((p.market_value or 0) for p in result.recommended_signings) / 1e6
-    total_predicted = sum((p.predicted_value or 0) for p in result.recommended_signings) / 1e6
+    total_cost = bought_total_value
+    total_predicted = bought_total_predicted
     net_benefit = total_predicted - total_cost
-    
-    prompt = _build_detailed_prompt(
+
+    return _build_detailed_prompt(
         club_name=result.club_name,
         season=result.season,
         initial_budget=result.initial_budget,
@@ -105,9 +83,18 @@ def generate_summary_from_result(
         remaining_budget=result.total_budget - total_cost,
         language=language,
     )
-    
+
+
+def generate_summary_from_result(
+    result: "TransferResult",
+    provider: Optional[str] = None,
+    api_key: Optional[str] = None,
+    language: Optional[str] = None,
+) -> Optional[str]:
+    """Generate AI summary from a TransferResult object."""
+    prompt = _build_prompt_from_result(result, language=language)
     provider = (provider or os.getenv("LLM_PROVIDER", "openai")).lower()
-    
+
     if provider == "anthropic":
         return _call_anthropic(prompt, api_key=api_key)
     elif provider == "gemini":
@@ -128,7 +115,7 @@ def generate_summary(
     api_key: Optional[str] = None,
 ) -> Optional[str]:
     """
-    Generate AI summary of the simulation using OpenAI, Anthropic, or Gemini.
+    Generate AI summary of the simulation using ChatGPT, Claude, or Gemini.
     
     Args:
         club_name: Name of the club
@@ -195,62 +182,57 @@ def _build_detailed_prompt(
     bought_text = "\n".join(bought_info) if bought_info else "  None"
     rest_squad_text = "\n".join(rest_squad_info) if rest_squad_info else "  No squad data available"
     
-    return f"""You are a football analyst. Analyze this transfer window simulation for {club_name} in the {season} season.
+    return f"""You are an elite football transfer analyst. Produce a structured report for {club_name}'s {season} transfer window simulation.
 
-IMPORTANT: Start your response immediately with the analysis. Be direct and insightful.
+{f'IMPORTANT: Write your ENTIRE response in Spanish.' if language == 'es' else f'IMPORTANT: Write your ENTIRE response in English.' if language == 'en' else 'If the club name is in Spanish, respond in Spanish; otherwise respond in English.'}
 
-=== YOUR TASK ===
-Write a strategic analysis (8-12 sentences) that tells a story about this transfer window. Focus on:
-
-1. THE DEPARTURES: What do these sales mean for the club? 
-   - Are they losing key players or selling fringe players?
-   - Is this a generational change? (e.g., selling a 30-year-old starter to bring in young talent)
-   - Compare the sold players' value to the rest of the squad - were these important players?
-
-2. THE ARRIVALS: What do these signings bring?
-   - Do they fill the gaps left by the departures?
-   - Are they buying potential (low cost, high predicted value) or proven quality?
-   - How do they compare to the existing players in their positions?
-
-3. THE BIGGER PICTURE:
-   - Is this a rebuilding window or a consolidation window?
-   - Financial verdict: Expected Net Benefit is €{net_benefit:+.1f}M - is this good business?
-
-Be specific about player names, positions, and values. Tell a coherent story about what this window means for the club.
-{f'IMPORTANT: Write your entire response in Spanish.' if language == 'es' else f'IMPORTANT: Write your entire response in English.' if language == 'en' else 'If the club name is in Spanish, respond in Spanish; otherwise respond in English.'}
-
-=== DATA FOR ANALYSIS ===
+=== DATA ===
 
 BUDGET:
-- Initial transfer budget: €{initial_budget}M
-- Revenue from player sales: €{sales_revenue}M  
-- Total available budget: €{total_budget}M
+- Initial: €{initial_budget}M | Sales revenue: €{sales_revenue}M | Total: €{total_budget}M
 
-PLAYERS SOLD (and their destinations):
+PLAYERS SOLD:
 {sold_text}
 
-PLAYERS BOUGHT (with current cost and predicted value in 1 year):
+PLAYERS BOUGHT (cost → predicted value in 1 year):
 {bought_text}
 
-FINANCIAL SUMMARY:
-- Total spending on new signings: €{total_cost:.1f}M
-- Remaining budget: €{remaining_budget:.1f}M
-- Total predicted value of signings (1 year): €{total_predicted:.1f}M
-- Expected Net Financial Benefit: €{net_benefit:+.1f}M
-
-REMAINING SQUAD (players who stayed - not sold, not bought):
+REMAINING SQUAD (players who stayed: not sold, not bought):
 {rest_squad_text}
 
-SQUAD VALUES:
-Total value of sold players: €{sold_total_value:.1f}M (predicted in 1 year: €{sold_total_predicted:.1f}M)
-Total value of bought players: €{bought_total_value:.1f}M (predicted in 1 year: €{bought_total_predicted:.1f}M)
-Total value of remaining players: €{rest_squad_total_value:.1f}M (predicted in 1 year: €{rest_squad_total_predicted:.1f}M)
+FINANCIALS:
+- Spending: €{total_cost:.1f}M | Remaining: €{remaining_budget:.1f}M
+- Predicted value of signings (1yr): €{total_predicted:.1f}M | Net Benefit: €{net_benefit:+.1f}M
+- Sold total: €{sold_total_value:.1f}M (pred €{sold_total_predicted:.1f}M)
+- Bought total: €{bought_total_value:.1f}M (pred €{bought_total_predicted:.1f}M)
+- Staying total: €{rest_squad_total_value:.1f}M (pred €{rest_squad_total_predicted:.1f}M)
 
+Note: Previous squad = Remaining squad + Players sold ; Final squad = Remaining squad + Players bought
 
-Note: Previous squad = Remaining players + Players sold ; Final squad = Remaining players + Players bought
+=== YOUR TASK ===
 
+Write a structured report with these sections. Use markdown formatting (##, bold, bullet points).
 
-Now write your analysis, starting with the overall verdict:"""
+## 1. Overall Verdict (2-3 sentences)
+A headline-style verdict on the window. Is it a rebuilding, consolidation, or marquee window?
+
+## 2. Sale-by-Sale Reasoning
+For EACH sold player, write 1-2 sentences explaining:
+- **Why sell now**: Was the player past peak? Declining value? Needed the budget? Squad depth made them expendable?
+- **Financial logic**: Compare market value vs predicted value. If predicted < market → good timing. If no buyer → explain the difficulty.
+
+## 3. Signing-by-Signing Reasoning
+For EACH signed player, write 2-3 sentences explaining:
+- **Why this player**: What does the model see? Growth potential (compare cost vs predicted)? Position need?
+- **xGrowth**: Calculate and show (predicted_value / market_value - 1) as a percentage.
+- **Fair price assessment**: Is the market_value a fair price? Overpay or bargain?
+
+## 4. Financial Summary
+- Total investment vs expected return
+- ROI percentage
+- Risk assessment (concentration risk, age profile)
+
+Be specific with names, numbers, and percentages. No filler."""
 
 
 def _build_simple_prompt(
@@ -281,7 +263,7 @@ Provide a brief strategic assessment (3-5 sentences) covering:
 Respond in the same language as the club name if it's Spanish, otherwise English."""
 
 
-def _call_openai(prompt: str, api_key: Optional[str] = None) -> Optional[str]:
+def _call_openai(prompt: str, api_key: Optional[str] = None, *, raise_on_error: bool = False) -> Optional[str]:
     """Call OpenAI GPT API. Returns None if no API key available."""
     api_key = api_key or os.getenv("OPENAI_API_KEY")
     if not api_key:
@@ -297,11 +279,13 @@ def _call_openai(prompt: str, api_key: Optional[str] = None) -> Optional[str]:
         )
         return response.choices[0].message.content or None
     except Exception as e:
+        if raise_on_error:
+            raise
         print(f"  Warning: OpenAI API error: {e}")
         return None
 
 
-def _call_anthropic(prompt: str, api_key: Optional[str] = None) -> Optional[str]:
+def _call_anthropic(prompt: str, api_key: Optional[str] = None, *, raise_on_error: bool = False) -> Optional[str]:
     """Call Anthropic Claude API. Returns None if no API key available."""
     api_key = api_key or os.getenv("ANTHROPIC_API_KEY")
     if not api_key:
@@ -318,11 +302,13 @@ def _call_anthropic(prompt: str, api_key: Optional[str] = None) -> Optional[str]
         text = response.content[0].text if response.content else ""
         return text or None
     except Exception as e:
+        if raise_on_error:
+            raise
         print(f"  Warning: Anthropic API error: {e}")
         return None
 
 
-def _call_gemini(prompt: str, api_key: Optional[str] = None) -> Optional[str]:
+def _call_gemini(prompt: str, api_key: Optional[str] = None, *, raise_on_error: bool = False) -> Optional[str]:
     """Call Google Gemini API. Returns None if no API key available."""
     api_key = api_key or os.getenv("GEMINI_API_KEY")
     if not api_key:
@@ -340,5 +326,7 @@ def _call_gemini(prompt: str, api_key: Optional[str] = None) -> Optional[str]:
         )
         return response.text or None
     except Exception as e:
+        if raise_on_error:
+            raise
         print(f"  Warning: Gemini API error: {e}")
         return None

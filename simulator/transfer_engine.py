@@ -5,7 +5,7 @@ import random
 from dataclasses import dataclass, field
 from typing import List, Optional
 
-from player import Player
+from entities.player import Player
 
 from simulator.data_loader import (
     get_active_players_at_season_start,
@@ -99,7 +99,6 @@ def run_simulation(
     club_name: str,
     season: str,
     transfer_budget: float,
-    salary_budget: float,
     initial_squad: Optional[List[Player]] = None,
     league_players: Optional[List[Player]] = None,
 ) -> Optional[SimulationResult]:
@@ -109,8 +108,7 @@ def run_simulation(
     Args:
         club_name: Club name
         season: Season string (e.g. "2020-2021")
-        transfer_budget: Transfer budget in euros
-        salary_budget: Salary budget in euros
+        transfer_budget: Transfer budget in millions
         initial_squad: Optional pre-loaded squad. If None, loaded from data.
         league_players: Optional pre-loaded league players. If None, loaded from data.
     
@@ -130,11 +128,7 @@ def run_simulation(
         all_players = list(league_players) if league_players else squad
 
     initial_valuation = _compute_valuation(squad)
-    budget_euros = min(
-        transfer_budget * 1_000_000,
-        salary_budget * 1_000_000 * 10,
-    )
-    budget_euros = max(0, budget_euros)
+    budget_euros = max(0, transfer_budget * 1_000_000)
 
     remaining, sold, sale_proceeds = _sell_phase(squad)
     budget_euros += sale_proceeds

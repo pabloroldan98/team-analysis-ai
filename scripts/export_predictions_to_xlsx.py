@@ -23,7 +23,7 @@ sys.path.insert(0, str(ROOT_DIR))
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
 
-from player import Player
+from entities.player import Player
 from simulator.data_loader import get_active_players_at_season_start
 from simulator.transfer_simulator import TransferSimulator
 
@@ -56,7 +56,7 @@ def main():
     if args.verbose:
         print(f"  Loaded {len(all_players)} players")
 
-    sim = TransferSimulator(club_name="Export", season="today", transfer_budget=0, salary_budget=0)
+    sim = TransferSimulator(club_name="Export", season="today", transfer_budget=0)
     if args.verbose:
         print("Predicting future values for all players...")
     all_players = sim._predict_values(all_players, verbose=args.verbose)

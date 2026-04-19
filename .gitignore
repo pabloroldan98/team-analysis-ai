@@ -211,7 +211,12 @@ __marimo__/
 
 # data/json: only track _all_ combined files (ignore per-league/season intermediates)
 data/json/*
-!data/json/*_all_*
+# !data/json/*_all_*
 !data/json/discovered_leagues.json
 
 ml/datasets/*
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo

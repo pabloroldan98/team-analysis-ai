@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn .35s ease;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-2.5 px-6
+           rounded-lg transition-colors duration-200 disabled:opacity-50
+           disabled:cursor-not-allowed w-full;
+  }
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-5
+           rounded-lg transition-colors duration-200 w-full;
+  }
+  .btn-accent {
+    @apply bg-secondary hover:bg-secondary-dark text-primary-dark font-semibold
+           py-2.5 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50
+           disabled:cursor-not-allowed w-full;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-5;
+  }
+  .metric-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-4 text-center;
+  }
+  .section-title {
+    @apply text-lg font-bold text-primary-dark mb-3;
+  }
+  .input-field {
+    @apply w-full border border-gray-300 rounded-lg px-3 py-2 text-sm
+           focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium;
+  }
+  .chip-active {
+    @apply bg-primary text-white;
+  }
+  .chip-inactive {
+    @apply bg-gray-100 text-gray-600 hover:bg-gray-200 cursor-pointer;
+  }
+}

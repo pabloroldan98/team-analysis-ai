@@ -1,0 +1,77 @@
+{
+  "season": "2005-2006",
+  "weighted_average": {
+    "total_eval_samples": 619,
+    "total_train_samples": 5,
+    "total_val_samples": 619,
+    "val_rmse": 0.8481653913482272,
+    "val_mae": 0.5411362623455837,
+    "val_mape": 65.87516894292442,
+    "val_mdape": 56.63423240184784,
+    "eval_rmse_M": 0.8481653913482272,
+    "eval_mae_M": 0.5411362623455837,
+    "eval_r2": -0.0049267924731337676,
+    "eval_mape": 65.87517547607422,
+    "eval_mdape": 56.63422775268555,
+    "eval_within_10pct": 7.911392405063292,
+    "eval_within_25pct": 19.303797468354432,
+    "eval_within_50pct": 40.822784810126585
+  },
+  "segments": {
+    "under_1M": {
+      "train_rmse": 0.7049812811349172,
+      "val_rmse": 0.8481653913482272,
+      "train_mae": 0.6101946055889129,
+      "val_mae": 0.5411362623455837,
+      "train_mape": 75.21956137248448,
+      "val_mape": 65.87516894292442,
+      "train_mdape": 75.21956137248448,
+      "val_mdape": 56.63423240184784,
+      "num_train_samples": 5,
+      "num_val_samples": 619,
+      "num_features": 66,
+      "train_seasons": [
+        "2002-2003",
+        "2003-2004",
+        "2004-2005"
+      ],
+      "val_seasons": [
+        "2005-2006"
+      ],
+      "eval_season": "2005-2006",
+      "eval_samples": 619,
+      "eval_rmse_M": 0.8481653913482272,
+      "eval_mae_M": 0.5411362623455837,
+      "eval_r2": -0.0049267924731337676,
+      "eval_mape": 65.87517547607422,
+      "eval_mdape": 56.63422775268555,
+      "eval_within_10pct": 7.9113924050632916,
+      "eval_within_25pct": 19.303797468354432,
+      "eval_within_50pct": 40.822784810126585,
+      "segment": "under_1M",
+      "status": "trained",
+      "season": "2005-2006",
+      "segment_range": "\u20ac0M \u2013 \u20ac1M",
+      "total_segment_samples": 624
+    },
+    "1M_10M": {
+      "segment": "1M_10M",
+      "status": "failed",
+      "error": "ValueError: Not enough seasons (1) for temporal split with test_years=1",
+      "samples": 226,
+      "seasons": 1
+    },
+    "10M_100M": {
+      "segment": "10M_100M",
+      "status": "skipped",
+      "reason": "insufficient samples (30)",
+      "samples": 30
+    },
+    "over_100M": {
+      "segment": "over_100M",
+      "status": "skipped",
+      "reason": "insufficient samples (0)",
+      "samples": 0
+    }
+  }
+}

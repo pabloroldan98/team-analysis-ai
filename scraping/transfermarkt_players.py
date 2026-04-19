@@ -10,7 +10,7 @@ from typing import List, Optional, Dict
 
 from scraping.base_scraper import BaseScraper
 from scraping.utils.helpers import normalize_date
-from player import Player
+from entities.player import Player
 
 
 # Backwards-compatible alias: older code imported _normalize_birth_date
@@ -577,7 +577,7 @@ class TransfermarktPlayersScraper(BaseScraper):
                 existing = self.load_json(file_name)
                 if existing is not None:
                     self.log(f"\n=== {league.upper()}: file exists, skipping scraping ===")
-                    from player import Player
+                    from entities.player import Player
                     players_by_team = {}
                     for d in existing:
                         p = Player.from_dict(d)

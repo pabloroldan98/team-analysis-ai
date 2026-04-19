@@ -8,7 +8,7 @@ import re
 from typing import List, Optional, Dict
 
 from scraping.base_scraper import BaseScraper
-from competition import CompetitionStanding
+from entities.competition import CompetitionStanding
 
 
 class TransfermarktCompetitionsScraper(BaseScraper):
@@ -166,7 +166,7 @@ class TransfermarktCompetitionsScraper(BaseScraper):
                 existing = self.load_json(file_name)
                 if existing is not None:
                     self.log(f"\n=== {league_key.upper()}: file exists, skipping scraping ===")
-                    from competition import CompetitionStanding
+                    from entities.competition import CompetitionStanding
                     all_competitions[league_key] = [CompetitionStanding.from_dict(d) for d in existing]
                     continue
             

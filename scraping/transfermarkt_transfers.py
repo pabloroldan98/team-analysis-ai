@@ -18,7 +18,7 @@ from typing import List, Optional, Dict, Set
 
 from scraping.base_scraper import BaseScraper
 from scraping.utils.helpers import normalize_date
-from transfer import Transfer
+from entities.transfer import Transfer
 
 
 class TransfermarktTransfersScraper(BaseScraper):
@@ -790,7 +790,7 @@ class TransfermarktTransfersScraper(BaseScraper):
                 existing = self.load_json(file_name)
                 if existing is not None:
                     self.log(f"\n=== {league.upper()}: file exists, skipping scraping ===")
-                    from transfer import Transfer
+                    from entities.transfer import Transfer
                     transfers_by_team = {}
                     for d in existing:
                         t = Transfer.from_dict(d)

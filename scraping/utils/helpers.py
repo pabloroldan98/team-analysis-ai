@@ -782,7 +782,7 @@ def load_players_by_league_from_files(season: str) -> Optional[Dict[str, Dict[st
             team_to_league_key[tid] = league_id_to_key[lid]
             
     # Build players_by_league
-    from player import Player
+    from entities.player import Player
     players_by_league = {}
     
     for p_dict in players_data:

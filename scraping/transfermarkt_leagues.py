@@ -9,7 +9,7 @@ import re
 from typing import List, Optional, Dict
 
 from scraping.base_scraper import BaseScraper
-from league import League
+from entities.league import League
 
 
 class TransfermarktLeaguesScraper(BaseScraper):
@@ -265,7 +265,7 @@ class TransfermarktLeaguesScraper(BaseScraper):
                 existing = self.load_json(file_name)
                 if existing is not None and len(existing) > 0:
                     self.log(f"\n=== {league_key.upper()}: file exists, skipping scraping ===")
-                    from league import League
+                    from entities.league import League
                     try:
                         lg = League.from_dict(existing[0])
                         all_leagues[league_key] = lg
