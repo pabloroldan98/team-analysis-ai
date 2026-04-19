@@ -14,6 +14,7 @@ import re
 from typing import List, Optional, Dict, Set
 
 from scraping.base_scraper import BaseScraper
+from scraping.utils.helpers import normalize_date
 from injury import Injury
 
 
@@ -130,8 +131,8 @@ class TransfermarktInjuriesScraper(BaseScraper):
             season = self._normalize_season(season_text)
 
             # Convert dates from "DD/MM/YYYY" or "MMM DD, YYYY" to DD/MM/YYYY
-            date_from = self._normalize_date(date_from)
-            date_until = self._normalize_date(date_until)
+            date_from = normalize_date(date_from) or ""
+            date_until = normalize_date(date_until) or ""
 
             injury_id = self.generate_id(player_id, injury_text, date_from)
 
@@ -169,24 +170,6 @@ class TransfermarktInjuriesScraper(BaseScraper):
             century = "20" if int(end) < 80 else "19"
             end = century + end
         return f"{start}-{end}"
-
-    @staticmethod
-    def _normalize_date(date_text: str) -> str:
-        """Convert various date formats to DD/MM/YYYY."""
-        if not date_text:
-            return ""
-        # Already DD/MM/YYYY
-        if re.match(r"\d{2}/\d{2}/\d{4}", date_text):
-            return date_text
-        # Try "MMM DD, YYYY" (e.g. "Dec 15, 2025")
-        from datetime import datetime
-        for fmt in ("%b %d, %Y", "%d.%m.%Y", "%d/%m/%Y"):
-            try:
-                dt = datetime.strptime(date_text.strip(), fmt)
-                return dt.strftime("%d/%m/%Y")
-            except ValueError:
-                continue
-        return date_text
 
     # ── Team / League level ────────────────────────────────────
 
