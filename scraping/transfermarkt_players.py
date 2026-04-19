@@ -9,7 +9,15 @@ import re
 from typing import List, Optional, Dict
 
 from scraping.base_scraper import BaseScraper
+from scraping.utils.helpers import normalize_date
 from player import Player
+
+
+# Backwards-compatible alias: older code imported _normalize_birth_date
+# from this module. The canonical implementation now lives in
+# scraping.utils.helpers.normalize_date so every scraper shares the same
+# date-parsing logic.
+_normalize_birth_date = normalize_date
 
 
 class TransfermarktPlayersScraper(BaseScraper):
@@ -170,16 +178,23 @@ class TransfermarktPlayersScraper(BaseScraper):
                     age = int(text)
                     break
             
-            # Birth date (often in format "MMM DD, YYYY (age)")
+            # Birth date (often in format "MMM DD, YYYY (age)" or "DD/MM/YYYY (age)")
             birth_date = None
             birth_td = row.select("td.zentriert")
             for td in birth_td:
                 text = td.text.strip()
                 if "(" in text and ")" in text:
-                    # Extract date part
-                    date_match = re.search(r"([A-Za-z]+ \d+, \d{4})", text)
+                    # Try English-locale "Mon DD, YYYY" first, then DD/MM/YYYY,
+                    # then a bare 4-digit year.
+                    date_match = (
+                        re.search(r"([A-Za-z]+ \d+, \d{4})", text)
+                        or re.search(r"(\d{2}/\d{2}/\d{4})", text)
+                        or re.search(r"\b([12]\d{3})\b", text)
+                    )
                     if date_match:
-                        birth_date = date_match.group(1)
+                        birth_date = _normalize_birth_date(date_match.group(1))
+                        if birth_date:
+                            break
             
             # Nationality (from flag images)
             nationality = ""
@@ -203,34 +218,16 @@ class TransfermarktPlayersScraper(BaseScraper):
             if len(cells) >= 9:
                 try:
                     # Joined date is typically index 6
-                    joined_cell = cells[6]
-                    joined_text = joined_cell.get_text(strip=True)
-                    
-                    if joined_text in ["-", "", "?"] or "?" in joined_text:
-                        signed_date = None
-                    elif "cedido" not in joined_text.lower() and "on loan" not in joined_text.lower():
-                        if len(joined_text.split("/")) == 3:
-                            signed_date = joined_text
-                        elif re.search(r'\d', joined_text):
-                            signed_date = joined_text
-                    
+                    joined_text = cells[6].get_text(strip=True)
+                    if ("cedido" not in joined_text.lower()
+                            and "on loan" not in joined_text.lower()):
+                        signed_date = normalize_date(joined_text)
+
                     # Contract date is typically index 8
-                    contract_cell = cells[8]
-                    contract_text = contract_cell.get_text(strip=True)
-                    
-                    if contract_text in ["-", "", "?"] or "?" in contract_text:
-                        contract_end_date = None
-                    elif "cedido" not in contract_text.lower() and "on loan" not in contract_text.lower():
-                        if len(contract_text.split("/")) == 3:
-                            contract_end_date = contract_text
-                        elif re.search(r'\d', contract_text):
-                            contract_end_date = contract_text
-                            
-                    # Final strict check
-                    if signed_date and not re.search(r'\d', signed_date):
-                        signed_date = None
-                    if contract_end_date and not re.search(r'\d', contract_end_date):
-                        contract_end_date = None
+                    contract_text = cells[8].get_text(strip=True)
+                    if ("cedido" not in contract_text.lower()
+                            and "on loan" not in contract_text.lower()):
+                        contract_end_date = normalize_date(contract_text)
                 except IndexError:
                     pass
             
@@ -323,7 +320,7 @@ class TransfermarktPlayersScraper(BaseScraper):
                     # Extract just the date part (before the age in parentheses)
                     date_match = re.match(r"([^(]+)", content_text)
                     if date_match:
-                        player.birth_date = date_match.group(1).strip()
+                        player.birth_date = normalize_date(date_match.group(1).strip())
                     # NOTE: We do NOT update age here - age comes from team page for that season
                 
                 # Height: "1,88 m" or "1.88 m" (static)
@@ -342,22 +339,14 @@ class TransfermarktPlayersScraper(BaseScraper):
                 # Signed date
                 elif "joined" in label_text:
                     date_text = content_text.strip()
-                    if date_text and date_text.lower() not in ["-", "?", "", "none", "right", "left", "both"]:
-                        if "?" not in date_text and "cedido" not in date_text.lower():
-                            if len(date_text.split("/")) == 3:
-                                player.signed_date = date_text
-                            elif re.search(r'\d', date_text):
-                                player.signed_date = date_text
-                    
+                    if "cedido" not in date_text.lower():
+                        player.signed_date = normalize_date(date_text)
+
                 # Contract end date
                 elif "contract expires" in label_text and "there expires" not in label_text:
                     date_text = content_text.strip()
-                    if date_text and date_text.lower() not in ["-", "?", "", "none", "right", "left", "both"]:
-                        if "?" not in date_text and "cedido" not in date_text.lower():
-                            if len(date_text.split("/")) == 3:
-                                player.contract_end_date = date_text
-                            elif re.search(r'\d', date_text):
-                                player.contract_end_date = date_text
+                    if "cedido" not in date_text.lower():
+                        player.contract_end_date = normalize_date(date_text)
                                 
                 # Check for loan status
                 elif "on loan from" in label_text or "prestado de" in label_text:
