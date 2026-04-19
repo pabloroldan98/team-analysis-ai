@@ -666,7 +666,7 @@ def _get_horizon_pv(sim, season: str, horizon: int) -> Tuple[Dict[str, float], D
 
     all_valuations = sim._load_all_valuations(verbose=False)
     team_league_mapping = load_team_league_mapping(verbose=False)
-    transfer_map, by_player, team_total_values = build_prediction_context(
+    transfer_map, by_player, team_total_values, injury_intervals_by_player = build_prediction_context(
         all_valuations, cutoff_date, verbose=False
     )
 
@@ -679,6 +679,7 @@ def _get_horizon_pv(sim, season: str, horizon: int) -> Tuple[Dict[str, float], D
         transfer_map=transfer_map,
         by_player=by_player,
         team_total_values=team_total_values,
+        injury_intervals_by_player=injury_intervals_by_player,
         verbose=False,
     )
     if not base_features:

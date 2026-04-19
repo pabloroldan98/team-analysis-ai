@@ -28,6 +28,7 @@ sys.path.insert(0, str(ROOT_DIR))
 from entities.valuation import Valuation
 from entities.player import Player
 from entities.transfer import Transfer
+from entities.injury import Injury
 from scraping.utils.helpers import DATA_DIR, list_json_bases, load_json, parse_date
 from scraping.base_scraper import BaseScraper
 
@@ -166,6 +167,8 @@ class PlayerFeatures:
     log_current_value: float = 0.0  # log₁₀(1 + current_value) – scale-invariant
     on_loan: bool = False  # player is on loan at cutoff date
     fair_price: float = 0.0  # linear extrapolation from last 2 valuations at cutoff
+    injured_ratio: float = 0.0  # injured_days / total_days from first valuation to cutoff
+    injured_ratio_last_year: float = 0.0  # injured_days_last_year / 365
 
     # Training metadata
     cutoff_season: str = ""  # Season of the cutoff (e.g., "2022-2023") for filtering
@@ -262,6 +265,8 @@ class PlayerFeatures:
             "log_current_value": jf(self.log_current_value),
             "on_loan": self.on_loan,
             "fair_price": jf(self.fair_price),
+            "injured_ratio": jf(self.injured_ratio),
+            "injured_ratio_last_year": jf(self.injured_ratio_last_year),
             "cutoff_season": self.cutoff_season,
             "target_value": self.target_value,
         }
@@ -351,6 +356,8 @@ class PlayerFeatures:
             "log_current_value": float(self.log_current_value),
             "on_loan": 1.0 if self.on_loan else 0.0,
             "fair_price_M": self.fair_price / 1_000_000,
+            "injured_ratio": float(self.injured_ratio),
+            "injured_ratio_last_year": float(self.injured_ratio_last_year),
         }
 
 
@@ -626,6 +633,136 @@ def _load_all_transfers(verbose: bool = False) -> List[Transfer]:
     return transfers
 
 
+def _load_all_injury_intervals_by_player(
+    verbose: bool = False,
+) -> Dict[str, List[Tuple[datetime, datetime]]]:
+    """Load every ``injuries_all_*.json`` and return merged injury intervals per player.
+
+    The same injury can appear in several season files (e.g. an injury that spans
+    seasons, or a re-scrape that kept the previous record). We:
+
+    1. Deduplicate by ``injury_id`` (falling back to ``player_id|date_from|injury``
+       when the id is missing).
+    2. Parse ``date_from`` / ``date_until``; drop rows where either date is missing
+       or the range is inverted.
+    3. Sort and **merge overlapping intervals per player** so that overlapping
+       or contiguous injuries are not double-counted when computing ratios.
+
+    Returns: ``{player_id: [(start, end), ...]}`` (sorted, non-overlapping).
+    """
+    bases = list_json_bases("injuries_all_*.json")
+    raw_by_player: Dict[str, List[Tuple[datetime, datetime]]] = defaultdict(list)
+    seen_keys: Set[str] = set()
+
+    base_iter = tqdm(bases, desc="Loading injuries", disable=not verbose)
+    for base in base_iter:
+        if verbose:
+            base_iter.set_postfix_str(base)
+        data = load_json(base)
+        if not isinstance(data, list):
+            continue
+        for item in data:
+            if not isinstance(item, dict):
+                continue
+            pid = item.get("player_id", "")
+            if not pid:
+                continue
+            pid = str(pid)
+
+            inj_id = item.get("injury_id") or ""
+            if inj_id:
+                key = f"id:{inj_id}"
+            else:
+                key = f"nk:{pid}|{item.get('date_from','')}|{item.get('injury','')}"
+            if key in seen_keys:
+                continue
+            seen_keys.add(key)
+
+            d_from = _parse_date_cached(item.get("date_from") or "")
+            d_until = _parse_date_cached(item.get("date_until") or "")
+            if d_from is None or d_until is None or d_until < d_from:
+                continue
+            raw_by_player[pid].append((d_from, d_until))
+
+    # Merge overlapping/contiguous intervals per player
+    merged: Dict[str, List[Tuple[datetime, datetime]]] = {}
+    for pid, intervals in raw_by_player.items():
+        intervals.sort(key=lambda x: x[0])
+        out: List[Tuple[datetime, datetime]] = []
+        cur_start, cur_end = intervals[0]
+        for s, e in intervals[1:]:
+            if s <= cur_end + timedelta(days=1):  # overlap or back-to-back
+                if e > cur_end:
+                    cur_end = e
+            else:
+                out.append((cur_start, cur_end))
+                cur_start, cur_end = s, e
+        out.append((cur_start, cur_end))
+        merged[pid] = out
+
+    if verbose:
+        total = sum(len(v) for v in merged.values())
+        tqdm.write(f"  Loaded injuries for {len(merged)} players ({total} merged intervals)")
+    return merged
+
+
+def _overlap_days(
+    intervals: List[Tuple[datetime, datetime]],
+    window_start: datetime,
+    window_end: datetime,
+) -> float:
+    """Sum of days of `intervals` that fall inside [window_start, window_end].
+
+    `intervals` must already be sorted and non-overlapping (as produced by
+    ``_load_all_injury_intervals_by_player``).
+    Endpoints count as inclusive-start / inclusive-end using day granularity
+    (``+1`` so a 1-day injury contributes 1 day).
+    """
+    if not intervals or window_end <= window_start:
+        return 0.0
+    total = 0.0
+    for s, e in intervals:
+        if e < window_start:
+            continue
+        if s > window_end:
+            break
+        clipped_start = s if s > window_start else window_start
+        clipped_end = e if e < window_end else window_end
+        days = (clipped_end - clipped_start).days + 1
+        if days > 0:
+            total += days
+    return total
+
+
+def _compute_injury_ratios(
+    intervals: Optional[List[Tuple[datetime, datetime]]],
+    first_valuation_date: datetime,
+    cutoff_date: datetime,
+) -> Tuple[float, float]:
+    """Return (injured_ratio, injured_ratio_last_year).
+
+    - ``injured_ratio`` = overlap([first_valuation_date, cutoff_date]) / total_days
+    - ``injured_ratio_last_year`` = overlap([cutoff_date - 365d, cutoff_date]) / 365
+
+    Players with no injury data -> (0.0, 0.0).
+    """
+    if not intervals:
+        return 0.0, 0.0
+
+    total_days = (cutoff_date - first_valuation_date).days
+    if total_days > 0:
+        injured = _overlap_days(intervals, first_valuation_date, cutoff_date)
+        ratio = min(1.0, injured / total_days)
+    else:
+        ratio = 0.0
+
+    last_year_start = cutoff_date - timedelta(days=365)
+    injured_ly = _overlap_days(intervals, last_year_start, cutoff_date)
+    ratio_ly = min(1.0, injured_ly / 365.0)
+
+    return float(ratio), float(ratio_ly)
+
+
 def _process_transfer_file_for_cutoff(
     base: str, cutoff_date: datetime
 ) -> Dict[str, Tuple[datetime, Transfer]]:
@@ -894,6 +1031,7 @@ def extract_player_features(
     cutoff_season: str = "",
     player_transfer: Optional[Transfer] = None,
     team_total_values: Optional[Dict[str, float]] = None,
+    player_injury_intervals: Optional[List[Tuple[datetime, datetime]]] = None,
 ) -> Optional[PlayerFeatures]:
     """
     Extract features for a player from their valuation history.
@@ -911,6 +1049,8 @@ def extract_player_features(
             If None, falls back to the most recent valuation's club.
         team_total_values: Optional dict team_id -> sum of squad market values at cutoff.
             If provided, current_club_value is looked up. If None, current_club_value=0.
+        player_injury_intervals: Optional sorted, non-overlapping list of
+            (start, end) injury intervals for this player. Missing -> ratios = 0.
     
     Returns:
         PlayerFeatures or None if insufficient data
@@ -1069,6 +1209,10 @@ def extract_player_features(
     if player_transfer is not None and player_transfer.is_loan and player_transfer.transfer_type == "loan_out":
         is_on_loan = True
 
+    injured_ratio, injured_ratio_last_year = _compute_injury_ratios(
+        player_injury_intervals, first_date, cutoff_date,
+    )
+
     # Target value (1 year after cutoff, or latest if not available)
     target_value = None
     if include_target and future_vals:
@@ -1127,6 +1271,8 @@ def extract_player_features(
         age_value_ratio=age_value_ratio,
         log_current_value=log_current_value,
         on_loan=is_on_loan,
+        injured_ratio=injured_ratio,
+        injured_ratio_last_year=injured_ratio_last_year,
         cutoff_season=cutoff_season,
         target_value=target_value,
     )
@@ -1212,11 +1358,13 @@ def _process_cutoff_batch(
     players: Optional[Dict[str, Player]],
     team_league_mapping: Optional[Dict[str, Dict[str, Dict[str, str]]]],
     min_valuations: int,
+    injury_intervals_by_player: Optional[Dict[str, List[Tuple[datetime, datetime]]]] = None,
 ) -> Tuple[datetime, str, List[PlayerFeatures]]:
     """Process one cutoff: extract features for all players, compute percentiles."""
     cutoff_season = _get_season_for_cutoff(cutoff_date)
     team_total_values = _get_team_total_values_at_cutoff(by_player, transfer_map, cutoff_date)
     fair_prices = compute_fair_prices(by_player, cutoff_date)
+    injury_intervals_by_player = injury_intervals_by_player or {}
     batch: List[PlayerFeatures] = []
     for player_id, player_vals in by_player.items():
         if len(player_vals) < min_valuations:
@@ -1232,6 +1380,7 @@ def _process_cutoff_batch(
             cutoff_season=cutoff_season,
             player_transfer=player_transfer,
             team_total_values=team_total_values,
+            player_injury_intervals=injury_intervals_by_player.get(player_id),
         )
         if features and features.target_value is not None:
             features.fair_price = fair_prices.get(player_id, 0.0)
@@ -1249,6 +1398,7 @@ def build_training_dataset(
     cutoff_dates: Optional[List[datetime]] = None,
     cutoff_months: int = 12,
     all_transfers: Optional[List[Transfer]] = None,
+    injury_intervals_by_player: Optional[Dict[str, List[Tuple[datetime, datetime]]]] = None,
     n_jobs: int = 1,
 ) -> List[PlayerFeatures]:
     """
@@ -1289,7 +1439,13 @@ def build_training_dataset(
         print("Loading all transfers for club assignment...")
         all_transfers = _load_all_transfers()
         print(f"  Loaded {len(all_transfers)} transfers")
-    
+
+    # Load injuries once for the whole training run
+    if injury_intervals_by_player is None:
+        print("Loading all injuries for injured_ratio features...")
+        injury_intervals_by_player = _load_all_injury_intervals_by_player()
+        print(f"  Loaded injuries for {len(injury_intervals_by_player)} players")
+
     # Group valuations by player
     by_player: Dict[str, List[Valuation]] = {}
     for v in all_valuations:
@@ -1309,6 +1465,7 @@ def build_training_dataset(
             res = _process_cutoff_batch(
                 cutoff_date, by_player, transfer_map,
                 players, team_league_mapping, min_valuations,
+                injury_intervals_by_player=injury_intervals_by_player,
             )
             cutoff_results.append(res)
             print(f"  Cutoff {res[0].strftime('%Y-%m-%d')} ({res[1]}): {len(res[2])} players")
@@ -1319,6 +1476,7 @@ def build_training_dataset(
                     _process_cutoff_batch,
                     cutoff_date, by_player, transfer_maps[cutoff_date],
                     players, team_league_mapping, min_valuations,
+                    injury_intervals_by_player,
                 ): cutoff_date
                 for cutoff_date in cutoff_dates
             }
@@ -1574,6 +1732,8 @@ def load_training_dataset(cutoff_months: int = 12) -> Optional[List[PlayerFeatur
             log_current_value=_load_float(item.get("log_current_value")),
             on_loan=bool(item.get("on_loan", False)),
             fair_price=_load_float(item.get("fair_price"), default=0.0),
+            injured_ratio=_load_float(item.get("injured_ratio"), default=0.0),
+            injured_ratio_last_year=_load_float(item.get("injured_ratio_last_year"), default=0.0),
             cutoff_season=item.get("cutoff_season", ""),
             target_value=item.get("target_value"),
         )
@@ -1631,9 +1791,15 @@ def build_prediction_context(
     cutoff_date: datetime,
     all_transfers: Optional[List[Transfer]] = None,
     verbose: bool = False,
-) -> Tuple[Dict[str, Transfer], Dict[str, List[Valuation]], Dict[str, float]]:
+    injury_intervals_by_player: Optional[Dict[str, List[Tuple[datetime, datetime]]]] = None,
+) -> Tuple[
+    Dict[str, Transfer],
+    Dict[str, List[Valuation]],
+    Dict[str, float],
+    Dict[str, List[Tuple[datetime, datetime]]],
+]:
     """
-    Build transfer_map, by_player, team_total_values for prediction.
+    Build transfer_map, by_player, team_total_values, injury_intervals_by_player.
     Reusable across multiple build_prediction_dataset calls (same cutoff).
     """
     if all_transfers is None:
@@ -1649,7 +1815,11 @@ def build_prediction_context(
     team_total_values = _get_team_total_values_at_cutoff(
         by_player, transfer_map, cutoff_date, verbose=verbose
     )
-    return transfer_map, by_player, team_total_values
+
+    if injury_intervals_by_player is None:
+        injury_intervals_by_player = _load_all_injury_intervals_by_player(verbose=verbose)
+
+    return transfer_map, by_player, team_total_values, injury_intervals_by_player
 
 
 def build_prediction_dataset(
@@ -1662,6 +1832,7 @@ def build_prediction_dataset(
     transfer_map: Optional[Dict[str, Transfer]] = None,
     by_player: Optional[Dict[str, List[Valuation]]] = None,
     team_total_values: Optional[Dict[str, float]] = None,
+    injury_intervals_by_player: Optional[Dict[str, List[Tuple[datetime, datetime]]]] = None,
     verbose: bool = False,
 ) -> List[PlayerFeatures]:
     """
@@ -1670,8 +1841,9 @@ def build_prediction_dataset(
     Current club is determined from transfer data (last transfer <= cutoff).
     Age is computed from birth_date + cutoff_date.
 
-    Optional transfer_map, by_player, team_total_values allow reusing precomputed
-    context (avoids rebuilding when predicting for multiple player sets).
+    Optional transfer_map, by_player, team_total_values, injury_intervals_by_player
+    allow reusing precomputed context (avoids rebuilding when predicting for
+    multiple player sets).
     """
     if transfer_map is None:
         if all_transfers is None:
@@ -1689,6 +1861,9 @@ def build_prediction_dataset(
         team_total_values = _get_team_total_values_at_cutoff(
             by_player, transfer_map, cutoff_date, verbose=verbose
         )
+
+    if injury_intervals_by_player is None:
+        injury_intervals_by_player = _load_all_injury_intervals_by_player(verbose=verbose)
 
     fair_prices = compute_fair_prices(by_player, cutoff_date)
 
@@ -1714,6 +1889,7 @@ def build_prediction_dataset(
             include_target=False,
             player_transfer=player_transfer,
             team_total_values=team_total_values,
+            player_injury_intervals=injury_intervals_by_player.get(player_id),
         )
         
         if features:

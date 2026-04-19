@@ -182,7 +182,7 @@ def precompute_and_save(
         print("\n[4/5] Loading valuations + building prediction features...")
     all_valuations = _load_all_valuations(verbose=verbose)
     team_league_mapping = load_team_league_mapping(verbose=verbose)
-    transfer_map, by_player, team_total_values = build_prediction_context(
+    transfer_map, by_player, team_total_values, injury_intervals_by_player = build_prediction_context(
         all_valuations, cutoff_date, all_transfers=all_transfers, verbose=verbose
     )
 
@@ -195,6 +195,7 @@ def precompute_and_save(
         transfer_map=transfer_map,
         by_player=by_player,
         team_total_values=team_total_values,
+        injury_intervals_by_player=injury_intervals_by_player,
         verbose=verbose,
     )
 
