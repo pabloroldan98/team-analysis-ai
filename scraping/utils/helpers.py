@@ -620,6 +620,53 @@ def parse_date(date_str: str):
     return None
 
 
+# Canonical date format used across the codebase for stored/scraped dates:
+# ``DD/MM/YYYY``.  Anything that cannot be coerced to a real date (or to a
+# plausible 4-digit year starting with 1 or 2, which we expand to
+# ``01/01/YYYY``) is dropped to ``None`` so downstream consumers won't
+# produce garbage (wrong ages, invalid transfer dates, etc.).
+_RAW_DATE_FORMATS = (
+    "%b %d, %Y",   # "Feb 15, 2003"
+    "%B %d, %Y",   # "February 15, 2003"
+    "%d/%m/%Y",    # "15/02/2003"
+    "%Y-%m-%d",    # "2003-02-15"
+    "%d.%m.%Y",    # "15.02.2003"
+    "%d-%m-%Y",    # "15-02-2003"
+)
+
+
+def normalize_date(raw) -> Optional[str]:
+    """Return a canonical ``DD/MM/YYYY`` date string, or ``None``.
+
+    Accepts the usual Transfermarkt formats (``"Feb 15, 2003"``,
+    ``"15/02/2003"``, ``"2003-02-15"``, ``"15.02.2003"``, ...).  If the
+    input is just a 4-digit year that starts with ``1`` or ``2`` (e.g.
+    ``"2000"``) it's treated as January 1st of that year
+    (``"01/01/2000"``).  Anything else - including sentinel strings like
+    ``"-"``, ``"?"``, ``"N/A"``, ``"Unknown"`` or anything not matching a
+    known format - is considered invalid and returns ``None``.
+    """
+    from datetime import datetime as _dt
+
+    if raw is None:
+        return None
+    s = str(raw).strip()
+    if not s:
+        return None
+
+    for fmt in _RAW_DATE_FORMATS:
+        try:
+            return _dt.strptime(s, fmt).strftime("%d/%m/%Y")
+        except ValueError:
+            continue
+
+    # Bare 4-digit year like "2000" -> 01/01/2000 (only 1xxx/2xxx).
+    if re.fullmatch(r"\d{4}", s) and s[0] in ("1", "2"):
+        return f"01/01/{s}"
+
+    return None
+
+
 def parse_market_value(value_str: str) -> Optional[float]:
     """
     Parse market value string to float (in euros).
