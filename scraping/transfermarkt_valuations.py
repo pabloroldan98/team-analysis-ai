@@ -15,7 +15,7 @@ from datetime import datetime
 from typing import List, Optional, Dict, Set, Tuple
 
 from scraping.base_scraper import BaseScraper
-from scraping.utils.helpers import parse_date
+from scraping.utils.helpers import normalize_date, parse_date
 from valuation import Valuation
 
 
@@ -284,14 +284,7 @@ class TransfermarktValuationsScraper(BaseScraper):
                 return None
             
             # Date - from marketValue.determined (format: "2022-03-21")
-            date_str = market_value_data.get("determined", "")
-            valuation_date = ""
-            if date_str:
-                date_match = re.match(r'(\d{4})-(\d{2})-(\d{2})', date_str)
-                if date_match:
-                    valuation_date = f"{date_match.group(3)}/{date_match.group(2)}/{date_match.group(1)}"
-                else:
-                    valuation_date = date_str
+            valuation_date = normalize_date(market_value_data.get("determined", "")) or ""
             
             # Club ID (club name will be filled later)
             club_id_at_valuation = str(item.get("clubId", ""))
