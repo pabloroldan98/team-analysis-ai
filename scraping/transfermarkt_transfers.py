@@ -17,6 +17,7 @@ import re
 from typing import List, Optional, Dict, Set
 
 from scraping.base_scraper import BaseScraper
+from scraping.utils.helpers import normalize_date
 from transfer import Transfer
 
 
@@ -262,12 +263,7 @@ class TransfermarktTransfersScraper(BaseScraper):
             details = item.get("details", {})
 
             # Date
-            date_str = details.get("date", "")
-            transfer_date = ""
-            if date_str:
-                date_match = re.match(r'(\d{4})-(\d{2})-(\d{2})', date_str)
-                if date_match:
-                    transfer_date = f"{date_match.group(3)}/{date_match.group(2)}/{date_match.group(1)}"
+            transfer_date = normalize_date(details.get("date", "")) or ""
 
             # Season
             season_id = details.get("seasonId")
@@ -681,7 +677,7 @@ class TransfermarktTransfersScraper(BaseScraper):
             price = price_info["price"]
             price_str = price_info["price_str"]
             is_loan = price_info["is_loan"]
-            transfer_date = price_info.get("date", "")
+            transfer_date = normalize_date(price_info.get("date", "")) or ""
 
             if is_loan:
                 transfer_type = f"loan_{transfer_type}"
