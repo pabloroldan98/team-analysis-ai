@@ -398,13 +398,20 @@ class TransferSimulator:
             by_player = _cache["by_player"]
             team_total_values = _cache["team_total_values"]
             injury_intervals_by_player = _cache.get("injury_intervals_by_player", {})
+            team_parent_mapping = _cache.get("team_parent_mapping", {})
             use_cache = True
         else:
             all_valuations = self._load_all_valuations(verbose=verbose)
             team_league_mapping = load_team_league_mapping(verbose=verbose)
             if verbose:
                 print("  Building prediction dataset...", flush=True)
-            transfer_map, by_player, team_total_values, injury_intervals_by_player = build_prediction_context(
+            (
+                transfer_map,
+                by_player,
+                team_total_values,
+                injury_intervals_by_player,
+                team_parent_mapping,
+            ) = build_prediction_context(
                 all_valuations, cutoff_date, verbose=verbose
             )
             if _cache is not None:
@@ -415,6 +422,7 @@ class TransferSimulator:
                 _cache["by_player"] = by_player
                 _cache["team_total_values"] = team_total_values
                 _cache["injury_intervals_by_player"] = injury_intervals_by_player
+                _cache["team_parent_mapping"] = team_parent_mapping
             use_cache = False
 
         # Create player dict for feature extraction
@@ -430,6 +438,7 @@ class TransferSimulator:
             by_player=by_player,
             team_total_values=team_total_values,
             injury_intervals_by_player=injury_intervals_by_player,
+            team_parent_mapping=team_parent_mapping,
             verbose=verbose and not use_cache,
         )
         
