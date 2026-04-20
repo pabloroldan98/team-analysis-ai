@@ -42,7 +42,7 @@ TM_API_URL = "https://tmapi-alpha.transfermarkt.technology"
 
 MAX_RETRIES = 50
 RETRY_PAUSE = 10  # seconds
-REQUEST_DELAY = 0.3  # polite delay between requests
+REQUEST_DELAY = 0  # polite delay between requests
 
 # Name-key → ID-key mappings per file prefix.
 # Each tuple is (name_key, id_key).
@@ -365,54 +365,80 @@ def _api_get(url: str, timeout: int = 60) -> Optional[dict]:
 
 
 def fetch_club_names(club_ids: Set[str]) -> Dict[str, str]:
-    """Fetch club names from the API, splitting adaptively on errors."""
+    """Fetch club names from the API using the shared on-disk cache.
+
+    Delegates to ``TmClubApiCache`` (at ``data/cache/tm_club_api_cache.json``)
+    so a single ``GET /clubs?ids[]=...`` call populates both ``name`` and
+    ``main_club_id`` for downstream consumers (e.g. ``fill_parent_team_id.py``
+    and the team scraper), avoiding duplicated API calls across scripts.
+    """
     if not club_ids:
         return {}
 
-    cache: Dict[str, str] = {}
-    ids_list = sorted(cid for cid in club_ids if cid)
+    from scraping.utils.tm_club_api_cache import TmClubApiCache
 
-    pbar = tqdm(total=len(ids_list), desc="Fetching club names", unit="id")
+    cache_obj = TmClubApiCache.load(
+        max_retries=MAX_RETRIES,
+        retry_pause=RETRY_PAUSE,
+        request_delay=REQUEST_DELAY,
+    )
+    resolved = cache_obj.resolve_names(club_ids, pbar_desc="Fetching club names")
+    cache_obj.save()
+    print(f"  Total names resolved: {len(resolved)}")
+    return resolved
 
-    def _fetch_batch(batch: list) -> None:
-        if not batch:
-            return
 
-        params = "&".join(f"ids[]={cid}" for cid in batch)
-        api_url = f"{TM_API_URL}/clubs?{params}"
-        data = _api_get(api_url)
-
-        if data is None:
-            tqdm.write(f"    FAILED to fetch batch of {len(batch)} – skipping")
-            pbar.update(len(batch))
-            return
-
-        # Splittable error → halve and retry
-        error_status = data.get("_status")
-        if error_status is not None:
-            if len(batch) <= 1:
-                tqdm.write(f"    Cannot split further, skipping ID: {batch[0]}")
-                pbar.update(len(batch))
-                return
-            mid = len(batch) // 2
-            tqdm.write(f"    HTTP {error_status} with {len(batch)} IDs → splitting")
-            _fetch_batch(batch[:mid])
-            _fetch_batch(batch[mid:])
-            return
-
-        if data.get("success"):
-            clubs_data = data.get("data", [])
-            for club in clubs_data:
-                cid = str(club.get("id", ""))
-                cname = club.get("name", "")
-                if cid:
-                    cache[cid] = cname
-        pbar.update(len(batch))
-
-    _fetch_batch(ids_list)
-    pbar.close()
-    print(f"  Total names resolved: {len(cache)}")
-    return cache
+# ── Legacy stand-alone implementation (kept for reference) ───────────────────
+#
+# def fetch_club_names(club_ids: Set[str]) -> Dict[str, str]:
+#     """Fetch club names from the API, splitting adaptively on errors."""
+#     if not club_ids:
+#         return {}
+#
+#     cache: Dict[str, str] = {}
+#     ids_list = sorted(cid for cid in club_ids if cid)
+#
+#     pbar = tqdm(total=len(ids_list), desc="Fetching club names", unit="id")
+#
+#     def _fetch_batch(batch: list) -> None:
+#         if not batch:
+#             return
+#
+#         params = "&".join(f"ids[]={cid}" for cid in batch)
+#         api_url = f"{TM_API_URL}/clubs?{params}"
+#         data = _api_get(api_url)
+#
+#         if data is None:
+#             tqdm.write(f"    FAILED to fetch batch of {len(batch)} – skipping")
+#             pbar.update(len(batch))
+#             return
+#
+#         # Splittable error → halve and retry
+#         error_status = data.get("_status")
+#         if error_status is not None:
+#             if len(batch) <= 1:
+#                 tqdm.write(f"    Cannot split further, skipping ID: {batch[0]}")
+#                 pbar.update(len(batch))
+#                 return
+#             mid = len(batch) // 2
+#             tqdm.write(f"    HTTP {error_status} with {len(batch)} IDs → splitting")
+#             _fetch_batch(batch[:mid])
+#             _fetch_batch(batch[mid:])
+#             return
+#
+#         if data.get("success"):
+#             clubs_data = data.get("data", [])
+#             for club in clubs_data:
+#                 cid = str(club.get("id", ""))
+#                 cname = club.get("name", "")
+#                 if cid:
+#                     cache[cid] = cname
+#         pbar.update(len(batch))
+#
+#     _fetch_batch(ids_list)
+#     pbar.close()
+#     print(f"  Total names resolved: {len(cache)}")
+#     return cache
 
 
 # ── Scanning & filling ───────────────────────────────────────────────────────
