@@ -286,12 +286,8 @@ def get_seasons() -> List[str]:
         if s:
             seasons.add(s)
     # Also include seasons that have precomputed caches (e.g. future seasons)
-    cache_dir = ROOT_DIR / "data" / "json" / "cache"
-    if cache_dir.exists():
-        for f in cache_dir.glob("season_data_*.json"):
-            s = f.stem.replace("season_data_", "")
-            if s and s != "today":
-                seasons.add(s)
+    from simulator.data_loader import list_cached_seasons
+    seasons.update(list_cached_seasons(include_today=False))
     return sorted(seasons, reverse=True)
 
 
