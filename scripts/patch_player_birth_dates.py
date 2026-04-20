@@ -49,12 +49,17 @@ from scraping.utils.helpers import (
     load_json,
     save_json_with_parts,
 )
+from simulator.data_loader import (
+    _load_raw_season_cache,
+    list_cached_seasons,
+    save_season_cache_payload,
+)
 
 # ── Configuration ───────────────────────────────────────────────────────
 TM_API_URL = "https://tmapi-alpha.transfermarkt.technology"
 MAX_RETRIES = 5
 RETRY_PAUSE = 10        # seconds between retries
-REQUEST_DELAY = 0.3     # polite delay between API requests
+REQUEST_DELAY = 0       # polite delay between API requests
 
 UNKNOWN = "Unknown"
 CACHE_DIR = DATA_DIR / "cache"
@@ -105,9 +110,10 @@ def _compute_age(birth_date: Any, cutoff: datetime) -> Optional[int]:
 
 
 def _season_cutoff_from_stem(stem: str) -> Optional[datetime]:
-    """Extract a season cutoff from stems like ``players_all_2024-2025``
-    or ``season_data_2024-2025`` or ``season_data_today``."""
-    if stem.endswith("_today") or stem == TODAY_STEM:
+    """Extract a season cutoff from stems like ``players_all_2024-2025``,
+    ``season_data_2024-2025``, ``season_data_today``, or from a bare
+    season string (``"today"`` or ``"2024-2025"``)."""
+    if stem.endswith("_today") or stem == TODAY_STEM or stem.lower() == "today":
         return datetime.now()
     m = re.search(r"(\d{4})-\d{4}", stem)
     if m:
@@ -192,33 +198,37 @@ def _load_players_all_files() -> List[PlayersFileRecord]:
     return out
 
 
-# ── Cache files (season_data_*.json) ────────────────────────────────────
+# ── Cache files (season_data_*.json – single file OR *_partN.json) ─────
 
-CacheFileRecord = Tuple[Path, dict]  # (file_path, full_payload_dict)
+# Each record represents ONE season's merged payload (not one file on disk),
+# so it works transparently with legacy single-file caches AND the new
+# multi-part shards that simulator.data_loader writes.
+CacheFileRecord = Tuple[str, dict]  # (season, full_payload_dict)
 
 
 def _load_cache_files() -> List[CacheFileRecord]:
     if not CACHE_DIR.exists():
         return []
+    seasons = list_cached_seasons(include_today=True)
     out: List[CacheFileRecord] = []
-    paths = sorted(CACHE_DIR.glob("season_data_*.json"))
-    for path in tqdm(paths, desc="Loading cache files", unit="file"):
+    for season in tqdm(seasons, desc="Loading cache files", unit="season"):
         try:
-            with open(path, "r", encoding="utf-8") as f:
-                data = json.load(f)
+            data = _load_raw_season_cache(season)
         except Exception as exc:
-            tqdm.write(f"  SKIP {path.name}: {exc}")
+            tqdm.write(f"  SKIP {season}: {exc}")
             continue
         if isinstance(data, dict) and isinstance(data.get("players"), list):
-            out.append((path, data))
+            out.append((season, data))
     return out
 
 
-def _save_cache_file(path: Path, data: dict) -> None:
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    with open(tmp, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2, default=str)
-    tmp.replace(path)
+def _save_cache_file(season: str, data: dict) -> None:
+    """Re-write a season cache via the shared saver.
+
+    Automatically re-shards into ``*_partN.json`` when the payload exceeds
+    the 90 MB threshold, so we never end up with files too large to push.
+    """
+    save_season_cache_payload(data, season)
 
 
 # ── Bad-id detection ────────────────────────────────────────────────────
@@ -237,7 +247,7 @@ def _collect_bad_ids(
             if pid and _needs_patch(rec.get("birth_date")):
                 bad.add(str(pid))
 
-    for _path, payload in cache_files:
+    for _season, payload in cache_files:
         for rec in payload.get("players", []):
             if not isinstance(rec, dict):
                 continue
@@ -281,7 +291,7 @@ def _apply_birth_dates(
         if changed:
             modified_bases.add(base)
 
-    for path, payload in cache_files:
+    for season, payload in cache_files:
         changed = False
         for rec in payload.get("players", []):
             if not isinstance(rec, dict):
@@ -296,7 +306,7 @@ def _apply_birth_dates(
                     rec["birth_date"] = new_bd
                     changed = True
         if changed:
-            modified_caches.add(str(path))
+            modified_caches.add(season)
 
     return modified_bases, modified_caches
 
@@ -326,9 +336,8 @@ def _recompute_all_ages(
         if changed:
             modified_bases.add(base)
 
-    for path, payload in tqdm(cache_files, desc="Recomputing ages (cache)", unit="file"):
-        stem = path.stem  # e.g. "season_data_2024-2025" or "season_data_today"
-        cutoff = _season_cutoff_from_stem(stem)
+    for season, payload in tqdm(cache_files, desc="Recomputing ages (cache)", unit="season"):
+        cutoff = _season_cutoff_from_stem(season)
         if cutoff is None:
             continue
         changed = False
@@ -342,7 +351,7 @@ def _recompute_all_ages(
                 rec["age"] = new_age
                 changed = True
         if changed:
-            modified_caches.add(str(path))
+            modified_caches.add(season)
 
     return modified_bases, modified_caches
 
@@ -362,13 +371,13 @@ def _write_players_files(
 
 def _write_cache_files(
     cache_files: List[CacheFileRecord],
-    paths_to_write: Set[str],
+    seasons_to_write: Set[str],
 ) -> None:
-    if not paths_to_write:
+    if not seasons_to_write:
         return
-    for path, payload in tqdm(cache_files, desc="Writing cache files", unit="file"):
-        if str(path) in paths_to_write:
-            _save_cache_file(path, payload)
+    for season, payload in tqdm(cache_files, desc="Writing cache files", unit="season"):
+        if season in seasons_to_write:
+            _save_cache_file(season, payload)
 
 
 # ── Main ────────────────────────────────────────────────────────────────
@@ -394,7 +403,7 @@ def main() -> None:
     cache_files = _load_cache_files()
     print(
         f"Loaded {len(players_files)} players_all file(s) and "
-        f"{len(cache_files)} cache file(s)."
+        f"{len(cache_files)} cached season(s)."
     )
     if not players_files and not cache_files:
         print("Nothing to patch.")
@@ -440,7 +449,7 @@ def main() -> None:
         modified_bases |= mb
         modified_caches |= mc
         print(f"  Birth dates updated in {len(mb)} players_all file(s) "
-              f"and {len(mc)} cache file(s).")
+              f"and {len(mc)} cached season(s).")
 
     # ── 5. Recompute ages everywhere ─────────────────────────────────
     mb, mc = _recompute_all_ages(players_files, cache_files)
@@ -448,14 +457,14 @@ def main() -> None:
     modified_caches |= mc
     print(
         f"  Ages refreshed in {len(mb)} players_all file(s) "
-        f"and {len(mc)} cache file(s)."
+        f"and {len(mc)} cached season(s)."
     )
 
     # ── 6. Write ─────────────────────────────────────────────────────
     if args.dry_run:
         print(
             f"\n[DRY RUN] Would write {len(modified_bases)} players_all file(s) "
-            f"and {len(modified_caches)} cache file(s)."
+            f"and {len(modified_caches)} cached season(s)."
         )
         return
 
