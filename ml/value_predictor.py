@@ -19,6 +19,7 @@ from ml.feature_engineering import (
     PlayerFeatures,
     TOP_CLUBS,
     TOP_NATIONALITIES,
+    FIRST_TEAM_LABEL,
     build_training_dataset,
     build_prediction_dataset,
     extract_player_features,
@@ -67,11 +68,14 @@ class ValuePredictor:
         "age_value_ratio", "log_current_value",
         "on_loan",
         "fair_price_M",
+        "is_in_filial_team",
+        "parent_team_name",
     ]
     
     CATEGORICAL_FEATURES = [
         "position", "player_nationality_bin", "current_club_bin",
         "current_league", "league_tier", "preferred_foot",
+        "parent_team_name",
     ]
 
     # Fallback allowed values when model has no category mappings (old models).
@@ -97,6 +101,7 @@ class ValuePredictor:
         },
         "league_tier": {"1", "Other", "None"},
         "preferred_foot": {"left", "right", "both", "Left", "Right", "Both", "Unknown"},
+        "parent_team_name": set(TOP_CLUBS) | {"Other", FIRST_TEAM_LABEL},
     }
     
     def __init__(self, model_path: Optional[Path] = None):
