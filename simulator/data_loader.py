@@ -37,6 +37,249 @@ from entities.valuation import Valuation
 CACHE_DIR = DATA_DIR / "cache"
 CACHE_PREFIX = "season_data"
 
+# Maximum JSON size per cache part (90 MB keeps headroom under GitHub's 100 MB).
+# Caches > 100 MB fail to push, so we shard automatically into ``*_partN.json``.
+_MAX_CACHE_PART_BYTES = 90 * 1024 * 1024
+
+
+class _NumpyEncoder(json.JSONEncoder):
+    """JSON encoder that accepts numpy scalars/arrays (match legacy cache writer)."""
+
+    def default(self, obj):  # type: ignore[override]
+        try:
+            import numpy as _np
+        except ImportError:
+            return super().default(obj)
+        if isinstance(obj, _np.integer):
+            return int(obj)
+        if isinstance(obj, _np.floating):
+            return float(obj)
+        if isinstance(obj, _np.ndarray):
+            return obj.tolist()
+        return super().default(obj)
+
+
+# ---------------------------------------------------------------------------
+# Cache path helpers (single file OR ``*_partN.json`` parts)
+# ---------------------------------------------------------------------------
+
+def _cache_base_path(season: str) -> Path:
+    """Return the base (non-partitioned) cache path for a season."""
+    stem = (
+        f"{CACHE_PREFIX}_today"
+        if season.lower() == "today"
+        else f"{CACHE_PREFIX}_{season}"
+    )
+    return CACHE_DIR / f"{stem}.json"
+
+
+def _cache_part_paths(base_path: Path) -> List[Path]:
+    """Return sorted list of existing cache files for ``base_path``.
+
+    Prefers ``<stem>_part1.json``, ``<stem>_part2.json``, … when present;
+    falls back to the single ``<stem>.json`` file if no parts exist.
+    Returns an empty list when neither exists.
+    """
+    stem = base_path.stem  # e.g. "season_data_2024-2025"
+    parts = sorted(base_path.parent.glob(f"{stem}_part*.json"))
+    if parts:
+        return parts
+    if base_path.exists():
+        return [base_path]
+    return []
+
+
+def list_cached_seasons(include_today: bool = False) -> List[str]:
+    """Return unique season strings that have a cache on disk.
+
+    Collapses parts (``season_data_2024-2025_part3.json``) down to their
+    base season and de-duplicates. Skips ``today`` unless *include_today*
+    is ``True``. Result is sorted in reverse chronological order.
+    """
+    if not CACHE_DIR.exists():
+        return []
+    seen: set = set()
+    for p in CACHE_DIR.glob(f"{CACHE_PREFIX}_*.json"):
+        stem = p.stem  # season_data_XXXX-XXXX[_partN]
+        # Strip trailing "_partN" if present
+        part_idx = stem.rfind("_part")
+        if part_idx != -1 and stem[part_idx + 5 :].isdigit():
+            stem = stem[:part_idx]
+        season = stem[len(CACHE_PREFIX) + 1 :]  # drop "season_data_"
+        if not season:
+            continue
+        if season == "today" and not include_today:
+            continue
+        seen.add(season)
+    return sorted(seen, reverse=True)
+
+
+# ---------------------------------------------------------------------------
+# Cache save / load (multi-part aware)
+# ---------------------------------------------------------------------------
+
+def _clean_existing_cache_files(base_path: Path) -> None:
+    """Remove the legacy single-file AND any existing ``_partN`` siblings."""
+    if base_path.exists():
+        base_path.unlink()
+    for old in base_path.parent.glob(f"{base_path.stem}_part*.json"):
+        old.unlink()
+
+
+def _split_horizon_predictions(
+    horizon_preds: Optional[dict],
+    pids_in_chunk: set,
+) -> dict:
+    """Return a copy of ``horizon_preds`` restricted to ``pids_in_chunk``."""
+    if not isinstance(horizon_preds, dict):
+        return {}
+    out: dict = {}
+    for hz_key, hz_val in horizon_preds.items():
+        if not isinstance(hz_val, dict):
+            continue
+        pv = hz_val.get("predicted_values") or {}
+        fp = hz_val.get("fair_prices") or {}
+        out[hz_key] = {
+            "predicted_values": {pid: v for pid, v in pv.items() if pid in pids_in_chunk},
+            "fair_prices": {pid: v for pid, v in fp.items() if pid in pids_in_chunk},
+        }
+    return out
+
+
+def save_season_cache_payload(payload: dict, season: str) -> Path:
+    """
+    Persist a precomputed-season cache payload as one file when it fits
+    under ``_MAX_CACHE_PART_BYTES`` or as ``*_partN.json`` parts otherwise.
+
+    Mirrors the single/multi-part convention used for training datasets
+    (``ml/feature_engineering.save_training_dataset``).
+
+    The split is performed **per player**: each part receives a contiguous
+    chunk of ``payload["players"]`` plus the matching slice of
+    ``payload["horizon_predictions"][*]["predicted_values" / "fair_prices"]``.
+    Small aggregate data (``team_market_values``, ``athletic_eligible_ids``)
+    is written in part 1 only; the loader merges them back.
+
+    Returns the path to the single file or to part 1 when split.
+    """
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    base_path = _cache_base_path(season)
+
+    full_blob = json.dumps(payload, ensure_ascii=False, cls=_NumpyEncoder).encode("utf-8")
+
+    if len(full_blob) <= _MAX_CACHE_PART_BYTES:
+        _clean_existing_cache_files(base_path)
+        with open(base_path, "wb") as f:
+            f.write(full_blob)
+        return base_path
+
+    _clean_existing_cache_files(base_path)
+
+    players: List[dict] = payload.get("players") or []
+    horizon_preds = payload.get("horizon_predictions")
+
+    # Conservative estimate of parts needed (ceil)
+    num_parts = max(2, -(-len(full_blob) // _MAX_CACHE_PART_BYTES))
+    chunk_size = -(-len(players) // num_parts) if players else 0
+
+    part_paths: List[Path] = []
+    for i in range(num_parts):
+        chunk = players[i * chunk_size : (i + 1) * chunk_size] if chunk_size else []
+        if not chunk and i > 0:
+            break
+
+        pids_in_chunk = {
+            str(p.get("player_id"))
+            for p in chunk
+            if isinstance(p, dict) and p.get("player_id") is not None
+        }
+
+        part_payload: dict = {
+            "season": payload.get("season"),
+            "computed_date": payload.get("computed_date"),
+            "player_count": payload.get("player_count"),
+            "team_count": payload.get("team_count"),
+            "athletic_eligible_count": payload.get("athletic_eligible_count"),
+            "part": i + 1,
+            "total_parts": num_parts,
+            "players": chunk,
+            "horizon_predictions": _split_horizon_predictions(horizon_preds, pids_in_chunk),
+        }
+        # Small shared data lives in part 1 only (deduplicated on load).
+        if i == 0:
+            if "team_market_values" in payload:
+                part_payload["team_market_values"] = payload["team_market_values"]
+            if "athletic_eligible_ids" in payload:
+                part_payload["athletic_eligible_ids"] = payload["athletic_eligible_ids"]
+
+        part_path = base_path.parent / f"{base_path.stem}_part{i + 1}.json"
+        with open(part_path, "w", encoding="utf-8") as f:
+            json.dump(part_payload, f, ensure_ascii=False, cls=_NumpyEncoder)
+        part_paths.append(part_path)
+
+    return part_paths[0] if part_paths else base_path
+
+
+def _load_raw_season_cache(season: str) -> Optional[dict]:
+    """
+    Load the raw (unparsed) cache payload for a season, transparently
+    merging ``_partN.json`` files when present.
+
+    Returns ``None`` when no file exists or the payload is malformed.
+    Matches the legacy single-file structure so callers don't need to
+    know whether it was stored sharded.
+    """
+    base_path = _cache_base_path(season)
+    paths = _cache_part_paths(base_path)
+    if not paths:
+        return None
+
+    # Legacy single file
+    if len(paths) == 1 and paths[0] == base_path:
+        try:
+            with open(paths[0], encoding="utf-8") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, OSError):
+            return None
+
+    merged: Optional[dict] = None
+    for pp in paths:
+        try:
+            with open(pp, encoding="utf-8") as f:
+                data = json.load(f)
+        except (json.JSONDecodeError, OSError):
+            return None
+        if merged is None:
+            merged = {
+                k: v
+                for k, v in data.items()
+                if k not in ("part", "total_parts", "players", "horizon_predictions")
+            }
+            merged["players"] = []
+            merged["horizon_predictions"] = {}
+
+        players_chunk = data.get("players") or []
+        if isinstance(players_chunk, list):
+            merged["players"].extend(players_chunk)
+
+        hp = data.get("horizon_predictions") or {}
+        if isinstance(hp, dict):
+            for hz_key, hz_val in hp.items():
+                if not isinstance(hz_val, dict):
+                    continue
+                bucket = merged["horizon_predictions"].setdefault(
+                    hz_key, {"predicted_values": {}, "fair_prices": {}}
+                )
+                bucket["predicted_values"].update(hz_val.get("predicted_values") or {})
+                bucket["fair_prices"].update(hz_val.get("fair_prices") or {})
+
+        # Small data lives in part 1; copy the first occurrence we see.
+        for k in ("team_market_values", "athletic_eligible_ids"):
+            if k in data and k not in merged:
+                merged[k] = data[k]
+
+    return merged
+
 
 @functools.lru_cache(maxsize=20000)
 def _parse_date_cached(date_str: str) -> Optional[datetime]:
@@ -574,8 +817,9 @@ def load_season_cache(season: str, max_age_days: int = 1) -> Optional[dict]:
     """
     Load the precomputed season cache.
 
-    For ``"today"`` the file is ``season_data_today.json``; for historical
-    seasons it is ``season_data_{season}.json``.  For "today" the cache is
+    Works transparently for both legacy single-file caches
+    (``season_data_{season}.json``) and multi-part shards
+    (``season_data_{season}_part1.json``, …). For ``"today"`` the cache is
     only considered fresh if ``computed_date`` is within *max_age_days* of
     the current date.
 
@@ -585,18 +829,8 @@ def load_season_cache(season: str, max_age_days: int = 1) -> Optional[dict]:
         athletic_eligible_ids : Set[str]
     or None when no cache exists / is stale / fails.
     """
-    if season.lower() == "today":
-        cache_path = CACHE_DIR / f"{CACHE_PREFIX}_today.json"
-    else:
-        cache_path = CACHE_DIR / f"{CACHE_PREFIX}_{season}.json"
-
-    if not cache_path.exists():
-        return None
-
-    try:
-        with open(cache_path, encoding="utf-8") as f:
-            raw = json.load(f)
-    except (json.JSONDecodeError, OSError):
+    raw = _load_raw_season_cache(season)
+    if raw is None:
         return None
 
     # Freshness check for "today"
