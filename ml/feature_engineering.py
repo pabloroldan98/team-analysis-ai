@@ -76,6 +76,10 @@ TOP_CLUBS: List[str] = [
     "Bayer 04 Leverkusen",
 ]
 
+# Label used for parent_team_name when the player is NOT in a filial team
+# (the club has no parent_team_id, i.e. is itself a first team).
+FIRST_TEAM_LABEL: str = "FIRST_TEAM"
+
 
 @dataclass
 class PlayerFeatures:
@@ -169,6 +173,8 @@ class PlayerFeatures:
     fair_price: float = 0.0  # linear extrapolation from last 2 valuations at cutoff
     injured_ratio: float = 0.0  # injured_days / total_days from first valuation to cutoff
     injured_ratio_last_year: float = 0.0  # injured_days_last_year / 365
+    is_in_filial_team: bool = False  # team has a non-null parent_team_id
+    parent_team_name: str = FIRST_TEAM_LABEL  # Categorical: FIRST_TEAM / top-club name / "Other"
 
     # Training metadata
     cutoff_season: str = ""  # Season of the cutoff (e.g., "2022-2023") for filtering
@@ -267,6 +273,8 @@ class PlayerFeatures:
             "fair_price": jf(self.fair_price),
             "injured_ratio": jf(self.injured_ratio),
             "injured_ratio_last_year": jf(self.injured_ratio_last_year),
+            "is_in_filial_team": self.is_in_filial_team,
+            "parent_team_name": self.parent_team_name,
             "cutoff_season": self.cutoff_season,
             "target_value": self.target_value,
         }
@@ -358,6 +366,8 @@ class PlayerFeatures:
             "fair_price_M": self.fair_price / 1_000_000,
             "injured_ratio": float(self.injured_ratio),
             "injured_ratio_last_year": float(self.injured_ratio_last_year),
+            "is_in_filial_team": 1.0 if self.is_in_filial_team else 0.0,
+            "parent_team_name": self.parent_team_name,  # Categorical
         }
 
 
@@ -613,6 +623,84 @@ def _bin_club(club: str) -> str:
     if club in TOP_CLUBS:
         return club
     return "Other"
+
+
+def _bin_parent_team(parent_team_name: Optional[str]) -> Tuple[bool, str]:
+    """
+    Derive (is_in_filial_team, parent_team_name_bin).
+
+    - ``parent_team_name`` is None / empty -> not a filial team -> ``FIRST_TEAM``.
+    - parent is one of ``TOP_CLUBS`` -> keep the parent's name as category.
+    - parent is any other club -> bin as ``"Other"``.
+    """
+    if not parent_team_name:
+        return False, FIRST_TEAM_LABEL
+    if parent_team_name in TOP_CLUBS:
+        return True, parent_team_name
+    return True, "Other"
+
+
+def load_team_parent_mapping(verbose: bool = False) -> Dict[str, Optional[str]]:
+    """
+    Load ``team_id -> parent_team_name`` (or ``None``) from every
+    ``teams_all_*.json`` base.
+
+    The parent relationship is stable across seasons (see
+    ``scripts/fill_parent_team_id.py``) so we return a *flat* dict:
+
+    - ``{team_id: "Real Madrid"}`` when the team has a parent.
+    - ``{team_id: None}`` when it has no parent (or the parent_team_id
+      cannot be resolved to a name in the available teams files).
+
+    Team_ids that never appear in any ``teams_all_*.json`` simply won't
+    be in the dict, so callers should ``.get(team_id)`` (returns ``None``).
+    """
+    bases = list(list_json_bases("teams_all_*.json"))
+    iterator = tqdm(bases, desc="Loading team parent mapping", disable=not verbose)
+
+    # First pass: collect team_id -> latest-known name and team_id -> parent_team_id.
+    team_names: Dict[str, str] = {}
+    team_parent_id: Dict[str, Optional[str]] = {}
+
+    for base in iterator:
+        try:
+            teams = load_json(base)
+        except Exception:
+            continue
+        if not isinstance(teams, list):
+            continue
+        for team in teams:
+            if not isinstance(team, dict):
+                continue
+            tid = team.get("team_id")
+            if not tid:
+                continue
+            tid = str(tid)
+            name = team.get("name") or ""
+            if name:
+                team_names[tid] = name
+            if "parent_team_id" in team:
+                pid_raw = team.get("parent_team_id")
+                pid_str = str(pid_raw) if pid_raw not in (None, "", 0, "0") else None
+                prev = team_parent_id.get(tid, "__missing__")
+                if prev == "__missing__" or (prev is None and pid_str is not None):
+                    team_parent_id[tid] = pid_str
+
+    # Second pass: resolve each team's parent_team_id to parent_team_name.
+    result: Dict[str, Optional[str]] = {}
+    for tid, pid in team_parent_id.items():
+        if pid is None:
+            result[tid] = None
+            continue
+        result[tid] = team_names.get(pid) or None
+
+    if verbose:
+        with_parent = sum(1 for v in result.values() if v)
+        tqdm.write(
+            f"  Loaded parent mapping for {len(result)} teams "
+            f"({with_parent} with resolvable parent)"
+        )
+    return result
 
 
 def _load_all_transfers(verbose: bool = False) -> List[Transfer]:
@@ -1032,6 +1120,7 @@ def extract_player_features(
     player_transfer: Optional[Transfer] = None,
     team_total_values: Optional[Dict[str, float]] = None,
     player_injury_intervals: Optional[List[Tuple[datetime, datetime]]] = None,
+    team_parent_mapping: Optional[Dict[str, Optional[str]]] = None,
 ) -> Optional[PlayerFeatures]:
     """
     Extract features for a player from their valuation history.
@@ -1051,7 +1140,10 @@ def extract_player_features(
             If provided, current_club_value is looked up. If None, current_club_value=0.
         player_injury_intervals: Optional sorted, non-overlapping list of
             (start, end) injury intervals for this player. Missing -> ratios = 0.
-    
+        team_parent_mapping: Optional dict ``team_id -> parent_team_name`` (or
+            None) from ``load_team_parent_mapping()``. Used to derive
+            ``is_in_filial_team`` and ``parent_team_name``. Missing -> not filial.
+
     Returns:
         PlayerFeatures or None if insufficient data
     """
@@ -1132,6 +1224,10 @@ def extract_player_features(
     team_total_values = team_total_values or {}
     current_club_value = team_total_values.get(club_id, float("nan")) if club_id else float("nan")
     valuation_date = last_date  # Date of the most recent valuation before cutoff
+
+    # Filial-team / parent-team features
+    parent_team_lookup = (team_parent_mapping or {}).get(club_id) if club_id else None
+    is_in_filial_team, parent_team_name_bin = _bin_parent_team(parent_team_lookup)
     
     # Historical stats
     values = [v[1] for v in parsed]
@@ -1273,6 +1369,8 @@ def extract_player_features(
         on_loan=is_on_loan,
         injured_ratio=injured_ratio,
         injured_ratio_last_year=injured_ratio_last_year,
+        is_in_filial_team=is_in_filial_team,
+        parent_team_name=parent_team_name_bin,
         cutoff_season=cutoff_season,
         target_value=target_value,
     )
@@ -1359,6 +1457,7 @@ def _process_cutoff_batch(
     team_league_mapping: Optional[Dict[str, Dict[str, Dict[str, str]]]],
     min_valuations: int,
     injury_intervals_by_player: Optional[Dict[str, List[Tuple[datetime, datetime]]]] = None,
+    team_parent_mapping: Optional[Dict[str, Optional[str]]] = None,
 ) -> Tuple[datetime, str, List[PlayerFeatures]]:
     """Process one cutoff: extract features for all players, compute percentiles."""
     cutoff_season = _get_season_for_cutoff(cutoff_date)
@@ -1381,6 +1480,7 @@ def _process_cutoff_batch(
             player_transfer=player_transfer,
             team_total_values=team_total_values,
             player_injury_intervals=injury_intervals_by_player.get(player_id),
+            team_parent_mapping=team_parent_mapping,
         )
         if features and features.target_value is not None:
             features.fair_price = fair_prices.get(player_id, 0.0)
@@ -1400,6 +1500,7 @@ def build_training_dataset(
     all_transfers: Optional[List[Transfer]] = None,
     injury_intervals_by_player: Optional[Dict[str, List[Tuple[datetime, datetime]]]] = None,
     n_jobs: int = 1,
+    team_parent_mapping: Optional[Dict[str, Optional[str]]] = None,
 ) -> List[PlayerFeatures]:
     """
     Build complete training dataset with multiple cutoff dates.
@@ -1446,6 +1547,13 @@ def build_training_dataset(
         injury_intervals_by_player = _load_all_injury_intervals_by_player()
         print(f"  Loaded injuries for {len(injury_intervals_by_player)} players")
 
+    # Load team-parent mapping once for the whole training run
+    if team_parent_mapping is None:
+        print("Loading team parent mapping for filial-team features...")
+        team_parent_mapping = load_team_parent_mapping()
+        _with_parent = sum(1 for v in team_parent_mapping.values() if v)
+        print(f"  Loaded {len(team_parent_mapping)} teams ({_with_parent} with parent)")
+
     # Group valuations by player
     by_player: Dict[str, List[Valuation]] = {}
     for v in all_valuations:
@@ -1466,6 +1574,7 @@ def build_training_dataset(
                 cutoff_date, by_player, transfer_map,
                 players, team_league_mapping, min_valuations,
                 injury_intervals_by_player=injury_intervals_by_player,
+                team_parent_mapping=team_parent_mapping,
             )
             cutoff_results.append(res)
             print(f"  Cutoff {res[0].strftime('%Y-%m-%d')} ({res[1]}): {len(res[2])} players")
@@ -1477,6 +1586,7 @@ def build_training_dataset(
                     cutoff_date, by_player, transfer_maps[cutoff_date],
                     players, team_league_mapping, min_valuations,
                     injury_intervals_by_player,
+                    team_parent_mapping,
                 ): cutoff_date
                 for cutoff_date in cutoff_dates
             }
@@ -1734,6 +1844,8 @@ def load_training_dataset(cutoff_months: int = 12) -> Optional[List[PlayerFeatur
             fair_price=_load_float(item.get("fair_price"), default=0.0),
             injured_ratio=_load_float(item.get("injured_ratio"), default=0.0),
             injured_ratio_last_year=_load_float(item.get("injured_ratio_last_year"), default=0.0),
+            is_in_filial_team=bool(item.get("is_in_filial_team", False)),
+            parent_team_name=item.get("parent_team_name", FIRST_TEAM_LABEL),
             cutoff_season=item.get("cutoff_season", ""),
             target_value=item.get("target_value"),
         )
@@ -1792,14 +1904,17 @@ def build_prediction_context(
     all_transfers: Optional[List[Transfer]] = None,
     verbose: bool = False,
     injury_intervals_by_player: Optional[Dict[str, List[Tuple[datetime, datetime]]]] = None,
+    team_parent_mapping: Optional[Dict[str, Optional[str]]] = None,
 ) -> Tuple[
     Dict[str, Transfer],
     Dict[str, List[Valuation]],
     Dict[str, float],
     Dict[str, List[Tuple[datetime, datetime]]],
+    Dict[str, Optional[str]],
 ]:
     """
-    Build transfer_map, by_player, team_total_values, injury_intervals_by_player.
+    Build transfer_map, by_player, team_total_values, injury_intervals_by_player,
+    team_parent_mapping.
     Reusable across multiple build_prediction_dataset calls (same cutoff).
     """
     if all_transfers is None:
@@ -1819,7 +1934,16 @@ def build_prediction_context(
     if injury_intervals_by_player is None:
         injury_intervals_by_player = _load_all_injury_intervals_by_player(verbose=verbose)
 
-    return transfer_map, by_player, team_total_values, injury_intervals_by_player
+    if team_parent_mapping is None:
+        team_parent_mapping = load_team_parent_mapping(verbose=verbose)
+
+    return (
+        transfer_map,
+        by_player,
+        team_total_values,
+        injury_intervals_by_player,
+        team_parent_mapping,
+    )
 
 
 def build_prediction_dataset(
@@ -1833,6 +1957,7 @@ def build_prediction_dataset(
     by_player: Optional[Dict[str, List[Valuation]]] = None,
     team_total_values: Optional[Dict[str, float]] = None,
     injury_intervals_by_player: Optional[Dict[str, List[Tuple[datetime, datetime]]]] = None,
+    team_parent_mapping: Optional[Dict[str, Optional[str]]] = None,
     verbose: bool = False,
 ) -> List[PlayerFeatures]:
     """
@@ -1865,6 +1990,9 @@ def build_prediction_dataset(
     if injury_intervals_by_player is None:
         injury_intervals_by_player = _load_all_injury_intervals_by_player(verbose=verbose)
 
+    if team_parent_mapping is None:
+        team_parent_mapping = load_team_parent_mapping(verbose=verbose)
+
     fair_prices = compute_fair_prices(by_player, cutoff_date)
 
     # When players dict is provided, only process those player_ids (reduces work when filtered)
@@ -1890,6 +2018,7 @@ def build_prediction_dataset(
             player_transfer=player_transfer,
             team_total_values=team_total_values,
             player_injury_intervals=injury_intervals_by_player.get(player_id),
+            team_parent_mapping=team_parent_mapping,
         )
         
         if features:
