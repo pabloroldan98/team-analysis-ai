@@ -14,8 +14,51 @@ from entities.team import Team
 
 class TransfermarktTeamsScraper(BaseScraper):
     """Scraper for team information from Transfermarkt."""
-    
+
     # LEAGUE_INFO is inherited from BaseScraper
+
+    # Transfermarkt API base URL (used for parent-club lookups)
+    TM_API_URL = "https://tmapi-alpha.transfermarkt.technology"
+
+    def _fill_parent_team_ids(self, teams: List[Team]) -> None:
+        """Batch-fill ``parent_team_id`` on every Team in *teams*.
+
+        Uses the shared on-disk cache (``data/cache/tm_club_api_cache.json``)
+        so other pipeline scripts (``fill_club_names.py``,
+        ``fill_parent_team_id.py``, subsequent league scrapes, …) can
+        reuse the work for the same team_ids without re-hitting the API.
+        """
+        from scraping.utils.tm_club_api_cache import TmClubApiCache
+
+        ids = {str(t.team_id) for t in teams if t and t.team_id}
+        if not ids:
+            return
+
+        self.log(f"\nFetching parent_team_id for {len(ids)} teams...")
+
+        cache = TmClubApiCache.load(
+            max_retries=self.max_retries,
+            retry_pause=self.retry_pause,
+            request_delay=self.delay,
+            verbose=self.verbose,
+        )
+        resolved = cache.fetch(
+            ids,
+            need=("main_club_id",),
+            pbar_desc="  parent_team_id",
+        )
+        cache.save()
+
+        resolved_count = 0
+        for t in teams:
+            if not t or not t.team_id:
+                continue
+            entry = resolved.get(str(t.team_id)) or cache.get(str(t.team_id))
+            if entry is not None and entry.has_base_details:
+                t.parent_team_id = entry.main_club_id
+                resolved_count += 1
+
+        self.log(f"    Resolved parent info for {resolved_count}/{len(ids)} teams")
     
     def scrape_team(
         self,
@@ -223,6 +266,9 @@ class TransfermarktTeamsScraper(BaseScraper):
                     if match:
                         final_league_id = match.group(1)
         
+        # ``parent_team_id`` is resolved in a single batch call after all
+        # teams of a league have been scraped (see ``_fill_parent_team_ids``
+        # in ``run()``), so we leave it unset here.
         return Team(
             team_id=team_id,
             name=name,
@@ -240,6 +286,7 @@ class TransfermarktTeamsScraper(BaseScraper):
             stadium_capacity=stadium_capacity,
             logo_url=logo_url,
             profile_url=team_url,
+            parent_team_id=None,
         )
     
     def scrape_league_teams(
@@ -336,7 +383,13 @@ class TransfermarktTeamsScraper(BaseScraper):
             self.log(f"\n=== Scraping teams from {league.upper()} ===")
             teams = self.scrape_league_teams(league, skip_team_ids=skip_team_ids)
             all_teams[league] = teams
-            
+
+            # Batch-fill parent_team_id via the shared TM club API cache.
+            # Runs once per league (like ``_fill_club_names`` in the
+            # valuations/transfers scrapers) so re-runs of the same season
+            # do not re-query already-resolved teams.
+            self._fill_parent_team_ids(teams)
+
             # Save per-league file
             teams_data = [t.to_dict() for t in teams]
             new_ids = {t.team_id for t in teams}
