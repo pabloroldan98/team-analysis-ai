@@ -59,7 +59,7 @@ from scraping.utils.helpers import (
 TM_API_URL = "https://tmapi-alpha.transfermarkt.technology"
 MAX_RETRIES = 5
 RETRY_PAUSE = 10        # seconds between retries
-REQUEST_DELAY = 0.3     # polite delay between API requests
+REQUEST_DELAY = 0       # polite delay between API requests
 
 BATCH_SIZE = 200
 
