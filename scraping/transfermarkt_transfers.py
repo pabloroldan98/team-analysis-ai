@@ -102,56 +102,83 @@ class TransfermarktTransfersScraper(BaseScraper):
     # ── Club-name helpers (shared with valuations scraper) ───────────────
 
     def _fetch_club_names_batch(self, club_ids: Set[str]) -> Dict[str, str]:
-        """
-        Fetch multiple club names via API, adaptively splitting on 414 errors.
+        """Fetch multiple club names via the shared on-disk TM club API cache.
+
+        Uses ``data/cache/tm_club_api_cache.json`` so the same ``GET /clubs``
+        batch request is reused across scripts (fill_club_names,
+        fill_parent_team_id, the team scraper, …) without re-hitting the API.
         """
         if not club_ids:
             return {}
 
-        ids_to_fetch = [cid for cid in club_ids if cid and cid not in self._club_name_cache]
+        from scraping.utils.tm_club_api_cache import TmClubApiCache
 
-        if not ids_to_fetch:
-            return {cid: self._club_name_cache.get(cid, "") for cid in club_ids}
+        cache_obj = TmClubApiCache.load(
+            max_retries=50,
+            retry_pause=10,
+            request_delay=self.delay,
+            verbose=self.verbose,
+        )
+        resolved = cache_obj.resolve_names(club_ids, pbar_desc="  club names")
+        cache_obj.save()
 
-        self.log(f"  Fetching {len(ids_to_fetch)} club names via API...")
+        for cid, cname in resolved.items():
+            self._club_name_cache[cid] = cname
 
-        def fetch_batch(batch: list) -> None:
-            if not batch:
-                return
+        return {cid: resolved.get(str(cid), self._club_name_cache.get(cid, "")) for cid in club_ids}
 
-            params = "&".join([f"ids[]={cid}" for cid in batch])
-            api_url = f"{self.TM_API_URL}/clubs?{params}"
-
-            data = self._api_get(api_url, timeout=60, max_retries=50, retry_pause=10)
-
-            if data is None:
-                self.log(f"    Failed to fetch {len(batch)} club names")
-                return
-
-            # Splittable error (414, 429, 5xx) → halve the batch and retry
-            error_status = data.get("_status")
-            if error_status is not None:
-                if len(batch) <= 1:
-                    self.log(f"    Cannot split further, skipping ID: {batch[0]}")
-                    return
-                mid = len(batch) // 2
-                self.log(f"    HTTP {error_status} with {len(batch)} IDs, splitting in half...")
-                fetch_batch(batch[:mid])
-                fetch_batch(batch[mid:])
-                return
-
-            if data.get("success"):
-                clubs_data = data.get("data", [])
-                for club in clubs_data:
-                    club_id = str(club.get("id", ""))
-                    club_name = club.get("name", "")
-                    if club_id:
-                        self._club_name_cache[club_id] = club_name
-                self.log(f"    Fetched {len(clubs_data)} clubs (batch of {len(batch)})")
-
-        fetch_batch(ids_to_fetch)
-        self.log(f"    Total cached club names: {len(self._club_name_cache)}")
-        return {cid: self._club_name_cache.get(cid, "") for cid in club_ids}
+    # ── Legacy stand-alone implementation (kept for reference) ───────────────
+    #
+    # def _fetch_club_names_batch(self, club_ids: Set[str]) -> Dict[str, str]:
+    #     """
+    #     Fetch multiple club names via API, adaptively splitting on 414 errors.
+    #     """
+    #     if not club_ids:
+    #         return {}
+    #
+    #     ids_to_fetch = [cid for cid in club_ids if cid and cid not in self._club_name_cache]
+    #
+    #     if not ids_to_fetch:
+    #         return {cid: self._club_name_cache.get(cid, "") for cid in club_ids}
+    #
+    #     self.log(f"  Fetching {len(ids_to_fetch)} club names via API...")
+    #
+    #     def fetch_batch(batch: list) -> None:
+    #         if not batch:
+    #             return
+    #
+    #         params = "&".join([f"ids[]={cid}" for cid in batch])
+    #         api_url = f"{self.TM_API_URL}/clubs?{params}"
+    #
+    #         data = self._api_get(api_url, timeout=60, max_retries=50, retry_pause=10)
+    #
+    #         if data is None:
+    #             self.log(f"    Failed to fetch {len(batch)} club names")
+    #             return
+    #
+    #         error_status = data.get("_status")
+    #         if error_status is not None:
+    #             if len(batch) <= 1:
+    #                 self.log(f"    Cannot split further, skipping ID: {batch[0]}")
+    #                 return
+    #             mid = len(batch) // 2
+    #             self.log(f"    HTTP {error_status} with {len(batch)} IDs, splitting in half...")
+    #             fetch_batch(batch[:mid])
+    #             fetch_batch(batch[mid:])
+    #             return
+    #
+    #         if data.get("success"):
+    #             clubs_data = data.get("data", [])
+    #             for club in clubs_data:
+    #                 club_id = str(club.get("id", ""))
+    #                 club_name = club.get("name", "")
+    #                 if club_id:
+    #                     self._club_name_cache[club_id] = club_name
+    #             self.log(f"    Fetched {len(clubs_data)} clubs (batch of {len(batch)})")
+    #
+    #     fetch_batch(ids_to_fetch)
+    #     self.log(f"    Total cached club names: {len(self._club_name_cache)}")
+    #     return {cid: self._club_name_cache.get(cid, "") for cid in club_ids}
 
     def _fill_club_names(self, transfers: List[Transfer]) -> None:
         """Fill from_club_name and to_club_name for all transfers via API,
