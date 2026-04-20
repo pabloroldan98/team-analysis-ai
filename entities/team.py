@@ -29,6 +29,7 @@ class Team:
         stadium_capacity: int = None,
         logo_url: str = "",
         profile_url: str = "",
+        parent_team_id: Optional[str] = None,
     ):
         self.team_id = team_id
         self.name = name
@@ -46,6 +47,7 @@ class Team:
         self.stadium_capacity = stadium_capacity
         self.logo_url = logo_url
         self.profile_url = profile_url
+        self.parent_team_id = parent_team_id
     
     def __str__(self):
         value_str = f"€{self.total_market_value/1_000_000:.1f}M" if self.total_market_value else "N/A"
@@ -88,6 +90,7 @@ class Team:
             "stadium_capacity": self.stadium_capacity,
             "logo_url": self.logo_url,
             "profile_url": self.profile_url,
+            "parent_team_id": self.parent_team_id,
         }
     
     @classmethod
@@ -110,4 +113,5 @@ class Team:
             stadium_capacity=data.get("stadium_capacity"),
             logo_url=data.get("logo_url", ""),
             profile_url=data.get("profile_url", ""),
+            parent_team_id=data.get("parent_team_id"),
         )
