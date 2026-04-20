@@ -24,7 +24,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -36,7 +35,10 @@ sys.path.insert(0, str(ROOT_DIR))
 from tqdm import tqdm
 
 from scraping.utils.helpers import DATA_DIR, list_json_bases, load_json
-from simulator.data_loader import get_active_players_at_season_start
+from simulator.data_loader import (
+    get_active_players_at_season_start,
+    save_season_cache_payload,
+)
 from ml.feature_engineering import (
     build_prediction_context,
     build_prediction_dataset,
@@ -341,11 +343,6 @@ def precompute_and_save(
     # ── 5. Save ──────────────────────────────────────────────────────────
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
-    if season.lower() == "today":
-        cache_path = CACHE_DIR / f"{CACHE_PREFIX}_today.json"
-    else:
-        cache_path = CACHE_DIR / f"{CACHE_PREFIX}_{season}.json"
-
     computed_date_str = (
         override_date
         if override_date
@@ -367,26 +364,19 @@ def precompute_and_save(
     }
 
     if verbose:
-        print(f"\n[5/5] Saving to {cache_path} ...")
+        print(f"\n[5/5] Saving season cache for '{season}' ...")
 
-    import numpy as np
+    # Delegate to data_loader so save/load stay in sync. Large payloads are
+    # transparently sharded into ``*_partN.json`` files (≤90 MB each) to
+    # stay under GitHub's 100 MB blob limit.
+    cache_path = save_season_cache_payload(payload, season)
 
-    class _NumpyEncoder(json.JSONEncoder):
-        def default(self, obj):
-            if isinstance(obj, (np.integer,)):
-                return int(obj)
-            if isinstance(obj, (np.floating,)):
-                return float(obj)
-            if isinstance(obj, np.ndarray):
-                return obj.tolist()
-            return super().default(obj)
-
-    with open(cache_path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, cls=_NumpyEncoder)
-
-    size_mb = cache_path.stat().st_size / (1024 * 1024)
+    total_size = sum(
+        p.stat().st_size
+        for p in cache_path.parent.glob(f"{cache_path.stem.split('_part')[0]}*.json")
+    )
     if verbose:
-        print(f"  → Saved ({size_mb:.1f} MB)")
+        print(f"  → Saved to {cache_path.name} (total {total_size/1e6:.1f} MB)")
 
     return cache_path
 
