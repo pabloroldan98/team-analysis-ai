@@ -211,8 +211,11 @@ __marimo__/
 
 # data/json: only track _all_ combined files (ignore per-league/season intermediates)
 data/json/*
-# !data/json/*_all_*
+!data/json/*_all_*
 !data/json/discovered_leagues.json
+# Un-ignore the cache directory first — otherwise !*.json has no effect (parent ignored).
+!data/json/cache/
+!data/json/cache/*.json
 
 ml/datasets/*
 
