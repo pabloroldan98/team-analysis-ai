@@ -42,7 +42,7 @@ jobs:
 
       - name: Check for changes and push
         run: |
-          git add data/json/cache/ 2>/dev/null || true
+          git add data/cache/seasons/ 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No cache changes to commit."
           else
