@@ -3,7 +3,7 @@ r"""
 fill_parent_team_id.py
 ======================
 Standalone script that backfills the ``parent_team_id`` field on every
-``teams_all_*.json`` file under ``data/json/``.
+``teams_all_*.json`` files under ``data/datasets/teams/``.
 
 Resolution logic (per team_id)
 ------------------------------
@@ -16,7 +16,7 @@ Resolution logic (per team_id)
    (``parent_team_id`` is written as ``null``).
 
 All API results are stored in the shared on-disk cache at
-``data/cache/tm_club_api_cache.json`` (see
+``data/cache/clubs/tm_club_api_cache.json`` (see
 ``scraping/utils/tm_club_api_cache.py``) so repeated runs of this script —
 and other scripts that need the same metadata (e.g. ``fill_club_names.py``
 once migrated to the shared cache) — do not hit the API twice for the
