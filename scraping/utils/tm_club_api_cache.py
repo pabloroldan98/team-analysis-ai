@@ -3,7 +3,7 @@
 Shared on-disk cache for the Transfermarkt alpha API ``/clubs`` and
 ``/club/<id>`` endpoints.
 
-The cache lives at ``data/cache/tm_club_api_cache.json`` and stores, keyed by
+The cache lives at ``data/cache/clubs/tm_club_api_cache.json`` and stores, keyed by
 ``club_id``:
 
 * ``name``          – club name (may be empty / missing until resolved)
@@ -43,14 +43,13 @@ from typing import Dict, Iterable, List, Optional, Set, Tuple
 
 import requests
 
-from scraping.utils.helpers import ROOT_DIR
+from common.data_paths import TM_CLUB_API_CACHE_FILE, ensure_data_tree
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
 TM_API_URL = "https://tmapi-alpha.transfermarkt.technology"
 
-CACHE_DIR = ROOT_DIR / "data" / "cache"
-CACHE_FILE = CACHE_DIR / "tm_club_api_cache.json"
+CACHE_FILE = TM_CLUB_API_CACHE_FILE
 
 _DEFAULT_MAX_RETRIES = 50
 _DEFAULT_RETRY_PAUSE = 10  # seconds
