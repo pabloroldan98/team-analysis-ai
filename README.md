@@ -204,7 +204,7 @@ Before the simulation runs, the **data loader** builds an accurate snapshot of e
 
 **Performance optimizations** (for large datasets):
 
-- **Precomputed season caches**: A script (`scripts/precompute_active_players_cache.py`) precomputes ALL season-level data (active players with ML predictions, team market values, Athletic-eligible IDs) and saves to `data/json/cache/season_data_{season}.json`. The simulator loads these caches instantly instead of recomputing.
+- **Precomputed season caches**: A script (`scripts/precompute_active_players_cache.py`) precomputes ALL season-level data (active players with ML predictions, team market values, Athletic-eligible IDs) and saves to `data/cache/seasons/season_data_{season}.json` (multi-part `*_partN.json` when large). The simulator loads these caches instantly instead of recomputing.
 - **GitHub Actions automation**: Two workflows keep caches fresh — one runs daily at 00:30 CET for "today" data, another runs on push for historical seasons.
 - **Streaming**: Transfer and valuation maps are built in a single pass without loading full lists into memory.
 - **Parallel loading**: Multiple transfer/valuation files are loaded in parallel (up to 4 workers).
@@ -585,9 +585,11 @@ team-analysis-ai/
 │   ├── arrows/                   # UI arrow icons
 │   ├── language/                 # Flag SVGs for language toggle
 │   └── logo.png                  # App logo
-├── data/json/
-│   ├── cache/                    # Precomputed season caches
-│   └── *.json                    # Scraped data (supports _all_* and multi-part)
+├── data/                         # Layout: see common/data_paths.py
+│   ├── datasets/<entity>/      # Scraped JSON per entity (players, teams, …)
+│   ├── cache/seasons/            # Precomputed season_data_*.json
+│   ├── cache/clubs/              # e.g. tm_club API cache
+│   └── …                         # derived/, runtime/, misc/, auth/
 ├── frontend/
 │   ├── src/
 │   │   ├── components/           # React components
@@ -693,7 +695,7 @@ team-analysis-ai/
 
 ### Option 3: Docker
 
-The easiest way to deploy online. Requires [Docker](https://docs.docker.com/get-docker/). All data (`data/json/`, `ml/models/`, precomputed caches) is baked into the image so the container is fully self-contained.
+The easiest way to deploy online. Requires [Docker](https://docs.docker.com/get-docker/). All data (`data/`, `ml/models/`, precomputed caches) is baked into the image so the container is fully self-contained.
 
 ```bash
 # Clone the repository
@@ -725,7 +727,7 @@ docker compose up --build -d
 
 - Python 3.10+
 - Node.js 18+ (only for React frontend)
-- The simulator and ML pipeline require `*_all_*.json` files in `data/json/` (e.g. `players_all_2024-2025.json`, `transfers_all_2024-2025.json`, `valuations_all_2024-2025.json`). Use the scrapers + `combine_data.py`, or download data from a repository that has pre-scraped `_all_` files.
+- The simulator and ML pipeline require `*_all_*.json` files under `data/datasets/<entity>/` (e.g. `data/datasets/players/players_all_2024-2025.json`, `data/datasets/transfers/…`, `data/datasets/valuations/…`). Use the scrapers + `combine_data.py`, or download data that already follows this layout.
 
 ```bash
 # Clone the repository
@@ -845,7 +847,7 @@ python scraping_tasks/scrape_transfers.py --leagues laliga --season 2025-2026
 python scraping_tasks/scrape_valuations.py --leagues laliga --season 2025-2026
 ```
 
-Output files are saved to `data/json/`. Use `scraping_tasks/combine_data.py` to merge league-specific files into `*_all_*.json` (required for the simulator).
+Output files are saved under `data/datasets/<entity>/`. Use `scraping_tasks/combine_data.py` to merge league-specific files into `*_all_*.json` inside those folders (required for the simulator).
 
 #### Utility Scripts
 
