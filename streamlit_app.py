@@ -33,7 +33,6 @@ LANG_DIR = ASSETS_DIR / "language"
 ARROW_DOWN = ASSETS_DIR / "arrows" / "Down_red_arrow.png"
 ARROW_UP = ASSETS_DIR / "arrows" / "Up_green_arrow.png"
 LOGO_PATH = ASSETS_DIR / "logo.png"
-DATA_DIR = ROOT_DIR / "data" / "json"
 
 POS_ORDER = ["GK", "DEF", "MID", "ATT"]
 POS_KEYS = {"GK": "pos_gk", "DEF": "pos_def", "MID": "pos_mid", "ATT": "pos_att"}
