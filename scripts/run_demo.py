@@ -24,7 +24,12 @@ import webbrowser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CACHE_DIR = ROOT / "data" / "json" / "cache"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from common.data_paths import CACHE_SEASONS
+
+CACHE_DIR = CACHE_SEASONS
 FRONTEND_DIR = ROOT / "frontend"
 
 
