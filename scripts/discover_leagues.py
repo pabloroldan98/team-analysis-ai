@@ -11,8 +11,16 @@ from __future__ import annotations
 import os
 import re
 import json
+import sys
 import time
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple
+
+_ROOT = Path(__file__).resolve().parent.parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
+from common.data_paths import DS_METADATA, ensure_data_tree
 
 from bs4 import BeautifulSoup
 import tls_requests
@@ -306,7 +314,8 @@ def main():
         "all": sorted_leagues,
         "new": new_leagues,
     }
-    output_path = os.path.join("data", "json", "discovered_leagues.json")
+    ensure_data_tree()
+    output_path = DS_METADATA / "discovered_leagues.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     print(f"\nResults saved to discovered_leagues.json")
