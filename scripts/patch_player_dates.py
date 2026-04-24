@@ -9,19 +9,21 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from common.data_paths import MISC_DIR, ensure_data_tree
 from scraping.transfermarkt_players import TransfermarktPlayersScraper
-from scraping.utils.helpers import load_json_with_parts, save_json_with_parts, DATA_DIR, list_json_bases
+from scraping.utils.helpers import load_json_with_parts, save_json_with_parts, list_json_bases
 
 def patch_players():
+    ensure_data_tree()
     base_names = list_json_bases("players_*.json")
     if not base_names:
         print("No players JSON files found.")
         return
 
-    cache_file = DATA_DIR / "patch_dates_cache.json"
+    cache_file = MISC_DIR / "patch_dates_cache.json"
     
     # Load from backup if cache is empty to avoid restarting from scratch
-    backup_file = DATA_DIR / "patch_dates_cache.json.bak"
+    backup_file = MISC_DIR / "patch_dates_cache.json.bak"
     if not cache_file.exists() and backup_file.exists():
         print("Restoring from backup...")
         import shutil
