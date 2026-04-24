@@ -108,7 +108,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: leagues-${{ inputs.league }}-${{ inputs.season }}
-          path: data/json/leagues_${{ inputs.league }}_${{ inputs.season }}.json
+          path: data/datasets/leagues/leagues_${{ inputs.league }}_${{ inputs.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -146,7 +146,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: teams-${{ inputs.league }}-${{ inputs.season }}
-          path: data/json/teams_${{ inputs.league }}_${{ inputs.season }}.json
+          path: data/datasets/teams/teams_${{ inputs.league }}_${{ inputs.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -184,7 +184,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: players-${{ inputs.league }}-${{ inputs.season }}
-          path: data/json/players_${{ inputs.league }}_${{ inputs.season }}.json
+          path: data/datasets/players/players_${{ inputs.league }}_${{ inputs.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -222,7 +222,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: transfers-${{ inputs.league }}-${{ inputs.season }}
-          path: data/json/transfers_${{ inputs.league }}_${{ inputs.season }}.json
+          path: data/datasets/transfers/transfers_${{ inputs.league }}_${{ inputs.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -260,7 +260,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: valuations-${{ inputs.league }}-${{ inputs.season }}
-          path: data/json/valuations_${{ inputs.league }}_${{ inputs.season }}.json
+          path: data/datasets/valuations/valuations_${{ inputs.league }}_${{ inputs.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -298,7 +298,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: competitions-${{ inputs.league }}-${{ inputs.season }}
-          path: data/json/competitions_${{ inputs.league }}_${{ inputs.season }}.json
+          path: data/datasets/competitions/competitions_${{ inputs.league }}_${{ inputs.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -329,7 +329,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: leagues-${{ inputs.league }}-${{ inputs.season }}
-          path: data/json/
+          path: data/
         continue-on-error: true
       
       - name: Download teams data
@@ -337,7 +337,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: teams-${{ inputs.league }}-${{ inputs.season }}
-          path: data/json/
+          path: data/
         continue-on-error: true
       
       - name: Download players data
@@ -345,7 +345,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: players-${{ inputs.league }}-${{ inputs.season }}
-          path: data/json/
+          path: data/
         continue-on-error: true
       
       - name: Download transfers data
@@ -353,7 +353,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: transfers-${{ inputs.league }}-${{ inputs.season }}
-          path: data/json/
+          path: data/
         continue-on-error: true
       
       - name: Download valuations data
@@ -361,7 +361,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: valuations-${{ inputs.league }}-${{ inputs.season }}
-          path: data/json/
+          path: data/
         continue-on-error: true
 
       - name: Download competitions data
@@ -369,13 +369,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: competitions-${{ inputs.league }}-${{ inputs.season }}
-          path: data/json/
+          path: data/
         continue-on-error: true
       
       - name: List downloaded files
         run: |
           echo "Downloaded files:"
-          ls -la data/json/ || echo "No data/json directory"
+          ls -la data/ || echo "No data directory"
       
       - name: Configure git
         run: |
@@ -393,7 +393,7 @@ jobs:
 
       - name: Commit changes
         run: |
-          git add data/json/ streamlit_app.py
+          git add data/ streamlit_app.py
           git diff --staged --quiet || git commit -m "Single scraper: ${{ inputs.league }} ${{ inputs.season }} [$(date -u '+%Y-%m-%d')]"
       
       - name: Push changes
