@@ -43,6 +43,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
+from common.data_paths import CACHE_SEASONS
 from scraping.utils.helpers import (
     DATA_DIR,
     list_json_bases,
@@ -62,7 +63,7 @@ RETRY_PAUSE = 10        # seconds between retries
 REQUEST_DELAY = 0       # polite delay between API requests
 
 UNKNOWN = "Unknown"
-CACHE_DIR = DATA_DIR / "cache"
+CACHE_DIR = CACHE_SEASONS
 TODAY_STEM = "season_data_today"
 
 _VALID_FORMATS = ("%d/%m/%Y", "%Y-%m-%d")
