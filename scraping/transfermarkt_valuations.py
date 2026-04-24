@@ -14,6 +14,7 @@ import re
 from datetime import datetime
 from typing import List, Optional, Dict, Set, Tuple
 
+from common.data_paths import DATA_DIR
 from scraping.base_scraper import BaseScraper
 from scraping.utils.helpers import normalize_date, parse_date
 from entities.valuation import Valuation
@@ -95,7 +96,7 @@ class TransfermarktValuationsScraper(BaseScraper):
     def _fetch_club_names_batch(self, club_ids: Set[str]) -> Dict[str, str]:
         """Fetch multiple club names via the shared on-disk TM club API cache.
 
-        Uses ``data/cache/tm_club_api_cache.json`` so the same ``GET /clubs``
+        Uses ``data/cache/clubs/tm_club_api_cache.json`` so the same ``GET /clubs``
         batch request is reused by other pipeline scripts (fill_club_names,
         fill_parent_team_id, the team scraper, …) without re-hitting the API.
 
@@ -219,13 +220,12 @@ class TransfermarktValuationsScraper(BaseScraper):
                      f"trying local file fallback …")
             try:
                 from scraping.base_scraper import BaseScraper
-                from pathlib import Path as _Path
 
                 if BaseScraper._local_name_map is None:
                     from fill_club_names import load_all_json_files, build_local_name_map
-                    data_dir = _Path("data/json")
-                    if data_dir.exists():
-                        file_records = load_all_json_files(data_dir)
+
+                    if DATA_DIR.exists():
+                        file_records = load_all_json_files()
                         BaseScraper._local_name_map = build_local_name_map(file_records)
                     else:
                         BaseScraper._local_name_map = {}
