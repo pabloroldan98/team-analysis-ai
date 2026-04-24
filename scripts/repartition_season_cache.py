@@ -5,7 +5,7 @@ Re-partition existing season caches into ``*_partN.json`` shards.
 Why
 ---
 Legacy caches were written as a single JSON blob
-(``data/json/cache/season_data_<season>.json``). Once they grow past GitHub's
+(``data/cache/seasons/season_data_<season>.json``). Once they grow past GitHub's
 100 MB blob limit, ``git push`` starts to fail. This script re-saves every
 existing cache through the shared writer
 (``simulator.data_loader.save_season_cache_payload``), which automatically
@@ -98,7 +98,7 @@ def _projected_parts(byte_size: int) -> int:
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
-            "Re-partition data/json/cache/season_data_*.json into "
+            "Re-partition data/cache/seasons/season_data_*.json into "
             "*_partN.json shards (skips files that already fit in 90 MB)."
         ),
     )
