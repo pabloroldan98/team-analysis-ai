@@ -15,12 +15,16 @@ from scraping.transfermarkt_competitions import TransfermarktCompetitionsScraper
 from scraping.transfermarkt_valuations import TransfermarktValuationsScraper
 from scraping.transfermarkt_injuries import TransfermarktInjuriesScraper
 
+from common.data_paths import dataset_dir_for_entity
+
+
 def cleanup_temp_jsons(entity: str, season: str):
     """Deletes temporary JSON files for a specific entity and season EXCEPT *_all_* and discovered_leagues.json"""
     print(f"\nCleaning up individual {entity} JSON files for season {season} to save space...")
     try:
         count = 0
-        for path in glob.glob(f"data/json/{entity}_*{season}*.json"):
+        entity_dir = dataset_dir_for_entity(entity)
+        for path in glob.glob(str(entity_dir / f"{entity}_*{season}*.json")):
             filename = os.path.basename(path)
             # Skip _all_ files and discovered_leagues
             if "_all_" in filename or "discovered_leagues" in filename:
