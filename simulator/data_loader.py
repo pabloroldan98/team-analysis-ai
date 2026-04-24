@@ -4,13 +4,13 @@ Load teams and players from JSON data.
 Player team assignment is determined by transfers (not valuations).
 The pipeline is:
 
-1. Load ALL players from every ``players_all_*.json`` file.
-2. Load ALL transfers from every ``transfers_all_*.json`` file.
+1. Load ALL players from every ``players_all_*.json`` file under ``data/datasets/players/``.
+2. Load ALL transfers from every ``transfers_all_*.json`` file under ``data/datasets/transfers/``.
    For each player find the last transfer whose date <= 01/07/{start_year}.
    Use that transfer to set the player's current team (``to_club``).
    Also track whether the player is on loan.
 3. Filter out players whose team is "Retired", "Without Club", etc.
-4. Load ALL valuations from every ``valuations_all_*.json`` file.
+4. Load ALL valuations from every ``valuations_all_*.json`` file under ``data/datasets/valuations/``.
    For each player find the last valuation whose date <= 01/07/{start_year}.
    Update ``market_value`` and ``age``.
 """
@@ -28,13 +28,14 @@ sys.path.insert(0, str(ROOT_DIR))
 
 from tqdm import tqdm
 
-from scraping.utils.helpers import list_json_bases, load_json, parse_date, DATA_DIR
+from common.data_paths import CACHE_SEASONS
+from scraping.utils.helpers import list_json_bases, load_json, parse_date
 from entities.player import Player
 from entities.transfer import Transfer
 from entities.valuation import Valuation
 
 # Precomputed season cache (see scripts/precompute_active_players_cache.py)
-CACHE_DIR = DATA_DIR / "cache"
+CACHE_DIR = CACHE_SEASONS
 CACHE_PREFIX = "season_data"
 
 # Maximum JSON size per cache part (90 MB keeps headroom under GitHub's 100 MB).
