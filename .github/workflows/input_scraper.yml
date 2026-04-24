@@ -94,7 +94,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: leagues-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/leagues_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/leagues/leagues_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -125,7 +125,7 @@ jobs:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: leagues-*
           merge-multiple: true
       
@@ -135,7 +135,7 @@ jobs:
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity leagues --season $season
           done
-          for f in data/json/leagues_all_*.json; do
+          for f in data/datasets/leagues/leagues_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
           done
@@ -144,7 +144,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: leagues-all-data
-          path: data/json/leagues_all_*.json
+          path: data/datasets/leagues/leagues_all_*.json
           retention-days: 1
 
   # ============================================================
@@ -186,7 +186,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: teams-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/teams_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/teams/teams_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -217,7 +217,7 @@ jobs:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: teams-*
           merge-multiple: true
       
@@ -227,7 +227,7 @@ jobs:
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity teams --season $season
           done
-          for f in data/json/teams_all_*.json; do
+          for f in data/datasets/teams/teams_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
           done
@@ -236,7 +236,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: teams-all-data
-          path: data/json/teams_all_*.json
+          path: data/datasets/teams/teams_all_*.json
           retention-days: 1
 
   # ============================================================
@@ -278,7 +278,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: players-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/players_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/players/players_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -309,7 +309,7 @@ jobs:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: players-*
           merge-multiple: true
       
@@ -319,7 +319,7 @@ jobs:
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity players --season $season
           done
-          for f in data/json/players_all_*.json; do
+          for f in data/datasets/players/players_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
           done
@@ -328,7 +328,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: players-all-data
-          path: data/json/players_all_*.json
+          path: data/datasets/players/players_all_*.json
           retention-days: 1
 
   # ============================================================
@@ -370,7 +370,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: transfers-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/transfers_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/transfers/transfers_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -401,7 +401,7 @@ jobs:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: transfers-*
           merge-multiple: true
       
@@ -411,7 +411,7 @@ jobs:
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity transfers --season $season
           done
-          for f in data/json/transfers_all_*.json; do
+          for f in data/datasets/transfers/transfers_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
           done
@@ -420,7 +420,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: transfers-all-data
-          path: data/json/transfers_all_*.json
+          path: data/datasets/transfers/transfers_all_*.json
           retention-days: 1
 
   # ============================================================
@@ -462,7 +462,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: valuations-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/valuations_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/valuations/valuations_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -493,7 +493,7 @@ jobs:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: valuations-*
           merge-multiple: true
       
@@ -503,7 +503,7 @@ jobs:
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity valuations --season $season
           done
-          for f in data/json/valuations_all_*.json; do
+          for f in data/datasets/valuations/valuations_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
           done
@@ -512,7 +512,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: valuations-all-data
-          path: data/json/valuations_all_*.json
+          path: data/datasets/valuations/valuations_all_*.json
           retention-days: 1
 
   # ============================================================
@@ -554,7 +554,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: competitions-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/competitions_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/competitions/competitions_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -585,7 +585,7 @@ jobs:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: competitions-*
           merge-multiple: true
       
@@ -595,7 +595,7 @@ jobs:
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity competitions --season $season
           done
-          for f in data/json/competitions_all_*.json; do
+          for f in data/datasets/competitions/competitions_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
           done
@@ -604,7 +604,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: competitions-all-data
-          path: data/json/competitions_all_*.json
+          path: data/datasets/competitions/competitions_all_*.json
           retention-days: 1
 
   # ============================================================
@@ -646,7 +646,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: injuries-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/injuries_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/injuries/injuries_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -677,7 +677,7 @@ jobs:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: injuries-*
           merge-multiple: true
       
@@ -687,7 +687,7 @@ jobs:
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity injuries --season $season
           done
-          for f in data/json/injuries_all_*.json; do
+          for f in data/datasets/injuries/injuries_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | tr ' ' '\n' | grep -q "^${s}$" || rm -f "$f"
           done
@@ -696,7 +696,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: injuries-all-data
-          path: data/json/injuries_all_*.json
+          path: data/datasets/injuries/injuries_all_*.json
           retention-days: 1
 
   # ============================================================
@@ -727,7 +727,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: leagues-all-data
-          path: data/json/
+          path: data/
         continue-on-error: true
       
       - name: Download teams data
@@ -735,7 +735,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: teams-all-data
-          path: data/json/
+          path: data/
         continue-on-error: true
       
       - name: Download players data
@@ -743,7 +743,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: players-all-data
-          path: data/json/
+          path: data/
         continue-on-error: true
       
       - name: Download transfers data
@@ -751,7 +751,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: transfers-all-data
-          path: data/json/
+          path: data/
         continue-on-error: true
       
       - name: Download valuations data
@@ -759,7 +759,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: valuations-all-data
-          path: data/json/
+          path: data/
         continue-on-error: true
       
       - name: Download competitions data
@@ -767,7 +767,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: competitions-all-data
-          path: data/json/
+          path: data/
         continue-on-error: true
       
       - name: Download injuries data
@@ -775,13 +775,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: injuries-all-data
-          path: data/json/
+          path: data/
         continue-on-error: true
       
       - name: List downloaded files
         run: |
           echo "Downloaded files:"
-          ls -la data/json/ || echo "No data/json directory"
+          ls -la data/ || echo "No data directory"
       
       - name: Configure git
         run: |
@@ -799,7 +799,7 @@ jobs:
 
       - name: Commit changes
         run: |
-          git add data/json/ streamlit_app.py
+          git add data/ streamlit_app.py
           git diff --staged --quiet || git commit -m "Custom scraper update [$(date -u '+%Y-%m-%d')]"
       
       - name: Push changes
