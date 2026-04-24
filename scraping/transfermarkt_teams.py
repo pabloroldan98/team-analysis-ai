@@ -23,7 +23,7 @@ class TransfermarktTeamsScraper(BaseScraper):
     def _fill_parent_team_ids(self, teams: List[Team]) -> None:
         """Batch-fill ``parent_team_id`` on every Team in *teams*.
 
-        Uses the shared on-disk cache (``data/cache/tm_club_api_cache.json``)
+        Uses the shared on-disk cache (``data/cache/clubs/tm_club_api_cache.json``)
         so other pipeline scripts (``fill_club_names.py``,
         ``fill_parent_team_id.py``, subsequent league scrapes, …) can
         reuse the work for the same team_ids without re-hitting the API.
