@@ -36,7 +36,6 @@ from ml.feature_engineering import TOP_LEAGUE_IDS, load_team_league_mapping
 
 # Paths
 ROOT_DIR = Path(__file__).parent.parent
-DATA_DIR = ROOT_DIR / "data" / "json"
 MODELS_DIR = ROOT_DIR / "ml" / "models"
 
 # Teams that are NOT valid destinations when selling (they are not real clubs)
