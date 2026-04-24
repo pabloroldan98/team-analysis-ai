@@ -209,13 +209,28 @@ __marimo__/
 # Excel files
 *.xlsx
 
-# data/json: only track _all_ combined files (ignore per-league/season intermediates)
-data/json/*
-!data/json/*_all_*
-!data/json/discovered_leagues.json
-# Un-ignore the cache directory first — otherwise !*.json has no effect (parent ignored).
-!data/json/cache/
-!data/json/cache/*.json
+# data/: functional layout — see common/data_paths.py
+data/*
+!data/.gitkeep
+!data/auth/
+!data/datasets/
+!data/derived/
+!data/cache/
+!data/runtime/
+!data/misc/
+
+# datasets/: only *_all_* JSON + metadata/discovered_leagues.json (not per-league scrapes)
+data/datasets/**
+!data/datasets/*/
+data/datasets/*/**
+!data/datasets/*/*_all_*.json
+!data/datasets/metadata/discovered_leagues.json
+
+# cache/: allow JSON in each functional subfolder (seasons, clubs, scraping, …)
+data/cache/**
+!data/cache/*/
+data/cache/*/**
+!data/cache/*/*.json
 
 ml/datasets/*
 
