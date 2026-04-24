@@ -5,12 +5,14 @@ import re
 from tqdm import tqdm
 
 # Añadir el directorio raíz al path para poder importar helpers
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 
+from common.data_paths import DATASETS_ROOT
 from scraping.utils.helpers import load_json_with_parts, save_json_with_parts
 
 def main():
-    data_dir = Path("data/json")
+    data_dir = DATASETS_ROOT
     if not data_dir.exists():
         print(f"No se encontró el directorio {data_dir}")
         return
@@ -23,7 +25,7 @@ def main():
     large_files_info = []
     
     print("Escaneando archivos...")
-    all_json_files = list(data_dir.glob("*.json"))
+    all_json_files = list(data_dir.rglob("*.json"))
     
     # 1. Escanear todos los archivos JSON y encontrar los que superan el límite
     for filepath in tqdm(all_json_files, desc="Buscando archivos grandes"):
