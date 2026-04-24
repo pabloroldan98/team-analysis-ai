@@ -25,9 +25,10 @@ except ImportError:
 
 from unidecode import unidecode
 
+from common.data_paths import DATA_DIR, dataset_subdir_for_stem, ensure_data_tree
+
 
 ROOT_DIR = Path(__file__).parent.parent
-DATA_DIR = ROOT_DIR / "data" / "json"
 
 # Rotating header pool
 HEADER_POOL = [
@@ -764,7 +765,7 @@ class BaseScraper:
         self.skip_scraped = skip_scraped
         
         # Ensure data directory exists
-        DATA_DIR.mkdir(parents=True, exist_ok=True)
+        ensure_data_tree()
     
     def _has_scraped_file(self, file_name: str) -> bool:
         """Check if a saved JSON file already exists (including multi-part files)."""
@@ -1026,9 +1027,9 @@ class BaseScraper:
         Returns:
             Path to saved file
         """
-        from scraping.utils.helpers import overwrite_dict_data, write_dict_to_json, DATA_DIR
-        
-        file_path = DATA_DIR / f"{file_name}.json"
+        from scraping.utils.helpers import overwrite_dict_data, write_dict_to_json
+
+        file_path = dataset_subdir_for_stem(file_name) / f"{file_name}.json"
         
         if create_backup:
             # Use overwrite with backup and optional validation
