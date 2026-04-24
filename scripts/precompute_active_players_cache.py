@@ -12,8 +12,8 @@ For "today": the file is named ``_today.json`` and includes a ``computed_date``
 field.  The simulator checks freshness: if the difference between today and
 computed_date is > 1 day, the cache is considered stale and recomputed on the fly.
 
-Output: data/json/cache/season_data_{season}.json
-        data/json/cache/season_data_today.json  (for --season today)
+Output: data/cache/seasons/season_data_{season}.json
+        data/cache/seasons/season_data_today.json  (for --season today)
 
 Usage:
   python scripts/precompute_active_players_cache.py --season today
@@ -34,7 +34,8 @@ sys.path.insert(0, str(ROOT_DIR))
 
 from tqdm import tqdm
 
-from scraping.utils.helpers import DATA_DIR, list_json_bases, load_json
+from common.data_paths import CACHE_SEASONS, ensure_data_tree
+from scraping.utils.helpers import list_json_bases, load_json
 from simulator.data_loader import (
     get_active_players_at_season_start,
     save_season_cache_payload,
@@ -53,7 +54,7 @@ from entities.transfer import Transfer
 # Re-use the constants from the simulator
 from simulator.transfer_simulator import ATHLETIC_FAMILY_IDS, ATHLETIC_FAMILY_NAMES
 
-CACHE_DIR = DATA_DIR / "cache"
+CACHE_DIR = CACHE_SEASONS
 CACHE_PREFIX = "season_data"
 
 
@@ -341,6 +342,7 @@ def precompute_and_save(
             print(f"  → Horizon {hz}y: {len(hz_pv)} predictions, {len(hz_fp)} fair prices")
 
     # ── 5. Save ──────────────────────────────────────────────────────────
+    ensure_data_tree()
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
     computed_date_str = (
