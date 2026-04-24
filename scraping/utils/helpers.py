@@ -21,8 +21,13 @@ from difflib import SequenceMatcher
 from unidecode import unidecode
 
 
-ROOT_DIR = Path(__file__).parent.parent.parent
-DATA_DIR = ROOT_DIR / "data" / "json"
+from common.data_paths import (  # noqa: E402
+    DATA_DIR,
+    ROOT_DIR,
+    dataset_subdir_for_stem,
+    ensure_data_tree,
+    json_search_dirs_for_glob,
+)
 
 # Maximum file size per part (90 MB leaves headroom under GitHub's 100 MB limit)
 MAX_JSON_PART_BYTES = 90 * 1024 * 1024
@@ -33,13 +38,14 @@ MAX_JSON_PART_BYTES = 90 * 1024 * 1024
 # =============================================================================
 
 def ensure_data_dir():
-    """Ensure data directory exists."""
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    """Ensure the functional ``data/`` tree exists."""
+    ensure_data_tree()
 
 
 def _get_json_base_path(file_name: str) -> Path:
     """Return full path for base JSON file (with .json extension)."""
-    return DATA_DIR / f"{file_name}.json"
+    parent = dataset_subdir_for_stem(file_name)
+    return parent / f"{file_name}.json"
 
 
 def _get_json_part_paths(file_name: str) -> List[Path]:
@@ -51,7 +57,7 @@ def _get_json_part_paths(file_name: str) -> List[Path]:
     """
     base_path = _get_json_base_path(file_name)
     stem = base_path.stem  # file_name (no .json)
-    parts = sorted(DATA_DIR.glob(f"{stem}_part*.json"))
+    parts = sorted(base_path.parent.glob(f"{stem}_part*.json"))
     
     # Filter out _OLD backups IF the base_name itself doesn't end with _OLD
     # This allows treating _OLD files as their own base_names when explicitly requested
@@ -87,6 +93,7 @@ def save_json_with_parts(
     """
     ensure_data_dir()
     base_path = _get_json_base_path(file_name)
+    base_path.parent.mkdir(parents=True, exist_ok=True)
 
     def _write_single(blob: bytes, path: Path) -> bool:
         try:
@@ -102,7 +109,7 @@ def save_json_with_parts(
 
     if len(full_blob) <= max_part_bytes:
         # Single file: remove old parts
-        for old_part in DATA_DIR.glob(f"{base_path.stem}_part*.json"):
+        for old_part in base_path.parent.glob(f"{base_path.stem}_part*.json"):
             if base_path.stem.endswith("_OLD") or not old_part.stem.endswith("_OLD"):
                 try:
                     old_part.unlink()
@@ -118,7 +125,7 @@ def save_json_with_parts(
     # Remove legacy single file and old parts
     if base_path.exists():
         base_path.unlink()
-    for old_part in DATA_DIR.glob(f"{base_path.stem}_part*.json"):
+    for old_part in base_path.parent.glob(f"{base_path.stem}_part*.json"):
         if base_path.stem.endswith("_OLD") or not old_part.stem.endswith("_OLD"):
             try:
                 old_part.unlink()
@@ -164,7 +171,7 @@ def save_json_with_parts(
     for i, chunk in enumerate(chunks):
         part_meta = {**metadata, "part": i + 1, "total_parts": len(chunks)}
         part_output = {"metadata": part_meta, "items": chunk}
-        part_path = DATA_DIR / f"{base_path.stem}_part{i + 1}.json"
+        part_path = base_path.parent / f"{base_path.stem}_part{i + 1}.json"
         try:
             with open(part_path, "w", encoding="utf-8") as f:
                 json.dump(part_output, f, ensure_ascii=False, indent=2, default=str)
@@ -245,7 +252,7 @@ def write_dict_to_json(data: Any, file_name: str) -> bool:
 
 def load_json(file_name: str) -> Optional[Any]:
     """
-    Load data from JSON file(s) in data/json.
+    Load data from JSON file(s) in ``data/``.
     Supports single file and multi-part (``*_part1.json``, …).
 
     Args:
@@ -464,8 +471,8 @@ def overwrite_dict_data(
     """
     ensure_data_dir()
     
-    file_path = DATA_DIR / f"{file_name}.json"
-    file_path_old = DATA_DIR / f"{file_name}_OLD.json"
+    file_path = _get_json_base_path(file_name)
+    file_path_old = file_path.parent / f"{file_name}_OLD.json"
 
     # Read old data for potential merge (supports single and part files)
     old_data = None
@@ -522,7 +529,7 @@ def delete_file(file_name: str) -> bool:
     Returns:
         True if deleted successfully
     """
-    file_path = DATA_DIR / f"{file_name}.json"
+    file_path = _get_json_base_path(file_name)
     
     try:
         if file_path.exists():
@@ -550,15 +557,16 @@ def list_json_files(pattern: str = "*.json") -> List[str]:
     Returns:
         List of filenames (without extension)
     """
-    if not DATA_DIR.exists():
-        return []
-    
+    ensure_data_tree()
     files = []
-    for f in DATA_DIR.glob(pattern):
-        if not f.name.endswith("_OLD.json"):
-            files.append(f.stem)
+    for d in json_search_dirs_for_glob(pattern):
+        if not d.exists():
+            continue
+        for f in d.glob(pattern):
+            if not f.name.endswith("_OLD.json"):
+                files.append(f.stem)
     
-    return sorted(files)
+    return sorted(set(files))
 
 
 def list_json_bases(glob_pattern: str = "*.json") -> List[str]:
@@ -572,29 +580,26 @@ def list_json_bases(glob_pattern: str = "*.json") -> List[str]:
     Returns:
         Sorted list of unique base names (without .json, without _partN)
     """
-    if not DATA_DIR.exists():
-        return []
+    ensure_data_tree()
     seen = set()
-    for f in DATA_DIR.glob(glob_pattern):
-        if f.suffix != ".json":
+    for d in json_search_dirs_for_glob(glob_pattern):
+        if not d.exists():
             continue
-            
-        stem = f.stem
-        # Ensure we treat "_OLD" files as separate base files if they exist
-        is_old = stem.endswith("_OLD")
-        
-        # Remove _partN suffix but maintain _OLD if it exists
-        if "_part" in stem:
-            # Check if it looks like ..._OLD_partN or ..._partN_OLD
-            if stem.endswith("_OLD") and "_part" in stem[:-4]:
-                # It's like ..._part1_OLD
-                base = re.sub(r"_part\d+_OLD$", "_OLD", stem)
+        for f in d.glob(glob_pattern):
+            if f.suffix != ".json":
+                continue
+
+            stem = f.stem
+            # Remove _partN suffix but maintain _OLD if it exists
+            if "_part" in stem:
+                if stem.endswith("_OLD") and "_part" in stem[:-4]:
+                    base = re.sub(r"_part\d+_OLD$", "_OLD", stem)
+                else:
+                    base = re.sub(r"_part\d+$", "", stem)
             else:
-                base = re.sub(r"_part\d+$", "", stem)
-        else:
-            base = stem
-            
-        seen.add(base)
+                base = stem
+
+            seen.add(base)
     return sorted(seen)
 
 
