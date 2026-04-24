@@ -4,13 +4,17 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Any
 
 from tqdm import tqdm
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "data" / "json"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from common.data_paths import DATA_DIR
 
 
 def _load_json(path: Path) -> Any:
