@@ -36,13 +36,13 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet data/json/; then
+          if git diff --quiet data/; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
             echo "No files were modified."
           else
             echo "has_changes=true" >> $GITHUB_OUTPUT
             echo "Modified files:"
-            git diff --name-only data/json/
+            git diff --name-only data/
           fi
 
       - name: Configure git
@@ -54,7 +54,7 @@ jobs:
       - name: Commit changes
         if: steps.changes.outputs.has_changes == 'true'
         run: |
-          git add data/json/
+          git add data/
           git commit -m "Fill missing club names [$(date -u '+%Y-%m-%d')]"
 
       - name: Push changes
