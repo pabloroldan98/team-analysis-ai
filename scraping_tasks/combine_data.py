@@ -3,6 +3,8 @@
 """
 Utility script to combine league-specific JSON files into a single _all_ file.
 
+Reads and writes under ``data/datasets/<entity>/`` (see ``common/data_paths.py``).
+
 Usage:
     python scraping_tasks/combine_data.py --entity teams --season 2025-2026
     python scraping_tasks/combine_data.py --entity players
@@ -20,9 +22,8 @@ from datetime import datetime
 # Add parent to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from common.data_paths import dataset_dir_for_entity, ensure_data_tree
 from scraping.utils.helpers import load_json, write_dict_to_json
-
-DATA_DIR = Path(__file__).parent.parent / "data" / "json"
 
 
 def get_current_season() -> str:
@@ -50,8 +51,10 @@ def combine_entity_files(entity: str, season: str = None) -> int:
     if season is None:
         season = get_current_season()
     
+    ensure_data_tree()
+    entity_dir = dataset_dir_for_entity(entity)
     # Find all files for this entity (excluding _all_)
-    pattern = str(DATA_DIR / f"{entity}_*_{season}.json")
+    pattern = str(entity_dir / f"{entity}_*_{season}.json")
     files = [f for f in glob.glob(pattern) if "_all_" not in f]
     
     if not files:
@@ -109,7 +112,15 @@ def main():
     parser.add_argument(
         "--entity",
         required=True,
-        choices=["leagues", "teams", "players", "transfers", "valuations", "competitions"],
+        choices=[
+            "leagues",
+            "teams",
+            "players",
+            "transfers",
+            "valuations",
+            "competitions",
+            "injuries",
+        ],
         help="Entity type to combine"
     )
     parser.add_argument(
