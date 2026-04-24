@@ -2,7 +2,8 @@
 r"""
 fill_club_names.py
 ==================
-Standalone script that scans every JSON file under ``data/json/`` and fills in
+Standalone script that scans combined ``*_all_*.json`` files under
+``data/datasets/<entity>/`` and fills in
 missing club/team names by querying the Transfermarkt API.
 
 Supported name↔id pairs
@@ -35,6 +36,7 @@ _ROOT = Path(__file__).resolve().parent.parent
 if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 
+from common.data_paths import dataset_subdir_for_stem
 from scraping.utils.helpers import DATA_DIR, list_json_bases, load_json, parse_date, save_json_with_parts
 
 # ── Configuration ────────────────────────────────────────────────────────────
@@ -77,14 +79,18 @@ def _file_prefix(filename: str) -> Optional[str]:
     return None
 
 
-def load_all_json_files(data_dir: Path) -> List[FileRecord]:
-    """Load every relevant JSON file from *data_dir* exactly once.
+def load_all_json_files(data_dir: Path | None = None) -> List[FileRecord]:
+    """Load every relevant ``*_all_*.json`` from ``data/datasets/*/``.
+
+    The *data_dir* argument is **ignored** (kept for backward compatibility).
 
     Returns a list of ``(filepath_str, prefix, records)`` tuples.
-    Only files whose name starts with a known prefix (transfers, valuations,
-    players, teams) are included. Uses load_json from utils (supports multi-part).
     """
+    from common.data_paths import DATASETS_ROOT
+
     result: List[FileRecord] = []
+    if not DATASETS_ROOT.is_dir():
+        return result
     # bases = list_json_bases("*.json")
     bases = list_json_bases("*_all_*.json")
 
@@ -102,7 +108,7 @@ def load_all_json_files(data_dir: Path) -> List[FileRecord]:
         records = raw["items"] if isinstance(raw, dict) and "items" in raw else raw
         if not isinstance(records, list):
             continue
-        result.append((str(data_dir / f"{base}.json"), prefix, records))
+        result.append((str(dataset_subdir_for_stem(base) / f"{base}.json"), prefix, records))
 
     print(f"  Loaded {len(result)} files into memory.\n")
     return result
@@ -367,7 +373,7 @@ def _api_get(url: str, timeout: int = 60) -> Optional[dict]:
 def fetch_club_names(club_ids: Set[str]) -> Dict[str, str]:
     """Fetch club names from the API using the shared on-disk cache.
 
-    Delegates to ``TmClubApiCache`` (at ``data/cache/tm_club_api_cache.json``)
+    Delegates to ``TmClubApiCache`` (at ``data/cache/clubs/tm_club_api_cache.json``)
     so a single ``GET /clubs?ids[]=...`` call populates both ``name`` and
     ``main_club_id`` for downstream consumers (e.g. ``fill_parent_team_id.py``
     and the team scraper), avoiding duplicated API calls across scripts.
@@ -547,7 +553,7 @@ def patch_files(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Fill missing club/team names in data/json/ files."
+        description="Fill missing club/team names in data/datasets/*/*_all_*.json files."
     )
     parser.add_argument(
         "--dry-run",
@@ -561,7 +567,7 @@ def main() -> None:
         return
 
     # 1. Load all JSON files once
-    file_records = load_all_json_files(DATA_DIR)
+    file_records = load_all_json_files()
 
     # 2. Scan for missing names
     missing_ids, files_to_patch = scan_missing_ids(file_records)
