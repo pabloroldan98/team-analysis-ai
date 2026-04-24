@@ -288,7 +288,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: leagues-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/leagues_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/leagues/leagues_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 3
           if-no-files-found: error
 
@@ -318,17 +318,17 @@ jobs:
       - name: Download all league artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: leagues-*
           merge-multiple: true
 
       - name: Combine into _all_ files
         run: |
-          SEASONS=$(ls data/json/leagues_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          SEASONS=$(ls data/datasets/leagues/leagues_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity leagues --season $season
           done
-          for f in data/json/leagues_all_*.json; do
+          for f in data/datasets/leagues/leagues_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
           done
@@ -337,7 +337,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: leagues-all-data
-          path: data/json/leagues_all_*.json
+          path: data/datasets/leagues/leagues_all_*.json
           retention-days: 3
 
   # ============================================================
@@ -619,7 +619,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: teams-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/teams_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/teams/teams_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 3
           if-no-files-found: error
 
@@ -649,17 +649,17 @@ jobs:
       - name: Download all team artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: teams-*
           merge-multiple: true
 
       - name: Combine into _all_ files
         run: |
-          SEASONS=$(ls data/json/teams_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          SEASONS=$(ls data/datasets/teams/teams_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity teams --season $season
           done
-          for f in data/json/teams_all_*.json; do
+          for f in data/datasets/teams/teams_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
           done
@@ -668,7 +668,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: teams-all-data
-          path: data/json/teams_all_*.json
+          path: data/datasets/teams/teams_all_*.json
           retention-days: 3
 
   # ============================================================
@@ -950,7 +950,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: players-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/players_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/players/players_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 3
           if-no-files-found: error
 
@@ -980,17 +980,17 @@ jobs:
       - name: Download all player artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: players-*
           merge-multiple: true
 
       - name: Combine into _all_ files
         run: |
-          SEASONS=$(ls data/json/players_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          SEASONS=$(ls data/datasets/players/players_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity players --season $season
           done
-          for f in data/json/players_all_*.json; do
+          for f in data/datasets/players/players_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
           done
@@ -999,7 +999,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: players-all-data
-          path: data/json/players_all_*.json
+          path: data/datasets/players/players_all_*.json
           retention-days: 3
 
   # ============================================================
@@ -1281,7 +1281,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: transfers-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/transfers_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/transfers/transfers_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 3
           if-no-files-found: error
 
@@ -1311,17 +1311,17 @@ jobs:
       - name: Download all transfer artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: transfers-*
           merge-multiple: true
 
       - name: Combine into _all_ files
         run: |
-          SEASONS=$(ls data/json/transfers_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          SEASONS=$(ls data/datasets/transfers/transfers_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity transfers --season $season
           done
-          for f in data/json/transfers_all_*.json; do
+          for f in data/datasets/transfers/transfers_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
           done
@@ -1330,7 +1330,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: transfers-all-data
-          path: data/json/transfers_all_*.json
+          path: data/datasets/transfers/transfers_all_*.json
           retention-days: 3
 
   # ============================================================
@@ -1613,7 +1613,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: valuations-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/valuations_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/valuations/valuations_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 3
           if-no-files-found: error
 
@@ -1644,17 +1644,17 @@ jobs:
       - name: Download all valuation artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: valuations-*
           merge-multiple: true
 
       - name: Combine into _all_ files
         run: |
-          SEASONS=$(ls data/json/valuations_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          SEASONS=$(ls data/datasets/valuations/valuations_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity valuations --season $season
           done
-          for f in data/json/valuations_all_*.json; do
+          for f in data/datasets/valuations/valuations_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
           done
@@ -1663,7 +1663,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: valuations-all-data
-          path: data/json/valuations_all_*.json
+          path: data/datasets/valuations/valuations_all_*.json
           retention-days: 3
 
   # ============================================================
@@ -1685,36 +1685,36 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: leagues-all-data
-          path: data/json/
+          path: data/
 
       - name: Download teams data
         uses: actions/download-artifact@v4
         with:
           name: teams-all-data
-          path: data/json/
+          path: data/
 
       - name: Download players data
         uses: actions/download-artifact@v4
         with:
           name: players-all-data
-          path: data/json/
+          path: data/
 
       - name: Download transfers data
         uses: actions/download-artifact@v4
         with:
           name: transfers-all-data
-          path: data/json/
+          path: data/
 
       # - name: Download valuations data
       #   uses: actions/download-artifact@v4
       #   with:
       #     name: valuations-all-data
-      #     path: data/json/
+      #     path: data/
 
       - name: List downloaded files
         run: |
           echo "Downloaded files:"
-          ls -la data/json/
+          ls -la data/
 
       - name: Configure git
         run: |
@@ -1732,7 +1732,7 @@ jobs:
 
       - name: Commit changes
         run: |
-          git add data/json/ streamlit_app.py
+          git add data/ streamlit_app.py
           git diff --staged --quiet || git commit -m "All leagues (not valuations) data update [$(date -u '+%Y-%m-%d')]"
 
       - name: Push changes
