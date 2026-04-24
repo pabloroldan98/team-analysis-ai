@@ -44,7 +44,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: competitions-${{ matrix.league }}-${{ matrix.season }}
-          path: data/json/competitions_${{ matrix.league }}_${{ matrix.season }}.json
+          path: data/datasets/competitions/competitions_${{ matrix.league }}_${{ matrix.season }}.json
           retention-days: 1
           if-no-files-found: error
 
@@ -74,17 +74,17 @@ jobs:
       - name: Download all league artifacts
         uses: actions/download-artifact@v4
         with:
-          path: data/json/
+          path: data/
           pattern: competitions-*
           merge-multiple: true
       
       - name: Combine into _all_ files
         run: |
-          SEASONS=$(ls data/json/competitions_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
+          SEASONS=$(ls data/datasets/competitions/competitions_*.json 2>/dev/null | grep -v '_all_' | grep -v '_OLD' | sed -E 's/.*_([0-9]{4}-[0-9]{4})\.json/\1/' | sort -u)
           for season in $SEASONS; do
             python scraping_tasks/combine_data.py --entity competitions --season $season
           done
-          for f in data/json/competitions_all_*.json; do
+          for f in data/datasets/competitions/competitions_all_*.json; do
             s=$(echo "$f" | grep -oP '\d{4}-\d{4}')
             echo "$SEASONS" | grep -q "^${s}$" || rm -f "$f"
           done
@@ -93,7 +93,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: competitions-all-data
-          path: data/json/competitions_all_*.json
+          path: data/datasets/competitions/competitions_all_*.json
           retention-days: 1
 
   commit:
@@ -111,7 +111,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: competitions-all-data
-          path: data/json/
+          path: data/
       
       - name: Configure git
         run: |
@@ -129,7 +129,7 @@ jobs:
 
       - name: Commit changes
         run: |
-          git add data/json/ streamlit_app.py
+          git add data/ streamlit_app.py
           git diff --staged --quiet || git commit -m "Update competitions data [$(date -u '+%Y-%m-%d')]"
       
       - name: Push changes
